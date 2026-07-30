@@ -1,0 +1,17 @@
+# Snaprint
+
+> Snaprint turns xerox/photocopy shops into 24/7 self-service print kiosks. Students and customers scan a QR code, upload a document, pay, and collect the print — no queue, no shop owner needed to operate it. Built by Sanskriti Labs for shop owners in Bengaluru, India.
+
+Snaprint is a hardware + software print kiosk product (the "S1" machine) sold to xerox/photocopy shop owners as a way to serve customers outside staffed hours and reduce queue time.
+
+## Pages
+
+- [Home](https://snaprints.com/): Product overview, how it works, the S1 machine, pricing/demo contact.
+- [Terms of Service](https://snaprints.com/terms)
+- [Privacy Policy](https://snaprints.com/privacy)
+- [Refund Policy](https://snaprints.com/refund-policy)
+
+## Contact
+
+- Email: snaprints@sanskritilabs.in
+- Parent company: Sanskriti Labs
