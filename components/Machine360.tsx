@@ -65,13 +65,13 @@ function FrontFace() {
       <text x="136" y="395" textAnchor="middle" fontFamily="monospace" fontSize="6.5" fill="#C0BEB8">PRINTER UNIT · INTERNAL</text>
       <rect x="22" y="403" width="236" height="108" rx="4" fill="#E4E2DC" stroke="#CCCAC4" strokeWidth="0.5" strokeDasharray="3 2" />
       <text x="140" y="446" textAnchor="middle" fontFamily="monospace" fontSize="7.5" fill="#AAAAAA">UNIVERSAL PRINTER ENGINE</text>
-      <text x="140" y="461" textAnchor="middle" fontFamily="monospace" fontSize="5.5" fill="#C0BEB8">any brand · 2000 sheets · A4 + Legal</text>
+      <text x="140" y="461" textAnchor="middle" fontFamily="monospace" fontSize="5.5" fill="#C0BEB8">any brand · A4</text>
       <rect x="22" y="520" width="116" height="28" rx="3" fill="#DEDAD4" />
       <rect x="22" y="520" width="116" height="28" rx="3" fill="none" stroke="#E63946" strokeWidth="0.5" />
       <text x="80" y="537" textAnchor="middle" fontFamily="monospace" fontSize="6" fill="#E63946">snaprint OS hub</text>
       <rect x="146" y="520" width="116" height="28" rx="3" fill="#DEDAD4" />
       <rect x="146" y="520" width="116" height="28" rx="3" fill="none" stroke="#CCCAC4" strokeWidth="0.5" />
-      <text x="204" y="537" textAnchor="middle" fontFamily="monospace" fontSize="6" fill="#AAAAAA">4G SIM + WiFi 6</text>
+      <text x="204" y="537" textAnchor="middle" fontFamily="monospace" fontSize="6" fill="#AAAAAA">power + data</text>
       <rect x="22" y="558" width="74" height="22" rx="3" fill="#D8D6D0" />
       <text x="59" y="573" textAnchor="middle" fontFamily="monospace" fontSize="5" fill="#AAAAAA">UPS backup</text>
       <rect x="104" y="558" width="82" height="22" rx="3" fill="#D8D6D0" />
@@ -115,14 +115,14 @@ function SideFace({ flip = false }: { flip?: boolean }) {
       {/* Front edge LED stripe (left edge of side view) */}
       <rect x="0" y="0" width="9" height="700" fill="#E63946" />
       {/* Depth dimension label */}
-      <text x="140" y="55" textAnchor="middle" fontFamily="monospace" fontSize="7" fill="rgba(255,255,255,0.5)" letterSpacing="1.5">65 cm DEEP</text>
+      <text x="140" y="55" textAnchor="middle" fontFamily="monospace" fontSize="7" fill="rgba(255,255,255,0.5)" letterSpacing="1.5">70 cm DEEP</text>
       {/* Screen housing — thick black slab from side */}
       <rect x="14" y="80" width="252" height="248" rx="5" fill="#0A0A09" />
       <rect x="14" y="80" width="252" height="248" rx="5" fill="none" stroke="#E63946" strokeWidth="0.8" />
       {/* Screen glass shine from side */}
       <rect x="20" y="86" width="240" height="8" rx="2" fill="rgba(255,255,255,0.04)" />
       {/* Screen label */}
-      <text x="140" y="218" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#333330" letterSpacing="2">23&quot; DISPLAY</text>
+      <text x="140" y="218" textAnchor="middle" fontFamily="monospace" fontSize="8" fill="#333330" letterSpacing="2">15.6&quot; DISPLAY</text>
       {/* Tablet mounting rail from side */}
       <rect x="26" y="310" width="228" height="6" rx="3" fill="#1E1E1C" />
       {/* Collect tray from side */}
@@ -140,11 +140,11 @@ function SideFace({ flip = false }: { flip?: boolean }) {
       {/* Printer engine block from side */}
       <rect x="20" y="408" width="240" height="110" rx="4" fill="#E4E2DC" stroke="#CCCAC4" strokeWidth="0.5" strokeDasharray="3 2" />
       <text x="140" y="455" textAnchor="middle" fontFamily="monospace" fontSize="7.5" fill="#AAAAAA">PRINTER ENGINE</text>
-      <text x="140" y="470" textAnchor="middle" fontFamily="monospace" fontSize="5.5" fill="#C0BEB8">A4 · Legal · 2000 sheets</text>
+      <text x="140" y="470" textAnchor="middle" fontFamily="monospace" fontSize="5.5" fill="#C0BEB8">any brand · A4</text>
       {/* OS hub row from side */}
       <rect x="20" y="526" width="240" height="28" rx="3" fill="#DEDAD4" />
       <rect x="20" y="526" width="240" height="28" rx="3" fill="none" stroke="#E63946" strokeWidth="0.5" />
-      <text x="140" y="543" textAnchor="middle" fontFamily="monospace" fontSize="6" fill="#E63946">snaprint OS hub · 4G SIM + WiFi 6</text>
+      <text x="140" y="543" textAnchor="middle" fontFamily="monospace" fontSize="6" fill="#E63946">snaprint OS hub · power + data</text>
       {/* Ventilation side */}
       <rect x="0" y="618" width="280" height="5" fill="#E63946" />
       <rect x="0" y="625" width="280" height="50" fill="#ECEAE5" />
@@ -195,7 +195,7 @@ function BackFace() {
       {[230,237,244,251,258].map((y,i)=>(
         <rect key={i} x="90" y={y} width="100" height="5" rx="1" fill={`rgba(255,255,255,${0.04 + i*0.015})`} />
       ))}
-      <text x="140" y="285" textAnchor="middle" fontFamily="monospace" fontSize="7" fill="#333330">500 SHEETS CAPACITY</text>
+      <text x="140" y="285" textAnchor="middle" fontFamily="monospace" fontSize="7" fill="#333330">A4 PAPER + INK REFILL</text>
       {/* Door handle */}
       <rect x="110" y="342" width="60" height="10" rx="5" fill="#2A2A28" />
       <rect x="118" y="344" width="44" height="6" rx="3" fill="#1A1A18" />
@@ -210,7 +210,7 @@ function BackFace() {
       <text x="140" y="416" textAnchor="middle" fontFamily="monospace" fontSize="5.5" fill="#AAAAAA">REAR LOCKABLE ACCESS DOOR</text>
       {/* Internal labels visible through dashed box */}
       <text x="140" y="445" textAnchor="middle" fontFamily="monospace" fontSize="6" fill="#C0BEB8">PRINT ENGINE</text>
-      <text x="140" y="460" textAnchor="middle" fontFamily="monospace" fontSize="5" fill="#C0BEB8">snaprint OS hub · 4G + WiFi 6</text>
+      <text x="140" y="460" textAnchor="middle" fontFamily="monospace" fontSize="5" fill="#C0BEB8">snaprint OS hub · power + data</text>
       <text x="140" y="474" textAnchor="middle" fontFamily="monospace" fontSize="5" fill="#C0BEB8">UPS · India 5A · USB hub</text>
       {/* Service door screws */}
       {[[30,430],[250,430],[30,560],[250,560]].map(([x,y],i)=>(

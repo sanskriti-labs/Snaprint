@@ -100,9 +100,8 @@ Or connect your GitHub repo in the Vercel dashboard → auto-deploys on every pu
 
 | File | Placeholder | Replace with |
 |---|---|---|
-| Multiple | `919XXXXXXXXX` | Your WhatsApp number |
-| Footer, CTA | `hello@snaprint.in` | Your real email |
-| Layout | `https://snaprint.in` | Your actual domain |
+| Multiple | `919999999999` | Your WhatsApp number |
+| `public/og.png`, `public/favicon.ico` | Generated placeholders | Real brand assets |
 | All | Testimonial names | Real shop owner quotes after survey |
 
 ---

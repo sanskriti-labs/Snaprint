@@ -17,7 +17,7 @@ export default function Machine() {
         width="280"
         viewBox="0 0 280 700"
         xmlns="http://www.w3.org/2000/svg"
-        aria-label="Snaprint S1 kiosk machine front view — white body, red header, red left LED stripe, 23 inch tablet screen showing snap scan print UI, print output tray, and printer housing below"
+        aria-label="Snaprint S1 kiosk machine front view — white body, red header, red left LED stripe, 15.6 inch touch screen showing snap scan print UI, print output tray, and printer housing below"
         role="img"
       >
         {/* Machine body */}
@@ -296,7 +296,7 @@ export default function Machine() {
           fontSize="5.5"
           fill="#C0BEB8"
         >
-          any brand · 2000 sheets · A4 + Legal
+          any brand · A4
         </text>
 
         {/* OS hub + network chips */}
@@ -341,7 +341,7 @@ export default function Machine() {
           fontSize="6"
           fill="#AAAAAA"
         >
-          4G SIM + WiFi 6
+          power + data
         </text>
 
         {/* Power + UPS row */}

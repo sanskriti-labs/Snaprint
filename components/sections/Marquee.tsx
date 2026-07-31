@@ -7,7 +7,7 @@ export default function Marquee() {
     "any printer brand",
     "24/7 ready",
     "Bengaluru-first",
-    "2000 sheets",
+    "15.6″ touch panel",
     "remote orders",
   ];
 

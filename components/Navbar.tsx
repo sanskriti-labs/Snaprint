@@ -27,7 +27,7 @@ export default function Navbar() {
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/96 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.07),0_4px_24px_rgba(0,0,0,0.05)]"
+          ? "bg-white/[0.96] backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.07),0_4px_24px_rgba(0,0,0,0.05)]"
           : "bg-transparent"
       }`}
     >
@@ -58,10 +58,10 @@ export default function Navbar() {
         {/* Right: CTA */}
         <div className="flex items-center gap-3">
           <a
-            href="mailto:contact@snaprint.in"
+            href="mailto:snaprints@sanskritilabs.in"
             className="hidden items-center gap-1.5 font-body text-[13px] font-medium text-[#6B6B66] transition-colors hover:text-[#111110] md:flex"
           >
-            contact@snaprint.in
+            snaprints@sanskritilabs.in
           </a>
           <a
             href="#contact"

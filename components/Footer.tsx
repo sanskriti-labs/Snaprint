@@ -1,3 +1,9 @@
+const legalLinks = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+  { label: "Refund policy", href: "/refund-policy" },
+];
+
 export default function Footer() {
   const cols = [
     {
@@ -12,10 +18,10 @@ export default function Footer() {
 {
       title: "Contact",
       links: [
-        { label: "contact@snaprint.in", href: "mailto:contact@snaprint.in" },
-        { label: "Request a Quote", href: "mailto:contact@snaprint.in?subject=Quote Request" },
+        { label: "snaprints@sanskritilabs.in", href: "mailto:snaprints@sanskritilabs.in" },
+        { label: "Request a Quote", href: "mailto:snaprints@sanskritilabs.in?subject=Quote Request" },
         { label: "Book a Demo", href: "#contact" },
-        { label: "snaprint.in", href: "https://snaprint.in" },
+        { label: "snaprints.com", href: "https://snaprints.com" },
       ],
     },
   ];
@@ -38,14 +44,14 @@ export default function Footer() {
               Smart print automation for independent shop owners. Built by Sanskriti Labs, Bengaluru.
             </p>
             <a
-              href="mailto:contact@snaprint.in"
+              href="mailto:snaprints@sanskritilabs.in"
               className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,0,0,0.1)] bg-white px-4 py-2 font-body text-[12.5px] font-medium text-[#111110] shadow-[0_1px_4px_rgba(0,0,0,0.06)] transition hover:border-[#E63946] hover:text-[#E63946]"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
               </svg>
-              contact@snaprint.in
+              snaprints@sanskritilabs.in
             </a>
           </div>
 
@@ -77,10 +83,10 @@ export default function Footer() {
             © 2026 Snaprint · A Sanskriti Labs product · Bengaluru, India
           </span>
           <div className="flex items-center gap-1">
-            {["Privacy", "Terms", "Refund policy"].map((l, i) => (
-              <span key={l} className="flex items-center gap-1">
+            {legalLinks.map((l, i) => (
+              <span key={l.label} className="flex items-center gap-1">
                 {i > 0 && <span className="text-[#DDDDDD]">·</span>}
-                <a href="#" className="font-body text-[12.5px] text-[#AAAAAA] transition-colors hover:text-[#555550]">{l}</a>
+                <a href={l.href} className="font-body text-[12.5px] text-[#AAAAAA] transition-colors hover:text-[#555550]">{l.label}</a>
               </span>
             ))}
           </div>

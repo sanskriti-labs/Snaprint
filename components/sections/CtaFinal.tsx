@@ -82,10 +82,10 @@ export default function CtaFinal() {
             </svg>
           </a>
           <a
-            href="mailto:contact@snaprint.in"
+            href="mailto:snaprints@sanskritilabs.in"
             className="inline-flex items-center gap-2 rounded-[8px] border border-[rgba(255,255,255,0.12)] px-7 py-4 font-body text-[14px] font-medium text-[rgba(255,255,255,0.55)] transition-all duration-200 hover:border-[rgba(255,255,255,0.3)] hover:text-white"
           >
-            contact@snaprint.in
+            snaprints@sanskritilabs.in
           </a>
         </motion.div>
 

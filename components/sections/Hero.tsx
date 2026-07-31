@@ -163,8 +163,8 @@ export default function Hero() {
               <div className="mt-1.5 font-body text-[11px] text-[#AAAAAA]">unmanned operation</div>
             </div>
             <div>
-              <div className="font-display text-[32px] font-extrabold leading-none tracking-[-1.5px] text-[#111110]">4G+WiFi</div>
-              <div className="mt-1.5 font-body text-[11px] text-[#AAAAAA]">dual network fallback</div>
+              <div className="font-display text-[32px] font-extrabold leading-none tracking-[-1.5px] text-[#111110]">15.6″</div>
+              <div className="mt-1.5 font-body text-[11px] text-[#AAAAAA]">touch display</div>
             </div>
           </motion.div>
         </div>

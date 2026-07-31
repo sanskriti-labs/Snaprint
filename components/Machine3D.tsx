@@ -104,7 +104,7 @@ function Back() {
         <div style={{ width: 5, height: 9, background: "#bdbdb9" }} />
         <div style={{ width: 8, height: 5, background: "#bdbdb9" }} />
       </div>
-      <div style={{ position: "absolute", top: 114, left: 0, width: "100%", textAlign: "center", fontSize: 5, color: "#bdbdb9" }}>power · ethernet</div>
+      <div style={{ position: "absolute", top: 114, left: 0, width: "100%", textAlign: "center", fontSize: 5, color: "#bdbdb9" }}>power · data</div>
       {/* Red separator */}
       <div style={{ position: "absolute", top: 228, left: 0, width: "100%", height: 3, background: "#e63946" }} />
       {/* Dark lower */}
@@ -348,7 +348,7 @@ export default function Machine3D() {
       <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div
           onPointerDown={onDown}
-          style={{ width: 760, maxWidth: "100%", height: 680, perspective: 1900, cursor: "grab", display: "flex", alignItems: "center", justifyContent: "center", touchAction: "none", position: "relative" }}
+          style={{ width: 760, maxWidth: "100%", height: 680, perspective: 1900, cursor: "grab", display: "flex", alignItems: "center", justifyContent: "center", touchAction: "pan-y", position: "relative" }}
         >
           {/* Shadow layers */}
           <div style={{ position: "absolute", bottom: 150, left: "50%", transform: "translateX(-50%)", width: 420, height: 80, background: "radial-gradient(ellipse at 50% 0%,rgba(0,0,0,.14),transparent 70%)", filter: "blur(4px)", pointerEvents: "none" }} />

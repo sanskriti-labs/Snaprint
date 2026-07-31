@@ -132,7 +132,7 @@ export default function MachineSpecs() {
           >
             <Machine3D />
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-              {[["4G + WiFi", "dual connectivity"], ["23″ Display", "Android tablet"], ["2000 sheets", "paper capacity"]].map(([v, l]) => (
+              {[["15.6″ Display", "touch panel"], ["176.8 cm", "kiosk height"], ["55 × 70 cm", "footprint"]].map(([v, l]) => (
                 <div key={l} className="text-center">
                   <div className="font-display text-[14px] font-bold text-white">{v}</div>
                   <div className="font-body text-[10px] text-[rgba(255,255,255,0.3)]">{l}</div>
