@@ -13,6 +13,7 @@ export default function Footer() {
         { label: "The S1 kiosk", href: "#machine" },
         { label: "Why Snaprint", href: "#why" },
         { label: "Results", href: "#testimonials" },
+        { label: "Blog", href: "/blog" },
       ],
     },
 {
