@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, Instrument_Serif } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -87,6 +88,61 @@ const jsonLd = {
       name: "Snaprint",
       publisher: { "@id": `${siteUrl}/#organization` },
     },
+    {
+      "@type": "Product",
+      "@id": `${siteUrl}/#product-s1`,
+      name: "Snaprint S1",
+      description:
+        "Self-service print kiosk that connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present.",
+      brand: { "@id": `${siteUrl}/#organization` },
+      image: `${siteUrl}/og.png`,
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Does the Snaprint S1 work with my existing printer?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. The Snaprint S1 works with any printer brand — Canon, HP, Epson, Brother — so you don't need to replace your existing equipment.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can the kiosk take orders when my shop is closed?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Orders queue automatically and the kiosk keeps printing whether or not you're present, so your shop can earn from print jobs placed after hours.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What happens to a customer's uploaded documents?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Files are end-to-end encrypted and automatically deleted after each print job completes — no document is stored on the kiosk.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do shop owners track orders and revenue?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Every order, along with revenue, print counts, and ink and paper status, is visible on a live dashboard on the shop owner's phone.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I get a refund if I cancel before installation?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. If you've paid for a kiosk but installation hasn't taken place yet, you can cancel and request a full refund, processed within 7–14 business days to your original payment method.",
+          },
+        },
+      ],
+    },
   ],
 };
 
@@ -100,6 +156,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className="font-body antialiased">{children}</body>
+      <GoogleAnalytics gaId="G-76GFPGCHWQ" />
     </html>
   );
 }

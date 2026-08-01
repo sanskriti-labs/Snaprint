@@ -29,14 +29,6 @@ function CountUp({ target, prefix = "", suffix = "", inView }: {
   return <>{prefix}{val.toLocaleString("en-IN")}{suffix}</>;
 }
 
-const lineVariants = {
-  hidden: { opacity: 0, y: 36, filter: "blur(6px)" },
-  show: (i: number) => ({
-    opacity: 1, y: 0, filter: "blur(0px)",
-    transition: { duration: 0.72, delay: i * 0.13, ease: [0.22, 1, 0.36, 1] },
-  }),
-};
-
 export default function Hero() {
   const statsRef = useRef(null);
   const statsInView = useInView(statsRef, { once: true });
@@ -72,47 +64,24 @@ export default function Hero() {
             <span className="h-px w-7 bg-[#E63946]" />
           </motion.div>
 
-          {/* Headline — Space Grotesk display */}
+          {/* Headline — Space Grotesk display. Plain SSR text: this is the LCP element, no mount animation so it paints immediately. */}
           <h1
             className="mb-8 font-display font-extrabold leading-[0.97] tracking-[-3.5px]"
             style={{ fontSize: "clamp(54px, 6.8vw, 92px)" }}
           >
-            {[
-              { t: "Your shop.",    serif: false, red: false },
-              { t: "Prints while", serif: false, red: true  },
-              { t: "you sleep.",   serif: false, red: false },
-            ].map((line, i) => (
-              <motion.span
-                key={line.t}
-                custom={i}
-                variants={lineVariants}
-                initial="hidden"
-                animate="show"
-                className={`block ${line.red ? "text-[#E63946]" : "text-[#111110]"}`}
-              >
-                {line.t}
-              </motion.span>
-            ))}
+            <span className="block text-[#111110]">Your shop.</span>
+            <span className="block text-[#E63946]">Prints while</span>
+            <span className="block text-[#111110]">you sleep.</span>
           </h1>
 
-          {/* Subheading — Inter body, editorial balance */}
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mb-3 max-w-[420px] font-body text-[17px] font-light leading-[1.78] text-[#6B6B66]"
-          >
+          {/* Subheading — Inter body, editorial balance. Also part of LCP viewport, no fade-in. */}
+          <p className="mb-3 max-w-[420px] font-body text-[17px] font-light leading-[1.78] text-[#6B6B66]">
             Snaprint turns your xerox shop into a 24/7 remote printing hub.
-          </motion.p>
+          </p>
           {/* Serif accent line — Instrument Serif italic for rhythm */}
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.58 }}
-            className="mb-10 max-w-[380px] font-serif italic text-[16px] leading-[1.7] text-[#999994]"
-          >
+          <p className="mb-10 max-w-[380px] font-serif italic text-[16px] leading-[1.7] text-[#999994]">
             No queue. No wait. Just scan, pay, collect.
-          </motion.p>
+          </p>
 
           {/* CTAs */}
           <motion.div
