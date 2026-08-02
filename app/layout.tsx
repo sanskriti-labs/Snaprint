@@ -96,6 +96,18 @@ const jsonLd = {
         "Self-service print kiosk that connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present.",
       brand: { "@id": `${siteUrl}/#organization` },
       image: `${siteUrl}/og.png`,
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "INR",
+          minPrice: "300000",
+          maxPrice: "350000",
+        },
+        availability: "https://schema.org/InStock",
+        url: siteUrl,
+      },
     },
     {
       "@type": "FAQPage",
