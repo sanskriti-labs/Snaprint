@@ -24,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: `${siteUrl}/book`,
+      lastModified: "2026-08-02",
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     ...posts,
     {
       url: `${siteUrl}/privacy`,

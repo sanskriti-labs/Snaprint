@@ -858,7 +858,7 @@ git commit -m "Point Book a Demo CTAs at native /book page"
 
 This task has no file changes — it's the operational step needed before `/book` works in production. Include it in execution tracking since the feature isn't actually functional without it.
 
-- [ ] **Step 1:** In the Easy!Appointments admin panel (`https://book.sanskritilabs.in`, admin login), go to **Settings → API**, generate a fresh API key (regenerate if the previously-shared one — `RpvpKpORFrMExt6JgeGj0QjB3SPDjaVR` — hasn't already been rotated; treat that value as compromised regardless).
+- [ ] **Step 1:** In the Easy!Appointments admin panel (`https://book.sanskritilabs.in`, admin login), go to **Settings → API**, generate a fresh API key (regenerate if the previously-shared key — redacted here, treat as compromised — hasn't already been rotated; treat that value as compromised regardless).
 - [ ] **Step 2:** Add it to Vercel: `vercel env add EA_API_KEY production` (paste the key when prompted), then repeat for `preview` and `development` environments if EA should be reachable from preview deploys too.
 - [ ] **Step 3:** Redeploy (`vercel deploy --prod`) so the new env var is picked up.
 - [ ] **Step 4:** Manually verify on the live site: visit `https://snaprints.com/book`, complete a real test booking, confirm it appears in the EA admin calendar and the EA confirmation email arrives.

@@ -64,7 +64,7 @@ export default function Navbar() {
             snaprints@sanskritilabs.in
           </a>
           <a
-            href="#contact"
+            href="/book"
             className="hidden items-center gap-2 rounded-[8px] bg-[#111110] px-5 py-2.5 font-display text-[13px] font-semibold text-white transition-all duration-200 hover:bg-[#E63946] hover:-translate-y-0.5 md:flex"
             style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}
           >
@@ -103,7 +103,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/book"
             onClick={() => setMobileOpen(false)}
             className="mt-4 flex items-center justify-center gap-2 rounded-[8px] bg-[#111110] py-3 font-display text-[14px] font-semibold text-white"
           >
