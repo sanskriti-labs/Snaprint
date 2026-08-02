@@ -31,11 +31,25 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "'time' must be HH:mm" }, { status: 400 });
   }
 
+  // Reject past dates server-side regardless of what the UI sends — the client's
+  // notion of "today" can be stale (cached page, tampered request, clock skew).
+  const now = new Date();
+  const todayISO = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
+    now.getDate()
+  ).padStart(2, "0")}`;
+  if (date < todayISO) {
+    return NextResponse.json({ error: "'date' cannot be in the past" }, { status: 400 });
+  }
+
   try {
     const result = await createAppointment({ name, email, phone, date, time });
     return NextResponse.json(result);
   } catch (err) {
     const message = err instanceof EAApiError ? err.message : "Unexpected error";
-    return NextResponse.json({ error: message }, { status: 502 });
+    console.error("[book/submit] failed to create appointment:", message);
+    return NextResponse.json(
+      { error: "We couldn't complete your booking — please email us and we'll sort it out." },
+      { status: 502 }
+    );
   }
 }

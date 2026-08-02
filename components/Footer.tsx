@@ -21,7 +21,7 @@ export default function Footer() {
       links: [
         { label: "snaprints@sanskritilabs.in", href: "mailto:snaprints@sanskritilabs.in" },
         { label: "Request a Quote", href: "mailto:snaprints@sanskritilabs.in?subject=Quote Request" },
-        { label: "Book a Demo", href: "#contact" },
+        { label: "Book a Demo", href: "/book" },
         { label: "snaprints.com", href: "https://snaprints.com" },
       ],
     },

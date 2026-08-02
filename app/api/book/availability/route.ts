@@ -19,6 +19,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ slots });
   } catch (err) {
     const message = err instanceof EAApiError ? err.message : "Unexpected error";
-    return NextResponse.json({ error: message }, { status: 502 });
+    console.error("[book/availability] failed to fetch available slots:", message);
+    return NextResponse.json(
+      { error: "We couldn't load available times right now — please email us." },
+      { status: 502 }
+    );
   }
 }

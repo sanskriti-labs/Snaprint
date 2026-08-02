@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 function toISODate(d: Date): string {
@@ -23,14 +24,41 @@ type DatePickerProps = {
 };
 
 export function DatePicker({ selectedDate, onSelect, disabledDates = [] }: DatePickerProps) {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  // Compute the day list client-side after mount so the grid always reflects the
+  // visitor's actual "today", independent of build time or server/client timezone
+  // divergence (server may render UTC, IST clients are UTC+5:30).
+  const [days, setDays] = useState<Date[] | null>(null);
 
-  const days = Array.from({ length: 30 }, (_, i) => {
-    const d = new Date(today);
-    d.setDate(d.getDate() + i);
-    return d;
-  });
+  useEffect(() => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    setDays(
+      Array.from({ length: 30 }, (_, i) => {
+        const d = new Date(today);
+        d.setDate(d.getDate() + i);
+        return d;
+      })
+    );
+  }, []);
+
+  if (!days) {
+    return (
+      <div
+        role="listbox"
+        aria-label="Select a date"
+        aria-busy="true"
+        className="grid grid-cols-5 gap-2 sm:grid-cols-6 md:grid-cols-10"
+      >
+        {Array.from({ length: 30 }, (_, i) => (
+          <div
+            key={i}
+            className="h-[62px] animate-pulse rounded-[6px] border border-snap-border bg-snap-border/30"
+          />
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div

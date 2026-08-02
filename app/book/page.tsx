@@ -1,11 +1,13 @@
 // app/book/page.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { DatePicker } from "@/components/book/DatePicker";
 import { TimeSlots } from "@/components/book/TimeSlots";
 import { Button } from "@/components/ui/Button";
+
+export const dynamic = "force-dynamic";
 
 type Slot = { time: string };
 type Step = "picking" | "details" | "success";
@@ -35,9 +37,11 @@ export default function BookPage() {
 
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const submittingRef = useRef(false);
 
   useEffect(() => {
     if (!selectedDate) return;
+    let ignore = false;
     setLoadingSlots(true);
     setSelectedTime(null);
     setError(null);
@@ -47,12 +51,22 @@ export default function BookPage() {
         if (!res.ok) throw new Error((await res.json()).error ?? "Failed to load times");
         return res.json();
       })
-      .then((data: { slots: Slot[] }) => setSlots(data.slots))
-      .catch((err: Error) => {
-        setError(err.message);
-        setSlots([]);
+      .then((data: { slots: Slot[] }) => {
+        if (!ignore) setSlots(data.slots ?? []);
       })
-      .finally(() => setLoadingSlots(false));
+      .catch((err: Error) => {
+        if (!ignore) {
+          setError(err.message);
+          setSlots([]);
+        }
+      })
+      .finally(() => {
+        if (!ignore) setLoadingSlots(false);
+      });
+
+    return () => {
+      ignore = true;
+    };
   }, [selectedDate]);
 
   function handleTimeSelect(time: string) {
@@ -63,6 +77,8 @@ export default function BookPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!selectedDate || !selectedTime) return;
+    if (submittingRef.current) return;
+    submittingRef.current = true;
 
     setSubmitting(true);
     setError(null);
@@ -80,6 +96,7 @@ export default function BookPage() {
       setError(err instanceof Error ? err.message : "Something went wrong");
     } finally {
       setSubmitting(false);
+      submittingRef.current = false;
     }
   }
 
