@@ -97,14 +97,11 @@ const jsonLd = {
       brand: { "@id": `${siteUrl}/#organization` },
       image: `${siteUrl}/og.png`,
       offers: {
-        "@type": "Offer",
+        "@type": "AggregateOffer",
         priceCurrency: "INR",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "INR",
-          minPrice: "300000",
-          maxPrice: "350000",
-        },
+        lowPrice: "300000",
+        highPrice: "350000",
+        offerCount: "1",
         availability: "https://schema.org/InStock",
         url: siteUrl,
       },
