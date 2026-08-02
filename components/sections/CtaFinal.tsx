@@ -72,9 +72,7 @@ export default function CtaFinal() {
           className="flex flex-wrap items-center justify-center gap-4"
         >
           <a
-            href="https://book.sanskritilabs.in"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/book"
             className="inline-flex items-center gap-2.5 rounded-[8px] bg-white px-9 py-4 font-display text-[14px] font-bold text-[#111110] transition-all duration-200 hover:bg-[#E63946] hover:text-white hover:-translate-y-px"
             style={{ boxShadow: "0 0 0 1px rgba(255,255,255,0.1), 0 8px 32px rgba(0,0,0,0.35)" }}
           >
