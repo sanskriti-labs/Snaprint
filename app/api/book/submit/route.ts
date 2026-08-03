@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { name, email, phone, date, time } = (body ?? {}) as Record<string, unknown>;
+  const { name, email, phone, date, time, providerId } = (body ?? {}) as Record<string, unknown>;
 
   if (typeof name !== "string" || name.trim().length === 0) {
     return NextResponse.json({ error: "'name' is required" }, { status: 400 });
@@ -30,6 +30,9 @@ export async function POST(req: NextRequest) {
   if (typeof time !== "string" || !TIME_RE.test(time)) {
     return NextResponse.json({ error: "'time' must be HH:mm" }, { status: 400 });
   }
+  if (typeof providerId !== "number" || !Number.isInteger(providerId)) {
+    return NextResponse.json({ error: "'providerId' must be an integer" }, { status: 400 });
+  }
 
   // Reject past dates server-side regardless of what the UI sends — the client's
   // notion of "today" can be stale (cached page, tampered request, clock skew).
@@ -42,7 +45,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const result = await createAppointment({ name, email, phone, date, time });
+    const result = await createAppointment({ name, email, phone, date, time, providerId });
     return NextResponse.json(result);
   } catch (err) {
     const message = err instanceof EAApiError ? err.message : "Unexpected error";

@@ -1,5 +1,13 @@
 import type { MetadataRoute } from "next";
 import { getAllPostsMeta } from "@/lib/blog";
+import {
+  getAllCitySlugs,
+  getCity,
+  getAllCollegeSlugs,
+  getCollege,
+  getAllAreaSlugs,
+  getArea,
+} from "@/content/pseo/seo";
 
 const siteUrl = "https://snaprints.com";
 
@@ -10,6 +18,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly" as const,
     priority: 0.6,
   }));
+
+  const cities = getAllCitySlugs().map((slug) => {
+    const city = getCity(slug);
+    return {
+      url: `${siteUrl}/instant-print/${slug}`,
+      lastModified: city?.lastReviewed ?? "2026-08-03",
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    };
+  });
+
+  const colleges = getAllCollegeSlugs().map((slug) => {
+    const college = getCollege(slug);
+    return {
+      url: `${siteUrl}/print-near/${slug}`,
+      lastModified: college?.lastReviewed ?? "2026-08-03",
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    };
+  });
+
+  const areas = getAllAreaSlugs().map((slug) => {
+    const area = getArea(slug);
+    return {
+      url: `${siteUrl}/print-near/${slug}`,
+      lastModified: area?.lastReviewed ?? "2026-08-03",
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    };
+  });
 
   return [
     {
@@ -30,7 +68,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: `${siteUrl}/instant-print`,
+      lastModified: "2026-08-03",
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/print-near`,
+      lastModified: "2026-08-03",
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
     ...posts,
+    ...cities,
+    ...colleges,
+    ...areas,
     {
       url: `${siteUrl}/privacy`,
       lastModified: "2026-07-30",

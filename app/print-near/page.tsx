@@ -1,0 +1,169 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import PseoCta from "@/components/pseo/PseoCta";
+import EntityCard from "@/components/pseo/EntityCard";
+import {
+  getAllLiveCities,
+  getAllLiveColleges,
+  getAllLiveAreas,
+} from "@/content/pseo/seo";
+
+const SITE_URL = "https://snaprints.com";
+
+export const metadata: Metadata = {
+  title: "Print Near You — Colleges & Neighbourhoods — Snaprint",
+  description:
+    "Find a Snaprint kiosk near your college, office, or neighbourhood. Print, copy, and scan from your phone in under 60 seconds.",
+  alternates: { canonical: "/print-near" },
+  openGraph: {
+    title: "Print Near You — Snaprint Kiosks",
+    description:
+      "Find a Snaprint kiosk near your college, office, or neighbourhood.",
+    url: `${SITE_URL}/print-near`,
+    type: "website",
+    images: [`${SITE_URL}/og.png`],
+  },
+};
+
+type CityGroup = {
+  city: ReturnType<typeof getAllLiveCities>[number];
+  colleges: ReturnType<typeof getAllLiveColleges>;
+  areas: ReturnType<typeof getAllLiveAreas>;
+};
+
+export default function PrintNearIndex() {
+  const cities = getAllLiveCities();
+  const allColleges = getAllLiveColleges();
+  const allAreas = getAllLiveAreas();
+
+  // Group colleges + areas under their parent city. Cities with no live children are dropped.
+  const groups: CityGroup[] = cities
+    .map((city) => ({
+      city,
+      colleges: allColleges.filter((c) => c.city === city.slug),
+      areas: allAreas.filter((a) => a.city === city.slug),
+    }))
+    .filter((g) => g.colleges.length > 0 || g.areas.length > 0);
+
+  const totalLive = allColleges.length + allAreas.length;
+
+  return (
+    <>
+      <Navbar />
+      <main className="mx-auto max-w-[1280px] px-6 py-24 md:px-10">
+        <p className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E63946]">
+          All locations
+        </p>
+        <h1
+          className="mb-6 font-display font-extrabold leading-[1.05] tracking-[-2px] text-[#111110]"
+          style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
+        >
+          Print near your college or neighbourhood.
+        </h1>
+        <p className="mb-16 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
+          Walk up to a Snaprint kiosk, scan a QR, print from your phone — no
+          queue, no staff needed. Find your closest location below.
+        </p>
+
+        {totalLive === 0 ? <EmptyState /> : <GroupedList groups={groups} />}
+
+        {/* Cross-link to /instant-print */}
+        <div className="mt-20 border-t border-[#E8E6E0] pt-12">
+          <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-[#888780]">
+            Looking for a city-level overview?
+          </p>
+          <Link
+            href="/instant-print"
+            className="group inline-flex items-center gap-2 font-display text-[16px] font-bold text-[#111110] transition-colors hover:text-[#E63946]"
+          >
+            Browse by city
+            <span aria-hidden className="transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
+        </div>
+      </main>
+      <PseoCta />
+      <Footer />
+    </>
+  );
+}
+
+function GroupedList({ groups }: { groups: CityGroup[] }) {
+  return (
+    <div className="flex flex-col gap-16">
+      {groups.map(({ city, colleges, areas }) => (
+        <section key={city.slug}>
+          <div className="mb-6 flex items-center gap-3">
+            <span className="h-px flex-1 bg-[#E8E6E0]" />
+            <h2 className="shrink-0 font-display text-[22px] font-extrabold tracking-tight text-[#111110]">
+              {city.name}
+            </h2>
+            <span className="h-px flex-1 bg-[#E8E6E0]" />
+          </div>
+
+          {colleges.length > 0 && (
+            <div className="mb-10">
+              <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.16em] text-[#888780]">
+                Colleges
+              </p>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {colleges.map((c) => (
+                  <EntityCard
+                    key={c.slug}
+                    kind="college"
+                    college={c}
+                    href={`/print-near/${c.slug}`}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {areas.length > 0 && (
+            <div>
+              <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.16em] text-[#888780]">
+                Neighbourhoods
+              </p>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {areas.map((a) => (
+                  <EntityCard
+                    key={a.slug}
+                    kind="area"
+                    area={a}
+                    href={`/print-near/${a.slug}`}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function EmptyState() {
+  return (
+    <div className="rounded-3xl border border-[#E8E6E0] bg-[#F5F3EE] px-8 py-16 text-center">
+      <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E63946]">
+        Pre-launch
+      </p>
+      <h2 className="mb-4 font-display text-[28px] font-extrabold tracking-tight text-[#111110]">
+        We&apos;re adding locations every week.
+      </h2>
+      <p className="mx-auto mb-8 max-w-[420px] font-body text-[14px] leading-[1.75] text-[#6B6B66]">
+        Snaprint kiosks are launching across Bengaluru colleges and
+        neighbourhoods first. Tell us where you&apos;d like to see us next.
+      </p>
+      <a
+        href="mailto:snaprints@sanskritilabs.in"
+        className="inline-flex items-center gap-2 rounded-[8px] bg-[#111110] px-6 py-3 font-display text-[13px] font-semibold text-white transition-all hover:bg-[#E63946]"
+      >
+        Request a location
+      </a>
+    </div>
+  );
+}

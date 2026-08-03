@@ -4,12 +4,34 @@
 
 Snaprint is a hardware + software print kiosk product (the "S1" machine) sold to xerox/photocopy shop owners as a way to serve customers outside staffed hours and reduce queue time.
 
-## Pages
+## Core pages
 
 - [Home](https://snaprints.com/): Product overview, how it works, the S1 machine, pricing/demo contact.
+- [Book a Demo](https://snaprints.com/book): Schedule a live walkthrough of the S1 kiosk with the founding team.
+- [Instant Print — all cities](https://snaprints.com/instant-print): Hub listing every city with a Snaprint kiosk.
+- [Print Near You — colleges and neighbourhoods](https://snaprints.com/print-near): Hub listing every college and neighbourhood with a Snaprint kiosk.
+- [Blog](https://snaprints.com/blog): Operator guides, comparison pieces, and student use-case explainers.
+
+## Blog posts
+
+- [Snaprint vs Atomte vs QwikPrint — kiosk model comparison](https://snaprints.com/blog/snaprint-vs-atomte-vs-qwikprint-comparison)
+- [Print shops near Bengaluru colleges during exam season](https://snaprints.com/blog/print-shops-near-bengaluru-colleges-exam-season)
+- [Print from your phone instantly — no app, no shop](https://snaprints.com/blog/print-from-your-phone-instantly)
+- [How to start a xerox shop in India — business plan & costs](https://snaprints.com/blog/how-to-start-a-xerox-shop-in-india)
+- [Snaprint print, copy, scan pricing — what each page costs](https://snaprints.com/blog/snaprint-print-copy-scan-pricing)
+- [Snaprint franchise — kiosk investment overview](https://snaprints.com/blog/snaprint-franchise-print-kiosk-investment)
+
+## Legal
+
 - [Terms of Service](https://snaprints.com/terms)
 - [Privacy Policy](https://snaprints.com/privacy)
 - [Refund Policy](https://snaprints.com/refund-policy)
+
+## Local pages
+
+Per-city and per-location landing pages appear here as kiosks go live in each area. Currently pre-launch.
+- [Instant print in Bengaluru (coming soon)](https://snaprints.com/instant-print/bengaluru)
+- [Print near IISc Bangalore (coming soon)](https://snaprints.com/print-near/iisc-bangalore)
 
 ## Contact
 

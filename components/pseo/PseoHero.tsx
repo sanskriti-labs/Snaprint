@@ -1,0 +1,68 @@
+import type { City, College, Area } from "@/content/pseo/types";
+
+type Props =
+  | { kind: "city"; city: City }
+  | { kind: "college"; college: College }
+  | { kind: "area"; area: Area };
+
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E63946]">
+      {children}
+    </p>
+  );
+}
+
+function H1({ children }: { children: React.ReactNode }) {
+  return (
+    <h1
+      className="mb-6 font-display font-extrabold leading-[1.05] tracking-[-2px] text-[#111110]"
+      style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
+    >
+      {children}
+    </h1>
+  );
+}
+
+function Intro({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="max-w-[580px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
+      {children}
+    </p>
+  );
+}
+
+export default function PseoHero(props: Props) {
+  if (props.kind === "city") {
+    const { city } = props;
+    return (
+      <div className="mb-16">
+        <Eyebrow>Instant print in {city.name}</Eyebrow>
+        <H1>Find a Snaprint kiosk in {city.name}</H1>
+        <Intro>{city.intro}</Intro>
+      </div>
+    );
+  }
+
+  if (props.kind === "college") {
+    const { college } = props;
+    const name = college.shortName ?? college.name;
+    return (
+      <div className="mb-16">
+        <Eyebrow>Print near {name} campus</Eyebrow>
+        <H1>Snaprint kiosk near {name}, {college.city}</H1>
+        <Intro>{college.intro}</Intro>
+      </div>
+    );
+  }
+
+  // kind === "area"
+  const { area } = props;
+  return (
+    <div className="mb-16">
+      <Eyebrow>Instant print in {area.name}</Eyebrow>
+      <H1>Find a Snaprint kiosk in {area.name}, {area.city}</H1>
+      <Intro>{area.intro}</Intro>
+    </div>
+  );
+}

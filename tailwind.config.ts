@@ -38,6 +38,8 @@ const config: Config = {
         "rotate-slow": "rotate-slow 20s linear infinite",
         "rotate-rev": "rotate-slow 25s linear infinite reverse",
         blink: "blink 1.2s ease-in-out infinite",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
       keyframes: {
         float: {
@@ -63,6 +65,14 @@ const config: Config = {
         blink: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0" },
+        },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
     },
