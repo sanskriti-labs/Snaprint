@@ -1,0 +1,10 @@
+# ai.txt — AI crawler permissions for snaprints.com
+# See also: /robots.txt, /llms.txt
+
+User-agent: *
+Allow: /
+Content-Usage: allow
+
+Contact: snaprints@sanskritilabs.in
+Sitemap: https://snaprints.com/sitemap.xml
+Llms: https://snaprints.com/llms.txt

@@ -1,0 +1,25 @@
+{
+  "name": "Snaprint",
+  "url": "https://snaprints.com",
+  "description": "Snaprint turns xerox/photocopy shops into 24/7 self-service print kiosks. Students and customers scan a QR code, upload a document, pay, and collect the print — no queue, no shop owner needed to operate it.",
+  "parentOrganization": "Sanskriti Labs",
+  "product": {
+    "name": "Snaprint S1",
+    "type": "Self-service print kiosk hardware",
+    "description": "Connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present.",
+    "priceRangeINR": [300000, 350000]
+  },
+  "areaServed": "Bengaluru, India",
+  "contact": {
+    "email": "snaprints@sanskritilabs.in"
+  },
+  "pages": {
+    "home": "https://snaprints.com/",
+    "book": "https://snaprints.com/book",
+    "blog": "https://snaprints.com/blog",
+    "terms": "https://snaprints.com/terms",
+    "privacy": "https://snaprints.com/privacy",
+    "refundPolicy": "https://snaprints.com/refund-policy"
+  },
+  "lastUpdated": "2026-08-03"
+}

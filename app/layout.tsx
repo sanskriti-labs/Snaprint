@@ -78,7 +78,12 @@ const jsonLd = {
       logo: `${siteUrl}/icon-512.png`,
       description: "Snaprint builds self-service print kiosks that turn xerox shops into 24/7 remote printing hubs.",
       email: "snaprints@sanskritilabs.in",
-      parentOrganization: { "@type": "Organization", name: "Sanskriti Labs" },
+      sameAs: ["https://www.linkedin.com/showcase/snaprints/"],
+      parentOrganization: {
+        "@type": "Organization",
+        name: "Sanskriti Labs",
+        sameAs: ["https://www.linkedin.com/company/sanskriti-labs/"],
+      },
       areaServed: { "@type": "City", name: "Bengaluru" },
     },
     {
@@ -92,6 +97,7 @@ const jsonLd = {
       "@type": "Product",
       "@id": `${siteUrl}/#product-s1`,
       name: "Snaprint S1",
+      dateModified: "2026-08-03",
       description:
         "Self-service print kiosk that connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present.",
       brand: { "@id": `${siteUrl}/#organization` },
