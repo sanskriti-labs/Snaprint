@@ -15,7 +15,9 @@ const features = [
 
 const founderFeatures = [
   "All S1 standard features included",
-  "₹30,000 cashback after 500 prints in month 1",
+  "₹30,000 off the device",
+  "Complementary: 1 year of free maintenance",
+  "Complementary: 3 years of free internet",
   "Priority on-ground Bengaluru support",
   "Featured on Snaprint network map",
   "Co-branded shop signage installation",
@@ -153,7 +155,7 @@ export default function Franchise() {
                 ))}
               </div>
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/918618384599"
                 className="flex w-full items-center justify-center gap-2 rounded-[8px] bg-[#E63946] py-4 font-display text-[14px] font-semibold text-white transition-all duration-200 hover:bg-[#C1121F] hover:-translate-y-0.5"
                 style={{ boxShadow: "0 4px 20px rgba(230,57,70,0.45), 0 2px 6px rgba(230,57,70,0.25)" }}
               >
