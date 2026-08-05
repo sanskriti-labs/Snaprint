@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, Instrument_Serif } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -187,6 +188,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body className="font-body antialiased">{children}</body>
       <GoogleAnalytics gaId="G-76GFPGCHWQ" />
+      <Analytics />
     </html>
   );
 }
