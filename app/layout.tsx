@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 const jsonLd = {
@@ -79,6 +82,18 @@ const jsonLd = {
       description: "Snaprint builds self-service print kiosks that turn xerox shops into 24/7 remote printing hubs.",
       email: "snaprints@sanskritilabs.in",
       sameAs: ["https://www.linkedin.com/showcase/snaprints/"],
+      founder: [
+        {
+          "@type": "Person",
+          name: "Abhishek Rajpurohit",
+          sameAs: ["https://www.linkedin.com/in/abhishek-rajpurohit/"],
+        },
+        {
+          "@type": "Person",
+          name: "Goutham Singh",
+          sameAs: ["https://www.linkedin.com/in/goutham-singh-/"],
+        },
+      ],
       parentOrganization: {
         "@type": "Organization",
         name: "Sanskriti Labs",
