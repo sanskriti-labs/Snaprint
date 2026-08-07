@@ -4,10 +4,14 @@ import areasData from "./areas";
 import type { City, College, Area, Slug } from "./types";
 import { getCityFaqs, getLocationFaqs } from "./faqs";
 import type { Faq } from "./faqs";
+import { getShopsNearCollege } from "./shops";
 
 export type { City, College, Area };
 export { getCityFaqs, getLocationFaqs };
 export type { Faq };
+
+// Re-exported so the page render path can import everything from "@/content/pseo/seo".
+export { getShopsNearCollege } from "./shops";
 
 // ---------------------------------------------------------------------------
 // Live-only selectors (used by sitemap, generateStaticParams)
@@ -45,8 +49,20 @@ export function getCity(slug: Slug): City | null {
 export function getCollege(slug: Slug): College | null {
   const c = collegesData.find((c) => c.slug === slug);
   if (!c) return null;
-  if (c.presence === "live") return c;
-  return null;
+  if (c.presence !== "live") return null;
+  // Guard rail: a live college must have at least one shop in 1.5 km radius
+  // (city-wide shop index — not the area-keyword match). Warn, don't throw:
+  // the operator may be flipping presence in advance of a launch announcement.
+  if (c.lat != null && c.lng != null) {
+    const nearby = getShopsNearCollege(c.slug);
+    if (nearby.length === 0) {
+      console.warn(
+        `[pseo] college "${c.slug}" is live but has 0 shops within 1.5 km radius. ` +
+          `Verify shop data or set presence: "planned".`
+      );
+    }
+  }
+  return c;
 }
 
 export function getArea(slug: Slug): Area | null {

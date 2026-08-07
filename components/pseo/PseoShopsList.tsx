@@ -3,7 +3,8 @@ import type { LiveLocation } from "@/content/pseo/types";
 
 type Props = {
   locations: LiveLocation[];
-  areaName: string;
+  displayName: string;
+  preposition?: "in" | "near";
 };
 
 function googleMapsUrl(loc: LiveLocation): string {
@@ -37,7 +38,7 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export default function PseoShopsList({ locations, areaName }: Props) {
+export default function PseoShopsList({ locations, displayName, preposition = "in" }: Props) {
   if (!locations || locations.length === 0) return null;
 
   return (
@@ -45,14 +46,14 @@ export default function PseoShopsList({ locations, areaName }: Props) {
       <div className="mb-6 flex items-baseline justify-between gap-4">
         <div>
           <h2 className="font-display text-[22px] font-bold text-[#111110]">
-            {locations.length} xerox shops in {areaName}
+            {locations.length} xerox shops {preposition} {displayName}
           </h2>
           <p className="mt-1 font-body text-[13px] text-[#888780]">
             Verified print &amp; copy shops near you — updated August 2026
           </p>
         </div>
         <a
-          href={`https://www.google.com/maps/search/xerox+shops+in+${encodeURIComponent(areaName)}+Bangalore`}
+          href={`https://www.google.com/maps/search/xerox+shops+${preposition}+${encodeURIComponent(displayName)}+Bangalore`}
           target="_blank"
           rel="noopener noreferrer"
           className="shrink-0 rounded-full border border-[#E8E6E0] bg-white px-4 py-1.5 font-body text-[12px] text-[#6B6B66] transition-colors hover:border-[#111110] hover:text-[#111110]"

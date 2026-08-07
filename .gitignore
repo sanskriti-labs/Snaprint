@@ -40,3 +40,12 @@ next-env.d.ts
 # local
 /.venv/
 /reports/
+
+# python
+__pycache__/
+*.pyc
+
+# scraper raw output — large intermediate files, regenerate via the scraper.
+# shops-clean.jsonl is NOT ignored: content/pseo/shops.ts reads it at build time.
+scripts/scraper/data/results*.json
+scripts/clean/data/llm-audit-cache.json

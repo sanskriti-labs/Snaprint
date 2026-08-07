@@ -11,6 +11,7 @@ import {
   getCollegesNearArea,
   getNeighborCities,
   getLocationFaqs,
+  getShopsNearCollege,
 } from "@/content/pseo/seo";
 import PseoPage from "@/components/PseoPage";
 
@@ -79,14 +80,21 @@ export default async function EntityPage({
     const siblings = getCollegesInCity(college.city);
     const neighbors = getNeighborCities(college.city);
     const faqs = getLocationFaqs(params.entity, college.city);
+    const nearbyShops = getShopsNearCollege(college.slug);
 
     const jsonLd = {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Place",
-          "@id": `${SITE_URL}/#location-${college.slug}`,
-          name: `${college.name} — Snaprint Kiosk Nearby`,
+          // Single node with two @type values — schema.org canonical
+          // pattern for "this is X and Y". A separate EducationalOrganization
+          // peer node would create a duplicate @id with the Place, which
+          // LLM extractors handle inconsistently. The Place type carries
+          // the geo/address; EducationalOrganization adds the educational
+          // entity classification without claiming a kiosk location.
+          "@type": ["Place", "EducationalOrganization"],
+          "@id": `${SITE_URL}/print-near/${college.slug}#org`,
+          name: college.name,
           description: college.intro,
           url: `${SITE_URL}/print-near/${college.slug}`,
           image: `${SITE_URL}/og.png`,
@@ -105,7 +113,6 @@ export default async function EntityPage({
             addressLocality: college.city.charAt(0).toUpperCase() + college.city.slice(1),
             addressCountry: "IN",
           },
-          parentOrganization: { "@id": `${SITE_URL}/#organization` },
         },
         // BreadcrumbList
         {
@@ -130,7 +137,7 @@ export default async function EntityPage({
 
     return (
       <PseoPage
-        props={{ kind: "college", college }}
+        props={{ kind: "college", college, liveLocations: nearbyShops }}
         faqs={faqs}
         crossLinks={{ parentCity: parentCity ?? undefined, colleges: siblings, neighborCities: neighbors }}
         jsonLd={jsonLd}

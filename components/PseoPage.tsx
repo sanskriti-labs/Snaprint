@@ -11,7 +11,7 @@ import type { Faq } from "@/content/pseo/faqs";
 
 type Props =
   | { kind: "city"; city: City }
-  | { kind: "college"; college: College }
+  | { kind: "college"; college: College; liveLocations?: LiveLocation[] }
   | { kind: "area"; area: Area; liveLocations?: LiveLocation[] };
 
 type CrossLinks = {
@@ -32,8 +32,22 @@ export default function PseoPage({
   crossLinks?: CrossLinks;
   jsonLd?: object;
 }) {
-  const areaLiveLocations =
-    props.kind === "area" ? props.liveLocations ?? [] : [];
+  const nearbyLocations =
+    props.kind === "area" || props.kind === "college"
+      ? props.liveLocations ?? []
+      : [];
+
+  // Resolved display name + preposition for the ShopsList heading.
+  // "in {area}" reads naturally for neighbourhoods; "near {college}" reads
+  // naturally for institutions. Centralising this so the heading stays
+  // grammatical across both kinds.
+  const shopsListTarget =
+    props.kind === "area"
+      ? { name: props.area.name, preposition: "in" as const }
+      : props.kind === "college"
+        ? { name: props.college.shortName ?? props.college.name, preposition: "near" as const }
+        : null;
+
   return (
     <>
       {jsonLd && (
@@ -52,8 +66,12 @@ export default function PseoPage({
 
         <PseoServicesList />
 
-        {areaLiveLocations.length > 0 && (
-          <PseoShopsList locations={areaLiveLocations} areaName={props.kind === "area" ? props.area.name : ""} />
+        {nearbyLocations.length > 0 && shopsListTarget && (
+          <PseoShopsList
+            locations={nearbyLocations}
+            displayName={shopsListTarget.name}
+            preposition={shopsListTarget.preposition}
+          />
         )}
 
         {faqs.length > 0 && <PseoFaq faqs={faqs} />}

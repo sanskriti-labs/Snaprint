@@ -57,6 +57,8 @@ export type College = {
   keywords: string[];
   presence: Presence;
   lastReviewed: string;
+  /** ISO date. Set when presence flips to "live" after operator verification. */
+  verifiedAt?: string;
 };
 
 // ---------------------------------------------------------------------------

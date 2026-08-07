@@ -1,0 +1,98 @@
+# Bangalore neighbourhoods — xerox shop scrape queries
+# One query per line — Google Maps search format: "xerox shops in [Area] Bangalore"
+# Review this list before running the scraper
+
+# Central Bangalore
+xerox shops in Malleswaram Bangalore
+xerox shops in Indiranagar Bangalore
+xerox shops in Sadashivanagar Bangalore
+xerox shops in Shivajinagar Bangalore
+xerox shops in Vasanth Nagar Bangalore
+xerox shops in Ulsoor Bangalore
+xerox shops in Halasuru Bangalore
+xerox shops in Domlur Bangalore
+xerox shops in RT Nagar Bangalore
+xerox shops in Fraser Town Bangalore
+xerox shops in Cox Town Bangalore
+xerox shops in Richmond Town Bangalore
+xerox shops in Rajajinagar Bangalore
+xerox shops in Chickpet Bangalore
+xerox shops in Avenue Road Bangalore
+xerox shops in Kumara Park Bangalore
+xerox shops in Russell Market Bangalore
+
+# Eastern Bangalore
+xerox shops in Marathahalli Bangalore
+xerox shops in Krishnarajapuram Bangalore
+xerox shops in Mahadevapura Bangalore
+xerox shops in Bellandur Bangalore
+xerox shops in CV Raman Nagar Bangalore
+xerox shops in Hoodi Bangalore
+xerox shops in Varthur Bangalore
+xerox shops in Whitefield Bangalore
+xerox shops in Old Airport Road Bangalore
+xerox shops in Old Madras Road Bangalore
+
+# North-Eastern Bangalore
+xerox shops in Banaswadi Bangalore
+xerox shops in HBR Layout Bangalore
+xerox shops in Ramamurthy Nagar Bangalore
+xerox shops in Kammanahalli Bangalore
+xerox shops in Horamavu Bangalore
+xerox shops in Lingarajapuram Bangalore
+xerox shops in Kalyan Nagar Bangalore
+
+# Northern Bangalore
+xerox shops in Yeshwanthpur Bangalore
+xerox shops in Hebbal Bangalore
+xerox shops in Peenya Bangalore
+xerox shops in Jalahalli Bangalore
+xerox shops in Mathikere Bangalore
+xerox shops in Vidyaranyapura Bangalore
+xerox shops in Yelahanka Bangalore
+
+# South-Eastern Bangalore
+xerox shops in Electronic City Bangalore
+xerox shops in Koramangala Bangalore
+xerox shops in HSR Layout Bangalore
+xerox shops in BTM Layout Bangalore
+xerox shops in Bommanahalli Bangalore
+xerox shops in Bommasandra Bangalore
+xerox shops in Sarjapur Road Bangalore
+xerox shops in Madiwala Bangalore
+
+# Southern Bangalore
+xerox shops in Jayanagar Bangalore
+xerox shops in Basavanagudi Bangalore
+xerox shops in JP Nagar Bangalore
+xerox shops in Banashankari Bangalore
+xerox shops in Uttarahalli Bangalore
+xerox shops in Kumaraswamy Layout Bangalore
+xerox shops in Girinagar Bangalore
+xerox shops in Padmanabhanagar Bangalore
+
+# Southern Suburbs
+xerox shops in Anjanapura Bangalore
+xerox shops in Hulimavu Bangalore
+xerox shops in Begur Bangalore
+xerox shops in Arekere Bangalore
+xerox shops in Kothnur Bangalore
+xerox shops in Gottigere Bangalore
+
+# Western Bangalore
+xerox shops in Vijayanagar Bangalore
+xerox shops in Rajajinagar Bangalore
+xerox shops in Rajarajeshwari Nagar Bangalore
+xerox shops in Basaveshwaranagar Bangalore
+xerox shops in Nagarbhavi Bangalore
+xerox shops in Mahalakshmi Layout Bangalore
+xerox shops in Kengeri Bangalore
+xerox shops in Chandra Layout Bangalore
+
+# Peripheral
+xerox shops in Attibele Bangalore
+xerox shops in Anekal Bangalore
+xerox shops in Chandapura Bangalore
+xerox shops in Sarjapur Bangalore
+xerox shops in Yelahanka New Town Bangalore
+xerox shops in Nelamangala Bangalore

@@ -6,6 +6,7 @@ import PseoCta from "@/components/pseo/PseoCta";
 import EntityCard from "@/components/pseo/EntityCard";
 import {
   getAllLiveAreas,
+  getAllLiveColleges,
 } from "@/content/pseo/seo";
 
 const SITE_URL = "https://snaprints.com";
@@ -29,12 +30,18 @@ type AreaGroup = {
   cityName: string;
   citySlug: string;
   areas: ReturnType<typeof getAllLiveAreas>;
+  colleges: ReturnType<typeof getAllLiveColleges>;
 };
 
 export default function PrintNearIndex() {
   const allAreas = getAllLiveAreas();
+  const allColleges = getAllLiveColleges();
 
-  // Group all live areas by their parent city slug
+  // Group all live areas by their parent city slug, and collect the
+  // live colleges assigned to each city. The hub shows colleges only
+  // when their presence has been flipped to "live" — planned entries
+  // are intentionally excluded so the public page never advertises a
+  // launch that hasn't happened.
   const groups: AreaGroup[] = [];
   const seenCities = new Set<string>();
   for (const area of allAreas) {
@@ -44,11 +51,26 @@ export default function PrintNearIndex() {
         cityName: area.city.charAt(0).toUpperCase() + area.city.slice(1),
         citySlug: area.city,
         areas: allAreas.filter((a) => a.city === area.city),
+        colleges: allColleges.filter((c) => c.city === area.city),
       });
     }
   }
 
-  const totalLive = allAreas.length;
+  // Cities that have live colleges but no live areas (e.g. college-first
+  // launches) still need a group to render the colleges section.
+  for (const c of allColleges) {
+    if (!seenCities.has(c.city)) {
+      seenCities.add(c.city);
+      groups.push({
+        cityName: c.city.charAt(0).toUpperCase() + c.city.slice(1),
+        citySlug: c.city,
+        areas: [],
+        colleges: allColleges.filter((cc) => cc.city === c.city),
+      });
+    }
+  }
+
+  const totalLive = allAreas.length + allColleges.length;
 
   return (
     <>
@@ -95,7 +117,7 @@ export default function PrintNearIndex() {
 function GroupedList({ groups }: { groups: AreaGroup[] }) {
   return (
     <div className="flex flex-col gap-16">
-      {groups.map(({ cityName, citySlug, areas }) => (
+      {groups.map(({ cityName, citySlug, areas, colleges }) => (
         <section key={citySlug}>
           <div className="mb-6 flex items-center gap-3">
             <span className="h-px flex-1 bg-[#E8E6E0]" />
@@ -104,6 +126,24 @@ function GroupedList({ groups }: { groups: AreaGroup[] }) {
             </h2>
             <span className="h-px flex-1 bg-[#E8E6E0]" />
           </div>
+
+          {colleges.length > 0 && (
+            <div className="mb-10">
+              <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.16em] text-[#888780]">
+                Colleges &amp; Universities
+              </p>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {colleges.map((c) => (
+                  <EntityCard
+                    key={c.slug}
+                    kind="college"
+                    college={c}
+                    href={`/print-near/${c.slug}`}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
 
           {areas.length > 0 && (
             <div>

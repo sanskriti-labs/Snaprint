@@ -47,10 +47,16 @@ export default function PseoHero(props: Props) {
   if (props.kind === "college") {
     const { college } = props;
     const name = college.shortName ?? college.name;
+    // H1 copy varies by presence to avoid claiming a kiosk exists
+    // when no shop data is verified within radius (planned).
+    const headline =
+      college.presence === "live"
+        ? `Print near ${name}, ${college.city}`
+        : `Print shops near ${name}, ${college.city}`;
     return (
       <div className="mb-16">
         <Eyebrow>Print near {name} campus</Eyebrow>
-        <H1>Snaprint kiosk near {name}, {college.city}</H1>
+        <H1>{headline}</H1>
         <Intro>{college.intro}</Intro>
       </div>
     );
