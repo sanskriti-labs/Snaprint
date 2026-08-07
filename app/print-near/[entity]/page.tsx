@@ -165,12 +165,24 @@ export default async function EntityPage({
           description: area.intro,
           url: `${SITE_URL}/print-near/${area.slug}`,
           image: `${SITE_URL}/og.png`,
+          // geo/address/telephone all describe liveLocations[0] so the
+          // node stays internally consistent — one real shop, not a mix.
+          // address is required by schema.org/LocalBusiness; omitting it
+          // left the node incomplete for AI and rich-result extractors.
           ...(area.liveLocations && area.liveLocations.length > 0
             ? {
                 geo: {
                   "@type": "GeoCoordinates",
                   latitude: area.liveLocations[0].lat,
                   longitude: area.liveLocations[0].lng,
+                },
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: area.liveLocations[0].address,
+                  addressLocality: area.name,
+                  addressRegion: "Karnataka",
+                  ...(area.pinCodes?.[0] ? { postalCode: area.pinCodes[0] } : {}),
+                  addressCountry: "IN",
                 },
               }
             : {}),
