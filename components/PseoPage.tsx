@@ -5,13 +5,14 @@ import PseoServicesList from "@/components/pseo/PseoServicesList";
 import PseoFaq from "@/components/pseo/PseoFaq";
 import PseoCrossLinks from "@/components/pseo/PseoCrossLinks";
 import PseoCta from "@/components/pseo/PseoCta";
-import type { City, College, Area } from "@/content/pseo/types";
+import PseoShopsList from "@/components/pseo/PseoShopsList";
+import type { City, College, Area, LiveLocation } from "@/content/pseo/types";
 import type { Faq } from "@/content/pseo/faqs";
 
 type Props =
   | { kind: "city"; city: City }
   | { kind: "college"; college: College }
-  | { kind: "area"; area: Area };
+  | { kind: "area"; area: Area; liveLocations?: LiveLocation[] };
 
 type CrossLinks = {
   parentCity?: City;
@@ -31,6 +32,8 @@ export default function PseoPage({
   crossLinks?: CrossLinks;
   jsonLd?: object;
 }) {
+  const areaLiveLocations =
+    props.kind === "area" ? props.liveLocations ?? [] : [];
   return (
     <>
       {jsonLd && (
@@ -48,6 +51,10 @@ export default function PseoPage({
         </div>
 
         <PseoServicesList />
+
+        {areaLiveLocations.length > 0 && (
+          <PseoShopsList locations={areaLiveLocations} areaName={props.kind === "area" ? props.area.name : ""} />
+        )}
 
         {faqs.length > 0 && <PseoFaq faqs={faqs} />}
 
