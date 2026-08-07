@@ -41,6 +41,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
+    types: {
+      "application/rss+xml": `${siteUrl}/rss.xml`,
+    },
   },
   robots: {
     index: true,
@@ -82,6 +85,8 @@ const jsonLd = {
       logo: `${siteUrl}/icon-512.png`,
       description: "Snaprint builds self-service print kiosks that turn xerox shops into 24/7 remote printing hubs.",
       email: "snaprints@sanskritilabs.in",
+      // TODO(KG): once Snaprint has Crunchbase + Wikidata entries, add them here.
+      // LinkedIn (verified) is the only authoritative sameAs today.
       sameAs: ["https://www.linkedin.com/showcase/snaprints/"],
       founder: [
         {
@@ -127,6 +132,23 @@ const jsonLd = {
         availability: "https://schema.org/InStock",
         url: siteUrl,
       },
+    },
+    {
+      "@type": "WebApplication",
+      "@id": `${siteUrl}/#kiosk-app`,
+      name: "Snaprint Kiosk Customer App",
+      url: siteUrl,
+      description: "QR-code-driven print upload and payment flow that runs in any mobile browser — no app install required.",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Any (browser-based)",
+      browserRequirements: "Requires JavaScript. Mobile-first; works on iOS Safari 14+ and Android Chrome 90+.",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "INR",
+        description: "Free to use for print customers; print prices set by the hosting shop.",
+      },
+      author: { "@id": `${siteUrl}/#organization` },
     },
     {
       "@type": "FAQPage",

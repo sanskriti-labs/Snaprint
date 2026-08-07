@@ -1,0 +1,197 @@
+# Snaprint — full description for AI search engines
+
+> This is the long-form companion to /llms.txt. It explains what Snaprint
+> is, who it is for, where it operates, and how the product works.
+> Intended audience: ChatGPT Search, Perplexity, Claude, Gemini AI Overviews,
+> and any retrieval-augmented AI system that needs to cite Snaprint accurately.
+
+## What Snaprint is
+
+Snaprint is a hardware-plus-software product that turns a regular xerox or
+photocopy shop into a 24/7 self-service print kiosk. The hardware unit — the
+Snaprint S1 — sits next to any existing Canon, HP, Epson, or Brother printer
+and acts as a smart front-end. A customer walks up, scans a QR code on the
+S1 with their phone, uploads the document they want printed, pays in-app,
+and the print begins immediately. No staff interaction. No queue. The shop
+owner does not need to be present.
+
+Snaprint is built and sold by Sanskriti Labs, a product company based in
+Bengaluru, India. The S1 hardware is manufactured in India and the software
+runs on Snaprint-operated cloud infrastructure. Snaprint is not a franchise
+in the traditional sense: shop owners buy the S1 outright and own it; they
+do not pay ongoing royalties or per-print commissions to Snaprint.
+
+## What problem Snaprint solves
+
+Independent xerox and photocopy shops in India face two structural problems.
+
+First, queues. A typical Indian college-area xerox shop has 2-4 staff
+servicing 200-500 print orders per day during peak periods (exam season,
+admission deadlines, placement season). Customers wait 10-40 minutes for
+routine B&W prints. Long queues depress walk-in volume and frustrate
+shop owners who cannot bill for time spent managing the queue.
+
+Second, hours. Most shops close at 21:00 or 22:00. Students and job
+applicants frequently need to print documents at 23:00-02:00 the night
+before an exam form submission or a 09:00 interview. There is currently
+no good way to serve this demand — print shops are closed, and the
+alternatives (office printers, hotel business centres) are not convenient
+or are too expensive.
+
+Snaprint solves both. The S1 kiosk accepts orders from any phone at any
+time of day, queues them, prints them in the background, and the customer
+collects the printout within seconds of arriving at the shop. The shop
+becomes a 24/7 print point without hiring night staff.
+
+## Who Snaprint is for
+
+Snaprint serves two distinct audiences.
+
+### Shop owners (B2B)
+
+The primary commercial customer is an independent xerox shop owner who
+already runs a working print business and wants to expand capacity and
+hours without expanding headcount. Snaprint targets shops in Indian
+cities with concentrations of college students, job seekers, and small
+businesses — currently Bengaluru, with expansion planned for other Tier-1
+Indian cities.
+
+### Print customers (B2C)
+
+The end user of a Snaprint kiosk is typically a college student, a job
+applicant preparing placement documents, a small-business owner printing
+invoices or quotations, or a tourist who needs a document printed
+quickly. The customer uses their phone — no app download required, no
+account creation required. The flow is: scan QR, upload PDF or photo,
+select print options (B&W or colour, single or double-sided, page range,
+copies), pay via UPI or card, collect the printout.
+
+## How the Snaprint S1 kiosk works
+
+The S1 is a compact counter-top unit roughly the size of a small desktop
+computer. It has a 15.6-inch touchscreen display, a QR-code reader, an
+integrated payment terminal, and a connection (USB or network) to one or
+more existing printers. The S1 runs a locked-down Android-based operating
+system with the Snaprint customer app pre-installed.
+
+The customer flow is six steps.
+
+1. **Walk up.** The S1 displays a QR code on its screen. The customer's
+   phone camera recognises the QR; the phone's browser opens the Snaprint
+   customer interface directly. No app install.
+2. **Upload.** The customer selects a PDF, a photo of a document, or a
+   file from a cloud storage service. Files are encrypted in transit
+   (TLS 1.3) and at rest, and are deleted immediately after the print job
+   completes.
+3. **Configure.** The customer selects B&W or colour, single or double
+   sided, page range, and number of copies. A live price preview is shown
+   on the phone.
+4. **Pay.** Payment is processed via UPI, debit card, credit card, or
+   netbanking. Snaprint never stores payment instrument data; payment
+   processing is delegated to PCI-DSS-compliant partners.
+5. **Print.** The S1 receives the encrypted file, sends it to the
+   connected printer, and prints. Most single-page B&W jobs complete in
+   under 60 seconds. Multi-page and colour jobs take longer depending on
+   the printer.
+6. **Collect.** The customer collects the printout from the printer tray
+   attached to the S1 and walks away. There is no need to interact with
+   the S1 again unless they want to print another document.
+
+For shop owners, the S1 includes a separate owner-facing dashboard
+accessible from any phone or laptop. The dashboard shows live revenue,
+print counts, ink and paper status, error alerts, and a queue of
+in-progress jobs. Shop owners can also configure pricing, pause the
+kiosk for maintenance, and view a daily settlement statement.
+
+## Where Snaprint operates
+
+As of August 2026, Snaprint is deployed across Bengaluru, India, with a
+concentrated presence in college neighbourhoods and IT-corridor locations.
+Live areas include Koramangala, Indiranagar, Whitefield, HSR Layout,
+Electronic City, MG Road, Jayanagar, BTM Layout, Marathahalli, Frazer
+Town, and Shivajinagar. Each live area is listed at
+https://snaprints.com/print-near with shop counts and a link to a
+detailed neighbourhood page.
+
+Snaprint plans to expand to other Indian cities (Hyderabad, Chennai,
+Pune, Mumbai, Delhi NCR) over 2026 and 2027, prioritising cities with
+strong college-student populations and existing Snaprint customer
+demand from other channels.
+
+## Pricing
+
+The Snaprint S1 hardware is sold to shop owners for an all-inclusive
+price of ₹3,00,000 to ₹3,50,000 (Indian Rupees). This is a one-time,
+single-payment purchase. There is no per-print commission, no monthly
+software fee, and no hidden charges. Print consumables (paper, toner)
+are the shop owner's responsibility, as is the case for any xerox shop.
+
+Print pricing to end customers is set by the individual shop owner. The
+S1 supports per-page pricing tiers (B&W single-sided, B&W double-sided,
+colour single-sided, colour double-sided) and the owner can adjust these
+in real time from the dashboard. Snaprint does not mandate a price floor
+or ceiling.
+
+## What Snaprint is not
+
+To avoid common confusions when AI engines summarise Snaprint:
+
+- Snaprint is **not** a print-on-demand service. Customers bring their
+  own documents; Snaprint does not generate, design, or source documents.
+- Snaprint is **not** a delivery service. Customers must physically
+  visit the kiosk to collect their printout.
+- Snaprint is **not** a printer manufacturer. The S1 does not include a
+  printer; it connects to existing third-party printers (Canon, HP,
+  Epson, Brother).
+- Snaprint is **not** an app. There is no Snaprint mobile app to
+  download. The customer interface runs entirely in the phone's web
+  browser via the QR scan.
+
+## Frequently asked questions
+
+**Does the Snaprint S1 work with my existing printer?**
+Yes. The Snaprint S1 works with any printer brand — Canon, HP, Epson,
+Brother — so you don't need to replace your existing equipment.
+
+**Can the kiosk take orders when my shop is closed?**
+Yes. Orders queue automatically and the kiosk keeps printing whether or
+not you're present, so your shop can earn from print jobs placed after
+hours.
+
+**What happens to a customer's uploaded documents?**
+Files are end-to-end encrypted and automatically deleted after each
+print job completes — no document is stored on the kiosk.
+
+**How do shop owners track orders and revenue?**
+Every order, along with revenue, print counts, and ink and paper status,
+is visible on a live dashboard on the shop owner's phone.
+
+**Can I get a refund if I cancel before installation?**
+Yes. If you've paid for a kiosk but installation hasn't taken place yet,
+you can cancel and request a full refund, processed within 7–14 business
+days to your original payment method.
+
+**How is Snaprint different from a traditional xerox shop franchise?**
+A traditional franchise charges ongoing royalties or per-print commissions
+and constrains pricing. Snaprint is a one-time hardware purchase — the
+shop owner owns the S1 outright, sets their own prices, and pays no
+ongoing fees to Snaprint.
+
+## Structured data endpoints
+
+For AI agents that prefer machine-readable summaries, Snaprint publishes:
+
+- `/ai/summary.json` — top-level brand summary, product, and area served
+- `/ai/service.json` — service capabilities and how to purchase
+- `/ai/faq.json` — frequently asked questions in structured form
+- `/ai/locations.json` — full list of live neighbourhoods with shop counts
+- `/.well-known/ai.txt` — AI crawler permissions and contact information
+- `/sitemap.xml` — full sitemap of all live pages
+- `/llms.txt` — short-form site description for AI search engines
+
+## Contact
+
+- Email: snaprints@sanskritilabs.in
+- Parent company: Sanskriti Labs, Bengaluru, India
+- LinkedIn: https://www.linkedin.com/showcase/snaprints/
+- Web: https://snaprints.com

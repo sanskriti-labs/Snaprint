@@ -33,6 +33,10 @@ export default function InstantPrintIndex() {
   const areas = getAllLiveAreas();
 
   const totalLive = cities.length + colleges.length + areas.length;
+  const totalShops = areas.reduce(
+    (acc, a) => acc + (a.liveLocations?.length ?? 0),
+    0,
+  );
 
   return (
     <>
@@ -48,31 +52,116 @@ export default function InstantPrintIndex() {
         >
           Snaprint kiosks, city by city.
         </h1>
-        <p className="mb-16 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
+        <p className="mb-6 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
           Pick a city to find the nearest Snaprint-enabled xerox shop — print,
           copy, and scan from your phone in under 60 seconds.
         </p>
 
+        {/* Quick stats — concrete numbers help AI citability + skimming */}
+        <dl className="mb-16 flex flex-wrap gap-x-10 gap-y-4 border-y border-[#E8E6E0] py-6">
+          <div>
+            <dt className="font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-[#888780]">
+              Live cities
+            </dt>
+            <dd className="mt-1 font-display text-[28px] font-extrabold tracking-tight text-[#111110]">
+              {cities.length || 1}
+            </dd>
+          </div>
+          <div>
+            <dt className="font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-[#888780]">
+              Live neighbourhoods
+            </dt>
+            <dd className="mt-1 font-display text-[28px] font-extrabold tracking-tight text-[#111110]">
+              {areas.length}
+            </dd>
+          </div>
+          <div>
+            <dt className="font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-[#888780]">
+              Partner xerox shops
+            </dt>
+            <dd className="mt-1 font-display text-[28px] font-extrabold tracking-tight text-[#111110]">
+              {totalShops}+
+            </dd>
+          </div>
+          <div>
+            <dt className="font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-[#888780]">
+              Colleges live
+            </dt>
+            <dd className="mt-1 font-display text-[28px] font-extrabold tracking-tight text-[#111110]">
+              {colleges.length}
+            </dd>
+          </div>
+        </dl>
+
+        <section>
+          <h2 className="mb-6 font-display text-[24px] font-extrabold tracking-tight text-[#111110]">
+            Bengaluru neighbourhoods with live Snaprint kiosks
+          </h2>
+          <p className="mb-6 max-w-[640px] font-body text-[15px] font-light leading-[1.78] text-[#6B6B66]">
+            Each neighbourhood below is a live Snaprint service area. Click
+            through to see the full list of partner xerox shops, their hours,
+            and the documents customers most often print there.
+          </p>
+          {areas.length > 0 ? (
+            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {areas.map((a) => (
+                <li key={a.slug}>
+                  <Link
+                    href={`/print-near/${a.slug}`}
+                    className="group flex items-center justify-between gap-3 rounded-2xl border border-[#E8E6E0] bg-white px-5 py-4 transition-colors hover:border-[#E63946]"
+                  >
+                    <div>
+                      <div className="font-display text-[16px] font-bold text-[#111110] group-hover:text-[#E63946]">
+                        {a.name}
+                      </div>
+                      <div className="mt-0.5 font-body text-[12.5px] text-[#888780]">
+                        {a.liveLocations?.length ?? 0} partner shop
+                        {(a.liveLocations?.length ?? 0) === 1 ? "" : "s"}
+                      </div>
+                    </div>
+                    <span
+                      aria-hidden
+                      className="font-body text-[14px] text-[#888780] transition-transform group-hover:translate-x-1 group-hover:text-[#E63946]"
+                    >
+                      →
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="font-body text-[15px] text-[#6B6B66]">
+              We&apos;re onboarding new neighbourhoods every week — Bengaluru
+              first, then other Indian cities.
+            </p>
+          )}
+        </section>
+
         {totalLive === 0 ? (
           <EmptyState />
-        ) : (
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {cities.map((city) => (
-              <EntityCard
-                key={city.slug}
-                kind="city"
-                city={city}
-                href={`/instant-print/${city.slug}`}
-              />
-            ))}
-          </div>
-        )}
+        ) : cities.length > 0 ? (
+          <section className="mt-16">
+            <h2 className="mb-6 font-display text-[24px] font-extrabold tracking-tight text-[#111110]">
+              Live cities
+            </h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {cities.map((city) => (
+                <EntityCard
+                  key={city.slug}
+                  kind="city"
+                  city={city}
+                  href={`/instant-print/${city.slug}`}
+                />
+              ))}
+            </div>
+          </section>
+        ) : null}
 
-        {/* Cross-link to /print-near */}
+        {/* Cross-link to /print-near + blog */}
         <div className="mt-20 border-t border-[#E8E6E0] pt-12">
-          <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-[#888780]">
+          <h2 className="mb-3 font-display text-[20px] font-extrabold tracking-tight text-[#111110]">
             Looking for a specific location?
-          </p>
+          </h2>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <Link
               href="/print-near"

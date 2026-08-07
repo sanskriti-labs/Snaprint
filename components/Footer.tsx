@@ -14,6 +14,7 @@ export default function Footer() {
         { label: "Why Snaprint", href: "#why" },
         { label: "Results", href: "#testimonials" },
         { label: "Blog", href: "/blog" },
+        { label: "About", href: "/about" },
       ],
     },
 {

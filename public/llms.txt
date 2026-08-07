@@ -4,6 +4,8 @@
 
 Snaprint is a hardware + software print kiosk product (the "S1" machine) sold to xerox/photocopy shop owners as a way to serve customers outside staffed hours and reduce queue time.
 
+Full description, FAQ, and structured data: https://snaprints.com/llms-full.txt
+
 ## Core pages
 
 - [Home](https://snaprints.com/): Product overview, how it works, the S1 machine, pricing/demo contact.
@@ -47,7 +49,7 @@ Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas
 
 ### Bengaluru colleges
 
-- [Print near IISc Bangalore](https://snaprints.com/print-near/iisc-bangalore)
+- College and university kiosk launches are in progress — see the [Print Near You hub](https://snaprints.com/print-near) for currently live neighbourhoods and colleges.
 
 ## Contact
 
