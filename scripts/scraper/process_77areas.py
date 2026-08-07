@@ -61,7 +61,9 @@ AREA_KW = {
     "kammanahalli":          (["kammanahalli", "kamanahalli"],                             "Kammanahalli",             ["560084", "560043"]),
     "horamavu":              (["horamavu", "horamavu main road"],                          "Horamavu",                 ["560043", "560005"]),
     "lingarajapuram":        (["lingarajapuram", "lingarajpura"],                          "Lingarajapuram",           ["560084", "560005"]),
-    "kalyan-nagar":          (["kalyan nagar", "kalyanagar", "kalyan"],                   "Kalyan Nagar",             ["560043", "560001"]),
+    # Bare "kalyan" is dropped: it matches "kalyana mantapa" (wedding
+    # hall), which appears in addresses all over the city.
+    "kalyan-nagar":          (["kalyan nagar", "kalyanagar"],                             "Kalyan Nagar",             ["560043", "560001"]),
 
     # Northern Bangalore
     "yeshwanthpur":          (["yeshwanthpur", "yeswantpur"],                             "Yeshwanthpur",             ["560022", "560055"]),
@@ -85,7 +87,7 @@ AREA_KW = {
     # Southern Bangalore
     "jayanagar":             (["jayanagar", "jayanagar 4th block", "jayanagar 2nd stage", "jayanagar 3rd block"], "Jayanagar", ["560041", "560011", "560078", "560069"]),
     "basavanagudi":          (["basavanagudi", "basavanagudi area"],                      "Basavanagudi",             ["560004", "560019"]),
-    "jp-nagar":              (["jp nagar", "j p nagar", "jpnagar", "jp nagar phase"],    "JP Nagar",                 ["560078", "560069", "560041"]),
+    "jp-nagar":              (["jp nagar", "j p nagar", "j. p. nagar", "j.p. nagar", "jpnagar", "jp nagar phase"],    "JP Nagar",                 ["560078", "560069", "560041"]),
     "banashankari":          (["banashankari", "bansankari", "banashankari 2nd stage"],   "Banashankari",             ["560070", "560085", "560060"]),
     "uttarahalli":           (["uttarahalli", "uttharahalli"],                            "Uttarahalli",              ["560061", "560060"]),
     "kumaraswamy-layout":    (["kumaraswamy layout", "kumaraswamy layout area"],          "Kumaraswamy Layout",        ["560078", "560070"]),
@@ -260,7 +262,11 @@ def get_area_slug(address, title):
     ):
         for kw in sorted(kws, key=len, reverse=True):
             nk = _norm_locality(kw)
-            if len(nk) >= 4 and nk in norm_combined:
+            # >=6 normalised chars, not 4: vowel-stripping is lossy enough
+            # that short keys collide ("avenue road" -> "avnrd" matched
+            # "KARVALI ROAD"). Longer keys keep the fuzzy pass useful for
+            # real spelling variants without inventing matches.
+            if len(nk) >= 6 and nk in norm_combined:
                 return slug
     return None
 
@@ -376,8 +382,8 @@ def main():
     for slug, entries in list(area_shops.items()):
         pts = [(e.get("latitude"), e.get("longitude")) for e in entries]
         pts = [(a, b) for a, b in pts if a and b]
-        if len(pts) < 3:
-            continue  # too few to establish a reliable centre
+        if len(pts) < 2:
+            continue  # a single shop defines its own centre; nothing to test
         med_lat = statistics.median([a for a, _ in pts])
         med_lng = statistics.median([b for _, b in pts])
         kept = []
@@ -415,7 +421,7 @@ def main():
     for slug, entries in area_shops.items():
         pts = [(e.get("latitude"), e.get("longitude")) for e in entries]
         pts = [(a, b) for a, b in pts if a and b]
-        if len(pts) >= 3:
+        if len(pts) >= 2:
             centres[slug] = (
                 statistics.median([a for a, _ in pts]),
                 statistics.median([b for _, b in pts]),

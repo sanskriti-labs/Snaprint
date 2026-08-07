@@ -34,6 +34,7 @@ consumed by the same downstream code (areas.ts and content/pseo/shops.ts).
 """
 import argparse
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -137,6 +138,15 @@ NEG_TITLE = [
     "cyber cafe", "cyber joint",  # pure net cafes named "Cyber Cafe" / "Cyber Joint"
 ]
 
+# Supply-side terms: the business SELLS printers/cartridges rather than
+# offering printing as a service. These contain "print", so they are
+# checked before the keep-keyword or they would match as xerox shops.
+SUPPLY_SIDE = [
+    "printer dealer", "printer repair", "peripherals dealer",
+    "it peripherals", "cartridge", "toner refill", "printer service",
+    "photocopier dealer", "printer sales", "printer & it",
+]
+
 
 def _normalize(raw: str) -> str:
     """Trim and cap at 80 chars the same way process_77areas.clean_title does."""
@@ -183,6 +193,42 @@ def all_categories(d: dict) -> list[str]:
     return [c for c in cats if not (c in seen or seen.add(c))]
 
 
+# Categories that do NOT by themselves imply a xerox machine on site.
+# A stationery/pen/book shop sells paper; it may or may not print. These
+# are kept only when independent evidence says printing happens there —
+# a print keyword in the title, a print-related sibling category, or
+# customers mentioning it in reviews.
+AMBIGUOUS_CATS = {
+    "Stationery store", "Stationery wholesaler", "Pen store",
+    "Book store", "Office supply store", "Paper store",
+    "Photography studio", "Photo shop", "Store",
+}
+
+# Evidence of actual printing, searched in review text / about / description.
+PRINT_EVIDENCE = re.compile(
+    r"xerox|photocopy|photo copy|print|printout|print out|copies|"
+    r"lamination|laminate|binding|spiral|scan",
+    re.I,
+)
+
+# Category strings that positively indicate printing happens on site.
+PRINT_CAT_RE = re.compile(r"print|copy|xerox|lamination|bind|graphic|dtp|offset", re.I)
+
+
+def has_print_evidence(d: dict) -> bool:
+    """True when Google's own content shows this place actually prints.
+
+    Looks at user reviews, the `about` block, and the description —
+    written by customers and the owner, not inferred from a shop name.
+    """
+    blob = " ".join(
+        json.dumps(d.get(k), ensure_ascii=False) if isinstance(d.get(k), (list, dict))
+        else str(d.get(k) or "")
+        for k in ("user_reviews", "user_reviews_extended", "about", "description")
+    )
+    return bool(PRINT_EVIDENCE.search(blob))
+
+
 def keep_record(d: dict) -> tuple[bool, str]:
     """Return (keep, reason). Reason is a short tag for reporting."""
     lat = d.get("latitude") or 0
@@ -205,10 +251,44 @@ def keep_record(d: dict) -> tuple[bool, str]:
     if str(d.get("status") or "").strip().upper() in {"CLOSED", "PERMANENTLY_CLOSED", "CLOSED_PERMANENTLY"}:
         return False, "closed"
 
-    if has_keep_kw:
+    # "Stationery"/"stationary" in a title proves the shop sells paper, not
+    # that it has a xerox machine. Treat it as a keep-keyword only when
+    # something else corroborates printing.
+    # "photo studio" is a portrait studio, not a document printer, and
+    # bare "scan"/"banner"/"flex" appear in unrelated shop names. These
+    # need corroboration like the stationery keywords do.
+    WEAK_KW = {"stationery", "stationary", "photo studio", "scan", "scanning",
+               "banner", "flex", "thesis"}
+    strong_kw = any(
+        kw in title_lower for kw in KEEP_TITLE if kw not in WEAK_KW
+    )
+    # Supply-side terms ("Printer & IT Peripherals Dealers", "toner
+    # refilling") describe selling hardware, not offering printing, and
+    # they contain "print" — so they must be checked BEFORE the keep
+    # keyword. Only these override; the general NEG_TITLE list still runs
+    # after, so "PRINT OUT AND XEROX SPACE" is not killed by "space".
+    if any(kw in title_lower for kw in SUPPLY_SIDE):
+        return False, "sells printers, not printing"
+    if strong_kw:
         return True, "xerox kw"
     if has_neg_kw:
         return False, "neg title"
+
+    # No positively print-related category anywhere? Then "stationery" in
+    # the title or an ambiguous category label is the only thing arguing
+    # for this record — require independent proof that printing happens.
+    # A stationery/pen/book/gift shop sells paper; that is not a xerox
+    # machine. Sibling categories like "Gift shop" or "Art supply store"
+    # do not count as print evidence.
+    has_print_cat = any(PRINT_CAT_RE.search(c) for c in cats)
+    if not has_print_cat:
+        if has_print_evidence(d):
+            return True, "ambiguous cat + review evidence"
+        label = cats[0] if cats else "no category"
+        return False, f"ambiguous cat, no print evidence ({label})"
+
+    if has_keep_kw:
+        return True, "stationery kw + print cat"
     xerox_cat = next((c for c in cats if c in XEROX_CATS), None)
     if xerox_cat:
         return True, f"xerox cat={xerox_cat}"
