@@ -72,6 +72,11 @@ export function getAreasInCity(citySlug: Slug): Area[] {
   );
 }
 
+/** Returns ALL areas in a city regardless of presence — used by hub pages */
+export function getAllAreasInCity(citySlug: Slug): Area[] {
+  return areasData.filter((a) => a.city === citySlug);
+}
+
 export function getCollegesNearArea(areaSlug: Slug): College[] {
   return collegesData.filter(
     (c) => c.area === areaSlug && c.presence === "live"
