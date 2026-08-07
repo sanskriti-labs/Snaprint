@@ -13,7 +13,8 @@ import {
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "Print and xerox shops across India — Snaprint",
+  // Layout template appends "· Snaprint" — no explicit suffix here.
+  title: "Print and xerox shops across India",
   description:
     "Browse print and xerox shop directories city by city — find instant print, photocopy, scan, and ID services near you. Live and coming-soon cities, colleges, and neighbourhoods across India.",
   alternates: { canonical: "/instant-print" },

@@ -12,6 +12,7 @@ import {
   getNeighborCities,
   getLocationFaqs,
   getShopsNearCollege,
+  getCityName,
 } from "@/content/pseo/seo";
 import PseoPage from "@/components/PseoPage";
 
@@ -31,7 +32,9 @@ export function generateMetadata({
   if (college) {
     const name = college.shortName ?? college.name;
     return {
-      title: `Print and xerox shops near ${name}, ${college.city} — Snaprint`,
+      // No "— Snaprint" suffix: the root layout's title template already
+      // appends "· Snaprint", which was rendering "… — Snaprint · Snaprint".
+      title: `Print and xerox shops near ${name}, ${getCityName(college.city)}`,
       description: college.intro,
       keywords: college.keywords,
       alternates: { canonical: `/print-near/${college.slug}` },
@@ -48,7 +51,7 @@ export function generateMetadata({
   const area = getArea(params.entity);
   if (area) {
     return {
-      title: `Print and xerox shops in ${area.name}, ${area.city} — Snaprint`,
+      title: `Print and xerox shops in ${area.name}, ${getCityName(area.city)}`,
       description: area.intro,
       keywords: area.keywords,
       alternates: { canonical: `/print-near/${area.slug}` },
@@ -110,7 +113,7 @@ export default async function EntityPage({
           address: {
             "@type": "PostalAddress",
             streetAddress: college.address,
-            addressLocality: college.city.charAt(0).toUpperCase() + college.city.slice(1),
+            addressLocality: getCityName(college.city),
             addressCountry: "IN",
           },
         },
@@ -158,7 +161,7 @@ export default async function EntityPage({
         {
           "@type": "LocalBusiness",
           "@id": `${SITE_URL}/#location-${area.slug}`,
-          name: `Print and xerox shops in ${area.name}, ${area.city}`,
+          name: `Print and xerox shops in ${area.name}, ${getCityName(area.city)}`,
           description: area.intro,
           url: `${SITE_URL}/print-near/${area.slug}`,
           image: `${SITE_URL}/og.png`,

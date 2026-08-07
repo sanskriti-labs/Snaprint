@@ -24,7 +24,8 @@ export function generateMetadata({
   const city = getCity(params.city);
   if (!city) return {};
   return {
-    title: `Print and xerox shops in ${city.name} — Snaprint`,
+    // Layout template appends "· Snaprint" — no explicit suffix here.
+    title: `Print and xerox shops in ${city.name}`,
     description: city.intro,
     keywords: city.keywords,
     alternates: { canonical: `/instant-print/${city.slug}` },

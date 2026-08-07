@@ -46,6 +46,24 @@ export function getCity(slug: Slug): City | null {
   return null;
 }
 
+/**
+ * Display name for a city slug, regardless of presence.
+ *
+ * getCity() gates on presence: "live", so it returns null for a city that
+ * is still planned — which is every city today. Page titles and JSON-LD
+ * still need to render "Bengaluru", not the raw slug "bengaluru", so this
+ * resolves the name independently of launch status. Falls back to
+ * title-casing the slug for a city not yet in cities.ts.
+ */
+export function getCityName(slug: Slug): string {
+  const c = citiesData.find((c) => c.slug === slug);
+  if (c) return c.name;
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
 export function getCollege(slug: Slug): College | null {
   const c = collegesData.find((c) => c.slug === slug);
   if (!c) return null;

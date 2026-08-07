@@ -12,7 +12,8 @@ import {
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "Print and xerox shops near you — Colleges & Neighbourhoods — Snaprint",
+  // Layout template appends "· Snaprint" — no explicit suffix here.
+  title: "Print and xerox shops near you — Colleges & Neighbourhoods",
   description:
     "Find print and xerox shops near your college, office, or neighbourhood. Print, copy, and scan from your phone in under 60 seconds.",
   alternates: { canonical: "/print-near" },
