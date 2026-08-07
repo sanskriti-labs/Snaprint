@@ -5,8 +5,6 @@ import Footer from "@/components/Footer";
 import PseoCta from "@/components/pseo/PseoCta";
 import EntityCard from "@/components/pseo/EntityCard";
 import {
-  getAllLiveCities,
-  getAllLiveColleges,
   getAllLiveAreas,
 } from "@/content/pseo/seo";
 
@@ -27,27 +25,30 @@ export const metadata: Metadata = {
   },
 };
 
-type CityGroup = {
-  city: ReturnType<typeof getAllLiveCities>[number];
-  colleges: ReturnType<typeof getAllLiveColleges>;
+type AreaGroup = {
+  cityName: string;
+  citySlug: string;
   areas: ReturnType<typeof getAllLiveAreas>;
 };
 
 export default function PrintNearIndex() {
-  const cities = getAllLiveCities();
-  const allColleges = getAllLiveColleges();
   const allAreas = getAllLiveAreas();
 
-  // Group colleges + areas under their parent city. Cities with no live children are dropped.
-  const groups: CityGroup[] = cities
-    .map((city) => ({
-      city,
-      colleges: allColleges.filter((c) => c.city === city.slug),
-      areas: allAreas.filter((a) => a.city === city.slug),
-    }))
-    .filter((g) => g.colleges.length > 0 || g.areas.length > 0);
+  // Group all live areas by their parent city slug
+  const groups: AreaGroup[] = [];
+  const seenCities = new Set<string>();
+  for (const area of allAreas) {
+    if (!seenCities.has(area.city)) {
+      seenCities.add(area.city);
+      groups.push({
+        cityName: area.city.charAt(0).toUpperCase() + area.city.slice(1),
+        citySlug: area.city,
+        areas: allAreas.filter((a) => a.city === area.city),
+      });
+    }
+  }
 
-  const totalLive = allColleges.length + allAreas.length;
+  const totalLive = allAreas.length;
 
   return (
     <>
@@ -91,36 +92,18 @@ export default function PrintNearIndex() {
   );
 }
 
-function GroupedList({ groups }: { groups: CityGroup[] }) {
+function GroupedList({ groups }: { groups: AreaGroup[] }) {
   return (
     <div className="flex flex-col gap-16">
-      {groups.map(({ city, colleges, areas }) => (
-        <section key={city.slug}>
+      {groups.map(({ cityName, citySlug, areas }) => (
+        <section key={citySlug}>
           <div className="mb-6 flex items-center gap-3">
             <span className="h-px flex-1 bg-[#E8E6E0]" />
             <h2 className="shrink-0 font-display text-[22px] font-extrabold tracking-tight text-[#111110]">
-              {city.name}
+              {cityName}
             </h2>
             <span className="h-px flex-1 bg-[#E8E6E0]" />
           </div>
-
-          {colleges.length > 0 && (
-            <div className="mb-10">
-              <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.16em] text-[#888780]">
-                Colleges
-              </p>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {colleges.map((c) => (
-                  <EntityCard
-                    key={c.slug}
-                    kind="college"
-                    college={c}
-                    href={`/print-near/${c.slug}`}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
 
           {areas.length > 0 && (
             <div>
