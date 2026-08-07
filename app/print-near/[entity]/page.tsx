@@ -193,7 +193,7 @@ export default async function EntityPage({
 
     return (
       <PseoPage
-        props={{ kind: "area", area }}
+        props={{ kind: "area", area, liveLocations: area.liveLocations ?? [] }}
         faqs={faqs}
         crossLinks={{ parentCity: parentCity ?? undefined, colleges: collegesInArea, areas: areasInCity, neighborCities: neighbors }}
         jsonLd={jsonLd}
