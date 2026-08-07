@@ -24,12 +24,12 @@ export function generateMetadata({
   const city = getCity(params.city);
   if (!city) return {};
   return {
-    title: `Instant Print Kiosk in ${city.name} — Snaprint`,
+    title: `Print and xerox shops in ${city.name} — Snaprint`,
     description: city.intro,
     keywords: city.keywords,
     alternates: { canonical: `/instant-print/${city.slug}` },
     openGraph: {
-      title: `Instant Print in ${city.name} — Snaprint`,
+      title: `Print and xerox shops in ${city.name} — Snaprint`,
       description: city.intro,
       url: `${SITE_URL}/instant-print/${city.slug}`,
       type: "website",
@@ -57,7 +57,7 @@ export default async function CityPage({
       {
         "@type": "LocalBusiness",
         "@id": `${SITE_URL}/#location-${city.slug}`,
-        name: `Snaprint Kiosk — ${city.name}`,
+        name: `Print and xerox shops in ${city.name}`,
         description: city.intro,
         url: `${SITE_URL}/instant-print/${city.slug}`,
         image: `${SITE_URL}/og.png`,

@@ -14,7 +14,7 @@ export default function InstantPrintNotFound() {
           City not found
         </h1>
         <p className="mb-10 max-w-[460px] font-body text-[16px] leading-[1.78] text-[#6B6B66]">
-          We don&apos;t have Snaprint kiosks listed for that city yet. Get in touch
+          We don&apos;t have print or xerox shop listings for that city yet. Get in touch
           to let us know where you&apos;d like to see us next.
         </p>
         <div className="flex flex-wrap gap-4">

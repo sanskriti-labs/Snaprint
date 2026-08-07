@@ -12,14 +12,14 @@ import {
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "Print Near You — Colleges & Neighbourhoods — Snaprint",
+  title: "Print and xerox shops near you — Colleges & Neighbourhoods — Snaprint",
   description:
-    "Find a Snaprint kiosk near your college, office, or neighbourhood. Print, copy, and scan from your phone in under 60 seconds.",
+    "Find print and xerox shops near your college, office, or neighbourhood. Print, copy, and scan from your phone in under 60 seconds.",
   alternates: { canonical: "/print-near" },
   openGraph: {
-    title: "Print Near You — Snaprint Kiosks",
+    title: "Print and xerox shops near you — Snaprint",
     description:
-      "Find a Snaprint kiosk near your college, office, or neighbourhood.",
+      "Find print and xerox shops near your college, office, or neighbourhood.",
     url: `${SITE_URL}/print-near`,
     type: "website",
     images: [`${SITE_URL}/og.png`],
@@ -86,8 +86,8 @@ export default function PrintNearIndex() {
           Print near your college or neighbourhood.
         </h1>
         <p className="mb-16 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-          Walk up to a Snaprint kiosk, scan a QR, print from your phone — no
-          queue, no staff needed. Find your closest location below.
+          Find print and xerox shops near your college or neighbourhood.
+          Compare hours, ratings, and phone numbers — pick the closest.
         </p>
 
         {totalLive === 0 ? <EmptyState /> : <GroupedList groups={groups} />}
@@ -178,8 +178,8 @@ function EmptyState() {
         We&apos;re adding locations every week.
       </h2>
       <p className="mx-auto mb-8 max-w-[420px] font-body text-[14px] leading-[1.75] text-[#6B6B66]">
-        Snaprint kiosks are launching across Bengaluru colleges and
-        neighbourhoods first. Tell us where you&apos;d like to see us next.
+        Print and xerox shop listings are expanding across Bengaluru
+        colleges and neighbourhoods first. Tell us where you&apos;d like to see coverage next.
       </p>
       <a
         href="mailto:snaprints@sanskritilabs.in"

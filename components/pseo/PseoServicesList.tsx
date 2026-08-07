@@ -16,7 +16,7 @@ export default function PseoServicesList() {
         Services available
       </h2>
       <p className="mb-8 font-body text-[13px] text-[#888780]">
-        The Snaprint kiosk at this location supports:
+        Services offered by partner xerox shops near this location:
       </p>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {services.map((s) => (

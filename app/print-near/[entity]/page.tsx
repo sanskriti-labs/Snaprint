@@ -31,12 +31,12 @@ export function generateMetadata({
   if (college) {
     const name = college.shortName ?? college.name;
     return {
-      title: `Print near ${name}, ${college.city} — Snaprint`,
+      title: `Print and xerox shops near ${name}, ${college.city} — Snaprint`,
       description: college.intro,
       keywords: college.keywords,
       alternates: { canonical: `/print-near/${college.slug}` },
       openGraph: {
-        title: `Print near ${name} — Snaprint`,
+        title: `Print and xerox shops near ${name} — Snaprint`,
         description: college.intro,
         url: `${SITE_URL}/print-near/${college.slug}`,
         type: "website",
@@ -48,12 +48,12 @@ export function generateMetadata({
   const area = getArea(params.entity);
   if (area) {
     return {
-      title: `Instant Print Kiosk in ${area.name}, ${area.city} — Snaprint`,
+      title: `Print and xerox shops in ${area.name}, ${area.city} — Snaprint`,
       description: area.intro,
       keywords: area.keywords,
       alternates: { canonical: `/print-near/${area.slug}` },
       openGraph: {
-        title: `Instant Print in ${area.name} — Snaprint`,
+        title: `Print and xerox shops in ${area.name} — Snaprint`,
         description: area.intro,
         url: `${SITE_URL}/print-near/${area.slug}`,
         type: "website",
@@ -158,7 +158,7 @@ export default async function EntityPage({
         {
           "@type": "LocalBusiness",
           "@id": `${SITE_URL}/#location-${area.slug}`,
-          name: `Snaprint Kiosk — ${area.name}, ${area.city}`,
+          name: `Print and xerox shops in ${area.name}, ${area.city}`,
           description: area.intro,
           url: `${SITE_URL}/print-near/${area.slug}`,
           image: `${SITE_URL}/og.png`,

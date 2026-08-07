@@ -38,7 +38,7 @@ export default function PseoHero(props: Props) {
     return (
       <div className="mb-16">
         <Eyebrow>Instant print in {city.name}</Eyebrow>
-        <H1>Find a Snaprint kiosk in {city.name}</H1>
+        <H1>Find print and xerox shops in {city.name}</H1>
         <Intro>{city.intro}</Intro>
       </div>
     );
@@ -51,8 +51,8 @@ export default function PseoHero(props: Props) {
     // when no shop data is verified within radius (planned).
     const headline =
       college.presence === "live"
-        ? `Print near ${name}, ${college.city}`
-        : `Print shops near ${name}, ${college.city}`;
+        ? `Find print and xerox shops near ${name}, ${college.city}`
+        : `Print and xerox shops near ${name}, ${college.city}`;
     return (
       <div className="mb-16">
         <Eyebrow>Print near {name} campus</Eyebrow>
@@ -67,7 +67,7 @@ export default function PseoHero(props: Props) {
   return (
     <div className="mb-16">
       <Eyebrow>Instant print in {area.name}</Eyebrow>
-      <H1>Find a Snaprint kiosk in {area.name}, {area.city}</H1>
+      <H1>Find print and xerox shops in {area.name}, {area.city}</H1>
       <Intro>{area.intro}</Intro>
     </div>
   );

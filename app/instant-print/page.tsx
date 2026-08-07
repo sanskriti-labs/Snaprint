@@ -13,14 +13,14 @@ import {
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "Instant Print Kiosks Across India — Snaprint",
+  title: "Print and xerox shops across India — Snaprint",
   description:
-    "Browse all Snaprint kiosk locations — find instant print, photocopy, scan, and ID services near you. Live and coming-soon cities, colleges, and neighbourhoods across India.",
+    "Browse print and xerox shop directories city by city — find instant print, photocopy, scan, and ID services near you. Live and coming-soon cities, colleges, and neighbourhoods across India.",
   alternates: { canonical: "/instant-print" },
   openGraph: {
-    title: "Instant Print Kiosks Across India — Snaprint",
+    title: "Print and xerox shops across India — Snaprint",
     description:
-      "Browse all Snaprint kiosk locations — find instant print, photocopy, scan, and ID services near you.",
+      "Browse print and xerox shop directories city by city — find instant print, photocopy, scan, and ID services near you.",
     url: `${SITE_URL}/instant-print`,
     type: "website",
     images: [`${SITE_URL}/og.png`],
@@ -50,7 +50,7 @@ export default function InstantPrintIndex() {
           className="mb-6 font-display font-extrabold leading-[1.05] tracking-[-2px] text-[#111110]"
           style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
         >
-          Snaprint kiosks, city by city.
+          Print and xerox shops, city by city.
         </h1>
         <p className="mb-6 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
           Pick a city to find the nearest Snaprint-enabled xerox shop — print,
@@ -95,7 +95,7 @@ export default function InstantPrintIndex() {
 
         <section>
           <h2 className="mb-6 font-display text-[24px] font-extrabold tracking-tight text-[#111110]">
-            Bengaluru neighbourhoods with live Snaprint kiosks
+            Bengaluru neighbourhoods with live print and xerox shop listings
           </h2>
           <p className="mb-6 max-w-[640px] font-body text-[15px] font-light leading-[1.78] text-[#6B6B66]">
             Each neighbourhood below is a live Snaprint service area. Click
@@ -197,7 +197,7 @@ function EmptyState() {
         We&apos;re rolling out city by city.
       </h2>
       <p className="mx-auto mb-8 max-w-[420px] font-body text-[14px] leading-[1.75] text-[#6B6B66]">
-        Snaprint kiosks are coming online across Bengaluru first, then expanding
+        Print and xerox shop listings are coming online across Bengaluru first, then expanding
         across Karnataka and India. Get in touch if you&apos;d like us in your
         area.
       </p>
