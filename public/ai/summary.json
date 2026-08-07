@@ -19,7 +19,13 @@
     "blog": "https://snaprints.com/blog",
     "terms": "https://snaprints.com/terms",
     "privacy": "https://snaprints.com/privacy",
-    "refundPolicy": "https://snaprints.com/refund-policy"
+    "refundPolicy": "https://snaprints.com/refund-policy",
+    "instantPrintHub": "https://snaprints.com/instant-print",
+    "printNearHub": "https://snaprints.com/print-near"
   },
-  "lastUpdated": "2026-08-03"
+  "locations": {
+    "allAreas": "https://snaprints.com/ai/locations.json",
+    "areasApi": "https://snaprints.com/api/locations/areas"
+  },
+  "lastUpdated": "2026-08-07"
 }

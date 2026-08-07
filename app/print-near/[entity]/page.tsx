@@ -107,6 +107,24 @@ export default async function EntityPage({
           },
           parentOrganization: { "@id": `${SITE_URL}/#organization` },
         },
+        // BreadcrumbList
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Print Near You", item: `${SITE_URL}/print-near` },
+            { "@type": "ListItem", position: 3, name: college.name, item: `${SITE_URL}/print-near/${college.slug}` },
+          ],
+        },
+        // FAQPage
+        {
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        },
       ],
     };
 
@@ -138,16 +156,37 @@ export default async function EntityPage({
           url: `${SITE_URL}/print-near/${area.slug}`,
           image: `${SITE_URL}/og.png`,
           ...(area.liveLocations && area.liveLocations.length > 0
-          ? {
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: area.liveLocations[0].lat,
-                longitude: area.liveLocations[0].lng,
-              },
-            }
-          : {}),
+            ? {
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: area.liveLocations[0].lat,
+                  longitude: area.liveLocations[0].lng,
+                },
+              }
+            : {}),
           areaServed: { "@id": `${SITE_URL}/#organization` },
           parentOrganization: { "@id": `${SITE_URL}/#organization` },
+          ...(area.liveLocations && area.liveLocations[0]?.phone
+            ? { telephone: area.liveLocations[0].phone }
+            : {}),
+        },
+        // BreadcrumbList
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Print Near You", item: `${SITE_URL}/print-near` },
+            { "@type": "ListItem", position: 3, name: area.name, item: `${SITE_URL}/print-near/${area.slug}` },
+          ],
+        },
+        // FAQPage
+        {
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
         },
       ],
     };

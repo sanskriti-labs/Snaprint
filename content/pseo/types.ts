@@ -12,6 +12,10 @@ export type LiveLocation = {
   address: string;
   lat: number;
   lng: number;
+  phone?: string;
+  rating?: number;
+  reviews?: number;
+  placeId?: string;
 };
 
 export type City = {

@@ -29,9 +29,25 @@ Snaprint is a hardware + software print kiosk product (the "S1" machine) sold to
 
 ## Local pages
 
-Per-city and per-location landing pages appear here as kiosks go live in each area. Currently pre-launch.
-- [Instant print in Bengaluru (coming soon)](https://snaprints.com/instant-print/bengaluru)
-- [Print near IISc Bangalore (coming soon)](https://snaprints.com/print-near/iisc-bangalore)
+Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas listed below are live (as of 2026-08-07). Full structured data: https://snaprints.com/ai/locations.json
+
+### Bengaluru neighbourhoods
+
+- [Print near Koramangala, Bengaluru](https://snaprints.com/print-near/koramangala) — 15 shops
+- [Print near Indiranagar, Bengaluru](https://snaprints.com/print-near/indiranagar) — 13 shops
+- [Print near Whitefield, Bengaluru](https://snaprints.com/print-near/whitefield) — 21 shops
+- [Print near HSR Layout, Bengaluru](https://snaprints.com/print-near/hsr-layout) — 21 shops
+- [Print near Electronic City, Bengaluru](https://snaprints.com/print-near/electronic-city) — 20 shops
+- [Print near MG Road, Bengaluru](https://snaprints.com/print-near/mg-road) — 7 shops
+- [Print near Jayanagar, Bengaluru](https://snaprints.com/print-near/jayanagar) — 20 shops
+- [Print near BTM Layout, Bengaluru](https://snaprints.com/print-near/btm-layout) — 20 shops
+- [Print near Marathahalli, Bengaluru](https://snaprints.com/print-near/marathahalli) — 14 shops
+- [Print near Frazer Town, Bengaluru](https://snaprints.com/print-near/frazer-town) — 9 shops
+- [Print near Shivajinagar, Bengaluru](https://snaprints.com/print-near/shivajinagar) — 8 shops
+
+### Bengaluru colleges
+
+- [Print near IISc Bangalore](https://snaprints.com/print-near/iisc-bangalore)
 
 ## Contact
 
