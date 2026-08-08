@@ -34,6 +34,29 @@ const cities: City[] = [
     liveLocations: [],
     lastReviewed: "2026-08-03",
   },
+  {
+    slug: "hyderabad",
+    name: "Hyderabad",
+    state: "Telangana",
+    lat: 17.385,
+    lng: 78.4867,
+    pinCodes: [
+      "500016", "500038", "500036", "500003", "500081",
+      "500032", "500039", "500084", "500028", "500074",
+    ],
+    intro:
+      "Snaprint is expanding print listings across Hyderabad — students and professionals can find verified xerox and print shops near them without hunting for an open shop.",
+    keywords: [
+      "print shop hyderabad",
+      "xerox shop hyderabad",
+      "print near me hyderabad",
+      "document printing hyderabad",
+    ],
+    neighbors: [],
+    presence: "planned",
+    liveLocations: [],
+    lastReviewed: "2026-08-08",
+  },
 ];
 
 export default cities;
