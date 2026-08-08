@@ -26,6 +26,7 @@ const colleges: College[] = [
     shortName: "IISc",
     city: "bengaluru",
     address: "CV Raman Avenue, Bengaluru, Karnataka 560012",
+    website: "https://www.iisc.ac.in/",
     lat: 13.0219,
     lng: 77.5673,
     intro:
@@ -46,6 +47,7 @@ const colleges: College[] = [
     shortName: "RVCE",
     city: "bengaluru",
     address: "RV Vidyaniketan Post, Mysore Road, Bengaluru, Karnataka 560059",
+    website: "https://rvce.edu.in/",
     lat: 12.9357,
     lng: 77.5015,
     intro:
@@ -66,6 +68,7 @@ const colleges: College[] = [
     shortName: "PESU EC",
     city: "bengaluru",
     address: "Electronic City, Hosur Road, Bengaluru, Karnataka 560100",
+    website: "https://pes.edu/",
     lat: 12.9139,
     lng: 77.6604,
     intro:
@@ -86,6 +89,7 @@ const colleges: College[] = [
     shortName: "Christ Central",
     city: "bengaluru",
     address: "Dharmaram College Post, Hosur Road, Bengaluru, Karnataka 560029",
+    website: "https://christuniversity.in/",
     lat: 12.9352,
     lng: 77.6045,
     intro:
@@ -106,6 +110,7 @@ const colleges: College[] = [
     shortName: "NMIT",
     city: "bengaluru",
     address: "Govindpura, Yelahanka, Bengaluru, Karnataka 560064",
+    website: "https://www.nmit.ac.in/",
     lat: 13.0827,
     lng: 77.5765,
     intro:
@@ -134,6 +139,7 @@ const colleges: College[] = [
     shortName: "BMSCE",
     city: "bengaluru",
     address: "Bull Temple Road, Basavanagudi, Bengaluru, Karnataka 560019",
+    website: "https://bmsce.ac.in/",
     lat: 12.9416,
     lng: 77.5664,
     intro:
@@ -154,6 +160,7 @@ const colleges: College[] = [
     shortName: "MSRIT",
     city: "bengaluru",
     address: "MSR Nagar, MSRIT Post, Bengaluru, Karnataka 560054",
+    website: "https://www.msrit.edu/",
     lat: 13.0298,
     lng: 77.5645,
     intro:
@@ -174,6 +181,7 @@ const colleges: College[] = [
     shortName: "Jain Kanakapura",
     city: "bengaluru",
     address: "Jain Global Campus, Kanakapura Road, Bengaluru, Karnataka 562112",
+    website: "https://www.jainuniversity.ac.in/",
     lat: 12.7692,
     lng: 77.4333,
     intro:
@@ -193,6 +201,7 @@ const colleges: College[] = [
     shortName: "Presidency",
     city: "bengaluru",
     address: "Itgalpur, Rajanukunte, Yelahanka, Bengaluru, Karnataka 560064",
+    website: "https://presidencyuniversity.in/",
     lat: 13.1306,
     lng: 77.5847,
     intro:
@@ -213,6 +222,7 @@ const colleges: College[] = [
     shortName: "AIT",
     city: "bengaluru",
     address: "Acharya Dr. Sarvepalli Radhakrishnan Road, Soldevanahalli, Bengaluru, Karnataka 560107",
+    website: "https://www.acharya.ac.in/acharya-institute-of-technology",
     lat: 13.0658,
     lng: 77.4649,
     intro:
@@ -232,6 +242,7 @@ const colleges: College[] = [
     shortName: "REVA",
     city: "bengaluru",
     address: "Rukmini Knowledge Park, Kattigenahalli, Yelahanka, Bengaluru, Karnataka 560064",
+    website: "https://www.reva.edu.in/",
     lat: 13.1208,
     lng: 77.5723,
     intro:
@@ -252,6 +263,7 @@ const colleges: College[] = [
     shortName: "DSCE",
     city: "bengaluru",
     address: "Shavige Malleshwara Hills, Kumaraswamy Layout, Bengaluru, Karnataka 560078",
+    website: "https://www.dsce.edu.in/",
     lat: 12.9089,
     lng: 77.5638,
     intro:
@@ -272,6 +284,7 @@ const colleges: College[] = [
     shortName: "SJCC",
     city: "bengaluru",
     address: "163 Brigade Road, Bengaluru, Karnataka 560025",
+    website: "https://sjcc.edu.in/",
     lat: 12.9684,
     lng: 77.6083,
     intro:
@@ -292,6 +305,7 @@ const colleges: College[] = [
     shortName: "SJC",
     city: "bengaluru",
     address: "36 Lalbagh Road, Bengaluru, Karnataka 560027",
+    website: "https://www.sjc.ac.in/",
     lat: 12.9563,
     lng: 77.5841,
     intro:
@@ -312,6 +326,7 @@ const colleges: College[] = [
     shortName: "MCC",
     city: "bengaluru",
     address: "58 Palace Road, Vasanth Nagar, Bengaluru, Karnataka 560052",
+    website: "https://mccblr.edu.in/",
     lat: 12.9891,
     lng: 77.5921,
     intro:
@@ -332,6 +347,7 @@ const colleges: College[] = [
     shortName: "JNC",
     city: "bengaluru",
     address: "8th Block, Koramangala, Bengaluru, Karnataka 560095",
+    website: "https://www.jyotinivas.org/",
     lat: 12.9354,
     lng: 77.6221,
     intro:
@@ -352,6 +368,7 @@ const colleges: College[] = [
     shortName: "Vijaya",
     city: "bengaluru",
     address: "Basavanagudi, Bengaluru, Karnataka 560004",
+    website: "https://vijayacollege.ac.in/",
     lat: 12.9408,
     lng: 77.5651,
     intro:
@@ -372,6 +389,7 @@ const colleges: College[] = [
     shortName: "KJC",
     city: "bengaluru",
     address: "K. Narayanapura, Kothanur, Bengaluru, Karnataka 560077",
+    website: "https://www.kristujayanti.edu.in/",
     lat: 13.0543,
     lng: 77.6407,
     intro:
@@ -392,6 +410,7 @@ const colleges: College[] = [
     shortName: "EPCET",
     city: "bengaluru",
     address: "Bidarahalli, Bengaluru, Karnataka 560049",
+    website: "https://epcet.edu.in/",
     lat: 13.0259,
     lng: 77.7081,
     intro:
@@ -412,6 +431,7 @@ const colleges: College[] = [
     shortName: "CMRIT",
     city: "bengaluru",
     address: "Whitefield, Bengaluru, Karnataka 560037",
+    website: "https://www.cmrit.ac.in/",
     lat: 12.9856,
     lng: 77.7366,
     intro:
@@ -441,6 +461,7 @@ const colleges: College[] = [
     shortName: "Christ Bannerghatta",
     city: "bengaluru",
     address: "Bannerghatta Road, Hulimavu, Bengaluru, Karnataka 560076",
+    website: "https://christuniversity.in/",
     lat: 12.8778133,
     lng: 77.5957995,
     intro:
@@ -461,6 +482,7 @@ const colleges: College[] = [
     shortName: "Christ Yeshwanthpur",
     city: "bengaluru",
     address: "Nagasandra, Tumkur Road, Bengaluru, Karnataka 560073",
+    website: "https://christuniversity.in/",
     lat: 13.0362625,
     lng: 77.5046094,
     intro:
@@ -481,6 +503,7 @@ const colleges: College[] = [
     shortName: "PESU RR",
     city: "bengaluru",
     address: "100 Feet Ring Road, Banashankari, Bengaluru, Karnataka 560085",
+    website: "https://pes.edu/",
     lat: 12.9350817,
     lng: 77.5360407,
     intro:
@@ -501,6 +524,7 @@ const colleges: College[] = [
     shortName: "PESU HN",
     city: "bengaluru",
     address: "50 Feet Road, Hanumanthanagar, Bengaluru, Karnataka 560050",
+    website: "https://pes.edu/",
     lat: 12.9415076,
     lng: 77.5538015,
     intro:
@@ -521,6 +545,7 @@ const colleges: College[] = [
     shortName: "Jain JC Road",
     city: "bengaluru",
     address: "34, 1st Cross, JC Road, Bengaluru, Karnataka 560027",
+    website: "https://www.jainuniversity.ac.in/",
     lat: 12.961148,
     lng: 77.5853956,
     intro:
@@ -541,6 +566,7 @@ const colleges: College[] = [
     shortName: "Jain Jayanagar",
     city: "bengaluru",
     address: "District Fund Road, Jayanagar 9th Block, Bengaluru, Karnataka 560069",
+    website: "https://www.jainuniversity.ac.in/",
     lat: 12.9181777,
     lng: 77.5918934,
     intro:
@@ -561,6 +587,7 @@ const colleges: College[] = [
     shortName: "Jain Lalbagh",
     city: "bengaluru",
     address: "133 Lalbagh Road, Bengaluru, Karnataka 560027",
+    website: "https://www.jainuniversity.ac.in/",
     lat: 12.9603204,
     lng: 77.5872078,
     intro:
@@ -581,6 +608,7 @@ const colleges: College[] = [
     shortName: "Jain Gandhi Nagar",
     city: "bengaluru",
     address: "17 Seshadri Road, Gandhi Nagar, Bengaluru, Karnataka 560009",
+    website: "https://www.jainuniversity.ac.in/",
     lat: 12.9802926,
     lng: 77.5779779,
     intro:
@@ -601,6 +629,7 @@ const colleges: College[] = [
     shortName: "Jain Shankarapuram",
     city: "bengaluru",
     address: "Shankar Mutt Main Road, Shankarapuram, Bengaluru, Karnataka 560004",
+    website: "https://www.jainuniversity.ac.in/",
     lat: 12.951415,
     lng: 77.5701985,
     intro:
@@ -621,6 +650,7 @@ const colleges: College[] = [
     shortName: "BIT",
     city: "bengaluru",
     address: "K.R. Road, V.V. Puram, Bengaluru, Karnataka 560004",
+    website: "https://bit-bangalore.edu.in/",
     lat: 12.9551694,
     lng: 77.5742917,
     intro:
@@ -641,6 +671,7 @@ const colleges: College[] = [
     shortName: "JSSATE",
     city: "bengaluru",
     address: "Uttarahalli-Kengeri Main Road, Srinivaspura, Bengaluru, Karnataka 560060",
+    website: "https://www.jssateb.ac.in/",
     lat: 12.9030297,
     lng: 77.5047442,
     intro:
@@ -661,6 +692,7 @@ const colleges: College[] = [
     shortName: "RNSIT",
     city: "bengaluru",
     address: "Uttarahalli-Kengeri Main Road, Channasandra, Bengaluru, Karnataka 560098",
+    website: "https://www.rnsit.ac.in/",
     lat: 12.9020479,
     lng: 77.5178374,
     intro:
@@ -681,6 +713,7 @@ const colleges: College[] = [
     shortName: "Sapthagiri CoE",
     city: "bengaluru",
     address: "14/5, Chikkasandra, Hesaraghatta Main Road, Bengaluru, Karnataka 560057",
+    website: "https://sapthagiri.edu.in/",
     lat: 13.0676453,
     lng: 77.5044708,
     intro:
@@ -701,6 +734,7 @@ const colleges: College[] = [
     shortName: "Dr. AIT",
     city: "bengaluru",
     address: "Outer Ring Road, Mallathahalli, Bengaluru, Karnataka 560056",
+    website: "https://drait.edu.in/",
     lat: 12.9636721,
     lng: 77.5060307,
     intro:
@@ -721,6 +755,7 @@ const colleges: College[] = [
     shortName: "GAT",
     city: "bengaluru",
     address: "Ideal Homes Township, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098",
+    website: "https://gat.ac.in/",
     lat: 12.9236217,
     lng: 77.5274567,
     intro:
@@ -741,6 +776,7 @@ const colleges: College[] = [
     shortName: "SJBIT",
     city: "bengaluru",
     address: "BGS Health & Education City, Kengeri, Bengaluru, Karnataka 560060",
+    website: "https://www.sjbit.edu.in/",
     lat: 12.9006655,
     lng: 77.4972069,
     intro:
@@ -761,6 +797,7 @@ const colleges: College[] = [
     shortName: "Oxford CoE",
     city: "bengaluru",
     address: "10th Milestone, Bommanahalli, Hosur Road, Bengaluru, Karnataka 560068",
+    website: "http://www.theoxfordengg.org/",
     lat: 12.9016798,
     lng: 77.6313057,
     intro:
@@ -781,6 +818,7 @@ const colleges: College[] = [
     shortName: "BMSIT&M",
     city: "bengaluru",
     address: "Avalahalli, Doddaballapura Main Road, Yelahanka, Bengaluru, Karnataka 560064",
+    website: "https://bmsit.ac.in/",
     lat: 13.1341876,
     lng: 77.5693927,
     intro:
@@ -801,6 +839,7 @@ const colleges: College[] = [
     shortName: "HKBK",
     city: "bengaluru",
     address: "Nagawara, Bengaluru, Karnataka 560045",
+    website: "https://www.hkbk.edu.in/",
     lat: 13.0375716,
     lng: 77.6197085,
     intro:
@@ -821,6 +860,7 @@ const colleges: College[] = [
     shortName: "Atria IT",
     city: "bengaluru",
     address: "Anandnagar, Hebbal, Bengaluru, Karnataka 560024",
+    website: "https://atria.edu/",
     lat: 13.0325175,
     lng: 77.592124,
     intro:
@@ -841,6 +881,7 @@ const colleges: College[] = [
     shortName: "T John IT",
     city: "bengaluru",
     address: "Gottigere, Bannerghatta Road, Bengaluru, Karnataka 560083",
+    website: "https://www.tjohncollege.com/",
     lat: 12.8510801,
     lng: 77.5947149,
     intro:
@@ -861,6 +902,7 @@ const colleges: College[] = [
     shortName: "BU Central College",
     city: "bengaluru",
     address: "Kempegowda Road, Bengaluru, Karnataka 560001",
+    website: "https://bangaloreuniversity.ac.in/",
     lat: 12.9748663,
     lng: 77.5829672,
     intro:

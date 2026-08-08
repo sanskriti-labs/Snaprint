@@ -52,6 +52,8 @@ export type College = {
   address: string;
   lat?: number;
   lng?: number;
+  /** Official institution homepage — verified to resolve, not fabricated. */
+  website?: string;
   /** Hand-written intro. Must be unique per college — no template fill. */
   intro: string;
   keywords: string[];

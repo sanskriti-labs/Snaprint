@@ -100,6 +100,11 @@ export default async function EntityPage({
           name: college.name,
           description: college.intro,
           url: `${SITE_URL}/print-near/${college.slug}`,
+          // The college's own official homepage — sameAs, not url, since
+          // url must stay the canonical URL of THIS page (the Place half
+          // of the dual @type). sameAs is schema.org's property for "this
+          // real-world entity also has a page at this other URL".
+          ...(college.website ? { sameAs: college.website } : {}),
           image: `${SITE_URL}/og.png`,
           ...(college.lat && college.lng
             ? {

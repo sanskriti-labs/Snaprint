@@ -58,6 +58,16 @@ export default function PseoHero(props: Props) {
         <Eyebrow>Print near {name} campus</Eyebrow>
         <H1>{headline}</H1>
         <Intro>{college.intro}</Intro>
+        {college.website && (
+          <a
+            href={college.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block font-body text-[14px] font-medium text-[#E63946] underline underline-offset-4"
+          >
+            Visit {name} official website ↗
+          </a>
+        )}
       </div>
     );
   }
