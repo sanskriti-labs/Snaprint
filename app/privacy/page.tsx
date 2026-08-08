@@ -9,21 +9,24 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <LegalPage title="Privacy Policy" updated="30 July 2026">
+    <LegalPage title="Privacy Policy" updated="8 August 2026">
       <h2>1. Who we are</h2>
       <p>
         Snaprint (&ldquo;Snaprint&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) is a product of Sanskriti Labs,
         based in Bengaluru, India. Snaprint sells and installs Snaprint S1 print kiosks to independent
         shop owners across India. This policy explains what information we collect through{" "}
-        <strong>snaprints.com</strong> and our franchise/sales process, and how it is handled under the
-        Digital Personal Data Protection Act, 2023 (&ldquo;DPDP Act&rdquo;).
+        <strong>snaprints.com</strong> and our franchise/sales process, what information the Snaprint S1
+        kiosk itself collects from the shop owner&rsquo;s end customers, and how both are handled under
+        the Digital Personal Data Protection Act, 2023 (&ldquo;DPDP Act&rdquo;).
       </p>
 
       <h2>2. What Snaprint does</h2>
       <p>
         Snaprint is print-kiosk hardware and software sold to shop owners, who own the machine and use
-        it to serve their own customers. This website is informational and used to reach prospective
-        shop owners &mdash; it does not process end-customer print jobs, payments, or uploaded documents.
+        it to serve their own customers (&ldquo;end customers&rdquo;). This website is informational and
+        used to reach prospective shop owners &mdash; it does not itself process end-customer print jobs,
+        payments, or uploaded documents. The kiosk software does, and is covered separately in{" "}
+        <a href="#kiosk-data">Section 3B</a> below.
       </p>
 
       <h2>3. Information we collect</h2>
@@ -31,7 +34,6 @@ export default function PrivacyPolicy() {
       <ul>
         <li>No accounts, passwords, or user profiles</li>
         <li>No payment information (payments for kiosks are handled separately, via agreement, not through this website)</li>
-        <li>No uploaded documents or print jobs (that happens on the physical kiosk at your shop, not this site)</li>
       </ul>
       <p><strong>Information you send us directly</strong></p>
       <p>
@@ -46,6 +48,49 @@ export default function PrivacyPolicy() {
         location at city/country level, device type, referral source). Google Analytics uses cookies
         for this purpose &mdash; see the <a href="/refund-policy">Cookies</a> section below for details
         and opt-out instructions. We do not use this data to identify individual visitors.
+      </p>
+
+      <h2 id="kiosk-data">3B. Information the Snaprint S1 kiosk collects from end customers</h2>
+      <p>
+        This section covers data handled by the kiosk itself &mdash; the physical device installed at a
+        shop &mdash; not this website. It applies to end customers who scan a kiosk&rsquo;s QR code to
+        print a document, not to shop owners or website visitors.
+      </p>
+      <p><strong>What the kiosk collects</strong></p>
+      <ul>
+        <li>
+          <strong>The uploaded file</strong> (PDF, JPG, or PNG) you send to the kiosk to print, along with
+          job details such as page count, copies, and print options.
+        </li>
+        <li>
+          <strong>Your phone number</strong>, captured and OTP-verified at the time of payment for a print
+          job. This is not collected for uploads that are never paid for.
+        </li>
+      </ul>
+      <p><strong>Why we keep it</strong></p>
+      <p>
+        A print job you have paid for but not yet printed must remain available so you (or the shop
+        owner, on your behalf) can print it later. Once a job is completed, we keep the file and your
+        phone number for a limited window afterward &mdash; rather than deleting them immediately &mdash;
+        because a shop owner may be legally required to produce the file or identify who submitted it if
+        a law enforcement or other authority raises a concern about a specific print (for example, a
+        complaint that a print job involved unlawful content). We do not otherwise access, review, or use
+        your file or phone number.
+      </p>
+      <p><strong>How long we keep it</strong></p>
+      <p>
+        Both the uploaded file and the job record (including your phone number, if collected) are
+        automatically deleted <strong>30 days</strong> after the job reaches a final state (printed,
+        cancelled, or expired unpaid). Uploads that are never paid for and never completed are cleared
+        out much sooner, typically within 10&ndash;15 minutes of being abandoned.
+      </p>
+      <p><strong>Who can access it</strong></p>
+      <p>
+        The shop owner operating the kiosk can view job history, including your phone number if payment
+        was completed, through their own kiosk dashboard &mdash; this is how they locate and reprint a
+        paid job, or respond to an authority&rsquo;s request. We do not sell, share, or otherwise use this
+        data for marketing, analytics, or any purpose beyond printing your job and the retention purpose
+        described above.
       </p>
 
       <h2>4. Cookies</h2>
@@ -90,6 +135,8 @@ export default function PrivacyPolicy() {
         <li><strong>Enquiry/form data:</strong> retained while your enquiry or agreement is active, and for a reasonable period after for record-keeping and legal purposes</li>
         <li><strong>Analytics aggregates:</strong> retained per Google Analytics defaults (currently 14 months)</li>
         <li><strong>Server access logs:</strong> retained for up to 30 days for security and debugging</li>
+        <li><strong>Kiosk end-customer files and phone numbers:</strong> retained for 30 days after a print job reaches a final state, then automatically deleted &mdash; see <a href="#kiosk-data">Section 3B</a></li>
+        <li><strong>Unpaid, abandoned kiosk uploads:</strong> deleted within 10&ndash;15 minutes</li>
       </ul>
 
       <h2>8. Your rights under the DPDP Act, 2023</h2>
@@ -103,6 +150,12 @@ export default function PrivacyPolicy() {
         <li>Register a grievance with us, and if unresolved, with the Data Protection Board of India</li>
       </ul>
       <p>To exercise any of these rights, email <a href="mailto:snaprints@sanskritilabs.in">snaprints@sanskritilabs.in</a>. We will respond within a reasonable time, and in any case within 30 days.</p>
+      <p>
+        Note on kiosk data: an erasure request for an uploaded file or phone number covered by{" "}
+        <a href="#kiosk-data">Section 3B</a> may be delayed until the retention window described there
+        ends, where the shop owner is required to keep the record to respond to a pending or reasonably
+        anticipated legal or authority request.
+      </p>
 
       <h2>9. Children&rsquo;s data</h2>
       <p>

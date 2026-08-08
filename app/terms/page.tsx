@@ -9,13 +9,14 @@ export const metadata: Metadata = {
 
 export default function Terms() {
   return (
-    <LegalPage title="Terms of Service" updated="30 July 2026">
+    <LegalPage title="Terms of Service" updated="8 August 2026">
       <h2>1. Agreement</h2>
       <p>
         These Terms govern your use of <strong>snaprints.com</strong> (the &ldquo;Site&rdquo;), operated
         by Sanskriti Labs (&ldquo;Snaprint&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). By visiting the
         Site or submitting an enquiry through it, you agree to these Terms and our{" "}
-        <a href="/privacy">Privacy Policy</a>. If you do not agree, please do not use the Site.
+        <a href="/privacy">Privacy Policy</a>. If you do not agree, please do not use the Site. Section
+        3A below separately governs use of a physical Snaprint S1 kiosk.
       </p>
 
       <h2>2. What this Site is</h2>
@@ -33,6 +34,24 @@ export default function Terms() {
         case of conflict between these Terms and a signed kiosk agreement, the signed agreement
         controls for matters it covers.
       </p>
+
+      <h2>3A. Using a kiosk as an end customer</h2>
+      <p>
+        If you use a Snaprint S1 kiosk to print a document (rather than operating one as a shop owner),
+        the kiosk is owned and operated by the shop where it is installed, not by Sanskriti Labs directly.
+        By uploading a file and paying for a print job, you agree that:
+      </p>
+      <ul>
+        <li>You have the right to print the file you upload, and it does not contain unlawful content</li>
+        <li>
+          Your uploaded file and, if you pay for a job, your OTP-verified phone number are retained for a
+          limited period as described in our{" "}
+          <a href="/privacy#kiosk-data">Privacy Policy, Section 3B</a>, including so that a paid job can
+          be printed later and so the shop owner can respond to a lawful authority request concerning a
+          specific print job
+        </li>
+        <li>The shop owner may decline to print a job that appears to violate law or the kiosk&rsquo;s acceptable-use limits (e.g. file type or size restrictions shown at the kiosk)</li>
+      </ul>
 
       <h2>4. Eligibility</h2>
       <p>
