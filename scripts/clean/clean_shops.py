@@ -69,7 +69,9 @@ KEEP_TITLE = [
 ]
 
 # Categories that are NEVER xerox shops, even if the title matches.
-# Conservative: only places that are structurally incompatible with printing.
+# Conservative: only places that are structurally incompatible with printing
+# — a mall, hospital, or hotel building is not itself a walk-in print
+# counter, no matter what else Google also tagged it as.
 HARD_NEG_CATS = {
     "Shopping mall", "Building", "Movie theater",
     "Hotel", "Lodging", "Hostel", "Backpacker hostel",
@@ -81,17 +83,32 @@ HARD_NEG_CATS = {
     "Gym", "Fitness center",
     "Shoe store", "Jewelry store",
     "Supermarket", "Department store",
-    "Travel agency", "Tourist attraction",
+    "Tourist attraction",
     "Auto repair", "Car repair", "Car dealer",
-    "Insurance agency",
     "Pet store", "Veterinary",
-    "Real estate agency",
     "Preschool", "Park", "Museum",
     "Bus stop", "Bus depot", "Train station", "Subway station",
     "Water utility company", "Library", "Apartment",
     "Volkswagen dealer", "Motorcycle dealer",
     "Indoor cycling", "Convention center",
-    "Coworking space", "Corporate office",
+    "Coworking space",
+}
+
+# Categories that describe a SERVICE a shop can also offer alongside
+# xerox/printing at the same small storefront — extremely common for
+# Indian neighborhood shops (a xerox counter that also does travel
+# bookings, insurance, or money transfer as a side business). Unlike
+# HARD_NEG_CATS, these only reject a record when nothing else — no
+# print keyword in the title, no print-related category alongside them
+# — corroborates that it's ALSO a print shop. Real examples this fixes:
+# "MAHABOOB ENTERPRISES XEROX AND PRINTOUTS" (also tagged Insurance
+# agency), "RS Xerox" (also tagged Travel agency) — both explicitly
+# name xerox/print in the title and carry a real print category, but
+# were being killed outright because HARD_NEG_CATS used to fire on ANY
+# assigned category regardless of corroborating evidence.
+SOFT_NEG_CATS = {
+    "Travel agency", "Insurance agency", "Real estate agency",
+    "Corporate office",
 }
 
 # Xerox-related categories — keep when the title doesn't have a keyword
@@ -249,6 +266,21 @@ def keep_record(d: dict) -> tuple[bool, str]:
     hard_neg = next((c for c in cats if c in HARD_NEG_CATS), None)
     if hard_neg:
         return False, f"hard-neg cat={hard_neg}"
+
+    # A soft-negative (travel/insurance/real-estate agency, corporate
+    # office) only kills the record when NOTHING corroborates a print
+    # service alongside it — a strong title keyword or a print-related
+    # sibling category. Small Indian shops routinely combine xerox with
+    # a side business like travel booking or insurance; killing on the
+    # side-business tag alone was dropping real, self-declared xerox
+    # shops (e.g. a listing titled "... XEROX AND PRINTOUTS" that also
+    # carries "Insurance agency").
+    soft_neg = next((c for c in cats if c in SOFT_NEG_CATS), None)
+    if soft_neg:
+        has_keep_kw_early = any(kw in title_lower for kw in KEEP_TITLE)
+        has_print_cat = any(PRINT_CAT_RE.search(c) for c in cats)
+        if not has_keep_kw_early and not has_print_cat:
+            return False, f"soft-neg cat={soft_neg}, no print corroboration"
 
     # Permanently closed per Google — never publish.
     if str(d.get("status") or "").strip().upper() in {"CLOSED", "PERMANENTLY_CLOSED", "CLOSED_PERMANENTLY"}:
