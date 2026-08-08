@@ -1,11 +1,40 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createAppointment, EAApiError } from "@/lib/easyAppointments";
+import { createAppointment, getAvailableSlots, EAApiError } from "@/lib/easyAppointments";
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const TIME_RE = /^\d{2}:\d{2}$/;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const NAME_RE = /^[^\d[\]{}<>]{1,120}$/;
+const PHONE_RE = /^[+0-9 ()\-]{6,32}$/;
+const MAX_BODY_BYTES = 8 * 1024;
 
 export async function POST(req: NextRequest) {
+  const contentLength = Number(req.headers.get("content-length") ?? "0");
+  if (contentLength > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Request body too large" }, { status: 413 });
+  }
+
+  const contentType = req.headers.get("content-type") || "";
+  if (!contentType.toLowerCase().includes("application/json")) {
+    return NextResponse.json(
+      { error: "Content-Type must be application/json" },
+      { status: 415 }
+    );
+  }
+
+  const origin = req.headers.get("origin");
+  const host = req.headers.get("host");
+  if (!origin || !host) {
+    return NextResponse.json({ error: "Origin required" }, { status: 403 });
+  }
+  try {
+    if (new URL(origin).host !== host) {
+      return NextResponse.json({ error: "Cross-origin forbidden" }, { status: 403 });
+    }
+  } catch {
+    return NextResponse.json({ error: "Invalid Origin header" }, { status: 403 });
+  }
+
   let body: unknown;
   try {
     body = await req.json();
@@ -15,14 +44,17 @@ export async function POST(req: NextRequest) {
 
   const { name, email, phone, date, time, providerId } = (body ?? {}) as Record<string, unknown>;
 
-  if (typeof name !== "string" || name.trim().length === 0) {
-    return NextResponse.json({ error: "'name' is required" }, { status: 400 });
+  if (typeof name !== "string" || !NAME_RE.test(name.trim())) {
+    return NextResponse.json(
+      { error: "A valid 'name' (letters, 1-120 chars) is required" },
+      { status: 400 }
+    );
   }
   if (typeof email !== "string" || !EMAIL_RE.test(email)) {
     return NextResponse.json({ error: "A valid 'email' is required" }, { status: 400 });
   }
-  if (typeof phone !== "string" || phone.trim().length === 0) {
-    return NextResponse.json({ error: "'phone' is required" }, { status: 400 });
+  if (typeof phone !== "string" || !PHONE_RE.test(phone.trim())) {
+    return NextResponse.json({ error: "A valid 'phone' is required" }, { status: 400 });
   }
   if (typeof date !== "string" || !DATE_RE.test(date)) {
     return NextResponse.json({ error: "'date' must be YYYY-MM-DD" }, { status: 400 });
@@ -45,6 +77,15 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    // Re-verify the slot is still available immediately before booking, to
+    // narrow the window for concurrent requests double-booking the same slot.
+    const slots = await getAvailableSlots(date);
+    if (!slots.some((s) => s.time === time && s.providerId === providerId)) {
+      return NextResponse.json(
+        { error: "That time is no longer available — please pick another." },
+        { status: 409 }
+      );
+    }
     const result = await createAppointment({ name, email, phone, date, time, providerId });
     return NextResponse.json(result);
   } catch (err) {

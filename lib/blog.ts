@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import readingTime from "reading-time";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
+const SAFE_SLUG = /^[a-zA-Z0-9][a-zA-Z0-9_-]{0,199}$/;
 
 export type BlogFrontmatter = {
   title: string;
@@ -27,7 +28,14 @@ export function getAllPostSlugs(): string[] {
 }
 
 export function getPostMeta(slug: string): BlogPostMeta {
-  const raw = fs.readFileSync(path.join(BLOG_DIR, `${slug}.mdx`), "utf8");
+  if (!SAFE_SLUG.test(slug)) {
+    throw new Error(`Invalid slug: ${JSON.stringify(slug)}`);
+  }
+  const filePath = path.resolve(BLOG_DIR, `${slug}.mdx`);
+  if (!filePath.startsWith(BLOG_DIR + path.sep)) {
+    throw new Error(`Slug escapes BLOG_DIR: ${JSON.stringify(slug)}`);
+  }
+  const raw = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(raw);
   const frontmatter = data as BlogFrontmatter;
   return {

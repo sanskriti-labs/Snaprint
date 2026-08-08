@@ -29,7 +29,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   if (!slugs.includes(params.slug)) notFound();
 
   const meta = getPostMeta(params.slug);
-  const { default: Content } = await import(`@/content/blog/${params.slug}.mdx`);
+  const { default: Content } = await import(`@/content/blog/${meta.slug}.mdx`);
 
   return (
     <BlogPage meta={meta}>
