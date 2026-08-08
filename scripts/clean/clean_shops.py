@@ -153,8 +153,11 @@ def _normalize(raw: str) -> str:
     import re
     if not raw:
         return "Xerox Shop"
+    # City names stripped from shop titles across all scraped cities, not
+    # just the one currently live — this list grows as new cities are added.
     cleaned = re.sub(
-        r"\s*[-|]\s*(Bengaluru|Bangalore|Print shop|Copy shop|Stationery.*)$",
+        r"\s*[-|]\s*(Bengaluru|Bangalore|Hyderabad|Pune|Chennai|Mumbai|Delhi|"
+        r"Print shop|Copy shop|Stationery.*)$",
         "", raw, flags=re.I,
     )
     return cleaned.strip()[:80] or "Xerox Shop"

@@ -86,7 +86,12 @@ async def classify_one(rec: dict, sem: asyncio.Semaphore, session) -> tuple[bool
                 },
                 json={
                     "model": MODEL,
-                    "max_tokens": 100,
+                    # 500, not 100: models that emit a `thinking` block before
+                    # the answer were getting cut off before the YES/NO line
+                    # ever appeared, which silently defaulted every entry to
+                    # "keep" (see PROMPT_ERROR fallback below) — a 0-reject
+                    # audit that looked like it ran cleanly.
+                    "max_tokens": 500,
                     "temperature": 0,
                     "messages": [{"role": "user", "content": prompt}],
                 },
@@ -94,7 +99,7 @@ async def classify_one(rec: dict, sem: asyncio.Semaphore, session) -> tuple[bool
             ) as resp:
                 if resp.status != 200:
                     text = await resp.text()
-                    return True, f"http {resp.status}: {text[:120]} (defaulted to keep)"
+                    return None, f"http {resp.status}: {text[:120]}"
                 data = await resp.json()
                 answer = ""
                 for block in data.get("content", []):
@@ -104,9 +109,14 @@ async def classify_one(rec: dict, sem: asyncio.Semaphore, session) -> tuple[bool
                 first_line = answer.splitlines()[0].strip().upper() if answer else ""
                 if first_line.startswith("NO"):
                     return False, answer.split("\n", 1)[1].strip() if "\n" in answer else "no"
-                return True, answer.split("\n", 1)[1].strip() if "\n" in answer else "yes"
+                if first_line.startswith("YES"):
+                    return True, answer.split("\n", 1)[1].strip() if "\n" in answer else "yes"
+                # Neither YES nor NO on the first line (truncated / malformed
+                # response) is a judging failure, not a verdict — surfaced as
+                # an explicit error entry rather than silently kept.
+                return None, f"unparseable response: {answer[:150]!r}"
         except Exception as e:
-            return True, f"error: {e} (defaulted to keep)"
+            return None, f"error: {e}"
 
 
 def load_cache() -> dict:
@@ -176,24 +186,45 @@ async def main():
             start = time.time()
             tasks = [classify_one(r, sem, session) for r in pending]
             results = await asyncio.gather(*tasks)
+            errored = 0
             for r, (keep, reason) in zip(pending, results):
+                if keep is None:
+                    # Judging failed (truncated/malformed response, HTTP
+                    # error, exception) — do NOT cache. An uncached entry
+                    # is retried on the next run instead of silently
+                    # shipping as a false YES.
+                    errored += 1
+                    continue
                 cache[str(r.get("placeId"))] = {"keep": keep, "reason": reason}
             save_cache(cache)
             elapsed = time.time() - start
             print(f"  {len(pending)} judged in {elapsed:.1f}s ({len(pending)/max(elapsed,0.1):.1f}/s)", file=sys.stderr)
+            if errored:
+                print(f"  WARNING: {errored} entries failed to judge and were NOT cached (will retry next run)", file=sys.stderr)
 
     # Build verified output
     verified = []
+    rejected = 0
+    unjudged = 0
     for r in records:
         v = cache.get(str(r.get("placeId")))
-        if v and v["keep"]:
+        if v is None:
+            unjudged += 1
+        elif v["keep"]:
             verified.append(r)
+        else:
+            rejected += 1
     OUT_VERIFIED.parent.mkdir(parents=True, exist_ok=True)
     with OUT_VERIFIED.open("w") as f:
         for r in verified:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(f"\nWritten {len(verified)} verified shops to {OUT_VERIFIED.name}")
-    print(f"  rejected: {len(records) - len(verified)}")
+    print(f"  rejected: {rejected}")
+    if unjudged:
+        print(f"  UNJUDGED (not in output, re-run to retry): {unjudged}")
+    if rejected == 0 and len(records) > 20:
+        print(f"  WARNING: 0 rejections across {len(records)} records — audit may not be discriminating. "
+              f"Spot-check with --limit before trusting this output.", file=sys.stderr)
     return 0
 
 

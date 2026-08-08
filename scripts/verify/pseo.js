@@ -19,6 +19,9 @@
  *   7. Total live entities (city + college + area) is non-zero.
  *   8. llms.txt URLs match live college URLs.
  *   9. Sitemap emits the expected college URL count.
+ *   10. Every live area's intro-stated shop count matches its actual
+ *       liveLocations length (guards against the count/render mismatch
+ *       that shipped "30 xerox shops" pages showing 20 listings).
  */
 const { readFileSync, existsSync } = require("node:fs");
 const { resolve } = require("node:path");
@@ -318,6 +321,31 @@ for (const block of areaBlocks) {
 }
 if (spreadFails === 0) {
   ok(`all live areas geographically coherent (no shop >${MAX_SPREAD_KM}km from area centre)`);
+}
+
+// ---------------------------------------------------------------------------
+// 12: intro-stated shop count must match rendered liveLocations count.
+// The generator once computed the intro from the uncapped shop list while
+// rendering a 20-per-area cap, so a page could say "30 xerox and print
+// shops" while only listing 20 — caught only by a human noticing the page.
+// ---------------------------------------------------------------------------
+let countMismatches = 0;
+for (const block of areaBlocks) {
+  const slugM = block.match(/slug:\s*"([a-z0-9-]+)"/);
+  if (!slugM || !/presence:\s*"live"/.test(block)) continue;
+  const introM = block.match(/intro:\s*"((?:[^"\\]|\\.)*)"/);
+  if (!introM) continue;
+  const countM = introM[1].match(/^(\d+) verified xerox and print shops?\b/);
+  if (!countM) continue; // intro doesn't lead with a count (e.g. the n===0 template) — nothing to check
+  const statedCount = Number(countM[1]);
+  const renderedCount = (block.match(/\n {6}\{\n {8}name:/g) || []).length;
+  if (statedCount !== renderedCount) {
+    fail(`area "${slugM[1]}" intro says ${statedCount} shops but liveLocations has ${renderedCount}`);
+    countMismatches++;
+  }
+}
+if (countMismatches === 0) {
+  ok("all live area intros' stated shop count matches rendered liveLocations count");
 }
 
 // ---------------------------------------------------------------------------
