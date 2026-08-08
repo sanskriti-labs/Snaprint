@@ -127,7 +127,47 @@ Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas
 
 ### Bengaluru colleges
 
-- College and university kiosk launches are in progress — see the [Print Near You hub](https://snaprints.com/print-near) for currently live colleges. Each entry below is updated when a verified Snaprint kiosk opens within 1.5 km of campus.Entries are promoted from planned to live only after operator sign-off: see `content/pseo/colleges.ts` for the verification policy.
+- [Print near BMSCE, Bengaluru](https://snaprints.com/print-near/bms-college-of-engineering) — 34 shops
+- [Print near Vijaya College, Bengaluru](https://snaprints.com/print-near/vijaya-college) — 33 shops
+- [Print near The Oxford College of Engineering, Bengaluru](https://snaprints.com/print-near/oxford-coe-bangalore) — 33 shops
+- [Print near MSRIT, Bengaluru](https://snaprints.com/print-near/ms-ramaiah-institute-of-technology) — 29 shops
+- [Print near Mount Carmel College, Bengaluru](https://snaprints.com/print-near/mount-carmel-college) — 27 shops
+- [Print near PES University (HN Campus), Bengaluru](https://snaprints.com/print-near/pes-university-hn-campus) — 25 shops
+- [Print near IISc, Bengaluru](https://snaprints.com/print-near/iisc-bangalore) — 24 shops
+- [Print near Jain (Deemed-to-be University) — Gandhi Nagar Campus, Bengaluru](https://snaprints.com/print-near/jain-university-gandhi-nagar) — 23 shops
+- [Print near Jain (Deemed-to-be University) — Shankarapuram Campus, Bengaluru](https://snaprints.com/print-near/jain-university-shankarapuram) — 23 shops
+- [Print near Jyoti Nivas College, Bengaluru](https://snaprints.com/print-near/jyoti-nivas-college) — 22 shops
+- [Print near Jain (Deemed-to-be University) — Jayanagar Campus, Bengaluru](https://snaprints.com/print-near/jain-university-jayanagar) — 22 shops
+- [Print near St. Joseph's College, Bengaluru](https://snaprints.com/print-near/st-josephs-college) — 20 shops
+- [Print near Jain (Deemed-to-be University) — JC Road Campus, Bengaluru](https://snaprints.com/print-near/jain-university-jc-road) — 20 shops
+- [Print near Jain (Deemed-to-be University) — Lalbagh Road Campus, Bengaluru](https://snaprints.com/print-near/jain-university-lalbagh-road) — 20 shops
+- [Print near Bangalore Institute of Technology, Bengaluru](https://snaprints.com/print-near/bit-bangalore) — 20 shops
+- [Print near RNS Institute of Technology, Bengaluru](https://snaprints.com/print-near/rnsit-bangalore) — 19 shops
+- [Print near Bangalore University (Central College Campus), Bengaluru](https://snaprints.com/print-near/bu-central-college) — 19 shops
+- [Print near Atria Institute of Technology, Bengaluru](https://snaprints.com/print-near/atria-it-bangalore) — 18 shops
+- [Print near Christ University (Bannerghatta Road Campus), Bengaluru](https://snaprints.com/print-near/christ-university-bannerghatta) — 17 shops
+- [Print near PES University (RR Campus), Bengaluru](https://snaprints.com/print-near/pes-university-rr-campus) — 16 shops
+- [Print near HKBK College of Engineering, Bengaluru](https://snaprints.com/print-near/hkbk-coe-bangalore) — 16 shops
+- [Print near St. Joseph's College of Commerce, Bengaluru](https://snaprints.com/print-near/st-josephs-college-of-commerce) — 15 shops
+- [Print near Christ University (Central Campus), Bengaluru](https://snaprints.com/print-near/christ-university-central-campus) — 14 shops
+- [Print near DSCE, Bengaluru](https://snaprints.com/print-near/dayananda-sagar-college-of-engineering) — 14 shops
+- [Print near Global Academy of Technology, Bengaluru](https://snaprints.com/print-near/gat-bangalore) — 12 shops
+- [Print near Dr. Ambedkar Institute of Technology, Bengaluru](https://snaprints.com/print-near/dr-ait-bangalore) — 10 shops
+- [Print near East Point College of Engineering and Technology, Bengaluru](https://snaprints.com/print-near/east-point-college) — 9 shops
+- [Print near PES University (EC Campus), Bengaluru](https://snaprints.com/print-near/pes-university-ec-campus) — 8 shops
+- [Print near Kristu Jayanti College, Bengaluru](https://snaprints.com/print-near/kristu-jayanti-college) — 8 shops
+- [Print near JSS Academy of Technical Education, Bengaluru](https://snaprints.com/print-near/jssate-bangalore) — 7 shops
+- [Print near Christ University (Yeshwanthpur Campus), Bengaluru](https://snaprints.com/print-near/christ-university-yeshwanthpur) — 6 shops
+- [Print near Sapthagiri College of Engineering, Bengaluru](https://snaprints.com/print-near/sapthagiri-coe-bangalore) — 6 shops
+- [Print near NMIT, Bengaluru](https://snaprints.com/print-near/nitte-meenakshi-bangalore) — 5 shops
+- [Print near RVCE, Bengaluru](https://snaprints.com/print-near/rvce-bengaluru) — 4 shops
+- [Print near SJB Institute of Technology, Bengaluru](https://snaprints.com/print-near/sjbit-bangalore) — 4 shops
+- [Print near T John Institute of Technology, Bengaluru](https://snaprints.com/print-near/tjohn-it-bangalore) — 4 shops
+- [Print near REVA University, Bengaluru](https://snaprints.com/print-near/reva-university) — 2 shops
+- [Print near CMRIT, Bengaluru](https://snaprints.com/print-near/cmrit-bangalore) — 2 shops
+- [Print near BMS Institute of Technology & Management, Bengaluru](https://snaprints.com/print-near/bmsit-bangalore) — 2 shops
+- [Print near Presidency University, Bengaluru](https://snaprints.com/print-near/presidency-university-bangalore) — 1 shop
+- More colleges are promoted to live only after operator sign-off: see `content/pseo/colleges.ts` for the verification policy.
 
 ## Contact
 

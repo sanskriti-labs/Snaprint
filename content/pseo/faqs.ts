@@ -77,14 +77,14 @@ export function getLocationFaqs(
           "We are expanding near RVCE on Mysore Road. Kiosks accept prints paid via UPI — GPay, PhonePe, Paytm, or any app.",
       },
     ],
-    "pes-university-bangalore": [
+    "pes-university-ec-campus": [
       {
         q: "Is there a Snaprint kiosk near PES University Electronic City?",
         a:
           "Kiosk deployment near PESU Electronic City is underway. You will find Snaprint-enabled shops in the Electronic City campus area.",
       },
     ],
-    "christ-university-bangalore": [
+    "christ-university-central-campus": [
       {
         q: "Is there a Snaprint kiosk near Christ University?",
         a:
