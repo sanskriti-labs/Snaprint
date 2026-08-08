@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPostsMeta().map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
     lastModified: post.date,
-    changeFrequency: "yearly" as const,
+    changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
@@ -87,19 +87,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${siteUrl}/privacy`,
       lastModified: "2026-07-30",
-      changeFrequency: "yearly",
+      changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${siteUrl}/terms`,
       lastModified: "2026-07-30",
-      changeFrequency: "yearly",
+      changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${siteUrl}/refund-policy`,
       lastModified: "2026-07-30",
-      changeFrequency: "yearly",
+      changeFrequency: "monthly",
       priority: 0.3,
     },
   ];
