@@ -1,7 +1,7 @@
 import citiesData from "./cities";
 import collegesData from "./colleges";
 import areasData from "./areas";
-import type { City, College, Area, Slug } from "./types";
+import type { City, College, Area, Slug, Presence } from "./types";
 import { getCityFaqs, getLocationFaqs } from "./faqs";
 import type { Faq } from "./faqs";
 import { getShopsNearCollege } from "./shops";
@@ -14,24 +14,35 @@ export type { Faq };
 export { getShopsNearCollege } from "./shops";
 
 // ---------------------------------------------------------------------------
-// Live-only selectors (used by sitemap, generateStaticParams)
+// Published selectors (used by sitemap, generateStaticParams)
+//
+// "live" = kiosk physically present. "served" = no kiosk yet, but we publish
+// the page anyway on the strength of aggregated GMaps shop data (the pSEO
+// directory-first strategy — build topical authority now, the kiosk follows
+// later). Both are published; "planned" is not. Kiosk-specific rendering
+// (JSON-LD hasOfferCatalog/geo/telephone) stays gated on liveLocations
+// directly, not on presence.
 // ---------------------------------------------------------------------------
+
+function isPublished(presence: Presence): boolean {
+  return presence === "live" || presence === "served";
+}
 
 export function getAllCitySlugs(): Slug[] {
   return citiesData
-    .filter((c) => c.presence === "live")
+    .filter((c) => isPublished(c.presence))
     .map((c) => c.slug);
 }
 
 export function getAllCollegeSlugs(): Slug[] {
   return collegesData
-    .filter((c) => c.presence === "live")
+    .filter((c) => isPublished(c.presence))
     .map((c) => c.slug);
 }
 
 export function getAllAreaSlugs(): Slug[] {
   return areasData
-    .filter((a) => a.presence === "live")
+    .filter((a) => isPublished(a.presence))
     .map((a) => a.slug);
 }
 
@@ -42,7 +53,7 @@ export function getAllAreaSlugs(): Slug[] {
 export function getCity(slug: Slug): City | null {
   const c = citiesData.find((c) => c.slug === slug);
   if (!c) return null;
-  if (c.presence === "live") return c;
+  if (isPublished(c.presence)) return c;
   return null;
 }
 
@@ -67,7 +78,7 @@ export function getCityName(slug: Slug): string {
 export function getCollege(slug: Slug): College | null {
   const c = collegesData.find((c) => c.slug === slug);
   if (!c) return null;
-  if (c.presence !== "live") return null;
+  if (!isPublished(c.presence)) return null;
   // Guard rail: a live college must have at least one shop in 1.5 km radius
   // (city-wide shop index — not the area-keyword match). Warn, don't throw:
   // the operator may be flipping presence in advance of a launch announcement.
@@ -86,7 +97,7 @@ export function getCollege(slug: Slug): College | null {
 export function getArea(slug: Slug): Area | null {
   const a = areasData.find((a) => a.slug === slug);
   if (!a) return null;
-  if (a.presence === "live") return a;
+  if (isPublished(a.presence)) return a;
   return null;
 }
 
@@ -96,19 +107,19 @@ export function getArea(slug: Slug): Area | null {
 
 export function getCollegesInCity(citySlug: Slug): College[] {
   return collegesData.filter(
-    (c) => c.city === citySlug && c.presence === "live"
+    (c) => c.city === citySlug && isPublished(c.presence)
   );
 }
 
 export function getAreasInCity(citySlug: Slug): Area[] {
   return areasData.filter(
-    (a) => a.city === citySlug && a.presence === "live"
+    (a) => a.city === citySlug && isPublished(a.presence)
   );
 }
 
 export function getCollegesNearArea(areaSlug: Slug): College[] {
   return collegesData.filter(
-    (c) => c.area === areaSlug && c.presence === "live"
+    (c) => c.area === areaSlug && isPublished(c.presence)
   );
 }
 
@@ -116,22 +127,22 @@ export function getNeighborCities(citySlug: Slug): City[] {
   const city = citiesData.find((c) => c.slug === citySlug);
   if (!city?.neighbors) return [];
   return citiesData.filter(
-    (c) => city.neighbors!.includes(c.slug) && c.presence === "live"
+    (c) => city.neighbors!.includes(c.slug) && isPublished(c.presence)
   );
 }
 
 // ---------------------------------------------------------------------------
-// All live entities (used by Phase 2 index pages)
+// All published entities (used by Phase 2 index pages)
 // ---------------------------------------------------------------------------
 
 export function getAllLiveCities(): City[] {
-  return citiesData.filter((c) => c.presence === "live");
+  return citiesData.filter((c) => isPublished(c.presence));
 }
 
 export function getAllLiveColleges(): College[] {
-  return collegesData.filter((c) => c.presence === "live");
+  return collegesData.filter((c) => isPublished(c.presence));
 }
 
 export function getAllLiveAreas(): Area[] {
-  return areasData.filter((a) => a.presence === "live");
+  return areasData.filter((a) => isPublished(a.presence));
 }

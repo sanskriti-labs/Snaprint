@@ -48,9 +48,10 @@ export default function PseoHero(props: Props) {
     const { college } = props;
     const name = college.shortName ?? college.name;
     // H1 copy varies by presence to avoid claiming a kiosk exists
-    // when no shop data is verified within radius (planned).
+    // when no shop data is verified within radius (planned pages never
+    // reach here, so this only distinguishes live/served from planned).
     const headline =
-      college.presence === "live"
+      college.presence !== "planned"
         ? `Find print and xerox shops near ${name}, ${college.city}`
         : `Print and xerox shops near ${name}, ${college.city}`;
     return (

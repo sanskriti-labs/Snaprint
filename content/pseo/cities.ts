@@ -2,9 +2,9 @@ import type { City } from "./types";
 
 /**
  * Phase 1 — validation slice.
- * Only `presence: "live"` entries generate real pages and appear in sitemap + llms.txt.
- * `planned` entries render a "coming soon" page without a real address.
- * `served` entries do not generate a URL.
+ * `live` and `served` entries generate real pages and appear in sitemap + llms.txt.
+ * `live` = kiosk physically present. `served` = pSEO directory only, no kiosk yet.
+ * `planned` entries generate no page (404) and are not linked from anywhere.
  */
 const cities: City[] = [
   {
@@ -28,8 +28,8 @@ const cities: City[] = [
       "document printing bangalore",
     ],
     neighbors: [],
-    // presence is "live" once a real kiosk address is verified.
-    // Set to "planned" until the first deployment address is confirmed.
+    // "live" once a real kiosk address is verified; "served" once area/college
+    // pages here have enough verified shop data to publish without a kiosk.
     presence: "planned",
     liveLocations: [],
     lastReviewed: "2026-08-03",
@@ -45,7 +45,7 @@ const cities: City[] = [
       "500032", "500039", "500084", "500028", "500074",
     ],
     intro:
-      "Snaprint is expanding print listings across Hyderabad — students and professionals can find verified xerox and print shops near them without hunting for an open shop.",
+      "12 neighbourhoods in Hyderabad with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "print shop hyderabad",
       "xerox shop hyderabad",
@@ -53,7 +53,7 @@ const cities: City[] = [
       "document printing hyderabad",
     ],
     neighbors: [],
-    presence: "planned",
+    presence: "served",
     liveLocations: [],
     lastReviewed: "2026-08-08",
   },

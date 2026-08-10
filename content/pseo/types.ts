@@ -1,3 +1,8 @@
+/**
+ * "live" = kiosk physically present here. "served" = published on
+ * aggregated GMaps shop data, no kiosk yet (the pSEO directory-first
+ * strategy). "planned" = not published; page 404s, no links point to it.
+ */
 export type Presence = "live" | "planned" | "served";
 
 /** kebab-case ASCII, hand-curated — one per entity, never reused */
