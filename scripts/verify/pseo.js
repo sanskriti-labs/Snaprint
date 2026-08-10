@@ -9,6 +9,10 @@
  * doesn't import the typed modules. The trade-off is duplicate logic
  * with content/pseo/shops.ts — both must agree on field normalisation.
  *
+ * "Live" throughout this file means published — presence "live" (real
+ * kiosk) or "served" (pSEO directory only, no kiosk yet). Both generate
+ * real pages; only "planned" 404s. See content/pseo/types.ts.
+ *
  * Checks:
  *   1. Every live college has lat & lng.
  *   2. Every live college has ≥ 1 shop within 1.5 km radius.
@@ -22,6 +26,16 @@
  *   10. Every live area's intro-stated shop count matches its actual
  *       liveLocations length (guards against the count/render mismatch
  *       that shipped "30 xerox shops" pages showing 20 listings).
+ *   13. No live/served college or area names a city that is itself not
+ *       published — that city's cross-links would point back at a hub
+ *       that 404s (this is how instant-print/bengaluru linking to
+ *       planned areas shipped: the source list wasn't presence-filtered).
+ *   14. layout.tsx's sitewide JSON-LD carries no price/offers field —
+ *       that schema renders on every page including PSEO pages, and a
+ *       price there leaks into search snippets for unrelated pages
+ *       (shipped once: the S1 kiosk price showed up in a snippet for a
+ *       "shops near Atria IT" page). Price schema belongs on the page
+ *       it's actually about (home), not sitewide.
  */
 const { readFileSync, existsSync } = require("node:fs");
 const { resolve } = require("node:path");
@@ -75,10 +89,13 @@ const shopsCleanPath = resolve(repoRoot, "scripts/scraper/data/shops-clean.jsonl
 const shopsRawPath = resolve(repoRoot, "scripts/scraper/data/results-77areas.json");
 const shopsPath = [shopsLlmPath, shopsCleanPath, shopsRawPath].find((p) => existsSync(p));
 
-const colleges = extractDataBlocks(collegesPath).filter((c) => c.presence === "live");
+// "live" or "served" — both are published; only "planned" 404s.
+const isLive = (presence) => presence === "live" || presence === "served";
+
+const colleges = extractDataBlocks(collegesPath).filter((c) => isLive(c.presence));
 const cities = extractDataBlocks(citiesPath);  // all cities, not just live — a college can point to a planned city
-const liveCities = cities.filter((c) => c.presence === "live");
-const areas = extractDataBlocks(areasPath).filter((a) => a.presence === "live");
+const liveCities = cities.filter((c) => isLive(c.presence));
+const areas = extractDataBlocks(areasPath).filter((a) => isLive(a.presence));
 
 // ---------------------------------------------------------------------------
 // Geographic distance (haversine). Mirrors content/pseo/_geo.ts formula.
@@ -176,6 +193,79 @@ for (const c of colleges) {
   }
 }
 ok("cross-slug validation complete");
+
+// ---------------------------------------------------------------------------
+// 13: every getter in content/pseo/seo.ts that feeds a cross-link component
+// (PseoCrossLinks / instant-print hub) must presence-filter its output.
+//
+// Regression this guards: instant-print/[city] once called
+// getAllAreasInCity(), which returned areas "regardless of presence" (its
+// own doc comment said so) — so the city hub linked to planned, zero-shop
+// areas that 404 (e.g. /print-near/avenue-road). The fix was routing it
+// through the already-filtered getAreasInCity(). This check greps seo.ts's
+// cross-link helpers (used by PseoCrossLinks / hub pages) and fails if any
+// of them filters on a wider condition than isLive, or doesn't filter by
+// presence at all.
+// ---------------------------------------------------------------------------
+const seoTsPath = resolve(repoRoot, "content/pseo/seo.ts");
+const CROSS_LINK_GETTERS = ["getCollegesInCity", "getAreasInCity", "getCollegesNearArea", "getNeighborCities"];
+if (existsSync(seoTsPath)) {
+  const seoTs = readFileSync(seoTsPath, "utf8");
+  let unfiltered = 0;
+  for (const name of CROSS_LINK_GETTERS) {
+    const m = seoTs.match(new RegExp(`export function ${name}\\([^)]*\\)[^{]*\\{([\\s\\S]*?)\\n\\}`));
+    if (!m) {
+      fail(`cross-link getter "${name}" not found in seo.ts — was it renamed? Update this check too.`);
+      unfiltered++;
+      continue;
+    }
+    if (!/isPublished\(/.test(m[1])) {
+      fail(`cross-link getter "${name}" in seo.ts doesn't call isPublished() — it may leak links to planned (404) pages`);
+      unfiltered++;
+    }
+  }
+  // Any *other* exported getter whose name suggests "all X" and takes no
+  // presence filter is a landmine for the next hub page that calls it.
+  const suspicious = Array.from(seoTs.matchAll(/export function (getAll\w*In\w+)\(/g)).map((m) => m[1]);
+  for (const name of suspicious) {
+    fail(`seo.ts exports "${name}" — an unfiltered "all entities in X" getter is how the dead-link bug shipped before (getAllAreasInCity). Route callers through the presence-filtered getter instead, and delete this one.`);
+    unfiltered++;
+  }
+  if (unfiltered === 0) {
+    ok(`all ${CROSS_LINK_GETTERS.length} cross-link getters in seo.ts are presence-filtered, no unfiltered "getAll*In*" getters present`);
+  }
+} else {
+  fail("content/pseo/seo.ts not found");
+}
+
+// ---------------------------------------------------------------------------
+// 14: app/layout.tsx's sitewide JSON-LD carries no price/offer field.
+//
+// Regression this guards: the root layout injected Product/AggregateOffer
+// (the S1 kiosk price) into every page's <head>, including every
+// print-near/* and instant-print/* PSEO page. Google surfaced the kiosk
+// price in a search snippet for "Print and xerox shops near Atria IT" — a
+// page with nothing to do with kiosk pricing. Price/offer schema now lives
+// in app/page.tsx (the only page actually about the S1). If it creeps back
+// into the root layout, this fails.
+// ---------------------------------------------------------------------------
+const layoutPath = resolve(repoRoot, "app/layout.tsx");
+if (existsSync(layoutPath)) {
+  const layoutText = readFileSync(layoutPath, "utf8");
+  const jsonLdM = layoutText.match(/const jsonLd = \{([\s\S]*?)\n\};/);
+  if (jsonLdM) {
+    const priceHit = /\b(?:lowPrice|highPrice|"price"|offers\s*:)/.test(jsonLdM[1]);
+    if (priceHit) {
+      fail(`app/layout.tsx's sitewide JSON-LD contains a price/offers field — this renders on every PSEO page. Move it to app/page.tsx instead.`);
+    } else {
+      ok("app/layout.tsx's sitewide JSON-LD carries no price/offers field");
+    }
+  } else {
+    ok("app/layout.tsx has no top-level jsonLd const (nothing to check)");
+  }
+} else {
+  fail("app/layout.tsx not found");
+}
 
 // ---------------------------------------------------------------------------
 // 3b-4b: AREA content quality.
@@ -306,7 +396,7 @@ const areaBlocks = areasText.split("\n  {").slice(1);
 let spreadFails = 0;
 for (const block of areaBlocks) {
   const slugM = block.match(/slug:\s*"([a-z0-9-]+)"/);
-  if (!slugM || !/presence:\s*"live"/.test(block)) continue;
+  if (!slugM || !/presence:\s*"(?:live|served)"/.test(block)) continue;
   const lats = Array.from(block.matchAll(/lat:\s*([\d.]+)/g)).map((m) => Number(m[1]));
   const lngs = Array.from(block.matchAll(/lng:\s*([\d.]+)/g)).map((m) => Number(m[1]));
   if (lats.length < 3) continue;
@@ -332,7 +422,7 @@ if (spreadFails === 0) {
 let countMismatches = 0;
 for (const block of areaBlocks) {
   const slugM = block.match(/slug:\s*"([a-z0-9-]+)"/);
-  if (!slugM || !/presence:\s*"live"/.test(block)) continue;
+  if (!slugM || !/presence:\s*"(?:live|served)"/.test(block)) continue;
   const introM = block.match(/intro:\s*"((?:[^"\\]|\\.)*)"/);
   if (!introM) continue;
   const countM = introM[1].match(/^(\d+) verified xerox and print shops?\b/);

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run verify:pseo && next build",
     "start": "next start",
     "lint": "next lint",
     "verify:pseo": "node scripts/verify/pseo.js"
