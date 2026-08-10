@@ -2,29 +2,40 @@
 """
 LLM audit pass on the cleaned shop dataset.
 
-Heuristic cleaning (clean_shops.py) gets us from ~1573 -> ~1138 by
-removing obvious non-xerox shops (malls, banks, hotels, bus stops).
-The remaining 1138 include some borderline cases: "Xerox & Gift Shop",
-"Click Corner", "Max Cyber Cafe" (filtered), "DJ Enterprises" etc.
-that the heuristic can't reliably classify.
+Heuristic cleaning (clean_shops.py) gets us from ~1573 -> ~1158 by
+removing obvious non-xerox shops (malls, banks, hotels, bus stops) via
+title-keyword and category rules. This script goes further: it reads
+each listing's FULL category list and real customer review text (not
+just name + one category) and asks an LLM to make a genuine judgment
+call rather than a rule match. It catches what keyword/category rules
+structurally cannot — e.g. a generically-named shop ("Sri Enterprises")
+whose reviews describe getting documents printed there, or a
+print-keyword title that reviews reveal is actually unrelated (a
+t-shirt printing shop, not a document/xerox shop).
 
-This script asks an LLM to make a binary call on each entry: is this
-a real xerox/print shop a customer could walk into and get a document
-printed? Outputs shops-llm-verified.jsonl with only the YES entries.
+Policy: lean permissive. Default to YES unless something actively
+contradicts a print service (reviews/category clearly describe an
+unrelated business with no print signal anywhere). The heuristic
+cleaner already removed the structurally-impossible cases; this pass
+exists to catch genuine misclassifications, not to re-litigate every
+borderline case the heuristic already let through for good reason
+(see clean_shops.py's SOFT_NEG_CATS — small shops legitimately
+combine xerox with side businesses).
 
-Reads from: scripts/scraper/data/shops-clean.jsonl
+Reads from: scripts/scraper/data/results-<city>.json (raw scrape —
+            needed for review text, which shops-clean.jsonl doesn't
+            carry) joined against shops-clean.jsonl by place_id/cid so
+            only heuristic-approved records reach the LLM pass.
 Writes to:  scripts/clean/data/shops-llm-verified.jsonl
 Cache:      scripts/clean/data/llm-audit-cache.json (so re-runs skip
             already-judged entries when shops-clean.jsonl changes)
 
-Concurrency: 16 parallel requests. 1138 entries * ~0.4s each -> ~30s
-              total wall clock. Cost: ~$0.10 with M2.5-highspeed.
-
 Usage:
-  python scripts/clean/llm_audit_shops.py            # full run
-  python scripts/clean/llm_audit_shops.py --limit 50  # smoke test
+  python scripts/clean/llm_audit_shops.py                      # Bengaluru, full run
+  python scripts/clean/llm_audit_shops.py --city hyderabad      # another city
+  python scripts/clean/llm_audit_shops.py --limit 50            # smoke test
   python scripts/clean/llm_audit_shops.py --concurrency 4
-  python scripts/clean/llm_audit_shops.py --report    # summarise cache
+  python scripts/clean/llm_audit_shops.py --report              # summarise cache
 """
 import argparse
 import asyncio
@@ -36,44 +47,87 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PARENT_DIR = SCRIPT_DIR.parent.parent
-IN_SHOP = PARENT_DIR / "scripts" / "scraper" / "data" / "shops-clean.jsonl"
+SCRAPER_DATA = PARENT_DIR / "scripts" / "scraper" / "data"
+CLEAN_FILE_DEFAULT = SCRAPER_DATA / "shops-clean.jsonl"
 OUT_VERIFIED = SCRIPT_DIR / "data" / "shops-llm-verified.jsonl"
 CACHE_FILE = SCRIPT_DIR / "data" / "llm-audit-cache.json"
+
+# City slug -> raw scrape file, clean file. Mirrors scripts/scraper/cities/.
+CITY_FILES = {
+    "bengaluru": (SCRAPER_DATA / "results-77areas.json", SCRAPER_DATA / "shops-clean.jsonl"),
+    "hyderabad": (SCRAPER_DATA / "results-hyderabad.json", SCRAPER_DATA / "shops-clean-hyderabad.jsonl"),
+}
 
 # Anthropic-compatible endpoint. The default values match ZAI's settings
 # (api.minimax.io/anthropic -> Proxied Anthropic API). Override via
 # env if you proxy elsewhere.
 API_BASE = os.environ.get("ANTHROPIC_BASE_URL", "https://api.minimax.io/anthropic").rstrip("/")
 API_KEY = os.environ.get("ANTHROPIC_AUTH_TOKEN") or os.environ.get("ANTHROPIC_API_KEY")
-MODEL = os.environ.get("LLM_AUDIT_MODEL", "MiniMax-M3")
+# M2.7, not M3: M3 emits a `thinking` block before answering, which burned
+# through the old max_tokens budget before ever reaching YES/NO — the root
+# cause of a prior 0-reject run that looked clean but never actually judged
+# anything (see max_tokens comment in classify_one). M2.7 answers directly.
+MODEL = os.environ.get("LLM_AUDIT_MODEL", "MiniMax-M2.7")
 
-# Conservative prompt: only flag NO if it's clearly not a xerox shop.
-# YES-by-default for any shop where xerox/print is plausibly offered.
-PROMPT_TEMPLATE = """You are auditing Google Maps listings for a Bangalore xerox/print shop directory. We have already filtered out obvious non-shops (malls, banks, hotels, bus stops, etc.). Your job is to make a binary call on borderline cases.
+PROMPT_TEMPLATE = """You are auditing Google Maps listings for a xerox/print shop directory. A heuristic filter already removed obvious non-shops (malls, banks, hotels, bus stops, pure travel/insurance agencies with no print signal). Your job is to catch what that keyword-and-category filter cannot: read the actual review text and make a genuine judgment call.
 
 Listing:
   Name: {name}
-  Category: {category}
+  Categories (all, as tagged by Google): {categories}
   Address: {address}
+  Customer review excerpts (if any): {reviews}
 
 Question: Is this a real xerox / print / photocopy shop where a customer could walk in and get a document printed (B&W, colour, binding, lamination, scanning, etc.)?
 
-Answer YES if the shop plausibly offers xerox/print services, even if it also sells other things (stationery, gifts, mobile recharge, internet, etc.).
+Lean permissive: default to YES if the shop plausibly offers xerox/print services, even alongside other things (stationery, gifts, mobile recharge, courier, travel booking, insurance, etc. — small shops routinely combine several services). A generic name with no obvious print category is still YES if reviews mention printing/xerox/photocopy/binding/scanning.
 
-Answer NO only if the shop is clearly something else entirely (e.g. a restaurant, salon, hardware store, mobile-only shop, gift shop, etc.) with no plausible xerox/print service.
+Answer NO only when something actively CONTRADICTS a print service — reviews or categories clearly describe an unrelated business (e.g. reviews are all about haircuts, food, or vehicle repair) with no print signal anywhere in the listing.
 
 Respond with exactly two lines:
   YES|NO
-  one-sentence reason
+  one-sentence reason citing what you saw (or didn't see) in the reviews/categories
 """
 
 
-async def classify_one(rec: dict, sem: asyncio.Semaphore, session) -> tuple[bool, str]:
-    """Returns (keep, reason). keep=True if YES."""
+def extract_review_snippets(raw: dict, max_reviews: int = 3, max_chars: int = 120) -> str:
+    """Pull a few short review excerpts from the raw scrape record.
+
+    Google Maps scrapes carry review text under `user_reviews` (list of
+    dicts with a `Description` field). Truncated per-review and capped
+    in count to keep the prompt small — this is a classification signal,
+    not a full review dump.
+    """
+    reviews = raw.get("user_reviews") or []
+    if not isinstance(reviews, list):
+        return "(none)"
+    snippets = []
+    for r in reviews[:max_reviews]:
+        if not isinstance(r, dict):
+            continue
+        text = (r.get("Description") or "").strip()
+        if text:
+            snippets.append(text[:max_chars])
+    if not snippets:
+        about = raw.get("about")
+        if about:
+            return json.dumps(about, ensure_ascii=False)[:300]
+        return "(none)"
+    return " | ".join(snippets)
+
+
+async def classify_one(rec: dict, raw: dict, sem: asyncio.Semaphore, session) -> tuple[bool, str]:
+    """Returns (keep, reason). keep=True if YES.
+
+    rec is the heuristic-cleaned record (normalised field names); raw is
+    the matching raw scrape record, used only for review text/categories
+    the cleaned record doesn't carry.
+    """
+    categories = rec.get("categories") or ([rec["category"]] if rec.get("category") else [])
     prompt = PROMPT_TEMPLATE.format(
         name=rec.get("name", ""),
-        category=rec.get("category") or "(uncategorised)",
+        categories=", ".join(c for c in categories if c) or "(uncategorised)",
         address=rec.get("address", ""),
+        reviews=extract_review_snippets(raw),
     )
     async with sem:
         try:
@@ -133,20 +187,38 @@ def save_cache(cache: dict) -> None:
     CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2))
 
 
+def load_raw_by_id(raw_file: Path) -> dict:
+    """Index raw scrape records by place_id (falls back to cid) for the
+    review-text join. Records without either key can't be joined and are
+    skipped — classify_one() degrades to empty reviews for those."""
+    by_id = {}
+    if not raw_file.exists():
+        return by_id
+    with raw_file.open() as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            r = json.loads(line)
+            key = r.get("place_id") or r.get("cid")
+            if key:
+                by_id[str(key)] = r
+    return by_id
+
+
 async def main():
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--city", default="bengaluru", choices=sorted(CITY_FILES),
+                     help="Which city's scrape/clean files to audit")
     ap.add_argument("--limit", type=int, default=0, help="Process only N entries (smoke test)")
-    ap.add_argument("--concurrency", type=int, default=16)
+    ap.add_argument("--concurrency", type=int, default=4,
+                     help="Live testing showed ~30%% empty-response flakiness even at low "
+                          "concurrency on this API; kept modest by default, not for throughput.")
     ap.add_argument("--report", action="store_true", help="Summarise cache and exit")
     ap.add_argument("--rebuild", action="store_true", help="Ignore cache, re-classify all")
     args = ap.parse_args()
 
-    if not API_KEY:
-        print("ERROR: ANTHROPIC_AUTH_TOKEN or ANTHROPIC_API_KEY not set", file=sys.stderr)
-        sys.exit(1)
-    if not IN_SHOP.exists():
-        print(f"ERROR: run scripts/clean/clean_shops.py first to produce {IN_SHOP}", file=sys.stderr)
-        sys.exit(1)
+    raw_file, clean_file = CITY_FILES[args.city]
 
     if args.report:
         cache = load_cache()
@@ -158,9 +230,16 @@ async def main():
         print(f"Cache: {len(cache)} judgments ({yes} YES, {no} NO)")
         return 0
 
+    if not API_KEY:
+        print("ERROR: ANTHROPIC_AUTH_TOKEN or ANTHROPIC_API_KEY not set", file=sys.stderr)
+        sys.exit(1)
+    if not clean_file.exists():
+        print(f"ERROR: run scripts/clean/clean_shops.py first to produce {clean_file}", file=sys.stderr)
+        sys.exit(1)
+
     # Load shop records
     records = []
-    with IN_SHOP.open() as f:
+    with clean_file.open() as f:
         for line in f:
             line = line.strip()
             if not line:
@@ -168,7 +247,10 @@ async def main():
             records.append(json.loads(line))
     if args.limit:
         records = records[: args.limit]
-    print(f"Loaded {len(records)} records from {IN_SHOP.name}", file=sys.stderr)
+    print(f"Loaded {len(records)} records from {clean_file.name}", file=sys.stderr)
+
+    raw_by_id = load_raw_by_id(raw_file)
+    print(f"Loaded {len(raw_by_id)} raw records from {raw_file.name} for review-text join", file=sys.stderr)
 
     cache = {} if args.rebuild else load_cache()
     pending = [r for r in records if str(r.get("placeId")) not in cache]
@@ -184,7 +266,10 @@ async def main():
         sem = asyncio.Semaphore(args.concurrency)
         async with aiohttp.ClientSession() as session:
             start = time.time()
-            tasks = [classify_one(r, sem, session) for r in pending]
+            tasks = [
+                classify_one(r, raw_by_id.get(str(r.get("placeId"))) or raw_by_id.get(str(r.get("cid"))) or {}, sem, session)
+                for r in pending
+            ]
             results = await asyncio.gather(*tasks)
             errored = 0
             for r, (keep, reason) in zip(pending, results):
