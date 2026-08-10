@@ -4,7 +4,7 @@ import {
   getAllCitySlugs,
   getCity,
   getCollegesInCity,
-  getAllAreasInCity,
+  getAreasInCity,
   getNeighborCities,
   getCityFaqs,
 } from "@/content/pseo/seo";
@@ -48,7 +48,7 @@ export default async function CityPage({
   if (!city) notFound();
 
   const colleges = getCollegesInCity(params.city);
-  const areas = getAllAreasInCity(params.city);
+  const areas = getAreasInCity(params.city);
   const neighbors = getNeighborCities(params.city);
   const faqs = getCityFaqs(params.city);
 
