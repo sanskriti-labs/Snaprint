@@ -323,6 +323,22 @@ if (totalLive === 0) {
 }
 
 // ---------------------------------------------------------------------------
+// 15: every live/served city has >= 1 shop rolled up from its areas
+// (content/pseo/shops.ts:getShopsInCity). A city with none renders its
+// pSEO page with no shop cards and no Google Maps links — this is how
+// instant-print/[city] shipped with zero Maps links even after hundreds
+// were added at the area level: the city page never read area data at all.
+// ---------------------------------------------------------------------------
+for (const c of liveCities) {
+  const cityAreas = areas.filter((a) => a.city === c.slug);
+  if (cityAreas.length === 0) {
+    fail(`live city "${c.slug}" has 0 published areas — its page will show 0 shops and no Maps links`);
+  } else {
+    ok(`live city "${c.slug}" has ${cityAreas.length} published areas feeding its shops list`);
+  }
+}
+
+// ---------------------------------------------------------------------------
 // 8: llms.txt URL parity
 // ---------------------------------------------------------------------------
 if (!existsSync(llmsPath)) {

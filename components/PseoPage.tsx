@@ -11,9 +11,9 @@ import type { City, College, Area, LiveLocation } from "@/content/pseo/types";
 import type { Faq } from "@/content/pseo/faqs";
 
 type Props =
-  | { kind: "city"; city: City }
-  | { kind: "college"; college: College; liveLocations?: LiveLocation[] }
-  | { kind: "area"; area: Area; liveLocations?: LiveLocation[] };
+  | { kind: "city"; city: City; liveLocations?: LiveLocation[] }
+  | { kind: "college"; college: College; liveLocations?: LiveLocation[]; cityName: string }
+  | { kind: "area"; area: Area; liveLocations?: LiveLocation[]; cityName: string };
 
 type CrossLinks = {
   parentCity?: City;
@@ -33,21 +33,25 @@ export default function PseoPage({
   crossLinks?: CrossLinks;
   jsonLd?: object;
 }) {
-  const nearbyLocations =
-    props.kind === "area" || props.kind === "college"
-      ? props.liveLocations ?? []
-      : [];
+  const nearbyLocations = props.liveLocations ?? [];
 
   // Resolved display name + preposition for the ShopsList heading.
-  // "in {area}" reads naturally for neighbourhoods; "near {college}" reads
-  // naturally for institutions. Centralising this so the heading stays
-  // grammatical across both kinds.
+  // "in {area}" reads naturally for neighbourhoods and cities; "near
+  // {college}" reads naturally for institutions. Centralising this so the
+  // heading stays grammatical across all three kinds.
   const shopsListTarget =
     props.kind === "area"
       ? { name: props.area.name, preposition: "in" as const }
       : props.kind === "college"
         ? { name: props.college.shortName ?? props.college.name, preposition: "near" as const }
-        : null;
+        : { name: props.city.name, preposition: "in" as const };
+
+  // City name for the "View on Maps" search query. City pages are their own
+  // city; area/college pages pass it explicitly (resolved via getCityName,
+  // which — unlike the presence-gated parentCity cross-link — always
+  // returns a name even for a college/area whose parent city isn't
+  // published yet as its own pSEO page).
+  const cityName = props.kind === "city" ? props.city.name : props.cityName;
 
   return (
     <>
@@ -81,6 +85,7 @@ export default function PseoPage({
           <PseoShopsList
             locations={nearbyLocations}
             displayName={shopsListTarget.name}
+            cityName={cityName}
             preposition={shopsListTarget.preposition}
           />
         )}

@@ -105,6 +105,7 @@ function loadShops(): LiveLocation[] {
 // ---------------------------------------------------------------------------
 
 import collegesData from "./colleges";
+import areasData from "./areas";
 
 /**
  * Returns all xerox shops within `radiusKm` of the college's campus
@@ -130,6 +131,34 @@ export function getShopsNearCollege(
   // Strip the ephemeral __d field before returning so callers see the
   // typed LiveLocation shape.
   return out.map(({ __d, ...rest }) => rest);
+}
+
+/**
+ * Rolls up shops for a city page from its published areas' liveLocations —
+ * the same per-area data the scraper pipeline (process_areas.py) already
+ * populates, so a new city gets Maps links for free as soon as its areas
+ * do, no separate city-level scrape needed. Deduped by placeId (falls back
+ * to name+address for records without one), sorted by rating desc, capped
+ * so the city page doesn't render hundreds of cards.
+ */
+export function getShopsInCity(citySlug: Slug, limit = 24): LiveLocation[] {
+  const areas = areasData.filter(
+    (a) =>
+      a.city === citySlug &&
+      (a.presence === "live" || a.presence === "served")
+  );
+  const seen = new Set<string>();
+  const out: LiveLocation[] = [];
+  for (const area of areas) {
+    for (const shop of area.liveLocations ?? []) {
+      const key = shop.placeId ?? `${shop.name}|${shop.address}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push(shop);
+    }
+  }
+  out.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+  return out.slice(0, limit);
 }
 
 /**

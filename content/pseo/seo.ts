@@ -4,14 +4,14 @@ import areasData from "./areas";
 import type { City, College, Area, Slug, Presence } from "./types";
 import { getCityFaqs, getLocationFaqs } from "./faqs";
 import type { Faq } from "./faqs";
-import { getShopsNearCollege } from "./shops";
+import { getShopsNearCollege, getShopsInCity } from "./shops";
 
 export type { City, College, Area };
 export { getCityFaqs, getLocationFaqs };
 export type { Faq };
 
 // Re-exported so the page render path can import everything from "@/content/pseo/seo".
-export { getShopsNearCollege } from "./shops";
+export { getShopsNearCollege, getShopsInCity } from "./shops";
 
 // ---------------------------------------------------------------------------
 // Published selectors (used by sitemap, generateStaticParams)
@@ -53,8 +53,17 @@ export function getAllAreaSlugs(): Slug[] {
 export function getCity(slug: Slug): City | null {
   const c = citiesData.find((c) => c.slug === slug);
   if (!c) return null;
-  if (isPublished(c.presence)) return c;
-  return null;
+  if (!isPublished(c.presence)) return null;
+  // Guard rail: a published city should have shops rolled up from at least
+  // one of its areas (see getShopsInCity). Warn, don't throw: the operator
+  // may be launching the city hub ahead of the area pages going live.
+  if (getShopsInCity(c.slug).length === 0) {
+    console.warn(
+      `[pseo] city "${c.slug}" is published but has 0 shops across its areas. ` +
+        `Verify area data or set presence: "planned".`
+    );
+  }
+  return c;
 }
 
 /**

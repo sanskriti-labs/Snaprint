@@ -4,6 +4,7 @@ import type { LiveLocation } from "@/content/pseo/types";
 type Props = {
   locations: LiveLocation[];
   displayName: string;
+  cityName: string;
   preposition?: "in" | "near";
 };
 
@@ -38,7 +39,7 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export default function PseoShopsList({ locations, displayName, preposition = "in" }: Props) {
+export default function PseoShopsList({ locations, displayName, cityName, preposition = "in" }: Props) {
   if (!locations || locations.length === 0) return null;
 
   return (
@@ -53,7 +54,9 @@ export default function PseoShopsList({ locations, displayName, preposition = "i
           </p>
         </div>
         <a
-          href={`https://www.google.com/maps/search/xerox+shops+${preposition}+${encodeURIComponent(displayName)}+Bangalore`}
+          href={`https://www.google.com/maps/search/xerox+shops+${preposition}+${encodeURIComponent(
+            displayName === cityName ? displayName : `${displayName} ${cityName}`
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
           className="shrink-0 rounded-full border border-[#E8E6E0] bg-white px-4 py-1.5 font-body text-[12px] text-[#6B6B66] transition-colors hover:border-[#111110] hover:text-[#111110]"
