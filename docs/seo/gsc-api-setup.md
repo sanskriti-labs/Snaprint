@@ -76,7 +76,7 @@ After adding, **redeploy** so the Vercel function bundle sees the new env vars.
 
 This fires `app/api/cron/gsc-export/route.ts` once a day at 03:00 UTC (08:30 IST).
 
-The route spawns `node scripts/seo/gsc-export.mjs` server-side. The script runs to completion, writes `reports/gsc-YYYY-MM-DD.json` to disk, and the route returns `{ ok: true, exitCode: 0 }`.
+The route spawns `node scripts/seo/gsc-export.mjs` server-side. On Vercel, the only writable path is `/tmp`, which doesn't survive past the invocation — so the script also prints the full report as a `GSC_REPORT_JSON=...` line on stdout, and the route parses that out and returns it as `{ ok: true, exitCode: 0, report: {...} }`. Locally (or anywhere `VERCEL` isn't set), the script writes to the repo's gitignored `reports/gsc-YYYY-MM-DD.json` as well.
 
 Set the cron secret env var:
 
@@ -99,7 +99,7 @@ After deploying:
 
 1. Wait for the next 03:00 UTC tick (or trigger manually via **Project → Settings → Crons → Run now** if you have a Hobby plan with that feature).
 2. Check the deployment logs for `[gsc-export] OK — fetched N rows`.
-3. Check that `reports/gsc-2026-08-12.json` (or whatever today's date is) was written. This file is gitignored — pull it from the deployment artifact or Vercel logs.
+3. Hit the route's response body directly (or check the function's log output) — it includes the full report under `report`. There's no deployment artifact to pull; `/tmp` on Vercel doesn't persist past the invocation.
 
 ---
 
