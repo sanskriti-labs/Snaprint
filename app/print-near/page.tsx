@@ -34,33 +34,6 @@ type AreaGroup = {
   colleges: ReturnType<typeof getAllLiveColleges>;
 };
 
-// CollectionPage + BreadcrumbList only — see app/instant-print/page.tsx for
-// why Product/FAQ schema stays off directory hub pages.
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CollectionPage",
-      "@id": `${SITE_URL}/print-near#collection`,
-      url: `${SITE_URL}/print-near`,
-      name: "Print and xerox shops near you",
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "All locations",
-          item: `${SITE_URL}/print-near`,
-        },
-      ],
-    },
-  ],
-};
-
 export default function PrintNearIndex() {
   const allAreas = getAllLiveAreas();
   const allColleges = getAllLiveColleges();
@@ -99,6 +72,63 @@ export default function PrintNearIndex() {
   }
 
   const totalLive = allAreas.length + allColleges.length;
+
+  // CollectionPage + BreadcrumbList + FAQPage — no Product/kiosk-usage FAQ
+  // here. See app/instant-print/page.tsx for why: kiosk pricing/FAQ on
+  // directory hub pages leaked into snippets for unrelated shop pages.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${SITE_URL}/print-near#collection`,
+        url: `${SITE_URL}/print-near`,
+        name: "Print and xerox shops near you",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "All locations",
+            item: `${SITE_URL}/print-near`,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do I find a print shop near my college or neighbourhood?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Scroll to your city, then pick your college or neighbourhood from the list. Each listing links to the partner xerox shop's exact location, hours, and services.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How many colleges and neighbourhoods are covered?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `This page currently lists ${allColleges.length} ${allColleges.length === 1 ? "college" : "colleges"} and ${allAreas.length} ${allAreas.length === 1 ? "neighbourhood" : "neighbourhoods"} with live partner shops. Coverage expands every week.`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What if my area isn't listed yet?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Email snaprints@sanskritilabs.in to request coverage in your area — new locations are added as Snaprint kiosks go live nearby.",
+            },
+          },
+        ],
+      },
+    ],
+  };
 
   return (
     <>

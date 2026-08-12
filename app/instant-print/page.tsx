@@ -28,35 +28,6 @@ export const metadata: Metadata = {
   },
 };
 
-// CollectionPage + BreadcrumbList only — no Product/FAQ here. Those schemas
-// are scoped to app/page.tsx on purpose (see comment there): adding kiosk
-// pricing/FAQ to directory hub pages leaked into search snippets for pages
-// about unrelated third-party shops.
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CollectionPage",
-      "@id": `${SITE_URL}/instant-print#collection`,
-      url: `${SITE_URL}/instant-print`,
-      name: "Print and xerox shops across India",
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "All locations",
-          item: `${SITE_URL}/instant-print`,
-        },
-      ],
-    },
-  ],
-};
-
 export default function InstantPrintIndex() {
   const cities = getAllLiveCities();
   const colleges = getAllLiveColleges();
@@ -67,6 +38,65 @@ export default function InstantPrintIndex() {
     (acc, a) => acc + (a.liveLocations?.length ?? 0),
     0,
   );
+
+  // CollectionPage + BreadcrumbList + FAQPage — no Product/kiosk-usage FAQ
+  // here. Those schemas are scoped to app/page.tsx on purpose (see comment
+  // there): adding kiosk pricing/FAQ to directory hub pages leaked into
+  // search snippets for pages about unrelated third-party shops. These FAQs
+  // are about the directory itself, so they stay accurate as coverage grows.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${SITE_URL}/instant-print#collection`,
+        url: `${SITE_URL}/instant-print`,
+        name: "Print and xerox shops across India",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "All locations",
+            item: `${SITE_URL}/instant-print`,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How many cities does Snaprint cover?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `Snaprint currently lists ${cities.length || 1} live ${cities.length === 1 ? "city" : "cities"} with ${areas.length} neighbourhoods and ${colleges.length} colleges, covering ${totalShops}+ partner xerox shops. New areas are added every week.`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How do I find a print shop near me?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Pick your city, then browse by neighbourhood or college. Each listing shows the partner xerox shop's exact location, hours, and the documents customers most often print there.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is this list of shops updated regularly?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Listings are updated as Snaprint kiosks go live in new shops, so the counts on this page reflect the current live network, not a static directory.",
+            },
+          },
+        ],
+      },
+    ],
+  };
 
   return (
     <>
