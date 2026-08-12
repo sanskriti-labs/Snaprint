@@ -57,6 +57,9 @@ export default function InstantPrintIndex() {
         "@id": `${SITE_URL}/instant-print#collection`,
         url: `${SITE_URL}/instant-print`,
         name: "Print and xerox shops across India",
+        // Statically generated at build time from the live entity list —
+        // this is the real build date, refreshed on every rebuild.
+        dateModified: new Date().toISOString().slice(0, 10),
         isPartOf: { "@id": `${SITE_URL}/#website` },
       },
       {

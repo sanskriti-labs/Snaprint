@@ -89,6 +89,9 @@ export default function PrintNearIndex() {
         "@id": `${SITE_URL}/print-near#collection`,
         url: `${SITE_URL}/print-near`,
         name: "Print and xerox shops near you",
+        // Statically generated at build time from the live entity list —
+        // this is the real build date, refreshed on every rebuild.
+        dateModified: new Date().toISOString().slice(0, 10),
         isPartOf: { "@id": `${SITE_URL}/#website` },
       },
       {

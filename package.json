@@ -7,7 +7,7 @@
     "predev": "pnpm run build:bodies || true",
     "dev": "next dev",
     "build": "pnpm run build:bodies && pnpm run verify:pseo && next build",
-    "postbuild": "pnpm run verify:meta && pnpm run verify:schema",
+    "postbuild": "pnpm run verify:meta && pnpm run verify:schema && pnpm run verify:seo-tags",
     "start": "next start",
     "lint": "next lint",
     "prepare": "pnpm run build:bodies || true",
@@ -15,6 +15,7 @@
     "verify:pseo": "node scripts/verify/pseo.js",
     "verify:meta": "node scripts/verify/meta.js",
     "verify:schema": "node scripts/verify/schema.js",
+    "verify:seo-tags": "node scripts/verify/seo-tags.js",
     "generate:bodies": "node scripts/generate-bodies.mjs",
     "generate:priority": "node scripts/seo/run-priority-api.mjs",
     "generate:faq-tails": "node scripts/seo/generate-faq-tails.mjs"
