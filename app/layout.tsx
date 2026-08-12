@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     template: "%s · Snaprint",
   },
   description:
-    "Snaprint turns your xerox shop into a 24/7 remote printing hub. Students scan, pay, and collect — no queue, no wait. Built for Bengaluru shop owners by Sanskriti Labs.",
+    "Snaprint turns your xerox shop into a 24/7 remote printing hub. Scan, pay, and collect — no queue, no wait. Built for Bengaluru shop owners.",
   keywords: ["print kiosk", "xerox shop", "remote printing", "Bengaluru", "Snaprint", "instant print", "smart kiosk", "self-service printing"],
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {

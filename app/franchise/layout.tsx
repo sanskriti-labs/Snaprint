@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const title = "Snaprint Franchise — Become an S1 Kiosk Operator in India [2026]";
+const title = "Snaprint Franchise — Become an S1 Kiosk Operator [2026]";
 const description =
   "Become a Snaprint S1 print kiosk operator. ₹3–3.5L investment, 24/7 unmanned operation, live revenue dashboard. Currently in Bengaluru.";
 

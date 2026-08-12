@@ -7,13 +7,16 @@
     "predev": "pnpm run build:bodies || true",
     "dev": "next dev",
     "build": "pnpm run build:bodies && pnpm run verify:pseo && next build",
+    "postbuild": "pnpm run verify:meta",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "node scripts/build-bodies-ts.mjs || true",
-    "build:bodies": "node scripts/build-bodies-ts.mjs",
+    "prepare": "pnpm run build:bodies || true",
+    "build:bodies": "node scripts/build-bodies-ts.mjs && node scripts/build-faq-tails-ts.mjs",
     "verify:pseo": "node scripts/verify/pseo.js",
+    "verify:meta": "node scripts/verify/meta.js",
     "generate:bodies": "node scripts/generate-bodies.mjs",
-    "generate:priority": "node scripts/seo/run-priority-api.mjs"
+    "generate:priority": "node scripts/seo/run-priority-api.mjs",
+    "generate:faq-tails": "node scripts/seo/generate-faq-tails.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

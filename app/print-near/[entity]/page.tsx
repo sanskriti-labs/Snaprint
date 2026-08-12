@@ -15,6 +15,7 @@ import {
   getCityName,
   getCityState,
 } from "@/content/pseo/seo";
+import { sharedFaqs } from "@/content/pseo/faqs";
 import PseoPage from "@/components/PseoPage";
 
 const SITE_URL = "https://snaprints.com";
@@ -36,22 +37,20 @@ export function generateMetadata({
     // Compute shop count up front so the title and description can both
     // use the same number — keeps the SERP entry consistent.
     const count = getShopsNearCollege(college.slug).length;
+    // No "· Snaprint" suffix here — the root layout's title template
+    // (app/layout.tsx) already appends it to every page, so adding it
+    // here doubles it in the rendered <title>.
     const title =
       count > 0
-        ? `${count} Xerox Shops Near ${name}, ${cityName} [2026] · Snaprint`
-        : `Print Shops Near ${name}, ${cityName} [2026] · Snaprint`;
-    // Description target 150–160 chars; include count, key service, and a
+        ? `${count} Xerox Shops Near ${name}, ${cityName} [2026]`
+        : `Print Shops Near ${name}, ${cityName} [2026]`;
+    // Description target 150–165 chars; include count, key service, and a
     // soft call-to-action. Falls back to a generic blurb when count is 0.
     const description =
       count > 0
-        ? `${count} verified xerox and print shops within 1.5 km of ${name}, ${cityName}. B&W from ₹3, colour prints, spiral binding, lamination, scan, ID photos. Open hours vary — call ahead.`
+        ? `${count} verified xerox and print shops within 1.5 km of ${name}, ${cityName}. B&W from ₹3, colour prints, binding, scan, ID photos. Call ahead for hours.`
         : `Find print and xerox shops near ${name}, ${cityName}. B&W and colour prints, binding, lamination and scanning. Open hours vary — call ahead.`;
     return {
-      // No "— Snaprint" suffix: the root layout's title template already
-      // appends "· Snaprint". The literal "· Snaprint" we add here ends up
-      // rendered as the title-template suffix anyway; keeping it makes the
-      // string readable in code and in OG/email previews where the template
-      // doesn't apply.
       title,
       description,
       keywords: college.keywords,
@@ -70,10 +69,14 @@ export function generateMetadata({
   if (area) {
     const cityName = getCityName(area.city);
     const count = area.liveLocations?.length ?? 0;
+    // No "· Snaprint" suffix — see the college branch above. Drop the
+    // "— Open Now" tail on long area names so the title (plus the
+    // layout's "· Snaprint" suffix) stays under ~70 chars.
+    const shortTitle = `${count} Xerox Shops in ${area.name}, ${cityName}`;
     const title =
       count > 0
-        ? `${count} Xerox Shops in ${area.name}, ${cityName} — Open Now · Snaprint`
-        : `Print Shops in ${area.name}, ${cityName} · Snaprint`;
+        ? (shortTitle.length <= 48 ? `${shortTitle} — Open Now` : shortTitle)
+        : `Print Shops in ${area.name}, ${cityName}`;
     const description =
       count > 0
         ? `${count} verified print and xerox shops in ${area.name}, ${cityName}. B&W from ₹3, colour prints, spiral binding, scan, ID photos. Open hours vary — call ahead.`
@@ -110,7 +113,7 @@ export default async function EntityPage({
     const parentCity = getCity(college.city);
     const siblings = getCollegesInCity(college.city);
     const neighbors = getNeighborCities(college.city);
-    const faqs = getLocationFaqs(params.entity, college.city);
+    const faqs = getLocationFaqs("college", params.entity);
     const nearbyShops = getShopsNearCollege(college.slug);
 
     const jsonLd = {
@@ -201,21 +204,31 @@ export default async function EntityPage({
             { "@type": "ListItem", position: 3, name: college.name, item: `${SITE_URL}/print-near/${college.slug}` },
           ],
         },
-        // FAQPage
-        {
-          "@type": "FAQPage",
-          mainEntity: faqs.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
-        },
+        // FAQPage — only when this entity has a local FAQ tail beyond the
+        // shared boilerplate. sharedFaqs alone is identical on every one of
+        // 145 pages; emitting FAQPage schema for content that isn't unique
+        // to this page teaches search engines the page has less to say than
+        // the page count suggests. The visible FAQ accordion (below, via
+        // `faqs={faqs}`) still shows the shared Qs — this only gates the
+        // structured-data node.
+        ...(faqs.length > sharedFaqs.length
+          ? [
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
+              },
+            ]
+          : []),
       ],
     };
 
     return (
       <PseoPage
-        props={{ kind: "college", college, liveLocations: nearbyShops }}
+        props={{ kind: "college", college, liveLocations: nearbyShops, cityName: getCityName(college.city) }}
         faqs={faqs}
         crossLinks={{ parentCity: parentCity ?? undefined, colleges: siblings, neighborCities: neighbors }}
         jsonLd={jsonLd}
@@ -228,7 +241,7 @@ export default async function EntityPage({
     const collegesInArea = getCollegesNearArea(area.slug);
     const areasInCity = getAreasInCity(area.city);
     const neighbors = getNeighborCities(area.city);
-    const faqs = getLocationFaqs(params.entity, area.city);
+    const faqs = getLocationFaqs("area", params.entity);
 
     const areaLocations = area.liveLocations ?? [];
     // Fallback anchor for the parent node's address/geo/telephone — only
@@ -324,21 +337,26 @@ export default async function EntityPage({
             { "@type": "ListItem", position: 3, name: area.name, item: `${SITE_URL}/print-near/${area.slug}` },
           ],
         },
-        // FAQPage
-        {
-          "@type": "FAQPage",
-          mainEntity: faqs.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
-        },
+        // FAQPage — only when this entity has a local FAQ tail; see the
+        // college branch above for why.
+        ...(faqs.length > sharedFaqs.length
+          ? [
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.q,
+                  acceptedAnswer: { "@type": "Answer", text: f.a },
+                })),
+              },
+            ]
+          : []),
       ],
     };
 
     return (
       <PseoPage
-        props={{ kind: "area", area, liveLocations: area.liveLocations ?? [] }}
+        props={{ kind: "area", area, liveLocations: area.liveLocations ?? [], cityName: getCityName(area.city) }}
         faqs={faqs}
         crossLinks={{ parentCity: parentCity ?? undefined, colleges: collegesInArea, areas: areasInCity, neighborCities: neighbors }}
         jsonLd={jsonLd}

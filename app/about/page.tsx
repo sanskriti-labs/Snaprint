@@ -8,7 +8,7 @@ const SITE_URL = "https://snaprints.com";
 export const metadata: Metadata = {
   title: "About Snaprint — Sanskriti Labs, Bengaluru",
   description:
-    "Snaprint is a self-service print kiosk built by Sanskriti Labs in Bengaluru, India. We turn existing xerox shops into 24/7 print points for students, job seekers, and small businesses.",
+    "Snaprint is a self-service print kiosk built by Sanskriti Labs in Bengaluru. We turn xerox shops into 24/7 print points for students and small businesses.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Snaprint — Sanskriti Labs",

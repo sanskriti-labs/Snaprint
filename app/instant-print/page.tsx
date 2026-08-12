@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   // Layout template appends "· Snaprint" — no explicit suffix here.
   title: "Print and xerox shops across India",
   description:
-    "Browse print and xerox shop directories city by city — find instant print, photocopy, scan, and ID services near you. Live and coming-soon cities, colleges, and neighbourhoods across India.",
+    "Browse print and xerox shop directories city by city — instant print, photocopy, scan, and ID services near you across India.",
   alternates: { canonical: "/instant-print" },
   openGraph: {
     title: "Print and xerox shops across India — Snaprint",
