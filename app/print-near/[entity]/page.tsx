@@ -14,6 +14,7 @@ import {
   getShopsNearCollege,
   getCityName,
   getCityState,
+  buildBreadcrumbList,
 } from "@/content/pseo/seo";
 import { sharedFaqs } from "@/content/pseo/faqs";
 import PseoPage from "@/components/PseoPage";
@@ -195,15 +196,13 @@ export default async function EntityPage({
               parentOrganization: { "@id": `${SITE_URL}/#organization` },
             }))
           : []),
-        // BreadcrumbList
-        {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-            { "@type": "ListItem", position: 2, name: "Print Near You", item: `${SITE_URL}/print-near` },
-            { "@type": "ListItem", position: 3, name: college.name, item: `${SITE_URL}/print-near/${college.slug}` },
-          ],
-        },
+        // BreadcrumbList — inserts the parent city crumb once it's published
+        buildBreadcrumbList(
+          SITE_URL,
+          { name: "Print Near You", path: "/print-near" },
+          { name: college.name, path: `/print-near/${college.slug}` },
+          college.city
+        ),
         // FAQPage — only when this entity has a local FAQ tail beyond the
         // shared boilerplate. sharedFaqs alone is identical on every one of
         // 145 pages; emitting FAQPage schema for content that isn't unique
@@ -328,15 +327,13 @@ export default async function EntityPage({
               parentOrganization: { "@id": `${SITE_URL}/#organization` },
             }))
           : []),
-        // BreadcrumbList
-        {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-            { "@type": "ListItem", position: 2, name: "Print Near You", item: `${SITE_URL}/print-near` },
-            { "@type": "ListItem", position: 3, name: area.name, item: `${SITE_URL}/print-near/${area.slug}` },
-          ],
-        },
+        // BreadcrumbList — inserts the parent city crumb once it's published
+        buildBreadcrumbList(
+          SITE_URL,
+          { name: "Print Near You", path: "/print-near" },
+          { name: area.name, path: `/print-near/${area.slug}` },
+          area.city
+        ),
         // FAQPage — only when this entity has a local FAQ tail; see the
         // college branch above for why.
         ...(faqs.length > sharedFaqs.length

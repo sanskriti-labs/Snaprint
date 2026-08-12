@@ -147,6 +147,48 @@ export function getNeighborCities(citySlug: Slug): City[] {
 }
 
 // ---------------------------------------------------------------------------
+// Structured data — BreadcrumbList
+// ---------------------------------------------------------------------------
+
+type BreadcrumbHub = { name: string; path: string };
+
+/**
+ * Builds a schema.org BreadcrumbList for an entity page. Inserts the parent
+ * city as its own crumb only when that city actually resolves via getCity()
+ * (i.e. is itself published) — a college/area under a still-`planned` city
+ * (Bengaluru today) keeps the shorter Home > Hub > Entity trail instead of
+ * linking to a page that would 404. Once that city ships, every one of its
+ * entity pages picks up the extra crumb automatically, no per-page edits.
+ */
+export function buildBreadcrumbList(
+  siteUrl: string,
+  hub: BreadcrumbHub,
+  entity: { name: string; path: string },
+  parentCitySlug?: Slug
+) {
+  const items = [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+    { "@type": "ListItem", position: 2, name: hub.name, item: `${siteUrl}${hub.path}` },
+  ];
+  const parentCity = parentCitySlug ? getCity(parentCitySlug) : null;
+  if (parentCity) {
+    items.push({
+      "@type": "ListItem",
+      position: 3,
+      name: parentCity.name,
+      item: `${siteUrl}/instant-print/${parentCity.slug}`,
+    });
+  }
+  items.push({
+    "@type": "ListItem",
+    position: items.length + 1,
+    name: entity.name,
+    item: `${siteUrl}${entity.path}`,
+  });
+  return { "@type": "BreadcrumbList", itemListElement: items };
+}
+
+// ---------------------------------------------------------------------------
 // All published entities (used by Phase 2 index pages)
 // ---------------------------------------------------------------------------
 
