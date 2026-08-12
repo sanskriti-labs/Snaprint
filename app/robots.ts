@@ -20,6 +20,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://snaprints.com/sitemap.xml",
-    host: "https://snaprints.com",
   };
 }
