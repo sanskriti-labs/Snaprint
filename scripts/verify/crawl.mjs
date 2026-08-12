@@ -14,7 +14,9 @@
  *      those sitemap pages also returns 200 — catches a live page linking
  *      to a dead one (the instant-print/[city] -> planned-area bug).
  *   3. No crawled page's JSON-LD contains a price/offers field, except
- *      the homepage (the kiosk price is only supposed to live there).
+ *      "/", "/pricing", and "/franchise" — the only pages actually about
+ *      kiosk/franchise pricing. Catches the price leaking into PSEO shop
+ *      pages via the sitewide layout, not price schema in general.
  */
 const baseUrl = process.argv[2];
 if (!baseUrl) {
@@ -98,9 +100,15 @@ async function main() {
         linkTargets.get(full).add(pageUrl);
       }
 
-      // Price/offer leak check — homepage is allowed to carry it.
-      const isHome = new URL(pageUrl).pathname === "/";
-      if (!isHome) {
+      // Price/offer leak check. Homepage, /pricing, and /franchise are
+      // pages actually about kiosk/franchise pricing — they're supposed
+      // to carry AggregateOffer schema. The regression this guards
+      // against is the S1 kiosk price leaking into PSEO shop pages via
+      // the sitewide layout (see verify:pseo check #14); it's not about
+      // banning price schema everywhere except "/".
+      const path = new URL(pageUrl).pathname;
+      const priceAllowed = path === "/" || path === "/pricing" || path === "/franchise";
+      if (!priceAllowed) {
         const ldMatches = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g) || [];
         for (const block of ldMatches) {
           if (/\b(?:lowPrice|highPrice)\b/.test(block)) {
