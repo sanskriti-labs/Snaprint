@@ -9,6 +9,7 @@ import {
   getCityFaqs,
   getShopsInCity,
 } from "@/content/pseo/seo";
+import { sharedFaqs } from "@/content/pseo/faqs";
 import PseoPage from "@/components/PseoPage";
 
 const SITE_URL = "https://snaprints.com";
@@ -110,6 +111,29 @@ export default async function CityPage({
             }
           : {}),
       },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Instant Print", item: `${SITE_URL}/instant-print` },
+          { "@type": "ListItem", position: 3, name: city.name, item: `${SITE_URL}/instant-print/${city.slug}` },
+        ],
+      },
+      // FAQPage — only when this entity has a local FAQ tail beyond the
+      // shared boilerplate; see the college/area branches in
+      // print-near/[entity]/page.tsx for why.
+      ...(faqs.length > sharedFaqs.length
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 

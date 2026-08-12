@@ -38,7 +38,7 @@
  *       it's actually about (home), not sitewide.
  */
 const { readFileSync, existsSync } = require("node:fs");
-const { resolve } = require("node:path");
+const { resolve, join } = require("node:path");
 
 const SITE_URL = "https://snaprints.com";
 const INTRO_MIN = 80;
@@ -459,6 +459,38 @@ if (countMismatches === 0) {
 // ---------------------------------------------------------------------------
 if (colleges.length > 0) {
   ok(`sitemap will emit ${colleges.length} college URLs`);
+}
+
+// ---------------------------------------------------------------------------
+// 16: every live/served entity has a local FAQ tail file. A missing tail
+// isn't a page break — getLocationFaqs/getCityFaqs fall back to sharedFaqs
+// only — but it means that page never clears the faqs.length >
+// sharedFaqs.length gate, so it never emits FAQPage structured data. This
+// is how one commit shipped tails for only 10 of 145 entities and nothing
+// caught the other 135 silently rendering boilerplate-only pages.
+// ---------------------------------------------------------------------------
+const faqTailsDir = resolve(repoRoot, "content/pseo/faq-tails");
+let missingTails = 0;
+for (const c of liveCities) {
+  if (!existsSync(join(faqTailsDir, `city-${c.slug}.json`))) {
+    fail(`live city "${c.slug}" has no faq-tails/city-${c.slug}.json — page will only show shared boilerplate FAQs`);
+    missingTails++;
+  }
+}
+for (const c of colleges) {
+  if (!existsSync(join(faqTailsDir, `college-${c.slug}.json`))) {
+    fail(`live college "${c.slug}" has no faq-tails/college-${c.slug}.json`);
+    missingTails++;
+  }
+}
+for (const a of areas) {
+  if (!existsSync(join(faqTailsDir, `area-${a.slug}.json`))) {
+    fail(`live area "${a.slug}" has no faq-tails/area-${a.slug}.json`);
+    missingTails++;
+  }
+}
+if (missingTails === 0) {
+  ok(`all ${totalLive} live entities have a local FAQ tail file`);
 }
 
 console.log("");
