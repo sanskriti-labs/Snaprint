@@ -1,3 +1,5 @@
+import { faqTails } from "./faq-tails";
+
 export type Faq = { q: string; a: string };
 
 // ---------------------------------------------------------------------------
@@ -38,101 +40,25 @@ export const sharedFaqs: Faq[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// City-specific — augment sharedFaqs with a per-city tail
+// City-specific — augment sharedFaqs with a per-city tail. Tails live in
+// content/pseo/faq-tails/city-{slug}.json, compiled to faq-tails.ts by
+// scripts/build-faq-tails-ts.mjs — see that script for the source-of-truth
+// convention (mirrors content/pseo/bodies/*.md → bodies.ts).
 // ---------------------------------------------------------------------------
 
 export function getCityFaqs(citySlug: string): Faq[] {
-  const tails: Record<string, Faq[]> = {
-    bengaluru: [
-      {
-        q: "Is there a Snaprint kiosk near my college in Bengaluru?",
-        a:
-          "We are actively expanding across Bengaluru. If there isn't a kiosk near your college yet, you can still find a Snaprint-enabled shop near Koramangala, Indiranagar, or Whitefield today.",
-      },
-    ],
-  };
-  return [...sharedFaqs, ...(tails[citySlug] ?? [])];
+  return [...sharedFaqs, ...(faqTails[`city-${citySlug}`] ?? [])];
 }
 
 // ---------------------------------------------------------------------------
-// Location-specific (college / area) — augment sharedFaqs with a local tail
+// Location-specific (college / area) — augment sharedFaqs with a local tail.
+// Tails live in content/pseo/faq-tails/{kind}-{slug}.json; kind is required
+// so an area and a college that happen to share a slug never merge tails.
 // ---------------------------------------------------------------------------
 
 export function getLocationFaqs(
-  entitySlug: string,
-  parentCity: string
+  kind: "area" | "college",
+  entitySlug: string
 ): Faq[] {
-  const tails: Record<string, Faq[]> = {
-    "iisc-bangalore": [
-      {
-        q: "Is there a Snaprint kiosk near IISc?",
-        a:
-          "We are deploying kiosks near IISc on CV Raman Avenue. Enter your print details on the kiosk screen to get started — no app needed.",
-      },
-    ],
-    "rvce-bengaluru": [
-      {
-        q: "Is there a Snaprint kiosk near RVCE on Mysore Road?",
-        a:
-          "We are expanding near RVCE on Mysore Road. Kiosks accept prints paid via UPI — GPay, PhonePe, Paytm, or any app.",
-      },
-    ],
-    "pes-university-ec-campus": [
-      {
-        q: "Is there a Snaprint kiosk near PES University Electronic City?",
-        a:
-          "Kiosk deployment near PESU Electronic City is underway. You will find Snaprint-enabled shops in the Electronic City campus area.",
-      },
-    ],
-    "christ-university-central-campus": [
-      {
-        q: "Is there a Snaprint kiosk near Christ University?",
-        a:
-          "We are expanding near Christ University on Hosur Road. Until a kiosk is near your campus, the nearest Snaprint-enabled shop is in the Koramangala or Bannimantha area.",
-      },
-    ],
-    "nitte-meenakshi-bangalore": [
-      {
-        q: "Is there a Snaprint kiosk near NMIT Yelahanka?",
-        a:
-          "Kiosk deployment near NMIT in Yelahanka is in progress. You can find a Snaprint-enabled shop in the Yelahanka locality while we expand.",
-      },
-    ],
-    koramangala: [
-      {
-        q: "Where is the nearest Snaprint kiosk in Koramangala?",
-        a:
-          "Snaprint kiosks are being deployed across Koramangala. Check back soon — use the kiosk locator or contact us at snaprints@sanskritilabs.in for the nearest live location.",
-      },
-    ],
-    indiranagar: [
-      {
-        q: "Where is the nearest Snaprint kiosk in Indiranagar?",
-        a:
-          "We are actively deploying kiosks in Indiranagar. The nearest live Snaprint-enabled shop is in the Koramangala area while we expand.",
-      },
-    ],
-    whitefield: [
-      {
-        q: "Is there a Snaprint kiosk near Whitefield / ITPL?",
-        a:
-          "Snaprint kiosks are coming to Whitefield and the ITPL corridor. Contact snaprints@sanskritilabs.in for the nearest live location today.",
-      },
-    ],
-    "hsr-layout": [
-      {
-        q: "Is there a Snaprint kiosk in HSR Layout?",
-        a:
-          "We are expanding into HSR Layout. Until a kiosk is live nearby, the nearest Snaprint-enabled shop is in Electronic City or Koramangala.",
-      },
-    ],
-    "electronic-city": [
-      {
-        q: "Is there a Snaprint kiosk in Electronic City?",
-        a:
-          "Snaprint kiosks are coming to Electronic City Phase 1 and Phase 2. For the nearest live location, reach out to snaprints@sanskritilabs.in.",
-      },
-    ],
-  };
-  return [...sharedFaqs, ...(tails[entitySlug] ?? [])];
+  return [...sharedFaqs, ...(faqTails[`${kind}-${entitySlug}`] ?? [])];
 }
