@@ -21,6 +21,10 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       type: "article",
       publishedTime: meta.date,
     },
+    twitter: {
+      title: meta.title,
+      description: meta.description,
+    },
   };
 }
 

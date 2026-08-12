@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const links = [
@@ -34,11 +35,11 @@ export default function Navbar() {
       <div className="mx-auto flex h-[66px] max-w-[1280px] items-center justify-between px-6 md:px-10">
 
         {/* Logo */}
-        <a href="#" className="flex items-center gap-0 no-underline select-none">
+        <Link href="/" className="flex items-center gap-0 no-underline select-none">
           <span className="font-display text-[21px] font-extrabold tracking-[-0.8px] text-[#E63946]">snap</span>
           <span className="font-display text-[21px] font-extrabold tracking-[-0.8px] text-[#111110]">rint</span>
           <span className="mb-[8px] ml-[2px] inline-block h-[6px] w-[6px] rounded-full bg-[#E63946]" />
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-8 md:flex">

@@ -17,6 +17,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
+  twitter: {
+    title: "About Snaprint — Sanskriti Labs",
+    description: "A self-service print kiosk for Indian xerox shops, built in Bengaluru by Sanskriti Labs.",
+  },
 };
 
 const jsonLd = {

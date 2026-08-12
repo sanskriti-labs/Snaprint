@@ -51,6 +51,10 @@ export function generateMetadata({
       type: "website",
       images: [`${SITE_URL}/og.png`],
     },
+    twitter: {
+      title: `${areaCount > 0 ? areaCount + " areas with " : ""}Print & xerox shops in ${city.name} — Snaprint`,
+      description,
+    },
   };
 }
 

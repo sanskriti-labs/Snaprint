@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
+  twitter: {
+    title: "Print and xerox shops near you — Snaprint",
+    description:
+      "Find print and xerox shops near your college, office, or neighbourhood.",
+  },
 };
 
 type AreaGroup = {

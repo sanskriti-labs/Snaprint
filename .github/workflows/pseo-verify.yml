@@ -22,6 +22,19 @@ jobs:
       - run: pnpm run verify:pseo
       - run: pnpm exec tsc --noEmit
 
+  build-checks:
+    name: Built-HTML checks (verify:meta + verify:schema)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
+
   live-crawl:
     name: Live crawl production (404s, dead links, price leaks)
     runs-on: ubuntu-latest

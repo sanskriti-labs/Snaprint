@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
+  twitter: {
+    title: "Print and xerox shops across India — Snaprint",
+    description:
+      "Browse print and xerox shop directories city by city — find instant print, photocopy, scan, and ID services near you.",
+  },
 };
 
 export default function InstantPrintIndex() {

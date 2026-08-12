@@ -63,6 +63,10 @@ export function generateMetadata({
         type: "website",
         images: [`${SITE_URL}/og.png`],
       },
+      twitter: {
+        title: `${count > 0 ? count + " " : ""}Xerox shops near ${name}, ${cityName} — Snaprint`,
+        description,
+      },
     };
   }
 
@@ -93,6 +97,10 @@ export function generateMetadata({
         url: `${SITE_URL}/print-near/${area.slug}`,
         type: "website",
         images: [`${SITE_URL}/og.png`],
+      },
+      twitter: {
+        title: `${count > 0 ? count + " " : ""}Xerox shops in ${area.name}, ${cityName} — Snaprint`,
+        description,
       },
     };
   }
