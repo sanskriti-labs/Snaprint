@@ -19,20 +19,22 @@ const cities: City[] = [
       "560085", "560095", "560100", "560103",
     ],
     intro:
-      "Snaprint has kiosks across Bengaluru — students, job seekers, and commuters can print documents instantly without waiting in queue or hunting for an open shop.",
+      "92 neighbourhoods in Bengaluru with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "instant print bangalore",
-      "print kiosk bengaluru",
+      "print shop bengaluru",
       "xerox shop bangalore",
       "print near me bangalore",
       "document printing bangalore",
     ],
-    neighbors: [],
-    // "live" once a real kiosk address is verified; "served" once area/college
-    // pages here have enough verified shop data to publish without a kiosk.
-    presence: "planned",
+    neighbors: ["hyderabad"],
+    // "live" once a real kiosk address is verified in this city; "served"
+    // means the directory (area/college pages with verified shop data) is
+    // ready to publish ahead of a kiosk. No kiosk is live anywhere yet, so
+    // every city here is "served" at best — see hyderabad below.
+    presence: "served",
     liveLocations: [],
-    lastReviewed: "2026-08-03",
+    lastReviewed: "2026-08-12",
   },
   {
     slug: "hyderabad",
@@ -52,7 +54,7 @@ const cities: City[] = [
       "print near me hyderabad",
       "document printing hyderabad",
     ],
-    neighbors: [],
+    neighbors: ["bengaluru"],
     presence: "served",
     liveLocations: [],
     lastReviewed: "2026-08-08",

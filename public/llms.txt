@@ -10,8 +10,8 @@ Full description, FAQ, and structured data: https://snaprints.com/llms-full.txt
 
 - [Home](https://snaprints.com/): Product overview, how it works, the S1 machine, pricing/demo contact.
 - [Book a Demo](https://snaprints.com/book): Schedule a live walkthrough of the S1 kiosk with the founding team.
-- [Instant Print — all cities](https://snaprints.com/instant-print): Hub listing every city with a Snaprint kiosk.
-- [Print Near You — colleges and neighbourhoods](https://snaprints.com/print-near): Hub listing every college and neighbourhood with a Snaprint kiosk.
+- [Instant Print — all cities](https://snaprints.com/instant-print): Hub listing every city with verified xerox and print shops.
+- [Print Near You — colleges and neighbourhoods](https://snaprints.com/print-near): Hub listing every college and neighbourhood with verified xerox and print shops.
 - [Blog](https://snaprints.com/blog): Operator guides, comparison pieces, and student use-case explainers.
 
 ## Blog posts
