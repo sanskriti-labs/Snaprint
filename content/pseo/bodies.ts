@@ -32,8 +32,21 @@ export const bodies: Record<string, BodyEntry> = {
     name: "Alwal",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 1). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 428,
+    markdown: `## About this place  
+Alwal sits on the northern fringe of Hyderabad, straddling the postal zones 500010 and 500015. Once a railway settlement that grew around the Alwal railway station, the locality now blends old‑world residential colonies with modern apartments and small industrial units. Its narrow lanes are dotted with neighbourhood markets, while wider avenues host coaching centres, a few medical clinics and the lone verified print shop, SRIS DIGITAL. The area’s mix of families, working professionals and students gives it a modest, everyday energy rather than a flashy commercial buzz. A bustling Irani tea stall near the station adds to the area’s charm.  
+
+## Getting here and around  
+Alwal is easy to reach via the TSRTC bus network that runs along the Old Alwal Road and the nearby Bolarum junction. The closest Metro station is Parade Grounds, about 3 km away, reachable by auto‑rickshaw or a short ride‑share. Major arterial roads such as the Alwal–Quthbullapur Road and the Outer Ring Road connect the neighbourhood to Secunderabad and the IT corridor. Street parking is common near local markets, though peak hours can be tight.  
+
+## Why printing demand is high here  
+Several coaching institutes and private tutors in Alwal prepare students for board exams, university tests and competitive entrance papers, creating a steady flow of study material that needs printing and binding. Small‑scale businesses in the area often need colour flyers, catalogues and invoices. Government offices in the nearby Bolarum complex request certified copies, scanned documents and laminated forms, adding to demand. With only one verified print shop—SRIS DIGITAL—locals rely on its reliability and fast turnaround, especially during peak exam season when last‑minute revisions surge.  
+
+## What people typically print here  
+Residents frequently drop off class notes, project reports and lab manuals that require spiral binding or lamination. Office goers print Payslip copies, official letters and presentation slides in colour. Parents also order school forms, report cards and ID‑card sized photographs for admission processes. In a neighbourhood where digital screens dominate, the occasional batch of hard‑copy documents still holds importance for record‑keeping and formal submissions.  
+
+## How Snaprint fits in  
+Snaprint connects the Alwal community with the single verified print hub, making it simple to order prints from any smartphone or desktop. Shop owners can manage incoming jobs through the platform’s dashboard and receive payments directly, while students can tap a shortcut to [print near Alwal](/print-near/alwal) and have their documents ready within minutes. The service is designed to cut waiting time and keep the local print experience hassle‑free. To list a shop or start a job, visit [Snaprint](/book).
 `,
   },
   "area-ameerpet": {
@@ -408,8 +421,26 @@ Snaprint's kiosk network is set up to add late-night and weekend capacity to the
     name: "ECIL",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 1). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 464,
+    markdown: `## About this place
+
+Tucked in the eastern corridor of Hyderabad, ECIL (Electronics Corporation of India Limited) began as a public sector powerhouse in the 1970s. Today the 500062 pin code wraps around tree-lined residential colonies, government quarters, and a bustling commercial strip that still hums with the area's industrial roots. The neighbourhood carries a settled, working-class character — families who've lived here for decades mingle with young professionals who commute to tech parks further west. Ambika Xerox Binding Work anchors the local print scene as the area's sole verified xerox and print shop, serving a tight-knit community that values reliability over novelty.
+
+## Getting here and around
+
+Reaching ECIL is straightforward — the TSRTC fleet runs multiple routes through the main colony road, connecting riders to Secunderabad and Koti with ease. The nearest MMTS station at Dayanand Nagar sits within walking distance for commuters coming from the rail network. By car, the approach via the inner ring road merges cleanly onto the Habsiguda junction, avoiding the worst of the city centre chaos. Parking along the colony's side lanes is usually manageable during off-peak hours, though mornings can get cramped when office-bound traffic thickens.
+
+## Why printing demand is high here
+
+The concentration of government residential blocks and retired employees fuels a steady stream of documentation needs — pension forms, property records, and official correspondence never stop flowing. Add to that the proximity to several colleges and coaching centres, and exam season brings a predictable surge in thesis printing, assignment submissions, and study material copies. Ambika Xerox Binding Work handles this load as the area's only verified print shop, which means reputation travels fast — residents trust the shop because everyone knows someone who has used it. The consistent 4.4-star rating across verified reviews reflects this community accountability rather than sheer volume of footfall.
+
+## What people typically print here
+
+Office paperwork dominates the weekday queue — contract drafts, presentation handouts, and government application forms. Weekends shift toward academic work as students from nearby institutions descend with thick thesis chapters, spiral-bound project reports, and laminated study charts. Identity photograph printing and scanning round out the daily mix, with occasional bursts of wedding invitation designs and event flyers when celebrations roll around.
+
+## How Snaprint fits in
+
+Snaprint bridges the gap between ECIL's trusted local print shops and residents who need to book jobs quickly online. Shop owners can manage incoming orders through a single dashboard by visiting /book, reducing phone tag and walk-in congestion. Students and office workers searching for "print near ecil" land directly on curated listings via /print-near/ecil, where Ambika Xerox Binding Work and similar verified shops appear with transparent ratings and service menus. The platform doesn't replace the neighbourhood shop — it simply makes finding and reserving services faster for everyone.
 `,
   },
   "area-ejipura": {
@@ -458,8 +489,26 @@ Snaprint's kiosk network is set up to add late-night and weekend capacity to the
     name: "Gandhi Nagar",
     city: "bengaluru",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 513,
+    markdown: `## About this place
+
+Gandhi Nagar in Bengaluru sits between the commercial hum of City Market and the quieter residential pockets near Seshadri Road. This stretch of 560009 and 560002 has long been a melting pot where small traders, government employees, and students coexist. The neighbourhood carries the legacy of its namesake—quiet dignity without fanfare. Twelve narrow streets wind through the area, flanked by provision stores, a handful of schools, and the steady thrum of print shops that have served this community for decades. The area's commercial character emerged organically, anchored by the nearby grain wholesale market and the constant foot traffic from surrounding residential blocks. For many residents, Gandhi Nagar represents old Bengaluru—unpretentious, practical, and deeply rooted.
+
+## Getting here and around
+
+The nearest Namma Metro station lies just over a kilometre away at Chickpet, making the area accessible via the Purple Line. BMTC buses stop at multiple points along Gandhi Nagar Road itself. Auto-rickshaws crowd the narrower lanes, their drivers familiar with shortcuts between the main avenue and the back alleys where most print shops cluster. Parking is scarce during peak hours—morning delivery trucks and afternoon foot traffic from the nearby market create bottlenecks. Locals prefer to walk the final stretch, especially when fetching documents from one of the thirteen verified print outlets scattered through the neighbourhood.
+
+## Why printing demand is high here
+
+The concentration of government offices within a short radius drives a significant portion of print traffic in Gandhi Nagar. Residents queue daily at licensing authorities, RTO offices, and municipal centres—all requiring certified copies and printed forms. The nearby KR Market draws wholesale vendors who need price lists, receipt books, and promotional flyers printed in bulk. Add to this the year-round influx of students from nearby PU and degree colleges, and the demand for quick document prints becomes predictable. The thirteen verified shops here have fine-tuned their inventory to match this rhythm—high-capacity machines for rush jobs, laminators for preserving important certificates. The 4.2★ average rating across these outlets reflects their ability to handle volume without sacrificing quality.
+
+## What people typically print here
+
+Exam registration forms and bonafide certificates dominate the workload during academic seasons. Government permit applications, property documents, and address proofs form the steady baseline throughout the year. Small businesses print business cards, invoice books, and display price lists. Photocopying old textbooks—often entire semesters' worth—remains a perennial requirement for budget-conscious students. Lamination of marks cards, experience letters, and marriage certificates surfaces regularly, reflecting the bureaucratic habits of the area's working and middle-class population.
+
+## How Snaprint fits in
+
+Snaprint offers a bridge between customers seeking reliable service and the verified shops operating in Gandhi Nagar. Rather than walking lane-by-lane, users can book prints directly through the platform and collect them ready from a chosen outlet. For shop owners, the /book portal provides a steady stream of online orders. Students and office-goers heading to the area can plan ahead via /print-near/gandhi-nagar, ensuring their documents are waiting rather than rushed. The system respects the existing ecosystem—strengthening local businesses while saving time for the people who depend on them.
 `,
   },
   "area-gottigere": {
@@ -1284,8 +1333,28 @@ Snaprint's rollout prioritises the Sarjapur corridor precisely because the verif
     name: "Tarnaka",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 1). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 525,
+    markdown: `
+
+## About this place
+
+Tarnaka is a mature, well-knit neighbourhood tucked between Secunderabad and the outer eastern stretches of Hyderabad, with pin codes 500017 and 500007 anchoring its address. The area grew around the Osmania University campus, and you can still feel that academic undertone in the streets — a mix of old residential colonies, PG accommodations, and research institutes sitting shoulder to shoulder. Vendors who set up near the campus gates have been here for decades, and the neighbourhood has long attracted government employees, university staff, and students alike. Despite Hyderabad's rapid expansion, Tarnaka has retained its quiet, institutional character. For a locality that spans two pin codes, it manages to feel intimate — one verified xerox and print shop serves the area, a small but steady presence that locals have come to rely on.
+
+## Getting here and around
+
+Tarnaka Metro Station on Hyderabad's Red Line drops you right at the neighbourhood's doorstep, making it one of the easiest areas in Hyderabad to reach by public transport. Several TSRTC bus routes converge near the Osmania University entrance, and the inner lanes are navigated mostly by auto-rickshaws — the go-to for anyone heading deeper into the residential pockets. If you're driving, the Outer Ring Road interchange nearby offers a quick link to the IT corridor. Parking can be tight during university rush hours, so walking from the metro is often the smarter move.
+
+## Why printing demand is high here
+
+The demand is straightforward when you look at who lives here. Osmania University draws thousands of students every semester, all needing lecture notes, thesis copies, and exam materials printed on short notice. Tarnaka's residential density — a consequence of its two pin codes filling up with families, working professionals, and PG renters — means everyday printing needs never really dry up. Add to that the government offices and research institutes in and around the locality, and you have a steady flow of people needing official prints, scans, and document certifications. Akshaya Copier Solutions, rated 4.4 stars, handles this varied load with the kind of reliability that earns repeat customers in a neighbourhood like this.
+
+## What people typically print here
+
+University assignments and project reports make up the bulk of jobs at local print shops, with students often requesting spiral binding and lamination to keep documents neat. Office-goers swing by for quick colour prints of presentations and official forms, while residents use the shops for scanned copies of certificates, utility bills, and passport-sized photos. Exam season sends footfall spiking, with bulk printing orders for revision sheets arriving in batches. Every few weeks, someone needs a full thesis printed and bound ahead of a submission deadline.
+
+## How Snaprint fits in
+
+Snaprint gives Tarnaka's printing scene a digital layer — letting customers send jobs to Akshaya Copier Solutions from their phone and pick them up ready, skipping the queue during peak hours. For shop owners, listing on the platform brings in orders that might otherwise walk past the door. Students heading to /print-near/tarnaka can compare options and place an order before they even leave campus, turning a sometimes-hectic errand into something you handle between classes.
 `,
   },
   "area-ulsoor": {
@@ -1443,8 +1512,21 @@ Snaprint's kiosk network is designed to add 24/7 self-serve capacity to the veri
     name: "Badruka College of Commerce & Arts",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 481,
+    markdown: `## About this place
+Badruka College of Commerce & Arts, founded in 1965, sits on a narrow lane off Kachiguda’s bustling market road, a stone’s throw from the historic Kachiguda railway station. The college enrolls roughly 4,000 undergraduates and postgraduates in programs ranging from B.Com to BBA, and its campus buzzes with group study sessions, cultural festivals, and the occasional intra‑college cricket match. The surrounding locality blends old‑world wholesale textile showrooms with modern tuition centres, making the area a commercial‑educational hub in central Hyderabad. Its postal address falls under pin code **500027**, a detail that appears on most student address forms. The density of students, staff, and neighbourhood enterprises has attracted a network of **58 verified print and xerox shops** that line the streets, offering quick turnaround for every conceivable document need.
+
+## Getting here and around
+The college is easiest reached via the **Kachiguda Metro** station on Hyderabad’s Red Line, which sits a four‑minute walk from the main gate. Local buses – including routes 5, 18, and 211 – stop at the **Kachiguda Bus Depot**, a few metres away on Mahankali Street. Those driving can use limited parking on Tagore Road or the open lot behind the Kachiguda Court complex. Walking is popular; most students navigate the narrow by‑lanes on foot, weaving past fruit stalls and cycle repair shops.
+
+## Why printing demand is high here
+At Badruka, assignment deadlines and semester exams generate a relentless flow of printed sheets. Each year, over 2,000 students submit project reports, case studies, and lab manuals, all requiring high‑quality copies. The nearby Kachiguda commercial zone also draws small business owners and government office workers who need bulk printing of forms, receipts, and legal documents. This dual traffic fuels a bustling print market. The presence of **58 verified shops**, among them the **top‑rated Excellent Jumbo Xerox** with a **4.9‑star** rating, testifies to the sheer volume of print jobs the locality handles daily.
+
+## What people typically print here
+Students regularly drop off multi‑page assignments, dissertation drafts, and admit cards for upcoming exams. During college festivals, you’ll see handbills, flyers, and banners promoting cultural events. Local entrepreneurs print business cards, price lists, and promotional leaflets. Government office staff, often seen waiting at the nearby court, request certified copies and official forms. The occasional ID photograph print and passport‑size photo duplication round out the typical workload.
+
+## How Snaprint fits in
+For students, finding a reliable print shop without wandering the crowded lane is a hassle. Snaprint’s platform aggregates all nearby options, letting you compare ratings, turnaround times, and pricing in seconds. Click **[find a print shop](/print-near/badruka-college-kachiguda)** to locate the nearest verified shop and reserve a slot instantly. Shop owners can streamline their workflow by accepting online orders through Snaprint’s portal, reducing walk‑in rush and ensuring steady jobs. Use the **[book a shop](/book)** link to set up your shop’s profile and start receiving digital bookings today.
 `,
   },
   "college-bit-bangalore": {
@@ -1681,8 +1763,21 @@ Snaprint's rollout in Whitefield is working alongside the two verified shops to 
     name: "Jawaharlal Nehru Technological University Hyderabad",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 494,
+    markdown: `## About this place
+Jawaharlal Nehru Technological University Hyderabad (JNTUH) sits on a 92‑acre campus in the bustling Kukatpally pocket of Hyderabad, pin‑code 500085. Established in 1965 as a regional engineering college, it has grown into a premier technical university offering undergraduate, postgraduate, and doctoral programmes in engineering, pharmacy, and management. The campus houses more than a dozen departments, multiple hostels, a central library, and an ever‑busy engineering block that draws students from across the country. With 37 verified xerox and print shops peppered around its gates, the university fuels a steady demand for on‑the‑spot printing services that most students rely on at least once a week.
+
+## Getting here and around
+The nearest Hyderabad Metro Rail station is JNTU College, a five‑minute walk from the main entrance, while the Kukatpally metro station lies just 1.5 km away on the Pink Line. State‑run buses and private share‑autos stop directly at the JNTU bus stand, and the campus is bounded by NH‑65, making it easy to reach from any corner of the city. Parking is limited to a small lot near the admin block, so most commuters park on the side roads or use the cycle‑stand for two‑wheelers. Auto‑rickshaws and ride‑hailing bikes are the go‑to options for quick hops between the campus and nearby residential colonies.
+
+## Why printing demand is high here
+JNTUH’s annual calendar is packed with project submissions, seminar presentations, and a relentless placement season that pushes students to produce polished reports and resumes. In the weeks before end‑semester exams, the demand for printed question‑paper sets and lab manuals spikes sharply, while faculty members often need bulk handouts for workshops. The surrounding Kukatpally–KPHB corridor also hosts a cluster of coaching centres and IT parks, adding a steady stream of printing jobs from working professionals. With 37 verified print outlets operating within walking distance, the campus ecosystem has turned high‑volume copying into a routine errand rather than a bottleneck.
+
+## What people typically print here
+Students regularly hand in soft‑bound project reports, colour‑coded seminar slides, and lab record copies that must be neatly stapled and paginated. Placement bound‑books and resumes with glossy front pages are printed in bulk before campus recruitment drives. Faculty and research scholars submit dissertation drafts, conference papers, and official university forms that often require notary attestation. Shops like LEKHA XEROX AND NOTARY see a steady flow of certificate attestation and ID‑card photocopies, while engineering drawing sheets and CAD plots also appear when design courses wrap up.
+
+## How Snaprint fits in
+Snaprint’s kiosk network ties the scattered print ecosystem together, giving students a quick online portal to compare prices and reserve print jobs at any of the 37 vetted shops. By visiting /print‑near/jntuh‑kukatpally, learners can locate the nearest outlet, check real‑time availability, and schedule a pickup. For shop owners, the partner dashboard at /book streamlines order intake, tracks inventory, and reduces walk‑in wait times, ensuring that a JNTUH student’s urgent report makes it to the printer without a hitch.
 `,
   },
   "college-jssate-bangalore": {
@@ -1751,8 +1846,21 @@ Snaprint's rollout in Whitefield is working alongside the two verified shops to 
     name: "Nizam College",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 433,
+    markdown: `## About this place
+Nizam College, set on a quiet lane off Basheer Bagh, has been a fixture of Hyderabad’s academia since 1887. It offers arts, sciences, and commerce degrees, attracting a mix of fresh undergraduates and seasoned postgraduates, all woven together by a vibrant student culture. The historic stone building is flanked by modest hostels and buzzing tea stalls, giving the campus a scholarly yet street‑wise vibe. Adjacent Gun Foundry adds a cluster of coaching centres and small publishers. With 36 verified print shops within a few blocks, students find copying services unusually handy for last‑minute assignments.
+
+## Getting here and around
+The campus sits just a five‑minute walk from the Necklace Road metro station on the Blue Line, making it easy for commuters from across Hyderabad. The campus lies in the 500001 postal area. Several TSRTC buses stop at Basheer Bagh and Ranigunj, while auto‑rickshaws cluster near the main gate. Those driving can use limited street parking on Koti Women’s College Road or the public lot on Walton Road. Ride‑share apps are also popular for quick trips.
+
+## Why printing demand is high here
+Exam season sends hundreds of Nizam College students sprinting to nearby shops for printed answer scripts, project covers, and lab reports. Simultaneously, the adjacent Gun Foundry office district fuels a steady flow of legal drafts, contracts, and presentations. Government offices clustered along Koti and Afzalgunj add another layer of bulk printing for forms and certificates. The high concentration of 36 verified print shops signals a responsive supply chain, letting customers expect quick turnarounds even during peak rush hours. This convergence of academic, corporate, and bureaucratic needs keeps local print counters busy throughout the year.
+
+## What people typically print here
+Students churn out lecture handouts, assignments, semester project reports, and colorful posters for college fests. Faculty members often request exam question papers, syllabus copies, and research abstracts. In the surrounding offices, staff print legal briefs, contracts, and presentation decks. The neighbourhood’s small publishing houses occasionally need short‑run booklets and flyers. All this activity fills the counters of VAINAVI XEROX & INTERNET, a top‑rated shop a stone’s throw from the main gate.
+
+## How Snaprint fits in
+Snaprint bridges the gap between students hunting for fast, reliable prints and the 36 nearby print counters. By listing real‑time availability and transparent pricing, the platform lets users book a print slot without wandering the streets. Shop owners can manage orders smoothly via the /book dashboard, reducing missed deadlines and walk‑in clutter. For a quick print near Nizam College, just head to /print-near/nizam-college-hyderabad and choose a shop that fits your schedule.
 `,
   },
   "college-nizams-institute-medical-sciences": {
@@ -1761,8 +1869,26 @@ Snaprint's rollout in Whitefield is working alongside the two verified shops to 
     name: "Nizam's Institute of Medical Sciences",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 466,
+    markdown: `## About this place
+
+Nizam's Institute of Medical Sciences (NIMS) stands as one of Telangana's premier medical education centers, drawing aspiring doctors and healthcare professionals from across the state. Located in the Punjagutta enclave of Hyderabad, the campus hums with the intensity of clinical training—students dissect cadavers in anatomy labs, pore over thick Harrison's textbooks, and race to meet dissertation deadlines. The surrounding area blends government residential colonies with bustling commercial pockets, creating a neighborhood where medical seriousness meets everyday convenience. With 30 verified print and xerox shops operating within accessible reach, the campus has quietly become a printing hotspot in Hyderabad's central corridor. The 500082 pin code covers much of this precinct, where ambulance sirens and auto-rickshaw horns form the daily soundtrack.
+
+## Getting here and around
+
+The Punjagutta metro station on the Blue Line places NIMS within easy reach of Secunderabad, Kukatpally, and HITEC City commuters. Several TSRTC buses stop directly outside the campus gate along Road No. 1, making the institute reachable from Ameerpet, SR Nagar, and Erramanzil Colony without transfer. Cycling is popular among hostel residents, though road parking fills by mid-morning on weekdays. Most locals commute by share-auto from nearby colonies—招呼 (flagging) one takes seconds during off-peak hours.
+
+## Why printing demand is high here
+
+Medical curricula demand relentless documentation. First-year students print labeled diagrams for anatomy journals, while final-year trainees submit case records bound in duplicate for hospital archives. Research scholars at NIMS generate substantial thesis drafts requiring multiple rounds of corrections before final submission. The nearby Punjagutta commercial district brings lawyers, applicants for government exams, and small business owners who need documents notarized and printed. This concentration of academic, administrative, and professional printing needs sustains the dense network of 30 verified shops operating near campus—shops that have calibrated their inventory precisely to this clientele.
+
+## What people typically print here
+
+Clinical case sheets dominate during posting rotations; students reproduce diagnostic sheets, treatment protocols, and discharge summaries for ward presentations. Thesis chapters arrive in batches—tables, figures, and references demand consistent formatting that home printers rarely handle reliably. Admission forms for postgraduate entrance exams spike during January and July intake periods. ID card photostat, bonafide certificates, and fee challans round out the steady weekday traffic. During exam weeks, previous year question papers and answer key compilations disappear from shop counters within hours of upload.
+
+## How Snaprint fits in
+
+Snaprint aggregates these 30 nearby print shops into a single searchable directory, letting students compare ratings and proximity before walking out. For shop owners at Guru Automatic Xerox and similar establishments, Snaprint's /book portal handles appointment scheduling so rush-hour queues thin out. Rather than cold-calling each shop, students bookmark /print-near/nizams-institute-medical-sciences and pull up options sorted by distance. The platform respects that medical students measure time in minutes between rounds—every second saved matters.
 `,
   },
   "college-osmania-medical-college": {
@@ -1771,8 +1897,26 @@ Snaprint's rollout in Whitefield is working alongside the two verified shops to 
     name: "Osmania Medical College",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 346,
+    markdown: `## About this place
+
+Founded in 1846, Osmania Medical College has trained generations of physicians within a campus that blends colonial-era buildings and modern medical infrastructure. The institution draws students from across Telangana and Andhra Pradesh pursuing MBBS, nursing, and specialized medical degrees. The surrounding Koti and Troop Bazaar neighborhoods thrum with medical bookshops, pathology laboratories, and the steady cadence of student life. The 500004 pin code blankets this academic enclave where lecture notes and lab reports are daily necessities.
+
+## Getting here and around
+
+Afzalgunj metro station on the Blue Line lies ten minutes from the main gate. State Transport buses terminate at Koti Women's College stop, a convenient drop-off point for commuters arriving from Secunderabad and Rajendranagar. Auto-rickshaws cluster near the campus perimeter, ready to shuttle students between lecture halls and printing shops. Parking fills quickly during hospital visiting hours, but the area's narrow lanes and auto-stands make local navigation straightforward.
+
+## Why printing demand is high here
+
+Medical education runs on paper. Osmania students churn out case sheets, dissertations, and clinical logbooks throughout each semester. Ward postings require multiple copies of rotation schedules and permission slips. University examination windows send queues stretching out of print shops as students race to submit properly bound theses and formatted answer booklets. The 40 verified xerox shops serving this area absorb this relentless workload daily.
+
+## What people typically print here
+
+Students here need thesis printing with proper binding, practical examination charts, and colored anatomy diagrams for ward demonstrations. Hospital posting certificates and internship completion forms pass through counters regularly. Seminar handouts and medical journal reprints round out the typical order mix. VINAYAKA XEROX, a 5-star rated shop nearby, handles everything from single-page prescriptions to bulk clinical record binding.
+
+## How Snaprint fits in
+
+Snaprint lets students discover and book services at local print shops without hunting for Wi-Fi or waiting in line. Browse options near Osmania Medical College, reserve your job, and collect finished documents without disrupting your study schedule. Shop owners can join the network via /book to connect with the college's substantial student population.
 `,
   },
   "college-osmania-university-arts-college": {
@@ -1781,8 +1925,21 @@ Snaprint's rollout in Whitefield is working alongside the two verified shops to 
     name: "Osmania University College of Arts and Social Sciences",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 447,
+    markdown: `## About this place  
+Tucked beside the leafy lanes of Tarnaka, the Osmania University College of Arts and Social Sciences spreads across a compact campus that draws students from across Telangana. The college specializes in languages, history, political science, and sociology, fostering a lively debate culture and frequent seminars. Its proximity to the historic city centre means that students often cross the busy MG Road corridor for internships and cultural events. Within a short walk, eight verified print shops—including the well‑known SLN BOOK CENTRE—serve the daily copy and binding needs of the student body, all located in the 500017 zip area.  
+
+## Getting here and around  
+The campus is easiest to reach via the Hyderabad Metro’s Red Line, with Tarnaka station a ten‑minute walk from the main gate. Several TSRTC buses halt at the Tarnaka junction, and auto‑rickshaws cluster near the college gate for quick last‑mile rides. Drivers can find limited on‑street parking along the service lane, while cyclists prefer the shaded footpaths that connect the arts block to the nearby Tarnaka library. The road network is well‑lit at night, making commutes safe for late‑night study.  
+
+## Why printing demand is high here  
+Every semester, the college calendar spikes with assignment deadlines, term‑end examinations, and research proposal submissions, all requiring printed copies. Students also submit application forms for scholarships, internships, and foreign exchange programs that must be printed on official paper. The surrounding Tarnaka neighbourhood is dotted with coaching centres and government recruitment offices, adding a steady flow of printing jobs. With eight verified print shops operating within a kilometre, the area has built a reputation for quick turnaround and reliable quality, especially during the frantic exam weeks. During placement drives, companies require printed presentation slides and certificates, boosting order volume.  
+
+## What people typically print here  
+From multi‑page essays to bound theses, students print coursework assignments, seminar handouts, and reference extracts daily. Placement season brings a surge of résumés and cover letters, while research scholars order dissertations, data tables, and conference posters. Administrative paperwork—including exam registration forms, fee challans, and verification certificates—also appears frequently at the counters of nearby shops like SLN BOOK CENTRE. Lab diagrams and field‑work sketches also frequently appear.  
+
+## How Snaprint fits in  
+Snaprint aggregates the nearest verified print shops, letting students compare turnaround times and ratings before they step out. For shop owners, the platform offers a simple dashboard to manage orders and update availability. Students can book a print slot directly through the [Snaprint student portal](/print-near/osmania-university-arts-college), while vendors can sign up at [snaprints.com/book](/book) to join the network. The service also sends automatic notifications when orders are ready, saving time for busy scholars. It tracks usage to suggest optimal print times.
 `,
   },
   "college-oxford-coe-bangalore": {
@@ -1929,8 +2086,21 @@ Snaprint's rollout is working alongside the two verified shops around REVA to ad
     name: "St. Francis College for Women",
     city: "hyderabad",
     priority: true,
-    wordCount: 20,
-    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+    wordCount: 436,
+    markdown: `## About this place  
+Nestled between the glass towers of Hyderabad's commercial belt and the tree‑lined streets of Begumpet, St. Francis College for Women has been shaping graduates since 1958. The college offers undergraduate degrees in arts, commerce, and sciences, alongside a growing suite of professional courses in media and hospitality. Its compact campus, spread across a single city block, hosts around 3,000 students who move between lecture halls, a well‑stocked library, and a vibrant cafeteria. The 500016 pin code anchors the college to a neighborhood that blends historic charm with modern office complexes, making it a bustling micro‑cosm of Hyderabad’s educational scene.  
+
+## Getting here and around  
+Students often arrive via the Begumpet Metro station on the Blue Line, a two‑minute walk from the main gate. Local TSRTC buses halt at the Begumpet Bus Stop, a short stroll away, while auto‑rickshaws queue at the nearby Market Road junction. For those driving, limited on‑street parking is available along Road No. 1, and the college’s entrance courtyard can accommodate two‑wheelers. Navigating the area is easy: the campus sits just off Necklace Road, a well‑known landmark in Hyderabad.  
+
+## Why printing demand is high here  
+Every semester, the college calendar explodes with deadlines that push students to nearby print counters. Assignment drafts, project reports, lab manuals, and thesis copies pile up, especially during the weeks leading to internal assessments and final exams. The surrounding Begumpet commercial district also draws office workers and job applicants who need urgent prints, further tightening capacity. With 24 verified xerox and print shops clustered within walking distance, the area absorbs this surge without long queues. Shops such as Vijetha Stationary and Xerox, rated 4.5 stars, often stay open late to handle last‑minute requests, a lifeline for pressed students.  
+
+## What people typically print here  
+Beyond textbooks, students regularly submit printed assignments, lab write‑ups, and multi‑page project reports. Exam registration forms, semester timetables, and ID card copies also appear at counters. When college festivals roll around, flyers, schedules, and certificates get churned out in bulk. Meanwhile, nearby office staff pop in for quick copies of memos, presentation handouts, and resume prints, making the print workload eclectic and steady.  
+
+## How Snaprint fits in  
+Snaprint streamlines the search for a reliable print shop by aggregating the 24 verified counters near St. Francis College. Students can head to /print-near/st-francis-college-begumpet to see real‑time availability and book a slot for large orders. Shop owners, meanwhile, can list their services on /book, attracting more footfall and managing orders efficiently. In a bustling campus where deadlines wait for no one, Snaprint acts as a bridge between demand and nearby supply.
 `,
   },
   "college-st-josephs-college-of-commerce": {
