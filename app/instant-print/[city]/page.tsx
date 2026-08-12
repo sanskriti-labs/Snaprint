@@ -23,15 +23,26 @@ export function generateMetadata({
 }): Metadata {
   const city = getCity(params.city);
   if (!city) return {};
+  const areaCount = getAreasInCity(city.slug).length;
+  // Year + power-word pattern mirrors the /print-near pages so the SERP
+  // looks consistent across the pSEO cluster.
+  const title =
+    areaCount > 0
+      ? `${areaCount} Areas with Print & Xerox Shops in ${city.name} — Verified · Snaprint`
+      : `Print and xerox shops in ${city.name} — Verified · Snaprint`;
+  const description =
+    areaCount > 0
+      ? `${areaCount} neighbourhoods across ${city.name} with verified xerox and print shops. B&W and colour prints, spiral binding, lamination, scanning. Browse areas to find shops near you — open hours vary.`
+      : `Verified print and xerox shops in ${city.name}. B&W and colour prints, binding, lamination, scanning. Open hours vary — call ahead.`;
   return {
     // Layout template appends "· Snaprint" — no explicit suffix here.
-    title: `Print and xerox shops in ${city.name}`,
-    description: city.intro,
+    title,
+    description,
     keywords: city.keywords,
     alternates: { canonical: `/instant-print/${city.slug}` },
     openGraph: {
-      title: `Print and xerox shops in ${city.name} — Snaprint`,
-      description: city.intro,
+      title: `${areaCount > 0 ? areaCount + " areas with " : ""}Print & xerox shops in ${city.name} — Snaprint`,
+      description,
       url: `${SITE_URL}/instant-print/${city.slug}`,
       type: "website",
       images: [`${SITE_URL}/og.png`],

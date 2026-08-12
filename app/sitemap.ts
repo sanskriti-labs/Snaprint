@@ -69,6 +69,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${siteUrl}/franchise`,
+      lastModified: "2026-08-12",
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/pricing`,
+      lastModified: "2026-08-12",
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${siteUrl}/instant-print`,
       lastModified: "2026-08-03",
       changeFrequency: "weekly",

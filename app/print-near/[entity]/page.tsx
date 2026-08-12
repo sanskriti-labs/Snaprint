@@ -13,6 +13,7 @@ import {
   getLocationFaqs,
   getShopsNearCollege,
   getCityName,
+  getCityState,
 } from "@/content/pseo/seo";
 import PseoPage from "@/components/PseoPage";
 
@@ -31,16 +32,33 @@ export function generateMetadata({
   const college = getCollege(params.entity);
   if (college) {
     const name = college.shortName ?? college.name;
+    const cityName = getCityName(college.city);
+    // Compute shop count up front so the title and description can both
+    // use the same number — keeps the SERP entry consistent.
+    const count = getShopsNearCollege(college.slug).length;
+    const title =
+      count > 0
+        ? `${count} Xerox Shops Near ${name}, ${cityName} [2026] · Snaprint`
+        : `Print Shops Near ${name}, ${cityName} [2026] · Snaprint`;
+    // Description target 150–160 chars; include count, key service, and a
+    // soft call-to-action. Falls back to a generic blurb when count is 0.
+    const description =
+      count > 0
+        ? `${count} verified xerox and print shops within 1.5 km of ${name}, ${cityName}. B&W from ₹3, colour prints, spiral binding, lamination, scan, ID photos. Open hours vary — call ahead.`
+        : `Find print and xerox shops near ${name}, ${cityName}. B&W and colour prints, binding, lamination and scanning. Open hours vary — call ahead.`;
     return {
       // No "— Snaprint" suffix: the root layout's title template already
-      // appends "· Snaprint", which was rendering "… — Snaprint · Snaprint".
-      title: `Print and xerox shops near ${name}, ${getCityName(college.city)}`,
-      description: college.intro,
+      // appends "· Snaprint". The literal "· Snaprint" we add here ends up
+      // rendered as the title-template suffix anyway; keeping it makes the
+      // string readable in code and in OG/email previews where the template
+      // doesn't apply.
+      title,
+      description,
       keywords: college.keywords,
       alternates: { canonical: `/print-near/${college.slug}` },
       openGraph: {
-        title: `Print and xerox shops near ${name} — Snaprint`,
-        description: college.intro,
+        title: `${count > 0 ? count + " " : ""}Xerox shops near ${name}, ${cityName} — Snaprint`,
+        description,
         url: `${SITE_URL}/print-near/${college.slug}`,
         type: "website",
         images: [`${SITE_URL}/og.png`],
@@ -50,14 +68,24 @@ export function generateMetadata({
 
   const area = getArea(params.entity);
   if (area) {
+    const cityName = getCityName(area.city);
+    const count = area.liveLocations?.length ?? 0;
+    const title =
+      count > 0
+        ? `${count} Xerox Shops in ${area.name}, ${cityName} — Open Now · Snaprint`
+        : `Print Shops in ${area.name}, ${cityName} · Snaprint`;
+    const description =
+      count > 0
+        ? `${count} verified print and xerox shops in ${area.name}, ${cityName}. B&W from ₹3, colour prints, spiral binding, scan, ID photos. Open hours vary — call ahead.`
+        : `Print and xerox shops in ${area.name}, ${cityName}. B&W and colour prints, binding, lamination and scanning. Open hours vary — call ahead.`;
     return {
-      title: `Print and xerox shops in ${area.name}, ${getCityName(area.city)}`,
-      description: area.intro,
+      title,
+      description,
       keywords: area.keywords,
       alternates: { canonical: `/print-near/${area.slug}` },
       openGraph: {
-        title: `Print and xerox shops in ${area.name} — Snaprint`,
-        description: area.intro,
+        title: `${count > 0 ? count + " " : ""}Xerox shops in ${area.name}, ${cityName} — Snaprint`,
+        description,
         url: `${SITE_URL}/print-near/${area.slug}`,
         type: "website",
         images: [`${SITE_URL}/og.png`],
@@ -122,6 +150,48 @@ export default async function EntityPage({
             addressCountry: "IN",
           },
         },
+        // Per-shop LocalBusiness nodes — one per verified shop within radius.
+        // Gives each shop its own @id so search engines and AI extractors can
+        // disambiguate them. Only emitted when getShopsNearCollege returns
+        // data; for pages with 0 nearby shops we skip the loop entirely.
+        ...(nearbyShops.length > 0
+          ? nearbyShops.map((loc, i) => ({
+              "@type": "LocalBusiness",
+              "@id": `${SITE_URL}/#shop-${college.slug}-${i}`,
+              name: loc.name,
+              description: `${loc.name} is one of the verified print shops in ${getCityName(college.city)}. Services include B&W and colour prints, spiral binding, lamination, and scanning.`,
+              ...(loc.placeId
+                ? { url: `https://www.google.com/maps/place/?q=place_id:${loc.placeId}` }
+                : {}),
+              ...(loc.phone ? { telephone: loc.phone } : {}),
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: loc.address,
+                addressLocality: getCityName(college.city),
+                addressRegion: getCityState(college.city),
+                addressCountry: "IN",
+              },
+              ...(loc.lat && loc.lng
+                ? {
+                    geo: {
+                      "@type": "GeoCoordinates",
+                      latitude: loc.lat,
+                      longitude: loc.lng,
+                    },
+                  }
+                : {}),
+              ...(loc.rating
+                ? {
+                    aggregateRating: {
+                      "@type": "AggregateRating",
+                      ratingValue: loc.rating,
+                      reviewCount: loc.reviews || 1,
+                    },
+                  }
+                : {}),
+              parentOrganization: { "@id": `${SITE_URL}/#organization` },
+            }))
+          : []),
         // BreadcrumbList
         {
           "@type": "BreadcrumbList",
@@ -160,6 +230,12 @@ export default async function EntityPage({
     const neighbors = getNeighborCities(area.city);
     const faqs = getLocationFaqs(params.entity, area.city);
 
+    const areaLocations = area.liveLocations ?? [];
+    // Fallback anchor for the parent node's address/geo/telephone — only
+    // used when it exists, and always taken as a whole so the three fields
+    // describe the same real place instead of mixing one shop's coordinates
+    // with a street-less, area-wide address.
+    const firstLoc = areaLocations[0];
     const jsonLd = {
       "@context": "https://schema.org",
       "@graph": [
@@ -170,33 +246,75 @@ export default async function EntityPage({
           description: area.intro,
           url: `${SITE_URL}/print-near/${area.slug}`,
           image: `${SITE_URL}/og.png`,
-          // geo/address/telephone all describe liveLocations[0] so the
-          // node stays internally consistent — one real shop, not a mix.
-          // address is required by schema.org/LocalBusiness; omitting it
-          // left the node incomplete for AI and rich-result extractors.
-          ...(area.liveLocations && area.liveLocations.length > 0
+          address: {
+            "@type": "PostalAddress",
+            ...(firstLoc ? { streetAddress: firstLoc.address } : {}),
+            addressLocality: area.name,
+            addressRegion: getCityState(area.city),
+            addressCountry: "IN",
+            ...(area.pinCodes?.[0] ? { postalCode: area.pinCodes[0] } : {}),
+          },
+          ...(firstLoc?.lat && firstLoc?.lng
             ? {
                 geo: {
                   "@type": "GeoCoordinates",
-                  latitude: area.liveLocations[0].lat,
-                  longitude: area.liveLocations[0].lng,
-                },
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: area.liveLocations[0].address,
-                  addressLocality: area.name,
-                  addressRegion: "Karnataka",
-                  ...(area.pinCodes?.[0] ? { postalCode: area.pinCodes[0] } : {}),
-                  addressCountry: "IN",
+                  latitude: firstLoc.lat,
+                  longitude: firstLoc.lng,
                 },
               }
             : {}),
+          ...(firstLoc?.phone ? { telephone: firstLoc.phone } : {}),
+          // Parent summary node — kept as a stable @id that does NOT depend
+          // on individual shop entries, so removing a shop from liveLocations
+          // doesn't orphan the page-level node. Per-shop nodes below carry
+          // their own verifiable address/geo/telephone.
           areaServed: { "@id": `${SITE_URL}/#organization` },
           parentOrganization: { "@id": `${SITE_URL}/#organization` },
-          ...(area.liveLocations && area.liveLocations[0]?.phone
-            ? { telephone: area.liveLocations[0].phone }
-            : {}),
         },
+        // Per-shop LocalBusiness nodes — one per liveLocation. Each carries
+        // its own @id so search engines and AI extractors can index the
+        // individual shop entity. For areas with 0 liveLocations the map
+        // returns an empty array and no per-shop nodes are emitted, leaving
+        // the parent summary node as the only LocalBusiness in the graph.
+        ...(areaLocations.length > 0
+          ? areaLocations.map((loc, i) => ({
+              "@type": "LocalBusiness",
+              "@id": `${SITE_URL}/#shop-${area.slug}-${i}`,
+              name: loc.name,
+              description: `${loc.name} is one of the verified print shops in ${area.name}, ${getCityName(area.city)}. Services include B&W and colour prints, spiral binding, lamination, and scanning.`,
+              ...(loc.placeId
+                ? { url: `https://www.google.com/maps/place/?q=place_id:${loc.placeId}` }
+                : {}),
+              ...(loc.phone ? { telephone: loc.phone } : {}),
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: loc.address,
+                addressLocality: area.name,
+                addressRegion: getCityState(area.city),
+                addressCountry: "IN",
+                ...(area.pinCodes?.[0] ? { postalCode: area.pinCodes[0] } : {}),
+              },
+              ...(loc.lat && loc.lng
+                ? {
+                    geo: {
+                      "@type": "GeoCoordinates",
+                      latitude: loc.lat,
+                      longitude: loc.lng,
+                    },
+                  }
+                : {}),
+              ...(loc.rating
+                ? {
+                    aggregateRating: {
+                      "@type": "AggregateRating",
+                      ratingValue: loc.rating,
+                      reviewCount: loc.reviews || 1,
+                    },
+                  }
+                : {}),
+              parentOrganization: { "@id": `${SITE_URL}/#organization` },
+            }))
+          : []),
         // BreadcrumbList
         {
           "@type": "BreadcrumbList",

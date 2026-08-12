@@ -75,6 +75,12 @@ export function getCityName(slug: Slug): string {
     .join(" ");
 }
 
+/** State/region for a city slug, regardless of presence. Falls back to "" for an unknown slug. */
+export function getCityState(slug: Slug): string {
+  const c = citiesData.find((c) => c.slug === slug);
+  return c?.state ?? "";
+}
+
 export function getCollege(slug: Slug): College | null {
   const c = collegesData.find((c) => c.slug === slug);
   if (!c) return null;

@@ -71,6 +71,11 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
+    other: {
+      ...(process.env.BING_SITE_VERIFICATION
+        ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+        : {}),
+    },
   },
 };
 
@@ -85,9 +90,19 @@ const jsonLd = {
       logo: `${siteUrl}/icon-512.png`,
       description: "Snaprint builds self-service print kiosks that turn xerox shops into 24/7 remote printing hubs.",
       email: "snaprints@sanskritilabs.in",
-      // TODO(KG): once Snaprint has Crunchbase + Wikidata entries, add them here.
-      // LinkedIn (verified) is the only authoritative sameAs today.
-      sameAs: ["https://www.linkedin.com/showcase/snaprints/"],
+      // TODO(KG): once Snaprint has Crunchbase + F6S + Justdial + Wikidata
+      // entries, uncomment them here. LinkedIn (verified) is the only
+      // authoritative sameAs today.
+      sameAs: [
+        "https://www.linkedin.com/showcase/snaprints/",
+        "https://www.linkedin.com/company/sanskriti-labs/",
+        // TODO: uncomment after creating profile at https://www.crunchbase.com/organization/snaprint
+        // "https://www.crunchbase.com/organization/snaprint",
+        // TODO: uncomment after verifying the F6S URL exists (claimed in GSC serps)
+        // "https://www.f6s.com/company/snaprint",
+        // TODO: uncomment after creating profile at https://www.justdial.com/Bangalore/Snaprint
+        // "https://www.justdial.com/Bangalore/Snaprint",
+      ],
       founder: [
         {
           "@type": "Person",

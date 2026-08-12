@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PseoHero from "@/components/pseo/PseoHero";
+import PseoBody from "@/components/pseo/PseoBody";
 import PseoServicesList from "@/components/pseo/PseoServicesList";
 import PseoFaq from "@/components/pseo/PseoFaq";
 import PseoCrossLinks from "@/components/pseo/PseoCrossLinks";
@@ -63,6 +64,16 @@ export default function PseoPage({
           {props.kind === "college" && <PseoHero kind="college" college={props.college} />}
           {props.kind === "area" && <PseoHero kind="area" area={props.area} />}
         </div>
+
+        {props.kind === "area" && (
+          <PseoBody kind="area" slug={props.area.slug} city={props.area.city} />
+        )}
+        {props.kind === "college" && (
+          <PseoBody kind="college" slug={props.college.slug} city={props.college.city} />
+        )}
+        {props.kind === "city" && (
+          <PseoBody kind="city" slug={props.city.slug} city={props.city.slug} />
+        )}
 
         <PseoServicesList />
 

@@ -39,7 +39,9 @@ next-env.d.ts
 
 # local
 /.venv/
-/reports/
+# GSC data exports
+reports/gsc-*.json
+!reports/.gitkeep
 
 # python
 __pycache__/
