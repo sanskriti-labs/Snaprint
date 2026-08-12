@@ -34,6 +34,33 @@ type AreaGroup = {
   colleges: ReturnType<typeof getAllLiveColleges>;
 };
 
+// CollectionPage + BreadcrumbList only — see app/instant-print/page.tsx for
+// why Product/FAQ schema stays off directory hub pages.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${SITE_URL}/print-near#collection`,
+      url: `${SITE_URL}/print-near`,
+      name: "Print and xerox shops near you",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "All locations",
+          item: `${SITE_URL}/print-near`,
+        },
+      ],
+    },
+  ],
+};
+
 export default function PrintNearIndex() {
   const allAreas = getAllLiveAreas();
   const allColleges = getAllLiveColleges();
@@ -75,6 +102,10 @@ export default function PrintNearIndex() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="mx-auto max-w-[1280px] px-6 py-24 md:px-10">
         <p className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E63946]">

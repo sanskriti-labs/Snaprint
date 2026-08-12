@@ -28,6 +28,35 @@ export const metadata: Metadata = {
   },
 };
 
+// CollectionPage + BreadcrumbList only — no Product/FAQ here. Those schemas
+// are scoped to app/page.tsx on purpose (see comment there): adding kiosk
+// pricing/FAQ to directory hub pages leaked into search snippets for pages
+// about unrelated third-party shops.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${SITE_URL}/instant-print#collection`,
+      url: `${SITE_URL}/instant-print`,
+      name: "Print and xerox shops across India",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "All locations",
+          item: `${SITE_URL}/instant-print`,
+        },
+      ],
+    },
+  ],
+};
+
 export default function InstantPrintIndex() {
   const cities = getAllLiveCities();
   const colleges = getAllLiveColleges();
@@ -41,6 +70,10 @@ export default function InstantPrintIndex() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="mx-auto max-w-[1280px] px-6 py-24 md:px-10">
         {/* Eyebrow + H1 */}
