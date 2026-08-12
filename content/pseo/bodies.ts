@@ -16,6 +16,26 @@ export type BodyEntry = {
 };
 
 export const bodies: Record<string, BodyEntry> = {
+  "area-abids": {
+    kind: "area",
+    slug: "abids",
+    name: "Abids",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 36,
+    markdown: `20 verified xerox and print shops in Abids, Hyderabad (500001). Top-rated is Rohit Xerox at 5★, and the area averages 4.4★ across 17 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
+  "area-alwal": {
+    kind: "area",
+    slug: "alwal",
+    name: "Alwal",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 1). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+`,
+  },
   "area-ameerpet": {
     kind: "area",
     slug: "ameerpet",
@@ -66,6 +86,16 @@ export const bodies: Record<string, BodyEntry> = {
     markdown: `11 verified xerox and print shops in Ashok Nagar, Bangalore (560050, 560025). Top-rated is Communication Point - The Business Centre at 4.9★, and the area averages 3.8★ across 11 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-attapur": {
+    kind: "area",
+    slug: "attapur",
+    name: "Attapur",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 39,
+    markdown: `13 verified xerox and print shops in Attapur, Hyderabad (500048, 500006). Top-rated is Shyam stationery & Xerox at 5★, and the area averages 4.6★ across 13 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-attibele": {
     kind: "area",
     slug: "attibele",
@@ -94,6 +124,16 @@ export const bodies: Record<string, BodyEntry> = {
     priority: false,
     wordCount: 39,
     markdown: `10 verified xerox and print shops in Banaswadi, Bangalore (560043, 560005). Top-rated is Sri Sai Digital Copiers at 5★, and the area averages 4.3★ across 10 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
+  "area-banjara-hills": {
+    kind: "area",
+    slug: "banjara-hills",
+    name: "Banjara Hills",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 38,
+    markdown: `20 verified xerox and print shops in Banjara Hills, Hyderabad (500034, 500028). Top-rated is Junction Xerox at 5★, and the area averages 4.2★ across 15 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
   "area-basavanagudi": {
@@ -264,6 +304,16 @@ The day-to-day list is unusual for a city — most of it is commercial printing:
 Snaprint's rollout in Chickpet still has room to grow — the area's print demand is heavy and the verified shop count is currently thin. If you run a stationery or xerox shop in the market and want to host an S1 kiosk, the [setup page](/book) covers cost, expected footfall, and operator terms. For traders, the nearest kiosk is one tap away — visit [print-near chickpet](/print-near/chickpet) for directions and pricing.
 `,
   },
+  "area-chikkadpally": {
+    kind: "area",
+    slug: "chikkadpally",
+    name: "Chikkadpally",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 41,
+    markdown: `17 verified xerox and print shops in Chikkadpally, Hyderabad (500020, 500044). Top-rated is Bapuji Graphics Jumbo Xerox & Digitals at 5★, and the area averages 4.5★ across 14 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-cox-town": {
     kind: "area",
     slug: "cox-town",
@@ -352,6 +402,16 @@ Snaprint's kiosk network is set up to add late-night and weekend capacity to the
     markdown: `11 verified xerox and print shops in Dooravani Nagar, Bangalore (560016). Top-rated is Raiba Xerox & Stationary Store at 5★, and the area averages 4.5★ across 9 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-ecil": {
+    kind: "area",
+    slug: "ecil",
+    name: "ECIL",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 1). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+`,
+  },
   "area-ejipura": {
     kind: "area",
     slug: "ejipura",
@@ -412,6 +472,16 @@ Snaprint's kiosk network is set up to add late-night and weekend capacity to the
     markdown: `9 verified xerox and print shops in Gottigere, Bangalore (560076, 560083). Top-rated is Aman Enterprises at 5★, and the area averages 4.4★ across 8 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-habsiguda": {
+    kind: "area",
+    slug: "habsiguda",
+    name: "Habsiguda",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 42,
+    markdown: `15 verified xerox and print shops in Habsiguda, Hyderabad (500007, 500013). Top-rated is Sorvet ice cream -Ahmed stationery Xerox shop at 5★, and the area averages 4.2★ across 13 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-halasuru": {
     kind: "area",
     slug: "halasuru",
@@ -440,6 +510,16 @@ Snaprint's kiosk network is set up to add late-night and weekend capacity to the
     priority: false,
     wordCount: 41,
     markdown: `9 verified xerox and print shops in Hebbal, Bangalore (560024, 560004). Top-rated is E-STAMP & NOTARY @ VIDYA ENTERPRISES(G-SEVA)(SEVA-SINDHU)(CSC) at 5★, and the area averages 4.3★ across 8 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
+  "area-himayatnagar": {
+    kind: "area",
+    slug: "himayatnagar",
+    name: "Himayatnagar",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 40,
+    markdown: `20 verified xerox and print shops in Himayatnagar, Hyderabad (500029, 500020). Top-rated is Sri Vinayaka Digital Xerox Center at 5★, and the area averages 4.1★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
   "area-hongasandra": {
@@ -551,6 +631,16 @@ Snaprint's kiosk network is designed to add 24/7 self-serve capacity alongside t
     markdown: `20 verified xerox and print shops in JP Nagar, Bangalore (560078, 560069). Top-rated is Shree Maruthi Printers at 5★, and the area averages 4.7★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-jubilee-hills": {
+    kind: "area",
+    slug: "jubilee-hills",
+    name: "Jubilee Hills",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 42,
+    markdown: `16 verified xerox and print shops in Jubilee Hills, Hyderabad (500033, 500096). Top-rated is Sri Venkateshwara Xerox & Net Center at 5★, and the area averages 4.3★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-kadugondanahalli": {
     kind: "area",
     slug: "kadugondanahalli",
@@ -631,6 +721,16 @@ Snaprint's kiosk network is designed to add 24/7 self-serve capacity alongside t
     markdown: `20 verified xerox and print shops in Kengeri, Bangalore (560060, 560082). Top-rated is CREATIVE CORNER at 5★, and the area averages 4.3★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-kompally": {
+    kind: "area",
+    slug: "kompally",
+    name: "Kompally",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 37,
+    markdown: `10 verified xerox and print shops in Kompally, Hyderabad (500100, 500010). Top-rated is SVR ENTERPRISES at 5★, and the area averages 4.1★ across 7 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-konanakunte": {
     kind: "area",
     slug: "konanakunte",
@@ -671,6 +771,16 @@ Snaprint's kiosk network is designed to add 24/7 self-serve capacity alongside t
     markdown: `7 verified xerox and print shops in Kothanur, Bangalore (560077). Top-rated is Sundar Turning Point Xerox Center at 5★, and the area averages 4.5★ across 7 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-kothapet": {
+    kind: "area",
+    slug: "kothapet",
+    name: "Kothapet",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 39,
+    markdown: `20 verified xerox and print shops in Kothapet, Hyderabad (500102, 500035). Top-rated is S V Colour Xerox at 5★, and the area averages 4.4★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-kothnur": {
     kind: "area",
     slug: "kothnur",
@@ -698,6 +808,16 @@ A residential B&W heavy mix: school project printouts, Aadhaar and PAN copies, r
 ## How Snaprint fits in
 
 Snaprint's rollout in Kothnur still has room to grow — the verified shop count is currently thin relative to the residential density. If you run a xerox shop here and want to host an S1 kiosk, the [setup page](/book) covers cost, expected footfall, and revenue share. For residents, the nearest kiosk is one tap away — visit [print-near kothnur](/print-near/kothnur) for directions and the partner shop list.
+`,
+  },
+  "area-koti": {
+    kind: "area",
+    slug: "koti",
+    name: "Koti",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 37,
+    markdown: `20 verified xerox and print shops in Koti, Hyderabad (500001, 500027). Top-rated is KK DIGITALS at 5★, and the area averages 4.6★ across 18 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
   "area-krishnarajapuram": {
@@ -849,6 +969,16 @@ Snaprint's rollout is growing in Madiwala — the kiosk network is designed to a
     markdown: `19 verified xerox and print shops in Malleswaram, Bangalore (560003, 560055). Top-rated is Sha Shi Bha Enterprises at 5★, and the area averages 4.5★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-manikonda": {
+    kind: "area",
+    slug: "manikonda",
+    name: "Manikonda",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 40,
+    markdown: `20 verified xerox and print shops in Manikonda, Hyderabad (500089, 500104). Top-rated is Sree Enterprises Notary & Xerox at 5★, and the area averages 4.3★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-marathahalli": {
     kind: "area",
     slug: "marathahalli",
@@ -879,6 +1009,16 @@ Snaprint's rollout is growing in Madiwala — the kiosk network is designed to a
     markdown: `15 verified xerox and print shops in Mehdipatnam, Hyderabad (500028). Top-rated is Junction Xerox at 5★, and the area averages 4.4★ across 13 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-miyapur": {
+    kind: "area",
+    slug: "miyapur",
+    name: "Miyapur",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 44,
+    markdown: `20 verified xerox and print shops in Miyapur, Hyderabad (500049, 502033). Top-rated is THE PRINT HOUSE - gifts, prints, design & xerox at 5★, and the area averages 4.5★ across 18 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-nagarbhavi": {
     kind: "area",
     slug: "nagarbhavi",
@@ -899,6 +1039,26 @@ Snaprint's rollout is growing in Madiwala — the kiosk network is designed to a
     markdown: `9 verified xerox and print shops in Nagavara, Bangalore (560045, 560077). Top-rated is Maha Ganapathi enterprises Xerox shop at 5★, and the area averages 4.4★ across 7 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-nagole": {
+    kind: "area",
+    slug: "nagole",
+    name: "Nagole",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 39,
+    markdown: `19 verified xerox and print shops in Nagole, Hyderabad (500068, 500102). Top-rated is Sreeja Stationery & Xerox at 5★, and the area averages 4.5★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
+  "area-nallakunta": {
+    kind: "area",
+    slug: "nallakunta",
+    name: "Nallakunta",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 37,
+    markdown: `20 verified xerox and print shops in Nallakunta, Hyderabad (500044, 500020). Top-rated is Copier solutions at 5★, and the area averages 4.5★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
   "area-nandini-layout": {
     kind: "area",
     slug: "nandini-layout",
@@ -917,6 +1077,16 @@ Snaprint's rollout is growing in Madiwala — the kiosk network is designed to a
     priority: false,
     wordCount: 38,
     markdown: `7 verified xerox and print shops in New Thippasandra, Bangalore (560075, 560008). Top-rated is Sva fancy at 5★, and the area averages 4.4★ across 7 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
+  "area-nizampet": {
+    kind: "area",
+    slug: "nizampet",
+    name: "Nizampet",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 41,
+    markdown: `20 verified xerox and print shops in Nizampet, Hyderabad (500090, 500085). Top-rated is SSP XEROX STATIONERY GIFTS AND TOYS at 5★, and the area averages 4.6★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
   "area-old-airport-road": {
@@ -1108,6 +1278,16 @@ Snaprint's rollout prioritises the Sarjapur corridor precisely because the verif
     markdown: `10 verified xerox and print shops in Singasandra, Bangalore (560068, 560114). Top-rated is Afs Traders XEROX at 5★, and the area averages 4.4★ across 10 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
+  "area-tarnaka": {
+    kind: "area",
+    slug: "tarnaka",
+    name: "Tarnaka",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 1). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+`,
+  },
   "area-ulsoor": {
     kind: "area",
     slug: "ulsoor",
@@ -1155,6 +1335,16 @@ Snaprint's kiosk network is designed to add 24/7 self-serve capacity to the veri
     priority: false,
     wordCount: 40,
     markdown: `17 verified xerox and print shops in Uttarahalli, Bangalore (560061, 560060). Top-rated is JK XEROX & DIGITAL PRINTS at 5★, and the area averages 4.2★ across 15 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
+`,
+  },
+  "area-vanasthalipuram": {
+    kind: "area",
+    slug: "vanasthalipuram",
+    name: "Vanasthalipuram",
+    city: "hyderabad",
+    priority: false,
+    wordCount: 41,
+    markdown: `20 verified xerox and print shops in Vanasthalipuram, Hyderabad (500070, 500001). Top-rated is SRI LAXMI PRASANNA STATIONARY & XEROX at 5★, and the area averages 4.6★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.
 `,
   },
   "area-varthur": {
@@ -1245,6 +1435,16 @@ Snaprint's kiosk network is designed to add 24/7 self-serve capacity to the veri
     priority: false,
     wordCount: 26,
     markdown: `Atria Institute of Technology students near Hebbal often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.
+`,
+  },
+  "college-badruka-college-kachiguda": {
+    kind: "college",
+    slug: "badruka-college-kachiguda",
+    name: "Badruka College of Commerce & Arts",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
 `,
   },
   "college-bit-bangalore": {
@@ -1475,6 +1675,16 @@ Snaprint's rollout in Whitefield is working alongside the two verified shops to 
     markdown: `Jain University School of Law students at the Shankarapuram campus often need assignment print, moot memo print, and exam form print — see verified xerox shops near the campus.
 `,
   },
+  "college-jntuh-kukatpally": {
+    kind: "college",
+    slug: "jntuh-kukatpally",
+    name: "Jawaharlal Nehru Technological University Hyderabad",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+`,
+  },
   "college-jssate-bangalore": {
     kind: "college",
     slug: "jssate-bangalore",
@@ -1533,6 +1743,46 @@ Snaprint's rollout in Whitefield is working alongside the two verified shops to 
     priority: false,
     wordCount: 27,
     markdown: `NMIT students living near Yelahanka often need assignment print, project report print, and document print on the same day — see verified xerox shops near NMIT campus.
+`,
+  },
+  "college-nizam-college-hyderabad": {
+    kind: "college",
+    slug: "nizam-college-hyderabad",
+    name: "Nizam College",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+`,
+  },
+  "college-nizams-institute-medical-sciences": {
+    kind: "college",
+    slug: "nizams-institute-medical-sciences",
+    name: "Nizam's Institute of Medical Sciences",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+`,
+  },
+  "college-osmania-medical-college": {
+    kind: "college",
+    slug: "osmania-medical-college",
+    name: "Osmania Medical College",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
+`,
+  },
+  "college-osmania-university-arts-college": {
+    kind: "college",
+    slug: "osmania-university-arts-college",
+    name: "Osmania University College of Arts and Social Sciences",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
 `,
   },
   "college-oxford-coe-bangalore": {
@@ -1671,6 +1921,16 @@ Snaprint's rollout is working alongside the two verified shops around REVA to ad
     priority: false,
     wordCount: 28,
     markdown: `SJBIT students at BGS Health & Education City often need assignment print, project report print, and placement CV print — see verified xerox shops near the Kengeri campus.
+`,
+  },
+  "college-st-francis-college-begumpet": {
+    kind: "college",
+    slug: "st-francis-college-begumpet",
+    name: "St. Francis College for Women",
+    city: "hyderabad",
+    priority: true,
+    wordCount: 20,
+    markdown: `<!-- This page has thin data (shopCount: 0). Run \`pnpm run generate:priority\` to generate unique prose via Claude API. -->
 `,
   },
   "college-st-josephs-college-of-commerce": {

@@ -137,11 +137,31 @@ Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas
 - [Print near Madhapur, Hyderabad](https://snaprints.com/print-near/madhapur) — 20 shops
 - [Print near Gachibowli, Hyderabad](https://snaprints.com/print-near/gachibowli) — 20 shops
 - [Print near Uppal, Hyderabad](https://snaprints.com/print-near/uppal) — 20 shops
+- [Print near Kondapur, Hyderabad](https://snaprints.com/print-near/kondapur) — 20 shops
+- [Print near Mehdipatnam, Hyderabad](https://snaprints.com/print-near/mehdipatnam) — 20 shops
 - [Print near Malakpet, Hyderabad](https://snaprints.com/print-near/malakpet) — 20 shops
-- [Print near Kondapur, Hyderabad](https://snaprints.com/print-near/kondapur) — 19 shops
-- [Print near LB Nagar, Hyderabad](https://snaprints.com/print-near/lb-nagar) — 17 shops
-- [Print near Mehdipatnam, Hyderabad](https://snaprints.com/print-near/mehdipatnam) — 15 shops
-- [Print near Begumpet, Hyderabad](https://snaprints.com/print-near/begumpet) — 10 shops
+- [Print near Banjara Hills, Hyderabad](https://snaprints.com/print-near/banjara-hills) — 20 shops
+- [Print near Miyapur, Hyderabad](https://snaprints.com/print-near/miyapur) — 20 shops
+- [Print near Nallakunta, Hyderabad](https://snaprints.com/print-near/nallakunta) — 20 shops
+- [Print near Abids, Hyderabad](https://snaprints.com/print-near/abids) — 20 shops
+- [Print near Koti, Hyderabad](https://snaprints.com/print-near/koti) — 20 shops
+- [Print near Himayatnagar, Hyderabad](https://snaprints.com/print-near/himayatnagar) — 20 shops
+- [Print near Vanasthalipuram, Hyderabad](https://snaprints.com/print-near/vanasthalipuram) — 20 shops
+- [Print near Manikonda, Hyderabad](https://snaprints.com/print-near/manikonda) — 20 shops
+- [Print near Kothapet, Hyderabad](https://snaprints.com/print-near/kothapet) — 20 shops
+- [Print near Nizampet, Hyderabad](https://snaprints.com/print-near/nizampet) — 20 shops
+- [Print near Nagole, Hyderabad](https://snaprints.com/print-near/nagole) — 19 shops
+- [Print near Chikkadpally, Hyderabad](https://snaprints.com/print-near/chikkadpally) — 17 shops
+- [Print near LB Nagar, Hyderabad](https://snaprints.com/print-near/lb-nagar) — 16 shops
+- [Print near Jubilee Hills, Hyderabad](https://snaprints.com/print-near/jubilee-hills) — 16 shops
+- [Print near Habsiguda, Hyderabad](https://snaprints.com/print-near/habsiguda) — 15 shops
+- [Print near Ashok Nagar, Hyderabad](https://snaprints.com/print-near/ashok-nagar) — 15 shops
+- [Print near Begumpet, Hyderabad](https://snaprints.com/print-near/begumpet) — 13 shops
+- [Print near Attapur, Hyderabad](https://snaprints.com/print-near/attapur) — 13 shops
+- [Print near Kompally, Hyderabad](https://snaprints.com/print-near/kompally) — 10 shops
+- [Print near Tarnaka, Hyderabad](https://snaprints.com/print-near/tarnaka) — 1 shop
+- [Print near ECIL, Hyderabad](https://snaprints.com/print-near/ecil) — 1 shop
+- [Print near Alwal, Hyderabad](https://snaprints.com/print-near/alwal) — 1 shop
 
 ### Bengaluru colleges
 
@@ -185,6 +205,17 @@ Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas
 - [Print near CMRIT, Bengaluru](https://snaprints.com/print-near/cmrit-bangalore) — 2 shops
 - [Print near BMS Institute of Technology & Management, Bengaluru](https://snaprints.com/print-near/bmsit-bangalore) — 2 shops
 - [Print near Presidency University, Bengaluru](https://snaprints.com/print-near/presidency-university-bangalore) — 1 shop
+- More colleges are promoted to live only after operator sign-off: see `content/pseo/colleges.ts` for the verification policy.
+
+### Hyderabad colleges
+
+- [Print near Badruka College, Hyderabad](https://snaprints.com/print-near/badruka-college-kachiguda) — 58 shops
+- [Print near Osmania Medical College, Hyderabad](https://snaprints.com/print-near/osmania-medical-college) — 40 shops
+- [Print near JNTUH, Hyderabad](https://snaprints.com/print-near/jntuh-kukatpally) — 37 shops
+- [Print near Nizam College, Hyderabad](https://snaprints.com/print-near/nizam-college-hyderabad) — 36 shops
+- [Print near NIMS, Hyderabad](https://snaprints.com/print-near/nizams-institute-medical-sciences) — 30 shops
+- [Print near St. Francis College for Women, Hyderabad](https://snaprints.com/print-near/st-francis-college-begumpet) — 24 shops
+- [Print near Osmania University, Hyderabad](https://snaprints.com/print-near/osmania-university-arts-college) — 8 shops
 - More colleges are promoted to live only after operator sign-off: see `content/pseo/colleges.ts` for the verification policy.
 
 ## Contact

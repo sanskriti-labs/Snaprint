@@ -37,7 +37,7 @@
  *       "shops near Atria IT" page). Price schema belongs on the page
  *       it's actually about (home), not sitewide.
  */
-const { readFileSync, existsSync } = require("node:fs");
+const { readFileSync, existsSync, readdirSync } = require("node:fs");
 const { resolve, join } = require("node:path");
 
 const SITE_URL = "https://snaprints.com";
@@ -81,13 +81,13 @@ const collegesPath = resolve(repoRoot, "content/pseo/colleges.ts");
 const citiesPath = resolve(repoRoot, "content/pseo/cities.ts");
 const areasPath = resolve(repoRoot, "content/pseo/areas.ts");
 const llmsPath = resolve(repoRoot, "public/llms.txt");
-// Prefer the LLM-verified shop file (highest precision). Fall back to
-// the heuristic-cleaned file, then the raw scrape. The verifier
+// Prefer the LLM-verified shop file (highest precision) when present.
+// Otherwise load every scripts/scraper/data/shops-clean*.jsonl file (one
+// per city), falling back to the raw Bengaluru scrape. The verifier
 // resolves the same way content/pseo/shops.ts does.
 const shopsLlmPath = resolve(repoRoot, "scripts/clean/data/shops-llm-verified.jsonl");
-const shopsCleanPath = resolve(repoRoot, "scripts/scraper/data/shops-clean.jsonl");
+const shopsDataDir = resolve(repoRoot, "scripts/scraper/data");
 const shopsRawPath = resolve(repoRoot, "scripts/scraper/data/results-77areas.json");
-const shopsPath = [shopsLlmPath, shopsCleanPath, shopsRawPath].find((p) => existsSync(p));
 
 // "live" or "served" — both are published; only "planned" 404s.
 const isLive = (presence) => presence === "live" || presence === "served";
@@ -111,14 +111,9 @@ function haversineKm(a, b) {
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-// Load shop index from JSONL — same source as content/pseo/shops.ts.
-function loadShops() {
-  if (!existsSync(shopsPath)) {
-    console.warn(`[pseo] shops JSONL not found at ${shopsPath}; radius check will be skipped`);
-    return [];
-  }
-  const isCleaned = shopsPath.endsWith("shops-llm-verified.jsonl") || shopsPath.endsWith("shops-clean.jsonl");
-  const text = readFileSync(shopsPath, "utf8");
+// Load shop index from JSONL — same source(s) as content/pseo/shops.ts.
+function loadShopsFromFile(path, isCleaned) {
+  const text = readFileSync(path, "utf8");
   const out = [];
   for (const line of text.split("\n")) {
     const trimmed = line.trim();
@@ -132,6 +127,34 @@ function loadShops() {
     } catch {}
   }
   return out;
+}
+
+function loadShops() {
+  // shops-llm-verified.jsonl only ever covered Bengaluru (1134 records,
+  // lat 12.7-13.1) — using it exclusively silently dropped every other
+  // city's shops from radius checks the moment a second city's colleges
+  // went live. Prefer it for Bengaluru specifically, since it's a
+  // stricter audit than the heuristic cleaner, but still load every
+  // other city's shops-clean*.jsonl alongside it.
+  const cleanFiles = existsSync(shopsDataDir)
+    ? readdirSync(shopsDataDir).filter((f) => /^shops-clean.*\.jsonl$/.test(f))
+    : [];
+  const otherCityFiles = cleanFiles.filter((f) => f !== "shops-clean.jsonl");
+
+  if (existsSync(shopsLlmPath)) {
+    return [
+      ...loadShopsFromFile(shopsLlmPath, true),
+      ...otherCityFiles.flatMap((f) => loadShopsFromFile(resolve(shopsDataDir, f), true)),
+    ];
+  }
+  if (cleanFiles.length > 0) {
+    return cleanFiles.flatMap((f) => loadShopsFromFile(resolve(shopsDataDir, f), true));
+  }
+  if (existsSync(shopsRawPath)) {
+    return loadShopsFromFile(shopsRawPath, false);
+  }
+  console.warn(`[pseo] no shop JSONL found under ${shopsDataDir}; radius check will be skipped`);
+  return [];
 }
 
 const shops = loadShops();
@@ -374,29 +397,43 @@ if (!existsSync(llmsPath)) {
 
 // ---------------------------------------------------------------------------
 // 10: shop-data authenticity. Every published shop must carry a Google
-// placeId, real coords inside the Bengaluru bbox, and must not be one of
-// the structurally-non-print categories (mall / hotel / bank / bus stop)
-// that the keyword scrape pulls in as collateral.
+// placeId, real coords inside a known city's bbox (catches mis-scraped
+// results from a different city bleeding into a city's clean file — see
+// the 18 Bengaluru-coordinate records found in shops-clean-hyderabad.jsonl
+// on 2026-08-12), and must not be one of the structurally-non-print
+// categories (mall / hotel / bank / bus stop) that the keyword scrape
+// pulls in as collateral.
 // ---------------------------------------------------------------------------
-const BBOX = { latMin: 12.6, latMax: 13.4, lngMin: 77.3, lngMax: 78.0 };
+const CITY_BBOXES = [
+  { name: "Bengaluru", latMin: 12.6, latMax: 13.4, lngMin: 77.3, lngMax: 78.0 },
+  { name: "Hyderabad", latMin: 17.1, latMax: 17.7, lngMin: 78.1, lngMax: 78.7 },
+];
 const JUNK = /\b(shopping mall|hotel|bank|jail|bus stop|bus depot|hostel|movie theater|pharmacy|subway station|water utility)\b/i;
 
-if (existsSync(shopsPath)) {
-  const lines = readFileSync(shopsPath, "utf8").split("\n").filter((l) => l.trim());
+{
+  const cleanFiles = existsSync(shopsDataDir)
+    ? readdirSync(shopsDataDir).filter((f) => /^shops-clean.*\.jsonl$/.test(f))
+    : [];
+  const allLines = cleanFiles.flatMap((f) =>
+    readFileSync(resolve(shopsDataDir, f), "utf8").split("\n").filter((l) => l.trim())
+  );
   let noPid = 0, outOfBox = 0, junk = 0;
-  for (const line of lines) {
+  for (const line of allLines) {
     let rec;
     try { rec = JSON.parse(line); } catch { continue; }
     if (!rec.placeId) noPid++;
     const lat = Number(rec.lat ?? 0), lng = Number(rec.lng ?? 0);
-    if (!lat || !lng || lat < BBOX.latMin || lat > BBOX.latMax || lng < BBOX.lngMin || lng > BBOX.lngMax) outOfBox++;
+    const inAnyBbox = CITY_BBOXES.some(
+      (b) => lat >= b.latMin && lat <= b.latMax && lng >= b.lngMin && lng <= b.lngMax
+    );
+    if (!lat || !lng || !inAnyBbox) outOfBox++;
     if (JUNK.test(String(rec.categories ?? rec.category ?? ""))) junk++;
   }
   if (noPid > 0) fail(`${noPid} shop records missing Google placeId`);
-  if (outOfBox > 0) fail(`${outOfBox} shop records have coords outside the Bengaluru bbox`);
+  if (outOfBox > 0) fail(`${outOfBox} shop records have coords outside every known city bbox`);
   if (junk > 0) fail(`${junk} shop records carry a non-print category (mall/hotel/bank/etc)`);
-  if (noPid === 0 && outOfBox === 0 && junk === 0) {
-    ok(`${lines.length} shop records: all have placeId, valid coords, print-related categories`);
+  if (allLines.length > 0 && noPid === 0 && outOfBox === 0 && junk === 0) {
+    ok(`${allLines.length} shop records: all have placeId, valid coords, print-related categories`);
   }
 }
 

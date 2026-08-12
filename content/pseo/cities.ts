@@ -22,10 +22,11 @@ const cities: City[] = [
       "92 neighbourhoods in Bengaluru with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "instant print bangalore",
-      "print shop bengaluru",
-      "xerox shop bangalore",
+      "print shop bangalore",
+      "xerox shop bengaluru",
       "print near me bangalore",
       "document printing bangalore",
+      "photocopy shop bengaluru",
     ],
     neighbors: ["hyderabad"],
     // "live" once a real kiosk address is verified in this city; "served"

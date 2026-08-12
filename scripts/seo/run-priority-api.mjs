@@ -14,7 +14,9 @@
  * Requests are run SEQUENTIALLY so we never hit rate limits and the
  * output is deterministic.
  *
- * Requires: ANTHROPIC_API_KEY in the environment.
+ * Requires: ANTHROPIC_API_KEY in the environment (Anthropic direct), or
+ * ANTHROPIC_AUTH_TOKEN + ANTHROPIC_BASE_URL for an Anthropic-compatible
+ * provider (e.g. MiniMax's Claude-compatible endpoint).
  */
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from "node:fs";
 import { resolve, join } from "node:path";
@@ -35,16 +37,24 @@ const PROMPT_PATH = resolve(
   "scripts/seo/prompts/priority-body.md"
 );
 
-const API_URL = "https://api.anthropic.com/v1/messages";
-const MODEL = "claude-opus-5";
-const MAX_TOKENS = 2000;
+// ANTHROPIC_BASE_URL + ANTHROPIC_AUTH_TOKEN switches to any
+// Anthropic-compatible provider (e.g. MiniMax); otherwise defaults to
+// Anthropic direct with ANTHROPIC_API_KEY.
+const API_URL = `${(process.env.ANTHROPIC_BASE_URL || "https://api.anthropic.com").replace(/\/$/, "")}/v1/messages`;
+const MODEL = process.env.ANTHROPIC_MODEL || "claude-opus-5";
+// Some providers (e.g. MiniMax) emit a "thinking" block that counts
+// against max_tokens before the actual text block — a real run against
+// MiniMax-M2.7 used ~1000 thinking + ~1550 output tokens for one page,
+// so give real headroom beyond the ~600 tokens the 400-500 word body
+// itself needs.
+const MAX_TOKENS = Number(process.env.ANTHROPIC_MAX_TOKENS) || 16000;
 
-// Shop JSONL resolution — same as generate-bodies.mjs
-const SHOP_FILE_CANDIDATES = [
-  resolve(REPO_ROOT, "scripts/scraper/data/shops-clean.jsonl"),
-  resolve(REPO_ROOT, "scripts/scraper/data/shops-llm-verified.jsonl"),
-  resolve(REPO_ROOT, "scripts/scraper/data/results-77areas.json"),
-];
+// Shop JSONL resolution — loads every city's cleaned file (shops-clean.jsonl
+// for Bengaluru, shops-clean-hyderabad.jsonl, etc.), same as content/pseo/
+// shops.ts and scripts/verify/pseo.js. A single hardcoded path here would
+// silently return wrong "top shop" / shop-count data for every other city.
+const SHOP_DATA_DIR = resolve(REPO_ROOT, "scripts/scraper/data");
+const SHOP_RAW_FALLBACK = resolve(REPO_ROOT, "scripts/scraper/data/results-77areas.json");
 
 // ---------------------------------------------------------------------------
 // Haversine
@@ -160,11 +170,8 @@ function extractEntities(filePath) {
 // Shop index loader
 // ---------------------------------------------------------------------------
 let _shops = null;
-function loadShops() {
-  if (_shops) return _shops;
-  const found = SHOP_FILE_CANDIDATES.find((p) => existsSync(p));
-  if (!found) { _shops = []; return _shops; }
-  const text = readFileSync(found, "utf8");
+function loadShopsFromFile(filePath) {
+  const text = readFileSync(filePath, "utf8");
   const out = [];
   for (const line of text.split("\n")) {
     const trimmed = line.trim();
@@ -182,7 +189,20 @@ function loadShops() {
       });
     } catch {}
   }
-  _shops = out;
+  return out;
+}
+function loadShops() {
+  if (_shops) return _shops;
+  const cleanFiles = existsSync(SHOP_DATA_DIR)
+    ? readdirSync(SHOP_DATA_DIR).filter((f) => /^shops-clean.*\.jsonl$/.test(f))
+    : [];
+  if (cleanFiles.length > 0) {
+    _shops = cleanFiles.flatMap((f) => loadShopsFromFile(join(SHOP_DATA_DIR, f)));
+  } else if (existsSync(SHOP_RAW_FALLBACK)) {
+    _shops = loadShopsFromFile(SHOP_RAW_FALLBACK);
+  } else {
+    _shops = [];
+  }
   return _shops;
 }
 
@@ -306,19 +326,24 @@ function renderPrompt(template, data) {
 // API call
 // ---------------------------------------------------------------------------
 async function callClaude(prompt) {
+  // ANTHROPIC_AUTH_TOKEN (Bearer) for compatible providers like MiniMax;
+  // ANTHROPIC_API_KEY (x-api-key) for Anthropic direct.
+  const authToken = process.env.ANTHROPIC_AUTH_TOKEN;
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
+  if (!authToken && !apiKey) {
     throw new Error(
-      "ANTHROPIC_API_KEY environment variable is not set. " +
-        "Set it before running `pnpm run generate:priority`."
+      "Neither ANTHROPIC_AUTH_TOKEN nor ANTHROPIC_API_KEY is set. " +
+        "Set one before running `pnpm run generate:priority`."
     );
   }
   const res = await fetch(API_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": apiKey,
       "anthropic-version": "2023-06-01",
+      ...(authToken
+        ? { Authorization: `Bearer ${authToken}` }
+        : { "x-api-key": apiKey }),
     },
     body: JSON.stringify({
       model: MODEL,
@@ -331,9 +356,15 @@ async function callClaude(prompt) {
     throw new Error(`Claude API ${res.status}: ${text}`);
   }
   const json = await res.json();
-  const block = json?.content?.[0];
-  if (!block || block.type !== "text") {
-    throw new Error(`Unexpected Claude response shape: ${JSON.stringify(json).slice(0, 200)}`);
+  // Some Anthropic-compatible providers (e.g. MiniMax) prepend a
+  // "thinking" content block before the actual "text" block — find the
+  // text block rather than assuming content[0] is it.
+  const block = (json?.content ?? []).find((b) => b.type === "text");
+  if (!block) {
+    throw new Error(`No text block in response: ${JSON.stringify(json).slice(0, 300)}`);
+  }
+  if (json.stop_reason === "max_tokens") {
+    throw new Error(`Response truncated by max_tokens (${MAX_TOKENS}) before finishing.`);
   }
   return block.text;
 }
@@ -357,10 +388,11 @@ function updateBodyFile(filePath, prose) {
 // Main
 // ---------------------------------------------------------------------------
 async function main() {
-  if (!process.env.ANTHROPIC_API_KEY) {
+  if (!process.env.ANTHROPIC_AUTH_TOKEN && !process.env.ANTHROPIC_API_KEY) {
     console.error(
-      "[FATAL] ANTHROPIC_API_KEY is not set.\n" +
-        "        export ANTHROPIC_API_KEY=sk-ant-...   then re-run."
+      "[FATAL] Neither ANTHROPIC_AUTH_TOKEN nor ANTHROPIC_API_KEY is set.\n" +
+        "        export ANTHROPIC_API_KEY=sk-ant-...   then re-run,\n" +
+        "        or export ANTHROPIC_AUTH_TOKEN + ANTHROPIC_BASE_URL for a compatible provider."
     );
     process.exit(1);
   }

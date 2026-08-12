@@ -917,6 +917,164 @@ const colleges: College[] = [
     verifiedAt: "2026-08-08",
     lastReviewed: "2026-08-08",
   },
+
+  // ---------------------------------------------------------------------
+  // Hyderabad — first colleges. Coordinates and addresses come from a
+  // verified Google Maps scrape (scripts/scraper/data/raw-pulls/
+  // results-hyderabad-colleges.json), each cross-checked for real xerox
+  // shops within 1.5 km against the same shops-clean-hyderabad dataset
+  // the area pages use. Outlying campuses with 0 shops in radius
+  // (GITAM, Anurag University, ICFAI, BITS Pilani main campus,
+  // University of Hyderabad, IIT Hyderabad, Vasavi College) are held
+  // back until shop coverage grows near them.
+  // ---------------------------------------------------------------------
+  {
+    slug: "jntuh-kukatpally",
+    name: "Jawaharlal Nehru Technological University Hyderabad",
+    shortName: "JNTUH",
+    city: "hyderabad",
+    address: "Kukatpally Housing Board Colony, Kukatpally, Hyderabad, Telangana 500085",
+    website: "https://jntuh.ac.in/",
+    lat: 17.4929968,
+    lng: 78.3911945,
+    intro:
+      "JNTUH students printing project reports, seminar papers, and placement resumes frequently compare xerox shops around Kukatpally — see verified print shops near the JNTUH campus.",
+    keywords: [
+      "print near jntuh kukatpally",
+      "xerox shop jntuh hyderabad",
+      "thesis printing jntuh",
+      "assignment print kukatpally housing board colony",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-12",
+    lastReviewed: "2026-08-12",
+  },
+  {
+    slug: "st-francis-college-begumpet",
+    name: "St. Francis College for Women",
+    shortName: "St. Francis College",
+    city: "hyderabad",
+    address: "Uma Nagar, Begumpet, Hyderabad, Telangana 500016",
+    website: "https://www.sfc.ac.in/",
+    lat: 17.4371175,
+    lng: 78.4609302,
+    intro:
+      "St. Francis College students printing assignments, project reports, and exam forms often need a xerox shop near Begumpet — see verified print shops within 1.5 km of the campus.",
+    keywords: [
+      "print near st francis college begumpet",
+      "xerox shop st francis college hyderabad",
+      "assignment print begumpet",
+      "document print uma nagar",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-12",
+    lastReviewed: "2026-08-12",
+  },
+  {
+    slug: "osmania-medical-college",
+    name: "Osmania Medical College",
+    shortName: "OMC",
+    city: "hyderabad",
+    address: "5-1-876, Turrebaz Khan Rd, Troop Bazaar, Koti, Hyderabad, Telangana 500001",
+    website: "http://osmaniamedicalcollege.org/",
+    lat: 17.3822473,
+    lng: 78.4828573,
+    intro:
+      "Osmania Medical College students printing case studies, thesis chapters, and lab reports frequently use xerox shops around Koti and Troop Bazaar — see verified print shops near the campus.",
+    keywords: [
+      "print near osmania medical college",
+      "xerox shop koti hyderabad",
+      "thesis printing troop bazaar",
+      "document print osmania medical college",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-12",
+    lastReviewed: "2026-08-12",
+  },
+  {
+    slug: "nizams-institute-medical-sciences",
+    name: "Nizam's Institute of Medical Sciences",
+    shortName: "NIMS",
+    city: "hyderabad",
+    address: "Punjagutta Market, Punjagutta, Hyderabad, Telangana 500082",
+    website: "https://www.nims.edu.in/",
+    lat: 17.4225149,
+    lng: 78.4540769,
+    intro:
+      "NIMS students and staff printing case records, research papers, and admission forms often need a xerox shop near Punjagutta — see verified print shops within 1.5 km of the campus.",
+    keywords: [
+      "print near nims hyderabad",
+      "xerox shop punjagutta",
+      "document print nizams institute of medical sciences",
+      "assignment print punjagutta market",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-12",
+    lastReviewed: "2026-08-12",
+  },
+  {
+    slug: "nizam-college-hyderabad",
+    name: "Nizam College",
+    shortName: "Nizam College",
+    city: "hyderabad",
+    address: "Nizam College Autonomous, LB Stadium Rd, Gun Foundry, Basheer Bagh, Hyderabad, Telangana 500001",
+    website: "http://www.nizamcollege.ac.in/",
+    lat: 17.3978101,
+    lng: 78.4757508,
+    intro:
+      "Nizam College students printing assignments, project reports, and exam forms frequently compare xerox shops around Basheer Bagh and Gun Foundry — see verified print shops near the campus.",
+    keywords: [
+      "print near nizam college hyderabad",
+      "xerox shop basheer bagh",
+      "assignment print gun foundry",
+      "document print nizam college",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-12",
+    lastReviewed: "2026-08-12",
+  },
+  {
+    slug: "osmania-university-arts-college",
+    name: "Osmania University College of Arts and Social Sciences",
+    shortName: "Osmania University",
+    city: "hyderabad",
+    address: "Osmania University Main Rd, Osmania University, Tarnaka, Hyderabad, Telangana 500007",
+    website: "https://www.osmania.ac.in/",
+    lat: 17.4189196,
+    lng: 78.5265197,
+    intro:
+      "Osmania University students printing assignments, research papers, and exam forms often need a xerox shop near the Tarnaka campus — see verified print shops within 1.5 km.",
+    keywords: [
+      "print near osmania university",
+      "xerox shop tarnaka hyderabad",
+      "thesis printing osmania university",
+      "document print osmania university main road",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-12",
+    lastReviewed: "2026-08-12",
+  },
+  {
+    slug: "badruka-college-kachiguda",
+    name: "Badruka College of Commerce & Arts",
+    shortName: "Badruka College",
+    city: "hyderabad",
+    address: "Kachiguda Station Rd, Rahamath Bagh, Chappal Bazar, Kachiguda, Hyderabad, Telangana 500027",
+    website: "http://www.badruka.com/",
+    lat: 17.3889952,
+    lng: 78.4952637,
+    intro:
+      "Badruka College students printing assignments, project reports, and exam forms frequently use xerox shops around Kachiguda — see verified print shops near the campus.",
+    keywords: [
+      "print near badruka college",
+      "xerox shop kachiguda hyderabad",
+      "assignment print kachiguda station road",
+      "document print badruka college",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-12",
+    lastReviewed: "2026-08-12",
+  },
 ];
 
 export default colleges;

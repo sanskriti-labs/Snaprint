@@ -9,48 +9,82 @@
 // IMPORTANT: this module is server-only. The build / SSR path resolves
 // it; client components must not import it.
 
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { haversineKm } from "./_geo";
 import type { LiveLocation, Slug } from "./types";
 
 // ---------------------------------------------------------------------------
-// Shop index — lazily loaded and cached on first access. The JSONL file
-// lives outside the Next.js app tree, so we resolve relative to repo root.
+// Shop index — lazily loaded and cached on first access. The JSONL files
+// live outside the Next.js app tree, so we resolve relative to repo root.
 //
-// Prefers scripts/scraper/data/shops-clean.jsonl (output of
-// scripts/clean/clean_shops.py — xerox-only, deduped). Falls back to
-// the raw scrape for builds run before the cleaner has been executed.
+// Loads every scripts/scraper/data/shops-clean*.jsonl file (one per city:
+// shops-clean.jsonl for Bengaluru, shops-clean-hyderabad.jsonl, etc.) —
+// college radius matching is city-agnostic by campus coordinates, so it
+// must see every city's shops, not just one. Falls back to the raw
+// Bengaluru scrape for builds run before the cleaner has been executed.
 // ---------------------------------------------------------------------------
 
 let _shops: LiveLocation[] | null = null;
 
+function findDataDir(): string | null {
+  const candidates = [
+    resolve(process.cwd(), "scripts/scraper/data"),
+    resolve(__dirname, "../../../scripts/scraper/data"),
+    resolve(__dirname, "../../scripts/scraper/data"),
+  ];
+  return candidates.find((p) => existsSync(p)) ?? null;
+}
+
+function parseShopLine(trimmed: string): LiveLocation | null {
+  try {
+    const rec = JSON.parse(trimmed);
+    // Detect the shape from the record itself rather than the filename.
+    // Cleaned records use lat/lng; the raw scrape uses latitude/longitude.
+    // `longtitude` is a misspelled duplicate of `longitude` in the raw
+    // scrape — a longitude fallback only, never a latitude one.
+    const lat = Number(rec.lat ?? rec.latitude ?? 0);
+    const lng = Number(rec.lng ?? rec.longitude ?? rec.longtitude ?? 0);
+    if (!lat || !lng) return null;
+    const name =
+      typeof (rec.name ?? rec.title) === "string" && (rec.name ?? rec.title).trim()
+        ? (rec.name ?? rec.title).trim().slice(0, 80)
+        : "Xerox Shop";
+    return {
+      name,
+      address: typeof rec.address === "string" ? rec.address.slice(0, 200) : "",
+      lat: Math.round(lat * 1e6) / 1e6,
+      lng: Math.round(lng * 1e6) / 1e6,
+      phone: rec.phone || undefined,
+      rating: typeof rec.rating === "number" ? rec.rating : undefined,
+      reviews: typeof rec.reviews === "number" ? rec.reviews : 0,
+      placeId: rec.placeId || undefined,
+    };
+  } catch {
+    return null;
+  }
+}
+
 function loadShops(): LiveLocation[] {
   if (_shops) return _shops;
-  // Walk up from this file until we find the repo root that contains the
-  // scripts/ directory. process.cwd() works for `next dev` / `next build`
-  // when invoked from the project root, which is the documented workflow.
-  // Resolution order: heuristic-cleaned > raw.
-  //
+
+  const dataDir = findDataDir();
   // shops-llm-verified.jsonl is deliberately NOT consulted. That audit
-  // returned keep:true for all 1138 records, so it filtered nothing, and
-  // because the `isCleaned` branch below keys off the "shops-clean.jsonl"
-  // filename, loading it parsed cleaned records with raw field names —
-  // every row failed the lat/lng check and the selector silently returned
-  // []. clean_shops.py output is the single source of truth here, matching
-  // scripts/scraper/process_77areas.py.
-  const candidates = [
-    // Heuristic-cleaned
-    resolve(process.cwd(), "scripts/scraper/data/shops-clean.jsonl"),
-    resolve(__dirname, "../../../scripts/scraper/data/shops-clean.jsonl"),
-    resolve(__dirname, "../../scripts/scraper/data/shops-clean.jsonl"),
-    // Raw scrape (fallback)
-    resolve(process.cwd(), "scripts/scraper/data/results-77areas.json"),
-    resolve(__dirname, "../../../scripts/scraper/data/results-77areas.json"),
-    resolve(__dirname, "../../scripts/scraper/data/results-77areas.json"),
-  ];
-  const found = candidates.find((p) => existsSync(p));
-  if (!found) {
+  // returned keep:true for all 1138 records, so it filtered nothing.
+  const cleanFiles = dataDir
+    ? readdirSync(dataDir).filter((f) => /^shops-clean.*\.jsonl$/.test(f))
+    : [];
+
+  const paths = cleanFiles.length > 0
+    ? cleanFiles.map((f) => resolve(dataDir!, f))
+    : // Raw scrape (fallback) — builds run before the cleaner has been executed.
+      [
+        resolve(process.cwd(), "scripts/scraper/data/results-77areas.json"),
+        resolve(__dirname, "../../../scripts/scraper/data/results-77areas.json"),
+        resolve(__dirname, "../../scripts/scraper/data/results-77areas.json"),
+      ].filter((p) => existsSync(p)).slice(0, 1);
+
+  if (paths.length === 0) {
     // Build/test runs without the scraper data should not crash —
     // selectors simply return []. Log a single warning.
     if (process.env.NODE_ENV !== "test") {
@@ -62,38 +96,14 @@ function loadShops(): LiveLocation[] {
     return _shops;
   }
 
-  const text = readFileSync(found, "utf8");
   const out: LiveLocation[] = [];
-  for (const line of text.split("\n")) {
-    const trimmed = line.trim();
-    if (!trimmed) continue;
-    try {
-      const rec = JSON.parse(trimmed);
-      // Detect the shape from the record itself rather than the filename.
-      // Cleaned records use lat/lng; the raw scrape uses latitude/longitude.
-      // A filename check silently mis-parsed any cleaned file that wasn't
-      // literally named shops-clean.jsonl, yielding zero shops.
-      // `longtitude` is a misspelled duplicate of `longitude` in the raw
-      // scrape — a longitude fallback only, never a latitude one.
-      const lat = Number(rec.lat ?? rec.latitude ?? 0);
-      const lng = Number(rec.lng ?? rec.longitude ?? rec.longtitude ?? 0);
-      if (!lat || !lng) continue;
-      const name =
-        typeof (rec.name ?? rec.title) === "string" && (rec.name ?? rec.title).trim()
-          ? (rec.name ?? rec.title).trim().slice(0, 80)
-          : "Xerox Shop";
-      out.push({
-        name,
-        address: typeof rec.address === "string" ? rec.address.slice(0, 200) : "",
-        lat: Math.round(lat * 1e6) / 1e6,
-        lng: Math.round(lng * 1e6) / 1e6,
-        phone: rec.phone || undefined,
-        rating: typeof rec.rating === "number" ? rec.rating : undefined,
-        reviews: typeof rec.reviews === "number" ? rec.reviews : 0,
-        placeId: rec.placeId || undefined,
-      });
-    } catch {
-      // skip malformed lines
+  for (const path of paths) {
+    const text = readFileSync(path, "utf8");
+    for (const line of text.split("\n")) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      const shop = parseShopLine(trimmed);
+      if (shop) out.push(shop);
     }
   }
   _shops = out;
