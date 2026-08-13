@@ -15,8 +15,9 @@ import {
   getCityName,
   getCityState,
   buildBreadcrumbList,
+  withSharedKeywords,
 } from "@/content/pseo/seo";
-import { sharedFaqs } from "@/content/pseo/faqs";
+import { baseFaqCount } from "@/content/pseo/faqs";
 import PseoPage from "@/components/PseoPage";
 
 const SITE_URL = "https://snaprints.com";
@@ -54,7 +55,7 @@ export function generateMetadata({
     return {
       title,
       description,
-      keywords: college.keywords,
+      keywords: withSharedKeywords(college.keywords),
       alternates: { canonical: `/print-near/${college.slug}` },
       openGraph: {
         title: `${count > 0 ? count + " " : ""}Xerox shops near ${name}, ${cityName} — Snaprint`,
@@ -89,7 +90,7 @@ export function generateMetadata({
     return {
       title,
       description,
-      keywords: area.keywords,
+      keywords: withSharedKeywords(area.keywords),
       alternates: { canonical: `/print-near/${area.slug}` },
       openGraph: {
         title: `${count > 0 ? count + " " : ""}Xerox shops in ${area.name}, ${cityName} — Snaprint`,
@@ -122,7 +123,7 @@ export default async function EntityPage({
     const parentCity = getCity(college.city);
     const siblings = getCollegesInCity(college.city);
     const neighbors = getNeighborCities(college.city);
-    const faqs = getLocationFaqs("college", params.entity);
+    const faqs = getLocationFaqs("college", params.entity, college.presence);
     const nearbyShops = getShopsNearCollege(college.slug);
 
     const jsonLd = {
@@ -212,13 +213,13 @@ export default async function EntityPage({
           college.city
         ),
         // FAQPage — only when this entity has a local FAQ tail beyond the
-        // shared boilerplate. sharedFaqs alone is identical on every one of
-        // 145 pages; emitting FAQPage schema for content that isn't unique
-        // to this page teaches search engines the page has less to say than
-        // the page count suggests. The visible FAQ accordion (below, via
-        // `faqs={faqs}`) still shows the shared Qs — this only gates the
-        // structured-data node.
-        ...(faqs.length > sharedFaqs.length
+        // boilerplate. Boilerplate alone is identical across every entity at
+        // a given presence level; emitting FAQPage schema for content that
+        // isn't unique to this page teaches search engines the page has less
+        // to say than the page count suggests. The visible FAQ accordion
+        // (below, via `faqs={faqs}`) still shows the boilerplate Qs — this
+        // only gates the structured-data node.
+        ...(faqs.length > baseFaqCount(college.presence)
           ? [
               {
                 "@type": "FAQPage",
@@ -248,7 +249,7 @@ export default async function EntityPage({
     const collegesInArea = getCollegesNearArea(area.slug);
     const areasInCity = getAreasInCity(area.city);
     const neighbors = getNeighborCities(area.city);
-    const faqs = getLocationFaqs("area", params.entity);
+    const faqs = getLocationFaqs("area", params.entity, area.presence);
 
     const areaLocations = area.liveLocations ?? [];
     // Fallback anchor for the parent node's address/geo/telephone — only
@@ -344,7 +345,7 @@ export default async function EntityPage({
         ),
         // FAQPage — only when this entity has a local FAQ tail; see the
         // college branch above for why.
-        ...(faqs.length > sharedFaqs.length
+        ...(faqs.length > baseFaqCount(area.presence)
           ? [
               {
                 "@type": "FAQPage",

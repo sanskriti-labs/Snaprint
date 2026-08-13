@@ -9,8 +9,9 @@ import {
   getCityFaqs,
   getShopsInCity,
   buildBreadcrumbList,
+  withSharedKeywords,
 } from "@/content/pseo/seo";
-import { sharedFaqs } from "@/content/pseo/faqs";
+import { baseFaqCount } from "@/content/pseo/faqs";
 import PseoPage from "@/components/PseoPage";
 
 const SITE_URL = "https://snaprints.com";
@@ -42,7 +43,7 @@ export function generateMetadata({
     // Layout template appends "· Snaprint" — no explicit suffix here.
     title,
     description,
-    keywords: city.keywords,
+    keywords: withSharedKeywords(city.keywords),
     alternates: { canonical: `/instant-print/${city.slug}` },
     openGraph: {
       title: `${areaCount > 0 ? areaCount + " areas with " : ""}Print & xerox shops in ${city.name} — Snaprint`,
@@ -69,7 +70,7 @@ export default async function CityPage({
   const colleges = getCollegesInCity(params.city);
   const areas = getAreasInCity(params.city);
   const neighbors = getNeighborCities(params.city);
-  const faqs = getCityFaqs(params.city);
+  const faqs = getCityFaqs(params.city, city.presence);
   const shops = getShopsInCity(params.city);
 
   const jsonLd = {
@@ -124,7 +125,7 @@ export default async function CityPage({
       // FAQPage — only when this entity has a local FAQ tail beyond the
       // shared boilerplate; see the college/area branches in
       // print-near/[entity]/page.tsx for why.
-      ...(faqs.length > sharedFaqs.length
+      ...(faqs.length > baseFaqCount(city.presence)
         ? [
             {
               "@type": "FAQPage",

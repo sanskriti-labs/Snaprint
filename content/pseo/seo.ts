@@ -28,6 +28,24 @@ function isPublished(presence: Presence): boolean {
   return presence === "live" || presence === "served";
 }
 
+// ---------------------------------------------------------------------------
+// Shared keyword tail — appended to every entity's hand-picked keywords.
+// Covers high-intent directory searches ("open now", "A4 printout") that
+// aren't worth hand-writing per entity. Kiosk/self-service terms stay out
+// until kiosks are actually live in that entity — see the "directory-first"
+// note above.
+// ---------------------------------------------------------------------------
+
+const sharedKeywordTail = [
+  "xerox near me open now",
+  "A4 printout near me",
+  "PDF printing near me",
+];
+
+export function withSharedKeywords(keywords: string[]): string[] {
+  return [...keywords, ...sharedKeywordTail];
+}
+
 export function getAllCitySlugs(): Slug[] {
   return citiesData
     .filter((c) => isPublished(c.presence))
