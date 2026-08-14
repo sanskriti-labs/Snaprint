@@ -49,6 +49,14 @@ export async function GET(req: Request) {
       const marker = "GSC_REPORT_JSON=";
       const line = stdout.split("\n").find((l) => l.startsWith(marker));
       const report = line ? JSON.parse(line.slice(marker.length)) : null;
+      // Surface a summary in Vercel's function logs — the child process's
+      // own stdout (including the GSC_REPORT_JSON line) is captured into
+      // the `stdout` var above and never reaches the parent's console, so
+      // without this the route's actual output is only visible in the HTTP
+      // response body, which `vercel crons run` / the cron scheduler don't
+      // display anywhere.
+      console.log(`[gsc-export route] exitCode=${code} rowCount=${report?.rowCount ?? "n/a"}`);
+      if (code !== 0) console.error(`[gsc-export route] stderr: ${stderr}`);
       resolve(
         NextResponse.json(
           { ok: code === 0, exitCode: code, report, log: stdout, error: code === 0 ? undefined : stderr },

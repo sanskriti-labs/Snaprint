@@ -407,6 +407,10 @@ if (!existsSync(llmsPath)) {
 const CITY_BBOXES = [
   { name: "Bengaluru", latMin: 12.6, latMax: 13.4, lngMin: 77.3, lngMax: 78.0 },
   { name: "Hyderabad", latMin: 17.1, latMax: 17.7, lngMin: 78.1, lngMax: 78.7 },
+  { name: "Chennai", latMin: 12.7, latMax: 13.3, lngMin: 80.0, lngMax: 80.4 },
+  { name: "Mumbai", latMin: 18.8, latMax: 19.3, lngMin: 72.7, lngMax: 73.1 },
+  { name: "Pune", latMin: 18.3, latMax: 18.8, lngMin: 73.6, lngMax: 74.0 },
+  { name: "Delhi NCR", latMin: 28.3, latMax: 28.9, lngMin: 76.8, lngMax: 77.5 },
 ];
 const JUNK = /\b(shopping mall|hotel|bank|jail|bus stop|bus depot|hostel|movie theater|pharmacy|subway station|water utility)\b/i;
 

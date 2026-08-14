@@ -27,6 +27,21 @@ CITY_DISPLAY_NAMES = {
     "bengaluru": "Bangalore",
 }
 
+# Query-file suffixes to strip when building a slug, for cities where the
+# queries span multiple sub-city names (e.g. Delhi NCR queries end in
+# "Delhi", "Gurugram", or "Noida" — no single CITY_DISPLAY_NAMES value
+# covers all of them). Falls back to [CITY_DISPLAY_NAMES/city slug] when a
+# city isn't listed here.
+#
+# "Noida" is deliberately excluded here: unlike the Delhi/Gurugram entries,
+# every Noida AREA_KW slug in cities/delhi_ncr.py keeps "-noida" as part of
+# the slug itself (sector-18-noida, atta-market-noida, sector-62-noida), so
+# stripping "Noida" from the query text would break the slug match instead
+# of fixing it.
+CITY_QUERY_SUFFIXES = {
+    "delhi_ncr": ["Delhi", "Gurugram"],
+}
+
 
 def load_city_config(slug):
     mod = importlib.import_module(f"cities.{slug}")
@@ -74,8 +89,18 @@ def load_queries(cfg):
             q = line
             if q.lower().startswith("xerox shops in "):
                 q = q[len("xerox shops in "):]
-            q = re.sub(rf'\s+{re.escape(CITY_DISPLAY_NAMES.get(cfg.CITY_SLUG, cfg.CITY_SLUG))}\s*$', '', q, flags=re.IGNORECASE).strip()
-            slug = q.lower().replace(" ", "-")
+            suffixes = CITY_QUERY_SUFFIXES.get(
+                cfg.CITY_SLUG, [CITY_DISPLAY_NAMES.get(cfg.CITY_SLUG, cfg.CITY_SLUG)]
+            )
+            for suffix in suffixes:
+                new_q = re.sub(rf'\s+{re.escape(suffix)}\s*$', '', q, flags=re.IGNORECASE).strip()
+                if new_q != q:
+                    q = new_q
+                    break
+            # Strip punctuation (periods, etc.) before slugifying — "T. Nagar"
+            # must slugify to "t-nagar" to match the AREA_KW key, not "t.-nagar".
+            q = re.sub(r'[^\w\s-]', '', q)
+            slug = re.sub(r'\s+', '-', q.strip()).lower()
             if slug not in seen:
                 seen.add(slug)
                 slugs.append(slug)

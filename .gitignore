@@ -48,6 +48,17 @@ __pycache__/
 *.pyc
 
 # scraper raw output — large intermediate files, regenerate via the scraper.
-# shops-clean.jsonl is NOT ignored: content/pseo/shops.ts reads it at build time.
+# shops-clean*.jsonl is NOT ignored: content/pseo/shops.ts reads it at build time.
 scripts/scraper/data/results*.json
+scripts/scraper/data/raw-pulls/
+scripts/scraper/*-xeroxshops.txt
 scripts/clean/data/llm-audit-cache.json
+
+# claude code local config
+/.claude/
+
+# strix security scan output
+/strix_runs/
+
+# third-party tooling cache, not app code
+/vendor/

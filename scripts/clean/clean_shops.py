@@ -292,11 +292,15 @@ def keep_record(d: dict) -> tuple[bool, str]:
     # "photo studio" is a portrait studio, not a document printer, and
     # bare "scan"/"banner"/"flex" appear in unrelated shop names. These
     # need corroboration like the stationery keywords do.
-    WEAK_KW = {"stationery", "stationary", "photo studio", "scan", "scanning",
-               "banner", "flex", "thesis"}
-    strong_kw = any(
-        kw in title_lower for kw in KEEP_TITLE if kw not in WEAK_KW
-    )
+    # "Stationery"/"stationary" in a title proves the shop sells paper, not
+    # that it has a xerox machine. Bare "scan"/"banner"/"flex" appear in
+    # unrelated shop names. We still acknowledge these as keep-keywords
+    # (they pass the `has_keep_kw` check below) so that a shop named
+    # "Auto Stationery" or "Cars Banner Print" is kept — the downstream
+    # XEROX_CATS / PRINT_CAT_RE check then decides whether the record has
+    # enough corroboration to publish.
+    # WEAK_KW = {"stationery", "stationary", "photo studio", "scan", "scanning",
+    #            "banner", "flex", "thesis"}  # no longer gates the early exit
     # Supply-side terms ("Printer & IT Peripherals Dealers", "toner
     # refilling") describe selling hardware, not offering printing, and
     # they contain "print" — so they must be checked BEFORE the keep
@@ -304,7 +308,16 @@ def keep_record(d: dict) -> tuple[bool, str]:
     # after, so "PRINT OUT AND XEROX SPACE" is not killed by "space".
     if any(kw in title_lower for kw in SUPPLY_SIDE):
         return False, "sells printers, not printing"
-    if strong_kw:
+    if has_keep_kw:
+        # A xerox-related keyword anywhere in the title wins over NEG_TITLE
+        # patterns like "car ", "auto ", "vehicle ". Real xerox shops
+        # routinely have an "Auto" or "Bike" prefix in the brand name
+        # ("Sriya Auto Xerox", "Cars Photocopy Centre") — keep these.
+        # Previously the WEAK_KW branch (stationery / banner / flex etc.)
+        # excluded them from a "strong" keep and let the neg-title reject
+        # fire, silently dropping shops whose name was "Auto Stationery"
+        # or "Cars Banner Print". SUPPLY_SIDE above still catches the
+        # genuine printer-dealer case.
         return True, "xerox kw"
     if has_neg_kw:
         return False, "neg title"
