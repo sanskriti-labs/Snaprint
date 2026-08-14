@@ -7,6 +7,15 @@ import remarkGfm from "remark-gfm";
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  async redirects() {
+    return [
+      {
+        source: "/blog/snaprint-vs-atomte-vs-qwikprint-comparison",
+        destination: "/blog/print-kiosk-pricing-models-compared",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 const withMDX = createMDX({
