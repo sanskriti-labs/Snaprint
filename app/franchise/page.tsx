@@ -15,7 +15,7 @@ const included = [
   },
   {
     title: "Ongoing support",
-    body: "In-person Bengaluru installation, training, and a support team that knows the hardware. Six months of software support included, then ongoing indefinitely under the yearly platform fee.",
+    body: "In-person Bengaluru installation, training, and a support team that knows the hardware. Six months of software support included, then continued support available under the yearly platform fee.",
   },
   {
     title: "Brand association",
@@ -26,7 +26,7 @@ const included = [
 const steps = [
   { n: "01", t: "Enquire", d: "Fill the form or message on WhatsApp. Tell us your shop location and rough daily print volume." },
   { n: "02", t: "Site survey", d: "Our Bengaluru team visits your shop. We verify space, power, and internet. Takes 30 minutes." },
-  { n: "03", t: "Install", d: "Hardware reaches you, our team mounts, wires, and brings the kiosk online. Typically within 7 days of payment." },
+  { n: "03", t: "Install", d: "Hardware reaches you, our team mounts, wires, and brings the kiosk online. Typically within 15 days of payment." },
   { n: "04", t: "Go live", d: "Owner dashboard walkthrough, training session, and your Snaprint kiosk is live. UPI orders start flowing the same day." },
 ];
 
@@ -43,7 +43,7 @@ const roiAssumptions = [
 const faqs = [
   {
     q: "How much does the Snaprint franchise cost?",
-    a: "The Snaprint S1 kiosk is priced at ₹3,00,000–₹3,50,000 one-time, all-in. This includes the dedicated hardware, software, installation, training, and the first six months of software support. A separate yearly platform fee applies after the first six months — the exact amount is shared during your site visit. There is no per-print commission.",
+    a: "The Snaprint S1 kiosk is priced at ₹2,50,000–₹3,00,000 one-time, plus 18% GST. This includes the dedicated hardware, software, installation, training, and the first six months of software support. A separate yearly platform fee applies after the first six months — the exact amount is shared during your site visit. There is no per-print commission.",
   },
   {
     q: "Is there a contract or lock-in period?",

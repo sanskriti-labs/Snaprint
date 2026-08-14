@@ -26,7 +26,7 @@ const roiAssumptions = [
 
 const faqs = [
   {
-    q: "Are there financing options for the ₹3–3.5L investment?",
+    q: "Are there financing options for the ₹2.5–3L investment?",
     a: "Most operators fund the investment out of family savings, personal accumulation, or small-ticket business loans. Equipment financing from the printer dealer is sometimes available for the kiosk hardware itself, usually 12–24 months. MUDRA loans (PMMY Shishu/Kishore) cover up to ₹5L at 8–12% p.a. for non-corporate small businesses — most PSU banks offer these.",
   },
   {
@@ -136,7 +136,7 @@ export default function PricingPage() {
 
             <div className="mt-14 flex flex-wrap items-end gap-10 border-t border-[rgba(0,0,0,0.07)] pt-10">
               {[
-                { v: "₹3–3.5L", l: "one-time, all-in" },
+                { v: "₹2.5–3L", l: "one-time, all-in" },
                 { v: "0%", l: "per-print commission" },
                 { v: "6 mo", l: "free software support" },
                 { v: "1 yr", l: "hardware warranty" },
@@ -176,7 +176,7 @@ export default function PricingPage() {
                   </div>
                   <div className="mb-2 flex items-baseline gap-3">
                     <span className="font-display text-[56px] font-extrabold leading-none tracking-[-2.5px] text-[#111110]">
-                      ₹3&ndash;3.5L
+                      ₹2.5&ndash;3L
                     </span>
                     <span className="font-body text-[14px] text-[#AAAAAA]">one-time</span>
                   </div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const title = "Snaprint S1 Kiosk Pricing — Transparent Costs [2026]";
 const description =
-  "Snaprint S1 print kiosk pricing: ₹3,00,000–3,50,000 one-time. No per-print commission, no monthly royalties. ROI in 14–22 months for Bengaluru operators.";
+  "Snaprint S1 print kiosk pricing: ₹2,50,000–3,00,000 one-time. No per-print commission, no monthly royalties. ROI in 14–22 months for Bengaluru operators.";
 
 export const metadata: Metadata = {
   title,

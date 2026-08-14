@@ -32,12 +32,12 @@ const siteUrl = "https://snaprints.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Snaprint — Instant Print Kiosks for Xerox Shops in Bengaluru",
+    default: "Snaprint — Instant Print Kiosks for Xerox Shops Across India",
     template: "%s · Snaprint",
   },
   description:
-    "Snaprint turns your xerox shop into a 24/7 remote printing hub. Scan, pay, and collect — no queue, no wait. Built for Bengaluru shop owners.",
-  keywords: ["print kiosk", "xerox shop", "remote printing", "Bengaluru", "Snaprint", "instant print", "smart kiosk", "self-service printing"],
+    "Snaprint turns your xerox shop into a 24/7 remote printing hub. Scan, pay, and collect — no queue, no wait. Serving shop owners across India.",
+  keywords: ["print kiosk", "xerox shop", "remote printing", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "smart kiosk", "self-service printing"],
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Snaprint — Instant Print Kiosks for Xerox Shops",
-    description: "India's instant print network. Built for xerox shop owners. Powered by Sanskriti Labs, Bengaluru.",
+    description: "India's instant print network. Built for xerox shop owners across Bengaluru, Hyderabad, Chennai, Mumbai, Pune, and Delhi NCR. Powered by Sanskriti Labs, Bengaluru.",
     url: siteUrl,
     siteName: "Snaprint",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Snaprint — snap. scan. print." }],
@@ -120,7 +120,14 @@ const jsonLd = {
         name: "Sanskriti Labs",
         sameAs: ["https://www.linkedin.com/company/sanskriti-labs/"],
       },
-      areaServed: { "@type": "City", name: "Bengaluru" },
+      areaServed: [
+        { "@type": "City", name: "Bengaluru" },
+        { "@type": "City", name: "Hyderabad" },
+        { "@type": "City", name: "Chennai" },
+        { "@type": "City", name: "Mumbai" },
+        { "@type": "City", name: "Pune" },
+        { "@type": "City", name: "Delhi NCR" },
+      ],
     },
     {
       "@type": "WebSite",
