@@ -21,7 +21,7 @@ CLEAN_FILE = SCRIPT_DIR / "data" / "shops-clean-pune.jsonl"
 RAW_DATA_FILE = SCRIPT_DIR / "data" / "results-pune.json"
 
 AREA_KW = {
-    "shivajinagar":   (["shivajinagar", "shivaji nagar"],                "Shivajinagar",   ["411005", "411004"]),
+    "shivajinagar-pune": (["shivajinagar", "shivaji nagar"],             "Shivajinagar",   ["411005", "411004"]),
     "deccan":         (["deccan", "fergusson", "bmcc", "fc road"],       "Deccan",         ["411004", "411001"]),
     "kothrud":        (["kothrud", "kothrud depot"],                     "Kothrud",        ["411038", "411052"]),
     "karve-nagar":    (["karve nagar", "law college road"],              "Karve Nagar",    ["411052"]),

@@ -1,0 +1,22 @@
+# Chennai neighbourhoods — xerox shop scrape queries
+# One query per line — Google Maps search format: "xerox shops in [Area] Chennai"
+# Review this list before running the scraper.
+#
+# Starter batch (12 areas) — same "small scrape first" pattern as Hyderabad
+# Batch 1. Mix of commercial hubs (T. Nagar, George Town), transit hubs
+# (Tambaram, Egmore), student clusters (Guindy, Anna Nagar, Chromepet),
+# residential-IT corridors (Velachery, Sholinganallur). Area research
+# 2026-08-13.
+
+xerox shops in T. Nagar Chennai
+xerox shops in Guindy Chennai
+xerox shops in Anna Nagar Chennai
+xerox shops in Velachery Chennai
+xerox shops in Tambaram Chennai
+xerox shops in Egmore Chennai
+xerox shops in Saidapet Chennai
+xerox shops in Adyar Chennai
+xerox shops in Nungambakkam Chennai
+xerox shops in Chromepet Chennai
+xerox shops in George Town Chennai
+xerox shops in Sholinganallur Chennai

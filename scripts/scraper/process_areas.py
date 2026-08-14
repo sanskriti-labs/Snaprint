@@ -284,6 +284,15 @@ def render_city_block(cfg, city_display, lines_out):
             rescued += 1
     print(f"[{cfg.CITY_SLUG}] Geographic fallback: matched {rescued} shops to nearest area centre (<= {NEAREST_MAX_KM}km)")
 
+    # No cap: every shop matched to an area is published, sorted nearest
+    # first. (Used to truncate at 20 sorted by raw distance, which
+    # silently dropped real, well-reviewed shops in any area with >20
+    # matches — e.g. Rajajinagar had 28 matches and cut a 17-review
+    # "Planet Xerox Centre" at rank 21 while keeping several 1-review
+    # shops ranked closer. Removed the cap rather than patch the
+    # ranking — no rendering/schema limit requires one, see
+    # app/print-near/[entity]/page.tsx, which maps liveLocations with
+    # no pagination.)
     for slug, entries in area_shops.items():
         if slug not in centres:
             continue
@@ -310,7 +319,7 @@ def render_city_block(cfg, city_display, lines_out):
         display_name = area_kw.get(slug, (None, slug.replace("-", " ").title(), []))[1]
         pin_codes = area_kw.get(slug, (None, None, []))[2]
         presence = "live" if shops else "planned"
-        emitted = [to_live_location(s, city_display) for s in shops[:20]]
+        emitted = [to_live_location(s, city_display) for s in shops]
         intro = make_intro(len(emitted), display_name, city_display, emitted, pin_codes)
         keywords = make_keywords(display_name, city_display, len(emitted))
 
@@ -330,7 +339,7 @@ def render_city_block(cfg, city_display, lines_out):
 
         if shops:
             lines_out.append("    liveLocations: [")
-            for shop in shops[:20]:
+            for shop in shops:
                 loc = to_live_location(shop, city_display)
                 lines_out.append("      {")
                 lines_out.append(f'        name: {json.dumps(loc["name"], ensure_ascii=False)},')

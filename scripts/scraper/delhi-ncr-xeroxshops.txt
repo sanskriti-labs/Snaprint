@@ -1,0 +1,24 @@
+# Delhi NCR neighbourhoods — xerox shop scrape queries
+# One query per line — Google Maps search format: "xerox shops in [Area] [City]"
+# Review this list before running the scraper.
+#
+# Starter batch (12 areas) — same "small scrape first" pattern as Hyderabad
+# Batch 1. Delhi NCR is treated as one logical unit (slug delhi_ncr) even
+# though it spans Delhi, Gurugram, Noida. Split: 6 Delhi + 3 Gurugram +
+# 3 Noida. DU North/South Campus student hubs (Kamla Nagar, Satya Niketan),
+# commercial markets (CP, Karol Bagh, Chandni Chowk, Nehru Place), Noida
+# Sector 18/62 + Atta Market, Gurugram Cyber Hub/Sector 14/Galleria.
+# Area research 2026-08-13.
+
+xerox shops in Kamla Nagar Delhi
+xerox shops in Satya Niketan Delhi
+xerox shops in Connaught Place Delhi
+xerox shops in Karol Bagh Delhi
+xerox shops in Chandni Chowk Delhi
+xerox shops in Nehru Place Delhi
+xerox shops in Cyber Hub Gurugram
+xerox shops in Sector 14 Gurgaon
+xerox shops in Galleria Market Gurugram
+xerox shops in Sector 18 Noida
+xerox shops in Atta Market Noida
+xerox shops in Sector 62 Noida

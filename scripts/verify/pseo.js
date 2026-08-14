@@ -516,7 +516,12 @@ const JUNK = /\b(shopping mall|hotel|bank|jail|bus stop|bus depot|hostel|movie t
       (b) => lat >= b.latMin && lat <= b.latMax && lng >= b.lngMin && lng <= b.lngMax
     );
     if (!lat || !lng || !inAnyBbox) outOfBox++;
-    if (JUNK.test(String(rec.categories ?? rec.category ?? ""))) junk++;
+    // "xerox" in the name overrides a junk category — see clean_shops.py's
+    // matching hard-neg override: Google routinely mis-tags a small combo
+    // shop (xerox counter run out of a pharmacy/general store) with the
+    // building/anchor-tenant category instead of the shop's own service.
+    const isXeroxNamed = /\bxerox\b/i.test(String(rec.name ?? ""));
+    if (!isXeroxNamed && JUNK.test(String(rec.categories ?? rec.category ?? ""))) junk++;
   }
   if (noPid > 0) fail(`${noPid} shop records missing Google placeId`);
   if (outOfBox > 0) fail(`${outOfBox} shop records have coords outside every known city bbox`);

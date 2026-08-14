@@ -49,9 +49,11 @@ __pycache__/
 
 # scraper raw output — large intermediate files, regenerate via the scraper.
 # shops-clean*.jsonl is NOT ignored: content/pseo/shops.ts reads it at build time.
+# *-xeroxshops.txt is NOT ignored: small hand-edited query config, not
+# generated output — 4 of 6 cities' copies existed only on a scrape
+# machine and were never in git until 2026-08-14.
 scripts/scraper/data/results*.json
 scripts/scraper/data/raw-pulls/
-scripts/scraper/*-xeroxshops.txt
 scripts/clean/data/llm-audit-cache.json
 
 # claude code local config

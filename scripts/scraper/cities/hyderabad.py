@@ -5,6 +5,13 @@ Batch 2 — 20 more areas added 2026-08-12, pin codes derived from real
 scraped shop addresses (scripts/scraper/data/raw-pulls/
 shops-clean-hyderabad-batch2.jsonl), the way Bengaluru's list was
 corrected.
+
+RAW_DATA_FILE points at results-hyderabad-merged.jsonl (not
+results-hyderabad.json) as of 2026-08-14 — the batch2 raw pull
+(scripts/scraper/data/raw-pulls/results-hyderabad-batch2.json, 686
+shops never in results-hyderabad.json) and the colleges pull were
+sitting unused on disk; merged in (deduped by cid) to stop losing that
+coverage.
 """
 from pathlib import Path
 
@@ -13,7 +20,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent.parent
 CITY_SLUG = "hyderabad"
 QUERIES_FILE = SCRIPT_DIR / "hyderabad-xeroxshops.txt"
 CLEAN_FILE = SCRIPT_DIR / "data" / "shops-clean-hyderabad.jsonl"
-RAW_DATA_FILE = SCRIPT_DIR / "data" / "results-hyderabad.json"
+RAW_DATA_FILE = SCRIPT_DIR / "data" / "results-hyderabad-merged.jsonl"
 
 AREA_KW = {
     "ameerpet":       (["ameerpet"],                         "Ameerpet",       ["500016", "500038"]),
@@ -41,7 +48,7 @@ AREA_KW = {
     "koti":                (["koti"],                                     "Koti",                ["500001", "500027"]),
     "himayatnagar":        (["himayatnagar", "himayath nagar"],           "Himayatnagar",        ["500029", "500020"]),
     "chikkadpally":        (["chikkadpally", "chikkadapally"],            "Chikkadpally",        ["500020", "500044"]),
-    "ashok-nagar":         (["ashok nagar"],                               "Ashok Nagar",         ["500020", "500080"]),
+    "ashok-nagar-hyderabad": (["ashok nagar"],                             "Ashok Nagar",         ["500020", "500080"]),
     "vanasthalipuram":     (["vanasthalipuram", "vanasthali puram"],       "Vanasthalipuram",     ["500070", "500001"]),
     "nagole":              (["nagole"],                                   "Nagole",              ["500068", "500102"]),
     "attapur":             (["attapur"],                                  "Attapur",             ["500048", "500006"]),
