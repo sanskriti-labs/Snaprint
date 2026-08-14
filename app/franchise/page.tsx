@@ -4,6 +4,24 @@ import Footer from "@/components/Footer";
 
 const siteUrl = "https://snaprints.com";
 
+export const metadata: Metadata = {
+  title: "Franchise — Own a Snaprint Kiosk",
+  description:
+    "Host a Snaprint self-service print kiosk in your college, hostel, co-working space, or shop. Hardware, app, training, and support included. See how it works.",
+  alternates: { canonical: "/franchise" },
+  openGraph: {
+    title: "Franchise — Own a Snaprint Kiosk",
+    description: "Host a Snaprint self-service print kiosk. Hardware, app, training, and support included.",
+    url: `${siteUrl}/franchise`,
+    type: "website",
+    images: [`${siteUrl}/og.png`],
+  },
+  twitter: {
+    title: "Franchise — Own a Snaprint Kiosk",
+    description: "Host a Snaprint self-service print kiosk. Hardware, app, training, and support included.",
+  },
+};
+
 const included = [
   {
     title: "Snaprint S1 kiosk hardware",

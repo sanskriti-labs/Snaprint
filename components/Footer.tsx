@@ -10,20 +10,28 @@ export default function Footer() {
       title: "Product",
       links: [
         { label: "How it works", href: "#how" },
-        { label: "The S1 kiosk", href: "#machine" },
         { label: "Why Snaprint", href: "#why" },
+        { label: "The S1 kiosk", href: "#machine" },
         { label: "Results", href: "#testimonials" },
-        { label: "Blog", href: "/blog" },
-        { label: "About", href: "/about" },
+        { label: "Pricing", href: "/pricing" },
+        { label: "Franchise", href: "/franchise" },
       ],
     },
-{
-      title: "Contact",
+    {
+      title: "Locations",
       links: [
-        { label: "snaprints@sanskritilabs.in", href: "mailto:snaprints@sanskritilabs.in" },
-        { label: "Request a Quote", href: "mailto:snaprints@sanskritilabs.in?subject=Quote Request" },
+        { label: "Print shops by city", href: "/instant-print" },
+        { label: "Print shops near you", href: "/print-near" },
+        { label: "Blog", href: "/blog" },
+      ],
+    },
+    {
+      title: "Company",
+      links: [
+        { label: "About", href: "/about" },
         { label: "Book a Demo", href: "/book" },
-        { label: "snaprints.com", href: "https://snaprints.com" },
+        { label: "Request a Quote", href: "mailto:snaprints@sanskritilabs.in?subject=Quote Request" },
+        { label: "snaprints@sanskritilabs.in", href: "mailto:snaprints@sanskritilabs.in" },
       ],
     },
   ];
@@ -33,7 +41,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1280px]">
 
         {/* Top section */}
-        <div className="mb-12 grid grid-cols-1 gap-12 border-b border-[rgba(0,0,0,0.08)] pb-12 sm:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr]">
+        <div className="mb-12 grid grid-cols-1 gap-12 border-b border-[rgba(0,0,0,0.08)] pb-12 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
 
           {/* Brand block */}
           <div>

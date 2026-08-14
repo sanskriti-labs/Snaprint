@@ -4,6 +4,24 @@ import Footer from "@/components/Footer";
 
 const siteUrl = "https://snaprints.com";
 
+export const metadata: Metadata = {
+  title: "Pricing — Snaprint Kiosk Cost & ROI",
+  description:
+    "Snaprint S1 kiosk pricing, what's included, and expected ROI for shop owners. Hardware, app, onboarding, and support — see the full cost breakdown.",
+  alternates: { canonical: "/pricing" },
+  openGraph: {
+    title: "Pricing — Snaprint Kiosk Cost & ROI",
+    description: "Snaprint S1 kiosk pricing, what's included, and expected ROI for shop owners.",
+    url: `${siteUrl}/pricing`,
+    type: "website",
+    images: [`${siteUrl}/og.png`],
+  },
+  twitter: {
+    title: "Pricing — Snaprint Kiosk Cost & ROI",
+    description: "Snaprint S1 kiosk pricing, what's included, and expected ROI for shop owners.",
+  },
+};
+
 const included = [
   { title: "S1 kiosk hardware", body: "Dedicated print + scan unit, 2000-sheet capacity, 15.6\" touch display, UPS backup, and the Snaprint OS pre-installed and activated." },
   { title: "Owner mobile dashboard", body: "Live revenue, print counts, ink and paper status — full visibility from your phone, not from the counter." },

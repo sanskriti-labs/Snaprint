@@ -9,6 +9,8 @@ const links = [
   { label: "Why Snaprint", href: "#why" },
   { label: "The S1", href: "#machine" },
   { label: "Results", href: "#testimonials" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Franchise", href: "/franchise" },
 ];
 
 export default function Navbar() {
