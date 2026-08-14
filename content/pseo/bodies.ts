@@ -4785,7 +4785,7 @@ Engineering students typically print spiral-bound project reports with colour bl
 
 ## How Snaprint fits in
 
-For shop owners yet to be listed, [onboarding through /book](/book) is the straightforward entry point — the platform handles discovery, order routing, and the small business side of running a print counter. For students hunting a reliable kiosk close to campus or hostel, the [nearest-print search on /print-near/bengaluru](/print-near/bengaluru) lays out options across all 14 pin codes as they come online. The idea is simple: Bengaluru is big enough that "near me" should mean something accurate, and the map keeps refining itself as more verified shops plug in.
+For shop owners yet to be listed, [onboarding through /book](/book) is the straightforward entry point — the platform handles discovery, order routing, and the small business side of running a print counter. For students hunting a reliable kiosk close to campus or hostel, the [nearest-print search on /print-near](/print-near) lays out options across all 14 pin codes as they come online. The idea is simple: Bengaluru is big enough that "near me" should mean something accurate, and the map keeps refining itself as more verified shops plug in.
 `,
   },
   "city-hyderabad": {
@@ -4808,7 +4808,7 @@ Hyderabad runs on paperwork. Osmania University near 500007, JNTU in Kukatpally,
 Thesis spiral-binding in A4 and A3, colour project reports with laminated covers for engineering students, and bulk B&W photocopying of previous papers top the list around college neighbourhoods. In commercial belts — 500003 and 500081 — the order pads fill with visiting cards, flex banners, and spiral-bound reports for client meetings. Old City shops see more Urdu and Telugu typing jobs alongside standard PAN card and Aadhaar printouts. Passport-size photo strips and document scanning for visa applications round out a typical day.
 
 ## How Snaprint fits in
-The verification team is actively onboarding shop owners across all ten pin codes — if you run a xerox shop in Hyderabad, the /book page walks you through a single signup. For students and residents hunting a working printer right now, the /print-near/hyderabad page lists operating kiosks by distance, price and turnaround, updated as more shops pass verification.
+The verification team is actively onboarding shop owners across all ten pin codes — if you run a xerox shop in Hyderabad, the /book page walks you through a single signup. For students and residents hunting a working printer right now, the /print-near page lists operating kiosks by distance, price and turnaround, updated as more shops pass verification.
 `,
   },
   "college-atria-it-bangalore": {
