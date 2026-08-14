@@ -14957,7 +14957,7 @@ const areas: Area[] = [
   },
 
   {
-    slug: "ashok-nagar",
+    slug: "ashok-nagar-hyderabad",
     name: "Ashok Nagar",
     city: "hyderabad",
     pinCodes: ["500020", "500080"],
@@ -16302,7 +16302,7 @@ const areas: Area[] = [
     pinCodes: ["600017", "600090"],
     intro: "17 verified xerox and print shops in T. Nagar, Chennai (600017, 600090). Top-rated is STAR Communications Xerox Shop at 5★, and the area averages 4.4★ across 15 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in T. Nagar", "print shop T. Nagar", "photocopy near T. Nagar", "colour printing T. Nagar Chennai", "cheap xerox T. Nagar", "document binding T. Nagar"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Bg Xerox",
@@ -16477,7 +16477,7 @@ const areas: Area[] = [
     pinCodes: ["600032", "600015"],
     intro: "16 verified xerox and print shops in Guindy, Chennai (600032, 600015). Top-rated is S K XEROX at 5★, and the area averages 4.4★ across 15 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Guindy", "print shop Guindy", "photocopy near Guindy", "colour printing Guindy Chennai", "cheap xerox Guindy", "document binding Guindy"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Adyar Students Xerox Pvt Ltd",
@@ -16643,7 +16643,7 @@ const areas: Area[] = [
     pinCodes: ["600040", "600101"],
     intro: "18 verified xerox and print shops in Anna Nagar, Chennai (600040, 600101). Top-rated is PHOENIX XEROX at 5★, and the area averages 4.3★ across 18 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Anna Nagar", "print shop Anna Nagar", "photocopy near Anna Nagar", "colour printing Anna Nagar Chennai", "cheap xerox Anna Nagar", "document binding Anna Nagar"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "BG XEROX & BOOKS, ANNA NAGAR",
@@ -16831,7 +16831,7 @@ const areas: Area[] = [
     pinCodes: ["600042", "600032"],
     intro: "17 verified xerox and print shops in Velachery, Chennai (600042, 600032). Top-rated is Vip Xerox Point at 5★, and the area averages 4.1★ across 13 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Velachery", "print shop Velachery", "photocopy near Velachery", "colour printing Velachery Chennai", "cheap xerox Velachery", "document binding Velachery"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Adyar Xerox",
@@ -17002,7 +17002,7 @@ const areas: Area[] = [
     pinCodes: ["600044", "600045"],
     intro: "20 verified xerox and print shops in Tambaram, Chennai (600044, 600045). Top-rated is Laika xerox at 5★, and the area averages 4.1★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Tambaram", "print shop Tambaram", "photocopy near Tambaram", "colour printing Tambaram Chennai", "cheap xerox Tambaram", "document binding Tambaram"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "G.K. Xerox",
@@ -17212,7 +17212,7 @@ const areas: Area[] = [
     pinCodes: ["600008", "600002"],
     intro: "16 verified xerox and print shops in Egmore, Chennai (600008, 600002). Top-rated is S.M. Xerox at 5★, and the area averages 4.2★ across 13 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Egmore", "print shop Egmore", "photocopy near Egmore", "colour printing Egmore Chennai", "cheap xerox Egmore", "document binding Egmore"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "A Class Xerox",
@@ -17374,7 +17374,7 @@ const areas: Area[] = [
     pinCodes: ["600015", "600072"],
     intro: "16 verified xerox and print shops in Saidapet, Chennai (600015, 600072). Top-rated is SRI XEROX SAIDAPET at 5★, and the area averages 4.5★ across 11 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Saidapet", "print shop Saidapet", "photocopy near Saidapet", "colour printing Saidapet Chennai", "cheap xerox Saidapet", "document binding Saidapet"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Star Xeroxs",
@@ -17534,7 +17534,7 @@ const areas: Area[] = [
     pinCodes: ["600020", "600041"],
     intro: "16 verified xerox and print shops in Adyar, Chennai (600020, 600041). Top-rated is NRS XEROX at 5★, and the area averages 4.5★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Adyar", "print shop Adyar", "photocopy near Adyar", "colour printing Adyar Chennai", "cheap xerox Adyar", "document binding Adyar"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Adyar New Xerox",
@@ -17705,7 +17705,7 @@ const areas: Area[] = [
     pinCodes: ["600034", "600006"],
     intro: "20 verified xerox and print shops in Nungambakkam, Chennai (600034, 600006). Top-rated is Senthil Murugan Net Centre and Xerox at 5★, and the area averages 4.4★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Nungambakkam", "print shop Nungambakkam", "photocopy near Nungambakkam", "colour printing Nungambakkam Chennai", "cheap xerox Nungambakkam", "document binding Nungambakkam"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Master Xerox",
@@ -17915,7 +17915,7 @@ const areas: Area[] = [
     pinCodes: ["600044", "600064"],
     intro: "1 verified xerox and print shop in Chromepet, Chennai (600044, 600064). Top-rated is Students Xerox at 5★, and the area averages 5.0★ across 1 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Chromepet", "print shop Chromepet", "photocopy near Chromepet", "colour printing Chromepet Chennai", "document binding Chromepet"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Students Xerox",
@@ -17937,7 +17937,7 @@ const areas: Area[] = [
     pinCodes: ["600001", "600003"],
     intro: "20 verified xerox and print shops in George Town, Chennai (600001, 600003). Top-rated is Supreme Xerox at 5★, and the area averages 4.5★ across 18 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in George Town", "print shop George Town", "photocopy near George Town", "colour printing George Town Chennai", "cheap xerox George Town", "document binding George Town"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Grace Xerox",
@@ -18142,7 +18142,7 @@ const areas: Area[] = [
     pinCodes: ["600119", "600100"],
     intro: "16 verified xerox and print shops in Sholinganallur, Chennai (600119, 600100). Top-rated is SNB XEROX at 5★, and the area averages 4.4★ across 15 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Sholinganallur", "print shop Sholinganallur", "photocopy near Sholinganallur", "colour printing Sholinganallur Chennai", "cheap xerox Sholinganallur", "document binding Sholinganallur"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "AVN Xerox & Stationery",
@@ -18308,7 +18308,7 @@ const areas: Area[] = [
     pinCodes: ["400020"],
     intro: "20 verified xerox and print shops in Churchgate, Mumbai (400020). Top-rated is Roshni Copy Centre at 5★, and the area averages 4.1★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Churchgate", "print shop Churchgate", "photocopy near Churchgate", "colour printing Churchgate Mumbai", "cheap xerox Churchgate", "document binding Churchgate"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "stationary, Xerox, Cyber Cafe",
@@ -18515,7 +18515,7 @@ const areas: Area[] = [
     pinCodes: ["400001"],
     intro: "1 verified xerox and print shop in CST, Mumbai (400001). Top-rated is Daksha Copy Centre at 4.2★, and the area averages 4.2★ across 1 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in CST", "print shop CST", "photocopy near CST", "colour printing CST Mumbai", "document binding CST"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Daksha Copy Centre",
@@ -18538,7 +18538,7 @@ const areas: Area[] = [
     pinCodes: ["400028", "400019"],
     intro: "19 verified xerox and print shops in Dadar, Mumbai (400028, 400019). Top-rated is Shri Stationery And Xerox at 5★, and the area averages 4.4★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Dadar", "print shop Dadar", "photocopy near Dadar", "colour printing Dadar Mumbai", "cheap xerox Dadar", "document binding Dadar"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Mahendra Stationery And Xerox",
@@ -18739,7 +18739,7 @@ const areas: Area[] = [
     pinCodes: ["400069", "400058", "400059"],
     intro: "20 verified xerox and print shops in Andheri, Mumbai (400069, 400058). Top-rated is Sikotar Stationery & Xerox at 5★, and the area averages 4.2★ across 20 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Andheri", "print shop Andheri", "photocopy near Andheri", "colour printing Andheri Mumbai", "cheap xerox Andheri", "document binding Andheri"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Gaurav Xerox",
@@ -18952,7 +18952,7 @@ const areas: Area[] = [
     pinCodes: ["400066", "400092"],
     intro: "20 verified xerox and print shops in Borivali, Mumbai (400066, 400092). Top-rated is CHAMUNDA XEROX & STATIONERY at 5★, and the area averages 4.5★ across 20 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Borivali", "print shop Borivali", "photocopy near Borivali", "colour printing Borivali Mumbai", "cheap xerox Borivali", "document binding Borivali"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Ganesh Stationery & Xerox",
@@ -19163,7 +19163,7 @@ const areas: Area[] = [
     pinCodes: ["400602", "400603"],
     intro: "19 verified xerox and print shops in Thane, Mumbai (400602, 400603). Top-rated is Xerox Point stationary at 5★, and the area averages 4.1★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Thane", "print shop Thane", "photocopy near Thane", "colour printing Thane Mumbai", "cheap xerox Thane", "document binding Thane"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Neelkanth Xerox",
@@ -19364,7 +19364,7 @@ const areas: Area[] = [
     pinCodes: ["400070", "400024"],
     intro: "20 verified xerox and print shops in Kurla, Mumbai (400070, 400024). Top-rated is Royal Xerox at 5★, and the area averages 4.2★ across 20 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Kurla", "print shop Kurla", "photocopy near Kurla", "colour printing Kurla Mumbai", "cheap xerox Kurla", "document binding Kurla"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Royal Xerox",
@@ -19573,7 +19573,7 @@ const areas: Area[] = [
     pinCodes: ["400077", "400075"],
     intro: "17 verified xerox and print shops in Ghatkopar, Mumbai (400077, 400075). Top-rated is KK Xerox And Stationery at 5★, and the area averages 4.3★ across 17 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Ghatkopar", "print shop Ghatkopar", "photocopy near Ghatkopar", "colour printing Ghatkopar Mumbai", "cheap xerox Ghatkopar", "document binding Ghatkopar"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Pallavi Stationery & Xerox",
@@ -19754,7 +19754,7 @@ const areas: Area[] = [
     pinCodes: ["400019", "400016"],
     intro: "10 verified xerox and print shops in Matunga, Mumbai (400019, 400016). Top-rated is Pravin Xerox & Stationary _ OFFICE SUPPLIES in matunga at 4.8★, and the area averages 4.5★ across 10 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Matunga", "print shop Matunga", "photocopy near Matunga", "colour printing Matunga Mumbai", "cheap xerox Matunga", "document binding Matunga"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Sky stationery and xerox",
@@ -19867,7 +19867,7 @@ const areas: Area[] = [
     pinCodes: ["400076", "400072"],
     intro: "15 verified xerox and print shops in Powai, Mumbai (400076, 400072). Top-rated is AR Enterprises at 5★, and the area averages 4.3★ across 15 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Powai", "print shop Powai", "photocopy near Powai", "colour printing Powai Mumbai", "cheap xerox Powai", "document binding Powai"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Impact Graphics",
@@ -20029,7 +20029,7 @@ const areas: Area[] = [
     pinCodes: ["400098", "400055"],
     intro: "10 verified xerox and print shops in Kalina, Mumbai (400098, 400055). Top-rated is Sun Copy Center at 5★, and the area averages 4.4★ across 9 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Kalina", "print shop Kalina", "photocopy near Kalina", "colour printing Kalina Mumbai", "cheap xerox Kalina", "document binding Kalina"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Denmark Enterprises",
@@ -20139,7 +20139,7 @@ const areas: Area[] = [
     pinCodes: ["400002", "400003"],
     intro: "18 verified xerox and print shops in Crawford Market, Mumbai (400002, 400003). Top-rated is Rahul & Co Xerox at 5★, and the area averages 4.5★ across 17 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Crawford Market", "print shop Crawford Market", "photocopy near Crawford Market", "colour printing Crawford Market Mumbai", "cheap xerox Crawford Market", "document binding Crawford Market"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Pioneer Xerox Shop",
@@ -20319,13 +20319,13 @@ const areas: Area[] = [
   },
 
   {
-    slug: "shivajinagar",
+    slug: "shivajinagar-pune",
     name: "Shivajinagar",
     city: "pune",
     pinCodes: ["411005", "411004"],
     intro: "19 verified xerox and print shops in Shivajinagar, Pune (411005, 411004). Top-rated is MAHESH PRINT AND XEROX at 5★, and the area averages 4.1★ across 18 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Shivajinagar", "print shop Shivajinagar", "photocopy near Shivajinagar", "colour printing Shivajinagar Pune", "cheap xerox Shivajinagar", "document binding Shivajinagar"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "SHUBHAM XEROX & SERVICES",
@@ -20524,7 +20524,7 @@ const areas: Area[] = [
     pinCodes: ["411004", "411001"],
     intro: "15 verified xerox and print shops in Deccan, Pune (411004, 411001). Top-rated is Sarvadnya copiers at 5★, and the area averages 4.5★ across 14 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Deccan", "print shop Deccan", "photocopy near Deccan", "colour printing Deccan Pune", "cheap xerox Deccan", "document binding Deccan"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "New PPC Stationery & Printing Hub",
@@ -20683,7 +20683,7 @@ const areas: Area[] = [
     pinCodes: ["411038", "411052"],
     intro: "20 verified xerox and print shops in Kothrud, Pune (411038, 411052). Top-rated is Swami Samartha Enterprises Xerox And Stationery at 5★, and the area averages 4.3★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Kothrud", "print shop Kothrud", "photocopy near Kothrud", "colour printing Kothrud Pune", "cheap xerox Kothrud", "document binding Kothrud"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Shree Swami Samarth Xerox Center",
@@ -20892,7 +20892,7 @@ const areas: Area[] = [
     pinCodes: ["411052"],
     intro: "16 verified xerox and print shops in Karve Nagar, Pune (411052). Top-rated is Sinhagad xerox and Computer Shop at 5★, and the area averages 4.4★ across 15 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Karve Nagar", "print shop Karve Nagar", "photocopy near Karve Nagar", "colour printing Karve Nagar Pune", "cheap xerox Karve Nagar", "document binding Karve Nagar"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Mahakali stationary xerox",
@@ -21062,7 +21062,7 @@ const areas: Area[] = [
     pinCodes: ["411067", "411007"],
     intro: "9 verified xerox and print shops in Aundh, Pune (411067, 411007). Top-rated is Jagdamb Xerox and Stationery at 5★, and the area averages 4.2★ across 9 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Aundh", "print shop Aundh", "photocopy near Aundh", "colour printing Aundh Pune", "cheap xerox Aundh", "document binding Aundh"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Jumbo Xerox",
@@ -21164,7 +21164,7 @@ const areas: Area[] = [
     pinCodes: ["411069", "411045"],
     intro: "19 verified xerox and print shops in Baner, Pune (411069, 411045). Top-rated is Rajal Copiers Jumbo Xerox at 5★, and the area averages 4.6★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Baner", "print shop Baner", "photocopy near Baner", "colour printing Baner Pune", "cheap xerox Baner", "document binding Baner"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "SHREE GANESH ENTERPRISES AND XEROX",
@@ -21366,7 +21366,7 @@ const areas: Area[] = [
     pinCodes: ["411057", "411033"],
     intro: "18 verified xerox and print shops in Wakad, Pune (411057, 411033). Top-rated is XEROX & PRINTING HUB at 5★, and the area averages 4.3★ across 17 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Wakad", "print shop Wakad", "photocopy near Wakad", "colour printing Wakad Pune", "cheap xerox Wakad", "document binding Wakad"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Stationary & Xerox shop",
@@ -21551,7 +21551,7 @@ const areas: Area[] = [
     pinCodes: ["411057"],
     intro: "13 verified xerox and print shops in Hinjewadi, Pune (411057). Top-rated is Star Mobile & Xerox Centre at 5★, and the area averages 4.5★ across 13 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Hinjewadi", "print shop Hinjewadi", "photocopy near Hinjewadi", "colour printing Hinjewadi Pune", "cheap xerox Hinjewadi", "document binding Hinjewadi"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "PRINT MEDIA",
@@ -21692,7 +21692,7 @@ const areas: Area[] = [
     pinCodes: ["411014", "411013"],
     intro: "17 verified xerox and print shops in Kharadi, Pune (411014, 411013). Top-rated is vidhya statationary, Xerox & Gift at 5★, and the area averages 4.5★ across 15 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Kharadi", "print shop Kharadi", "photocopy near Kharadi", "colour printing Kharadi Pune", "cheap xerox Kharadi", "document binding Kharadi"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Dhanlaximi Xerox Centre",
@@ -21868,7 +21868,7 @@ const areas: Area[] = [
     pinCodes: ["411013", "411028"],
     intro: "9 verified xerox and print shops in Magarpatta, Pune (411013, 411028). Top-rated is Guru copiers & Stationers ( Xerox ) at 5★, and the area averages 3.3★ across 9 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Magarpatta", "print shop Magarpatta", "photocopy near Magarpatta", "colour printing Magarpatta Pune", "cheap xerox Magarpatta", "document binding Magarpatta"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Bombay Stationers",
@@ -21967,7 +21967,7 @@ const areas: Area[] = [
     pinCodes: ["411001", "411002"],
     intro: "5 verified xerox and print shops in Camp, Pune (411001, 411002). Top-rated is Xerox Wale Bhaiya at 5★, and the area averages 4.3★ across 5 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Camp", "print shop Camp", "photocopy near Camp", "colour printing Camp Pune", "cheap xerox Camp", "document binding Camp"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Xerox Wale Bhaiya",
@@ -22028,7 +22028,7 @@ const areas: Area[] = [
     pinCodes: ["411002"],
     intro: "10 verified xerox and print shops in Swargate, Pune (411002). Top-rated is Azad Xerox Center at 5★, and the area averages 4.4★ across 9 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Swargate", "print shop Swargate", "photocopy near Swargate", "colour printing Swargate Pune", "cheap xerox Swargate", "document binding Swargate"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Square Xerox",
@@ -22132,11 +22132,11 @@ const areas: Area[] = [
   {
     slug: "kamla-nagar",
     name: "Kamla Nagar",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["110007"],
     intro: "9 verified xerox and print shops in Kamla Nagar, Delhi_Ncr (110007). Top-rated is ks stationery and print shop at 5★, and the area averages 4.3★ across 8 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Kamla Nagar", "print shop Kamla Nagar", "photocopy near Kamla Nagar", "colour printing Kamla Nagar Delhi_Ncr", "cheap xerox Kamla Nagar", "document binding Kamla Nagar"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "ks stationery and print shop",
@@ -22230,11 +22230,11 @@ const areas: Area[] = [
   {
     slug: "satya-niketan",
     name: "Satya Niketan",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["110021"],
     intro: "5 verified xerox and print shops in Satya Niketan, Delhi_Ncr (110021). Top-rated is Printo South Campus at 4.8★, and the area averages 3.6★ across 4 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Satya Niketan", "print shop Satya Niketan", "photocopy near Satya Niketan", "colour printing Satya Niketan Delhi_Ncr", "cheap xerox Satya Niketan", "document binding Satya Niketan"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Best Print",
@@ -22290,11 +22290,11 @@ const areas: Area[] = [
   {
     slug: "connaught-place",
     name: "Connaught Place",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["110001"],
     intro: "20 verified xerox and print shops in Connaught Place, Delhi_Ncr (110001). Top-rated is Nepal kinetic photocopy at 5★, and the area averages 4.1★ across 19 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Connaught Place", "print shop Connaught Place", "photocopy near Connaught Place", "colour printing Connaught Place Delhi_Ncr", "cheap xerox Connaught Place", "document binding Connaught Place"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Rk photostat services - Printing & Documentation आरके फोटोस्टेट सर्विसेज - प्रिं",
@@ -22492,11 +22492,11 @@ const areas: Area[] = [
   {
     slug: "karol-bagh",
     name: "Karol Bagh",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["110005", "110060"],
     intro: "16 verified xerox and print shops in Karol Bagh, Delhi_Ncr (110005, 110060). Top-rated is Chandan Photostate at 5★, and the area averages 4.2★ across 16 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Karol Bagh", "print shop Karol Bagh", "photocopy near Karol Bagh", "colour printing Karol Bagh Delhi_Ncr", "cheap xerox Karol Bagh", "document binding Karol Bagh"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Sribalaji Stationery and IT Services",
@@ -22664,11 +22664,11 @@ const areas: Area[] = [
   {
     slug: "chandni-chowk",
     name: "Chandni Chowk",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["110006", "110002"],
     intro: "1 verified xerox and print shop in Chandni Chowk, Delhi_Ncr (110006, 110002). Addresses and map links for each are listed below. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Chandni Chowk", "print shop Chandni Chowk", "photocopy near Chandni Chowk", "colour printing Chandni Chowk Delhi_Ncr", "document binding Chandni Chowk"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Xerox shop",
@@ -22684,11 +22684,11 @@ const areas: Area[] = [
   {
     slug: "nehru-place",
     name: "Nehru Place",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["110019"],
     intro: "5 verified xerox and print shops in Nehru Place, Delhi_Ncr (110019). Top-rated is AMIT ELECTROSTAT at 4.4★, and the area averages 4.2★ across 5 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Nehru Place", "print shop Nehru Place", "photocopy near Nehru Place", "colour printing Nehru Place Delhi_Ncr", "cheap xerox Nehru Place", "document binding Nehru Place"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "A-One Digital Prints",
@@ -22747,11 +22747,11 @@ const areas: Area[] = [
   {
     slug: "cyber-hub",
     name: "Cyber Hub",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["122002", "122015"],
     intro: "8 verified xerox and print shops in Cyber Hub, Delhi_Ncr (122002, 122015). Top-rated is Sunil Printing Press at 5★, and the area averages 3.9★ across 8 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Cyber Hub", "print shop Cyber Hub", "photocopy near Cyber Hub", "colour printing Cyber Hub Delhi_Ncr", "cheap xerox Cyber Hub", "document binding Cyber Hub"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "PRINTWORX",
@@ -22838,11 +22838,11 @@ const areas: Area[] = [
   {
     slug: "sector-14-gurgaon",
     name: "Sector 14 Market",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["122001", "122007"],
     intro: "4 verified xerox and print shops in Sector 14 Market, Delhi_Ncr (122001, 122007). Top-rated is national digiprints at 4.5★, and the area averages 4.2★ across 3 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Sector 14 Market", "print shop Sector 14 Market", "photocopy near Sector 14 Market", "colour printing Sector 14 Market Delhi_Ncr", "document binding Sector 14 Market"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "national digiprints",
@@ -22888,11 +22888,11 @@ const areas: Area[] = [
   {
     slug: "galleria-market",
     name: "Galleria Market",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["122009"],
     intro: "4 verified xerox and print shops in Galleria Market, Delhi_Ncr (122009). Top-rated is Xerox || Printout || Spiral Binding || Passport Photo || Photo Print || Photogra at 4.9★, and the area averages 4.5★ across 4 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Galleria Market", "print shop Galleria Market", "photocopy near Galleria Market", "colour printing Galleria Market Delhi_Ncr", "document binding Galleria Market"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Stationery world (inc)",
@@ -22941,11 +22941,11 @@ const areas: Area[] = [
   {
     slug: "sector-18-noida",
     name: "Sector 18",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["201301"],
     intro: "9 verified xerox and print shops in Sector 18, Delhi_Ncr (201301). Top-rated is Print Wala Noida at 5★, and the area averages 4.6★ across 9 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Sector 18", "print shop Sector 18", "photocopy near Sector 18", "colour printing Sector 18 Delhi_Ncr", "cheap xerox Sector 18", "document binding Sector 18"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Print Wala Noida",
@@ -23044,11 +23044,11 @@ const areas: Area[] = [
   {
     slug: "atta-market-noida",
     name: "Atta Market",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["201301"],
     intro: "3 verified xerox and print shops in Atta Market, Delhi_Ncr (201301). Top-rated is Gupta Photocopy at 5★, and the area averages 4.7★ across 3 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Atta Market", "print shop Atta Market", "photocopy near Atta Market", "colour printing Atta Market Delhi_Ncr", "document binding Atta Market"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Gupta Photocopy",
@@ -23087,11 +23087,11 @@ const areas: Area[] = [
   {
     slug: "sector-62-noida",
     name: "Sector 62",
-    city: "delhi_ncr",
+    city: "delhi-ncr",
     pinCodes: ["201309", "201020"],
     intro: "6 verified xerox and print shops in Sector 62, Delhi_Ncr (201309, 201020). Top-rated is Mapp Stationery at 4.3★, and the area averages 4.0★ across 5 rated shops. Services include B&W and colour prints, spiral binding, lamination, and scanning.",
     keywords: ["xerox shop in Sector 62", "print shop Sector 62", "photocopy near Sector 62", "colour printing Sector 62 Delhi_Ncr", "cheap xerox Sector 62", "document binding Sector 62"],
-    presence: "live",
+    presence: "served",
     liveLocations: [
       {
         name: "Photo copy print out",

@@ -34,12 +34,12 @@ CITY_DISPLAY_NAMES = {
 # city isn't listed here.
 #
 # "Noida" is deliberately excluded here: unlike the Delhi/Gurugram entries,
-# every Noida AREA_KW slug in cities/delhi_ncr.py keeps "-noida" as part of
+# every Noida AREA_KW slug in cities/delhi-ncr.py keeps "-noida" as part of
 # the slug itself (sector-18-noida, atta-market-noida, sector-62-noida), so
 # stripping "Noida" from the query text would break the slug match instead
 # of fixing it.
 CITY_QUERY_SUFFIXES = {
-    "delhi_ncr": ["Delhi", "Gurugram"],
+    "delhi-ncr": ["Delhi", "Gurugram"],
 }
 
 

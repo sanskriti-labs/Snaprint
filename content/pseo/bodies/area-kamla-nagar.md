@@ -2,7 +2,7 @@
 kind: area
 slug: kamla-nagar
 name: Kamla Nagar
-city: delhi_ncr
+city: delhi-ncr
 priority: true
 lastReviewed: '2026-08-13'
 wordCount: 481

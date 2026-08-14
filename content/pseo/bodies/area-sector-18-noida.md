@@ -2,7 +2,7 @@
 kind: area
 slug: sector-18-noida
 name: Sector 18
-city: delhi_ncr
+city: delhi-ncr
 priority: true
 lastReviewed: '2026-08-13'
 wordCount: 496

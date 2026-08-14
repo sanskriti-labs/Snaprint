@@ -2,7 +2,7 @@
 kind: area
 slug: cyber-hub
 name: Cyber Hub
-city: delhi_ncr
+city: delhi-ncr
 priority: true
 lastReviewed: '2026-08-13'
 wordCount: 492

@@ -1,6 +1,6 @@
 """Delhi NCR area-keyword map. Created 2026-08-13.
 
-Delhi NCR is treated as one logical unit (slug delhi_ncr) even though it
+Delhi NCR is treated as one logical unit (slug delhi-ncr) even though it
 spans Delhi, Gurugram, and Noida queries. Pin codes corrected 2026-08-13
 against real scraped shop addresses in
 scripts/scraper/data/raw-pulls/results-delhi-ncr-2026-08-13.json, the
@@ -10,7 +10,7 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
 
-CITY_SLUG = "delhi_ncr"
+CITY_SLUG = "delhi-ncr"
 QUERIES_FILE = SCRIPT_DIR / "delhi-ncr-xeroxshops.txt"
 CLEAN_FILE = SCRIPT_DIR / "data" / "shops-clean-delhi-ncr.jsonl"
 RAW_DATA_FILE = SCRIPT_DIR / "data" / "results-delhi-ncr.json"

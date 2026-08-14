@@ -2,7 +2,7 @@
 kind: area
 slug: connaught-place
 name: Connaught Place
-city: delhi_ncr
+city: delhi-ncr
 priority: true
 lastReviewed: '2026-08-13'
 wordCount: 515

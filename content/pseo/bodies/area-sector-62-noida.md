@@ -2,7 +2,7 @@
 kind: area
 slug: sector-62-noida
 name: Sector 62
-city: delhi_ncr
+city: delhi-ncr
 priority: true
 lastReviewed: '2026-08-13'
 wordCount: 508
