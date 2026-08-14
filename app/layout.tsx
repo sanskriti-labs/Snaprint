@@ -90,6 +90,12 @@ const jsonLd = {
       logo: `${siteUrl}/icon-512.png`,
       description: "Snaprint builds self-service print kiosks that turn xerox shops into 24/7 remote printing hubs.",
       email: "snaprints@sanskritilabs.in",
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "snaprints@sanskritilabs.in",
+        contactType: "customer service",
+        areaServed: "IN",
+      },
       // TODO(KG): once Snaprint has Crunchbase + F6S + Justdial + Wikidata
       // entries, uncomment them here. LinkedIn (verified) is the only
       // authoritative sameAs today.
