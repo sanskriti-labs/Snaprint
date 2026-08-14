@@ -138,9 +138,9 @@ export function getShopsNearCollege(
     if (d <= radiusKm) out.push(Object.assign({}, s, { __d: d }));
   }
   out.sort((a, b) => a.__d - b.__d);
-  // Strip the ephemeral __d field before returning so callers see the
-  // typed LiveLocation shape.
-  return out.map(({ __d, ...rest }) => rest);
+  // Surface __d as distanceKm — college pages have a campus origin to
+  // measure from, unlike area pages, so this is only populated here.
+  return out.map(({ __d, ...rest }) => ({ ...rest, distanceKm: Math.round(__d * 100) / 100 }));
 }
 
 /**

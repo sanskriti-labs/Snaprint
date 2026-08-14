@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { LiveLocation } from "@/content/pseo/types";
+import { pickRecommended, recommendReason } from "@/content/pseo/_recommend";
 
 type Props = {
   locations: LiveLocation[];
@@ -8,14 +9,13 @@ type Props = {
   preposition?: "in" | "near";
 };
 
-function googleMapsUrl(loc: LiveLocation): string {
-  if (loc.placeId) {
-    return `https://www.google.com/maps/place/?q=place_id:${loc.placeId}`;
-  }
-  if (loc.lat && loc.lng) {
-    return `https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}`;
-  }
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.address)}`;
+// Directions, not the shop's own Maps place page — a place-page link sends
+// the click to the competitor's listing (reviews, photos, "Claim this
+// business"); a directions link is pure navigation utility.
+function directionsUrl(loc: LiveLocation): string {
+  const destination = loc.lat && loc.lng ? `${loc.lat},${loc.lng}` : encodeURIComponent(loc.address);
+  const placeIdParam = loc.placeId ? `&destination_place_id=${loc.placeId}` : "";
+  return `https://www.google.com/maps/dir/?api=1&destination=${destination}${placeIdParam}`;
 }
 
 function StarRating({ rating }: { rating: number }) {
@@ -42,6 +42,8 @@ function StarRating({ rating }: { rating: number }) {
 export default function PseoShopsList({ locations, displayName, cityName, preposition = "in" }: Props) {
   if (!locations || locations.length === 0) return null;
 
+  const recommended = pickRecommended(locations);
+
   return (
     <section className="mb-16">
       <div className="mb-6 flex items-baseline justify-between gap-4">
@@ -66,33 +68,45 @@ export default function PseoShopsList({ locations, displayName, cityName, prepos
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-        {locations.map((loc, i) => (
+        {locations.map((loc, i) => {
+          const isRecommended = recommended !== null && loc === recommended;
+          return (
           <div
             key={loc.placeId ?? i}
             className={cn(
-              "flex flex-col gap-2 rounded-xl border border-[#E8E6E0] bg-[#FDFCFA] p-4",
-              "transition-shadow hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)]"
+              "flex flex-col gap-2 rounded-xl border bg-[#FDFCFA] p-4",
+              "transition-shadow hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)]",
+              isRecommended ? "border-[#E63946]/40 ring-1 ring-[#E63946]/20" : "border-[#E8E6E0]"
             )}
           >
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0 flex-1">
+                {isRecommended && (
+                  <span className="mb-1 inline-block rounded-full bg-[#E63946]/10 px-2 py-0.5 font-body text-[10px] font-semibold uppercase tracking-wide text-[#E63946]">
+                    Recommended
+                  </span>
+                )}
                 <h3 className="font-display text-[14px] font-bold text-[#111110] leading-snug">
                   {loc.name}
                 </h3>
                 <p className="mt-1 font-body text-[12px] text-[#888780] leading-relaxed">
                   {loc.address}
                 </p>
+                {isRecommended && (
+                  <p className="mt-1 font-body text-[11px] text-[#6B6B66]">
+                    {recommendReason(loc)}
+                  </p>
+                )}
               </div>
               <a
-                href={googleMapsUrl(loc)}
+                href={directionsUrl(loc)}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Open ${loc.name} on Google Maps`}
+                aria-label={`Get directions to ${loc.name}`}
                 className="shrink-0 rounded-lg bg-[#F5F3EE] p-2 text-[#6B6B66] transition-colors hover:bg-[#E8E6E0] hover:text-[#111110]"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"/>
                 </svg>
               </a>
             </div>
@@ -119,7 +133,8 @@ export default function PseoShopsList({ locations, displayName, cityName, prepos
               )}
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
