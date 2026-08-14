@@ -30,6 +30,12 @@
  *       published — that city's cross-links would point back at a hub
  *       that 404s (this is how instant-print/bengaluru linking to
  *       planned areas shipped: the source list wasn't presence-filtered).
+ *   17. No live/served college or area names a city slug that has no
+ *       matching entry in cities.ts at all (distinct from #13, which only
+ *       catches a city that exists but is unpublished).
+ *   18. No two live/served areas/colleges share a slug across different
+ *       cities — /print-near/[entity] resolves by bare slug (first match
+ *       wins), so a collision silently shadows one city's page entirely.
  *   14. layout.tsx's sitewide JSON-LD carries no price/offers field —
  *       that schema renders on every page including PSEO pages, and a
  *       price there leaks into search snippets for unrelated pages
@@ -259,6 +265,85 @@ if (existsSync(seoTsPath)) {
   }
 } else {
   fail("content/pseo/seo.ts not found");
+}
+
+// ---------------------------------------------------------------------------
+// 17: every live/served area/college's `city` slug must have a matching
+// entry in cities.ts — not just a *published* one (that's #13's job), but
+// *any* entry at all.
+//
+// Regression this guards: the scraper (scripts/scraper/process_areas.py)
+// writes `city: "${cfg.CITY_SLUG}"` into every area it generates, driven by
+// CITY_SLUG in scripts/scraper/cities/<city>.py — it never touches
+// cities.ts. On 2026-08-14 this shipped 48 live/served areas across 4 new
+// cities (Chennai, Mumbai, Pune, Delhi NCR) whose city slug had no matching
+// cities.ts entry at all. Every existing check passed: #6/#13 only check
+// colleges and only catch a city that's *present but unpublished* —
+// getCity(slug) returning undefined is a different failure and fails
+// silently, not loudly. Practical effect: buildBreadcrumbList() in
+// content/pseo/seo.ts drops the city crumb (getCity() lookup just misses),
+// there's no /instant-print/<city> hub, and the areas are orphaned from
+// the internal-linking graph despite rendering fine.
+// ---------------------------------------------------------------------------
+let missingCityRefs = 0;
+for (const a of areas) {
+  if (a.city && !citySlugs.has(a.city)) {
+    fail(`live area "${a.slug}" references city "${a.city}" which has no entry in cities.ts at all (not just unpublished — entirely absent)`);
+    missingCityRefs++;
+  }
+}
+for (const c of colleges) {
+  if (c.city && !citySlugs.has(c.city)) {
+    fail(`live college "${c.slug}" references city "${c.city}" which has no entry in cities.ts at all (not just unpublished — entirely absent)`);
+    missingCityRefs++;
+  }
+}
+if (missingCityRefs === 0) {
+  ok(`all live areas/colleges reference a city slug that exists in cities.ts (${citySlugs.size} city entries)`);
+}
+
+// ---------------------------------------------------------------------------
+// 18: no two live/served entities share a slug across different cities.
+// /print-near/[entity] resolves via getArea()/getCollege(), both a plain
+// Array.find() over the full areas.ts/colleges.ts list — first match wins,
+// full stop. There is nothing city-scoped about the URL or the lookup.
+//
+// Regression this guards: areas.ts independently generated "ashok-nagar"
+// for both Bengaluru and Hyderabad, and "shivajinagar" for both Bengaluru
+// and Pune — each city's scraper run is correctly isolated (a run only
+// ever loads its own AREA_KW dict and its own shop file, so no shop data
+// crosses city lines), but nothing stopped two different cities from
+// independently picking the same area slug. Found by hand on 2026-08-14:
+// Hyderabad's Ashok Nagar and Pune's Shivajinagar were both completely
+// unreachable — Bengaluru's entry won every lookup, so a whole city's
+// area page silently vanished from the live site despite existing in the
+// data, passing every other check, and even being listed (wrongly) in
+// llms.txt pointing at the winning city's URL. Fixed by suffixing the
+// losing slugs with their city (ashok-nagar-hyderabad, shivajinagar-pune),
+// matching the convention already used for inherently ambiguous names
+// (sector-14-gurgaon, atta-market-noida). This check makes sure the next
+// scraper run for a new city can't reintroduce the same silent collision.
+// ---------------------------------------------------------------------------
+{
+  const bySlug = new Map();
+  for (const a of areas) {
+    if (!bySlug.has(a.slug)) bySlug.set(a.slug, []);
+    bySlug.get(a.slug).push(`area "${a.slug}" (city: ${a.city})`);
+  }
+  for (const c of colleges) {
+    if (!bySlug.has(c.slug)) bySlug.set(c.slug, []);
+    bySlug.get(c.slug).push(`college "${c.slug}" (city: ${c.city})`);
+  }
+  let slugCollisions = 0;
+  for (const [slug, owners] of bySlug) {
+    if (owners.length > 1) {
+      fail(`slug "${slug}" is used by ${owners.length} live/served entities across different cities — only the first is reachable at /print-near/${slug}, the rest 404 or are silently shadowed: ${owners.join("; ")}`);
+      slugCollisions++;
+    }
+  }
+  if (slugCollisions === 0) {
+    ok(`no slug collisions across ${bySlug.size} live areas/colleges — every /print-near/[entity] URL resolves to exactly one entity`);
+  }
 }
 
 // ---------------------------------------------------------------------------
