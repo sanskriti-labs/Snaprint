@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 
 const links = [
   { label: "How it works", href: "#how" },
-  { label: "Why Snaprint", href: "#why" },
-  { label: "The S1", href: "#machine" },
+  { label: "Features", href: "/features" },
   { label: "Results", href: "#testimonials" },
   { label: "Pricing", href: "/pricing" },
   { label: "Franchise", href: "/franchise" },
