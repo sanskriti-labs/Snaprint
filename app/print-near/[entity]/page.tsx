@@ -27,6 +27,19 @@ export function generateStaticParams() {
   return slugs.map((entity) => ({ entity }));
 }
 
+/**
+ * "1 Xerox Shops" reads as a bug in the SERP and depresses CTR. Every
+ * count-bearing string in this file routes through these two helpers so
+ * the singular case is handled once rather than at each interpolation.
+ */
+function shopNoun(count: number): string {
+  return count === 1 ? "Xerox Shop" : "Xerox Shops";
+}
+
+function shopsPhrase(count: number): string {
+  return count === 1 ? "verified xerox and print shop" : "verified xerox and print shops";
+}
+
 export function generateMetadata({
   params,
 }: {
@@ -44,13 +57,13 @@ export function generateMetadata({
     // here doubles it in the rendered <title>.
     const title =
       count > 0
-        ? `${count} Xerox Shops Near ${name}, ${cityName} [2026]`
+        ? `${count} ${shopNoun(count)} Near ${name}, ${cityName} [2026]`
         : `Print Shops Near ${name}, ${cityName} [2026]`;
     // Description target 150–165 chars; include count, key service, and a
     // soft call-to-action. Falls back to a generic blurb when count is 0.
     const description =
       count > 0
-        ? `${count} verified xerox and print shops within 1.5 km of ${name}, ${cityName}. B&W from ₹3, colour prints, binding, scan, ID photos. Call ahead for hours.`
+        ? `${count} ${shopsPhrase(count)} within 1.5 km of ${name}, ${cityName}. B&W from ₹3, colour prints, binding, scan, ID photos. Call ahead for hours.`
         : `Find print and xerox shops near ${name}, ${cityName}. B&W and colour prints, binding, lamination and scanning. Open hours vary — call ahead.`;
     return {
       title,
@@ -58,14 +71,14 @@ export function generateMetadata({
       keywords: withSharedKeywords(college.keywords),
       alternates: { canonical: `/print-near/${college.slug}` },
       openGraph: {
-        title: `${count > 0 ? count + " " : ""}Xerox shops near ${name}, ${cityName} — Snaprint`,
+        title: `${count > 0 ? count + " " : ""}${count === 1 ? "Xerox shop" : "Xerox shops"} near ${name}, ${cityName} — Snaprint`,
         description,
         url: `${SITE_URL}/print-near/${college.slug}`,
         type: "website",
         images: [`${SITE_URL}/og.png`],
       },
       twitter: {
-        title: `${count > 0 ? count + " " : ""}Xerox shops near ${name}, ${cityName} — Snaprint`,
+        title: `${count > 0 ? count + " " : ""}${count === 1 ? "Xerox shop" : "Xerox shops"} near ${name}, ${cityName} — Snaprint`,
         description,
       },
     };
@@ -78,14 +91,14 @@ export function generateMetadata({
     // No "· Snaprint" suffix — see the college branch above. Drop the
     // "— Open Now" tail on long area names so the title (plus the
     // layout's "· Snaprint" suffix) stays under ~70 chars.
-    const shortTitle = `${count} Xerox Shops in ${area.name}, ${cityName}`;
+    const shortTitle = `${count} ${shopNoun(count)} in ${area.name}, ${cityName}`;
     const title =
       count > 0
         ? (shortTitle.length <= 48 ? `${shortTitle} — Open Now` : shortTitle)
         : `Print Shops in ${area.name}, ${cityName}`;
     const description =
       count > 0
-        ? `${count} verified print and xerox shops in ${area.name}, ${cityName}. B&W from ₹3, colour prints, spiral binding, scan, ID photos. Open hours vary — call ahead.`
+        ? `${count} ${shopsPhrase(count)} in ${area.name}, ${cityName}. B&W from ₹3, colour prints, spiral binding, scan, ID photos. Open hours vary — call ahead.`
         : `Print and xerox shops in ${area.name}, ${cityName}. B&W and colour prints, binding, lamination and scanning. Open hours vary — call ahead.`;
     return {
       title,
@@ -93,14 +106,14 @@ export function generateMetadata({
       keywords: withSharedKeywords(area.keywords),
       alternates: { canonical: `/print-near/${area.slug}` },
       openGraph: {
-        title: `${count > 0 ? count + " " : ""}Xerox shops in ${area.name}, ${cityName} — Snaprint`,
+        title: `${count > 0 ? count + " " : ""}${count === 1 ? "Xerox shop" : "Xerox shops"} in ${area.name}, ${cityName} — Snaprint`,
         description,
         url: `${SITE_URL}/print-near/${area.slug}`,
         type: "website",
         images: [`${SITE_URL}/og.png`],
       },
       twitter: {
-        title: `${count > 0 ? count + " " : ""}Xerox shops in ${area.name}, ${cityName} — Snaprint`,
+        title: `${count > 0 ? count + " " : ""}${count === 1 ? "Xerox shop" : "Xerox shops"} in ${area.name}, ${cityName} — Snaprint`,
         description,
       },
     };

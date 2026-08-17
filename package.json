@@ -18,7 +18,8 @@
     "verify:seo-tags": "node scripts/verify/seo-tags.js",
     "generate:bodies": "node scripts/generate-bodies.mjs",
     "generate:priority": "node scripts/seo/run-priority-api.mjs",
-    "generate:faq-tails": "node scripts/seo/generate-faq-tails.mjs"
+    "generate:faq-tails": "node scripts/seo/generate-faq-tails.mjs",
+    "seo:indexnow": "node scripts/seo/indexnow-submit.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

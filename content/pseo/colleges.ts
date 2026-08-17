@@ -198,7 +198,7 @@ const colleges: College[] = [
   {
     slug: "presidency-university-bangalore",
     name: "Presidency University",
-    shortName: "Presidency",
+    shortName: "Presidency University",
     city: "bengaluru",
     address: "Itgalpur, Rajanukunte, Yelahanka, Bengaluru, Karnataka 560064",
     website: "https://presidencyuniversity.in/",
@@ -365,7 +365,7 @@ const colleges: College[] = [
   {
     slug: "vijaya-college",
     name: "Vijaya College",
-    shortName: "Vijaya",
+    shortName: "Vijaya College",
     city: "bengaluru",
     address: "Basavanagudi, Bengaluru, Karnataka 560004",
     website: "https://vijayacollege.ac.in/",

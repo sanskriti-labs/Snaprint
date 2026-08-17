@@ -31,13 +31,17 @@ const siteUrl = "https://snaprints.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  // Consumer-first title/description. The homepage previously described only
+  // the kiosk business ("Serving shop owners across India") while ~95% of the
+  // site's search impressions are near-me print queries — see the Hero
+  // comment. Franchise intent is served by /franchise, which owns those terms.
   title: {
-    default: "Snaprint — Instant Print Kiosks for Xerox Shops Across India",
+    default: "Find Xerox & Print Shops Near You — Snaprint",
     template: "%s · Snaprint",
   },
   description:
-    "Snaprint turns your xerox shop into a 24/7 remote printing hub. Scan, pay, and collect — no queue, no wait. Serving shop owners across India.",
-  keywords: ["print kiosk", "xerox shop", "remote printing", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "smart kiosk", "self-service printing"],
+    "Find verified xerox and print shops near you across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding, scanning — open now.",
+  keywords: ["xerox shop near me", "print shop near me", "printout near me", "photocopy near me", "print kiosk", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "self-service printing"],
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
@@ -50,8 +54,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Snaprint — Instant Print Kiosks for Xerox Shops",
-    description: "India's instant print network. Built for xerox shop owners across Bengaluru, Hyderabad, Chennai, Mumbai, Pune, and Delhi NCR. Powered by Sanskriti Labs, Bengaluru.",
+    title: "Find Xerox & Print Shops Near You — Snaprint",
+    description: "Verified xerox and print shops across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding and scanning near you.",
     url: siteUrl,
     siteName: "Snaprint",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Snaprint — snap. scan. print." }],
@@ -60,8 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snaprint — Instant Print Kiosks for Xerox Shops",
-    description: "India's instant print network. Built for xerox shop owners.",
+    title: "Find Xerox & Print Shops Near You — Snaprint",
+    description: "Verified xerox and print shops across six Indian cities. B&W, colour, binding and scanning near you.",
     images: ["/og.png"],
   },
   icons: {

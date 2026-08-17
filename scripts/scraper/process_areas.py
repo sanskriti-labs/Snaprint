@@ -137,19 +137,79 @@ def _norm_locality(s):
 
 
 def get_area_slug(address, title, area_kw):
-    combined = (address + " " + title).lower()
+    """Assign a shop to an area by keyword match against its address.
+
+    Earliest-match-wins, NOT first-in-dict-wins. AREA_KW is declaration
+    ordered, and a broad early entry used to swallow shops belonging to a
+    more specific area declared later. Real incidents (2026-08-17 audit):
+      - "bannerghatta road" (btm-layout) took 8 of 11 Madiwala shops.
+      - "jp nagar" (jp-nagar) took 6 of 7 Kothnur shops.
+      - "marathahalli" took 11 of 26 Sarjapur Road shops.
+    Those areas rendered as 1-shop pages, and Search Console flagged them
+    "Duplicate without user-selected canonical" / left them uncrawled.
+
+    Why earliest position: Indian postal addresses run most-specific to
+    least-specific ("Shop 4, 80ft Rd, Madiwala, BTM Layout, Bengaluru").
+    The locality named first is the one the shop is actually in; anything
+    later is a parent or a landmark. Ties break on the longer keyword.
+
+    Measured against the full 2970-shop index, this drops published areas
+    holding <=1 shop from 11 to 4 with no area losing coverage — strictly
+    better than both the old first-wins rule and a longest-keyword rule
+    (which starved Ulsoor to 0 and Kumara Park to 1).
+
+    Position is measured over the address only. Title is still searched in
+    the fallback pass, but a shop *named* "Jayanagar Xerox" sitting in
+    Madiwala must not outrank its own address.
+    """
+    addr = (address or "").lower()
+    combined = (addr + " " + (title or "")).lower()
     norm_combined = _norm_locality(combined)
+
+    # Pass 1 — exact substring in the address, earliest match wins.
+    best = None  # (position, -keyword_length, slug)
     for slug, (kws, _, _) in area_kw.items():
         for kw in kws:
-            if kw in combined:
-                return slug
-    for slug, (kws, _, _) in sorted(
-        area_kw.items(), key=lambda kv: -max(len(k) for k in kv[1][0])
-    ):
-        for kw in sorted(kws, key=len, reverse=True):
+            pos = addr.find(kw)
+            if pos == -1:
+                continue
+            cand = (pos, -len(kw), slug)
+            if best is None or cand < best:
+                best = cand
+    if best is not None:
+        return best[2]
+
+    # Pass 2 — exact substring anywhere (address + title). Covers shops
+    # whose address omits the locality but whose name carries it.
+    best = None
+    for slug, (kws, _, _) in area_kw.items():
+        for kw in kws:
+            pos = combined.find(kw)
+            if pos == -1:
+                continue
+            cand = (pos, -len(kw), slug)
+            if best is None or cand < best:
+                best = cand
+    if best is not None:
+        return best[2]
+
+    # Pass 3 — spelling-variant fallback on the vowel-stripped form. The
+    # >= 6 floor keeps short collapsed forms from matching unrelated text.
+    best = None
+    for slug, (kws, _, _) in area_kw.items():
+        for kw in kws:
             nk = _norm_locality(kw)
-            if len(nk) >= 6 and nk in norm_combined:
-                return slug
+            if len(nk) < 6:
+                continue
+            pos = norm_combined.find(nk)
+            if pos == -1:
+                continue
+            cand = (pos, -len(nk), slug)
+            if best is None or cand < best:
+                best = cand
+    if best is not None:
+        return best[2]
+
     return None
 
 

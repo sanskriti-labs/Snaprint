@@ -3,6 +3,40 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
 import Footer from "@/components/Footer";
+import {
+  getAllAreaSlugs,
+  getAllCollegeSlugs,
+  getAllCitySlugs,
+  getArea,
+} from "@/content/pseo/seo";
+
+/**
+ * Directory scale, counted from the published pSEO data at build time
+ * rather than hardcoded in the hero.
+ *
+ * The hero states these numbers to searchers, and the shop index is
+ * regenerated whenever `scripts/scraper/process_areas.py` runs — a literal
+ * would silently become a false claim the next time an area gains or loses
+ * coverage. Deduped by placeId because one shop can be listed under two
+ * overlapping areas; the name+address fallback matches getShopsInCity.
+ *
+ * Server-side only: this runs in the Server Component, and Hero receives
+ * plain numbers as props so it stays a client component.
+ */
+function getNetworkStats() {
+  const areaSlugs = getAllAreaSlugs();
+  const shops = new Set<string>();
+  for (const slug of areaSlugs) {
+    for (const shop of getArea(slug)?.liveLocations ?? []) {
+      shops.add(shop.placeId ?? `${shop.name}|${shop.address}`);
+    }
+  }
+  return {
+    shops: shops.size,
+    locations: areaSlugs.length + getAllCollegeSlugs().length,
+    cities: getAllCitySlugs().length,
+  };
+}
 
 // Below-the-fold sections: deferred so their JS (incl. framer-motion) doesn't
 // block initial paint of the hero — this was the render-blocking bundle
@@ -115,7 +149,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <Hero />
+      <Hero network={getNetworkStats()} />
       <Marquee />
       <Problem />
       <HowItWorks />
