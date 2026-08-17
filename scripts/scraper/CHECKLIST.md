@@ -65,6 +65,33 @@ can; steps marked **[manual]** are judgment calls it can't check for you.
    areas with 0 matched shops (`presence: "planned"`, correctly excluded)
    and prints per-area shop counts.
 
+   Shops are assigned to an area by *earliest* keyword match in the
+   address, not first-in-`AREA_KW` (fixed 2026-08-17). Indian addresses run
+   specific → general, so the locality named first is the one the shop is
+   in. Before the fix, a broad early entry swallowed shops belonging to a
+   more specific area declared later — `"bannerghatta road"` (btm-layout)
+   took 8 of 11 Madiwala shops, `"jp nagar"` took 6 of 7 Kothnur shops —
+   leaving 1-shop pages that Search Console flagged "Duplicate without
+   user-selected canonical" or refused to crawl. If a new area comes out
+   suspiciously thin, check whether an earlier-positioned keyword in a
+   *neighbouring* area's list is matching the same addresses.
+
+4b. **Sync `public/llms.txt`**: `node scripts/seo/sync-llms-txt.mjs`.
+   The neighbourhood lines carry a per-area shop count, and step 4 changes
+   both the counts and which areas are published. `verify:pseo` only checks
+   URL parity, so a stale *count* passes CI while telling crawlers something
+   untrue — the counts sat capped at "20 shops" until 2026-08-17. Use
+   `--check` in CI to fail on drift. College sections are hand-maintained
+   and left untouched.
+
+   Any area promoted from `planned` to `live` by step 4 also needs a FAQ
+   tail (`content/pseo/faq-tails/area-<slug>.json`) or `verify:pseo` fails.
+   Generate with `FAQ_TAIL_ONLY=<slug1>,<slug2> node
+   scripts/seo/generate-faq-tails.mjs`. If the gateway 401s, note that the
+   script resolves `ANTHROPIC_API_KEY ?? ANTHROPIC_AUTH_TOKEN` — `??` does
+   not fall through an empty-but-set `ANTHROPIC_API_KEY`, so pass the
+   gateway token explicitly.
+
 5. **[manual, blocking] Add the city to `content/pseo/cities.ts`.**
    **This step is not automated by the scraper and has been missed for
    real** — Chennai/Mumbai/Pune/Delhi NCR shipped 48 live/served area
