@@ -4,11 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
-import SnappyLoader from "@/components/mascot/SnappyLoader";
 import SnappyScrollTop from "@/components/mascot/SnappyScrollTop";
-import LenisProvider from "@/components/motion/LenisProvider";
-import CustomCursor from "@/components/motion/CustomCursor";
-import RouteTransition from "@/components/motion/RouteTransition";
 
 // Snappy mascot's "Zzz" glyph only
 const baloo2 = Baloo_2({
@@ -122,10 +118,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className="font-body antialiased">
-        <SnappyLoader />
-        <RouteTransition />
-        <CustomCursor />
-        <LenisProvider>{children}</LenisProvider>
+        {children}
         <SnappyScrollTop />
         <GoogleAnalytics gaId="G-76GFPGCHWQ" />
         <Analytics />
