@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { prefersReducedMotion } from "@/lib/motion";
 
 // ─── CO-FOUNDER CRITIQUE ───────────────────────────────────────────
 // Old: 3×2 identical icon cards + disconnected comparison table.
@@ -13,9 +14,54 @@ import { useRef } from "react";
 // afterthought. Result: editorial rhythm, not SaaS template.
 // ──────────────────────────────────────────────────────────────────
 
+// ₹2/page B&W — the same rate already published in AppShowcase.tsx — so the
+// live-ticking revenue figure below stays consistent with real site pricing.
+const PER_PAGE_RUPEES = 2;
+
+/** A number that odometer-rolls (slides up, fades) whenever its value changes. */
+function RollingNumber({ value, className }: { value: string; className?: string }) {
+  return (
+    <span className="relative inline-block overflow-hidden">
+      <AnimatePresence mode="popLayout" initial={false}>
+        <motion.span
+          key={value}
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          className={`inline-block ${className ?? ""}`}
+        >
+          {value}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
+
+/** Simulates a live dashboard — print count ticks up on a random cadence, revenue
+ * is derived from it rather than being a separate fake number. Skipped under
+ * reduced motion, where the mock just shows a fixed snapshot. */
+function useLiveDashboard() {
+  const [prints, setPrints] = useState(247);
+  useEffect(() => {
+    if (prefersReducedMotion()) return;
+    let cancelled = false;
+    let timeoutId: ReturnType<typeof setTimeout>;
+    const tick = () => {
+      if (cancelled) return;
+      setPrints((p) => p + 1 + Math.floor(Math.random() * 3));
+      timeoutId = setTimeout(tick, 1800 + Math.random() * 2200);
+    };
+    timeoutId = setTimeout(tick, 1800 + Math.random() * 2200);
+    return () => { cancelled = true; clearTimeout(timeoutId); };
+  }, []);
+  return { prints, revenue: prints * PER_PAGE_RUPEES };
+}
+
 export default function Why() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const { prints, revenue } = useLiveDashboard();
 
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 28 },
@@ -42,16 +88,16 @@ export default function Why() {
             className="max-w-[540px] font-display font-extrabold leading-[1.04] tracking-[-2.5px] text-[#111110]"
             style={{ fontSize: "clamp(30px, 4vw, 54px)" }}
           >
-            Built for shop owners.{" "}
+            Built to work{" "}
             <span className="font-serif italic font-normal text-[#999994]">
-              not against them.
+              in your favour.
             </span>
           </motion.h2>
           <motion.p
             {...fadeUp(0.14)}
             className="max-w-[300px] font-body text-[14px] font-light leading-[1.75] text-[#6B6B66] lg:text-right"
           >
-            Every feature was designed with one question: does this make the shop owner more money with less effort?
+            Every feature was designed with one question: does this make the owner more money with less effort?
           </motion.p>
         </div>
 
@@ -91,15 +137,17 @@ export default function Why() {
                   Snaprint OS connects to Canon, HP, Epson, Brother — without replacing a single cable. Your existing hardware earns more, today.
                 </p>
               </div>
-              {/* Printer brand strip */}
+              {/* Printer brand strip — alphabetical, all boxes the same width */}
               <div className="flex flex-col gap-2 lg:items-end">
-                {["Canon", "HP", "Epson", "Brother"].map((brand, i) => (
+                {["Brother", "Canon", "Epson", "HP"].map((brand) => (
                   <div
                     key={brand}
-                    className="flex items-center gap-3 rounded-lg border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.04)] px-4 py-2.5 transition-colors duration-200 group-hover:border-[rgba(255,255,255,0.12)]"
+                    className="flex w-[200px] items-center justify-between gap-3 rounded-lg border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.04)] px-4 py-2.5 transition-colors duration-200 group-hover:border-[rgba(255,255,255,0.12)]"
                   >
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#E63946]" />
-                    <span className="font-display text-[13px] font-semibold text-white">{brand}</span>
+                    <span className="flex items-center gap-3">
+                      <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#E63946]" />
+                      <span className="font-display text-[13px] font-semibold text-white">{brand}</span>
+                    </span>
                     <span className="font-body text-[10px] text-[rgba(255,255,255,0.3)]">✓ Compatible</span>
                   </div>
                 ))}
@@ -119,16 +167,62 @@ export default function Why() {
                   <span className="font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">Revenue</span>
                 </div>
                 {/* Large editorial number */}
-                <div className="mb-2 font-display text-[88px] font-extrabold leading-none tracking-[-5px] text-white">
-                  90
+                <div className="mb-2 font-mono tabular-nums text-[88px] font-extrabold leading-none tracking-[-5px] text-white">
+                  100
                   <span className="text-[48px]">%</span>
                 </div>
-                <p className="mb-6 font-body text-[13px] font-light leading-[1.6] text-white/70">
-                  of every rupee printed goes to you. Small monthly platform fee. No per-print commission, ever.
+                <p className="mb-8 font-body text-[13px] font-light leading-[1.6] text-white/70">
+                  of every rupee printed stays with you. No revenue share, no per-print cut, no monthly fees — ever. Buy it once, it&apos;s yours.
                 </p>
+
+                {/* Fills the gap between the headline number and the checklist below with
+                    the core ownership pitch, branded as a 2×2 grid rather than a paragraph. */}
+                <div className="mb-8 grid grid-cols-2 gap-2.5">
+                  {[
+                    { label: "One-time investment", detail: "No EMIs, no recurring buy-in" },
+                    { label: "Remote monitoring", detail: "Run it from your phone" },
+                    { label: "Pocket-friendly service", detail: "Low upkeep, no surprises" },
+                    { label: "Full ownership", detail: "The machine is yours, outright" },
+                  ].map((item) => (
+                    <div key={item.label} className="rounded-xl bg-white/10 px-4 py-3.5">
+                      <div className="font-display text-[13px] font-bold leading-tight text-white">{item.label}</div>
+                      <div className="mt-1 font-body text-[10.5px] font-light leading-[1.5] text-white/60">{item.detail}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Return on investment — same illustrative payback figures published on the
+                    franchise brochure page, kept consistent rather than restated differently. */}
+                <div className="mb-8 overflow-hidden rounded-xl bg-white/10">
+                  <div className="border-b border-white/10 px-4 py-2.5">
+                    <span className="font-body text-[10px] font-semibold uppercase tracking-[0.16em] text-white/60">
+                      Return on investment
+                    </span>
+                  </div>
+                  <div className="divide-y divide-white/10">
+                    {[
+                      { model: "S1", volume: "500/day", months: "≈ 1.9 mo" },
+                      { model: "S1 Pro", volume: "1,000/day", months: "≈ 1.5 mo" },
+                      { model: "S1 Pro Max", volume: "2,000/day", months: "≈ 1.6 mo" },
+                    ].map((r) => (
+                      <div key={r.model} className="flex items-center justify-between px-4 py-2.5">
+                        <div>
+                          <div className="font-display text-[12.5px] font-bold text-white">{r.model}</div>
+                          <div className="font-body text-[10px] text-white/50">at {r.volume}</div>
+                        </div>
+                        <div className="font-mono tabular-nums text-[16px] font-extrabold text-white">{r.months}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="border-t border-white/10 px-4 py-2">
+                    <span className="font-body text-[9.5px] font-light leading-[1.5] text-white/40">
+                      Illustrative payback, 30 operating days/month
+                    </span>
+                  </div>
+                </div>
               </div>
               <div className="space-y-3">
-                {["Zero per-print cut", "Transparent fee structure", "You own the machine"].map((f) => (
+                {["Zero per-print cut", "No ongoing fees", "You own the machine"].map((f) => (
                   <div key={f} className="flex items-center gap-2.5">
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
                       <circle cx="6.5" cy="6.5" r="6.5" fill="rgba(255,255,255,0.2)" />
@@ -159,6 +253,21 @@ export default function Why() {
             <p className="font-body text-[13px] font-light leading-[1.7] text-[#6B6B66]">
               End-to-end encrypted in transit. Auto-deleted on completion. No document ever stored.
             </p>
+            <div className="mt-6 space-y-2.5">
+              {[
+                "AES-256 encryption, in transit and at rest",
+                "TLS-secured uploads on every session",
+                "No third-party data sharing — ever",
+                "Lockable rear access, owner-serviced only",
+              ].map((point) => (
+                <div key={point} className="flex items-start gap-2.5 rounded-lg border border-[rgba(0,0,0,0.06)] bg-[#F8F7F4] px-3.5 py-2.5">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E63946" strokeWidth="2.5" className="mt-0.5 flex-shrink-0">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                  <span className="font-body text-[11.5px] font-medium leading-[1.4] text-[#555550]">{point}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           {/* ④ DASHBOARD */}
@@ -178,16 +287,36 @@ export default function Why() {
             <p className="font-body text-[13px] font-light leading-[1.7] text-[#6B6B66]">
               Revenue, print counts, ink and paper levels — live on your phone. No step-out required.
             </p>
-            {/* Mini dashboard mock */}
-            <div className="mt-6 space-y-2 rounded-xl border border-[rgba(0,0,0,0.06)] bg-[#F8F7F4] p-4">
-              {[["Today's prints", "247"], ["Revenue", "₹ —"], ["Paper left", "68%"]].map(([l, v]) => (
-                <div key={l} className="flex items-center justify-between">
-                  <span className="font-body text-[11px] text-[#999994]">{l}</span>
-                  <span className="font-display text-[12px] font-semibold text-[#111110]">{v}</span>
+            {/* Mini dashboard mock — a live terminal readout, not a static table.
+                Prints ticks up on its own cadence; revenue is derived from it
+                (prints × ₹2/page) rather than being a separate fake number. */}
+            <div className="mt-6 overflow-hidden rounded-xl border border-[rgba(0,0,0,0.07)] bg-[#111110]">
+              <div className="flex items-center gap-1.5 border-b border-white/10 bg-white/[0.03] px-3 py-2">
+                <span className="h-2 w-2 rounded-full bg-[#FF5F57]" />
+                <span className="h-2 w-2 rounded-full bg-[#FEBC2E]" />
+                <span className="h-2 w-2 rounded-full bg-[#28C840]" />
+                <span className="ml-2 font-mono text-[9px] tracking-wide text-white">dashboard — live</span>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center justify-between py-0.5 font-mono">
+                  <span className="text-[11px] text-white">$ today.prints</span>
+                  <RollingNumber value={String(prints)} className="text-[12px] font-semibold text-white" />
                 </div>
-              ))}
-              <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-[rgba(0,0,0,0.06)]">
-                <div className="h-full w-[68%] rounded-full bg-[#E63946] transition-all duration-700 group-hover:w-[72%]" />
+                <div className="flex items-center justify-between py-0.5 font-mono">
+                  <span className="text-[11px] text-white">$ revenue.today</span>
+                  <RollingNumber value={`₹${revenue.toLocaleString("en-IN")}`} className="text-[12px] font-semibold text-white" />
+                </div>
+                <div className="flex items-center justify-between py-0.5 font-mono">
+                  <span className="text-[11px] text-white">$ paper.level</span>
+                  <span className="text-[12px] font-semibold text-white">68%</span>
+                </div>
+                <div className="mt-2.5 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                  <div className="h-full w-[68%] rounded-full bg-[#E63946] transition-all duration-700 group-hover:w-[72%]" />
+                </div>
+                <div className="mt-2.5 flex items-center gap-1.5">
+                  <span className="animate-blink inline-block h-3 w-[6px] bg-[#E63946]" />
+                  <span className="font-mono text-[10px] text-white">awaiting next print job…</span>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -209,8 +338,8 @@ export default function Why() {
               {[
                 { label: "Works with your printer", them: "Forces own hardware", us: "Any brand — zero change" },
                 { label: "Investment model",         them: "High cost + hidden fees", us: "Transparent, one-time" },
-                { label: "Revenue share",            them: "Per-print commission",  us: "You keep 90%" },
-                { label: "Local support",            them: "Remote call centre",    us: "Bengaluru team on-site" },
+                { label: "Revenue share",            them: "Per-print commission",  us: "You keep 100%" },
+                { label: "Maintenance",              them: "Mandatory AMC contracts", us: "No mandatory AMC — ever" },
               ].map((row) => (
                 <div key={row.label} className="rounded-xl border border-[rgba(0,0,0,0.06)] overflow-hidden">
                   <div className="border-b border-[rgba(0,0,0,0.06)] bg-[#F8F7F4] px-4 py-2.5">
@@ -236,7 +365,7 @@ export default function Why() {
             {...fadeUp(0.37)}
             className="group relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-[#111110] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="mb-4 font-display text-[64px] font-extrabold leading-none tracking-[-4px] text-white">
+            <div className="mb-4 font-mono tabular-nums text-[64px] font-extrabold leading-none tracking-[-4px] text-white">
               60<span className="text-[#E63946] text-[40px]">s</span>
             </div>
             <h3 className="mb-2 font-display text-[17px] font-bold text-white">Scan to print in hand.</h3>

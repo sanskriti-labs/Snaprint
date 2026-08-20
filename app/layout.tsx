@@ -1,29 +1,20 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, Instrument_Serif } from "next/font/google";
+import { Baloo_2 } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import SnappyLoader from "@/components/mascot/SnappyLoader";
+import SnappyScrollTop from "@/components/mascot/SnappyScrollTop";
+import LenisProvider from "@/components/motion/LenisProvider";
+import CustomCursor from "@/components/motion/CustomCursor";
+import RouteTransition from "@/components/motion/RouteTransition";
 
-const spaceGrotesk = Space_Grotesk({
+// Snappy mascot's "Zzz" glyph only
+const baloo2 = Baloo_2({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-// Editorial serif — used selectively for typographic contrast moments
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
+  weight: ["800"],
+  variable: "--font-baloo",
   display: "swap",
 });
 
@@ -32,12 +23,12 @@ const siteUrl = "https://snaprints.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Snaprint — Instant Print Kiosks for Xerox Shops in Bengaluru",
+    default: "Snaprint — Own a Self-Service Print Kiosk. No Rent, No Revenue Share.",
     template: "%s · Snaprint",
   },
   description:
-    "Snaprint turns your xerox shop into a 24/7 remote printing hub. Students scan, pay, and collect — no queue, no wait. Built for Bengaluru shop owners by Sanskriti Labs.",
-  keywords: ["print kiosk", "xerox shop", "remote printing", "Bengaluru", "Snaprint", "instant print", "smart kiosk", "self-service printing"],
+    "Snaprint is a self-service print kiosk you buy once and own outright — starting at ₹84,999. Scan, upload, pay, collect. Zero platform fee, set your own price. Built by Sanskriti Labs, Bengaluru.",
+  keywords: ["print kiosk", "kiosk ownership", "self-service printing", "xerox shop", "remote printing", "Bengaluru", "Snaprint", "instant print", "smart kiosk"],
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
@@ -50,8 +41,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Snaprint — Instant Print Kiosks for Xerox Shops",
-    description: "India's instant print network. Built for xerox shop owners. Powered by Sanskriti Labs, Bengaluru.",
+    title: "Snaprint — Own a Self-Service Print Kiosk",
+    description: "India's self-service print network. Buy the kiosk, set your price, keep every rupee. Powered by Sanskriti Labs, Bengaluru.",
     url: siteUrl,
     siteName: "Snaprint",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Snaprint — snap. scan. print." }],
@@ -60,12 +51,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snaprint — Instant Print Kiosks for Xerox Shops",
-    description: "India's instant print network. Built for xerox shop owners.",
+    title: "Snaprint — Own a Self-Service Print Kiosk",
+    description: "India's self-service print network. Buy the kiosk, set your price, keep every rupee.",
     images: ["/og.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
@@ -83,7 +78,7 @@ const jsonLd = {
       name: "Snaprint",
       url: siteUrl,
       logo: `${siteUrl}/icon-512.png`,
-      description: "Snaprint builds self-service print kiosks that turn xerox shops into 24/7 remote printing hubs.",
+      description: "Snaprint builds self-service print kiosks that owners buy outright and run on their own terms — no rent, no revenue share.",
       email: "snaprints@sanskritilabs.in",
       // TODO(KG): once Snaprint has Crunchbase + Wikidata entries, add them here.
       // LinkedIn (verified) is the only authoritative sameAs today.
@@ -119,16 +114,23 @@ const jsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={baloo2.variable}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-body antialiased">{children}</body>
-      <GoogleAnalytics gaId="G-76GFPGCHWQ" />
-      <Analytics />
+      <body className="font-body antialiased">
+        <SnappyLoader />
+        <RouteTransition />
+        <CustomCursor />
+        <LenisProvider>{children}</LenisProvider>
+        <SnappyScrollTop />
+        <GoogleAnalytics gaId="G-76GFPGCHWQ" />
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

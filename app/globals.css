@@ -10,6 +10,40 @@
   --snap-surface: #F8F7F4;
   --snap-border: rgba(0,0,0,0.07);
   --glow-red: 0 0 60px rgba(230,57,70,0.3), 0 0 120px rgba(230,57,70,0.12);
+
+  /* ── Design-system palette (DESIGN_SYSTEM.md §1) ── */
+  --charcoal: #0e0e0d;
+  --ink: #1a1a18;
+  --edge: #2f2f2c;
+  --graphite: #3a3a37;
+  --slate: #8a8a84;
+  --mist: #c9c9c4;
+  --cloud: #e8e8e4;
+  --paper: #f5f5f3;
+  --red: #e63946;
+  --red-deep: #c1121f;
+
+  /* ── Type system: serif headings, sans body/labels/nav, mono numerals ── */
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, ui-serif, serif;
+  --font-sans: -apple-system, "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* ── Motion tokens (DESIGN_SYSTEM.md §4) ── */
+  --e-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --e-power: cubic-bezier(0.22, 1, 0.36, 1);
+  --e-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --e-hover: cubic-bezier(0.4, 0, 0.2, 1);
+  --d-hover: 0.4s;
+  --d-reveal: 0.6s;
+  --d-slow: 0.9s;
+  --d-hero: 1.2s;
+
+  /* ── Neumorphism (navbar + footer surface) — matte off-white, shape read
+       purely from a dual soft shadow rather than a border or translucency. ── */
+  --neu-bg: #F2F1EE;
+  --neu-shadow-out: 6px 6px 16px rgba(163,161,150,0.35), -6px -6px 16px rgba(255,255,255,0.9);
+  --neu-shadow-out-lg: 10px 10px 28px rgba(163,161,150,0.4), -10px -10px 28px rgba(255,255,255,0.9);
+  --neu-shadow-in: inset 4px 4px 9px rgba(163,161,150,0.35), inset -4px -4px 9px rgba(255,255,255,0.85);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,6 +58,14 @@ body {
   background: #ffffff;
   color: #111110;
   overflow-x: hidden;
+}
+
+/* Kill the native mobile tap-highlight rectangle — on rounded-full/circular
+   links (nav pills, hero CTA, mascot) it renders as a stray oval/ring over
+   the element's bounding box on touch, which reads as a UI bug. */
+a, button, [role="button"], input, textarea, select, summary {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* ─── KEYFRAMES ─────────────────────────────── */
@@ -64,6 +106,50 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ─── SNAPPY MASCOT ───────────────────────────── */
+@keyframes mBlink { 0%, 90% { transform: scaleY(1); } 93% { transform: scaleY(.1); } 96%, 100% { transform: scaleY(1); } }
+@keyframes mBreathe { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes mSnooze { 0%, 100% { transform: translateY(0) scaleY(1); } 50% { transform: translateY(2px) scaleY(.97); } }
+@keyframes mZzz { 0% { transform: translate(0,0) scale(.6); opacity: 0; } 25% { opacity: 1; } 100% { transform: translate(16px,-26px) scale(1); opacity: 0; } }
+@keyframes mLed { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+@keyframes mPop { 0% { transform: scale(.5); opacity: 0; } 60% { transform: scale(1.05); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes mProg2 { 0%, 10% { transform: scaleX(0); } 70%, 84% { transform: scaleX(1); } 94%, 100% { transform: scaleX(0); } }
+@keyframes mSheet2 { 0%, 10% { transform: translateY(-32px); } 70%, 84% { transform: translateY(0); } 94%, 100% { transform: translateY(-32px); } }
+@keyframes mFeedLoop { 0%, 4% { transform: translateY(-26px); opacity: 1; } 40%, 58% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(26px); opacity: 1; } 71% { transform: translateY(26px); opacity: 0; } 96%, 100% { transform: translateY(-26px); opacity: 0; } }
+@keyframes mTiltBeat { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-3deg); } }
+.snappy-tilt { animation: mTiltBeat 0.6s ease-in-out; }
+
+/* ─── HOW-IT-WORKS STEP ILLUSTRATIONS ────────── */
+@keyframes stepScanSweep { 0%, 15% { transform: translateY(-1px); opacity: 0; } 25% { opacity: 1; } 50% { transform: translateY(19px); opacity: 1; } 75% { opacity: 1; } 85%, 100% { transform: translateY(-1px); opacity: 0; } }
+@keyframes stepUploadArrow { 0%, 10% { transform: translateY(6px); opacity: 0; } 40% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(-6px); opacity: 0; } 100% { transform: translateY(-6px); opacity: 0; } }
+@keyframes stepPayPing { 0% { transform: scale(0.4); opacity: 0.6; } 100% { transform: scale(1.9); opacity: 0; } }
+@keyframes stepGrabSlide { 0%, 15% { transform: translateY(-9px); } 45%, 70% { transform: translateY(2px); } 100% { transform: translateY(-9px); } }
+@keyframes stepChooseSlide { 0%, 10% { transform: translateX(0); } 45%, 65% { transform: translateX(9px); } 90%, 100% { transform: translateX(0); } }
+
+/* ─── DESIGN-SYSTEM MOTION UTILITIES (DESIGN_SYSTEM.md §5) ───
+   Masked line/word reveal. Each line/word sits in an overflow-hidden mask;
+   the inner span starts pushed down 110% and GSAP (or the reduced-motion
+   fallback) brings it to 0. JS adds .is-in to play. */
+/* FOUC guard is opacity, NOT transform: GSAP folds any pre-existing CSS
+   transform into its base and never clears it (yPercent 0 would still sit on
+   top of translateY(110%)). GSAP owns the transform entirely; opacity only
+   hides the flash before the layout effect sets the masked start. */
+.reveal-line { display: block; overflow: hidden; }
+.reveal-line > span { display: block; opacity: 0; will-change: transform; }
+.reveal-word { display: inline-block; overflow: hidden; vertical-align: top; }
+.reveal-word > span { display: inline-block; opacity: 0; will-change: transform; }
+
+/* prefers-reduced-motion: resolve to the final visible state, no JS needed. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-line > span,
+  .reveal-word > span { opacity: 1 !important; }
+}
+
+/* ─── NEUMORPHISM (navbar + footer) ──────────── */
+.neu-raised { background: var(--neu-bg); box-shadow: var(--neu-shadow-out); }
+.neu-raised-lg { background: var(--neu-bg); box-shadow: var(--neu-shadow-out-lg); }
+.neu-pressed { background: var(--neu-bg); box-shadow: var(--neu-shadow-in); }
+
 /* ─── ANIMATIONS ─────────────────────────────── */
 .animate-marquee      { animation: marquee 28s linear infinite; }
 .animate-marquee-rev  { animation: marquee-rev 32s linear infinite; }
@@ -88,6 +174,22 @@ body {
 .bg-dot-grid-dark {
   background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
   background-size: 28px 28px;
+}
+
+/* ─── SQUARE GRID (light theme, minimal) ─────── */
+.bg-square-grid {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.045) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* ─── SQUARE GRID (dark theme, minimal) ──────── */
+.bg-square-grid-dark {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
 }
 
 /* ─── CARD (light) ───────────────────────────── */
@@ -120,6 +222,37 @@ body {
   box-shadow: 0 0 30px rgba(230,57,70,0.09), 0 8px 40px rgba(0,0,0,0.3);
 }
 
+/* ─── LIQUID GLASS (Apple-style, light sections) ─────
+   Frosted, translucent material: blurred + saturated backdrop, a soft inner
+   top highlight (the "specular" edge), and a diffuse ambient shadow — the
+   visual grammar of Apple's Liquid Glass, tuned for light backgrounds. */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px rgba(17, 17, 16, 0.04),
+    0 8px 32px rgba(17, 17, 16, 0.08),
+    0 1px 2px rgba(17, 17, 16, 0.05);
+}
+.liquid-glass-red {
+  background: rgba(230, 57, 70, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.15),
+    0 8px 28px rgba(230, 57, 70, 0.32),
+    0 1px 2px rgba(0, 0, 0, 0.08);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .liquid-glass { background: rgba(255, 255, 255, 0.94); }
+  .liquid-glass-red { background: rgba(230, 57, 70, 0.94); }
+}
+
 /* ─── GLOW UTILITIES ─────────────────────────── */
 .red-glow   { box-shadow: 0 0 60px rgba(230,57,70,0.3), 0 0 120px rgba(230,57,70,0.12); }
 .text-glow  { text-shadow: 0 0 40px rgba(230,57,70,0.6); }
@@ -139,6 +272,38 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* ─── CUSTOM CURSOR (pointer:fine only) ──────── */
+/* Solid dot with a soft layered glow (strong near the dot, fading outward,
+   no hard edge) — the glow is pure CSS box-shadow, no ring/border/hover morph.
+   The spark trail is a separate canvas layer (see CustomCursor.tsx). */
+.cursor-dot {
+  position: fixed; top: 0; left: 0; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--red);
+  box-shadow:
+    0 0 6px 1px rgba(230,57,70,0.85),
+    0 0 16px 5px rgba(230,57,70,0.28),
+    0 0 30px 10px rgba(230,57,70,0.10);
+  pointer-events: none;
+  z-index: 9999;
+}
+.cursor-spark-canvas {
+  position: fixed; inset: 0; pointer-events: none; z-index: 9998;
+}
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .cursor-dot, .cursor-spark-canvas { display: none; }
+}
+@media (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor [role="button"],
+  body.has-custom-cursor [data-magnetic] { cursor: none; }
+}
+
+/* ─── NO SCROLLBAR (carousels) ───────────────── */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
 
 /* ─── SCROLLBAR ──────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
@@ -160,7 +325,7 @@ body {
 
 /* ─── LEGAL PAGES ────────────────────────────── */
 .legal-content h2 {
-  font-family: var(--font-space-grotesk);
+  font-family: var(--font-serif);
   font-weight: 700;
   font-size: 22px;
   letter-spacing: -0.02em;
@@ -170,7 +335,7 @@ body {
 }
 .legal-content h2:first-child { margin-top: 0; }
 .legal-content h3 {
-  font-family: var(--font-space-grotesk);
+  font-family: var(--font-serif);
   font-weight: 600;
   font-size: 17px;
   color: #111110;

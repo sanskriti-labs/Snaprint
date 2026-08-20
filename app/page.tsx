@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
-import Marquee from "@/components/sections/Marquee";
 import Footer from "@/components/Footer";
 
 // Below-the-fold sections: deferred so their JS (incl. framer-motion) doesn't
@@ -9,9 +8,10 @@ import Footer from "@/components/Footer";
 // PageSpeed flagged (109 KiB unused JS on first load).
 const Problem = dynamic(() => import("@/components/sections/Problem"));
 const HowItWorks = dynamic(() => import("@/components/sections/HowItWorks"));
+const AppShowcase = dynamic(() => import("@/components/sections/AppShowcase"));
 const Why = dynamic(() => import("@/components/sections/Why"));
 const MachineSpecs = dynamic(() => import("@/components/sections/MachineSpecs"));
-const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
+const Pricing = dynamic(() => import("@/components/sections/Pricing"));
 const CtaFinal = dynamic(() => import("@/components/sections/CtaFinal"));
 
 const SITE_URL = "https://snaprints.com";
@@ -26,18 +26,18 @@ const jsonLd = {
     {
       "@type": "Product",
       "@id": `${SITE_URL}/#product-s1`,
-      name: "Snaprint S1",
-      dateModified: "2026-08-03",
+      name: "Snaprint Kiosk",
+      dateModified: "2026-08-19",
       description:
-        "Self-service print kiosk that connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present.",
+        "Self-service print kiosk you buy once and own outright — connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present. Available in three models: S1, S1 Pro, S1 Pro Max.",
       brand: { "@id": `${SITE_URL}/#organization` },
       image: `${SITE_URL}/og.png`,
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "INR",
-        lowPrice: "300000",
-        highPrice: "350000",
-        offerCount: "1",
+        lowPrice: "84999",
+        highPrice: "299999",
+        offerCount: "3",
         availability: "https://schema.org/InStock",
         url: SITE_URL,
       },
@@ -89,10 +89,10 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          name: "How do shop owners track orders and revenue?",
+          name: "How do owners track orders and revenue?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Every order, along with revenue, print counts, and ink and paper status, is visible on a live dashboard on the shop owner's phone.",
+            text: "Every order, along with revenue, print counts, and ink and paper status, is visible on a live dashboard on the owner's phone.",
           },
         },
         {
@@ -117,12 +117,12 @@ export default function Home() {
       />
       <Navbar />
       <Hero />
-      <Marquee />
       <Problem />
       <HowItWorks />
+      <AppShowcase />
       <Why />
       <MachineSpecs />
-      <Testimonials />
+      <Pricing />
       <CtaFinal />
       <Footer />
     </main>

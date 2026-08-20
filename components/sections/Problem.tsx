@@ -2,27 +2,28 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import RevealText from "@/components/motion/RevealText";
 
 const problems = [
   {
     num: "01",
-    title: "Students go to the machine next door",
-    desc: "Self-service kiosks placed near colleges pull students who don't want to wait — even when your shop is just 50 metres away.",
+    title: "A five-minute errand takes twenty",
+    desc: "People already expect to scan, pay and walk away — for food, for transit, for almost everything. Printing is still stuck behind a counter and a queue.",
   },
   {
     num: "02",
-    title: "Remote orders you never capture",
-    desc: "Students already WhatsApp files to shops saying \"print 2 copies.\" This revenue is real — it's just untracked, unpaid, and slipping away.",
+    title: "It only works when someone's behind the counter",
+    desc: "A shut shop, a break between classes, an after-hours request — printing that depends on staff being present is printing that's unavailable half the time.",
   },
   {
     num: "03",
-    title: "Peak hour chaos loses you customers",
-    desc: "Exam season, assignment deadlines — queues pile up and customers leave. The machine down the road is quietly printing for 40 of them.",
+    title: "Peak demand always outruns a counter",
+    desc: "Exam season, deadline week, a busy lobby — request volume spikes far past what one person handling one job at a time can keep up with.",
   },
   {
     num: "04",
     title: "Snaprint fixes all three.",
-    desc: "One kiosk inside your shop. Students upload from anywhere, pay via UPI, and collect from your counter. You run it. We automate it.",
+    desc: "A self-service kiosk wherever people already are — a hallway, a co-working floor, a business centre lobby. Scan, upload, pay, collect. Runs unattended, all day.",
     highlight: true,
   },
 ];
@@ -48,16 +49,6 @@ function Card({ num, title, desc, highlight, index }: {
         boxShadow: "0 8px 32px rgba(230,57,70,0.3), 0 2px 8px rgba(230,57,70,0.2)"
       } : {}}
     >
-      {/* Ghost number */}
-      <div
-        className={`pointer-events-none absolute -right-4 -top-6 font-display text-[120px] font-bold leading-none select-none ${
-          highlight ? "text-white/[0.12]" : "text-[#111110]/[0.04]"
-        }`}
-        aria-hidden
-      >
-        {num}
-      </div>
-
       {/* Top red line for non-highlight on hover */}
       {!highlight && (
         <div
@@ -67,13 +58,13 @@ function Card({ num, title, desc, highlight, index }: {
       )}
 
       <div className="relative">
-        <div className={`mb-3 font-body text-[10px] font-semibold uppercase tracking-[0.18em] ${
-          highlight ? "text-white/60" : "text-[#E63946]"
+        <div className={`mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.18em] ${
+          highlight ? "text-white/60" : "text-red"
         }`}>
           {highlight ? "The solution" : `Problem ${num}`}
         </div>
         <div className={`mb-3 font-display text-[18px] font-bold leading-[1.2] ${
-          highlight ? "text-white" : "text-[#111110]"
+          highlight ? "text-white" : "text-charcoal"
         }`}>
           {title}
         </div>
@@ -92,7 +83,7 @@ export default function Problem() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="problem" className="relative overflow-hidden bg-[#F8F7F4] px-6 py-28 md:px-10 bg-dot-grid">
+    <section id="problem" className="relative overflow-hidden bg-paper px-6 py-24 md:px-10 bg-dot-grid">
       <div className="relative mx-auto max-w-[1280px]">
         <motion.p
           ref={ref}
@@ -100,24 +91,22 @@ export default function Problem() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.2em] text-[#E63946]"
         >
-          The real problem
+          The opportunity
         </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.08 }}
-          className="mb-5 max-w-[560px] font-display font-extrabold leading-[1.06] tracking-[-2px] text-[#111110]"
-          style={{ fontSize: "clamp(28px,3.8vw,52px)" }}
+        <RevealText
+          as="h2"
+          split="word"
+          className="mb-5 block max-w-[560px] font-display text-display-lg font-extrabold text-charcoal"
         >
-          Kiosks placed near your shop are stealing your students.
-        </motion.h2>
+          The queue is the problem. Not the printing.
+        </RevealText>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.14 }}
           className="mb-16 max-w-[460px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]"
         >
-          Other automated kiosks work against you. Snaprint works for you — turning your existing shop into the smarter choice.
+          For the person who owns the machine, that shift is the opportunity — a printing business that doesn&apos;t need a till, a rota, or someone standing next to it all day.
         </motion.p>
 
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
