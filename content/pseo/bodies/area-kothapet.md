@@ -9,7 +9,7 @@ wordCount: 489
 ---
 ## About this place
 
-Kothapet sits on the eastern edge of Hyderabad, squeezed between the older lanes of Dilsukhnagar and the rapidly expanding neighbourhoods of Hayathnagar. What began as a quiet agricultural settlement has grown into a busy residential and commercial pocket, with the 500035 side closer to the main market roads and the 500102 stretch leaning towards the newer apartment blocks and coaching centres that have mushroomed along the highway. The locality is famous for its gold and wedding shopping — families from across the city drive in for the cluster of jewellery stores near the bus stop — but the daily rhythm is shaped more by schools, small offices, and a steady stream of students. Snaprint currently maps 20 verified xerox and print shops here, giving residents plenty of choice within walking distance.
+Kothapet sits on the eastern edge of Hyderabad, squeezed between the older lanes of Dilsukhnagar and the rapidly expanding neighbourhoods of Hayathnagar. What began as a quiet agricultural settlement has grown into a busy residential and commercial pocket, with the 500035 side closer to the main market roads and the 500102 stretch leaning towards the newer apartment blocks and coaching centres that have mushroomed along the highway. The locality is famous for its gold and wedding shopping — families from across the city drive in for the cluster of jewellery stores near the bus stop — but the daily rhythm is shaped more by schools, small offices, and a steady stream of students. Snaprint currently maps 20 listed xerox and print shops here, giving residents plenty of choice within walking distance.
 
 ## Getting here and around
 

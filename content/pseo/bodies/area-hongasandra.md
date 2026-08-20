@@ -9,7 +9,7 @@ wordCount: 459
 ---
 ## About this place
 
-Hongasandra sits on the southern flank of Bengaluru, just off the Hosur Road corridor in the Bommanahalli zone. Until the early 2010s, the pin code 560068 covered a largely residential pocket of small layouts, dairy farms, and narrow red-soil lanes. The opening of the elevated flyover and the Infosys convergence in neighbouring Electronics City pulled IT professionals into the apartment blocks that now line the stretch between Begur and the GST Road junction. Today, Hongasandra is a working-class suburb — auto-rickshaw stands, veg markets, government school clusters, and a string of independently-run shops share space with newer gated communities. Ten verified xerox and print shops anchor the daily paperwork grind of this transformation.
+Hongasandra sits on the southern flank of Bengaluru, just off the Hosur Road corridor in the Bommanahalli zone. Until the early 2010s, the pin code 560068 covered a largely residential pocket of small layouts, dairy farms, and narrow red-soil lanes. The opening of the elevated flyover and the Infosys convergence in neighbouring Electronics City pulled IT professionals into the apartment blocks that now line the stretch between Begur and the GST Road junction. Today, Hongasandra is a working-class suburb — auto-rickshaw stands, veg markets, government school clusters, and a string of independently-run shops share space with newer gated communities. Ten listed xerox and print shops anchor the daily paperwork grind of this transformation.
 
 ## Getting here and around
 

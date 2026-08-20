@@ -9,7 +9,7 @@ wordCount: 472
 ---
 ## About this place
 
-Electronic City sits on the southern flank of Bengaluru, straddling the Hosur Road corridor between Konappana Agrahara and Neeladri Nagar. What began as a 332-acre IT park laid out by KEONICS in the late 1970s has sprawled into a dense urban pocket where tech parks, gated apartment blocks, and a long tail of small businesses share the same pin codes. The locality covers 560100 and 560099 in its core, with the adjoining 560101 stretching toward Singasandra and Hosa Road. Twenty verified xerox and print shops operate across this stretch, forming the quiet print backbone that keeps offices, students, and residents running.
+Electronic City sits on the southern flank of Bengaluru, straddling the Hosur Road corridor between Konappana Agrahara and Neeladri Nagar. What began as a 332-acre IT park laid out by KEONICS in the late 1970s has sprawled into a dense urban pocket where tech parks, gated apartment blocks, and a long tail of small businesses share the same pin codes. The locality covers 560100 and 560099 in its core, with the adjoining 560101 stretching toward Singasandra and Hosa Road. Twenty listed xerox and print shops operate across this stretch, forming the quiet print backbone that keeps offices, students, and residents running.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The elevated metro line on the Yellow Route terminates at Bommasandra, with Kona
 
 ## Why printing demand is high here
 
-Roughly 200 tech companies employ tens of thousands of engineers across the Phase 1 campus and the newer Neeladri Nagar and Konappana Agrahara extensions. Every Monday morning, office printers jam, and engineers stream out looking for spiral-bound project reports, A3 plotter sheets, and laminated ID replacements. The resident population has also ballooned, with high-rises like Ajmera Infinity and Brigade Meadows feeding steady demand for Aadhaar and PAN xerox work. With 20 verified print shops serving 560100 and 560101, the area averages a healthy 4.4-star rating, anchored by A TO Z XEROX AND PRINT CENTER, which holds a perfect five-star record among reviewed outlets.
+Roughly 200 tech companies employ tens of thousands of engineers across the Phase 1 campus and the newer Neeladri Nagar and Konappana Agrahara extensions. Every Monday morning, office printers jam, and engineers stream out looking for spiral-bound project reports, A3 plotter sheets, and laminated ID replacements. The resident population has also ballooned, with high-rises like Ajmera Infinity and Brigade Meadows feeding steady demand for Aadhaar and PAN xerox work. With 20 listed print shops serving 560100 and 560101, the area averages a healthy 4.4-star rating, anchored by A TO Z XEROX AND PRINT CENTER, which holds a perfect five-star record among reviewed outlets.
 
 ## What people typically print here
 

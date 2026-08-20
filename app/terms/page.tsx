@@ -3,7 +3,7 @@ import LegalPage from "@/components/LegalPage";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms governing use of the Snaprint website, kiosk service, and print orders placed through our partner xerox shops.",
+  description: "Terms governing use of the Snaprint website, kiosk service, and print orders placed through listed xerox shops.",
   alternates: { canonical: "/terms" },
 };
 

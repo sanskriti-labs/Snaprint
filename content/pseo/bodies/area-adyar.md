@@ -9,7 +9,7 @@ wordCount: 543
 ---
 ## About this place
 
-Adyar sits along the southern bend of the Adyar River, one of those Chennai neighbourhoods where old-money bungalows share compound walls with software office towers and tuition centres. It carries a quiet, bookish reputation — the IIT Madras campus, the Adyar Cancer Institute, and a long stretch of independently run bookshops along Lattice Bridge Road pull students, researchers, and pensioners into the same lanes. The residential patches around Gandhi Nagar and Kasturba Nagar are dense with walk-up apartments, while Sardar Patel Road and the LB Road stretch keep things commercially busy. Sixteen verified xerox and print shops serve the 600020 and 600041 pin belts, enough to keep pace with morning school runs, midday clinic filings, and late-evening project submissions without anyone having to cross the river.
+Adyar sits along the southern bend of the Adyar River, one of those Chennai neighbourhoods where old-money bungalows share compound walls with software office towers and tuition centres. It carries a quiet, bookish reputation — the IIT Madras campus, the Adyar Cancer Institute, and a long stretch of independently run bookshops along Lattice Bridge Road pull students, researchers, and pensioners into the same lanes. The residential patches around Gandhi Nagar and Kasturba Nagar are dense with walk-up apartments, while Sardar Patel Road and the LB Road stretch keep things commercially busy. Sixteen listed xerox and print shops serve the 600020 and 600041 pin belts, enough to keep pace with morning school runs, midday clinic filings, and late-evening project submissions without anyone having to cross the river.
 
 ## Getting here and around
 

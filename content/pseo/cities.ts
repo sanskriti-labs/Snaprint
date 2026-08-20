@@ -19,7 +19,7 @@ const cities: City[] = [
       "560085", "560095", "560100", "560103",
     ],
     intro:
-      "92 neighbourhoods in Bengaluru with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
+      "92 neighbourhoods in Bengaluru with listed xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "instant print bangalore",
       "print shop bangalore",
@@ -48,7 +48,7 @@ const cities: City[] = [
       "500032", "500039", "500084", "500028", "500074",
     ],
     intro:
-      "12 neighbourhoods in Hyderabad with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
+      "12 neighbourhoods in Hyderabad with listed xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "print shop hyderabad",
       "xerox shop hyderabad",
@@ -72,7 +72,7 @@ const cities: City[] = [
       "600045", "600064", "600072", "600090", "600100", "600101", "600119",
     ],
     intro:
-      "12 neighbourhoods in Chennai with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
+      "12 neighbourhoods in Chennai with listed xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "print shop chennai",
       "xerox shop chennai",
@@ -97,7 +97,7 @@ const cities: City[] = [
       "400603",
     ],
     intro:
-      "12 neighbourhoods in Mumbai with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
+      "12 neighbourhoods in Mumbai with listed xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "print shop mumbai",
       "xerox shop mumbai",
@@ -121,7 +121,7 @@ const cities: City[] = [
       "411069",
     ],
     intro:
-      "12 neighbourhoods in Pune with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
+      "12 neighbourhoods in Pune with listed xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "print shop pune",
       "xerox shop pune",
@@ -145,7 +145,7 @@ const cities: City[] = [
       "201301", "201309",
     ],
     intro:
-      "12 neighbourhoods across Delhi, Gurugram and Noida with verified xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
+      "12 neighbourhoods across Delhi, Gurugram and Noida with listed xerox and print shops — compare B&W and colour printing, binding, lamination and scanning near you.",
     keywords: [
       "print shop delhi",
       "xerox shop gurgaon",

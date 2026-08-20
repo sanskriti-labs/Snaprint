@@ -11,7 +11,7 @@ wordCount: 525
 
 ## About this place
 
-Tarnaka is a mature, well-knit neighbourhood tucked between Secunderabad and the outer eastern stretches of Hyderabad, with pin codes 500017 and 500007 anchoring its address. The area grew around the Osmania University campus, and you can still feel that academic undertone in the streets — a mix of old residential colonies, PG accommodations, and research institutes sitting shoulder to shoulder. Vendors who set up near the campus gates have been here for decades, and the neighbourhood has long attracted government employees, university staff, and students alike. Despite Hyderabad's rapid expansion, Tarnaka has retained its quiet, institutional character. For a locality that spans two pin codes, it manages to feel intimate — one verified xerox and print shop serves the area, a small but steady presence that locals have come to rely on.
+Tarnaka is a mature, well-knit neighbourhood tucked between Secunderabad and the outer eastern stretches of Hyderabad, with pin codes 500017 and 500007 anchoring its address. The area grew around the Osmania University campus, and you can still feel that academic undertone in the streets — a mix of old residential colonies, PG accommodations, and research institutes sitting shoulder to shoulder. Vendors who set up near the campus gates have been here for decades, and the neighbourhood has long attracted government employees, university staff, and students alike. Despite Hyderabad's rapid expansion, Tarnaka has retained its quiet, institutional character. For a locality that spans two pin codes, it manages to feel intimate — one listed xerox and print shop serves the area, a small but steady presence that locals have come to rely on.
 
 ## Getting here and around
 

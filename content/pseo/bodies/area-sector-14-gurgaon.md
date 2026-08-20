@@ -9,7 +9,7 @@ wordCount: 525
 ---
 ## About this place
 
-Sector 14 Market sits at the old heart of Gurgaon's residential belt, a grid of wide tree-lined roads that predates the glass towers further south. It is overwhelmingly middle-class housing — DLF Colony Phase 1 and 2, HUDA plots, a sprinkling of builder floors — stitched together by one of the city's most loved neighbourhood markets. Locals come here for the sabzi mandi at dawn, the bookstore on the main road, and the cluster of coaching centres that have anchored the area since the 1990s. Four verified xerox and print shops operate within walking distance of each other, serving the 122001 and 122007 pin codes, which is a healthy density for a market of this size. The area averages 4.2 stars across three rated outlets, with **national digiprints** topping the list at 4.5 stars for its colour accuracy and turnaround time on spiral binding.
+Sector 14 Market sits at the old heart of Gurgaon's residential belt, a grid of wide tree-lined roads that predates the glass towers further south. It is overwhelmingly middle-class housing — DLF Colony Phase 1 and 2, HUDA plots, a sprinkling of builder floors — stitched together by one of the city's most loved neighbourhood markets. Locals come here for the sabzi mandi at dawn, the bookstore on the main road, and the cluster of coaching centres that have anchored the area since the 1990s. Four listed xerox and print shops operate within walking distance of each other, serving the 122001 and 122007 pin codes, which is a healthy density for a market of this size. The area averages 4.2 stars across three rated outlets, with **national digiprints** topping the list at 4.5 stars for its colour accuracy and turnaround time on spiral binding.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The nearest Metro stop is IFFCO Chowk on the Yellow Line, about a ten-minute aut
 
 ## Why printing demand is high here
 
-Three forces keep the printers busy. First, the coaching hub: institutes along the main road and in the lanes behind the market churn out thousands of notes, sample papers and answer sheets every month, especially from October through March when board and competitive exams dominate. Second, the residential density — hundreds of households in DLF Phase 1, 2 and 3 routinely need PAN card copies, Aadhaar printouts, rental agreements and school project colour pages. Third, a steady stream of small businesses and CA offices on the commercial stretch that demand laminations and bound reports. With four verified xerox and print shops serving 122001 and 122007, the area is well equipped to handle that load without long queues.
+Three forces keep the printers busy. First, the coaching hub: institutes along the main road and in the lanes behind the market churn out thousands of notes, sample papers and answer sheets every month, especially from October through March when board and competitive exams dominate. Second, the residential density — hundreds of households in DLF Phase 1, 2 and 3 routinely need PAN card copies, Aadhaar printouts, rental agreements and school project colour pages. Third, a steady stream of small businesses and CA offices on the commercial stretch that demand laminations and bound reports. With four listed xerox and print shops serving 122001 and 122007, the area is well equipped to handle that load without long queues.
 
 ## What people typically print here
 

@@ -9,7 +9,7 @@ wordCount: 452
 ---
 ## About this place
 
-Kalasipalya sits in the older southern stretch of Bengaluru, where the Kalasipalyam main road threads past the wholesale fruit market, auto spares dealers, and a tight knot of residential lanes that have watched the city change around them since the 1980s. Pin codes 560002 and 560053 cover the core market belt and the lanes branching toward Hosur road, including KR Market on one side and Lalbagh on the other. It is densely built, commercially loud in the mornings, and residential by night. Today, seven verified xerox and print shops in Kalasipalya serve this mixed economy, and MARAAM PRINTS leads the pack with a clean 5-star rating across local reviewers.
+Kalasipalya sits in the older southern stretch of Bengaluru, where the Kalasipalyam main road threads past the wholesale fruit market, auto spares dealers, and a tight knot of residential lanes that have watched the city change around them since the 1980s. Pin codes 560002 and 560053 cover the core market belt and the lanes branching toward Hosur road, including KR Market on one side and Lalbagh on the other. It is densely built, commercially loud in the mornings, and residential by night. Today, seven listed xerox and print shops in Kalasipalya serve this mixed economy, and MARAAM PRINTS leads the pack with a clean 5-star rating across local reviewers.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ Black-and-white copies of Aadhaar and PAN applications still dominate weekday mo
 
 ## How Snaprint fits in
 
-Snaprint's instant print kiosks plug into this routine by handling the quick, single-job tasks that do not need a full-service counter, QR-based uploads, machine prints in seconds, and pickup without a queue. For shop owners like MARAAM PRINTS looking to expand capacity or streamline routine work, the [partnership page](/book) outlines onboarding details. For students and residents who want fast turnaround without waiting at the counter, the [Kalasipalya kiosk page](/print-near/kalasipalya) shows live availability and the nearest machine.
+Snaprint's instant print kiosks plug into this routine by handling the quick, single-job tasks that do not need a full-service counter, QR-based uploads, machine prints in seconds, and pickup without a queue. For shop owners like MARAAM PRINTS looking to expand capacity or streamline routine work, email snaprints@sanskritilabs.in to learn more. For students and residents who want fast turnaround without waiting at the counter, the [Kalasipalya kiosk page](/print-near/kalasipalya) shows live availability and the nearest machine.

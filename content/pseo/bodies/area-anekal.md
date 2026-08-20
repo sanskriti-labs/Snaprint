@@ -9,7 +9,7 @@ wordCount: 495
 ---
 ### ## About this place
 
-Anekal sits at Bengaluru's southern shoulder, a sub-urban town that has quietly absorbed decades of spillover growth from the IT corridor. The settlement predates the tech boom by centuries — the famous Anekal Dorabavi temple, built in the 17th century, still draws pilgrims from across Tamil Nadu and Karnataka. Today the town is a patchwork of old agraharam streets, mid-rise residential layouts, and a busy market stretch along the Bengaluru–Hosur highway. The pin codes 562106 and 562107 cover roughly 200 square kilometres of this mixed zone, including industrial pockets near Jigani. With 5 verified xerox and print shops operating across these pin codes, Anekal punches above its weight for a non-central suburb.
+Anekal sits at Bengaluru's southern shoulder, a sub-urban town that has quietly absorbed decades of spillover growth from the IT corridor. The settlement predates the tech boom by centuries — the famous Anekal Dorabavi temple, built in the 17th century, still draws pilgrims from across Tamil Nadu and Karnataka. Today the town is a patchwork of old agraharam streets, mid-rise residential layouts, and a busy market stretch along the Bengaluru–Hosur highway. The pin codes 562106 and 562107 cover roughly 200 square kilometres of this mixed zone, including industrial pockets near Jigani. With 5 listed xerox and print shops operating across these pin codes, Anekal punches above its weight for a non-central suburb.
 
 ### ## Getting here and around
 

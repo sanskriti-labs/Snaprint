@@ -9,7 +9,7 @@ wordCount: 499
 ---
 ## About this place
 
-T John Institute of Technology sits on the southern fringe of Bengaluru, tucked into the Gottigere-Begur belt where the city's old village geography still bleeds through patches of new apartment blocks. The campus is best known for its undergraduate engineering and management streams — students here grind through semester projects, lab manuals, and placement prep as core parts of the academic rhythm. Class sizes run into the hundreds each year, and most learners come from outside Bengaluru, which means almost everyone on campus has a steady, recurring need for printed documents throughout the academic calendar. With 6 verified xerox and print shops mapped on Snaprint in this belt, students are never more than a short auto ride from a working printer.
+T John Institute of Technology sits on the southern fringe of Bengaluru, tucked into the Gottigere-Begur belt where the city's old village geography still bleeds through patches of new apartment blocks. The campus is best known for its undergraduate engineering and management streams — students here grind through semester projects, lab manuals, and placement prep as core parts of the academic rhythm. Class sizes run into the hundreds each year, and most learners come from outside Bengaluru, which means almost everyone on campus has a steady, recurring need for printed documents throughout the academic calendar. With 6 listed xerox and print shops mapped on Snaprint in this belt, students are never more than a short auto ride from a working printer.
 
 ## Getting here and around
 

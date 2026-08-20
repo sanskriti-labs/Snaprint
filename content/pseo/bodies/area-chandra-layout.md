@@ -9,7 +9,7 @@ wordCount: 519
 ---
 ## About this place
 
-Chandra Layout sits in west Bengaluru as one of those dependable middle-ring neighbourhoods where apartment blocks, small shops and older independent houses share the same broad streets. It falls under the 560040 and 560023 pin codes and has grown steadily since the 1980s when the area was carved out of what was once open land near Vijayanagar. Today it leans residential, with a steady retail spine along the main road and enough commercial activity to support 11 verified xerox and print shops that locals actually rely on. The neighbourhood has the feel of a self-contained pocket — temples, schools, a couple of parks and the constant hum of two-wheelers navigating narrow lanes. Sri Sai Stationary's, the highest-rated of the eleven at five stars, is the kind of establishment that anchors daily printing needs for residents and visitors alike.
+Chandra Layout sits in west Bengaluru as one of those dependable middle-ring neighbourhoods where apartment blocks, small shops and older independent houses share the same broad streets. It falls under the 560040 and 560023 pin codes and has grown steadily since the 1980s when the area was carved out of what was once open land near Vijayanagar. Today it leans residential, with a steady retail spine along the main road and enough commercial activity to support 11 listed xerox and print shops that locals actually rely on. The neighbourhood has the feel of a self-contained pocket — temples, schools, a couple of parks and the constant hum of two-wheelers navigating narrow lanes. Sri Sai Stationary's, the highest-rated of the eleven at five stars, is the kind of establishment that anchors daily printing needs for residents and visitors alike.
 
 ## Getting here and around
 

@@ -9,7 +9,7 @@ wordCount: 548
 ---
 ### ## About this place
 
-PES University's HN Campus sits tucked into the Hanumanthanagar neighbourhood of southern Bengaluru, a quieter pocket compared to the university's main RR Nagar address. The campus draws a steady stream of undergraduate and postgraduate students, with engineering, business, and design programmes making up the bulk of enrolments. Classrooms spill into compact labs and a central library that students move between in short, hurried bursts — especially around submission deadlines. Surrounding lanes carry the usual Hanumanthanagar mix: small kirana stores, a few cafés that open early for students, and the older residential buildings that give the area its lived-in feel. Twenty-seven verified xerox and print shops operate within reach of the campus, with Prathap Xerox & Printers, rated 4.2 stars, often the first name that comes up when students ask each other for recommendations. The neighbourhood falls under the 560019 pin code area.
+PES University's HN Campus sits tucked into the Hanumanthanagar neighbourhood of southern Bengaluru, a quieter pocket compared to the university's main RR Nagar address. The campus draws a steady stream of undergraduate and postgraduate students, with engineering, business, and design programmes making up the bulk of enrolments. Classrooms spill into compact labs and a central library that students move between in short, hurried bursts — especially around submission deadlines. Surrounding lanes carry the usual Hanumanthanagar mix: small kirana stores, a few cafés that open early for students, and the older residential buildings that give the area its lived-in feel. Twenty-seven listed xerox and print shops operate within reach of the campus, with Prathap Xerox & Printers, rated 4.2 stars, often the first name that comes up when students ask each other for recommendations. The neighbourhood falls under the 560019 pin code area.
 
 ### ## Getting here and around
 
@@ -17,7 +17,7 @@ Most students reach the HN Campus via the Bangalore Metro's Green Line, with Yel
 
 ### ## Why printing demand is high here
 
-PES operates on a continuous assessment model, which means there is rarely a week without some submission — lab reports, assignment sheets, project documentation, or mid-term exam forms. Faculty routinely require both physical and soft copies, and binding or spiral finishing is often mandatory for project reports. Group projects add another layer of demand: one student prints the draft, another collects feedback, and a final clean version goes through the shop before submission. Add internship portfolios and placement paperwork during final year, and the print volume around HN Campus stays consistently high across the semester rather than spiking only during exams. Having 27 verified print shops within a short radius keeps turnaround times reasonable even during the busiest weeks.
+PES operates on a continuous assessment model, which means there is rarely a week without some submission — lab reports, assignment sheets, project documentation, or mid-term exam forms. Faculty routinely require both physical and soft copies, and binding or spiral finishing is often mandatory for project reports. Group projects add another layer of demand: one student prints the draft, another collects feedback, and a final clean version goes through the shop before submission. Add internship portfolios and placement paperwork during final year, and the print volume around HN Campus stays consistently high across the semester rather than spiking only during exams. Having 27 listed print shops within a short radius keeps turnaround times reasonable even during the busiest weeks.
 
 ### ## What people typically print here
 
@@ -25,4 +25,4 @@ Assignment printouts in black-and-white on A4 sheets remain the bread and butter
 
 ### ## How Snaprint fits in
 
-Snaprint connects HN Campus students directly to the verified print shops operating around the neighbourhood, so a project report uploaded from a hostel room can be ready for pickup by the time someone walks out for a chai break. Shop owners interested in joining the network can find onboarding details at /book, and students looking for the nearest available kiosk can browse options at /print-near/pes-university-hn-campus.
+Snaprint connects HN Campus students directly to the listed print shops operating around the neighbourhood, so a project report uploaded from a hostel room can be ready for pickup by the time someone walks out for a chai break. Shop owners interested in joining the network can find onboarding details at /book, and students looking for the nearest available kiosk can browse options at /print-near/pes-university-hn-campus.

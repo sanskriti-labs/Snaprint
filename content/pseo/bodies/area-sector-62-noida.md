@@ -9,7 +9,7 @@ wordCount: 508
 ---
 ## About this place
 
-Sector 62 sits on the Noida side of Delhi NCR, wedged between the institutional belt of sector 63 and the older residential blocks of sector 59. It is one of those micro-neighbourhoods that rarely tops tourist lists but quietly powers a chunk of NCR's back-office economy. The skyline is mostly mid-rise commercial towers, IT offices, and a handful of apartment complexes — the kind of built environment where A4 paper moves faster than residential grocery lists. Pin codes 201309 and 201020 cover this stretch, and anyone who has spent time here knows the difference between the two matters for last-mile delivery and which chowk you reach first. Six verified xerox and print shops keep that paper economy running, with Mapp Stationery sitting at the top of the ratings list at 4.3 stars.
+Sector 62 sits on the Noida side of Delhi NCR, wedged between the institutional belt of sector 63 and the older residential blocks of sector 59. It is one of those micro-neighbourhoods that rarely tops tourist lists but quietly powers a chunk of NCR's back-office economy. The skyline is mostly mid-rise commercial towers, IT offices, and a handful of apartment complexes — the kind of built environment where A4 paper moves faster than residential grocery lists. Pin codes 201309 and 201020 cover this stretch, and anyone who has spent time here knows the difference between the two matters for last-mile delivery and which chowk you reach first. Six listed xerox and print shops keep that paper economy running, with Mapp Stationery sitting at the top of the ratings list at 4.3 stars.
 
 ## Getting here and around
 

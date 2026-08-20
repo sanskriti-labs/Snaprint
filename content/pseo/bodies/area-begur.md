@@ -9,7 +9,7 @@ wordCount: 475
 ---
 ## About this place
 
-Begur sits on the southern fringe of Bengaluru, straddling the border where the urban sprawl of Bommanahalli melts into older residential pockets. Historically a village known for the 9th-century Begur inscription that references "Bengaluru," the area has morphed into a densely built residential zone anchored by the 560068 and 560076 pin codes. Apartment blocks share lanes with small commercial stretches, and the streets around Begur Main Road stay busy well past midnight thanks to late-shift workers heading home. The neighbourhood feeds students, professionals, and small business owners into nearby hubs like Electronic City and Koramangala. With 15 verified xerox and print shops operating here, the local infrastructure for quick document work has kept pace with that growth.
+Begur sits on the southern fringe of Bengaluru, straddling the border where the urban sprawl of Bommanahalli melts into older residential pockets. Historically a village known for the 9th-century Begur inscription that references "Bengaluru," the area has morphed into a densely built residential zone anchored by the 560068 and 560076 pin codes. Apartment blocks share lanes with small commercial stretches, and the streets around Begur Main Road stay busy well past midnight thanks to late-shift workers heading home. The neighbourhood feeds students, professionals, and small business owners into nearby hubs like Electronic City and Koramangala. With 15 listed xerox and print shops operating here, the local infrastructure for quick document work has kept pace with that growth.
 
 ## Getting here and around
 

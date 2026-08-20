@@ -9,7 +9,7 @@ wordCount: 476
 ---
 ## About this place
 
-Karol Bagh is one of West Delhi's loudest, oldest commercial arteries — a dense bazaar district threaded between residential blocks, where five-storey shop buildings sit cheek-by-jowl with pre-Partition havelis and DDA flats. The neighbourhood grew up around a network of wholesale markets dealing in fabrics, jewellery, electronics and wedding goods, and that wholesale DNA still powers the footfall. Within the 110005 and 110006-adjacent 110005/110060 postal pockets, Snaprint has catalogued 16 verified xerox and print shops, a density that's no surprise given the constant churn of traders, students and office workers who need documents on demand.
+Karol Bagh is one of West Delhi's loudest, oldest commercial arteries — a dense bazaar district threaded between residential blocks, where five-storey shop buildings sit cheek-by-jowl with pre-Partition havelis and DDA flats. The neighbourhood grew up around a network of wholesale markets dealing in fabrics, jewellery, electronics and wedding goods, and that wholesale DNA still powers the footfall. Within the 110005 and 110006-adjacent 110005/110060 postal pockets, Snaprint has catalogued 16 listed xerox and print shops, a density that's no surprise given the constant churn of traders, students and office workers who need documents on demand.
 
 ## Getting here and around
 

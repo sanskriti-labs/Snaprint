@@ -9,7 +9,7 @@ wordCount: 496
 ---
 ## About this place
 
-Peenya is one of Bengaluru's largest industrial pockets, sprawling across the city's northwest and spilling into the pin codes of 560058 and 560086. The neighbourhood wears two identities at once — a roaring manufacturing hub anchored by the Peenya Industrial Area, one of the oldest in Asia, and a thick residential belt of workers' colonies, older tiled-roof homes, and newer apartment blocks. Rolling mills, auto-parts plants, and CNC units line the main arterial roads, while the back lanes shelter small kirana shops, tea stalls, and tailoring units. Locals call the whole stretch "Peenya" without distinguishing between the factory zone and the residential pockets, and the 14 verified xerox and print shops in the area service both crowds.
+Peenya is one of Bengaluru's largest industrial pockets, sprawling across the city's northwest and spilling into the pin codes of 560058 and 560086. The neighbourhood wears two identities at once — a roaring manufacturing hub anchored by the Peenya Industrial Area, one of the oldest in Asia, and a thick residential belt of workers' colonies, older tiled-roof homes, and newer apartment blocks. Rolling mills, auto-parts plants, and CNC units line the main arterial roads, while the back lanes shelter small kirana shops, tea stalls, and tailoring units. Locals call the whole stretch "Peenya" without distinguishing between the factory zone and the residential pockets, and the 14 listed xerox and print shops in the area service both crowds.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The Peenya Metro Station on the Green Line drops commuters right at the edge of 
 
 ## Why printing demand is high here
 
-Peenya runs on documentation. Every factory, supplier, and logistics outfit in the industrial area needs GST printouts, invoice batches, delivery challans, and compliance paperwork churned out daily, and that's where the 14 verified shops absorb the load. ITI students from the government polytechnic and engineering candidates from nearby tutorial institutes line up for project reports and spiral-bound submissions. The Peenya Industrial Area also houses multiple liaison offices and labour offices, pushing residents to print Aadhaar-linked affidavits, ration forms, and bank statements. Add the residential density behind the main road, and the area's 12 rated xerox and print shops stay busy from morning to late evening.
+Peenya runs on documentation. Every factory, supplier, and logistics outfit in the industrial area needs GST printouts, invoice batches, delivery challans, and compliance paperwork churned out daily, and that's where the 14 listed shops absorb the load. ITI students from the government polytechnic and engineering candidates from nearby tutorial institutes line up for project reports and spiral-bound submissions. The Peenya Industrial Area also houses multiple liaison offices and labour offices, pushing residents to print Aadhaar-linked affidavits, ration forms, and bank statements. Add the residential density behind the main road, and the area's 12 rated xerox and print shops stay busy from morning to late evening.
 
 ## What people typically print here
 

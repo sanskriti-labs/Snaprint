@@ -9,7 +9,7 @@ wordCount: 462
 ---
 ## About this place
 
-HBR Layout sits in the northern belt of Bengaluru, threaded between Kammanahalli and Banaswadi along the Outer Ring Road. Short for "Hennur-Bagalur Road," the layout emerged as a planned residential extension in the 1990s and has since absorbed waves of new apartment blocks, independent houses, and a quietly expanding commercial strip. The pin codes 560043 and 560084 cover most of its lanes, and within them eight verified xerox and print shops serve the daily needs of roughly 35,000 residents. Local storefronts run the gamut from tiny photocopy counters next to provision stores to more equipped outfits like Fine Prints Xerox Shop, which carries the highest 5-star rating in the area.
+HBR Layout sits in the northern belt of Bengaluru, threaded between Kammanahalli and Banaswadi along the Outer Ring Road. Short for "Hennur-Bagalur Road," the layout emerged as a planned residential extension in the 1990s and has since absorbed waves of new apartment blocks, independent houses, and a quietly expanding commercial strip. The pin codes 560043 and 560084 cover most of its lanes, and within them eight listed xerox and print shops serve the daily needs of roughly 35,000 residents. Local storefronts run the gamut from tiny photocopy counters next to provision stores to more equipped outfits like Fine Prints Xerox Shop, which carries the highest 5-star rating in the area.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The locality is car-dependent but reasonably well connected. Kalyan Nagar bus st
 
 ## Why printing demand is high here
 
-A dense residential base keeps the print shops humming, but the real driver is the cluster of small offices, coaching centres, and tuition halls scattered between the apartment blocks. Parents regularly print worksheets, teachers duplicate question papers, and small businesses need letterheads, invoices, and GST paperwork run off quickly. Exam seasons spike demand noticeably — February through April, and again in September — when students line up for spiral-bound notes and project reports. The 560043 stretch sees particularly heavy traffic because of its proximity to several engineering coaching institutes. With eight verified outlets averaging 4.7 stars, the area has enough capacity to absorb these surges without long waits.
+A dense residential base keeps the print shops humming, but the real driver is the cluster of small offices, coaching centres, and tuition halls scattered between the apartment blocks. Parents regularly print worksheets, teachers duplicate question papers, and small businesses need letterheads, invoices, and GST paperwork run off quickly. Exam seasons spike demand noticeably — February through April, and again in September — when students line up for spiral-bound notes and project reports. The 560043 stretch sees particularly heavy traffic because of its proximity to several engineering coaching institutes. With eight listed outlets averaging 4.7 stars, the area has enough capacity to absorb these surges without long waits.
 
 ## What people typically print here
 

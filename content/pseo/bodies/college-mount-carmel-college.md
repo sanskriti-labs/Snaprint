@@ -9,7 +9,7 @@ wordCount: 499
 ---
 ## About this place
 
-Mount Carmel College has occupied a leafy stretch of Palace Road since the late 1940s, and the campus still carries the calm, old-Bengaluru feel of the era when Vasanthnagar was lined with bungalows rather than apartment blocks. Run by the Congregation of Carmelite Sisters of St. Teresa, the college is best known for its undergraduate programmes in English literature, psychology, economics, journalism, and commerce, alongside a postgraduate school of social work. About 5,000 students rotate through the grounds each year, and the surrounding streets on Palace Road and behind Cunningham Road have quietly grown to absorb their daily needs. Three pin codes — 560001, 560052, and 560051 — anchor the neighbourhood, and 25 verified xerox and print shops operate within easy walking distance of the main gate.
+Mount Carmel College has occupied a leafy stretch of Palace Road since the late 1940s, and the campus still carries the calm, old-Bengaluru feel of the era when Vasanthnagar was lined with bungalows rather than apartment blocks. Run by the Congregation of Carmelite Sisters of St. Teresa, the college is best known for its undergraduate programmes in English literature, psychology, economics, journalism, and commerce, alongside a postgraduate school of social work. About 5,000 students rotate through the grounds each year, and the surrounding streets on Palace Road and behind Cunningham Road have quietly grown to absorb their daily needs. Three pin codes — 560001, 560052, and 560051 — anchor the neighbourhood, and 25 listed xerox and print shops operate within easy walking distance of the main gate.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The closest metro stop is Sampige Road on the Green Line, about a fifteen-minute
 
 ## Why printing demand is high here
 
-Every department from English to commerce sets internal submission deadlines that fall outside the official exam window, and students often juggle three or four printed assignments in a single week. The college's reputation for rigorous documentation in psychology and journalism courses pushes students toward spiral-bound and soft-bound printouts rather than loose sheets. Internship season pulls in another wave of demand between August and November, when placement cells circulate printed handouts and CVs are revised dozens of times. With 25 verified shops around the campus, students rarely have to walk more than a couple of minutes to find a working printer, which is why the queue at Marali Enterprises tends to spill onto the pavement on submission mornings.
+Every department from English to commerce sets internal submission deadlines that fall outside the official exam window, and students often juggle three or four printed assignments in a single week. The college's reputation for rigorous documentation in psychology and journalism courses pushes students toward spiral-bound and soft-bound printouts rather than loose sheets. Internship season pulls in another wave of demand between August and November, when placement cells circulate printed handouts and CVs are revised dozens of times. With 25 listed shops around the campus, students rarely have to walk more than a couple of minutes to find a working printer, which is why the queue at Marali Enterprises tends to spill onto the pavement on submission mornings.
 
 ## What people typically print here
 

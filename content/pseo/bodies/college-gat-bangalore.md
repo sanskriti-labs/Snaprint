@@ -9,7 +9,7 @@ wordCount: 551
 ---
 ## About this place
 
-Tucked into the southern sprawl of Bengaluru, Global Academy of Technology sits off Mysore Road in the Rajarajeshwari Nagar belt — a self-contained engineering campus that draws its crowd mostly from the surrounding blocks. GAT runs undergraduate and postgraduate programmes in computer science, electronics, mechanical, civil and information science, and it functions more like a small academic township than a roadside college. The campus owns its own hostels, an auditorium block, and a workshop yard that swallows a chunk of the layout. Around its gates, the neighbourhood is a mix of paying-guest buildings, tiffin rooms, and two-wheeler showrooms, with residential colonies like Kenchenahalli and Hosakerehalli feeding students in every morning. Fourteen verified xerox and print shops ring the college, scattered roughly across the 560098 pin code zone, and most stay open past midnight during submission weeks.
+Tucked into the southern sprawl of Bengaluru, Global Academy of Technology sits off Mysore Road in the Rajarajeshwari Nagar belt — a self-contained engineering campus that draws its crowd mostly from the surrounding blocks. GAT runs undergraduate and postgraduate programmes in computer science, electronics, mechanical, civil and information science, and it functions more like a small academic township than a roadside college. The campus owns its own hostels, an auditorium block, and a workshop yard that swallows a chunk of the layout. Around its gates, the neighbourhood is a mix of paying-guest buildings, tiffin rooms, and two-wheeler showrooms, with residential colonies like Kenchenahalli and Hosakerehalli feeding students in every morning. Fourteen listed xerox and print shops ring the college, scattered roughly across the 560098 pin code zone, and most stay open past midnight during submission weeks.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ Colour project reports with coil or hard binding dominate the counters, alongsid
 
 ## How Snaprint fits in
 
-The platform quietly maps these verified xerox shops around Global Academy of Technology so students can pick the nearest counter, choose binding type, and skip the guessing. Shop owners in the 560098 radius can claim their listing through /book, while students searching for campus-adjacent printers land directly at /print-near/gat-bangalore to compare distances and turnaround.
+The platform quietly maps these listed xerox shops around Global Academy of Technology so students can pick the nearest counter, choose binding type, and skip the guessing. Shop owners in the 560098 radius can claim their listing through /book, while students searching for campus-adjacent printers land directly at /print-near/gat-bangalore to compare distances and turnaround.

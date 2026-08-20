@@ -9,7 +9,7 @@ wordCount: 447
 ---
 ## About this place
 
-Rajajinagar sits on the western edge of Bengaluru, one of the older planned neighbourhoods laid out in the 1920s and named after the statesman C. Rajagopalachari. It is a thickly settled mix of independent houses, apartment blocks, small factories and a busy commercial spine along Dr. Rajkumar Road and the avenues branching off it. The area feeds families into the surrounding industrial belts of Rajajinagar II Block, Yeshwantpur and the wholesale markets beyond. With 20 verified xerox and print shops now mapped across the 560010 and 560043 pin codes, it has quietly become one of the denser print-service clusters in west Bengaluru, anchored by well-known counters like Adhithri Stationery, Xerox and Fancy Store, which holds a 5★ rating.
+Rajajinagar sits on the western edge of Bengaluru, one of the older planned neighbourhoods laid out in the 1920s and named after the statesman C. Rajagopalachari. It is a thickly settled mix of independent houses, apartment blocks, small factories and a busy commercial spine along Dr. Rajkumar Road and the avenues branching off it. The area feeds families into the surrounding industrial belts of Rajajinagar II Block, Yeshwantpur and the wholesale markets beyond. With 20 listed xerox and print shops now mapped across the 560010 and 560043 pin codes, it has quietly become one of the denser print-service clusters in west Bengaluru, anchored by well-known counters like Adhithri Stationery, Xerox and Fancy Store, which holds a 5★ rating.
 
 ## Getting here and around
 

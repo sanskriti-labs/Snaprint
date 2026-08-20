@@ -9,7 +9,7 @@ wordCount: 491
 ---
 ## About this place
 
-Crawford Market sits on the southern edge of South Mumbai, a colonial-era bazaar zone where wholesale traders, spice merchants, and fabric dealers have operated since Mahomed Ali Brick's 1869 hall first opened. The streets around L.T. Marg and Mohammed Ali Road pack in commercial offices on the upper floors and godowns below, while residential chawls climb up the side lanes. This isn't a polished retail district — it's loud, crowded, and functional, serving pin codes 400002 and 400003. Eighteen verified xerox and print shops line the lanes here, keeping the wheels of paperwork turning for traders, lawyers, and small-business owners who work in the surrounding wadis.
+Crawford Market sits on the southern edge of South Mumbai, a colonial-era bazaar zone where wholesale traders, spice merchants, and fabric dealers have operated since Mahomed Ali Brick's 1869 hall first opened. The streets around L.T. Marg and Mohammed Ali Road pack in commercial offices on the upper floors and godowns below, while residential chawls climb up the side lanes. This isn't a polished retail district — it's loud, crowded, and functional, serving pin codes 400002 and 400003. Eighteen listed xerox and print shops line the lanes here, keeping the wheels of paperwork turning for traders, lawyers, and small-business owners who work in the surrounding wadis.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The closest rail head is Masjid Bunder on the Central Line, about a ten-minute w
 
 ## Why printing demand is high here
 
-The area runs on documentation. Wholesale spice and dry-fruit dealers in the lanes off Crawford Market's main hall need GST invoices, transport waybills, and shipping manifests printed multiple times a day. Nearby government offices — the Customs House, the Police Commissioner's old record branch, and several smaller municipal departments — generate constant queues of citizens needing photocopies of Aadhaar cards, ration forms, and property papers. Add the residential chawls in pin code 400002, where families handle school admissions, rental agreements, and passport applications, and you get steady footfall at the eighteen verified xerox and print shops. K.M.XEROX, the 5-star rated shop, routinely handles both retail walk-ins and bulk commercial orders.
+The area runs on documentation. Wholesale spice and dry-fruit dealers in the lanes off Crawford Market's main hall need GST invoices, transport waybills, and shipping manifests printed multiple times a day. Nearby government offices — the Customs House, the Police Commissioner's old record branch, and several smaller municipal departments — generate constant queues of citizens needing photocopies of Aadhaar cards, ration forms, and property papers. Add the residential chawls in pin code 400002, where families handle school admissions, rental agreements, and passport applications, and you get steady footfall at the eighteen listed xerox and print shops. K.M.XEROX, the 5-star rated shop, routinely handles both retail walk-ins and bulk commercial orders.
 
 ## What people typically print here
 

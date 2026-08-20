@@ -9,7 +9,7 @@ wordCount: 536
 ---
 ## About this place
 
-Kalina sits on the eastern shoulder of Mumbai, squeezed between Kurla and the airport corridor, and the way locals talk about it tells you everything about its dual personality. The eastern pockets around the 400098 pin code hum with the daily traffic of Vakola and the Santacruz–Chembur link, while the 400055 stretch drifts toward a quieter, more residential rhythm closer to the military and Air India colonies. It's not the kind of neighbourhood that tourists stumble into — it works, it commutes, it sends kids to coaching classes. The 10 verified xerox and print shops in Kalina, Mumbai (400098, 400055) tend to be tucked under building awnings, beside provision stores, or right next to the local BEST stops, which is exactly where the footfall is.
+Kalina sits on the eastern shoulder of Mumbai, squeezed between Kurla and the airport corridor, and the way locals talk about it tells you everything about its dual personality. The eastern pockets around the 400098 pin code hum with the daily traffic of Vakola and the Santacruz–Chembur link, while the 400055 stretch drifts toward a quieter, more residential rhythm closer to the military and Air India colonies. It's not the kind of neighbourhood that tourists stumble into — it works, it commutes, it sends kids to coaching classes. The 10 listed xerox and print shops in Kalina, Mumbai (400098, 400055) tend to be tucked under building awnings, beside provision stores, or right next to the local BEST stops, which is exactly where the footfall is.
 
 ## Getting here and around
 

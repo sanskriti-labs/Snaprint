@@ -9,7 +9,7 @@ wordCount: 462
 ---
 ## About this place
 
-Bangalore University's Central College Campus sits on Dr. Ambedkar Veedhi, right behind Vidhana Soudha, and that location alone tells you a lot about its character. Established in 1886 as one of the oldest educational institutions in Karnataka, it houses the arts, commerce, and law faculties and remains a magnet for undergraduates from across Bengaluru and beyond. The campus is compact, heritage-style, and packed with students cycling between the red-brick Senate House and the central library. With the metro running below its edge and government offices bordering it on three sides, the area sees constant foot traffic. Around 17 verified xerox and print shops operate in the lanes radiating from the campus, serving students heading to exams, library work, and project submissions.
+Bangalore University's Central College Campus sits on Dr. Ambedkar Veedhi, right behind Vidhana Soudha, and that location alone tells you a lot about its character. Established in 1886 as one of the oldest educational institutions in Karnataka, it houses the arts, commerce, and law faculties and remains a magnet for undergraduates from across Bengaluru and beyond. The campus is compact, heritage-style, and packed with students cycling between the red-brick Senate House and the central library. With the metro running below its edge and government offices bordering it on three sides, the area sees constant foot traffic. Around 17 listed xerox and print shops operate in the lanes radiating from the campus, serving students heading to exams, library work, and project submissions.
 
 ## Getting here and around
 
@@ -19,7 +19,7 @@ The nearest metro stop is Dr. Ambedkar Stadium station on the Purple Line, which
 
 This is a print-heavy pocket of Bengaluru. Students from the Central College Campus run through three exam cycles a year, plus internal assessments and viva submissions, and every one of those cycles involves stacks of printed answer booklets, hall tickets, and project reports. Add to that the neighbouring IAS coaching hub on Race Course Road, law students filing court documents at the nearby Karnataka High Court complex, and PG students working on dissertations, and you have relentless demand.
 
-The 17 verified shops in the area, including spots like Sri Durga Xerox Centre, stay busy from morning until late evening, particularly during the weeks leading up to semester and competitive exams.
+The 17 listed shops in the area, including spots like Sri Durga Xerox Centre, stay busy from morning until late evening, particularly during the weeks leading up to semester and competitive exams.
 
 ## What people typically print here
 

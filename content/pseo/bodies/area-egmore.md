@@ -9,7 +9,7 @@ wordCount: 497
 ---
 ### ## About this place
 
-Egmore sits on the northern edge of Chennai's old downtown, a dense knot of heritage bungalows, government campuses, and mid-rise offices stitched together by narrow lanes off Poonamallee High Road. The neighbourhood has long worn two hats — it is simultaneously a residential quarter for long-time Chennai families and a working district for the city, home to the Government Museum complex and several state-run institutions clustered around the 600008 pin code. The 600002 pockets add the busier commercial fringe closer to the Central rail corridor. With 16 verified xerox and print shops mapped across these lanes, Egmore is one of the better-serviced print corridors in central Chennai, and the area averages 4.2 stars across 13 rated outlets.
+Egmore sits on the northern edge of Chennai's old downtown, a dense knot of heritage bungalows, government campuses, and mid-rise offices stitched together by narrow lanes off Poonamallee High Road. The neighbourhood has long worn two hats — it is simultaneously a residential quarter for long-time Chennai families and a working district for the city, home to the Government Museum complex and several state-run institutions clustered around the 600008 pin code. The 600002 pockets add the busier commercial fringe closer to the Central rail corridor. With 16 listed xerox and print shops mapped across these lanes, Egmore is one of the better-serviced print corridors in central Chennai, and the area averages 4.2 stars across 13 rated outlets.
 
 ### ## Getting here and around
 

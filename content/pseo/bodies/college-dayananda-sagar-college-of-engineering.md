@@ -9,7 +9,7 @@ wordCount: 491
 ---
 ## About this place
 
-Dayananda Sagar College of Engineering sits on a sprawling 28-acre campus in Kumaraswamy Layout, churning out graduates in computer science, electronics, mechanical, and civil streams across undergraduate and postgraduate programs. The institution is affiliated with Visvesvaraya Technological University and has built a reputation for placements at firms like Infosys, Wipro, and TCS, which keeps the on-campus demand for formal documentation running year-round. The neighborhood around the college is a textbook mix of engineering hostels, small kirana stores, and tiffin joints that open before 7 a.m. — most of the surrounding residential blocks fall under the 560078 and 560061 pin codes. With 15 verified xerox shops documented around the campus, students rarely need to walk more than a few minutes to find a working printer.
+Dayananda Sagar College of Engineering sits on a sprawling 28-acre campus in Kumaraswamy Layout, churning out graduates in computer science, electronics, mechanical, and civil streams across undergraduate and postgraduate programs. The institution is affiliated with Visvesvaraya Technological University and has built a reputation for placements at firms like Infosys, Wipro, and TCS, which keeps the on-campus demand for formal documentation running year-round. The neighborhood around the college is a textbook mix of engineering hostels, small kirana stores, and tiffin joints that open before 7 a.m. — most of the surrounding residential blocks fall under the 560078 and 560061 pin codes. With 15 listed xerox shops documented around the campus, students rarely need to walk more than a few minutes to find a working printer.
 
 ## Getting here and around
 

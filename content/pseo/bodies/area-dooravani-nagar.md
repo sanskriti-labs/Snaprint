@@ -9,7 +9,7 @@ wordCount: 484
 ---
 ## About this place
 
-Dooravani Nagar sits on the eastern flank of Bengaluru, a quiet pocket wedged between the busier arcs of Krishnarajapuram and the IT corridors of Whitefield. The pin code 560016 covers a residential layout where independent houses share walls with small garment units, provision stores, and a clutch of coaching centres. The area reads as old-Bengaluru on the margins — two-storey layouts, temple corners, and a working population that commutes outwards each morning. Eleven verified xerox and print shops serve the 560016 catchment, which tells you the demand is steady and the folks running them know their regulars by name. The top-rated among them, Raiba Xerox & Stationary Store, holds a full 5-star rating, anchoring the local stack.
+Dooravani Nagar sits on the eastern flank of Bengaluru, a quiet pocket wedged between the busier arcs of Krishnarajapuram and the IT corridors of Whitefield. The pin code 560016 covers a residential layout where independent houses share walls with small garment units, provision stores, and a clutch of coaching centres. The area reads as old-Bengaluru on the margins — two-storey layouts, temple corners, and a working population that commutes outwards each morning. Eleven listed xerox and print shops serve the 560016 catchment, which tells you the demand is steady and the folks running them know their regulars by name. The top-rated among them, Raiba Xerox & Stationary Store, holds a full 5-star rating, anchoring the local stack.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ College notes and question banks in B&W at economy rates are the bread and butte
 
 ## How Snaprint fits in
 
-Snaprint connects the neighbourhood's existing shops to students and residents searching for a print job nearby — the search traffic already exists, and the kiosks inside these verified shops absorb it. Walk in to Raiba Xerox & Stationary Store or any of the eleven listed outlets for same-day service. Shop owners looking to expand their counter presence can [list on Snaprint](/book), and students hunting for a reliable print point around Dooravani Nagar can [browse the closest options here](/print-near/dooravani-nagar).
+Snaprint connects the neighbourhood's existing shops to students and residents searching for a print job nearby — the search traffic already exists, and the kiosks inside these listed shops absorb it. Walk in to Raiba Xerox & Stationary Store or any of the eleven listed outlets for same-day service. Shop owners looking to expand their counter presence can [list on Snaprint](/book), and students hunting for a reliable print point around Dooravani Nagar can [browse the closest options here](/print-near/dooravani-nagar).

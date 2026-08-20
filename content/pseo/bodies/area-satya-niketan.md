@@ -9,7 +9,7 @@ wordCount: 469
 ---
 ## About this place
 
-Satya Niketan sits on the western fringe of South Delhi, a narrow two-kilometre stretch clinging to the edge of the University of Delhi's South Campus. Most buildings here are three- and four-storey walkups built in the 1980s, with tailor shops on the ground floor, paying-guests above, and dhabas tucked into corners. The neighbourhood is essentially a student colony — it feeds into Dhaula Kuan and Moti Bagh to the south, and the broader DCC campus zone to the north. Servicing the 110021 postal area, Snaprint currently lists 5 verified xerox and print shops in Satya Niketan, which collectively handle a workload that punches well above the area's small footprint.
+Satya Niketan sits on the western fringe of South Delhi, a narrow two-kilometre stretch clinging to the edge of the University of Delhi's South Campus. Most buildings here are three- and four-storey walkups built in the 1980s, with tailor shops on the ground floor, paying-guests above, and dhabas tucked into corners. The neighbourhood is essentially a student colony — it feeds into Dhaula Kuan and Moti Bagh to the south, and the broader DCC campus zone to the north. Servicing the 110021 postal area, Snaprint currently lists 5 listed xerox and print shops in Satya Niketan, which collectively handle a workload that punches well above the area's small footprint.
 
 ## Getting here and around
 

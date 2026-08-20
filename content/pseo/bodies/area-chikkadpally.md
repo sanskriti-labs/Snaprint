@@ -9,7 +9,7 @@ wordCount: 467
 ---
 ## About this place
 
-A dense, lived-in pocket in the heart of old Hyderabad, Chikkadpally folds into itself neatly between Narayanguda and Himayathnagar, spreading across pin codes 500020 and 500044. The lanes are narrow, the buildings mostly mid-rise, and the character is unmistakably residential with a stubborn commercial streak running through the main road. Small kirana stores, tiffin centres, tailoring shops, and coaching institutes jostle for ground-floor space below apartment blocks that have been here for decades. The neighbourhood does not advertise itself; it simply works. Seventeen verified xerox and print shops operate in this tight geography, which tells you something about how much paper moves through here on a given day.
+A dense, lived-in pocket in the heart of old Hyderabad, Chikkadpally folds into itself neatly between Narayanguda and Himayathnagar, spreading across pin codes 500020 and 500044. The lanes are narrow, the buildings mostly mid-rise, and the character is unmistakably residential with a stubborn commercial streak running through the main road. Small kirana stores, tiffin centres, tailoring shops, and coaching institutes jostle for ground-floor space below apartment blocks that have been here for decades. The neighbourhood does not advertise itself; it simply works. Seventeen listed xerox and print shops operate in this tight geography, which tells you something about how much paper moves through here on a given day.
 
 ## Getting here and around
 

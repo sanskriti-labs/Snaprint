@@ -9,7 +9,7 @@ wordCount: 478
 ---
 ## About this place
 
-Nagavara sits on the northern fringe of Bengaluru, tucked between the bustling Outer Ring Road and the quieter lanes that lead toward Hennur and Thanisandra. Once a sleepy village absorbed by the city's eastwards sprawl, it has grown into a densely built residential pocket threaded with small commercial strips. The neighbourhood feeds two pin codes — 560045 and 560077 — and supports a working population that mixes long-time Kannada-speaking families with newer apartment complexes housing tech professionals. With nine verified xerox and print shops on the Snaprint network alone, Nagavara punches well above its weight for a locality of its size, suggesting steady footfall rather than just residential quiet.
+Nagavara sits on the northern fringe of Bengaluru, tucked between the bustling Outer Ring Road and the quieter lanes that lead toward Hennur and Thanisandra. Once a sleepy village absorbed by the city's eastwards sprawl, it has grown into a densely built residential pocket threaded with small commercial strips. The neighbourhood feeds two pin codes — 560045 and 560077 — and supports a working population that mixes long-time Kannada-speaking families with newer apartment complexes housing tech professionals. With nine listed xerox and print shops on the Snaprint network alone, Nagavara punches well above its weight for a locality of its size, suggesting steady footfall rather than just residential quiet.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ B&W A4 prints dominate weekday mornings — mostly government forms, ID photocop
 
 ## How Snaprint fits in
 
-Snaprint lists every verified shop in the 560077 belt on a single map, so a resident can pick the closest counter without calling around. Shop owners can claim their listing at /book to handle orders through the platform, while students looking for a quick binding job can head straight to /print-near/nagavara and place the file before leaving home.
+Snaprint lists every listed shop in the 560077 belt on a single map, so a resident can pick the closest counter without calling around. Shop owners can claim their listing at /book to handle orders through the platform, while students looking for a quick binding job can head straight to /print-near/nagavara and place the file before leaving home.

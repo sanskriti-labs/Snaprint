@@ -9,7 +9,7 @@ wordCount: 459
 ---
 ## About this place
 
-Himayatnagar sits just north of the Musi river, squeezed between the older piazza of Abids and the rapidly expanding tech corridors around Banjara Hills. Historically a residential pocket catering to government employees posted in Secretariat-adjacent offices, it has thickened over the decades into a dense, walkable neighborhood of coaching institutes, mid-range restaurants, and small commercial complexes. The lane behind Himayatnagar Circle is still a cluster of kirana stores and tiffin centres, while the main roads are lined with mobile repair shops and stationery outlets. Postal coverage falls under 500029 and 500020, and the area currently has 20 verified xerox and print shops serving these codes — the highest concentration you'll find in any central Hyderabad locality of this size.
+Himayatnagar sits just north of the Musi river, squeezed between the older piazza of Abids and the rapidly expanding tech corridors around Banjara Hills. Historically a residential pocket catering to government employees posted in Secretariat-adjacent offices, it has thickened over the decades into a dense, walkable neighborhood of coaching institutes, mid-range restaurants, and small commercial complexes. The lane behind Himayatnagar Circle is still a cluster of kirana stores and tiffin centres, while the main roads are lined with mobile repair shops and stationery outlets. Postal coverage falls under 500029 and 500020, and the area currently has 20 listed xerox and print shops serving these codes — the highest concentration you'll find in any central Hyderabad locality of this size.
 
 ## Getting here and around
 

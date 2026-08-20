@@ -5,6 +5,7 @@
     "description": "Snaprint turns xerox/photocopy shops into 24/7 self-service print kiosks. Customers scan a QR code, upload a document, pay, and collect the print — no queue, no shop owner needed to operate it.",
     "provider": "Sanskriti Labs",
     "areaServed": "Bengaluru, India",
+    "areaServedNote": "This is the kiosk hardware's current deployment area, not the Snaprint shop directory's coverage — the directory separately lists third-party print shops across six Indian cities (see /ai/locations.json).",
     "capabilities": [
       "Accepts document uploads via QR code scan",
       "Processes payment before printing (UPI, card)",

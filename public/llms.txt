@@ -11,13 +11,12 @@ Full description, FAQ, and structured data: https://snaprints.com/llms-full.txt
 - [Home](https://snaprints.com/): Product overview, how it works, the S1 machine, pricing/demo contact.
 - [Self-Service Printing Kiosk](https://snaprints.com/kiosk): Self-service printing kiosk / automated print station overview — deployment for colleges, universities, offices, hospitals, libraries, railway stations, and retail across India.
 - [Book a Demo](https://snaprints.com/book): Schedule a live walkthrough of the S1 kiosk with the founding team.
-- [Instant Print — all cities](https://snaprints.com/instant-print): Hub listing every city with verified xerox and print shops.
-- [Print Near You — colleges and neighbourhoods](https://snaprints.com/print-near): Hub listing every college and neighbourhood with verified xerox and print shops.
+- [Instant Print — all cities](https://snaprints.com/instant-print): Hub listing every city with listed xerox and print shops.
+- [Print Near You — colleges and neighbourhoods](https://snaprints.com/print-near): Hub listing every college and neighbourhood with listed xerox and print shops.
 - [Blog](https://snaprints.com/blog): Operator guides, comparison pieces, and student use-case explainers.
 
 ## Blog posts
 
-- [Snaprint vs Atomte vs QwikPrint — kiosk model comparison](https://snaprints.com/blog/snaprint-vs-atomte-vs-qwikprint-comparison)
 - [Print shops near Bengaluru colleges during exam season](https://snaprints.com/blog/print-shops-near-bengaluru-colleges-exam-season)
 - [Print from your phone instantly — no app, no shop](https://snaprints.com/blog/print-from-your-phone-instantly)
 - [How to start a xerox shop in India — business plan & costs](https://snaprints.com/blog/how-to-start-a-xerox-shop-in-india)
@@ -32,7 +31,7 @@ Full description, FAQ, and structured data: https://snaprints.com/llms-full.txt
 
 ## Local pages
 
-Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas listed below are live (as of 2026-08-07). Full structured data: https://snaprints.com/ai/locations.json
+Listed xerox and print shops in Bengaluru neighbourhoods, discovered and curated from public listings — not Snaprint partners or customers. All areas listed below were last updated 2026-08-07. Full structured data: https://snaprints.com/ai/locations.json
 
 ### Bengaluru neighbourhoods
 
@@ -134,7 +133,6 @@ Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas
 
 ### Hyderabad neighbourhoods
 
-<<<<<<< Updated upstream
 - [Print near Ameerpet, Hyderabad](https://snaprints.com/print-near/ameerpet) — 73 shops
 - [Print near Kukatpally, Hyderabad](https://snaprints.com/print-near/kukatpally) — 72 shops
 - [Print near Dilsukhnagar, Hyderabad](https://snaprints.com/print-near/dilsukhnagar) — 41 shops

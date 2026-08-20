@@ -9,7 +9,7 @@ wordCount: 515
 ---
 ## About this place
 
-Connaught Place sits at the geographic heart of Delhi, the colonial-era business district that Lutyens designed as a series of concentric white colonnades radiating outward from a central circle. Half a century after the British left, the neighbourhood still pulls in crowds for shopping, banking, government liaison work, and old-school restaurants like Wenger's and Keventers. Walk through the inner circle on any weekday and you'll see lawyers carrying bundles to district courts, tourists queuing outside the Statesman, and College Street–bound students cutting through on their way to DU's north campus. The postal designation is 110001, one of the oldest pin codes in the city, and Snaprint has mapped 20 verified xerox and print shops scattered through Block A through Block N.
+Connaught Place sits at the geographic heart of Delhi, the colonial-era business district that Lutyens designed as a series of concentric white colonnades radiating outward from a central circle. Half a century after the British left, the neighbourhood still pulls in crowds for shopping, banking, government liaison work, and old-school restaurants like Wenger's and Keventers. Walk through the inner circle on any weekday and you'll see lawyers carrying bundles to district courts, tourists queuing outside the Statesman, and College Street–bound students cutting through on their way to DU's north campus. The postal designation is 110001, one of the oldest pin codes in the city, and Snaprint has mapped 20 listed xerox and print shops scattered through Block A through Block N.
 
 ## Getting here and around
 

@@ -9,7 +9,7 @@ wordCount: 473
 ---
 ## About this place
 
-Ramamurthy Nagar sits in the northeastern belt of Bengaluru, bridging the older residential pockets of Banaswadi and the busier commercial stretches toward Kammanahalli. The neighbourhood grew in the 1980s and 90s as a middle-class residential colony and has held onto that character, even as apartment towers and tech-worker housing have crept in. Wide internal roads lined with neem and rain trees, granite temples, small parks, and a steady stream of kirana stores give it a distinctly old-Bengaluru feel. Pin codes 560016 and 560043 cover overlapping portions of the area, including the Main Road axis and the interior layouts east of it. Eight verified xerox and print shops operate here, an unusually high count for a neighbourhood of this size, reflecting the daily paperwork churn from households and small businesses.
+Ramamurthy Nagar sits in the northeastern belt of Bengaluru, bridging the older residential pockets of Banaswadi and the busier commercial stretches toward Kammanahalli. The neighbourhood grew in the 1980s and 90s as a middle-class residential colony and has held onto that character, even as apartment towers and tech-worker housing have crept in. Wide internal roads lined with neem and rain trees, granite temples, small parks, and a steady stream of kirana stores give it a distinctly old-Bengaluru feel. Pin codes 560016 and 560043 cover overlapping portions of the area, including the Main Road axis and the interior layouts east of it. Eight listed xerox and print shops operate here, an unusually high count for a neighbourhood of this size, reflecting the daily paperwork churn from households and small businesses.
 
 ## Getting here and around
 

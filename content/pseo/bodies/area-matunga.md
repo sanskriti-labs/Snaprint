@@ -9,7 +9,7 @@ wordCount: 442
 ---
 ## About this place
 
-Matunga carries an old South Mumbai identity while remaining closely connected to everyday city life. Best known as a stronghold of Maharashtrian culture, the neighbourhood is also associated with temples, traditional eateries, educational institutions, and a strong student presence. Low- and mid-rise homes share space with shops, restaurants, offices, and professional establishments. Matunga East falls mainly under 400019, while parts of Matunga and nearby Wadala come under 400016. Snaprint’s network includes 10 verified xerox and print shops in Matunga, giving residents and visitors several dependable options within this well-established neighbourhood.
+Matunga carries an old South Mumbai identity while remaining closely connected to everyday city life. Best known as a stronghold of Maharashtrian culture, the neighbourhood is also associated with temples, traditional eateries, educational institutions, and a strong student presence. Low- and mid-rise homes share space with shops, restaurants, offices, and professional establishments. Matunga East falls mainly under 400019, while parts of Matunga and nearby Wadala come under 400016. Snaprint’s network includes 10 listed xerox and print shops in Matunga, giving residents and visitors several dependable options within this well-established neighbourhood.
 
 ## Getting here and around
 

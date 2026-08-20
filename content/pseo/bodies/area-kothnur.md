@@ -10,7 +10,7 @@ wordCount: 443
 
 ## About this place
 
-Kothnur is the quiet residential layout that sits south of the Outer Ring Road, between JP Nagar 7th Phase and the Konanakunte crossroads. The 560078 pin code covers the older layout that grew up around the lake; the 560076 pin code covers the newer apartment blocks that have come up along the link road to Bannerghatta Road. The locality is best understood as a residential pocket — there are no major commercial anchors, but the lakeside park and the school on the inner ring are the daily points of congregation. The 1 verified xerox and print shop in Kothnur, Bangalore (560078, 560076) is the single operator currently meeting the verification bar, and the demand it sees is a mix of school, residential, and small-business traffic. Top-rated is SRI BALAJI XEROX CENTRE at 5 stars.
+Kothnur is the quiet residential layout that sits south of the Outer Ring Road, between JP Nagar 7th Phase and the Konanakunte crossroads. The 560078 pin code covers the older layout that grew up around the lake; the 560076 pin code covers the newer apartment blocks that have come up along the link road to Bannerghatta Road. The locality is best understood as a residential pocket — there are no major commercial anchors, but the lakeside park and the school on the inner ring are the daily points of congregation. The 1 listed xerox and print shop in Kothnur, Bangalore (560078, 560076) is the single operator currently meeting the verification bar, and the demand it sees is a mix of school, residential, and small-business traffic. Top-rated is SRI BALAJI XEROX CENTRE at 5 stars.
 
 ## Getting here and around
 
@@ -26,4 +26,4 @@ A residential B&W heavy mix: school project printouts, Aadhaar and PAN copies, r
 
 ## How Snaprint fits in
 
-Snaprint's rollout in Kothnur still has room to grow — the verified shop count is currently thin relative to the residential density. If you run a xerox shop here and want to host an S1 kiosk, the [setup page](/book) covers cost, expected footfall, and revenue share. For residents, the nearest kiosk is one tap away — visit [print-near kothnur](/print-near/kothnur) for directions and the partner shop list.
+Snaprint's rollout in Kothnur still has room to grow — the listed shop count is currently thin relative to the residential density. If you run a xerox shop here and want to host an S1 kiosk, the [setup page](/book) covers cost, expected footfall, and revenue share. For residents, the nearest kiosk is one tap away — visit [print-near kothnur](/print-near/kothnur) for directions and the shop list.

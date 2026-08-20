@@ -9,7 +9,7 @@ wordCount: 497
 ---
 ## About this place
 
-Anna Nagar sits on the western flank of central Chennai, planned in the 1970s as one of the city's first grid-layout neighbourhoods and now one of its most densely populated residential blocks. Wide avenues cut between sectors named A through V, lined with a mix of independent houses, high-rise apartments, schools, temples, and the famous Anna Nagar Tower Park that anchors the locality's identity. The 600040 and 600101 pin codes cover almost the entire layout, and 18 verified xerox and print shops operate across both codes, serving a population that blends long-time Tamil residents with working professionals commuting toward the IT corridors along the Arcot Road stretch. Locally, the area reads as a self-contained township, with almost every daily errand walkable from the nearest main road.
+Anna Nagar sits on the western flank of central Chennai, planned in the 1970s as one of the city's first grid-layout neighbourhoods and now one of its most densely populated residential blocks. Wide avenues cut between sectors named A through V, lined with a mix of independent houses, high-rise apartments, schools, temples, and the famous Anna Nagar Tower Park that anchors the locality's identity. The 600040 and 600101 pin codes cover almost the entire layout, and 18 listed xerox and print shops operate across both codes, serving a population that blends long-time Tamil residents with working professionals commuting toward the IT corridors along the Arcot Road stretch. Locally, the area reads as a self-contained township, with almost every daily errand walkable from the nearest main road.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The Chennai Metro's Green Line stops at Anna Nagar Tower and Shenoy Nagar within
 
 ## Why printing demand is high here
 
-Exam season is the loudest driver — Anna Nagar alone hosts over a dozen schools and several reputed coaching centres for NEET, JEE, and board exams, flooding neighbourhood print shops with question-paper reprints, project files, and bound assignments from June through March. Beyond students, the area borders commercial stretches like Mogappair and Aminjikarai, where small businesses and courier offices like Shreenika digital colour xerox and courier booking handle bulk B&W and colour work for clients. With 18 verified shops and an average rating of 4.3 stars, the network absorbs everything from a single Aadhaar photocopy to fifty-bound MBA reports without long waits.
+Exam season is the loudest driver — Anna Nagar alone hosts over a dozen schools and several reputed coaching centres for NEET, JEE, and board exams, flooding neighbourhood print shops with question-paper reprints, project files, and bound assignments from June through March. Beyond students, the area borders commercial stretches like Mogappair and Aminjikarai, where small businesses and courier offices like Shreenika digital colour xerox and courier booking handle bulk B&W and colour work for clients. With 18 listed shops and an average rating of 4.3 stars, the network absorbs everything from a single Aadhaar photocopy to fifty-bound MBA reports without long waits.
 
 ## What people typically print here
 

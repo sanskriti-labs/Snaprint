@@ -9,7 +9,7 @@ wordCount: 486
 ---
 ## About this place
 
-Sapthagiri College of Engineering sits on the western edge of Bengaluru, tucked into the Chikkasandra belt along the Hesaraghatta Road corridor. Run under the Sapthagiri Group of Institutions, the college draws roughly 2,500 students into undergraduate and postgraduate streams — Mechanical, Civil, ECE, CSE, EEE, ISE, and the newer AIML tracks that have been filling up since 2022. The campus itself is a wide, low-rise affair: academic blocks, a central lawn, hostels, and a workshop yard that hums during lab hours. Surrounding streets mix small kirana stores, tiffin joints, and a few coaching classes. The campus postal address falls under the 560057 pin code, and the college sits close to the 560090 boundary as well. With 6 xerox and print shops verified in the immediate radius, students don't have to walk far for last-minute hardcopies.
+Sapthagiri College of Engineering sits on the western edge of Bengaluru, tucked into the Chikkasandra belt along the Hesaraghatta Road corridor. Run under the Sapthagiri Group of Institutions, the college draws roughly 2,500 students into undergraduate and postgraduate streams — Mechanical, Civil, ECE, CSE, EEE, ISE, and the newer AIML tracks that have been filling up since 2022. The campus itself is a wide, low-rise affair: academic blocks, a central lawn, hostels, and a workshop yard that hums during lab hours. Surrounding streets mix small kirana stores, tiffin joints, and a few coaching classes. The campus postal address falls under the 560057 pin code, and the college sits close to the 560090 boundary as well. With 6 xerox and print shops listed in the immediate radius, students don't have to walk far for last-minute hardcopies.
 
 ## Getting here and around
 

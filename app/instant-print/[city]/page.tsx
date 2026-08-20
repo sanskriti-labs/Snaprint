@@ -33,12 +33,12 @@ export function generateMetadata({
   // root layout's title template already appends it.
   const title =
     areaCount > 0
-      ? `${areaCount} Areas with Print & Xerox Shops in ${city.name} — Verified`
-      : `Print and xerox shops in ${city.name} — Verified`;
+      ? `${areaCount} Areas with Print & Xerox Shops in ${city.name}`
+      : `Print and xerox shops in ${city.name}`;
   const description =
     areaCount > 0
-      ? `${areaCount} neighbourhoods across ${city.name} with verified xerox and print shops. B&W and colour prints, binding, scanning. Browse areas near you.`
-      : `Verified print and xerox shops in ${city.name}. B&W and colour prints, binding, lamination, scanning. Open hours vary — call ahead.`;
+      ? `${areaCount} neighbourhoods across ${city.name} with listed xerox and print shops. B&W and colour prints, binding, scanning. Browse areas near you.`
+      : `Listed print and xerox shops in ${city.name}. B&W and colour prints, binding, lamination, scanning. Open hours vary — call ahead.`;
   return {
     // Layout template appends "· Snaprint" — no explicit suffix here.
     title,
@@ -77,42 +77,56 @@ export default async function CityPage({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        // A directory of listed shops is a collection, not itself a
+        // business — CollectionPage, not LocalBusiness. Mirrors the fix in
+        // print-near/[entity]/page.tsx's area case. Real shops on this page
+        // get their own LocalBusiness nodes on their /print-near/[area]
+        // pages; this node only describes the city rollup page itself.
+        "@type": "CollectionPage",
         "@id": `${SITE_URL}/#location-${city.slug}`,
         name: `Print and xerox shops in ${city.name}`,
         description: city.intro,
         url: `${SITE_URL}/instant-print/${city.slug}`,
         image: `${SITE_URL}/og.png`,
-        ...(city.lat && city.lng
-          ? {
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: city.lat,
-                longitude: city.lng,
-              },
-            }
-          : {}),
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: city.name,
-          addressRegion: city.state,
-          addressCountry: "IN",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: {
+          "@type": "City",
+          name: city.name,
+          ...(city.lat && city.lng
+            ? {
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: city.lat,
+                  longitude: city.lng,
+                },
+              }
+            : {}),
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: city.name,
+            addressRegion: city.state,
+            addressCountry: "IN",
+          },
         },
-        areaServed: { "@id": `${SITE_URL}/#organization` },
-        parentOrganization: { "@id": `${SITE_URL}/#organization` },
         ...(city.liveLocations && city.liveLocations.length > 0
           ? {
-              hasOfferCatalog: {
-                "@type": "OfferCatalog",
-                name: "Print & scan services",
-                itemListElement: [
-                  "Black & white A4 print",
-                  "Colour A4 print",
-                  "A3 print",
-                  "Photocopy / reduce-enlarge",
-                  "Scan to email",
-                  "ID & passport photos",
-                ].map((name, i) => ({ "@type": "Offer", position: i, name })),
+              // Snaprint's own kiosk service catalog for this city — an
+              // offering made BY Snaprint, so it belongs on the Organization
+              // node, not on this page-collection node.
+              mainEntity: {
+                "@id": `${SITE_URL}/#organization`,
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "Print & scan services",
+                  itemListElement: [
+                    "Black & white A4 print",
+                    "Colour A4 print",
+                    "A3 print",
+                    "Photocopy / reduce-enlarge",
+                    "Scan to email",
+                    "ID & passport photos",
+                  ].map((name, i) => ({ "@type": "Offer", position: i, name })),
+                },
               },
             }
           : {}),

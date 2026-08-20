@@ -9,7 +9,7 @@ wordCount: 484
 ---
 ## About this place
 
-Jubilee Hills sits on the western edge of Hyderabad, carved out of the old Film Nagar and given its name after the silver jubilee celebrations of Andhra Pradesh in 1983. What was once a scrubby hillock has become one of the city's most identifiable addresses, with leafy lanes threading between gated villas, foreign consulates, and the studios that gave Jubilee Hills its showbiz roots. The 500033 and 500096 pin codes cover overlapping chunks of this stretch, and the verified density of 16 xerox and print shops spread across both reflects just how much paperwork, documentation, and ad-hoc copying happens here.
+Jubilee Hills sits on the western edge of Hyderabad, carved out of the old Film Nagar and given its name after the silver jubilee celebrations of Andhra Pradesh in 1983. What was once a scrubby hillock has become one of the city's most identifiable addresses, with leafy lanes threading between gated villas, foreign consulates, and the studios that gave Jubilee Hills its showbiz roots. The 500033 and 500096 pin codes cover overlapping chunks of this stretch, and the listed density of 16 xerox and print shops spread across both reflects just how much paperwork, documentation, and ad-hoc copying happens here.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ B&W xeroxing of ID proofs and Aadhaar paperwork is the everyday staple, followed
 
 ## How Snaprint fits in
 
-Snaprint slots into this rhythm as a discovery layer rather than another counter. Residents looking for the nearest open kiosk can check live availability on the /print-near/jubilee-hills page and walk in to the shop that suits them. Shop owners in the area who want to be listed or update their timings can get started through /book once, joining the network that already counts Hameed Khan Xerox and the 15 other verified shops in the 500033 and 500096 belts.
+Snaprint slots into this rhythm as a discovery layer rather than another counter. Residents looking for the nearest open kiosk can check live availability on the /print-near/jubilee-hills page and walk in to the shop that suits them. Shop owners in the area who want to be listed or update their timings can get started through /book once, joining the network that already counts Hameed Khan Xerox and the 15 other listed shops in the 500033 and 500096 belts.

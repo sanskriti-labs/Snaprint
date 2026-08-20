@@ -9,7 +9,7 @@ wordCount: 536
 ---
 ## About this place
 
-Richmond Town is one of Bengaluru's oldest Anglo-Indian quarters, laid out in the 1830s and named after the Duke of Richmond. The streets around the Holy Trinity Church and the old CSD canteen still carry that colonial-era geometry — broad roads meeting at leafy junctions, lined with a mix of heritage bungalows, mid-rise apartments, and a steady commercial strip along Richmond Road and Residency Road. Walk a hundred metres and you cross from a quiet residential pocket into a clutch of boutiques, cafes, and small offices. The neighbourhood is administratively split between the 560025 and 560001 pin codes, and the area is dense enough that 6 verified xerox and print shops serve its day-to-day needs — a snapshot of how much paperwork and printing volume passes through these blocks.
+Richmond Town is one of Bengaluru's oldest Anglo-Indian quarters, laid out in the 1830s and named after the Duke of Richmond. The streets around the Holy Trinity Church and the old CSD canteen still carry that colonial-era geometry — broad roads meeting at leafy junctions, lined with a mix of heritage bungalows, mid-rise apartments, and a steady commercial strip along Richmond Road and Residency Road. Walk a hundred metres and you cross from a quiet residential pocket into a clutch of boutiques, cafes, and small offices. The neighbourhood is administratively split between the 560025 and 560001 pin codes, and the area is dense enough that 6 listed xerox and print shops serve its day-to-day needs — a snapshot of how much paperwork and printing volume passes through these blocks.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ M.G. Road metro station on the Purple Line sits at the western edge of the neigh
 
 ## Why printing demand is high here
 
-The demand is structural, not seasonal. Residency Road and the lanes off it house several law firms, chartered accountants, and small corporate offices that churn out courier documents, compliance filings, and client proposals every week. A bit further in, the residential clusters around Richmond Circle feed a steady trickle of school admissions, ID-card applications, Aadhaar updates, and visa paperwork. Throw in the old coaching centres and tutorial hubs tucked into converted houses, and a single Saturday morning can pull hundreds of students and parents into the nearest print shop. With 6 verified xerox and print shops operating in the area, including the well-reviewed S V ENTERPRISES Xerox shop at 4.5 stars, the neighbourhood has built up a reliable printing backbone over the years.
+The demand is structural, not seasonal. Residency Road and the lanes off it house several law firms, chartered accountants, and small corporate offices that churn out courier documents, compliance filings, and client proposals every week. A bit further in, the residential clusters around Richmond Circle feed a steady trickle of school admissions, ID-card applications, Aadhaar updates, and visa paperwork. Throw in the old coaching centres and tutorial hubs tucked into converted houses, and a single Saturday morning can pull hundreds of students and parents into the nearest print shop. With 6 listed xerox and print shops operating in the area, including the well-reviewed S V ENTERPRISES Xerox shop at 4.5 stars, the neighbourhood has built up a reliable printing backbone over the years.
 
 ## What people typically print here
 

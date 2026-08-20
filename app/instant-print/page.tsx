@@ -82,7 +82,7 @@ export default function InstantPrintIndex() {
             name: "How many cities does Snaprint cover?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: `Snaprint currently lists ${cities.length || 1} live ${cities.length === 1 ? "city" : "cities"} with ${areas.length} neighbourhoods and ${colleges.length} colleges, covering ${totalShops}+ partner xerox shops. New areas are added every week.`,
+              text: `Snaprint currently lists ${cities.length || 1} live ${cities.length === 1 ? "city" : "cities"} with ${areas.length} neighbourhoods and ${colleges.length} colleges, covering ${totalShops}+ listed xerox shops. New areas are added every week.`,
             },
           },
           {
@@ -90,7 +90,7 @@ export default function InstantPrintIndex() {
             name: "How do I find a print shop near me?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Pick your city, then browse by neighbourhood or college. Each listing shows the partner xerox shop's exact location, hours, and the documents customers most often print there.",
+              text: "Pick your city, then browse by neighbourhood or college. Each listing shows the xerox shop's exact location, hours, and the documents customers most often print there.",
             },
           },
           {
@@ -98,7 +98,7 @@ export default function InstantPrintIndex() {
             name: "Is this list of shops updated regularly?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes. Listings are updated as Snaprint kiosks go live in new shops, so the counts on this page reflect the current live network, not a static directory.",
+              text: "Yes. Listings are refreshed as new shops are discovered and added, so the counts on this page reflect the current directory, not a static one-time snapshot.",
             },
           },
         ],
@@ -125,9 +125,9 @@ export default function InstantPrintIndex() {
           Print and xerox shops, city by city.
         </h1>
         <p className="mb-6 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-          Pick a city to find the nearest Snaprint-enabled scan and print kiosk
-          or self-service photocopy machine — print, copy, and scan from your
-          phone in under 60 seconds, many open 24/7 for document printing.
+          Pick a city to find the nearest listed xerox and print shop —
+          B&amp;W and colour prints, binding, and scanning, many open 24/7
+          for document printing.
         </p>
 
         {/* Quick stats — concrete numbers help AI citability + skimming */}
@@ -150,7 +150,7 @@ export default function InstantPrintIndex() {
           </div>
           <div>
             <dt className="font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-[#888780]">
-              Partner xerox shops
+              Listed xerox shops
             </dt>
             <dd className="mt-1 font-display text-[28px] font-extrabold tracking-tight text-[#111110]">
               {totalShops}+
@@ -171,9 +171,9 @@ export default function InstantPrintIndex() {
             Bengaluru neighbourhoods with live print and xerox shop listings
           </h2>
           <p className="mb-6 max-w-[640px] font-body text-[15px] font-light leading-[1.78] text-[#6B6B66]">
-            Each neighbourhood below is a live Snaprint service area. Click
-            through to see the full list of partner xerox shops, their hours,
-            and the documents customers most often print there.
+            Each neighbourhood below has a listed directory of xerox shops.
+            Click through to see the full shop list, their hours, and the
+            documents customers most often print there.
           </p>
           {areas.length > 0 ? (
             <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -188,7 +188,7 @@ export default function InstantPrintIndex() {
                         {a.name}
                       </div>
                       <div className="mt-0.5 font-body text-[12.5px] text-[#888780]">
-                        {a.liveLocations?.length ?? 0} partner shop
+                        {a.liveLocations?.length ?? 0} listed shop
                         {(a.liveLocations?.length ?? 0) === 1 ? "" : "s"}
                       </div>
                     </div>

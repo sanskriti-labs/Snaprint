@@ -9,7 +9,7 @@ wordCount: 450
 ---
 ## About this place
 
-Mehdipatnam is one of Hyderabad's older western crossroads — a place where old-city gravitas meets the newer sprawl heading up the hill towards Tolichowki. Tucked into the 500028 postal pocket, the area mixes dense residential colonies with busy commercial stretches, anchored by the famous Mehdipatnam 'Y' junction where half of West Hyderabad seems to change buses at peak hour. Locally, you'll hear residents talk in terms of Humayun Nagar, Gudi Malkapur, and Tolichowki lanes, all feeding into this one roundabout. Across these neighbourhoods, 20 verified xerox and print shops keep daily paperwork, school assignments, and last-minute ID photocopies moving. TS XEROX, the top-rated shop in the cluster at five stars, sits among them.
+Mehdipatnam is one of Hyderabad's older western crossroads — a place where old-city gravitas meets the newer sprawl heading up the hill towards Tolichowki. Tucked into the 500028 postal pocket, the area mixes dense residential colonies with busy commercial stretches, anchored by the famous Mehdipatnam 'Y' junction where half of West Hyderabad seems to change buses at peak hour. Locally, you'll hear residents talk in terms of Humayun Nagar, Gudi Malkapur, and Tolichowki lanes, all feeding into this one roundabout. Across these neighbourhoods, 20 listed xerox and print shops keep daily paperwork, school assignments, and last-minute ID photocopies moving. TS XEROX, the top-rated shop in the cluster at five stars, sits among them.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The Taranagar and Mehdipatnam bus stops run the city's red-and-yellow service in
 
 ## Why printing demand is high here
 
-Mehdipatnam is wedged between three major student populations — Loyola Academy, a clutch of coaching centres, and the Urdu-medium schools that draw from across the old city. Add the commercial offices around the Y junction, several legal and notary practices, and the constant flow of passport and Aadhaar applications, and you have a printing economy that doesn't sleep. The 20 verified shops in 500028 don't just survive on weekday footfall; Saturday mornings are a known rush window for school project work and Sunday afternoons see parents queuing for admissions documentation.
+Mehdipatnam is wedged between three major student populations — Loyola Academy, a clutch of coaching centres, and the Urdu-medium schools that draw from across the old city. Add the commercial offices around the Y junction, several legal and notary practices, and the constant flow of passport and Aadhaar applications, and you have a printing economy that doesn't sleep. The 20 listed shops in 500028 don't just survive on weekday footfall; Saturday mornings are a known rush window for school project work and Sunday afternoons see parents queuing for admissions documentation.
 
 ## What people typically print here
 

@@ -9,7 +9,7 @@ wordCount: 467
 ---
 ## About this place
 
-Mallathahalli sits on the western flank of Bengaluru, tucked between the older residential pockets of Vijayanagar and the fast-developing outer zones that edge toward Mysuru Road. The neighbourhood reads as a quiet, working-class suburb — low-rise apartment blocks, independent houses shaded by rain trees, and a long ribbon of small commercial shops running along the main road that cuts through it. The pin codes 560056 and 560072 cover a compact area where families have lived for generations alongside newer migrants working in nearby tech corridors. What sets Mallathahalli apart from neighbouring layouts is its unhurried pace: no big malls, no major corporate parks, just dependable neighbourhood commerce. Seven verified xerox and print shops serve this community, which is a healthy ratio for a residential pocket of this size.
+Mallathahalli sits on the western flank of Bengaluru, tucked between the older residential pockets of Vijayanagar and the fast-developing outer zones that edge toward Mysuru Road. The neighbourhood reads as a quiet, working-class suburb — low-rise apartment blocks, independent houses shaded by rain trees, and a long ribbon of small commercial shops running along the main road that cuts through it. The pin codes 560056 and 560072 cover a compact area where families have lived for generations alongside newer migrants working in nearby tech corridors. What sets Mallathahalli apart from neighbouring layouts is its unhurried pace: no big malls, no major corporate parks, just dependable neighbourhood commerce. Seven listed xerox and print shops serve this community, which is a healthy ratio for a residential pocket of this size.
 
 ## Getting here and around
 

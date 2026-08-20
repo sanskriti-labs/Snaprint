@@ -9,7 +9,7 @@ wordCount: 492
 ---
 ## About this place
 
-Mathikere sits tucked between Yeshwantpur and Sanjaynagar in northwestern Bengaluru, a low-rise locality that grew in the 1970s when land along the old Tumkur Road was carved into residential layouts. Today it is a textbook example of a mixed-use Bengaluru pocket: independent houses with grocery stores on the ground floor, coaching institutes above bakeries, and a steady hum of engineering students drifting between hostels and ATM kiosks. The locality falls under pin codes 560054 and 560009, both of which feed into the 17 verified xerox and print shops currently listed on the network. It is the kind of neighbourhood where shopkeepers know regulars by name and queues form ten minutes before any institute opens.
+Mathikere sits tucked between Yeshwantpur and Sanjaynagar in northwestern Bengaluru, a low-rise locality that grew in the 1970s when land along the old Tumkur Road was carved into residential layouts. Today it is a textbook example of a mixed-use Bengaluru pocket: independent houses with grocery stores on the ground floor, coaching institutes above bakeries, and a steady hum of engineering students drifting between hostels and ATM kiosks. The locality falls under pin codes 560054 and 560009, both of which feed into the 17 listed xerox and print shops currently listed on the network. It is the kind of neighbourhood where shopkeepers know regulars by name and queues form ten minutes before any institute opens.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The Yeshwantpur metro station on the Green Line is the closest rapid-transit anc
 
 ## Why printing demand is high here
 
-Three factors keep the printers busy. First, the engineering and degree colleges clustered around MS Ramaiah and the Sanjaynagar belt drive seasonal spikes in November and April when project reports and exam booklets pile up. Second, Mathikere's residential density means a steady drip of Aadhaar, PAN, and rental-agreement copies from families who prefer not to travel into the city. Third, small businesses and coaching centres nearby order bulk B&W reams almost weekly. With 17 verified shops absorbing this load — and the area averaging 4.5 stars across 15 rated outlets — the supply has clearly kept pace. Rashmi Xerox MRSREEPRASAD A, the top-rated shop at a perfect 5 stars, is one of the names that locals mention first when asked where to get a clean colour print on short notice.
+Three factors keep the printers busy. First, the engineering and degree colleges clustered around MS Ramaiah and the Sanjaynagar belt drive seasonal spikes in November and April when project reports and exam booklets pile up. Second, Mathikere's residential density means a steady drip of Aadhaar, PAN, and rental-agreement copies from families who prefer not to travel into the city. Third, small businesses and coaching centres nearby order bulk B&W reams almost weekly. With 17 listed shops absorbing this load — and the area averaging 4.5 stars across 15 rated outlets — the supply has clearly kept pace. Rashmi Xerox MRSREEPRASAD A, the top-rated shop at a perfect 5 stars, is one of the names that locals mention first when asked where to get a clean colour print on short notice.
 
 ## What people typically print here
 

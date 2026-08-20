@@ -9,7 +9,7 @@ wordCount: 480
 ---
 ## About this place
 
-Arekere sits along the Bannerghatta Road corridor in southern Bengaluru, a neighbourhood that has shifted decisively from open land and farm plots into a dense residential-commercial strip. Apartments built in the 2000s now sit beside tech parks, hospital wings, and coaching centres. The locality falls under pin codes 560076 and 560083, both of which pull in students from nearby Bilekahalli and BG Road as well as professionals working along the IIM-Bangalore stretch. Local kirana stores, bakeries, and small-format retail share the road with residential towers, giving Arekere a lived-in, mixed feel rather than a planned township vibe. Thirteen verified xerox and print shops serve this catchment, with Diamond Stationers leading the pack at a clean 5-star rating and an overall area average of 4.6 stars across 11 rated shops.
+Arekere sits along the Bannerghatta Road corridor in southern Bengaluru, a neighbourhood that has shifted decisively from open land and farm plots into a dense residential-commercial strip. Apartments built in the 2000s now sit beside tech parks, hospital wings, and coaching centres. The locality falls under pin codes 560076 and 560083, both of which pull in students from nearby Bilekahalli and BG Road as well as professionals working along the IIM-Bangalore stretch. Local kirana stores, bakeries, and small-format retail share the road with residential towers, giving Arekere a lived-in, mixed feel rather than a planned township vibe. Thirteen listed xerox and print shops serve this catchment, with Diamond Stationers leading the pack at a clean 5-star rating and an overall area average of 4.6 stars across 11 rated shops.
 
 ## Getting here and around
 

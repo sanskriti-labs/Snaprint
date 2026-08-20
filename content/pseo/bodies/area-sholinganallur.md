@@ -9,7 +9,7 @@ wordCount: 506
 ---
 ## About this place
 
-Sholinganallur sits along the Old Mahabalipuram Road corridor in southern Chennai, a neighborhood that transitioned from lakeside paddy fields to one of the city's busiest IT and residential hubs in little more than two decades. The locality now blends dense apartment complexes with glass-fronted office campuses, alongside a thick strip of shops, hospitals, and eateries serving the daily crowd. Pin codes 600119 and 600100 cover a fairly wide spread, taking in everything from the Sholinganallur junction itself to the residential pockets behind Karapakkam and the stretches toward Perumbakkam. Across this catchment, 16 verified xerox and print shops hold down the day-to-day paperwork needs of office workers, students, and families. The highest-rated of the lot, SNB XEROX, carries a perfect 5-star score, while the area averages a healthy 4.4 stars across 15 rated outlets.
+Sholinganallur sits along the Old Mahabalipuram Road corridor in southern Chennai, a neighborhood that transitioned from lakeside paddy fields to one of the city's busiest IT and residential hubs in little more than two decades. The locality now blends dense apartment complexes with glass-fronted office campuses, alongside a thick strip of shops, hospitals, and eateries serving the daily crowd. Pin codes 600119 and 600100 cover a fairly wide spread, taking in everything from the Sholinganallur junction itself to the residential pockets behind Karapakkam and the stretches toward Perumbakkam. Across this catchment, 16 listed xerox and print shops hold down the day-to-day paperwork needs of office workers, students, and families. The highest-rated of the lot, SNB XEROX, carries a perfect 5-star score, while the area averages a healthy 4.4 stars across 15 rated outlets.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ Colour printouts of project reports and PPT handouts rank high, especially among
 
 ## How Snaprint fits in
 
-Snaprint plugs into this busy ecosystem by letting users order prints online and pick them up from a nearby partner shop, cutting the queue out of the equation. For shop owners looking to bring more walk-ins through their doors, the onboarding page at /book lays out the process. Students and office workers hunting a specific outlet can head straight to /print-near/sholinganallur to browse the 16 listed options and place an order.
+Snaprint helps this busy ecosystem by letting users browse listed shops nearby and compare options before walking in, cutting the guesswork out of the search. For shop owners looking to bring more walk-ins through their doors, email snaprints@sanskritilabs.in to get listed. Students and office workers hunting a specific outlet can head straight to /print-near/sholinganallur to browse the 16 listed options and place an order.

@@ -9,7 +9,7 @@ wordCount: 505
 ---
 ## About this place
 
-Bangalore Institute of Technology sits on K.R. Road in the heart of Bengaluru, a stone's throw from the Vishveshwaraiah Industrial and Technological Museum and the heavy bustle of the city centre. Founded in 1979, BIT has trained generations of Karnataka's engineers through its undergraduate and postgraduate programmes in computer science, electronics, mechanical, civil and information science streams. The campus packs lecture blocks, labs and a library into a compact urban footprint, which is part of why its students spill onto the surrounding pavements during class hours. The postal belt covering the campus stretches across 560004 and neighbouring pin codes, and Snaprint's network lists 18 verified xerox and print shops within walking distance of the main gate.
+Bangalore Institute of Technology sits on K.R. Road in the heart of Bengaluru, a stone's throw from the Vishveshwaraiah Industrial and Technological Museum and the heavy bustle of the city centre. Founded in 1979, BIT has trained generations of Karnataka's engineers through its undergraduate and postgraduate programmes in computer science, electronics, mechanical, civil and information science streams. The campus packs lecture blocks, labs and a library into a compact urban footprint, which is part of why its students spill onto the surrounding pavements during class hours. The postal belt covering the campus stretches across 560004 and neighbouring pin codes, and Snaprint's network lists 18 listed xerox and print shops within walking distance of the main gate.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ K.R. Road itself is one of Bengaluru's oldest arteries, slicing south from Kempe
 
 ## Why printing demand is high here
 
-Engineering coursework at BIT churns through paper the way labs churn through components. Every semester brings lab manuals, mini-project reports, and the heavyweight final-year dissertation that often runs past eighty pages. Add IEEE-format research papers, conference submissions, and the placement season CV blitz, and the demand curve never really dips. Sri Raghavendra Xerox Center, the top-rated Snaprint partner near the campus, sees a steady stream of students clutching pen drives and spiral-bound drafts. With 18 verified shops in the immediate ring, BIT students have no shortage of options for last-minute print runs the night before a submission deadline.
+Engineering coursework at BIT churns through paper the way labs churn through components. Every semester brings lab manuals, mini-project reports, and the heavyweight final-year dissertation that often runs past eighty pages. Add IEEE-format research papers, conference submissions, and the placement season CV blitz, and the demand curve never really dips. Sri Raghavendra Xerox Center, the top-rated listed shop near the campus, sees a steady stream of students clutching pen drives and spiral-bound drafts. With 18 listed shops in the immediate ring, BIT students have no shortage of options for last-minute print runs the night before a submission deadline.
 
 ## What people typically print here
 

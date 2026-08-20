@@ -9,7 +9,7 @@ wordCount: 491
 ---
 ## About this place
 
-Frazer Town sits on the eastern shoulder of Bengaluru like a slow-burn memory of the city's older cosmopolitan self. Originally developed in the early 1900s and named after the Scottish missionary Gordon Frazer, the neighborhood still carries traces of that layered past — ivy-fenced bungalows next to ayurvedic pharmacies, Catholic chapels a few streets away from Badi Masjid, Irani tea counters beside Tamil chettinad messes. The pin codes 560005 and 560047 cover several of its busiest pockets, including the market stretch along Mosque Road and the residential lanes that fan out toward Cox Town. It's a walkable, mixed-use neighborhood where the same family might run a provision store on the ground floor and have lived upstairs for forty years. With 10 verified xerox and print shops operating within this small footprint, Frazer Town punches well above its weight for everyday document work.
+Frazer Town sits on the eastern shoulder of Bengaluru like a slow-burn memory of the city's older cosmopolitan self. Originally developed in the early 1900s and named after the Scottish missionary Gordon Frazer, the neighborhood still carries traces of that layered past — ivy-fenced bungalows next to ayurvedic pharmacies, Catholic chapels a few streets away from Badi Masjid, Irani tea counters beside Tamil chettinad messes. The pin codes 560005 and 560047 cover several of its busiest pockets, including the market stretch along Mosque Road and the residential lanes that fan out toward Cox Town. It's a walkable, mixed-use neighborhood where the same family might run a provision store on the ground floor and have lived upstairs for forty years. With 10 listed xerox and print shops operating within this small footprint, Frazer Town punches well above its weight for everyday document work.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ Passport photos, Aadhaar and PAN applications, electricity bill copies, and rent
 
 ## How Snaprint fits in
 
-Local shop owners can onboard once at /book and start receiving walk-in print orders routed through the Snaprint platform. Students and residents looking for the nearest verified outlet can browse live options at /print-near/fraser-town.
+Local shop owners can onboard once at /book and start receiving walk-in print orders routed through the Snaprint platform. Students and residents looking for the nearest listed outlet can browse live options at /print-near/fraser-town.

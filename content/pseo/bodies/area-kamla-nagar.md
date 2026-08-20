@@ -9,7 +9,7 @@ wordCount: 481
 ---
 ## About this place
 
-Kamla Nagar is one of North Delhi's most storied commercial arteries, a long ribbon of shops, eateries and coaching institutes draped across Upper Subzi Mandi lands that once fed Mughal-era caravans. Today the neighbourhood runs on a student-and-shopkeeper economy — three big colleges sit within a kilometre of each other, and the side lanes are stacked with stationers, tailors and photocopy machines humming from morning until the last metro pulls out of Vishwavidyalaya. Residential blocks climb up the slope toward Majnu Ka Tila, mixing old Hindu-Sikh joint families with PG tenants from Bihar, UP and Northeast India. The 110007 pin code covers this entire stretch and feeds nine verified print shops into the local grid.
+Kamla Nagar is one of North Delhi's most storied commercial arteries, a long ribbon of shops, eateries and coaching institutes draped across Upper Subzi Mandi lands that once fed Mughal-era caravans. Today the neighbourhood runs on a student-and-shopkeeper economy — three big colleges sit within a kilometre of each other, and the side lanes are stacked with stationers, tailors and photocopy machines humming from morning until the last metro pulls out of Vishwavidyalaya. Residential blocks climb up the slope toward Majnu Ka Tila, mixing old Hindu-Sikh joint families with PG tenants from Bihar, UP and Northeast India. The 110007 pin code covers this entire stretch and feeds nine listed print shops into the local grid.
 
 ## Getting here and around
 

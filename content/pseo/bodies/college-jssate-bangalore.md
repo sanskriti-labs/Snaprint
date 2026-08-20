@@ -9,7 +9,7 @@ wordCount: 463
 ---
 ## About this place
 
-JSS Academy of Technical Education sits on a sprawling campus in the Srinivaspura pocket of Bengaluru, drawing undergraduate and postgraduate cohorts into programmes that span computer science, electronics, mechanical, civil, and information science streams. The institution operates under the JSS Mahavidyapeetha banner and has built a reputation for industry-aligned lab work, with seminar halls and project bays that hum with activity well into the evening. Pin code 560060 covers the surrounding postal zone, and the area around the campus blends educational infrastructure with the residential layouts of Srinivaspura itself. Within a short radius of the gates, eight verified xerox and print shops serve the student community daily.
+JSS Academy of Technical Education sits on a sprawling campus in the Srinivaspura pocket of Bengaluru, drawing undergraduate and postgraduate cohorts into programmes that span computer science, electronics, mechanical, civil, and information science streams. The institution operates under the JSS Mahavidyapeetha banner and has built a reputation for industry-aligned lab work, with seminar halls and project bays that hum with activity well into the evening. Pin code 560060 covers the surrounding postal zone, and the area around the campus blends educational infrastructure with the residential layouts of Srinivaspura itself. Within a short radius of the gates, eight listed xerox and print shops serve the student community daily.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The campus sits off the stretch connecting Kanakapura Road with the Uttarahalli 
 
 ## Why printing demand is high here
 
-Every engineering semester pulls the same squeeze. Assignments stack up on Sundays before Monday submission deadlines, lab manuals need spiral binding every fortnight, and final-year project reports demand colour printouts with hard covers before panel reviews. The eight verified xerox shops around Srinivaspura stay busy because the campus feeds them a constant, predictable load rather than one-off customers. SHIVA XEROX AND STATIONARY, rated 4.7 stars, handles a sizeable share of that volume, particularly the night-before-deadline crowd that arrives after dinner. Add the seminar paper submissions, internship application prints, and competitive coding certificate requirements, and the local print economy never really slows down.
+Every engineering semester pulls the same squeeze. Assignments stack up on Sundays before Monday submission deadlines, lab manuals need spiral binding every fortnight, and final-year project reports demand colour printouts with hard covers before panel reviews. The eight listed xerox shops around Srinivaspura stay busy because the campus feeds them a constant, predictable load rather than one-off customers. SHIVA XEROX AND STATIONARY, rated 4.7 stars, handles a sizeable share of that volume, particularly the night-before-deadline crowd that arrives after dinner. Add the seminar paper submissions, internship application prints, and competitive coding certificate requirements, and the local print economy never really slows down.
 
 ## What people typically print here
 

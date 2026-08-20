@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     template: "%s · Snaprint",
   },
   description:
-    "Find verified xerox and print shops near you across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding, scanning — open now.",
+    "Find listed xerox and print shops near you across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding, scanning — open now.",
   keywords: ["xerox shop near me", "print shop near me", "printout near me", "photocopy near me", "print kiosk", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "self-service printing", "self service printing kiosk", "automated printing kiosk India", "printing kiosk for colleges", "document printing kiosk"],
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Find Xerox & Print Shops Near You — Snaprint",
-    description: "Verified xerox and print shops across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding and scanning near you.",
+    description: "Listed xerox and print shops across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding and scanning near you.",
     url: siteUrl,
     siteName: "Snaprint",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Snaprint — snap. scan. print." }],
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Find Xerox & Print Shops Near You — Snaprint",
-    description: "Verified xerox and print shops across six Indian cities. B&W, colour, binding and scanning near you.",
+    description: "Listed xerox and print shops across six Indian cities. B&W, colour, binding and scanning near you.",
     images: ["/og.png"],
   },
   icons: {

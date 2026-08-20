@@ -114,7 +114,7 @@ export default function PrintNearIndex() {
             name: "How do I find a print shop near my college or neighbourhood?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Scroll to your city, then pick your college or neighbourhood from the list. Each listing links to the partner xerox shop's exact location, hours, and services.",
+              text: "Scroll to your city, then pick your college or neighbourhood from the list. Each listing links to the xerox shop's exact location, hours, and services.",
             },
           },
           {
@@ -122,7 +122,7 @@ export default function PrintNearIndex() {
             name: "How many colleges and neighbourhoods are covered?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: `This page currently lists ${allColleges.length} ${allColleges.length === 1 ? "college" : "colleges"} and ${allAreas.length} ${allAreas.length === 1 ? "neighbourhood" : "neighbourhoods"} with live partner shops. Coverage expands every week.`,
+              text: `This page currently lists ${allColleges.length} ${allColleges.length === 1 ? "college" : "colleges"} and ${allAreas.length} ${allAreas.length === 1 ? "neighbourhood" : "neighbourhoods"} with listed shops. Coverage expands every week.`,
             },
           },
           {
@@ -130,7 +130,7 @@ export default function PrintNearIndex() {
             name: "What if my area isn't listed yet?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Email snaprints@sanskritilabs.in to request coverage in your area — new locations are added as Snaprint kiosks go live nearby.",
+              text: "Email snaprints@sanskritilabs.in to request coverage in your area — new locations are added as the shop directory expands.",
             },
           },
         ],

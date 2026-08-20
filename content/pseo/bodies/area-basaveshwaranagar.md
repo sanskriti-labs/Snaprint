@@ -9,7 +9,7 @@ wordCount: 503
 ---
 ## About this place
 
-Basaveshwaranagar is a layered west Bengaluru neighbourhood that grew up along the Magadi Road corridor in the decades after independence, named for the 12th-century Lingayat reformer Basaveshwara. Today it is firmly residential — wide tree-lined avenues, independent houses giving way to apartment blocks, a clutch of older temples, and the hum of two busy sub-markets at Kamakshipalya and Hosakerehalli. The pin codes 560079 and 560010 cover slightly different slices of this area, with 560079 stretching further west toward Kengeri and 560010 covering the denser core closer to Vijayanagar. Across the neighbourhood, ten verified xerox and print shops hold down the day-to-day paperwork needs of residents, students and small traders, and the average rating across those shops is a healthy 4.1 stars.
+Basaveshwaranagar is a layered west Bengaluru neighbourhood that grew up along the Magadi Road corridor in the decades after independence, named for the 12th-century Lingayat reformer Basaveshwara. Today it is firmly residential — wide tree-lined avenues, independent houses giving way to apartment blocks, a clutch of older temples, and the hum of two busy sub-markets at Kamakshipalya and Hosakerehalli. The pin codes 560079 and 560010 cover slightly different slices of this area, with 560079 stretching further west toward Kengeri and 560010 covering the denser core closer to Vijayanagar. Across the neighbourhood, ten listed xerox and print shops hold down the day-to-day paperwork needs of residents, students and small traders, and the average rating across those shops is a healthy 4.1 stars.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The locality sits between two Purple Line metro stations — Vijayanagar on the 
 
 ## Why printing demand is high here
 
-The area pulls print jobs from three fairly distinct sources. First, the residential density itself: nearly every household needs copies of Aadhaar, ration card, gas subsidy and school transfer documents, often on the same day the original is signed. Second, the stretch of small commercial offices and clinics that line Magadi Road and the service lanes behind it — auditors, chartered accountants, dental practices — that fax and photocopy constantly. Third, a steady student population from nearby colleges and coaching centres along the Magadi–Vijayanagar belt who walk in during exam weeks. The ten verified shops on the platform absorb this pressure, and the top-rated one, Manjushree Xerox, sits at a full five stars precisely because it handles the late-evening rush better than most.
+The area pulls print jobs from three fairly distinct sources. First, the residential density itself: nearly every household needs copies of Aadhaar, ration card, gas subsidy and school transfer documents, often on the same day the original is signed. Second, the stretch of small commercial offices and clinics that line Magadi Road and the service lanes behind it — auditors, chartered accountants, dental practices — that fax and photocopy constantly. Third, a steady student population from nearby colleges and coaching centres along the Magadi–Vijayanagar belt who walk in during exam weeks. The ten listed shops on the platform absorb this pressure, and the top-rated one, Manjushree Xerox, sits at a full five stars precisely because it handles the late-evening rush better than most.
 
 ## What people typically print here
 

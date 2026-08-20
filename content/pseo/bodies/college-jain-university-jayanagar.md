@@ -9,7 +9,7 @@ wordCount: 427
 ---
 ## About this place
 
-Jain (Deemed-to-be University) — Jayanagar Campus sits tucked into one of Bengaluru's older, leafy residential layouts, where classroom blocks share the skyline with apartment towers and banyan-shaded pavements. The campus draws students from the School of Commerce, the School of Management, and several postgraduate programmes, and the rhythm of the day is set by lecture bells rather than office shifts. Campus canteens, library floors, and a busy placement cell keep the neighbourhood buzzing through most hours. Among the 22 verified xerox and print shops scattered around the immediate catchment, Mahakali Stationery and Xerox — the highest-rated at five stars — has become a quiet landmark for anyone walking in from 9th Block.
+Jain (Deemed-to-be University) — Jayanagar Campus sits tucked into one of Bengaluru's older, leafy residential layouts, where classroom blocks share the skyline with apartment towers and banyan-shaded pavements. The campus draws students from the School of Commerce, the School of Management, and several postgraduate programmes, and the rhythm of the day is set by lecture bells rather than office shifts. Campus canteens, library floors, and a busy placement cell keep the neighbourhood buzzing through most hours. Among the 22 listed xerox and print shops scattered around the immediate catchment, Mahakali Stationery and Xerox — the highest-rated at five stars — has become a quiet landmark for anyone walking in from 9th Block.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ Most students and visitors reach the campus by hopping off at the Jayanagara met
 
 ## Why printing demand is high here
 
-Commerce and management students churn through paperwork at a pace few other programmes can match. Assignment submissions stack up weekly, project reports balloon into 80-to-100-page spiral-bound submissions, and placement season triggers a fresh rush of CV prints, cover letters, and certificate photocopies almost every afternoon. With the campus drawing learners from across Karnataka and neighbouring states, the 22 verified print shops within walking distance stay busy from morning tutorials through late-evening deadlines. A few of these shops have built reputations around late-night turnaround, which matters more here than in quieter residential pockets of Bengaluru.
+Commerce and management students churn through paperwork at a pace few other programmes can match. Assignment submissions stack up weekly, project reports balloon into 80-to-100-page spiral-bound submissions, and placement season triggers a fresh rush of CV prints, cover letters, and certificate photocopies almost every afternoon. With the campus drawing learners from across Karnataka and neighbouring states, the 22 listed print shops within walking distance stay busy from morning tutorials through late-evening deadlines. A few of these shops have built reputations around late-night turnaround, which matters more here than in quieter residential pockets of Bengaluru.
 
 ## What people typically print here
 
@@ -25,4 +25,4 @@ Black-and-white assignment printouts in A4, often in dozens of copies, dominate 
 
 ## How Snaprint fits in
 
-For shop owners handling the daily rush, [Snaprint](/book) offers a way to manage orders without the chaos of a crowded counter. For students who would rather skip the walk, [order prints online](/print-near/jain-university-jayanagar) and collect from a nearby verified shop.
+For shop owners handling the daily rush, [Snaprint](/book) offers a way to manage orders without the chaos of a crowded counter. For students who would rather skip the walk, [order prints online](/print-near/jain-university-jayanagar) and collect from a nearby listed shop.

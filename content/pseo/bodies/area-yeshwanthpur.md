@@ -9,7 +9,7 @@ wordCount: 491
 ---
 ## About this place
 
-Yeshwanthpur sits on the northwestern edge of Bengaluru where the old industrial corridors of the city meet a steadily thickening residential belt. The neighbourhood takes its name from the Yeshwanthpur railway station, a junction that has handled freight and passenger traffic since the pre-Independence era, and the legacy of that goods-shed economy still shapes the area. Warehousing, small-scale fabrication, and transport offices line the main drag along Tumkur Road, while cross streets like Govindapura and Laggere fill up with apartment blocks and independent houses serving working families. The pin codes 560022 and 560055 cover this stretch, and 13 verified xerox and print shops keep the paperwork moving for everyone from truck operators to software engineers commuting to nearby tech parks.
+Yeshwanthpur sits on the northwestern edge of Bengaluru where the old industrial corridors of the city meet a steadily thickening residential belt. The neighbourhood takes its name from the Yeshwanthpur railway station, a junction that has handled freight and passenger traffic since the pre-Independence era, and the legacy of that goods-shed economy still shapes the area. Warehousing, small-scale fabrication, and transport offices line the main drag along Tumkur Road, while cross streets like Govindapura and Laggere fill up with apartment blocks and independent houses serving working families. The pin codes 560022 and 560055 cover this stretch, and 13 listed xerox and print shops keep the paperwork moving for everyone from truck operators to software engineers commuting to nearby tech parks.
 
 ## Getting here and around
 

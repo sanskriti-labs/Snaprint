@@ -12,6 +12,7 @@
     "deploymentVerticals": ["Colleges", "Universities", "Offices", "Hospitals", "Libraries", "Railway stations", "Malls", "Retail stores"]
   },
   "areaServed": "Bengaluru, India",
+  "areaServedNote": "This is the kiosk hardware's current deployment area, not the Snaprint shop directory's coverage — the directory separately lists third-party print shops across six Indian cities (see /ai/locations.json).",
   "contact": {
     "email": "snaprints@sanskritilabs.in"
   },

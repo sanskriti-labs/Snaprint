@@ -9,7 +9,7 @@ wordCount: 453
 ---
 ## About this place
 
-The Oxford College of Engineering sits on a wide, leafy stretch of Hosur Road in Bommanahalli, the kind of South Bengaluru address where college buses, tech park shuttles, and Marathahalli-bound traffic share the same tarmac. Established in 1994 under the Oxford Educational Trust, the college runs undergraduate and postgraduate programs in computer science, electronics, mechanical, civil, and information science engineering, and the campus has steadily grown into one of the more recognizable engineering addresses in this corridor between Bommanahalli and Singasandra. With 31 verified xerox and print shops within walking or short-auto distance of the gates — including the well-reviewed Sri Sai Xerox And Stationery at 4.5 stars — students rarely have to plan printing into their day; it gets done between lectures.
+The Oxford College of Engineering sits on a wide, leafy stretch of Hosur Road in Bommanahalli, the kind of South Bengaluru address where college buses, tech park shuttles, and Marathahalli-bound traffic share the same tarmac. Established in 1994 under the Oxford Educational Trust, the college runs undergraduate and postgraduate programs in computer science, electronics, mechanical, civil, and information science engineering, and the campus has steadily grown into one of the more recognizable engineering addresses in this corridor between Bommanahalli and Singasandra. With 31 listed xerox and print shops within walking or short-auto distance of the gates — including the well-reviewed Sri Sai Xerox And Stationery at 4.5 stars — students rarely have to plan printing into their day; it gets done between lectures.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The closest BMTC bus stops are Bommanahalli and Singasandra, both right on Hosur
 
 ## Why printing demand is high here
 
-Engineering coursework generates a relentless paper trail: lab manuals refreshed every semester, dense assignment sheets due weekly, mini-project booklets bound for viva, and the bigger final-year project reports that can run fifty to a hundred pages each. Add in semester exam admit cards, scholarship forms, and the steady placement cycle, and a single student can hit a print counter a dozen times in a term. The 31 verified shops around the college survive on that volume — print jobs here are not occasional, they are woven into the academic rhythm.
+Engineering coursework generates a relentless paper trail: lab manuals refreshed every semester, dense assignment sheets due weekly, mini-project booklets bound for viva, and the bigger final-year project reports that can run fifty to a hundred pages each. Add in semester exam admit cards, scholarship forms, and the steady placement cycle, and a single student can hit a print counter a dozen times in a term. The 31 listed shops around the college survive on that volume — print jobs here are not occasional, they are woven into the academic rhythm.
 
 ## What people typically print here
 
@@ -25,4 +25,4 @@ Black-and-white assignment prints and lab record copies dominate the weekday que
 
 ## How Snaprint fits in
 
-For shop owners around the college, the /book page is a simple way to take online orders from students who would otherwise call or WhatsApp. For students, the /print-near/oxford-coe-bangalore page lists the closest verified shops, hours, and turnaround so the print job happens between classes instead of after them.
+For shop owners around the college, the /book page is a simple way to take online orders from students who would otherwise call or WhatsApp. For students, the /print-near/oxford-coe-bangalore page lists the closest listed shops, hours, and turnaround so the print job happens between classes instead of after them.

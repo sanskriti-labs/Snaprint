@@ -9,7 +9,7 @@ wordCount: 495
 ---
 ## About this place
 
-Kristu Jayanti College sits on a sprawling 80-acre campus off the Hennur-Bagalur stretch in north-east Bengaluru, drawing roughly 8,000 students across its streams of management, commerce, computer applications, arts, and life sciences. The institution, run by the Bodhi Niketan Trust, has steadily built a reputation for placement outcomes and a quietly disciplined academic culture — the kind of place where department notices, assignment deadlines, and corporate recruit drives structure the calendar year. Around the gated campus, the pin codes of 560077 and the surrounding Kothanur belt have filled with hostels, paying-guest buildings, and small eateries that service the student population. Eight verified xerox and print shops currently operate within easy walking distance of the main gate.
+Kristu Jayanti College sits on a sprawling 80-acre campus off the Hennur-Bagalur stretch in north-east Bengaluru, drawing roughly 8,000 students across its streams of management, commerce, computer applications, arts, and life sciences. The institution, run by the Bodhi Niketan Trust, has steadily built a reputation for placement outcomes and a quietly disciplined academic culture — the kind of place where department notices, assignment deadlines, and corporate recruit drives structure the calendar year. Around the gated campus, the pin codes of 560077 and the surrounding Kothanur belt have filled with hostels, paying-guest buildings, and small eateries that service the student population. Eight listed xerox and print shops currently operate within easy walking distance of the main gate.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ Black-and-white assignment printouts on A4 are the bread-and-butter job — stud
 
 ## How Snaprint fits in
 
-For the shop owners on this corridor, [snaprints.com/book](https://snaprints.com/book) offers a free listing that pushes each verified outlet to students searching from their phones between lectures. For students, the landing page at [snaprints.com/print-near/kristu-jayanti-college](https://snaprints.com/print-near/kristu-jayanti-college) consolidates the eight neighbourhood shops into one view — so a hurried submission deadline no longer means wandering lane-to-lane looking for an open counter.
+For the shop owners on this corridor, [snaprints.com/book](https://snaprints.com/book) offers a free listing that pushes each listed outlet to students searching from their phones between lectures. For students, the landing page at [snaprints.com/print-near/kristu-jayanti-college](https://snaprints.com/print-near/kristu-jayanti-college) consolidates the eight neighbourhood shops into one view — so a hurried submission deadline no longer means wandering lane-to-lane looking for an open counter.

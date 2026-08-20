@@ -9,7 +9,7 @@ wordCount: 468
 ---
 ## About this place
 
-Gachibowli is the western anchor of Hyderabad's IT corridor — a planned stretch that mushroomed in the late 1990s once the IT Act opened the floodgates for tech parks. Today the pin codes 500032 and 500019 cover a dense patchwork of glass-and-steel campuses (Microsoft, Amazon, Google all have a footprint here), mid-rise apartment blocks, and older villages like Kondapur that predate the boom. It's less a single neighbourhood than a working cluster where residential colonies share arterial roads with Fortune 500 offices. The zone supports twenty verified xerox and print shops spread across the lanes between the Outer Ring Road and the Old Mumbai Highway, serving everyone from junior coders grabbing a boarding pass printout to solicitors running off property photocopies.
+Gachibowli is the western anchor of Hyderabad's IT corridor — a planned stretch that mushroomed in the late 1990s once the IT Act opened the floodgates for tech parks. Today the pin codes 500032 and 500019 cover a dense patchwork of glass-and-steel campuses (Microsoft, Amazon, Google all have a footprint here), mid-rise apartment blocks, and older villages like Kondapur that predate the boom. It's less a single neighbourhood than a working cluster where residential colonies share arterial roads with Fortune 500 offices. The zone supports twenty listed xerox and print shops spread across the lanes between the Outer Ring Road and the Old Mumbai Highway, serving everyone from junior coders grabbing a boarding pass printout to solicitors running off property photocopies.
 
 ## Getting here and around
 

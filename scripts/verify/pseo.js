@@ -572,7 +572,7 @@ for (const block of areaBlocks) {
   if (!slugM || !/presence:\s*"(?:live|served)"/.test(block)) continue;
   const introM = block.match(/intro:\s*"((?:[^"\\]|\\.)*)"/);
   if (!introM) continue;
-  const countM = introM[1].match(/^(\d+) verified xerox and print shops?\b/);
+  const countM = introM[1].match(/^(\d+) listed xerox and print shops?\b/);
   if (!countM) continue; // intro doesn't lead with a count (e.g. the n===0 template) — nothing to check
   const statedCount = Number(countM[1]);
   const renderedCount = (block.match(/\n {6}\{\n {8}name:/g) || []).length;

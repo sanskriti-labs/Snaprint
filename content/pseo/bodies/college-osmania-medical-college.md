@@ -17,7 +17,7 @@ Afzalgunj metro station on the Blue Line lies ten minutes from the main gate. St
 
 ## Why printing demand is high here
 
-Medical education runs on paper. Osmania students churn out case sheets, dissertations, and clinical logbooks throughout each semester. Ward postings require multiple copies of rotation schedules and permission slips. University examination windows send queues stretching out of print shops as students race to submit properly bound theses and formatted answer booklets. The 40 verified xerox shops serving this area absorb this relentless workload daily.
+Medical education runs on paper. Osmania students churn out case sheets, dissertations, and clinical logbooks throughout each semester. Ward postings require multiple copies of rotation schedules and permission slips. University examination windows send queues stretching out of print shops as students race to submit properly bound theses and formatted answer booklets. The 40 listed xerox shops serving this area absorb this relentless workload daily.
 
 ## What people typically print here
 

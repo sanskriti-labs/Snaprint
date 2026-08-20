@@ -9,7 +9,7 @@ wordCount: 471
 ---
 ## About this place
 
-East Point College of Engineering and Technology sits on a wide, leafy stretch of Bidarahalli in the northeastern corridor of Bengaluru, well past the traffic snarls of Whitefield but close enough that IT professionals often live nearby. The campus runs undergraduate and postgraduate programs in computer science, electronics, mechanical, civil, and information science, with a sizeable intake that keeps the surrounding streets busy from 8 AM onwards. Labs dominate student life here — microcontroller kits, CAD workstations, and project expos mean physical documentation is unavoidable. Around the college, the pin codes covered include 560049 and the surrounding 560036 belt, where the Bidarahalli-Sulebele road threads through small tea stalls, hostels, and coaching centres. Nine verified xerox shops operate within walking distance of the gates, and the most consistently rated is BKR xerox center, sitting at 4.7 stars from regular student feedback.
+East Point College of Engineering and Technology sits on a wide, leafy stretch of Bidarahalli in the northeastern corridor of Bengaluru, well past the traffic snarls of Whitefield but close enough that IT professionals often live nearby. The campus runs undergraduate and postgraduate programs in computer science, electronics, mechanical, civil, and information science, with a sizeable intake that keeps the surrounding streets busy from 8 AM onwards. Labs dominate student life here — microcontroller kits, CAD workstations, and project expos mean physical documentation is unavoidable. Around the college, the pin codes covered include 560049 and the surrounding 560036 belt, where the Bidarahalli-Sulebele road threads through small tea stalls, hostels, and coaching centres. Nine listed xerox shops operate within walking distance of the gates, and the most consistently rated is BKR xerox center, sitting at 4.7 stars from regular student feedback.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The college is most easily reached by the Bidarahalli junction on the Old Madras
 
 ## Why printing demand is high here
 
-EPCET follows a strict record-submission culture. Every lab session ends with a signed record book, every semester closes with a project report bound and spiral-printed, and every final-year batch ships hardbound copies of their main project to external evaluators. Placements add another layer — resume print runs in batches of fifty to a hundred, often late at night before a recruitment drive. The 9 verified shops around the campus exist because of this exact load, and BKR xerox center is frequently the first stop after a viva announcements goes up on the notice board.
+EPCET follows a strict record-submission culture. Every lab session ends with a signed record book, every semester closes with a project report bound and spiral-printed, and every final-year batch ships hardbound copies of their main project to external evaluators. Placements add another layer — resume print runs in batches of fifty to a hundred, often late at night before a recruitment drive. The 9 listed shops around the campus exist because of this exact load, and BKR xerox center is frequently the first stop after a viva announcements goes up on the notice board.
 
 ## What people typically print here
 

@@ -9,7 +9,7 @@ wordCount: 438
 ---
 ## About this place
 
-Tucked along Bull Temple Road in Basavanagudi, BMS College of Engineering carries a reputation that stretches well beyond Karnataka. Founded in 1946, BMSCE is one of India's oldest private engineering colleges, and its seven-storey main block still anchors a campus that draws roughly 6,000 students every year. Undergraduates cycle through branches like computer science, mechanical, electronics, and civil, while the research wing churns out IEEE and Scopus-indexed papers. The neighbourhood around it sits inside the pin codes of 560004 and 560019 — old Bengaluru territory where the legendary bull temple gives the road its name. Across those pin codes, 35 verified xerox and print shops keep the wheels of student life turning.
+Tucked along Bull Temple Road in Basavanagudi, BMS College of Engineering carries a reputation that stretches well beyond Karnataka. Founded in 1946, BMSCE is one of India's oldest private engineering colleges, and its seven-storey main block still anchors a campus that draws roughly 6,000 students every year. Undergraduates cycle through branches like computer science, mechanical, electronics, and civil, while the research wing churns out IEEE and Scopus-indexed papers. The neighbourhood around it sits inside the pin codes of 560004 and 560019 — old Bengaluru territory where the legendary bull temple gives the road its name. Across those pin codes, 35 listed xerox and print shops keep the wheels of student life turning.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The nearest metro stop on the Green Line is National College, about a fifteen-mi
 
 ## Why printing demand is high here
 
-Engineering students live and die by print deadlines. Project reports need to be spiral-bound and submitted the night before demos. IEEE conference papers go through five or six drafts before the final camera-ready version. Placement season pulls in another wave — CV stacks of twenty copies, transcript bundles, and bonafide certificate photocopies, all demanded within a forty-eight-hour window. With 35 verified xerox shops scattered around the BMSCE campus and into Basavanagudi's side lanes, students have options, but the queues outside Shivu Xerox on a Tuesday afternoon prove that demand never really dips.
+Engineering students live and die by print deadlines. Project reports need to be spiral-bound and submitted the night before demos. IEEE conference papers go through five or six drafts before the final camera-ready version. Placement season pulls in another wave — CV stacks of twenty copies, transcript bundles, and bonafide certificate photocopies, all demanded within a forty-eight-hour window. With 35 listed xerox shops scattered around the BMSCE campus and into Basavanagudi's side lanes, students have options, but the queues outside Shivu Xerox on a Tuesday afternoon prove that demand never really dips.
 
 ## What people typically print here
 

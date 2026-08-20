@@ -9,7 +9,7 @@ wordCount: 495
 ---
 ## About this place
 
-Hinjewadi sits on Pune's western flank as the city's most defining tech corridor. The neighbourhood stretches across pin code 411057 and has grown from a quiet hillside settlement into a dense, vertically built hub where software parks share pavement with housing colonies and wet-market vendors. Residential pockets like Wakad, Marunji, and the older Hinjewadi gaon coexisting with the Rajiv Gandhi Infotech Park give the area a split personality — office-shoes by day, school-shoes by evening. Thirteen verified xerox and print shops serve this constant churn, anchored by Star Mobile & Xerox Centre, the locality's top-rated outlet at five stars.
+Hinjewadi sits on Pune's western flank as the city's most defining tech corridor. The neighbourhood stretches across pin code 411057 and has grown from a quiet hillside settlement into a dense, vertically built hub where software parks share pavement with housing colonies and wet-market vendors. Residential pockets like Wakad, Marunji, and the older Hinjewadi gaon coexisting with the Rajiv Gandhi Infotech Park give the area a split personality — office-shoes by day, school-shoes by evening. Thirteen listed xerox and print shops serve this constant churn, anchored by Star Mobile & Xerox Centre, the locality's top-rated outlet at five stars.
 
 ## Getting here and around
 

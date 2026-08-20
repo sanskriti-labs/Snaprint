@@ -9,7 +9,7 @@ wordCount: 501
 ---
 ## About this place
 
-RNS Institute of Technology sits tucked into the quieter southern belt of Bengaluru, off the Bangalore–Mysore highway in the Channasandra neighbourhood. Founded in 2001 under the RNS Family Trust, it has grown into a mid-sized autonomous engineering college affiliated with VTU, with strength across computer science, electronics, mechanical, civil, and the newer AI-ML streams. The campus itself is compact but well-maintained — a few hundred metres from the main road, with the surrounding lanes mixing student hostels, small tea stalls, and aging residential blocks. Students refer to the area simply as RNSIT. The RNSIT pin code — 560098 — covers most of what students walk through daily, and within a quick auto ride you can reach 19 verified xerox and print shops that serve the college crowd.
+RNS Institute of Technology sits tucked into the quieter southern belt of Bengaluru, off the Bangalore–Mysore highway in the Channasandra neighbourhood. Founded in 2001 under the RNS Family Trust, it has grown into a mid-sized autonomous engineering college affiliated with VTU, with strength across computer science, electronics, mechanical, civil, and the newer AI-ML streams. The campus itself is compact but well-maintained — a few hundred metres from the main road, with the surrounding lanes mixing student hostels, small tea stalls, and aging residential blocks. Students refer to the area simply as RNSIT. The RNSIT pin code — 560098 — covers most of what students walk through daily, and within a quick auto ride you can reach 19 listed xerox and print shops that serve the college crowd.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The nearest metro stop is Mysore Road on the Purple Line, roughly seven kilometr
 
 ## Why printing demand is high here
 
-RNSIT operates on a relentless cycle of submissions. Internal tests run every three weeks, lab records need spiral binding before each semester, and the placement season — which kicks off in earnest from July through January — pulls every final-year student into urgent CV revision and portfolio printing marathons. Group project reports can run past 80 pages with colour diagrams. Faculty also demand soft-bound copies of seminars and dissertations. With 19 verified print and xerox shops feeding this volume, the area around RNSIT keeps steady business even outside peak season. Sri Ganesh Xerox, rated 4 stars, is one of the closer options students gravitate to for last-minute spiral and colour print runs.
+RNSIT operates on a relentless cycle of submissions. Internal tests run every three weeks, lab records need spiral binding before each semester, and the placement season — which kicks off in earnest from July through January — pulls every final-year student into urgent CV revision and portfolio printing marathons. Group project reports can run past 80 pages with colour diagrams. Faculty also demand soft-bound copies of seminars and dissertations. With 19 listed print and xerox shops feeding this volume, the area around RNSIT keeps steady business even outside peak season. Sri Ganesh Xerox, rated 4 stars, is one of the closer options students gravitate to for last-minute spiral and colour print runs.
 
 ## What people typically print here
 

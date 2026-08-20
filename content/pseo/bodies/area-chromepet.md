@@ -9,7 +9,7 @@ wordCount: 498
 ---
 ## About this place
 
-Chromepet sits along the Grand Southern Trunk Road about 25 kilometres south of Fort St. George, taking its unusual name from the Chromepet railway station that once served the nearby leather and chemical factories. Today the neighbourhood is a busy residential and educational pocket of Chennai, with the MIT campus and a string of smaller colleges drawing students into the 600044 and 600064 pin codes every semester. Two-wheeler traffic dominates the morning rush as commuters head toward the Pallavaram flyover and GST Road junction, while retirees and young families keep the side streets quiet by afternoon. Within this stretch, Snaprint lists one verified xerox and print shop — Students Xerox — that locals have rated a full 5 stars.
+Chromepet sits along the Grand Southern Trunk Road about 25 kilometres south of Fort St. George, taking its unusual name from the Chromepet railway station that once served the nearby leather and chemical factories. Today the neighbourhood is a busy residential and educational pocket of Chennai, with the MIT campus and a string of smaller colleges drawing students into the 600044 and 600064 pin codes every semester. Two-wheeler traffic dominates the morning rush as commuters head toward the Pallavaram flyover and GST Road junction, while retirees and young families keep the side streets quiet by afternoon. Within this stretch, Snaprint lists one listed xerox and print shop — Students Xerox — that locals have rated a full 5 stars.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The Chennai Beach–Chengalpattu suburban line stops at Chromepet every few minu
 
 ## Why printing demand is high here
 
-The combination of engineering colleges, coaching centres, and a dense working-class population means Chromepet runs on paper. Students from nearby institutions walk in with spiral-bound notes, project reports, and last-minute assignment printouts, while tuition teachers often hand over entire chapters for duplication on the same day. Small-scale industries along the southern end still rely on hard copies of invoices and challans, and the neighbourhood's marriage and document-assistance shops forward Aadhaar and PAN applications that need clean colour scans. With only one verified xerox and print shop currently on the network, that demand is concentrated on a single trusted counter — Students Xerox — which has earned its 5-star rating by handling exactly this mix of student and resident work.
+The combination of engineering colleges, coaching centres, and a dense working-class population means Chromepet runs on paper. Students from nearby institutions walk in with spiral-bound notes, project reports, and last-minute assignment printouts, while tuition teachers often hand over entire chapters for duplication on the same day. Small-scale industries along the southern end still rely on hard copies of invoices and challans, and the neighbourhood's marriage and document-assistance shops forward Aadhaar and PAN applications that need clean colour scans. With only one listed xerox and print shop currently on the network, that demand is concentrated on a single trusted counter — Students Xerox — which has earned its 5-star rating by handling exactly this mix of student and resident work.
 
 ## What people typically print here
 

@@ -9,7 +9,7 @@ wordCount: 485
 ---
 ## About this place
 
-Lingarajapuram sits in the older northeast pocket of Bengaluru, squeezed between Kammanahalli and Banaswadi along the Outer Ring Road corridor. The neighborhood grew as a working-class residential pocket in the 1980s and 1990s, and that character still defines it — narrow lanes, small independent kirana stores, auto-rickshaw stands on every fourth corner, and a steady hum of foot traffic after dark. Commercial activity runs along the main Lingarajapuram Main Road, while the side streets retreat into quiet residential clusters of two-storey houses and modest apartment blocks. Postal operations here fall under the 560084 and 560005 pin codes, and the area currently hosts 5 verified xerox and print shops catering to daily walk-ins.
+Lingarajapuram sits in the older northeast pocket of Bengaluru, squeezed between Kammanahalli and Banaswadi along the Outer Ring Road corridor. The neighborhood grew as a working-class residential pocket in the 1980s and 1990s, and that character still defines it — narrow lanes, small independent kirana stores, auto-rickshaw stands on every fourth corner, and a steady hum of foot traffic after dark. Commercial activity runs along the main Lingarajapuram Main Road, while the side streets retreat into quiet residential clusters of two-storey houses and modest apartment blocks. Postal operations here fall under the 560084 and 560005 pin codes, and the area currently hosts 5 listed xerox and print shops catering to daily walk-ins.
 
 ## Getting here and around
 

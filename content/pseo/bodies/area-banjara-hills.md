@@ -9,7 +9,7 @@ wordCount: 473
 ---
 ## About this place
 
-Banjara Hills is one of Hyderabad's most recognisable addresses, a sloping plateau on the west side of the city that wears its wealth openly. Built up largely after the 1990s IT boom, the neighbourhood mixes leafy residential lanes with some of the city's densest commercial corridors — boutiques, diagnostic labs, multi-speciality hospitals, and the kind of standalone clinics that draw patients from across Telangana. Road No. 12 and the Banjara Hills-Mehdipatnam stretch handle most of the daily traffic, while the older kothi-style houses around Film Nagar give the area its tucked-away residential pockets. Pin codes 500034 and 500028 cover the bulk of this zone, and our directory currently lists 20 verified xerox and print shops across them.
+Banjara Hills is one of Hyderabad's most recognisable addresses, a sloping plateau on the west side of the city that wears its wealth openly. Built up largely after the 1990s IT boom, the neighbourhood mixes leafy residential lanes with some of the city's densest commercial corridors — boutiques, diagnostic labs, multi-speciality hospitals, and the kind of standalone clinics that draw patients from across Telangana. Road No. 12 and the Banjara Hills-Mehdipatnam stretch handle most of the daily traffic, while the older kothi-style houses around Film Nagar give the area its tucked-away residential pockets. Pin codes 500034 and 500028 cover the bulk of this zone, and our directory currently lists 20 listed xerox and print shops across them.
 
 ## Getting here and around
 

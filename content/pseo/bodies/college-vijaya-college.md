@@ -9,7 +9,7 @@ wordCount: 416
 ---
 ## About this place
 
-Vijaya College sits inside the older, education-saturated pocket of Basavanagudi in Bengaluru, where leafy avenues and heritage homes share space with lecture halls. Established decades ago, the institution is best known for its undergraduate programmes in commerce, arts, and science, and draw students from across the southern districts. The campus itself is compact, hemmed in by Bull Temple Road and neighbourhood temples, and many students spend the better part of their day between classrooms, the library, and the small tea stalls that line the footpath outside. Pin codes around the campus fall in the 560004 and 560050 range, and the locality supports 34 verified xerox and print shops that cater to the steady academic traffic.
+Vijaya College sits inside the older, education-saturated pocket of Basavanagudi in Bengaluru, where leafy avenues and heritage homes share space with lecture halls. Established decades ago, the institution is best known for its undergraduate programmes in commerce, arts, and science, and draw students from across the southern districts. The campus itself is compact, hemmed in by Bull Temple Road and neighbourhood temples, and many students spend the better part of their day between classrooms, the library, and the small tea stalls that line the footpath outside. Pin codes around the campus fall in the 560004 and 560050 range, and the locality supports 34 listed xerox and print shops that cater to the steady academic traffic.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The closest metro station is National College on the Green Line, roughly a ten-m
 
 ## Why printing demand is high here
 
-The rhythm of the academic calendar at Vijaya College drives a compressed, intense print cycle. Mid-semester assignments, internal tests, and semester-end project reports tend to cluster in the same fortnight, and the 34 shops around the campus feel the squeeze. Several students handle back-to-back submissions across multiple subjects, with accompanying plagiarism reports and soft-bound copies demanded by departments. PG students nearby also walk over for dissertation printing and binding. The verified cluster, including S.R. XEROX CENTRE on Bull Temple Road, gets especially busy the day before any submission deadline.
+The rhythm of the academic calendar at Vijaya College drives a compressed, intense print cycle. Mid-semester assignments, internal tests, and semester-end project reports tend to cluster in the same fortnight, and the 34 shops around the campus feel the squeeze. Several students handle back-to-back submissions across multiple subjects, with accompanying plagiarism reports and soft-bound copies demanded by departments. PG students nearby also walk over for dissertation printing and binding. The listed cluster, including S.R. XEROX CENTRE on Bull Temple Road, gets especially busy the day before any submission deadline.
 
 ## What people typically print here
 

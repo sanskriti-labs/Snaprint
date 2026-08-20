@@ -9,7 +9,7 @@ wordCount: 462
 ---
 ## About this place
 
-Nagole sits on the eastern fringe of Hyderabad, a residential pocket that has thickened with apartment complexes and gated communities over the past two decades. Once a quieter suburb along the Nagole-Maredpally corridor, it now blends middle-class housing with a working commercial spine — kirana stores, coaching centres, small clinics, and the kind of standalone stationery shops that double as the neighbourhood's unofficial print hubs. The locality falls under the 500068 and 500102 pin codes, and Snaprint lists 19 verified xerox and print shops across this stretch. The top-rated among them is Sreeja Stationery & Xerox at 5 stars, a name that residents around the lane tend to recognise first.
+Nagole sits on the eastern fringe of Hyderabad, a residential pocket that has thickened with apartment complexes and gated communities over the past two decades. Once a quieter suburb along the Nagole-Maredpally corridor, it now blends middle-class housing with a working commercial spine — kirana stores, coaching centres, small clinics, and the kind of standalone stationery shops that double as the neighbourhood's unofficial print hubs. The locality falls under the 500068 and 500102 pin codes, and Snaprint lists 19 listed xerox and print shops across this stretch. The top-rated among them is Sreeja Stationery & Xerox at 5 stars, a name that residents around the lane tend to recognise first.
 
 ## Getting here and around
 

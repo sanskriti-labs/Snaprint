@@ -9,7 +9,7 @@ wordCount: 483
 ---
 ### About this place
 
-Ashok Nagar sits on the southern edge of Bengaluru's older core, sandwiched between Gandhi Bazaar's chaos and the quieter residential pockets that fan out toward Banashankari. The neighbourhood took shape in the post-independence years and still wears that mid-century stamp — broad layout roads, two-storey independent houses, and the occasional temple tucked behind a textile shop. The 560050 and 560025 pin codes cover a stretch where independent groceries, ayurvedic pharmacies, and small hotels outnumber chain stores. Locals know it as a practical, lived-in suburb rather than a destination, though the weekend flower market at Gandhi Bazaar pulls in crowds from across the 560050 belt. Our count finds 11 verified xerox and print shops scattered through the residential lanes and along the main commercial stretches.
+Ashok Nagar sits on the southern edge of Bengaluru's older core, sandwiched between Gandhi Bazaar's chaos and the quieter residential pockets that fan out toward Banashankari. The neighbourhood took shape in the post-independence years and still wears that mid-century stamp — broad layout roads, two-storey independent houses, and the occasional temple tucked behind a textile shop. The 560050 and 560025 pin codes cover a stretch where independent groceries, ayurvedic pharmacies, and small hotels outnumber chain stores. Locals know it as a practical, lived-in suburb rather than a destination, though the weekend flower market at Gandhi Bazaar pulls in crowds from across the 560050 belt. Our count finds 11 listed xerox and print shops scattered through the residential lanes and along the main commercial stretches.
 
 ### Getting here and around
 

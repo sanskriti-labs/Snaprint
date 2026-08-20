@@ -5,14 +5,14 @@ export type Faq = { q: string; a: string };
 
 // ---------------------------------------------------------------------------
 // Directory FAQs — true today on every published page, live kiosk or not.
-// Snaprint's current product is a directory of verified third-party xerox
+// Snaprint's current product is a directory of listed third-party xerox
 // shops; these answers describe that, not a kiosk that may not exist yet
 // at this entity.
 // ---------------------------------------------------------------------------
 
 const directoryFaqs: Faq[] = [
   {
-    q: "How does Snaprint verify these shops?",
+    q: "How does Snaprint decide which shops to list?",
     a:
       "Each listing is checked against Google Maps data — address, phone number, ratings, and reported hours — so you're not walking to a shop that's closed or no longer there.",
   },

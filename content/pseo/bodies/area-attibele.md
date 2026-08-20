@@ -9,7 +9,7 @@ wordCount: 484
 ---
 ## About this place
 
-Attibele sits right on the southern edge of Bengaluru, straddling the Tamil Nadu border where the city finally thins out into small-scale farmland and warehouse clusters. Once a quiet agricultural village, it has grown into a busy transit neighbourhood anchored by the Attibele-Anekal industrial belt and a string of gated apartment communities. The locality pulls residents from Hosur, Jigani, and Chandapura, along with workers who commute to the SIPCOT industrial parks nearby. The streets around the main Attibele bus stand mix kirana stores, tea stalls, and a growing number of service shops that cater to this transient population. With pin codes 562107 and 560099 covering residential layouts and the commercial stretch along the Bengaluru–Hosur highway, the area now supports 6 verified xerox and print shops, including the well-regarded Shagun Enterprises.
+Attibele sits right on the southern edge of Bengaluru, straddling the Tamil Nadu border where the city finally thins out into small-scale farmland and warehouse clusters. Once a quiet agricultural village, it has grown into a busy transit neighbourhood anchored by the Attibele-Anekal industrial belt and a string of gated apartment communities. The locality pulls residents from Hosur, Jigani, and Chandapura, along with workers who commute to the SIPCOT industrial parks nearby. The streets around the main Attibele bus stand mix kirana stores, tea stalls, and a growing number of service shops that cater to this transient population. With pin codes 562107 and 560099 covering residential layouts and the commercial stretch along the Bengaluru–Hosur highway, the area now supports 6 listed xerox and print shops, including the well-regarded Shagun Enterprises.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ The most common jobs at Attibele counters are B&W A4 prints for government offic
 
 ## How Snaprint fits in
 
-Snaprint's network aggregates these neighbourhood counters so that someone in Attibele can place a print order online and collect it without waiting in line. Shop owners interested in joining the platform can review the partnership details at /book, while residents and students looking for the nearest counter can browse live availability at /print-near/attibele.
+Snaprint's network aggregates these neighbourhood counters so that someone in Attibele can place a print order online and collect it without waiting in line. Shop owners interested in getting listed can email snaprints@sanskritilabs.in, while residents and students looking for the nearest counter can browse live availability at /print-near/attibele.

@@ -9,7 +9,7 @@ wordCount: 492
 ---
 ## About this place
 
-Abids sits at the historic commercial heart of old Hyderabad, a stretch where the clamor of wholesale book bazaars and textile dealers spills out from lanes that have traded goods since the Nizam era. The neighborhood runs along Abids Road and its tributary Nizam Shahi Road, stitching together heritage storefronts, mid-rise offices, and a few pockets of residential flats in the upper floors. It falls under the 500001 postal division, which also covers nearby Afzalgunj and Koti. The print ecosystem here is dense — 20 verified xerox and print shops operate inside this single pin code, reflecting the area's role as a paperwork-heavy commercial district rather than a quiet residential suburb.
+Abids sits at the historic commercial heart of old Hyderabad, a stretch where the clamor of wholesale book bazaars and textile dealers spills out from lanes that have traded goods since the Nizam era. The neighborhood runs along Abids Road and its tributary Nizam Shahi Road, stitching together heritage storefronts, mid-rise offices, and a few pockets of residential flats in the upper floors. It falls under the 500001 postal division, which also covers nearby Afzalgunj and Koti. The print ecosystem here is dense — 20 listed xerox and print shops operate inside this single pin code, reflecting the area's role as a paperwork-heavy commercial district rather than a quiet residential suburb.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ Black-and-white A4 prints dominate the morning counters — notes, previous year
 
 ## How Snaprint fits in
 
-Snaprint lists these twenty Abids shops on a single map view, so anyone in 500001 can pick the closest counter and walk in without calling ahead. Shop owners in the area can list their store through the Snaprint partner page, and students hunting for a specific job — say, color print or spiral binding — can browse the dedicated Abids page to compare ratings before stepping out.
+Snaprint lists these twenty Abids shops on a single map view, so anyone in 500001 can pick the closest counter and walk in without calling ahead. Shop owners in the area can email snaprints@sanskritilabs.in to get their store listed, and students hunting for a specific job — say, color print or spiral binding — can browse the dedicated Abids page to compare ratings before stepping out.

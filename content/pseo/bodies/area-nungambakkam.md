@@ -9,7 +9,7 @@ wordCount: 501
 ---
 ## About this place
 
-Nungambakkam sits squarely in the heart of central Chennai, sandwiched between the retail sprawl of T. Nagar to the south and the office clusters of Egmore to the north. It is one of those neighbourhoods where leafy bungalows on side streets share walls with glass-fronted commercial buildings on the main road. Originally a Brahmin agraharam settlement, the area evolved through the colonial era into a mixed-use locality that today supports a dense residential population alongside hospitals, coaching centres, and a steady flow of businesses catering to working professionals. The 600034 and 600006 pin codes together cover most of this stretch, and residents and commuters rely on 20 verified xerox and print shops scattered through the lanes and main roads to keep paperwork moving.
+Nungambakkam sits squarely in the heart of central Chennai, sandwiched between the retail sprawl of T. Nagar to the south and the office clusters of Egmore to the north. It is one of those neighbourhoods where leafy bungalows on side streets share walls with glass-fronted commercial buildings on the main road. Originally a Brahmin agraharam settlement, the area evolved through the colonial era into a mixed-use locality that today supports a dense residential population alongside hospitals, coaching centres, and a steady flow of businesses catering to working professionals. The 600034 and 600006 pin codes together cover most of this stretch, and residents and commuters rely on 20 listed xerox and print shops scattered through the lanes and main roads to keep paperwork moving.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The neighbourhood connects easily to the rest of the city. Thousand Lights and L
 
 ## Why printing demand is high here
 
-Nungambakkam pulls in print orders from several overlapping crowds. Coaching institutes and tuition centres around the area generate steady demand for class notes, test papers, and spiral-bound study material during exam months. The cluster of clinics, diagnostic labs, and small businesses needs regular scanning, photocopying, and lamination of medical and identity documents. Government office work tied to nearby tehsildar and corporation offices adds another layer of urgent copy jobs. With 20 verified print shops now on the network and a 4.4-star average across 19 rated ones, residents rarely have to travel far to get a job done, and OMKAR XEROX, the top-rated shop in the area at 5 stars, anchors the trust factor.
+Nungambakkam pulls in print orders from several overlapping crowds. Coaching institutes and tuition centres around the area generate steady demand for class notes, test papers, and spiral-bound study material during exam months. The cluster of clinics, diagnostic labs, and small businesses needs regular scanning, photocopying, and lamination of medical and identity documents. Government office work tied to nearby tehsildar and corporation offices adds another layer of urgent copy jobs. With 20 listed print shops now on the network and a 4.4-star average across 19 rated ones, residents rarely have to travel far to get a job done, and OMKAR XEROX, the top-rated shop in the area at 5 stars, anchors the trust factor.
 
 ## What people typically print here
 

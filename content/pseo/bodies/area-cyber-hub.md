@@ -9,7 +9,7 @@ wordCount: 492
 ---
 ## About this place
 
-Cyber Hub sits on the outer edge of Delhi NCR's millennial work corridor — a planned commercial pocket anchored by IT and finance offices, with high-rise apartments tucked behind the glass facades. What began as a satellite of Gurugram's tech belt has matured into a self-sufficient micro-neighborhood where people live, work, and occasionally linger over late dinners. The pin codes covered here — 122002 and 122015 — straddle the line between residential towers and corporate parks, which is exactly why a small cluster of print shops has survived and thrived. Eight verified xerox and print shops in Cyber Hub keep the daily paperwork of this mixed zone moving. Sunil Printing Press leads the pack with a clean 5-star reputation, and the broader Cyber Hub average sits at a respectable 3.9 stars across all eight rated outlets.
+Cyber Hub sits on the outer edge of Delhi NCR's millennial work corridor — a planned commercial pocket anchored by IT and finance offices, with high-rise apartments tucked behind the glass facades. What began as a satellite of Gurugram's tech belt has matured into a self-sufficient micro-neighborhood where people live, work, and occasionally linger over late dinners. The pin codes covered here — 122002 and 122015 — straddle the line between residential towers and corporate parks, which is exactly why a small cluster of print shops has survived and thrived. Eight listed xerox and print shops in Cyber Hub keep the daily paperwork of this mixed zone moving. Sunil Printing Press leads the pack with a clean 5-star reputation, and the broader Cyber Hub average sits at a respectable 3.9 stars across all eight rated outlets.
 
 ## Getting here and around
 

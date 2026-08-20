@@ -9,7 +9,7 @@ wordCount: 490
 ---
 ## About this place
 
-New Thippasandra sits tucked into East Bengaluru, a few kilometres east of MG Road and just south of the old HAL neighbourhood. The area took shape in the 1970s and 1980s as a middle-class residential colony built around HAL's aircraft township, and it still wears that mixed-use character today. You will find broad, tree-shaded lanes of independent houses and small apartment blocks standing alongside provision stores, medical clinics, and the kind of corner bakeries that open before sunrise. Pin codes 560075 and 560008 cover the heart of the colony and a sliver of the adjacent Old Thippasandra. Across those two pin codes, seven verified xerox and print shops serve the neighbourhood, with Sva fancy holding a 5-star rating and the broader cluster averaging 4.4 stars on user reviews.
+New Thippasandra sits tucked into East Bengaluru, a few kilometres east of MG Road and just south of the old HAL neighbourhood. The area took shape in the 1970s and 1980s as a middle-class residential colony built around HAL's aircraft township, and it still wears that mixed-use character today. You will find broad, tree-shaded lanes of independent houses and small apartment blocks standing alongside provision stores, medical clinics, and the kind of corner bakeries that open before sunrise. Pin codes 560075 and 560008 cover the heart of the colony and a sliver of the adjacent Old Thippasandra. Across those two pin codes, seven listed xerox and print shops serve the neighbourhood, with Sva fancy holding a 5-star rating and the broader cluster averaging 4.4 stars on user reviews.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The fastest way in is by two-wheeler down 80 Feet Road or the connecting stretch
 
 ## Why printing demand is high here
 
-New Thippasandra is ringed by exactly the kind of demand that keeps a print queue moving. The HAL factory and adjacent aerospace offices generate a steady stream of tender documents, ID cards, and compliance paperwork. Coaching centres and the cluster of schools nearby — including HAL English Medium School and others along the 80 Feet Road stretch — bring in class notes, worksheets, and exam answer sheets during September and March. The residential density adds its own weight: ration-card applications, rental agreements, and Aadhaar printouts are everyday jobs. With seven verified xerox and print shops concentrated in a half-square-kilometre radius, residents never have to walk more than a lane or two for an urgent job.
+New Thippasandra is ringed by exactly the kind of demand that keeps a print queue moving. The HAL factory and adjacent aerospace offices generate a steady stream of tender documents, ID cards, and compliance paperwork. Coaching centres and the cluster of schools nearby — including HAL English Medium School and others along the 80 Feet Road stretch — bring in class notes, worksheets, and exam answer sheets during September and March. The residential density adds its own weight: ration-card applications, rental agreements, and Aadhaar printouts are everyday jobs. With seven listed xerox and print shops concentrated in a half-square-kilometre radius, residents never have to walk more than a lane or two for an urgent job.
 
 ## What people typically print here
 

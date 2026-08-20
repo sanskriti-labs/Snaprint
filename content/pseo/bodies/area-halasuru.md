@@ -9,7 +9,7 @@ wordCount: 490
 ---
 ## About this place
 
-Halasuru sits on the eastern edge of central Bengaluru, just where Old Madras Road begins its long haul out toward Whitefield. The neighbourhood carries an unmistakable dual identity — the old Tamil quarters around Halasuru Lake still host homes that have stood for generations, while the stretch along Cambridge Road and Jogupalya has filled with new apartment blocks, co-working spaces, and the steady footfall of young professionals commuting into the city core. Pin codes 560008 covers the older settlement around the lake and temple district, and the same code extends into the surrounding lanes. With 11 verified xerox and print shops mapped across these pockets, the area is well-stocked for both residents and the steady stream of visitors who arrive for the lake, the Someshwara Temple, and the Sunday flower market.
+Halasuru sits on the eastern edge of central Bengaluru, just where Old Madras Road begins its long haul out toward Whitefield. The neighbourhood carries an unmistakable dual identity — the old Tamil quarters around Halasuru Lake still host homes that have stood for generations, while the stretch along Cambridge Road and Jogupalya has filled with new apartment blocks, co-working spaces, and the steady footfall of young professionals commuting into the city core. Pin codes 560008 covers the older settlement around the lake and temple district, and the same code extends into the surrounding lanes. With 11 listed xerox and print shops mapped across these pockets, the area is well-stocked for both residents and the steady stream of visitors who arrive for the lake, the Someshwara Temple, and the Sunday flower market.
 
 ## Getting here and around
 

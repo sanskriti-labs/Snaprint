@@ -9,7 +9,7 @@ wordCount: 471
 ---
 ## About this place
 
-Horamavu sits on the eastern edge of Bengaluru, strung along Outer Ring Road between Hennur and Banaswadi. It began life as a cluster of villages — Avalahalli, Lingarajapuram, and surrounding farmland — and grew into a dense residential pocket once the ring road brought daily buses and auto traffic through. Today it is a working-class neighbourhood of independent houses, mid-rise apartments, and small businesses, with temples, kirana stores, and tiffin rooms sharing lanes with IT workers heading to the tech parks along the ORR. The pin codes covering Horamavu include 560043 and 560005, and our listing currently tracks 7 verified xerox and print shops in the area.
+Horamavu sits on the eastern edge of Bengaluru, strung along Outer Ring Road between Hennur and Banaswadi. It began life as a cluster of villages — Avalahalli, Lingarajapuram, and surrounding farmland — and grew into a dense residential pocket once the ring road brought daily buses and auto traffic through. Today it is a working-class neighbourhood of independent houses, mid-rise apartments, and small businesses, with temples, kirana stores, and tiffin rooms sharing lanes with IT workers heading to the tech parks along the ORR. The pin codes covering Horamavu include 560043 and 560005, and our listing currently tracks 7 listed xerox and print shops in the area.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ There is no metro station inside Horamavu, but Baiyappanahalli Metro on the Purp
 
 ## Why printing demand is high here
 
-Horamavu pulls print work from three overlapping streams. First, the residential density — thousands of households in layouts like AECS Layout and Defence Colony generate passport photos, ration card copies, and Aadhaar printouts almost every weekend. Second, the small commercial offices, clinics, and coaching centres along the main road need B&W and colour prints on tight turnarounds. Third, families preparing for school admissions, bank loans, and visa paperwork keep the machines busy through the year. With 7 verified shops serving just this patch of the city, demand stays steady enough that most shops report walk-ins every few minutes during mornings.
+Horamavu pulls print work from three overlapping streams. First, the residential density — thousands of households in layouts like AECS Layout and Defence Colony generate passport photos, ration card copies, and Aadhaar printouts almost every weekend. Second, the small commercial offices, clinics, and coaching centres along the main road need B&W and colour prints on tight turnarounds. Third, families preparing for school admissions, bank loans, and visa paperwork keep the machines busy through the year. With 7 listed shops serving just this patch of the city, demand stays steady enough that most shops report walk-ins every few minutes during mornings.
 
 ## What people typically print here
 

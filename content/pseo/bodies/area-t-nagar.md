@@ -9,7 +9,7 @@ wordCount: 463
 ---
 ## About this place
 
-T. Nagar is Chennai's busiest shopping belt, a thickly commercial neighbourhood that doubles as a residential pocket for families who have lived here for generations. The streets around Ranganathan Street and Thyagaraya Road stay packed from morning until well past midnight, especially during the Pongal and Diwali retail rush. Behind the silk-saree showrooms and jewellery storefronts, narrow lanes hold apartment blocks, schools, and long-time residents. Roughly 17 verified xerox and print shops serve the 600017 and 600090 pin codes, and the neighbourhood has earned a healthy 4.4-star average across 15 rated counters. Top of that list is Bg Xerox, which holds a perfect 5-star rating on Snaprint's network.
+T. Nagar is Chennai's busiest shopping belt, a thickly commercial neighbourhood that doubles as a residential pocket for families who have lived here for generations. The streets around Ranganathan Street and Thyagaraya Road stay packed from morning until well past midnight, especially during the Pongal and Diwali retail rush. Behind the silk-saree showrooms and jewellery storefronts, narrow lanes hold apartment blocks, schools, and long-time residents. Roughly 17 listed xerox and print shops serve the 600017 and 600090 pin codes, and the neighbourhood has earned a healthy 4.4-star average across 15 rated counters. Top of that list is Bg Xerox, which holds a perfect 5-star rating on Snaprint's network.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ Panagal Park is the easiest reference point for anyone new to T. Nagar. The Mamb
 
 ## Why printing demand is high here
 
-The area runs on paperwork. Jewellery shops and textile showrooms need invoice sheets, address cards, and bulk bill books printed daily. Several banks and government offices operate branches along the main roads, and customers arrive with Aadhaar and PAN forms that need quick copies. Just outside the shopping core, a dense residential zone feeds steady demand for school projects, ration card applications, and ration-related documentation. Wedding season adds another spike, with families printing invitations, guest lists, and reception seating charts. With 17 verified counters already operating, the area clearly supports a busy print trade year-round.
+The area runs on paperwork. Jewellery shops and textile showrooms need invoice sheets, address cards, and bulk bill books printed daily. Several banks and government offices operate branches along the main roads, and customers arrive with Aadhaar and PAN forms that need quick copies. Just outside the shopping core, a dense residential zone feeds steady demand for school projects, ration card applications, and ration-related documentation. Wedding season adds another spike, with families printing invitations, guest lists, and reception seating charts. With 17 listed counters already operating, the area clearly supports a busy print trade year-round.
 
 ## What people typically print here
 

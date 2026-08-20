@@ -9,7 +9,7 @@ wordCount: 478
 ---
 ## About this place
 
-Atria Institute of Technology sits tucked into the Anand Nagar pocket of Hebbal, Bengaluru, one of those north-Bengaluru addresses where classroom blocks and tech-park shuttle stops share the same arterial roads. The institute runs undergraduate and postgraduate programmes in computer science, electronics, mechanical, civil and information science, and the campus draws a heavy mix of day scholars from across the city and hostellers who land up before semester registrations. Around the 560024 pin code belt, the lanes between the institute gates and the Outer Ring Road service road are lined with chai stalls, two-wheeler bays and small print-and-stationery outlets that stay open late into submission week. With 18 verified xerox and print shops operating within easy walking distance of the campus, students rarely have to venture beyond a kilometre for any document job.
+Atria Institute of Technology sits tucked into the Anand Nagar pocket of Hebbal, Bengaluru, one of those north-Bengaluru addresses where classroom blocks and tech-park shuttle stops share the same arterial roads. The institute runs undergraduate and postgraduate programmes in computer science, electronics, mechanical, civil and information science, and the campus draws a heavy mix of day scholars from across the city and hostellers who land up before semester registrations. Around the 560024 pin code belt, the lanes between the institute gates and the Outer Ring Road service road are lined with chai stalls, two-wheeler bays and small print-and-stationery outlets that stay open late into submission week. With 18 listed xerox and print shops operating within easy walking distance of the campus, students rarely have to venture beyond a kilometre for any document job.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ Hebbal's flyover and the underpass beneath it are the landmarks every Atria stud
 
 ## Why printing demand is high here
 
-This is a campus economy that runs on paper. Continuous internal assessments, lab manuals with graphs, mini-project reports bound in soft cover and final-year thesis submissions push the local print shops into overdrive during October–November and again in April–May. Recruiters from Bengaluru's tech corridor drive up placement-season demand for CV runs, cover letters and portfolio prints. With 18 verified shops around the institute, including the well-reviewed Suri Xerox Centre at 4.6 stars, the queue discipline is fairly mature — most counters now accept PDF uploads on WhatsApp so students can walk in only to collect.
+This is a campus economy that runs on paper. Continuous internal assessments, lab manuals with graphs, mini-project reports bound in soft cover and final-year thesis submissions push the local print shops into overdrive during October–November and again in April–May. Recruiters from Bengaluru's tech corridor drive up placement-season demand for CV runs, cover letters and portfolio prints. With 18 listed shops around the institute, including the well-reviewed Suri Xerox Centre at 4.6 stars, the queue discipline is fairly mature — most counters now accept PDF uploads on WhatsApp so students can walk in only to collect.
 
 ## What people typically print here
 

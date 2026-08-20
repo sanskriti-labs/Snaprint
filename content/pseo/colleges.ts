@@ -30,7 +30,7 @@ const colleges: College[] = [
     lat: 13.0219,
     lng: 77.5673,
     intro:
-      "IISc students and researchers looking for nearby print shops often need thesis printing, late-night assignments, and last-minute research papers — see verified xerox shops within 1.5 km of the IISc campus.",
+      "IISc students and researchers looking for nearby print shops often need thesis printing, late-night assignments, and last-minute research papers — see listed xerox shops within 1.5 km of the IISc campus.",
     keywords: [
       "print near iisc bangalore",
       "thesis printing near iisc",
@@ -51,7 +51,7 @@ const colleges: College[] = [
     lat: 12.9357,
     lng: 77.5015,
     intro:
-      "RVCE students printing project reports, seminar papers, and placement resumes frequently compare xerox shops along Mysore Road — see verified print shops near the RVCE campus.",
+      "RVCE students printing project reports, seminar papers, and placement resumes frequently compare xerox shops along Mysore Road — see listed print shops near the RVCE campus.",
     keywords: [
       "print near rvce",
       "project report printing rv college",
@@ -72,7 +72,7 @@ const colleges: College[] = [
     lat: 12.9139,
     lng: 77.6604,
     intro:
-      "PESU students in Electronic City often need assignment print, placement CV print, and lab report print on short notice — see verified xerox shops near PES University's Electronic City campus.",
+      "PESU students in Electronic City often need assignment print, placement CV print, and lab report print on short notice — see listed xerox shops near PES University's Electronic City campus.",
     keywords: [
       "print near pes university electronic city",
       "resume printing pesu",
@@ -93,7 +93,7 @@ const colleges: College[] = [
     lat: 12.9352,
     lng: 77.6045,
     intro:
-      "Christ University students often search for exam-form printing, last-minute CV print for placement drives, and assignment print near campus — see verified xerox shops near Christ University on Hosur Road.",
+      "Christ University students often search for exam-form printing, last-minute CV print for placement drives, and assignment print near campus — see listed xerox shops near Christ University on Hosur Road.",
     keywords: [
       "print near christ university bangalore",
       "exam form printing christ university",
@@ -114,7 +114,7 @@ const colleges: College[] = [
     lat: 13.0827,
     lng: 77.5765,
     intro:
-      "NMIT students living near Yelahanka often need assignment print, project report print, and document print on the same day — see verified xerox shops near NMIT campus.",
+      "NMIT students living near Yelahanka often need assignment print, project report print, and document print on the same day — see listed xerox shops near NMIT campus.",
     keywords: [
       "print near nmit yelahanka",
       "assignment printing nmit",
@@ -143,7 +143,7 @@ const colleges: College[] = [
     lat: 12.9416,
     lng: 77.5664,
     intro:
-      "BMS College of Engineering students on Bull Temple Road often need project report print, IEEE paper print, and placement CV print — see verified xerox shops near BMSCE campus.",
+      "BMS College of Engineering students on Bull Temple Road often need project report print, IEEE paper print, and placement CV print — see listed xerox shops near BMSCE campus.",
     keywords: [
       "print near bmsce",
       "bms college project report printing",
@@ -164,7 +164,7 @@ const colleges: College[] = [
     lat: 13.0298,
     lng: 77.5645,
     intro:
-      "MSRIT students in MSR Nagar often look for same-day assignment print, lab manual print, and placement CV print — see verified xerox shops near the MSRIT campus.",
+      "MSRIT students in MSR Nagar often look for same-day assignment print, lab manual print, and placement CV print — see listed xerox shops near the MSRIT campus.",
     keywords: [
       "print near msrit",
       "ms ramaiah assignment printing",
@@ -185,7 +185,7 @@ const colleges: College[] = [
     lat: 12.7692,
     lng: 77.4333,
     intro:
-      "Jain University students on Kanakapura Road often need assignment print, project report print, and conference paper print — see verified xerox shops near the Jain campus.",
+      "Jain University students on Kanakapura Road often need assignment print, project report print, and conference paper print — see listed xerox shops near the Jain campus.",
     keywords: [
       "print near jain university",
       "jain assignment printing kanakapura",
@@ -205,7 +205,7 @@ const colleges: College[] = [
     lat: 13.1306,
     lng: 77.5847,
     intro:
-      "Presidency University students near Yelahanka frequently need assignment print, exam form print, and placement CV print — see verified xerox shops near the Presidency campus.",
+      "Presidency University students near Yelahanka frequently need assignment print, exam form print, and placement CV print — see listed xerox shops near the Presidency campus.",
     keywords: [
       "print near presidency university",
       "presidency assignment print yelahanka",
@@ -226,7 +226,7 @@ const colleges: College[] = [
     lat: 13.0658,
     lng: 77.4649,
     intro:
-      "Acharya Institute of Technology students near Soldevanahalli often need project report print, assignment print, and placement CV print — see verified xerox shops near the AIT campus.",
+      "Acharya Institute of Technology students near Soldevanahalli often need project report print, assignment print, and placement CV print — see listed xerox shops near the AIT campus.",
     keywords: [
       "print near acharya institute",
       "acharya project report print",
@@ -246,7 +246,7 @@ const colleges: College[] = [
     lat: 13.1208,
     lng: 77.5723,
     intro:
-      "REVA University students at Rukmini Knowledge Park frequently need assignment print, lab report print, and thesis print — see verified xerox shops near the REVA campus.",
+      "REVA University students at Rukmini Knowledge Park frequently need assignment print, lab report print, and thesis print — see listed xerox shops near the REVA campus.",
     keywords: [
       "print near reva university",
       "reva assignment print yelahanka",
@@ -267,7 +267,7 @@ const colleges: College[] = [
     lat: 12.9089,
     lng: 77.5638,
     intro:
-      "DSCE students in Kumaraswamy Layout often need project report print, placement CV print, and assignment print — see verified xerox shops near the DSCE campus.",
+      "DSCE students in Kumaraswamy Layout often need project report print, placement CV print, and assignment print — see listed xerox shops near the DSCE campus.",
     keywords: [
       "print near dsce",
       "dayananda sagar assignment printing",
@@ -288,7 +288,7 @@ const colleges: College[] = [
     lat: 12.9684,
     lng: 77.6083,
     intro:
-      "St. Joseph's College of Commerce students on Brigade Road frequently need assignment print, internship application print, and resume print — see verified xerox shops near the SJCC campus.",
+      "St. Joseph's College of Commerce students on Brigade Road frequently need assignment print, internship application print, and resume print — see listed xerox shops near the SJCC campus.",
     keywords: [
       "print near sjcc",
       "st josephs commerce assignment printing",
@@ -309,7 +309,7 @@ const colleges: College[] = [
     lat: 12.9563,
     lng: 77.5841,
     intro:
-      "St. Joseph's College students on Lalbagh Road often need assignment print, project paper print, and exam form print — see verified xerox shops near the SJC campus.",
+      "St. Joseph's College students on Lalbagh Road often need assignment print, project paper print, and exam form print — see listed xerox shops near the SJC campus.",
     keywords: [
       "print near sjc bangalore",
       "st josephs college assignment printing",
@@ -330,7 +330,7 @@ const colleges: College[] = [
     lat: 12.9891,
     lng: 77.5921,
     intro:
-      "Mount Carmel College students on Palace Road frequently need assignment print, internship application print, and CV print — see verified xerox shops near the MCC campus.",
+      "Mount Carmel College students on Palace Road frequently need assignment print, internship application print, and CV print — see listed xerox shops near the MCC campus.",
     keywords: [
       "print near mount carmel college",
       "mcc assignment printing vasanth nagar",
@@ -351,7 +351,7 @@ const colleges: College[] = [
     lat: 12.9354,
     lng: 77.6221,
     intro:
-      "Jyoti Nivas College students in Koramangala often need assignment print, project report print, and placement CV print — see verified xerox shops near the JNC campus.",
+      "Jyoti Nivas College students in Koramangala often need assignment print, project report print, and placement CV print — see listed xerox shops near the JNC campus.",
     keywords: [
       "print near jyoti nivas college",
       "jnc assignment printing koramangala",
@@ -372,7 +372,7 @@ const colleges: College[] = [
     lat: 12.9408,
     lng: 77.5651,
     intro:
-      "Vijaya College students in Basavanagudi frequently need assignment print, exam form print, and project report print — see verified xerox shops near the Vijaya campus.",
+      "Vijaya College students in Basavanagudi frequently need assignment print, exam form print, and project report print — see listed xerox shops near the Vijaya campus.",
     keywords: [
       "print near vijaya college",
       "vijaya college assignment printing",
@@ -393,7 +393,7 @@ const colleges: College[] = [
     lat: 13.0543,
     lng: 77.6407,
     intro:
-      "Kristu Jayanti College students near Kothanur often need assignment print, project report print, and placement CV print — see verified xerox shops near the KJC campus.",
+      "Kristu Jayanti College students near Kothanur often need assignment print, project report print, and placement CV print — see listed xerox shops near the KJC campus.",
     keywords: [
       "print near kristu jayanti",
       "kjc assignment printing kothanur",
@@ -414,7 +414,7 @@ const colleges: College[] = [
     lat: 13.0259,
     lng: 77.7081,
     intro:
-      "East Point College students near Bidarahalli frequently need assignment print, lab report print, and project report print — see verified xerox shops near the EPCET campus.",
+      "East Point College students near Bidarahalli frequently need assignment print, lab report print, and project report print — see listed xerox shops near the EPCET campus.",
     keywords: [
       "print near east point college",
       "epcet assignment printing bidarahalli",
@@ -435,7 +435,7 @@ const colleges: College[] = [
     lat: 12.9856,
     lng: 77.7366,
     intro:
-      "CMRIT students in Whitefield often need assignment print, project report print, and placement CV print — see verified xerox shops near the CMRIT campus.",
+      "CMRIT students in Whitefield often need assignment print, project report print, and placement CV print — see listed xerox shops near the CMRIT campus.",
     keywords: [
       "print near cmrit",
       "cmr institute assignment printing",
@@ -465,7 +465,7 @@ const colleges: College[] = [
     lat: 12.8778133,
     lng: 77.5957995,
     intro:
-      "Christ University students at the Bannerghatta Road campus often need assignment print, exam form print, and placement CV print — see verified xerox shops near the Hulimavu campus.",
+      "Christ University students at the Bannerghatta Road campus often need assignment print, exam form print, and placement CV print — see listed xerox shops near the Hulimavu campus.",
     keywords: [
       "print near christ university bannerghatta road",
       "xerox shop hulimavu",
@@ -486,7 +486,7 @@ const colleges: College[] = [
     lat: 13.0362625,
     lng: 77.5046094,
     intro:
-      "Christ University students at the Yeshwanthpur campus often need assignment print, project report print, and exam form print — see verified xerox shops near the Nagasandra campus.",
+      "Christ University students at the Yeshwanthpur campus often need assignment print, project report print, and exam form print — see listed xerox shops near the Nagasandra campus.",
     keywords: [
       "print near christ university yeshwanthpur",
       "xerox shop nagasandra",
@@ -507,7 +507,7 @@ const colleges: College[] = [
     lat: 12.9350817,
     lng: 77.5360407,
     intro:
-      "PES University students at the RR (Ring Road) campus often need assignment print, project report print, and placement CV print — see verified xerox shops near the Banashankari campus.",
+      "PES University students at the RR (Ring Road) campus often need assignment print, project report print, and placement CV print — see listed xerox shops near the Banashankari campus.",
     keywords: [
       "print near pes university rr campus",
       "xerox shop banashankari ring road",
@@ -528,7 +528,7 @@ const colleges: College[] = [
     lat: 12.9415076,
     lng: 77.5538015,
     intro:
-      "PES University students at the HN (Hanumanthanagar) campus often need assignment print, project report print, and exam form print — see verified xerox shops near the campus.",
+      "PES University students at the HN (Hanumanthanagar) campus often need assignment print, project report print, and exam form print — see listed xerox shops near the campus.",
     keywords: [
       "print near pes university hn campus",
       "xerox shop hanumanthanagar",
@@ -549,7 +549,7 @@ const colleges: College[] = [
     lat: 12.961148,
     lng: 77.5853956,
     intro:
-      "Jain University students at the JC Road campus often need assignment print, project report print, and exam form print — see verified xerox shops near the campus.",
+      "Jain University students at the JC Road campus often need assignment print, project report print, and exam form print — see listed xerox shops near the campus.",
     keywords: [
       "print near jain university jc road",
       "xerox shop jc road bangalore",
@@ -570,7 +570,7 @@ const colleges: College[] = [
     lat: 12.9181777,
     lng: 77.5918934,
     intro:
-      "Jain University School of Commerce students at the Jayanagar campus often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.",
+      "Jain University School of Commerce students at the Jayanagar campus often need assignment print, project report print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near jain university jayanagar",
       "xerox shop jayanagar 9th block",
@@ -591,7 +591,7 @@ const colleges: College[] = [
     lat: 12.9603204,
     lng: 77.5872078,
     intro:
-      "Jain University Center for Management Studies students at the Lalbagh Road campus often need assignment print, case study print, and placement CV print — see verified xerox shops near the campus.",
+      "Jain University Center for Management Studies students at the Lalbagh Road campus often need assignment print, case study print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near jain university lalbagh road",
       "xerox shop lalbagh road jain",
@@ -612,7 +612,7 @@ const colleges: College[] = [
     lat: 12.9802926,
     lng: 77.5779779,
     intro:
-      "Jain University CMS Business School students at the Gandhi Nagar campus often need assignment print, case study print, and placement CV print — see verified xerox shops near the campus.",
+      "Jain University CMS Business School students at the Gandhi Nagar campus often need assignment print, case study print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near jain university gandhi nagar",
       "xerox shop gandhi nagar bangalore",
@@ -633,7 +633,7 @@ const colleges: College[] = [
     lat: 12.951415,
     lng: 77.5701985,
     intro:
-      "Jain University School of Law students at the Shankarapuram campus often need assignment print, moot memo print, and exam form print — see verified xerox shops near the campus.",
+      "Jain University School of Law students at the Shankarapuram campus often need assignment print, moot memo print, and exam form print — see listed xerox shops near the campus.",
     keywords: [
       "print near jain university shankarapuram",
       "xerox shop shankarapuram bangalore",
@@ -654,7 +654,7 @@ const colleges: College[] = [
     lat: 12.9551694,
     lng: 77.5742917,
     intro:
-      "BIT students on K.R. Road often need project report print, IEEE paper print, and placement CV print — see verified xerox shops near the BIT campus.",
+      "BIT students on K.R. Road often need project report print, IEEE paper print, and placement CV print — see listed xerox shops near the BIT campus.",
     keywords: [
       "print near bit bangalore",
       "xerox shop vv puram",
@@ -675,7 +675,7 @@ const colleges: College[] = [
     lat: 12.9030297,
     lng: 77.5047442,
     intro:
-      "JSSATE students near Srinivaspura often need assignment print, lab manual print, and project report print — see verified xerox shops near the JSSATE campus.",
+      "JSSATE students near Srinivaspura often need assignment print, lab manual print, and project report print — see listed xerox shops near the JSSATE campus.",
     keywords: [
       "print near jssate bangalore",
       "xerox shop srinivaspura",
@@ -696,7 +696,7 @@ const colleges: College[] = [
     lat: 12.9020479,
     lng: 77.5178374,
     intro:
-      "RNSIT students near Channasandra often need assignment print, project report print, and placement CV print — see verified xerox shops near the RNSIT campus.",
+      "RNSIT students near Channasandra often need assignment print, project report print, and placement CV print — see listed xerox shops near the RNSIT campus.",
     keywords: [
       "print near rnsit bangalore",
       "xerox shop channasandra",
@@ -717,7 +717,7 @@ const colleges: College[] = [
     lat: 13.0676453,
     lng: 77.5044708,
     intro:
-      "Sapthagiri College of Engineering students near Chikkasandra often need assignment print, project report print, and lab manual print — see verified xerox shops near the campus.",
+      "Sapthagiri College of Engineering students near Chikkasandra often need assignment print, project report print, and lab manual print — see listed xerox shops near the campus.",
     keywords: [
       "print near sapthagiri college of engineering",
       "xerox shop chikkasandra",
@@ -738,7 +738,7 @@ const colleges: College[] = [
     lat: 12.9636721,
     lng: 77.5060307,
     intro:
-      "Dr. AIT students near Mallathahalli often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.",
+      "Dr. AIT students near Mallathahalli often need assignment print, project report print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near dr ait bangalore",
       "xerox shop mallathahalli",
@@ -759,7 +759,7 @@ const colleges: College[] = [
     lat: 12.9236217,
     lng: 77.5274567,
     intro:
-      "Global Academy of Technology students in Rajarajeshwari Nagar often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.",
+      "Global Academy of Technology students in Rajarajeshwari Nagar often need assignment print, project report print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near global academy of technology",
       "xerox shop rajarajeshwari nagar",
@@ -780,7 +780,7 @@ const colleges: College[] = [
     lat: 12.9006655,
     lng: 77.4972069,
     intro:
-      "SJBIT students at BGS Health & Education City often need assignment print, project report print, and placement CV print — see verified xerox shops near the Kengeri campus.",
+      "SJBIT students at BGS Health & Education City often need assignment print, project report print, and placement CV print — see listed xerox shops near the Kengeri campus.",
     keywords: [
       "print near sjbit bangalore",
       "xerox shop kengeri bgs campus",
@@ -801,7 +801,7 @@ const colleges: College[] = [
     lat: 12.9016798,
     lng: 77.6313057,
     intro:
-      "Oxford College of Engineering students in Bommanahalli often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.",
+      "Oxford College of Engineering students in Bommanahalli often need assignment print, project report print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near oxford college of engineering",
       "xerox shop bommanahalli",
@@ -822,7 +822,7 @@ const colleges: College[] = [
     lat: 13.1341876,
     lng: 77.5693927,
     intro:
-      "BMSIT&M students near Yelahanka often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.",
+      "BMSIT&M students near Yelahanka often need assignment print, project report print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near bmsit bangalore",
       "xerox shop avalahalli yelahanka",
@@ -843,7 +843,7 @@ const colleges: College[] = [
     lat: 13.0375716,
     lng: 77.6197085,
     intro:
-      "HKBK College of Engineering students near Nagawara often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.",
+      "HKBK College of Engineering students near Nagawara often need assignment print, project report print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near hkbk college of engineering",
       "xerox shop nagawara",
@@ -864,7 +864,7 @@ const colleges: College[] = [
     lat: 13.0325175,
     lng: 77.592124,
     intro:
-      "Atria Institute of Technology students near Hebbal often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.",
+      "Atria Institute of Technology students near Hebbal often need assignment print, project report print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near atria institute of technology",
       "xerox shop hebbal anandnagar",
@@ -885,7 +885,7 @@ const colleges: College[] = [
     lat: 12.8510801,
     lng: 77.5947149,
     intro:
-      "T John Institute of Technology students near Gottigere often need assignment print, project report print, and placement CV print — see verified xerox shops near the campus.",
+      "T John Institute of Technology students near Gottigere often need assignment print, project report print, and placement CV print — see listed xerox shops near the campus.",
     keywords: [
       "print near t john institute of technology",
       "xerox shop gottigere bannerghatta road",
@@ -906,7 +906,7 @@ const colleges: College[] = [
     lat: 12.9748663,
     lng: 77.5829672,
     intro:
-      "Bangalore University students at the Central College campus often need assignment print, exam form print, and project report print — see verified xerox shops near the campus.",
+      "Bangalore University students at the Central College campus often need assignment print, exam form print, and project report print — see listed xerox shops near the campus.",
     keywords: [
       "print near bangalore university central college",
       "xerox shop central college bangalore",
@@ -938,7 +938,7 @@ const colleges: College[] = [
     lat: 17.4929968,
     lng: 78.3911945,
     intro:
-      "JNTUH students printing project reports, seminar papers, and placement resumes frequently compare xerox shops around Kukatpally — see verified print shops near the JNTUH campus.",
+      "JNTUH students printing project reports, seminar papers, and placement resumes frequently compare xerox shops around Kukatpally — see listed print shops near the JNTUH campus.",
     keywords: [
       "print near jntuh kukatpally",
       "xerox shop jntuh hyderabad",
@@ -959,7 +959,7 @@ const colleges: College[] = [
     lat: 17.4371175,
     lng: 78.4609302,
     intro:
-      "St. Francis College students printing assignments, project reports, and exam forms often need a xerox shop near Begumpet — see verified print shops within 1.5 km of the campus.",
+      "St. Francis College students printing assignments, project reports, and exam forms often need a xerox shop near Begumpet — see listed print shops within 1.5 km of the campus.",
     keywords: [
       "print near st francis college begumpet",
       "xerox shop st francis college hyderabad",
@@ -980,7 +980,7 @@ const colleges: College[] = [
     lat: 17.3822473,
     lng: 78.4828573,
     intro:
-      "Osmania Medical College students printing case studies, thesis chapters, and lab reports frequently use xerox shops around Koti and Troop Bazaar — see verified print shops near the campus.",
+      "Osmania Medical College students printing case studies, thesis chapters, and lab reports frequently use xerox shops around Koti and Troop Bazaar — see listed print shops near the campus.",
     keywords: [
       "print near osmania medical college",
       "xerox shop koti hyderabad",
@@ -1001,7 +1001,7 @@ const colleges: College[] = [
     lat: 17.4225149,
     lng: 78.4540769,
     intro:
-      "NIMS students and staff printing case records, research papers, and admission forms often need a xerox shop near Punjagutta — see verified print shops within 1.5 km of the campus.",
+      "NIMS students and staff printing case records, research papers, and admission forms often need a xerox shop near Punjagutta — see listed print shops within 1.5 km of the campus.",
     keywords: [
       "print near nims hyderabad",
       "xerox shop punjagutta",
@@ -1022,7 +1022,7 @@ const colleges: College[] = [
     lat: 17.3978101,
     lng: 78.4757508,
     intro:
-      "Nizam College students printing assignments, project reports, and exam forms frequently compare xerox shops around Basheer Bagh and Gun Foundry — see verified print shops near the campus.",
+      "Nizam College students printing assignments, project reports, and exam forms frequently compare xerox shops around Basheer Bagh and Gun Foundry — see listed print shops near the campus.",
     keywords: [
       "print near nizam college hyderabad",
       "xerox shop basheer bagh",
@@ -1043,7 +1043,7 @@ const colleges: College[] = [
     lat: 17.4189196,
     lng: 78.5265197,
     intro:
-      "Osmania University students printing assignments, research papers, and exam forms often need a xerox shop near the Tarnaka campus — see verified print shops within 1.5 km.",
+      "Osmania University students printing assignments, research papers, and exam forms often need a xerox shop near the Tarnaka campus — see listed print shops within 1.5 km.",
     keywords: [
       "print near osmania university",
       "xerox shop tarnaka hyderabad",
@@ -1064,7 +1064,7 @@ const colleges: College[] = [
     lat: 17.3889952,
     lng: 78.4952637,
     intro:
-      "Badruka College students printing assignments, project reports, and exam forms frequently use xerox shops around Kachiguda — see verified print shops near the campus.",
+      "Badruka College students printing assignments, project reports, and exam forms frequently use xerox shops around Kachiguda — see listed print shops near the campus.",
     keywords: [
       "print near badruka college",
       "xerox shop kachiguda hyderabad",
@@ -1094,7 +1094,7 @@ const colleges: College[] = [
     lat: 17.4072,
     lng: 78.5573,
     intro:
-      "Little Flower College students printing project submissions, internal exam papers, and lab reports can walk to over two dozen xerox shops on Tilak Road — see verified print shops near the Uppal campus.",
+      "Little Flower College students printing project submissions, internal exam papers, and lab reports can walk to over two dozen xerox shops on Tilak Road — see listed print shops near the Uppal campus.",
     keywords: [
       "print near little flower college uppal",
       "xerox shop tilak road uppal hyderabad",
@@ -1117,7 +1117,7 @@ const colleges: College[] = [
     lat: 17.4857,
     lng: 78.3656,
     intro:
-      "Aurobindo College students in the Kukatpally educational hub can walk to a dozen xerox shops within 1.5 km for project reports, assignment prints, and placement resumes — see all verified print shops near the Kukatpally campus.",
+      "Aurobindo College students in the Kukatpally educational hub can walk to a dozen xerox shops within 1.5 km for project reports, assignment prints, and placement resumes — see all listed print shops near the Kukatpally campus.",
     keywords: [
       "print near aurobindo college kukatpally",
       "xerox shop kukatpally hyderabad",
@@ -1140,7 +1140,7 @@ const colleges: College[] = [
     lat: 17.4455,
     lng: 78.3493,
     intro:
-      "IIIT Hyderabad researchers and students printing conference papers, thesis drafts, and late-night assignments can reach several xerox shops within walking distance of the Gachibowli campus — see verified print shops near IIIT Hyderabad.",
+      "IIIT Hyderabad researchers and students printing conference papers, thesis drafts, and late-night assignments can reach several xerox shops within walking distance of the Gachibowli campus — see listed print shops near IIIT Hyderabad.",
     keywords: [
       "print near iiit hyderabad gachibowli",
       "thesis printing iiit hyderabad",
@@ -1163,7 +1163,7 @@ const colleges: College[] = [
     lat: 17.4276,
     lng: 78.3426,
     intro:
-      "HCUH Kukatpally students looking for nearby print shops can reach several xerox and stationery shops within 1.5 km of campus — see verified print shops in the Financial District / Gachibowli corridor.",
+      "HCUH Kukatpally students looking for nearby print shops can reach several xerox and stationery shops within 1.5 km of campus — see listed print shops in the Financial District / Gachibowli corridor.",
     keywords: [
       "print near hcuh kukatpally",
       "xerox shop financial district hyderabad",
@@ -1186,7 +1186,7 @@ const colleges: College[] = [
     lat: 17.4279,
     lng: 78.3764,
     intro:
-      "NIFT Hyderabad fashion design students printing portfolio documents, assignment sheets, and project boards have several print and xerox shops within walking distance of the Raidurgam campus — see verified print shops near NIFT Hyderabad.",
+      "NIFT Hyderabad fashion design students printing portfolio documents, assignment sheets, and project boards have several print and xerox shops within walking distance of the Raidurgam campus — see listed print shops near NIFT Hyderabad.",
     keywords: [
       "print near nift hyderabad raidurgam",
       "xerox shop raidurgam hyderabad",

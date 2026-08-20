@@ -10,7 +10,7 @@ wordCount: 458
 
 ## About this place
 
-Chickpet is the wholesale textile and gold jewellery heart of old Bengaluru, a kilometre of cramped lanes running from the KR Market side to the Avenue Road junction. The 560053 pin code covers the main Chickpet market; the 560079 pin code covers the Avenue Road flank and the loading side that faces the City Market. The streets fill with saree traders, jewellery shops, and the auto-rickshaws that thread through them from 8am to 9pm. It is, by some distance, the most print-dependent single locality in the city — and the 1 verified xerox and print shop in Chickpet, Bangalore (560053, 560079) is the only one currently showing up on the standard maps pull. Top-rated is Shilpa Prints (XEROX) at 3.9 stars.
+Chickpet is the wholesale textile and gold jewellery heart of old Bengaluru, a kilometre of cramped lanes running from the KR Market side to the Avenue Road junction. The 560053 pin code covers the main Chickpet market; the 560079 pin code covers the Avenue Road flank and the loading side that faces the City Market. The streets fill with saree traders, jewellery shops, and the auto-rickshaws that thread through them from 8am to 9pm. It is, by some distance, the most print-dependent single locality in the city — and the 1 listed xerox and print shop in Chickpet, Bangalore (560053, 560079) is the only one currently showing up on the standard maps pull. Top-rated is Shilpa Prints (XEROX) at 3.9 stars.
 
 ## Getting here and around
 
@@ -26,4 +26,4 @@ The day-to-day list is unusual for a city — most of it is commercial printing:
 
 ## How Snaprint fits in
 
-Snaprint's rollout in Chickpet still has room to grow — the area's print demand is heavy and the verified shop count is currently thin. If you run a stationery or xerox shop in the market and want to host an S1 kiosk, the [setup page](/book) covers cost, expected footfall, and operator terms. For traders, the nearest kiosk is one tap away — visit [print-near chickpet](/print-near/chickpet) for directions and pricing.
+Snaprint's rollout in Chickpet still has room to grow — the area's print demand is heavy and the listed shop count is currently thin. If you run a stationery or xerox shop in the market and want to host an S1 kiosk, the [setup page](/book) covers cost, expected footfall, and operator terms. For traders, the nearest kiosk is one tap away — visit [print-near chickpet](/print-near/chickpet) for directions and pricing.

@@ -9,7 +9,7 @@ wordCount: 425
 ---
 ## About this place
 
-Deccan sits on the older western spine of Pune, where nineteenth-century Peshwa-era remnants give way to the modern hum of Garware Bridge and the fast pulse of FC Road's continuation. The neighborhood straddles two pin codes — 411004 to the north and 411001 along the older Deccan Gymkhana side — and reads like a working collage of middle-class housing colonies, coaching institutes, restaurants, and a thick belt of small commercial offices. Fifteen verified xerox and print shops anchor the daily paperwork grind of this part of town, which is why finding a working printer rarely means walking more than a few lanes.
+Deccan sits on the older western spine of Pune, where nineteenth-century Peshwa-era remnants give way to the modern hum of Garware Bridge and the fast pulse of FC Road's continuation. The neighborhood straddles two pin codes — 411004 to the north and 411001 along the older Deccan Gymkhana side — and reads like a working collage of middle-class housing colonies, coaching institutes, restaurants, and a thick belt of small commercial offices. Fifteen listed xerox and print shops anchor the daily paperwork grind of this part of town, which is why finding a working printer rarely means walking more than a few lanes.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The easiest entry is from Garware Bridge or the Jungli Maharaj Road flyover, bot
 
 ## Why printing demand is high here
 
-Coaching classes along Law College Road, the steady stream of applicants at Fergusson College's main gate, and the cluster of tax consultants near Prabhat Road keep the print wheels turning year-round. Add to that the residential colonies of Erandwane and Sahakar Nagar feeding in admissions, ration card, and property paperwork, and the queue at the copier barely thins. With 15 verified shops operating across 411004 and 411001, the area averages a strong 4.5-star rating, and Ravechi stationery and xerox is the current five-star favourite among locals who need clean colour prints on deadline.
+Coaching classes along Law College Road, the steady stream of applicants at Fergusson College's main gate, and the cluster of tax consultants near Prabhat Road keep the print wheels turning year-round. Add to that the residential colonies of Erandwane and Sahakar Nagar feeding in admissions, ration card, and property paperwork, and the queue at the copier barely thins. With 15 listed shops operating across 411004 and 411001, the area averages a strong 4.5-star rating, and Ravechi stationery and xerox is the current five-star favourite among locals who need clean colour prints on deadline.
 
 ## What people typically print here
 

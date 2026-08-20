@@ -9,7 +9,7 @@ wordCount: 449
 ---
 ## About this place
 
-JP Nagar stretches across the southern edge of Bengaluru as one of those rare neighbourhoods where lakes, parks and apartment towers share the same grid. Divided into nine phases and a handful of newer extensions, the locality grew out of the Bangalore Development Authority's 1980s layout and now hums with a settled, middle-class character. Broad boulevards lined with tamarind and rain trees run past temples, schools, weekly markets and the wide green bowl of JP Nagar's namesake park. Pin codes 560078, 560069 and 560041 cover most of the residential blocks and the bustling arterial roads. Twenty verified xerox and print shops dot the lanes here, a sign of just how much paperwork the area churns out every day.
+JP Nagar stretches across the southern edge of Bengaluru as one of those rare neighbourhoods where lakes, parks and apartment towers share the same grid. Divided into nine phases and a handful of newer extensions, the locality grew out of the Bangalore Development Authority's 1980s layout and now hums with a settled, middle-class character. Broad boulevards lined with tamarind and rain trees run past temples, schools, weekly markets and the wide green bowl of JP Nagar's namesake park. Pin codes 560078, 560069 and 560041 cover most of the residential blocks and the bustling arterial roads. Twenty listed xerox and print shops dot the lanes here, a sign of just how much paperwork the area churns out every day.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The Green Line metro stops at Yelachenahalli and Puttenahalli, both a short auto
 
 ## Why printing demand is high here
 
-A thick layer of coaching centres, tuition classes and small schools sits on top of the housing, which means project reports, worksheets and admit-card printouts never really stop. Layer in the corporates spilling out of Bannerghatta Road tech parks and the steady stream of real-estate, bank and government paperwork from residents — Aadhaar copies, lease agreements, passport photos — and the queue outside a xerox shop rarely thins. With twenty verified xerox and print shops already serving the area, competition stays sharp and turnaround stays quick, especially during the March and October exam windows when spiral binding jobs stack up on the counters.
+A thick layer of coaching centres, tuition classes and small schools sits on top of the housing, which means project reports, worksheets and admit-card printouts never really stop. Layer in the corporates spilling out of Bannerghatta Road tech parks and the steady stream of real-estate, bank and government paperwork from residents — Aadhaar copies, lease agreements, passport photos — and the queue outside a xerox shop rarely thins. With twenty listed xerox and print shops already serving the area, competition stays sharp and turnaround stays quick, especially during the March and October exam windows when spiral binding jobs stack up on the counters.
 
 ## What people typically print here
 

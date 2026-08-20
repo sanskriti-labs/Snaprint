@@ -9,7 +9,7 @@ wordCount: 494
 ---
 ## About this place
 
-Baner sits along the north-western edge of Pune, climbing up toward the hills that frame the Mumbai-Bangalore highway. What used to be a quiet Marathi-speaking village has, over the last fifteen years, turned into one of the city's most densely packed suburban corridors. Apartment towers now stand where mango orchards once did, and the road from Baner Phata to Sus Gaon has become a near-continuous strip of showrooms, cafes, co-working spaces and software offices. The locality is served by pin codes 411045 and 411069, and the area now sustains 19 verified xerox and print shops that locals rely on for everything from rent agreements to thesis drafts.
+Baner sits along the north-western edge of Pune, climbing up toward the hills that frame the Mumbai-Bangalore highway. What used to be a quiet Marathi-speaking village has, over the last fifteen years, turned into one of the city's most densely packed suburban corridors. Apartment towers now stand where mango orchards once did, and the road from Baner Phata to Sus Gaon has become a near-continuous strip of showrooms, cafes, co-working spaces and software offices. The locality is served by pin codes 411045 and 411069, and the area now sustains 19 listed xerox and print shops that locals rely on for everything from rent agreements to thesis drafts.
 
 ## Getting here and around
 

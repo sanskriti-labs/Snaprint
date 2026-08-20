@@ -9,7 +9,7 @@ wordCount: 476
 ---
 ## About this place
 
-Ejipura sits quietly on the eastern flank of Bengaluru, wedged between the older bustle of Koramangala and the tech sprawl of Indiranagar. Once a neighbourhood of small layouts and single-storey homes, it has grown dense over the last decade — apartment blocks now stand beside the older kirana shops and temples that have defined the area for generations. The locality carries pin code 560047 and blends a tight residential community with a steady commercial undercurrent of offices, coaching centres and small businesses. Eight verified xerox and print shops operate here, with Print Square Productions holding the top spot at five stars, and the broader average resting at 3.5 stars across the eight rated outlets.
+Ejipura sits quietly on the eastern flank of Bengaluru, wedged between the older bustle of Koramangala and the tech sprawl of Indiranagar. Once a neighbourhood of small layouts and single-storey homes, it has grown dense over the last decade — apartment blocks now stand beside the older kirana shops and temples that have defined the area for generations. The locality carries pin code 560047 and blends a tight residential community with a steady commercial undercurrent of offices, coaching centres and small businesses. Eight listed xerox and print shops operate here, with Print Square Productions holding the top spot at five stars, and the broader average resting at 3.5 stars across the eight rated outlets.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ The most common jobs at shops like Print Square Productions include B&W thesis p
 
 ## How Snaprint fits in
 
-Snaprint acts as a discovery layer over the existing print ecosystem in Ejipura rather than a replacement. Residents and students can browse the eight verified shops, compare ratings and order ahead for faster pickup. Shop owners interested in listing their services can [add their shop](/book) to reach more local customers. Students and office-goers looking for the closest option can [find a printer near Ejipura](/print-near/ejipura) and skip the walk-around.
+Snaprint acts as a discovery layer over the existing print ecosystem in Ejipura rather than a replacement. Residents and students can browse the eight listed shops, compare ratings and order ahead for faster pickup. Shop owners interested in listing their services can [add their shop](/book) to reach more local customers. Students and office-goers looking for the closest option can [find a printer near Ejipura](/print-near/ejipura) and skip the walk-around.

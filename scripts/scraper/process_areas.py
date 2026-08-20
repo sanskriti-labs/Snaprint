@@ -239,9 +239,9 @@ def make_intro(n, display_name, city_display, shops=(), pin_codes=()):
     with_phone = [s for s in shops if s.get("phone")]
     pin_txt = f" ({', '.join(pin_codes[:2])})" if pin_codes else ""
 
-    lead = (f"1 verified xerox and print shop in {display_name}, {city_display}{pin_txt}."
+    lead = (f"1 listed xerox and print shop in {display_name}, {city_display}{pin_txt}."
             if n == 1 else
-            f"{n} verified xerox and print shops in {display_name}, {city_display}{pin_txt}.")
+            f"{n} listed xerox and print shops in {display_name}, {city_display}{pin_txt}.")
 
     if rated:
         best = max(rated, key=lambda s: (s.get("rating") or 0, s.get("reviews") or 0))

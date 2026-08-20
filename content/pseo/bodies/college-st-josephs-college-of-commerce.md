@@ -9,7 +9,7 @@ wordCount: 520
 ---
 ## About this place
 
-St. Joseph's College of Commerce sits on Brigade Road, one of central Bengaluru's oldest commercial arteries, where the institution has trained accountants, analysts and business graduates since the late nineteenth century. Run by the Bangalore Jesuit Educational Society, SJCC attracts a student body drawn heavily from the B.Com, BBA and economics streams, with a smaller cohort pursuing professional postgraduate diplomas. The campus is compact but central — surrounded by heritage buildings, garment stores and the constant footfall of shoppers from neighbouring M.G. Road, Residency Road and the lanes of Ashok Nagar. The campus falls within the 560001 pin code that defines old Bengaluru, and the seventeen verified xerox shops clustered around it form one of the densest student-printing belts in the city.
+St. Joseph's College of Commerce sits on Brigade Road, one of central Bengaluru's oldest commercial arteries, where the institution has trained accountants, analysts and business graduates since the late nineteenth century. Run by the Bangalore Jesuit Educational Society, SJCC attracts a student body drawn heavily from the B.Com, BBA and economics streams, with a smaller cohort pursuing professional postgraduate diplomas. The campus is compact but central — surrounded by heritage buildings, garment stores and the constant footfall of shoppers from neighbouring M.G. Road, Residency Road and the lanes of Ashok Nagar. The campus falls within the 560001 pin code that defines old Bengaluru, and the seventeen listed xerox shops clustered around it form one of the densest student-printing belts in the city.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ The closest metro stop is M.G. Road on the Purple Line, an eight-minute walk sou
 
 ## Why printing demand is high here
 
-College life at SJCC runs on paper. Continuous internal assessments, semester-end submissions, internship applications for the Big Four and consulting firms, and the endless stream of certificates needed for placements all funnel through the printers on Brigade Road. The college's strict submission deadlines — typically two weeks before each exam cycle — create sharp demand spikes. With seventeen verified shops in the immediate vicinity, students have options, but queues build fast between 9 and 11 a.m. when the morning batch rushes between lectures. Deezire Xerox shop, the top-rated outlet on the strip at 4.2 stars, regularly fields long lines of commerce students clutching binders full of journal entries and balance sheets.
+College life at SJCC runs on paper. Continuous internal assessments, semester-end submissions, internship applications for the Big Four and consulting firms, and the endless stream of certificates needed for placements all funnel through the printers on Brigade Road. The college's strict submission deadlines — typically two weeks before each exam cycle — create sharp demand spikes. With seventeen listed shops in the immediate vicinity, students have options, but queues build fast between 9 and 11 a.m. when the morning batch rushes between lectures. Deezire Xerox shop, the top-rated outlet on the strip at 4.2 stars, regularly fields long lines of commerce students clutching binders full of journal entries and balance sheets.
 
 ## What people typically print here
 

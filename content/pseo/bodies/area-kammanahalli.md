@@ -9,7 +9,7 @@ wordCount: 509
 ---
 ## About this place
 
-Kammanahalli is an established East Bengaluru neighbourhood with a character shaped by apartment streets, independent homes, busy commercial corridors and steady student traffic. Its better-known stretches are lined with eateries, retailers and professional services, while quieter pockets retain a distinctly residential feel. The locality’s reach is reflected in PIN codes 560084 and 560043, which also cover busy adjoining neighbourhoods. Snaprint’s directory lists 12 verified xerox and print shops, giving residents, students and office visitors several dependable options. The area averages 4.6★ across 12 rated shops, with SCP Digital Xerox Shop and Xerox Shop both listed at 5★. Available services include black-and-white and colour prints, spiral binding, lamination and scanning.
+Kammanahalli is an established East Bengaluru neighbourhood with a character shaped by apartment streets, independent homes, busy commercial corridors and steady student traffic. Its better-known stretches are lined with eateries, retailers and professional services, while quieter pockets retain a distinctly residential feel. The locality’s reach is reflected in PIN codes 560084 and 560043, which also cover busy adjoining neighbourhoods. Snaprint’s directory lists 12 listed xerox and print shops, giving residents, students and office visitors several dependable options. The area averages 4.6★ across 12 rated shops, with SCP Digital Xerox Shop and Xerox Shop both listed at 5★. Available services include black-and-white and colour prints, spiral binding, lamination and scanning.
 
 ## Getting here and around
 

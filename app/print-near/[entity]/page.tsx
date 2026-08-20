@@ -37,7 +37,7 @@ function shopNoun(count: number): string {
 }
 
 function shopsPhrase(count: number): string {
-  return count === 1 ? "verified xerox and print shop" : "verified xerox and print shops";
+  return count === 1 ? "listed xerox and print shop" : "listed xerox and print shops";
 }
 
 export function generateMetadata({
@@ -176,16 +176,19 @@ export default async function EntityPage({
             addressCountry: "IN",
           },
         },
-        // Per-shop LocalBusiness nodes — one per verified shop within radius.
+        // Per-shop LocalBusiness nodes — one per listed shop within radius.
         // Gives each shop its own @id so search engines and AI extractors can
         // disambiguate them. Only emitted when getShopsNearCollege returns
         // data; for pages with 0 nearby shops we skip the loop entirely.
+        // These are independent third-party businesses discovered via public
+        // listings, not Snaprint customers or partners — no parentOrganization
+        // link to Snaprint's Organization node.
         ...(nearbyShops.length > 0
           ? nearbyShops.map((loc, i) => ({
               "@type": "LocalBusiness",
               "@id": `${SITE_URL}/#shop-${college.slug}-${i}`,
               name: loc.name,
-              description: `${loc.name} is one of the verified print shops in ${getCityName(college.city)}. Services include B&W and colour prints, spiral binding, lamination, and scanning.`,
+              description: `${loc.name} is one of the listed print shops in ${getCityName(college.city)}. Services include B&W and colour prints, spiral binding, lamination, and scanning.`,
               ...(loc.placeId
                 ? { url: `https://www.google.com/maps/place/?q=place_id:${loc.placeId}` }
                 : {}),
@@ -215,7 +218,6 @@ export default async function EntityPage({
                     },
                   }
                 : {}),
-              parentOrganization: { "@id": `${SITE_URL}/#organization` },
             }))
           : []),
         // BreadcrumbList — inserts the parent city crumb once it's published
@@ -265,57 +267,48 @@ export default async function EntityPage({
     const faqs = getLocationFaqs("area", params.entity, area.presence);
 
     const areaLocations = area.liveLocations ?? [];
-    // Fallback anchor for the parent node's address/geo/telephone — only
-    // used when it exists, and always taken as a whole so the three fields
-    // describe the same real place instead of mixing one shop's coordinates
-    // with a street-less, area-wide address.
-    const firstLoc = areaLocations[0];
     const jsonLd = {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
+          // A directory of listed shops is a collection, not itself a
+          // business — CollectionPage + ItemList, not LocalBusiness. This
+          // node describes the page; the real businesses are the per-shop
+          // LocalBusiness nodes below, each with its own @id.
+          "@type": "CollectionPage",
           "@id": `${SITE_URL}/#location-${area.slug}`,
           name: `Print and xerox shops in ${area.name}, ${getCityName(area.city)}`,
           description: area.intro,
           url: `${SITE_URL}/print-near/${area.slug}`,
           image: `${SITE_URL}/og.png`,
-          address: {
-            "@type": "PostalAddress",
-            ...(firstLoc ? { streetAddress: firstLoc.address } : {}),
-            addressLocality: area.name,
-            addressRegion: getCityState(area.city),
-            addressCountry: "IN",
-            ...(area.pinCodes?.[0] ? { postalCode: area.pinCodes[0] } : {}),
-          },
-          ...(firstLoc?.lat && firstLoc?.lng
+          isPartOf: { "@id": `${SITE_URL}/#website` },
+          ...(areaLocations.length > 0
             ? {
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: firstLoc.lat,
-                  longitude: firstLoc.lng,
+                mainEntity: {
+                  "@type": "ItemList",
+                  itemListElement: areaLocations.map((_loc, i) => ({
+                    "@type": "ListItem",
+                    position: i + 1,
+                    item: { "@id": `${SITE_URL}/#shop-${area.slug}-${i}` },
+                  })),
                 },
               }
             : {}),
-          ...(firstLoc?.phone ? { telephone: firstLoc.phone } : {}),
-          // Parent summary node — kept as a stable @id that does NOT depend
-          // on individual shop entries, so removing a shop from liveLocations
-          // doesn't orphan the page-level node. Per-shop nodes below carry
-          // their own verifiable address/geo/telephone.
-          areaServed: { "@id": `${SITE_URL}/#organization` },
-          parentOrganization: { "@id": `${SITE_URL}/#organization` },
         },
         // Per-shop LocalBusiness nodes — one per liveLocation. Each carries
         // its own @id so search engines and AI extractors can index the
         // individual shop entity. For areas with 0 liveLocations the map
         // returns an empty array and no per-shop nodes are emitted, leaving
-        // the parent summary node as the only LocalBusiness in the graph.
+        // the parent CollectionPage node as the only node in the graph.
+        // These are independent third-party businesses discovered via public
+        // listings, not Snaprint customers or partners — no parentOrganization
+        // link to Snaprint's Organization node.
         ...(areaLocations.length > 0
           ? areaLocations.map((loc, i) => ({
               "@type": "LocalBusiness",
               "@id": `${SITE_URL}/#shop-${area.slug}-${i}`,
               name: loc.name,
-              description: `${loc.name} is one of the verified print shops in ${area.name}, ${getCityName(area.city)}. Services include B&W and colour prints, spiral binding, lamination, and scanning.`,
+              description: `${loc.name} is one of the listed print shops in ${area.name}, ${getCityName(area.city)}. Services include B&W and colour prints, spiral binding, lamination, and scanning.`,
               ...(loc.placeId
                 ? { url: `https://www.google.com/maps/place/?q=place_id:${loc.placeId}` }
                 : {}),
@@ -346,7 +339,6 @@ export default async function EntityPage({
                     },
                   }
                 : {}),
-              parentOrganization: { "@id": `${SITE_URL}/#organization` },
             }))
           : []),
         // BreadcrumbList — inserts the parent city crumb once it's published

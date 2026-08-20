@@ -9,7 +9,7 @@ wordCount: 467
 ---
 ## About this place
 
-Kurla sits on the seam between Mumbai's eastern suburbs and the harbour line, one of those neighbourhoods that never quite stops moving. Half of it is dense residential chawls and SRA towers, the other half is a logistics and wholesale district that keeps trucks rumbling through the narrow lanes of 400070 and 400024 well past midnight. The neighbourhood grew fast in the post-liberalisation years and never quite consolidated into a single identity — you find onion-potato vendors side-by-side with mobile phone repair shops, old Irani cafes that have survived three generations, and a steadily expanding cluster of 20 verified xerox and print shops that residents actually trust.
+Kurla sits on the seam between Mumbai's eastern suburbs and the harbour line, one of those neighbourhoods that never quite stops moving. Half of it is dense residential chawls and SRA towers, the other half is a logistics and wholesale district that keeps trucks rumbling through the narrow lanes of 400070 and 400024 well past midnight. The neighbourhood grew fast in the post-liberalisation years and never quite consolidated into a single identity — you find onion-potato vendors side-by-side with mobile phone repair shops, old Irani cafes that have survived three generations, and a steadily expanding cluster of 20 listed xerox and print shops that residents actually trust.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ Standard fare is hard to find here because the mix is genuinely unusual. College
 
 ## How Snaprint fits in
 
-Snaprint plugs into this rather chaotic demand by listing every shop that has been verified, so a first-time visitor in 400070 knows exactly which place is open, rated, and capable of handling spiral binding or lamination without a second trip. Shop owners who want to be discovered by nearby footfall can [list their shop on Snaprint](/book), and students looking for quick turnaround near the station can start a job at [the Kurla print page](/print-near/kurla) before they even leave class.
+Snaprint plugs into this rather chaotic demand by listing every shop that has been listed, so a first-time visitor in 400070 knows exactly which place is open, rated, and capable of handling spiral binding or lamination without a second trip. Shop owners who want to be discovered by nearby footfall can [list their shop on Snaprint](/book), and students looking for quick turnaround near the station can start a job at [the Kurla print page](/print-near/kurla) before they even leave class.

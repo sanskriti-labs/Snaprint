@@ -25,7 +25,7 @@ function CountUp({ target, prefix = "", suffix = "", inView }: {
 }
 
 export type NetworkStats = {
-  /** Unique verified shops across every published area, deduped by placeId. */
+  /** Unique listed shops across every published area, deduped by placeId. */
   shops: number;
   /** Published area + college pages — one landing page per locality/campus. */
   locations: number;
@@ -89,7 +89,7 @@ export default function Hero({ network }: { network: NetworkStats }) {
 
           {/* Subheading — Inter body, editorial balance. Also part of LCP viewport, no fade-in. */}
           <p className="mb-3 max-w-[440px] font-body text-[17px] font-light leading-[1.78] text-[#6B6B66]">
-            {network.shops.toLocaleString("en-IN")} verified xerox and print shops across{" "}
+            {network.shops.toLocaleString("en-IN")} listed xerox and print shops across{" "}
             {network.cities} cities — B&amp;W, colour, binding and scanning.
           </p>
           {/* Serif accent line — Instrument Serif italic for rhythm */}
@@ -138,7 +138,7 @@ export default function Hero({ network }: { network: NetworkStats }) {
               <div className="font-display text-[32px] font-extrabold leading-none tracking-[-1.5px] text-[#111110]">
                 <CountUp target={network.shops} inView={statsInView} />
               </div>
-              <div className="mt-1.5 font-body text-[11px] text-[#AAAAAA]">verified shops</div>
+              <div className="mt-1.5 font-body text-[11px] text-[#AAAAAA]">listed shops</div>
             </div>
             <div>
               <div className="font-display text-[32px] font-extrabold leading-none tracking-[-1.5px] text-[#111110]">

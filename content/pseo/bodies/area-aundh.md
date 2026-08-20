@@ -9,7 +9,7 @@ wordCount: 492
 ---
 ## About this place
 
-Aundh is one of Pune’s busiest western suburbs, blending apartment neighbourhoods, independent businesses, coaching institutes, restaurants, and a growing cluster of corporate offices. Its development accelerated in the early 2000s, when better roads and IT-sector growth turned the area into a practical base for both families and professionals. The neighbourhood spans the 411007 and 411067 pin codes and has nine verified xerox and print shops. Aundh also contains the provenance-documented Pataleshwar rock-cut cave complex, an ancient landmark that predates the surrounding modern streets.
+Aundh is one of Pune’s busiest western suburbs, blending apartment neighbourhoods, independent businesses, coaching institutes, restaurants, and a growing cluster of corporate offices. Its development accelerated in the early 2000s, when better roads and IT-sector growth turned the area into a practical base for both families and professionals. The neighbourhood spans the 411007 and 411067 pin codes and has nine listed xerox and print shops. Aundh also contains the provenance-documented Pataleshwar rock-cut cave complex, an ancient landmark that predates the surrounding modern streets.
 
 ## Getting here and around
 
