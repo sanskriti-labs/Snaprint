@@ -125,8 +125,9 @@ export default function InstantPrintIndex() {
           Print and xerox shops, city by city.
         </h1>
         <p className="mb-6 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-          Pick a city to find the nearest Snaprint-enabled xerox shop — print,
-          copy, and scan from your phone in under 60 seconds.
+          Pick a city to find the nearest Snaprint-enabled scan and print kiosk
+          or self-service photocopy machine — print, copy, and scan from your
+          phone in under 60 seconds, many open 24/7 for document printing.
         </p>
 
         {/* Quick stats — concrete numbers help AI citability + skimming */}

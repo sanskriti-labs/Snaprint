@@ -57,4 +57,5 @@ AREA_KW = {
     "ecil":                (["ecil"],                                     "ECIL",                ["500062"]),
     "nizampet":            (["nizampet"],                                 "Nizampet",            ["500090", "500085"]),
     "alwal":               (["alwal"],                                    "Alwal",               ["500010", "500015"]),
+    "hafeezpet":           (["hafeezpet"],                                 "Hafeezpet",           ["500049"]),
 }

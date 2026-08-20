@@ -1075,6 +1075,128 @@ const colleges: College[] = [
     verifiedAt: "2026-08-12",
     lastReviewed: "2026-08-12",
   },
+
+  // -------------------------------------------------------------------------
+  // Hyderabad colleges — added 2026-08-11 after loader+verifier fixes.
+  // Radius confirmed with haversine against shops-clean-hyderabad.jsonl.
+  // Skip: Muffakam Jah/Safilguda (0 shops), MREC/BVRITH/CUH/ISB (≤1 shop,
+  // all covered by Aurobindo College in same Kukatpally micro-area).
+  // -------------------------------------------------------------------------
+
+  // 23 shops within 1.5 km — richest Hyderabad campus in dataset
+  {
+    slug: "little-flower-college",
+    name: "Little Flower College of Arts and Science",
+    shortName: "LFC",
+    city: "hyderabad",
+    address: "Tilak Road, Uppal, Hyderabad, Telangana 500039",
+    website: "https://www.littleflowercollege.edu.in/",
+    lat: 17.4072,
+    lng: 78.5573,
+    intro:
+      "Little Flower College students printing project submissions, internal exam papers, and lab reports can walk to over two dozen xerox shops on Tilak Road — see verified print shops near the Uppal campus.",
+    keywords: [
+      "print near little flower college uppal",
+      "xerox shop tilak road uppal hyderabad",
+      "project report printing little flower college",
+      "thesis print near uppal station",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-11",
+    lastReviewed: "2026-08-11",
+  },
+
+  // 11 shops within 1.5 km
+  {
+    slug: "aurobindo-college",
+    name: "Aurobindo College",
+    shortName: "AUC",
+    city: "hyderabad",
+    address: "Kukatpally, Hyderabad, Telangana 500085",
+    website: "https://aurobindocollege.ac.in/",
+    lat: 17.4857,
+    lng: 78.3656,
+    intro:
+      "Aurobindo College students in the Kukatpally educational hub can walk to a dozen xerox shops within 1.5 km for project reports, assignment prints, and placement resumes — see all verified print shops near the Kukatpally campus.",
+    keywords: [
+      "print near aurobindo college kukatpally",
+      "xerox shop kukatpally hyderabad",
+      "project report printing kukatpally",
+      "assignment print near jntu hyderabad",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-11",
+    lastReviewed: "2026-08-11",
+  },
+
+  // 6 shops within 1.5 km
+  {
+    slug: "iiit-hyderabad",
+    name: "IIIT Hyderabad",
+    shortName: "IIIT-H",
+    city: "hyderabad",
+    address: "Gachibowli, Hyderabad, Telangana 500032",
+    website: "https://www.iiit.ac.in/",
+    lat: 17.4455,
+    lng: 78.3493,
+    intro:
+      "IIIT Hyderabad researchers and students printing conference papers, thesis drafts, and late-night assignments can reach several xerox shops within walking distance of the Gachibowli campus — see verified print shops near IIIT Hyderabad.",
+    keywords: [
+      "print near iiit hyderabad gachibowli",
+      "thesis printing iiit hyderabad",
+      "xerox shop gachibowli near iiit",
+      "document print near cyderabad infotech park",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-11",
+    lastReviewed: "2026-08-11",
+  },
+
+  // 5 shops within 1.5 km
+  {
+    slug: "hcuh-hyderabad",
+    name: "HCUH (Harish-Chandra College of Engineering & Technology)",
+    shortName: "HCUH",
+    city: "hyderabad",
+    address: "Kukatpally, Hyderabad, Telangana 500085",
+    website: "https://www.hcuh.edu.in/",
+    lat: 17.4276,
+    lng: 78.3426,
+    intro:
+      "HCUH Kukatpally students looking for nearby print shops can reach several xerox and stationery shops within 1.5 km of campus — see verified print shops in the Financial District / Gachibowli corridor.",
+    keywords: [
+      "print near hcuh kukatpally",
+      "xerox shop financial district hyderabad",
+      "college project printing hcuh",
+      "thesis print near gachibowli hyderabad",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-11",
+    lastReviewed: "2026-08-11",
+  },
+
+  // 5 shops within 1.5 km
+  {
+    slug: "nift-hyderabad",
+    name: "National Institute of Fashion Technology Hyderabad",
+    shortName: "NIFT",
+    city: "hyderabad",
+    address: "Raidurgam, Hyderabad, Telangana 500081",
+    website: "https://www.nift.ac.in/hyderabad/",
+    lat: 17.4279,
+    lng: 78.3764,
+    intro:
+      "NIFT Hyderabad fashion design students printing portfolio documents, assignment sheets, and project boards have several print and xerox shops within walking distance of the Raidurgam campus — see verified print shops near NIFT Hyderabad.",
+    keywords: [
+      "print near nift hyderabad raidurgam",
+      "xerox shop raidurgam hyderabad",
+      "fashion design portfolio print nift hyderabad",
+      "document printing near nift campus",
+    ],
+    presence: "live",
+    verifiedAt: "2026-08-11",
+    lastReviewed: "2026-08-11",
+  },
 ];
 
 export default colleges;

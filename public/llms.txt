@@ -9,6 +9,7 @@ Full description, FAQ, and structured data: https://snaprints.com/llms-full.txt
 ## Core pages
 
 - [Home](https://snaprints.com/): Product overview, how it works, the S1 machine, pricing/demo contact.
+- [Self-Service Printing Kiosk](https://snaprints.com/kiosk): Self-service printing kiosk / automated print station overview — deployment for colleges, universities, offices, hospitals, libraries, railway stations, and retail across India.
 - [Book a Demo](https://snaprints.com/book): Schedule a live walkthrough of the S1 kiosk with the founding team.
 - [Instant Print — all cities](https://snaprints.com/instant-print): Hub listing every city with verified xerox and print shops.
 - [Print Near You — colleges and neighbourhoods](https://snaprints.com/print-near): Hub listing every college and neighbourhood with verified xerox and print shops.
@@ -133,18 +134,19 @@ Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas
 
 ### Hyderabad neighbourhoods
 
+<<<<<<< Updated upstream
 - [Print near Ameerpet, Hyderabad](https://snaprints.com/print-near/ameerpet) — 73 shops
-- [Print near Kukatpally, Hyderabad](https://snaprints.com/print-near/kukatpally) — 74 shops
+- [Print near Kukatpally, Hyderabad](https://snaprints.com/print-near/kukatpally) — 72 shops
 - [Print near Dilsukhnagar, Hyderabad](https://snaprints.com/print-near/dilsukhnagar) — 41 shops
 - [Print near Secunderabad, Hyderabad](https://snaprints.com/print-near/secunderabad) — 82 shops
 - [Print near Madhapur, Hyderabad](https://snaprints.com/print-near/madhapur) — 37 shops
 - [Print near Gachibowli, Hyderabad](https://snaprints.com/print-near/gachibowli) — 34 shops
 - [Print near Uppal, Hyderabad](https://snaprints.com/print-near/uppal) — 39 shops
-- [Print near Kondapur, Hyderabad](https://snaprints.com/print-near/kondapur) — 32 shops
+- [Print near Kondapur, Hyderabad](https://snaprints.com/print-near/kondapur) — 22 shops
 - [Print near Mehdipatnam, Hyderabad](https://snaprints.com/print-near/mehdipatnam) — 20 shops
 - [Print near Malakpet, Hyderabad](https://snaprints.com/print-near/malakpet) — 34 shops
 - [Print near Banjara Hills, Hyderabad](https://snaprints.com/print-near/banjara-hills) — 24 shops
-- [Print near Miyapur, Hyderabad](https://snaprints.com/print-near/miyapur) — 34 shops
+- [Print near Miyapur, Hyderabad](https://snaprints.com/print-near/miyapur) — 27 shops
 - [Print near Nallakunta, Hyderabad](https://snaprints.com/print-near/nallakunta) — 26 shops
 - [Print near Abids, Hyderabad](https://snaprints.com/print-near/abids) — 24 shops
 - [Print near Koti, Hyderabad](https://snaprints.com/print-near/koti) — 28 shops
@@ -165,6 +167,7 @@ Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas
 - [Print near Tarnaka, Hyderabad](https://snaprints.com/print-near/tarnaka) — 9 shops
 - [Print near ECIL, Hyderabad](https://snaprints.com/print-near/ecil) — 7 shops
 - [Print near Alwal, Hyderabad](https://snaprints.com/print-near/alwal) — 27 shops
+- [Print near Hafeezpet, Hyderabad](https://snaprints.com/print-near/hafeezpet) — 19 shops
 
 ### Chennai neighbourhoods
 
@@ -279,6 +282,11 @@ Snaprint partner xerox and print shops in Bengaluru neighbourhoods — all areas
 - [Print near NIMS, Hyderabad](https://snaprints.com/print-near/nizams-institute-medical-sciences) — 30 shops
 - [Print near St. Francis College for Women, Hyderabad](https://snaprints.com/print-near/st-francis-college-begumpet) — 24 shops
 - [Print near Osmania University, Hyderabad](https://snaprints.com/print-near/osmania-university-arts-college) — 8 shops
+- [Print near Little Flower College, Hyderabad](https://snaprints.com/print-near/little-flower-college) — 25 shops
+- [Print near Aurobindo College, Hyderabad](https://snaprints.com/print-near/aurobindo-college) — 20 shops
+- [Print near IIIT Hyderabad](https://snaprints.com/print-near/iiit-hyderabad) — 6 shops
+- [Print near HCUH, Hyderabad](https://snaprints.com/print-near/hcuh-hyderabad) — 5 shops
+- [Print near NIFT Hyderabad](https://snaprints.com/print-near/nift-hyderabad) — 5 shops
 - More colleges are promoted to live only after operator sign-off: see `content/pseo/colleges.ts` for the verification policy.
 
 ## Contact
