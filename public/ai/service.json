@@ -7,13 +7,16 @@
     "areaServed": "Bengaluru, India",
     "capabilities": [
       "Accepts document uploads via QR code scan",
-      "Processes payment before printing",
+      "Processes payment before printing (UPI, card)",
       "Prints via any connected printer brand (Canon, HP, Epson, Brother)",
       "Operates unattended, including outside shop hours",
       "Live order, revenue, and consumables dashboard for shop owners",
       "Encrypts uploaded files and deletes them after each print job"
     ],
+    "deploymentVerticals": ["Colleges", "Universities", "Offices", "Hospitals", "Libraries", "Railway stations", "Malls", "Retail stores"],
     "howToBuy": "https://snaprints.com/book",
-    "contact": "snaprints@sanskritilabs.in"
+    "learnMore": "https://snaprints.com/kiosk",
+    "contact": "snaprints@sanskritilabs.in",
+    "community": "https://www.reddit.com/r/Snaprint/"
   }
 }

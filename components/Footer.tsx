@@ -14,6 +14,7 @@ export default function Footer() {
         { label: "The S1 kiosk", href: "#machine" },
         { label: "Results", href: "#testimonials" },
         { label: "Pricing", href: "/pricing" },
+        { label: "Kiosk for business", href: "/kiosk" },
         { label: "Franchise", href: "/franchise" },
       ],
     },
@@ -32,6 +33,8 @@ export default function Footer() {
         { label: "Book a Demo", href: "/book" },
         { label: "Request a Quote", href: "mailto:snaprints@sanskritilabs.in?subject=Quote Request" },
         { label: "snaprints@sanskritilabs.in", href: "mailto:snaprints@sanskritilabs.in" },
+        { label: "Instagram", href: "https://www.instagram.com/snaprints.labs/" },
+        { label: "r/Snaprint", href: "https://www.reddit.com/r/Snaprint/" },
       ],
     },
   ];

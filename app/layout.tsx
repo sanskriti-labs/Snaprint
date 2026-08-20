@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   description:
     "Find verified xerox and print shops near you across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding, scanning — open now.",
-  keywords: ["xerox shop near me", "print shop near me", "printout near me", "photocopy near me", "print kiosk", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "self-service printing"],
+  keywords: ["xerox shop near me", "print shop near me", "printout near me", "photocopy near me", "print kiosk", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "self-service printing", "self service printing kiosk", "automated printing kiosk India", "printing kiosk for colleges", "document printing kiosk"],
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
@@ -92,7 +92,7 @@ const jsonLd = {
       name: "Snaprint",
       url: siteUrl,
       logo: `${siteUrl}/icon-512.png`,
-      description: "Snaprint builds self-service print kiosks that turn xerox shops into 24/7 remote printing hubs.",
+      description: "Snaprint builds self-service printing kiosks — automated print stations that turn xerox shops into 24/7 remote printing hubs, and deploy as document printing kiosks for colleges, offices, hospitals, libraries, and retail across India.",
       email: "snaprints@sanskritilabs.in",
       contactPoint: {
         "@type": "ContactPoint",
@@ -100,12 +100,21 @@ const jsonLd = {
         contactType: "customer service",
         areaServed: "IN",
       },
+      knowsAbout: [
+        "Self-service printing kiosk",
+        "Automated printing kiosk",
+        "Document printing kiosk",
+        "QR code printing",
+        "UPI printing kiosk",
+      ],
       // TODO(KG): once Snaprint has Crunchbase + F6S + Justdial + Wikidata
-      // entries, uncomment them here. LinkedIn (verified) is the only
-      // authoritative sameAs today.
+      // entries, uncomment them here. LinkedIn, Instagram, and Reddit
+      // (verified) are the only authoritative sameAs today.
       sameAs: [
-        "https://www.linkedin.com/showcase/snaprints/",
+        "https://www.linkedin.com/company/snaprintss/",
         "https://www.linkedin.com/company/sanskriti-labs/",
+        "https://www.instagram.com/snaprints.labs/",
+        "https://www.reddit.com/r/Snaprint/",
         // TODO: uncomment after creating profile at https://www.crunchbase.com/organization/snaprint
         // "https://www.crunchbase.com/organization/snaprint",
         // TODO: uncomment after verifying the F6S URL exists (claimed in GSC serps)
