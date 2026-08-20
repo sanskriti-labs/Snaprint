@@ -113,16 +113,12 @@ export default function AboutPage() {
             Where we operate
           </h2>
           <p className="mb-4 font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-            Snaprint is deployed across Bengaluru, with live kiosks in
-            Koramangala, Indiranagar, Whitefield, HSR Layout, Electronic City,
-            MG Road, Jayanagar, BTM Layout, Marathahalli, Frazer Town, and
-            Shivajinagar. Expansion to other Indian cities is planned for 2026
-            and 2027.
+            Snaprint&apos;s rollout is currently focused on Bengaluru and Hyderabad. Five more kiosks
+            are being installed across Bengaluru, going live by 5 September 2026.
           </p>
           <p className="mb-4 font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-            See the <Link href="/print-near" className="text-[#E63946] underline-offset-4 hover:underline">Print Near You hub</Link> for
-            currently live neighbourhoods, or the <Link href="/instant-print" className="text-[#E63946] underline-offset-4 hover:underline">city hub</Link> for
-            a city-level view.
+            See the <Link href="/find-snaprint" className="text-[#E63946] underline-offset-4 hover:underline">Find Snaprint page</Link> for
+            the current, up-to-date list of live and upcoming kiosk locations.
           </p>
         </section>
 

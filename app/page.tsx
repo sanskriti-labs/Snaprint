@@ -1,51 +1,17 @@
 import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
-import Marquee from "@/components/sections/Marquee";
 import Footer from "@/components/Footer";
-import {
-  getAllAreaSlugs,
-  getAllCollegeSlugs,
-  getAllCitySlugs,
-  getArea,
-} from "@/content/pseo/seo";
-
-/**
- * Directory scale, counted from the published pSEO data at build time
- * rather than hardcoded in the hero.
- *
- * The hero states these numbers to searchers, and the shop index is
- * regenerated whenever `scripts/scraper/process_areas.py` runs — a literal
- * would silently become a false claim the next time an area gains or loses
- * coverage. Deduped by placeId because one shop can be listed under two
- * overlapping areas; the name+address fallback matches getShopsInCity.
- *
- * Server-side only: this runs in the Server Component, and Hero receives
- * plain numbers as props so it stays a client component.
- */
-function getNetworkStats() {
-  const areaSlugs = getAllAreaSlugs();
-  const shops = new Set<string>();
-  for (const slug of areaSlugs) {
-    for (const shop of getArea(slug)?.liveLocations ?? []) {
-      shops.add(shop.placeId ?? `${shop.name}|${shop.address}`);
-    }
-  }
-  return {
-    shops: shops.size,
-    locations: areaSlugs.length + getAllCollegeSlugs().length,
-    cities: getAllCitySlugs().length,
-  };
-}
 
 // Below-the-fold sections: deferred so their JS (incl. framer-motion) doesn't
 // block initial paint of the hero — this was the render-blocking bundle
 // PageSpeed flagged (109 KiB unused JS on first load).
 const Problem = dynamic(() => import("@/components/sections/Problem"));
 const HowItWorks = dynamic(() => import("@/components/sections/HowItWorks"));
+const AppShowcase = dynamic(() => import("@/components/sections/AppShowcase"));
 const Why = dynamic(() => import("@/components/sections/Why"));
 const MachineSpecs = dynamic(() => import("@/components/sections/MachineSpecs"));
-const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
+const Pricing = dynamic(() => import("@/components/sections/Pricing"));
 const CtaFinal = dynamic(() => import("@/components/sections/CtaFinal"));
 
 const SITE_URL = "https://snaprints.com";
@@ -62,15 +28,15 @@ const jsonLd = {
       "@id": `${SITE_URL}/#product-s1`,
       name: "Snaprint S1",
       description:
-        "Self-service print kiosk that connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present.",
+        "Self-service print kiosk you buy once and own outright — connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present. Available in three models: S1, S1 Pro, S1 Pro Max.",
       brand: { "@id": `${SITE_URL}/#organization` },
       image: `${SITE_URL}/og.png`,
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "INR",
-        lowPrice: "300000",
-        highPrice: "350000",
-        offerCount: "1",
+        lowPrice: "84999",
+        highPrice: "299999",
+        offerCount: "3",
         availability: "https://schema.org/InStock",
         url: SITE_URL,
       },
@@ -122,10 +88,10 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          name: "How do shop owners track orders and revenue?",
+          name: "How do owners track orders and revenue?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Every order, along with revenue, print counts, and ink and paper status, is visible on a live dashboard on the shop owner's phone.",
+            text: "Every order, along with revenue, print counts, and ink and paper status, is visible on a live dashboard on the owner's phone.",
           },
         },
         {
@@ -149,13 +115,13 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <Hero network={getNetworkStats()} />
-      <Marquee />
+      <Hero />
       <Problem />
       <HowItWorks />
+      <AppShowcase />
       <Why />
       <MachineSpecs />
-      <Testimonials />
+      <Pricing />
       <CtaFinal />
       <Footer />
     </main>

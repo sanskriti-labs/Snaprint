@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Machine3D from "@/components/Machine3D";
+import RevealText from "@/components/motion/RevealText";
 
 // Bento cards — benefit-driven, not spec sheets
 const bentoCards = [
@@ -19,6 +20,11 @@ const bentoCards = [
     heading: "Files deleted after every print.",
     body: "End-to-end encrypted. Auto-deleted on completion. No document is ever stored.",
     accent: false,
+    points: [
+      "AES-256 encryption, in transit and at rest",
+      "Auto-purged within seconds of every print",
+      "No cloud copy, no shop-side archive — ever",
+    ],
   },
   {
     size: "normal",
@@ -70,6 +76,22 @@ function BentoCard({ card, index, inView }: { card: typeof bentoCards[0]; index:
         {card.body}
       </p>
 
+      {/* Fills the tall card's extra vertical space (it spans 2 grid rows but the
+          heading/body alone left it visibly empty below) with concrete privacy
+          assurances rather than blank padding. */}
+      {"points" in card && card.points && (
+        <ul className="mt-6 flex flex-col gap-3">
+          {card.points.map((pt) => (
+            <li key={pt} className="flex items-start gap-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E63946" strokeWidth="2.5" className="mt-0.5 flex-shrink-0" aria-hidden>
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              <span className="font-body text-[13px] font-light leading-[1.5] text-[rgba(255,255,255,0.55)]">{pt}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
       {/* Accent glow on red card */}
       {card.accent && (
         <div className="pointer-events-none absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-white/10 blur-2xl" aria-hidden />
@@ -102,22 +124,20 @@ export default function MachineSpecs() {
         >
           The hardware
         </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.08 }}
-          className="mb-5 max-w-[500px] font-display font-extrabold leading-[1.04] tracking-[-2.5px] text-white"
-          style={{ fontSize: "clamp(30px,4vw,56px)" }}
+        <RevealText
+          as="h2"
+          split="word"
+          className="mb-5 block max-w-[500px] font-display text-display-lg font-extrabold text-white"
         >
-          The Snaprint S1. Engineered to run itself.
-        </motion.h2>
+          Every kiosk. Engineered to run itself.
+        </RevealText>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.14 }}
           className="mb-20 max-w-[440px] font-body text-[16px] font-light leading-[1.75] text-[rgba(255,255,255,0.42)]"
         >
-          Built for India&apos;s shop environment. Connects to any printer. Managed from your phone.
+          Same self-service engine on every model. Connects to any printer. Managed from your phone.
         </motion.p>
 
         {/* Machine + Bento layout */}
@@ -130,11 +150,14 @@ export default function MachineSpecs() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="lg:sticky lg:top-28 flex flex-col items-center"
           >
-            <Machine3D />
+            {/* Second placement reuses the same asset in a non-interactive, non-draggable
+                presentation — the hero holds the one live/interactive 3D instance on
+                the page (design-system §7 / craft-review item 8). */}
+            <Machine3D vignette interactive={false} scale={1.15} />
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
               {[["15.6″ Display", "touch panel"], ["176.8 cm", "kiosk height"], ["55 × 70 cm", "footprint"]].map(([v, l]) => (
                 <div key={l} className="text-center">
-                  <div className="font-display text-[14px] font-bold text-white">{v}</div>
+                  <div className="font-mono tabular-nums text-[14px] font-bold text-white">{v}</div>
                   <div className="font-body text-[10px] text-[rgba(255,255,255,0.3)]">{l}</div>
                 </div>
               ))}
@@ -161,7 +184,8 @@ export default function MachineSpecs() {
           </p>
           <a
             href="#contact"
-            className="flex-shrink-0 inline-flex items-center gap-2 rounded-[8px] bg-white px-7 py-3.5 font-display text-[13.5px] font-semibold text-[#111110] transition-all duration-200 hover:bg-[#E63946] hover:text-white hover:-translate-y-px"
+            data-magnetic="0.4"
+            className="flex-shrink-0 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-display text-[13.5px] font-semibold text-charcoal transition-colors duration-[--d-hover] ease-hover hover:bg-red hover:text-white"
           >
             Request a Demo
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">

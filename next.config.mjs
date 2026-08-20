@@ -2,6 +2,7 @@ import createMDX from "@next/mdx";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import remarkGfm from "remark-gfm";
+import createBundleAnalyzer from "@next/bundle-analyzer";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -24,4 +25,9 @@ const withMDX = createMDX({
   },
 });
 
-export default withMDX(nextConfig);
+// Run `ANALYZE=true pnpm build` to inspect bundle composition.
+const withBundleAnalyzer = createBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
+
+export default withBundleAnalyzer(withMDX(nextConfig));

@@ -3,10 +3,11 @@
 
 import { useState, useEffect, useMemo, useRef } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { DatePicker } from "@/components/book/DatePicker";
 import { TimeSlots } from "@/components/book/TimeSlots";
 import { Button } from "@/components/ui/Button";
+import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
+import Snappy from "@/components/mascot/Snappy";
 
 export const dynamic = "force-dynamic";
 
@@ -161,6 +162,9 @@ export default function BookPage() {
             animate={{ opacity: 1, y: 0 }}
             className="rounded-[12px] border border-white/10 bg-white p-10 text-center"
           >
+            <div className="mb-4 flex justify-center">
+              <Snappy state="done" scale={0.85} decorative />
+            </div>
             <h1 className="mb-3 font-display text-[28px] font-bold text-snap-charcoal">
               You&apos;re booked!
             </h1>
@@ -227,12 +231,13 @@ export default function BookPage() {
                     }`}
                   >
                     <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-snap-surface">
-                      <Image
+                      <ImageWithSkeleton
                         src={provider.photo}
                         alt={provider.firstName}
                         width={64}
                         height={64}
                         className="h-full w-full object-cover"
+                        skeletonClassName="absolute inset-0 rounded-full"
                       />
                     </span>
                     <span className="font-body text-[14px] font-medium text-snap-charcoal">
@@ -281,7 +286,7 @@ export default function BookPage() {
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full rounded-[6px] border border-snap-border px-3.5 py-2.5 font-body text-[14px] outline-none focus:border-snap-red"
+                      className="w-full rounded-[6px] border border-snap-border px-3.5 py-2.5 font-body text-[14px] outline-none focus:border-snap-charcoal"
                     />
                   </div>
                   <div>
@@ -293,7 +298,7 @@ export default function BookPage() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full rounded-[6px] border border-snap-border px-3.5 py-2.5 font-body text-[14px] outline-none focus:border-snap-red"
+                      className="w-full rounded-[6px] border border-snap-border px-3.5 py-2.5 font-body text-[14px] outline-none focus:border-snap-charcoal"
                     />
                   </div>
                   <div>
@@ -305,7 +310,7 @@ export default function BookPage() {
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full rounded-[6px] border border-snap-border px-3.5 py-2.5 font-body text-[14px] outline-none focus:border-snap-red"
+                      className="w-full rounded-[6px] border border-snap-border px-3.5 py-2.5 font-body text-[14px] outline-none focus:border-snap-charcoal"
                     />
                   </div>
 
@@ -315,7 +320,14 @@ export default function BookPage() {
                     </p>
                   )}
 
-                  <Button type="submit" disabled={submitting} className="w-full justify-center">
+                  <Button type="submit" disabled={submitting} className="w-full justify-center gap-2">
+                    {submitting && (
+                      <span className="inline-flex h-5 w-5 items-center justify-center overflow-hidden">
+                        <span className="scale-[0.13] origin-center">
+                          <Snappy state="printing" decorative idleBeat={false} />
+                        </span>
+                      </span>
+                    )}
                     {submitting
                       ? "Booking…"
                       : `Confirm — ${formatDateLabel(selectedDate!)} at ${formatTimeLabel(selectedTime!)}`}

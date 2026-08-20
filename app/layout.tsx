@@ -1,29 +1,20 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, Instrument_Serif } from "next/font/google";
+import { Baloo_2 } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import SnappyLoader from "@/components/mascot/SnappyLoader";
+import SnappyScrollTop from "@/components/mascot/SnappyScrollTop";
+import LenisProvider from "@/components/motion/LenisProvider";
+import CustomCursor from "@/components/motion/CustomCursor";
+import RouteTransition from "@/components/motion/RouteTransition";
 
-const spaceGrotesk = Space_Grotesk({
+// Snappy mascot's "Zzz" glyph only
+const baloo2 = Baloo_2({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-// Editorial serif — used selectively for typographic contrast moments
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
+  weight: ["800"],
+  variable: "--font-baloo",
   display: "swap",
 });
 
@@ -69,7 +60,11 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
@@ -168,16 +163,23 @@ const jsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={baloo2.variable}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-body antialiased">{children}</body>
-      <GoogleAnalytics gaId="G-76GFPGCHWQ" />
-      <Analytics />
+      <body className="font-body antialiased">
+        <SnappyLoader />
+        <RouteTransition />
+        <CustomCursor />
+        <LenisProvider>{children}</LenisProvider>
+        <SnappyScrollTop />
+        <GoogleAnalytics gaId="G-76GFPGCHWQ" />
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
