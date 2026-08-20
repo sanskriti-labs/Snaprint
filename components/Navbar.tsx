@@ -10,9 +10,11 @@ import Snappy from "@/components/mascot/Snappy";
 // the links work from anywhere; hash is kept separately for the in-page
 // active-section tracking below.
 const links = [
-  { label: "Workflow", hash: "#how" },
-  { label: "The Tech", hash: "#why" },
-  { label: "Pricing", hash: "#pricing" },
+  { label: "Workflow", href: "/#how", hash: "#how" },
+  { label: "The Tech", href: "/#why", hash: "#why" },
+  { label: "Pricing", href: "/pricing", hash: "" },
+  { label: "Kiosk for business", href: "/kiosk", hash: "" },
+  { label: "Franchise", href: "/franchise", hash: "" },
 ];
 
 /**
@@ -38,6 +40,7 @@ export default function Navbar() {
   // currently in the "focus band" of the viewport.
   useEffect(() => {
     const sections = links
+      .filter((l) => l.hash)
       .map((l) => document.querySelector(l.hash))
       .filter((el): el is Element => el !== null);
     if (!sections.length) return;
@@ -104,9 +107,9 @@ export default function Navbar() {
             {links.map((l) => {
               const isActive = active === l.hash;
               return (
-                <li key={l.hash}>
+                <li key={l.href}>
                   <a
-                    href={`/${l.hash}`}
+                    href={l.href}
                     aria-current={isActive ? "true" : undefined}
                     className={`block rounded-full px-2.5 py-1.5 font-body text-[10px] font-medium tracking-[-0.05px] transition-colors duration-200 ${
                       isActive ? "text-red" : "text-graphite hover:bg-black/[0.04] hover:text-charcoal"
@@ -193,8 +196,8 @@ export default function Navbar() {
               <div className="flex flex-col gap-1 px-2 pb-2">
                 {links.map((l, i) => (
                   <motion.a
-                    key={l.hash}
-                    href={`/${l.hash}`}
+                    key={l.href}
+                    href={l.href}
                     onClick={() => setMobileOpen(false)}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}

@@ -1,0 +1,20 @@
+# Hyderabad neighbourhoods — xerox shop scrape queries
+# One query per line — Google Maps search format: "xerox shops in [Area] Hyderabad"
+# Review this list before running the scraper.
+#
+# Starter batch (12 areas) per the "small scrape first" plan — well-known,
+# unambiguous localities to validate the pipeline before expanding to the
+# full neighbourhood list the way Bengaluru's 97-area file grew.
+
+xerox shops in Ameerpet Hyderabad
+xerox shops in Kukatpally Hyderabad
+xerox shops in Dilsukhnagar Hyderabad
+xerox shops in Secunderabad Hyderabad
+xerox shops in Begumpet Hyderabad
+xerox shops in Madhapur Hyderabad
+xerox shops in Gachibowli Hyderabad
+xerox shops in Uppal Hyderabad
+xerox shops in Kondapur Hyderabad
+xerox shops in Mehdipatnam Hyderabad
+xerox shops in Malakpet Hyderabad
+xerox shops in LB Nagar Hyderabad

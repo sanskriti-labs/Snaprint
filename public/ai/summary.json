@@ -6,15 +6,19 @@
   "product": {
     "name": "Snaprint S1",
     "type": "Self-service print kiosk hardware",
+    "category": ["Self-service printing kiosk", "Automated print station", "Document printing kiosk"],
     "description": "Connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present.",
-    "priceRangeINR": [300000, 350000]
+    "priceRangeINR": [300000, 350000],
+    "deploymentVerticals": ["Colleges", "Universities", "Offices", "Hospitals", "Libraries", "Railway stations", "Malls", "Retail stores"]
   },
   "areaServed": "Bengaluru, India",
+  "areaServedNote": "This is the kiosk hardware's current deployment area, not the Snaprint shop directory's coverage — the directory separately lists third-party print shops across six Indian cities (see /ai/locations.json).",
   "contact": {
     "email": "snaprints@sanskritilabs.in"
   },
   "pages": {
     "home": "https://snaprints.com/",
+    "kiosk": "https://snaprints.com/kiosk",
     "book": "https://snaprints.com/book",
     "blog": "https://snaprints.com/blog",
     "terms": "https://snaprints.com/terms",

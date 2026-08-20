@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { City, College, Area } from "@/content/pseo/types";
+import { getCityName } from "@/content/pseo/seo";
 
 type Props = {
   parentCity?: City;
@@ -89,6 +90,24 @@ export default function PseoCrossLinks({ parentCity, colleges, areas, neighborCi
           />
         )}
       </div>
+      {parentCity && (
+        <div className="mt-12 border-t border-[#E8E6E0] pt-10">
+          <h3 className="font-display text-[20px] font-bold mb-3 text-[#111110]">
+            Own a xerox shop in {getCityName(parentCity.slug)}?
+          </h3>
+          <p className="text-[15px] leading-[1.78] text-[#3A3A36] mb-4">
+            Add the Snaprint S1 kiosk to your counter and earn from after-hours
+            print jobs. 24/7 unmanned operation, no queue at your counter,
+            live revenue dashboard.
+          </p>
+          <a
+            href="/book"
+            className="inline-block bg-[#E63946] hover:bg-[#C1121F] text-white px-6 py-3 rounded-md font-medium transition-colors"
+          >
+            Book a Demo →
+          </a>
+        </div>
+      )}
     </section>
   );
 }

@@ -13,8 +13,17 @@
  *   2. Every internal link (href="/...") found on a same-origin crawl of
  *      those sitemap pages also returns 200 — catches a live page linking
  *      to a dead one (the instant-print/[city] -> planned-area bug).
- *   3. No crawled page's JSON-LD contains a price/offers field, except
- *      the homepage (the kiosk price is only supposed to live there).
+ *   3. No price/offers JSON-LD block is shared identically across more
+ *      than one page's <head>. A page-specific AggregateOffer (e.g.
+ *      /pricing's kiosk price, /franchise's investment range) appears on
+ *      exactly one URL and is fine. A LEAK looks different: the same
+ *      script tag rendered by a shared layout/component shows up
+ *      byte-identical on many unrelated pages (this is literally how the
+ *      S1 kiosk price shipped into PSEO shop-page snippets — see
+ *      verify:pseo check #14, which guards the source-level cause; this
+ *      is the live-HTML symptom check). No hardcoded path allowlist, so
+ *      a new page adding its own real price schema doesn't need this
+ *      file edited to stay green.
  */
 const baseUrl = process.argv[2];
 if (!baseUrl) {
@@ -78,7 +87,7 @@ async function main() {
   // they resolve too (catches a live page linking to a page that 404s,
   // even if that dead page itself is correctly absent from the sitemap).
   const linkTargets = new Map(); // url -> Set of pages that link to it
-  const priceLeaks = [];
+  const priceBlockPages = new Map(); // JSON-LD block text -> Set of pages carrying it
 
   await Promise.all(
     sitemapUrls.map(async (pageUrl) => {
@@ -98,15 +107,11 @@ async function main() {
         linkTargets.get(full).add(pageUrl);
       }
 
-      // Price/offer leak check — homepage is allowed to carry it.
-      const isHome = new URL(pageUrl).pathname === "/";
-      if (!isHome) {
-        const ldMatches = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g) || [];
-        for (const block of ldMatches) {
-          if (/\b(?:lowPrice|highPrice)\b/.test(block)) {
-            priceLeaks.push(pageUrl);
-            break;
-          }
+      const ldMatches = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g) || [];
+      for (const block of ldMatches) {
+        if (/\b(?:lowPrice|highPrice)\b/.test(block)) {
+          if (!priceBlockPages.has(block)) priceBlockPages.set(block, new Set());
+          priceBlockPages.get(block).add(pageUrl);
         }
       }
     })
@@ -130,12 +135,17 @@ async function main() {
     ok(`all ${checkedLinks.length} discovered internal links resolve (2xx/3xx)`);
   }
 
-  if (priceLeaks.length > 0) {
-    for (const url of priceLeaks) {
-      fail(`page carries kiosk price/offer JSON-LD outside the homepage: ${url}`);
+  // A price/offer block on exactly one page is that page's own schema.
+  // The same block appearing on 2+ pages means a shared component/layout
+  // is stamping it out everywhere — the actual leak.
+  const leakedBlocks = [...priceBlockPages.entries()].filter(([, pages]) => pages.size > 1);
+  if (leakedBlocks.length > 0) {
+    for (const [, pages] of leakedBlocks) {
+      const sample = [...pages].slice(0, 5).join(", ");
+      fail(`price/offer JSON-LD is identical across ${pages.size} pages (shared-layout leak): ${sample}${pages.size > 5 ? ", …" : ""}`);
     }
   } else {
-    ok("no non-homepage page carries a price/offers JSON-LD field");
+    ok("every price/offers JSON-LD block is unique to its own page (no shared-layout leak)");
   }
 
   console.log("");

@@ -1,0 +1,23 @@
+# Mumbai neighbourhoods — xerox shop scrape queries
+# One query per line — Google Maps search format: "xerox shops in [Area] Mumbai"
+# Review this list before running the scraper.
+#
+# Starter batch (12 areas) — same "small scrape first" pattern as Hyderabad
+# Batch 1. Heavy station-neighborhood bias (Mumbai's xerox geography is
+# rail-centric): Churchgate, CST, Dadar, Andheri, Borivali, Thane, Kurla,
+# Ghatkopar. College clusters: Matunga (VJTI/Ruia), Powai (IIT Bombay),
+# Kalina (Mumbai University). Stationery wholesale belt: Crawford Market /
+# Kalbadevi. Area research 2026-08-13.
+
+xerox shops in Churchgate Mumbai
+xerox shops in CST Mumbai
+xerox shops in Dadar Mumbai
+xerox shops in Andheri Mumbai
+xerox shops in Borivali Mumbai
+xerox shops in Thane Mumbai
+xerox shops in Kurla Mumbai
+xerox shops in Ghatkopar Mumbai
+xerox shops in Matunga Mumbai
+xerox shops in Powai Mumbai
+xerox shops in Kalina Mumbai
+xerox shops in Crawford Market Mumbai

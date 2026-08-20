@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { BlogPostMeta } from "@/lib/blog";
 
+const SITE_URL = "https://snaprints.com";
+
 export default function BlogPage({
   meta,
   children,
@@ -10,8 +12,40 @@ export default function BlogPage({
   meta: BlogPostMeta;
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${SITE_URL}/blog/${meta.slug}#post`,
+        headline: meta.title,
+        description: meta.description,
+        url: `${SITE_URL}/blog/${meta.slug}`,
+        datePublished: meta.date,
+        dateModified: meta.date,
+        image: `${SITE_URL}/og.png`,
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        keywords: meta.keywords.join(", "),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+          { "@type": "ListItem", position: 3, name: meta.title, item: `${SITE_URL}/blog/${meta.slug}` },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="mx-auto max-w-[760px] px-6 py-28 md:px-10">
         <Link

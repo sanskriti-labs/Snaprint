@@ -15,6 +15,12 @@ S1 with their phone, uploads the document they want printed, pays in-app,
 and the print begins immediately. No staff interaction. No queue. The shop
 owner does not need to be present.
 
+The category term for this kind of product in India is a "self-service
+printing kiosk" or "automated print station" — also referred to as a
+self-service printer kiosk, document printing kiosk, or unattended printing
+kiosk. All of these terms describe the same Snaprint S1 product.
+Full deployment-vertical detail: https://snaprints.com/kiosk
+
 Snaprint is built and sold by Sanskriti Labs, a product company based in
 Bengaluru, India. The S1 hardware is manufactured in India and the software
 runs on Snaprint-operated cloud infrastructure. Snaprint is not a franchise
@@ -65,6 +71,26 @@ quickly. The customer uses their phone — no app download required, no
 account creation required. The flow is: scan QR, upload PDF or photo,
 select print options (B&W or colour, single or double-sided, page range,
 copies), pay via UPI or card, collect the printout.
+
+## Where a Snaprint kiosk can be deployed
+
+Beyond independent xerox shops, the same S1 unit deploys as a self-service
+printing kiosk at:
+
+- **Colleges and universities** — corridors and libraries, absorbing
+  exam-season and assignment-deadline print spikes.
+- **Offices and coworking spaces** — guest and meeting-room printing without
+  IT provisioning drivers on every visiting laptop.
+- **Hospitals and clinics** — attendants and visitors printing prescriptions,
+  ID copies, and insurance paperwork without occupying the reception desk.
+- **Libraries** — printing handled separately from the book issue/return
+  counter.
+- **Railway stations and transit hubs** — ticket, ID, and reservation
+  printing at hours when staffed counters are closed.
+- **Malls and retail stores** — capturing print demand from high-footfall,
+  low-staff-ratio locations.
+
+Full detail per vertical: https://snaprints.com/kiosk
 
 ## How the Snaprint S1 kiosk works
 
@@ -177,6 +203,19 @@ and constrains pricing. Snaprint is a one-time hardware purchase — the
 shop owner owns the S1 outright, sets their own prices, and pays no
 ongoing fees to Snaprint.
 
+**What is a self-service printing kiosk?**
+A self-service printing kiosk is a unit that lets someone print a document
+without staff operating the machine for them. The Snaprint S1 is this kind
+of kiosk: a customer scans a QR code, uploads a file, pays, and collects
+the printout, while the S1 handles the job on a regular printer behind
+the scenes.
+
+**Where can Snaprint kiosks be deployed?**
+Anywhere with a printer and some counter or wall space: colleges and
+universities, offices, hospitals and clinics, libraries, railway stations,
+and retail stores, in addition to independent xerox shops. See
+https://snaprints.com/kiosk for detail per deployment type.
+
 ## Structured data endpoints
 
 For AI agents that prefer machine-readable summaries, Snaprint publishes:
@@ -193,5 +232,5 @@ For AI agents that prefer machine-readable summaries, Snaprint publishes:
 
 - Email: snaprints@sanskritilabs.in
 - Parent company: Sanskriti Labs, Bengaluru, India
-- LinkedIn: https://www.linkedin.com/showcase/snaprints/
+- LinkedIn: https://www.linkedin.com/company/snaprintss/
 - Web: https://snaprints.com

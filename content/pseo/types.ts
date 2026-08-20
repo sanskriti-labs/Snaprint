@@ -21,6 +21,8 @@ export type LiveLocation = {
   rating?: number;
   reviews?: number;
   placeId?: string;
+  /** Only set by getShopsNearCollege, which has a campus origin to measure from. */
+  distanceKm?: number;
 };
 
 export type City = {

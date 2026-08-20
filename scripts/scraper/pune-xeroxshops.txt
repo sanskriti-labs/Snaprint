@@ -1,0 +1,25 @@
+# Pune neighbourhoods — xerox shop scrape queries
+# One query per line — Google Maps search format: "xerox shops in [Area] Pune"
+# Review this list before running the scraper.
+#
+# Starter batch (12 areas) — same "small scrape first" pattern as Hyderabad
+# Batch 1. Pune is unusual: heavy student city + IT hub. Split: 4 college
+# clusters (Shivajinagar, Deccan, Kothrud, Karve Nagar), 2 college-IT
+# crossover (Aundh, Baner), 3 pure IT (Hinjewadi, Kharadi, Magarpatta),
+# 1 IT-residential (Wakad), 2 commercial/transit (Camp, Swargate). Note:
+# Kothrud and Karve Nagar overlap geographically — the transform's
+# keyword matcher relies on precise area names to distinguish them.
+# Area research 2026-08-13.
+
+xerox shops in Shivajinagar-Pune
+xerox shops in Deccan Pune
+xerox shops in Kothrud Pune
+xerox shops in Karve Nagar Pune
+xerox shops in Aundh Pune
+xerox shops in Baner Pune
+xerox shops in Wakad Pune
+xerox shops in Hinjewadi Pune
+xerox shops in Kharadi Pune
+xerox shops in Magarpatta Pune
+xerox shops in Camp Pune
+xerox shops in Swargate Pune

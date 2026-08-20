@@ -18,3 +18,37 @@ xerox shops in Kondapur Hyderabad
 xerox shops in Mehdipatnam Hyderabad
 xerox shops in Malakpet Hyderabad
 xerox shops in LB Nagar Hyderabad
+
+# Batch 2 — next tranche of well-known Hyderabad localities, same
+# "small scrape first" validation approach before growing further.
+xerox shops in Banjara Hills Hyderabad
+xerox shops in Jubilee Hills Hyderabad
+xerox shops in Miyapur Hyderabad
+xerox shops in Kompally Hyderabad
+xerox shops in Tarnaka Hyderabad
+xerox shops in Habsiguda Hyderabad
+xerox shops in Nallakunta Hyderabad
+xerox shops in Abids Hyderabad
+xerox shops in Koti Hyderabad
+xerox shops in Himayatnagar Hyderabad
+xerox shops in Chikkadpally Hyderabad
+xerox shops in Ashok Nagar-Hyderabad
+xerox shops in Vanasthalipuram Hyderabad
+xerox shops in Nagole Hyderabad
+xerox shops in Attapur Hyderabad
+xerox shops in Manikonda Hyderabad
+xerox shops in Kothapet Hyderabad
+xerox shops in ECIL Hyderabad
+xerox shops in Nizampet Hyderabad
+xerox shops in Alwal Hyderabad
+
+# Round 2 — subareas discovered from existing shops-clean-hyderabad.jsonl,
+# each a real, well-known Hyderabad locality with ≥10 verified shops in the
+# data and all shops within 7km of the area's median centre (the verifier's
+# check #11 bar). Reviewed 2026-08-11.
+#
+# KPHB was reviewed and rejected: the same shop pool already covers the
+# existing /print-near/kukatpally page (KPHB is a colony inside Kukatpally —
+# the keyword matcher in process_areas.py assigns them to the same slug).
+# Shipping a separate kphb page would duplicate Kukatpally's listings.
+xerox shops in Hafeezpet Hyderabad

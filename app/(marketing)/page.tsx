@@ -26,8 +26,7 @@ const jsonLd = {
     {
       "@type": "Product",
       "@id": `${SITE_URL}/#product-s1`,
-      name: "Snaprint Kiosk",
-      dateModified: "2026-08-19",
+      name: "Snaprint S1",
       description:
         "Self-service print kiosk you buy once and own outright — connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present. Available in three models: S1, S1 Pro, S1 Pro Max.",
       brand: { "@id": `${SITE_URL}/#organization` },

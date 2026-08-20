@@ -18,13 +18,17 @@ const siteUrl = "https://snaprints.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  // Consumer-first title/description. The homepage previously described only
+  // the kiosk business ("Serving shop owners across India") while ~95% of the
+  // site's search impressions are near-me print queries — see the Hero
+  // comment. Franchise intent is served by /franchise, which owns those terms.
   title: {
-    default: "Snaprint — Own a Self-Service Print Kiosk. No Rent, No Revenue Share.",
+    default: "Find Xerox & Print Shops Near You — Snaprint",
     template: "%s · Snaprint",
   },
   description:
-    "Snaprint is a self-service print kiosk you buy once and own outright — starting at ₹84,999. Scan, upload, pay, collect. Zero platform fee, set your own price. Built by Sanskriti Labs, Bengaluru.",
-  keywords: ["print kiosk", "kiosk ownership", "self-service printing", "xerox shop", "remote printing", "Bengaluru", "Snaprint", "instant print", "smart kiosk"],
+    "Find listed xerox and print shops near you across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding, scanning — open now.",
+  keywords: ["xerox shop near me", "print shop near me", "printout near me", "photocopy near me", "print kiosk", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "self-service printing", "self service printing kiosk", "automated printing kiosk India", "printing kiosk for colleges", "document printing kiosk"],
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
@@ -37,8 +41,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Snaprint — Own a Self-Service Print Kiosk",
-    description: "India's self-service print network. Buy the kiosk, set your price, keep every rupee. Powered by Sanskriti Labs, Bengaluru.",
+    title: "Find Xerox & Print Shops Near You — Snaprint",
+    description: "Listed xerox and print shops across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding and scanning near you.",
     url: siteUrl,
     siteName: "Snaprint",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Snaprint — snap. scan. print." }],
@@ -47,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snaprint — Own a Self-Service Print Kiosk",
-    description: "India's self-service print network. Buy the kiosk, set your price, keep every rupee.",
+    title: "Find Xerox & Print Shops Near You — Snaprint",
+    description: "Listed xerox and print shops across six Indian cities. B&W, colour, binding and scanning near you.",
     images: ["/og.png"],
   },
   icons: {
@@ -62,6 +66,11 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
+    other: {
+      ...(process.env.BING_SITE_VERIFICATION
+        ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+        : {}),
+    },
   },
 };
 
@@ -74,11 +83,36 @@ const jsonLd = {
       name: "Snaprint",
       url: siteUrl,
       logo: `${siteUrl}/icon-512.png`,
-      description: "Snaprint builds self-service print kiosks that owners buy outright and run on their own terms — no rent, no revenue share.",
+      description: "Snaprint builds self-service printing kiosks — automated print stations that turn xerox shops into 24/7 remote printing hubs, and deploy as document printing kiosks for colleges, offices, hospitals, libraries, and retail across India.",
       email: "snaprints@sanskritilabs.in",
-      // TODO(KG): once Snaprint has Crunchbase + Wikidata entries, add them here.
-      // LinkedIn (verified) is the only authoritative sameAs today.
-      sameAs: ["https://www.linkedin.com/showcase/snaprints/"],
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "snaprints@sanskritilabs.in",
+        contactType: "customer service",
+        areaServed: "IN",
+      },
+      knowsAbout: [
+        "Self-service printing kiosk",
+        "Automated printing kiosk",
+        "Document printing kiosk",
+        "QR code printing",
+        "UPI printing kiosk",
+      ],
+      // TODO(KG): once Snaprint has Crunchbase + F6S + Justdial + Wikidata
+      // entries, uncomment them here. LinkedIn, Instagram, and Reddit
+      // (verified) are the only authoritative sameAs today.
+      sameAs: [
+        "https://www.linkedin.com/company/snaprintss/",
+        "https://www.linkedin.com/company/sanskriti-labs/",
+        "https://www.instagram.com/snaprints.labs/",
+        "https://www.reddit.com/r/Snaprint/",
+        // TODO: uncomment after creating profile at https://www.crunchbase.com/organization/snaprint
+        // "https://www.crunchbase.com/organization/snaprint",
+        // TODO: uncomment after verifying the F6S URL exists (claimed in GSC serps)
+        // "https://www.f6s.com/company/snaprint",
+        // TODO: uncomment after creating profile at https://www.justdial.com/Bangalore/Snaprint
+        // "https://www.justdial.com/Bangalore/Snaprint",
+      ],
       founder: [
         {
           "@type": "Person",
@@ -96,7 +130,14 @@ const jsonLd = {
         name: "Sanskriti Labs",
         sameAs: ["https://www.linkedin.com/company/sanskriti-labs/"],
       },
-      areaServed: { "@type": "City", name: "Bengaluru" },
+      areaServed: [
+        { "@type": "City", name: "Bengaluru" },
+        { "@type": "City", name: "Hyderabad" },
+        { "@type": "City", name: "Chennai" },
+        { "@type": "City", name: "Mumbai" },
+        { "@type": "City", name: "Pune" },
+        { "@type": "City", name: "Delhi NCR" },
+      ],
     },
     {
       "@type": "WebSite",
@@ -104,6 +145,14 @@ const jsonLd = {
       url: siteUrl,
       name: "Snaprint",
       publisher: { "@id": `${siteUrl}/#organization` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${siteUrl}/search?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
     },
   ],
 };

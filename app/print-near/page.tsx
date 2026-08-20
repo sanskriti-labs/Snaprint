@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
+  twitter: {
+    title: "Print and xerox shops near you — Snaprint",
+    description:
+      "Find print and xerox shops near your college, office, or neighbourhood.",
+  },
 };
 
 type AreaGroup = {
@@ -73,8 +78,72 @@ export default function PrintNearIndex() {
 
   const totalLive = allAreas.length + allColleges.length;
 
+  // CollectionPage + BreadcrumbList + FAQPage — no Product/kiosk-usage FAQ
+  // here. See app/instant-print/page.tsx for why: kiosk pricing/FAQ on
+  // directory hub pages leaked into snippets for unrelated shop pages.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${SITE_URL}/print-near#collection`,
+        url: `${SITE_URL}/print-near`,
+        name: "Print and xerox shops near you",
+        // Statically generated at build time from the live entity list —
+        // this is the real build date, refreshed on every rebuild.
+        dateModified: new Date().toISOString().slice(0, 10),
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "All locations",
+            item: `${SITE_URL}/print-near`,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do I find a print shop near my college or neighbourhood?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Scroll to your city, then pick your college or neighbourhood from the list. Each listing links to the xerox shop's exact location, hours, and services.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How many colleges and neighbourhoods are covered?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `This page currently lists ${allColleges.length} ${allColleges.length === 1 ? "college" : "colleges"} and ${allAreas.length} ${allAreas.length === 1 ? "neighbourhood" : "neighbourhoods"} with listed shops. Coverage expands every week.`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What if my area isn't listed yet?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Email snaprints@sanskritilabs.in to request coverage in your area — new locations are added as the shop directory expands.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main className="mx-auto max-w-[1280px] px-6 py-24 md:px-10">
         <p className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E63946]">

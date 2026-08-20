@@ -27,6 +27,21 @@ CITY_DISPLAY_NAMES = {
     "bengaluru": "Bangalore",
 }
 
+# Query-file suffixes to strip when building a slug, for cities where the
+# queries span multiple sub-city names (e.g. Delhi NCR queries end in
+# "Delhi", "Gurugram", or "Noida" — no single CITY_DISPLAY_NAMES value
+# covers all of them). Falls back to [CITY_DISPLAY_NAMES/city slug] when a
+# city isn't listed here.
+#
+# "Noida" is deliberately excluded here: unlike the Delhi/Gurugram entries,
+# every Noida AREA_KW slug in cities/delhi-ncr.py keeps "-noida" as part of
+# the slug itself (sector-18-noida, atta-market-noida, sector-62-noida), so
+# stripping "Noida" from the query text would break the slug match instead
+# of fixing it.
+CITY_QUERY_SUFFIXES = {
+    "delhi-ncr": ["Delhi", "Gurugram"],
+}
+
 
 def load_city_config(slug):
     mod = importlib.import_module(f"cities.{slug}")
@@ -74,8 +89,18 @@ def load_queries(cfg):
             q = line
             if q.lower().startswith("xerox shops in "):
                 q = q[len("xerox shops in "):]
-            q = re.sub(rf'\s+{re.escape(CITY_DISPLAY_NAMES.get(cfg.CITY_SLUG, cfg.CITY_SLUG))}\s*$', '', q, flags=re.IGNORECASE).strip()
-            slug = q.lower().replace(" ", "-")
+            suffixes = CITY_QUERY_SUFFIXES.get(
+                cfg.CITY_SLUG, [CITY_DISPLAY_NAMES.get(cfg.CITY_SLUG, cfg.CITY_SLUG)]
+            )
+            for suffix in suffixes:
+                new_q = re.sub(rf'\s+{re.escape(suffix)}\s*$', '', q, flags=re.IGNORECASE).strip()
+                if new_q != q:
+                    q = new_q
+                    break
+            # Strip punctuation (periods, etc.) before slugifying — "T. Nagar"
+            # must slugify to "t-nagar" to match the AREA_KW key, not "t.-nagar".
+            q = re.sub(r'[^\w\s-]', '', q)
+            slug = re.sub(r'\s+', '-', q.strip()).lower()
             if slug not in seen:
                 seen.add(slug)
                 slugs.append(slug)
@@ -112,19 +137,79 @@ def _norm_locality(s):
 
 
 def get_area_slug(address, title, area_kw):
-    combined = (address + " " + title).lower()
+    """Assign a shop to an area by keyword match against its address.
+
+    Earliest-match-wins, NOT first-in-dict-wins. AREA_KW is declaration
+    ordered, and a broad early entry used to swallow shops belonging to a
+    more specific area declared later. Real incidents (2026-08-17 audit):
+      - "bannerghatta road" (btm-layout) took 8 of 11 Madiwala shops.
+      - "jp nagar" (jp-nagar) took 6 of 7 Kothnur shops.
+      - "marathahalli" took 11 of 26 Sarjapur Road shops.
+    Those areas rendered as 1-shop pages, and Search Console flagged them
+    "Duplicate without user-selected canonical" / left them uncrawled.
+
+    Why earliest position: Indian postal addresses run most-specific to
+    least-specific ("Shop 4, 80ft Rd, Madiwala, BTM Layout, Bengaluru").
+    The locality named first is the one the shop is actually in; anything
+    later is a parent or a landmark. Ties break on the longer keyword.
+
+    Measured against the full 2970-shop index, this drops published areas
+    holding <=1 shop from 11 to 4 with no area losing coverage — strictly
+    better than both the old first-wins rule and a longest-keyword rule
+    (which starved Ulsoor to 0 and Kumara Park to 1).
+
+    Position is measured over the address only. Title is still searched in
+    the fallback pass, but a shop *named* "Jayanagar Xerox" sitting in
+    Madiwala must not outrank its own address.
+    """
+    addr = (address or "").lower()
+    combined = (addr + " " + (title or "")).lower()
     norm_combined = _norm_locality(combined)
+
+    # Pass 1 — exact substring in the address, earliest match wins.
+    best = None  # (position, -keyword_length, slug)
     for slug, (kws, _, _) in area_kw.items():
         for kw in kws:
-            if kw in combined:
-                return slug
-    for slug, (kws, _, _) in sorted(
-        area_kw.items(), key=lambda kv: -max(len(k) for k in kv[1][0])
-    ):
-        for kw in sorted(kws, key=len, reverse=True):
+            pos = addr.find(kw)
+            if pos == -1:
+                continue
+            cand = (pos, -len(kw), slug)
+            if best is None or cand < best:
+                best = cand
+    if best is not None:
+        return best[2]
+
+    # Pass 2 — exact substring anywhere (address + title). Covers shops
+    # whose address omits the locality but whose name carries it.
+    best = None
+    for slug, (kws, _, _) in area_kw.items():
+        for kw in kws:
+            pos = combined.find(kw)
+            if pos == -1:
+                continue
+            cand = (pos, -len(kw), slug)
+            if best is None or cand < best:
+                best = cand
+    if best is not None:
+        return best[2]
+
+    # Pass 3 — spelling-variant fallback on the vowel-stripped form. The
+    # >= 6 floor keeps short collapsed forms from matching unrelated text.
+    best = None
+    for slug, (kws, _, _) in area_kw.items():
+        for kw in kws:
             nk = _norm_locality(kw)
-            if len(nk) >= 6 and nk in norm_combined:
-                return slug
+            if len(nk) < 6:
+                continue
+            pos = norm_combined.find(nk)
+            if pos == -1:
+                continue
+            cand = (pos, -len(nk), slug)
+            if best is None or cand < best:
+                best = cand
+    if best is not None:
+        return best[2]
+
     return None
 
 
@@ -154,9 +239,9 @@ def make_intro(n, display_name, city_display, shops=(), pin_codes=()):
     with_phone = [s for s in shops if s.get("phone")]
     pin_txt = f" ({', '.join(pin_codes[:2])})" if pin_codes else ""
 
-    lead = (f"1 verified xerox and print shop in {display_name}, {city_display}{pin_txt}."
+    lead = (f"1 listed xerox and print shop in {display_name}, {city_display}{pin_txt}."
             if n == 1 else
-            f"{n} verified xerox and print shops in {display_name}, {city_display}{pin_txt}.")
+            f"{n} listed xerox and print shops in {display_name}, {city_display}{pin_txt}.")
 
     if rated:
         best = max(rated, key=lambda s: (s.get("rating") or 0, s.get("reviews") or 0))
@@ -259,6 +344,15 @@ def render_city_block(cfg, city_display, lines_out):
             rescued += 1
     print(f"[{cfg.CITY_SLUG}] Geographic fallback: matched {rescued} shops to nearest area centre (<= {NEAREST_MAX_KM}km)")
 
+    # No cap: every shop matched to an area is published, sorted nearest
+    # first. (Used to truncate at 20 sorted by raw distance, which
+    # silently dropped real, well-reviewed shops in any area with >20
+    # matches — e.g. Rajajinagar had 28 matches and cut a 17-review
+    # "Planet Xerox Centre" at rank 21 while keeping several 1-review
+    # shops ranked closer. Removed the cap rather than patch the
+    # ranking — no rendering/schema limit requires one, see
+    # app/print-near/[entity]/page.tsx, which maps liveLocations with
+    # no pagination.)
     for slug, entries in area_shops.items():
         if slug not in centres:
             continue
@@ -285,7 +379,7 @@ def render_city_block(cfg, city_display, lines_out):
         display_name = area_kw.get(slug, (None, slug.replace("-", " ").title(), []))[1]
         pin_codes = area_kw.get(slug, (None, None, []))[2]
         presence = "live" if shops else "planned"
-        emitted = [to_live_location(s, city_display) for s in shops[:20]]
+        emitted = [to_live_location(s, city_display) for s in shops]
         intro = make_intro(len(emitted), display_name, city_display, emitted, pin_codes)
         keywords = make_keywords(display_name, city_display, len(emitted))
 
@@ -305,7 +399,7 @@ def render_city_block(cfg, city_display, lines_out):
 
         if shops:
             lines_out.append("    liveLocations: [")
-            for shop in shops[:20]:
+            for shop in shops:
                 loc = to_live_location(shop, city_display)
                 lines_out.append("      {")
                 lines_out.append(f'        name: {json.dumps(loc["name"], ensure_ascii=False)},')
