@@ -7,10 +7,10 @@ import { AnimatePresence, motion } from "framer-motion";
 /**
  * No hard cuts between routes (DESIGN_SYSTEM.md §5). On each navigation a
  * charcoal panel drops to cover, then lifts away to reveal the new page — a
- * curtain wipe. Lives in the root layout as a sibling of the page (never an
- * ancestor), so it can't create a containing block that would break the
- * fixed navbar / sticky elements. Skips the very first load (the preloader
- * owns that) and no-ops under reduced motion.
+ * curtain wipe. Mounted from app/(marketing)/layout.tsx as a sibling of the
+ * page (never an ancestor), so it can't create a containing block that would
+ * break the fixed navbar / sticky elements. Skips the very first load (the
+ * preloader owns that) and no-ops under reduced motion.
  */
 export default function RouteTransition() {
   const pathname = usePathname();

@@ -9,7 +9,8 @@ import { gsap, ScrollTrigger, registerGsap, prefersReducedMotion } from "@/lib/m
  * synced to GSAP's ticker so ScrollTrigger stays in lockstep. Tuned mid-weight —
  * not floaty, not stiff. Disabled entirely under reduced-motion (native scroll).
  *
- * Phase 0: scoped to the /style preview. Phase 1 promotes this to the root layout.
+ * Mounted from app/(marketing)/layout.tsx — scoped to marketing routes only,
+ * not the root layout, so PSEO/blog/legal pages stay on native scroll.
  */
 export default function LenisProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
