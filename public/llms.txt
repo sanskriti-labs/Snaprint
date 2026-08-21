@@ -10,6 +10,11 @@ Full description, FAQ, and structured data: https://snaprints.com/llms-full.txt
 
 - [Home](https://snaprints.com/): Product overview, how it works, the S1 machine, pricing/demo contact.
 - [Self-Service Printing Kiosk](https://snaprints.com/kiosk): Self-service printing kiosk / automated print station overview — deployment for colleges, universities, offices, hospitals, libraries, railway stations, and retail across India.
+- [Features](https://snaprints.com/features): Universal printer compatibility, encrypted file handling, 24/7 unattended operation, and a live owner dashboard.
+- [Find a Snaprint Kiosk](https://snaprints.com/find-snaprint): Live and upcoming Snaprint kiosk locations across Bengaluru and Hyderabad.
+- [Franchise / Kiosk Ownership](https://snaprints.com/franchise): Own an S1 kiosk — pricing models, unit economics, and how to apply.
+- [Kiosk Ownership Brochure](https://snaprints.com/franchise/brochure): Full pricing across all three ownership models, unit economics, specifications, and what's included.
+- [Pricing](https://snaprints.com/pricing): Snaprint print, copy, and scan pricing — what each page costs.
 - [Book a Demo](https://snaprints.com/book): Schedule a live walkthrough of the S1 kiosk with the founding team.
 - [Instant Print — all cities](https://snaprints.com/instant-print): Hub listing every city with listed xerox and print shops.
 - [Print Near You — colleges and neighbourhoods](https://snaprints.com/print-near): Hub listing every college and neighbourhood with listed xerox and print shops.

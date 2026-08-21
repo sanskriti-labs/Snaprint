@@ -131,18 +131,29 @@ kiosk for maintenance, and view a daily settlement statement.
 
 ## Where Snaprint operates
 
-As of August 2026, Snaprint is deployed across Bengaluru, India, with a
-concentrated presence in college neighbourhoods and IT-corridor locations.
-Live areas include Koramangala, Indiranagar, Whitefield, HSR Layout,
-Electronic City, MG Road, Jayanagar, BTM Layout, Marathahalli, Frazer
-Town, and Shivajinagar. Each live area is listed at
-https://snaprints.com/print-near with shop counts and a link to a
-detailed neighbourhood page.
+As of August 2026, Snaprint kiosks are live in Bengaluru and Hyderabad
+(both currently in private, host-location use — not yet open to public
+walk-in customers) with five more Bengaluru kiosks going live by 5
+September 2026. Current and upcoming kiosk locations are listed at
+https://snaprints.com/find-snaprint.
 
-Snaprint plans to expand to other Indian cities (Hyderabad, Chennai,
-Pune, Mumbai, Delhi NCR) over 2026 and 2027, prioritising cities with
-strong college-student populations and existing Snaprint customer
-demand from other channels.
+Separately, Snaprint's listed-shop directory (independent xerox/print
+shops discovered and curated from public listings, not Snaprint kiosk
+locations or partners) covers neighbourhoods and colleges across
+Bengaluru, Hyderabad, Chennai, Mumbai, Pune, and Delhi NCR. Each live
+area is listed at https://snaprints.com/print-near with shop counts and
+a link to a detailed neighbourhood page. City-level hubs are listed at
+https://snaprints.com/instant-print.
+
+## Owning a Snaprint kiosk
+
+Shop owners, campuses, and businesses that want to own and operate an S1
+kiosk can apply at https://snaprints.com/franchise. Full pricing across
+all ownership models, unit economics, specifications, and what's
+included is documented at https://snaprints.com/franchise/brochure. The
+S1's feature set — universal printer compatibility, encrypted file
+handling, 24/7 unattended operation, and a live owner dashboard — is
+detailed at https://snaprints.com/features.
 
 ## Pricing
 
