@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
@@ -96,7 +97,7 @@ function StatusBadge({ status }: { status: "live" | "soon" }) {
 
 function KioskCard({ kiosk, compact }: { kiosk: Kiosk; compact?: boolean }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white shadow-[0_1px_4px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)] transition-shadow duration-300 hover:shadow-[0_8px_28px_rgba(0,0,0,0.08)]">
+    <div className="overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white shadow-[0_1px_4px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[rgba(230,57,70,0.25)] hover:shadow-[0_4px_20px_rgba(230,57,70,0.08),0_1px_4px_rgba(0,0,0,0.05)]">
       <div className={`relative w-full bg-[#F8F7F4] ${compact ? "h-[140px]" : "h-[220px]"}`}>
         {kiosk.image ? (
           <ImageWithSkeleton
@@ -144,23 +145,25 @@ export default function FindSnaprintPage() {
       <Navbar />
       <main className="bg-paper px-6 py-24 md:px-10">
         <div className="mx-auto max-w-[1280px]">
-          {/* Header */}
-          <p className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E63946]">
-            Find Snaprint
-          </p>
-          <h1
-            className="mb-6 max-w-[640px] font-display font-extrabold leading-[1.05] tracking-[-2px] text-[#111110]"
-            style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
-          >
-            Find a kiosk near you.
-          </h1>
-          <p className="mb-12 max-w-[560px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-            Snaprint is rolling out across Bengaluru and Hyderabad. Here&apos;s exactly what&apos;s live today
-            and what&apos;s opening next — no exaggeration, just the real rollout.
-          </p>
+          {/* Header — centered, matching the Impact page's hero */}
+          <div className="mx-auto mb-16 max-w-[640px] text-center">
+            <p className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E63946]">
+              Find Snaprint
+            </p>
+            <h1
+              className="mb-6 font-display font-extrabold leading-[1.05] tracking-[-2px] text-[#111110]"
+              style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
+            >
+              Find a kiosk near you.
+            </h1>
+            <p className="mx-auto max-w-[560px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
+              Snaprint is rolling out across Bengaluru and Hyderabad. Here&apos;s exactly what&apos;s live today
+              and what&apos;s opening next — no exaggeration, just the real rollout.
+            </p>
+          </div>
 
           {/* Stats strip */}
-          <div className="mb-16 grid max-w-[480px] grid-cols-3 gap-4">
+          <div className="mx-auto mb-16 grid max-w-[480px] grid-cols-3 gap-4">
             <div>
               <div className="font-mono tabular-nums text-[32px] font-extrabold leading-none text-[#111110]">7</div>
               <div className="mt-1 font-body text-[12px] text-[#999994]">total kiosks</div>
@@ -207,15 +210,15 @@ export default function FindSnaprintPage() {
             <p className="max-w-[420px] font-body text-[15px] font-light text-[#555550]">
               Want a Snaprint kiosk at your shop, campus or workspace?
             </p>
-            <a
+            <Link
               href="/book"
-              className="flex-shrink-0 inline-flex items-center gap-2 rounded-full bg-red px-7 py-3.5 font-display text-[13.5px] font-semibold text-white transition-colors duration-[--d-hover] ease-hover hover:bg-red-deep"
+              className="liquid-glass-red flex-shrink-0 inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-display text-[13.5px] font-semibold text-white transition-transform duration-[--d-hover] ease-hover hover:scale-[1.03]"
             >
               Register Kiosk
               <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </main>

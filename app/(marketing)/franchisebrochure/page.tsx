@@ -1,7 +1,17 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Machine3D from "@/components/Machine3D";
+
+// 562 lines of CSS-3D markup, interactive-only — split into its own chunk so
+// it doesn't add to this page's main bundle. (This file is a server
+// component, so `ssr: false` isn't available here — but the code-splitting
+// itself is the win: Machine3D loads as a separate, parallel chunk instead
+// of being bundled into the page's own JS.)
+const Machine3D = dynamic(() => import("@/components/Machine3D"), {
+  loading: () => <div className="h-[420px] w-[260px] animate-pulse rounded-2xl bg-white/5" aria-hidden />,
+});
 
 // ─── Every fact on this page is sourced from the real 2026 Kiosk Ownership
 // PDF brochure (public/snaprint-kiosk-brochure.pdf) — this is that same
@@ -17,11 +27,11 @@ export const metadata: Metadata = {
   title: "Kiosk Ownership Brochure — Snaprint",
   description:
     "Own a Snaprint self-service print kiosk. Full pricing across all three models, unit economics, specifications and what's included — read the full brochure online.",
-  alternates: { canonical: "/franchise/brochure" },
+  alternates: { canonical: "/franchisebrochure" },
   openGraph: {
     title: "Snaprint — Kiosk Ownership Brochure",
     description: "Own a self-service print kiosk. Three models, transparent pricing, zero platform fee.",
-    url: `${SITE_URL}/franchise/brochure`,
+    url: `${SITE_URL}/franchisebrochure`,
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
@@ -32,8 +42,8 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": `${SITE_URL}/franchise/brochure#page`,
-      url: `${SITE_URL}/franchise/brochure`,
+      "@id": `${SITE_URL}/franchisebrochure#page`,
+      url: `${SITE_URL}/franchisebrochure`,
       name: "Snaprint Kiosk Ownership Brochure",
       isPartOf: { "@id": `${SITE_URL}/#website` },
     },
@@ -41,7 +51,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Kiosk Ownership Brochure", item: `${SITE_URL}/franchise/brochure` },
+        { "@type": "ListItem", position: 2, name: "Kiosk Ownership Brochure", item: `${SITE_URL}/franchisebrochure` },
       ],
     },
   ],
@@ -71,7 +81,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 
 function StatCard({ label, value, caption }: { label: string; value: string; caption: string }) {
   return (
-    <div className="rounded-xl border border-l-[3px] border-[rgba(0,0,0,0.07)] border-l-[#E63946] bg-[#F8F7F4] p-5">
+    <div className="rounded-xl border border-l-[3px] border-[rgba(0,0,0,0.07)] border-l-[#E63946] bg-[#F8F7F4] p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(230,57,70,0.25)] hover:border-l-[#E63946] hover:shadow-[0_4px_20px_rgba(230,57,70,0.08),0_1px_4px_rgba(0,0,0,0.05)]">
       <div className="mb-2 font-body text-[10px] font-semibold uppercase tracking-[0.12em] text-[#999994]">{label}</div>
       <div className="mb-1 font-mono tabular-nums text-[26px] font-bold leading-none text-[#111110]">{value}</div>
       <div className="font-body text-[12px] text-[#777770]">{caption}</div>
@@ -152,7 +162,7 @@ export default function FranchiseBrochurePage() {
       <main className="bg-white">
         {/* ── COVER ── */}
         <section
-          className="relative overflow-hidden px-6 pb-16 pt-32 md:px-16 md:pt-40"
+          className="relative overflow-hidden px-6 pb-12 pt-24 md:px-16 md:pt-32"
           style={{ background: "linear-gradient(160deg, #0f0f0e 0%, #111110 55%, #1a0405 100%)" }}
         >
           <div
@@ -176,7 +186,7 @@ export default function FranchiseBrochurePage() {
             </span>
           </div>
 
-          <div className="relative mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-14 pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+          <div className="relative mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-14 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
             <div>
               <div className="mb-5 flex items-center gap-1.5">
                 <span className="text-[13px] text-[#E63946]">★</span>
@@ -192,15 +202,15 @@ export default function FranchiseBrochurePage() {
                 rent, no revenue share.
               </p>
               <div className="flex flex-wrap items-center gap-3">
-                <a
+                <Link
                   href="/book"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#E63946] px-6 py-3.5 font-display text-[13.5px] font-semibold text-white transition-colors hover:bg-red-deep"
+                  className="liquid-glass-red inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-display text-[13.5px] font-semibold text-white transition-transform hover:scale-[1.03]"
                 >
                   Book a Demo
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.3" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
                 <a
                   href={PDF_PATH}
                   download
@@ -505,16 +515,16 @@ export default function FranchiseBrochurePage() {
                     <span className="font-mono tabular-nums font-semibold text-white">₹84,999</span>.
                   </p>
                 </div>
-                <a
+                <Link
                   href="/book"
                   data-magnetic="0.35"
-                  className="flex-shrink-0 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-display text-[13.5px] font-semibold text-charcoal transition-colors hover:bg-red hover:text-white"
+                  className="liquid-glass flex-shrink-0 inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-display text-[13.5px] font-semibold text-charcoal transition-transform hover:scale-[1.03]"
                 >
                   Book a Demo
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.3" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
 

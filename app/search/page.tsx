@@ -17,7 +17,7 @@ type Result = { title: string; description: string; href: string };
 // Static marketing pages — hand-listed since there's no single index of them.
 const staticPages: Result[] = [
   { title: "Snaprint — Instant Print Kiosks", description: "Turn your xerox shop into a 24/7 remote printing hub.", href: "/" },
-  { title: "Pricing", description: "Snaprint S1 kiosk pricing, what's included, and expected ROI for shop owners.", href: "/pricing" },
+  { title: "Pricing", description: "Snaprint S1 kiosk pricing, what's included, and expected ROI for shop owners.", href: "/#pricing" },
   { title: "Franchise", description: "Host a Snaprint self-service print kiosk in your college, hostel, or shop.", href: "/franchise" },
   { title: "About Snaprint", description: "Snaprint is a self-service print kiosk built by Sanskriti Labs in Bengaluru.", href: "/about" },
   { title: "Book a Demo", description: "Book a 40-minute call with the Snaprint founder over Google Meet.", href: "/book" },

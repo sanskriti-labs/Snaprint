@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { gsap, prefersReducedMotion } from "@/lib/motion";
+import { isMarketingRoute } from "@/lib/marketing-routes";
 
 type Particle = {
   x0: number; y0: number;
@@ -40,13 +42,24 @@ function drawParticle(ctx: CanvasRenderingContext2D, p: Particle, now: number): 
  * can never intercept clicks/drags (including the 3D kiosk). Disabled on
  * touch (pointer: coarse) and reduced-motion, where the native cursor is
  * left untouched.
+ *
+ * Mounted once at the true root (not per route group) — effect re-runs on
+ * pathname change instead of the whole component unmounting/remounting on
+ * every marketing<->lightweight crossing. Bonus fix: since this now re-runs
+ * per navigation, [data-magnetic] elements on a *newly* SPA-navigated-to
+ * marketing page correctly get listeners too — previously, navigating
+ * between two marketing pages without a remount left the second page's
+ * magnetic buttons dead, since the effect only ever ran once on mount.
  */
 export default function CustomCursor() {
   const dotRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pathname = usePathname();
+  const active = isMarketingRoute(pathname);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (!active) return;
     if (!window.matchMedia("(pointer: fine)").matches) return;
     if (prefersReducedMotion()) return;
 
@@ -163,7 +176,7 @@ export default function CustomCursor() {
       magnetCleanups.forEach((c) => c());
       document.body.classList.remove("has-custom-cursor");
     };
-  }, []);
+  }, [active]);
 
   return (
     <>

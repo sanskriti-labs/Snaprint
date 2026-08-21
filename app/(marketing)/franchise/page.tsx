@@ -163,7 +163,7 @@ export default function FranchisePage() {
                 </svg>
               </a>
               <a
-                href="/pricing"
+                href="/#pricing"
                 className="inline-flex items-center gap-2 rounded-[8px] border border-[rgba(0,0,0,0.1)] px-6 py-4 font-body text-[13.5px] font-medium text-[#555550] transition-all duration-150 hover:border-[rgba(0,0,0,0.2)] hover:text-[#111110]"
               >
                 See pricing

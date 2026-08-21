@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 import Snappy from "@/components/mascot/Snappy";
 
 /**
@@ -54,16 +55,16 @@ export default function CtaFinal() {
                 Host a Snaprint kiosk at your college, coaching centre, co-working space or business centre —
                 installed and live within the hour.
               </p>
-              <a
+              <Link
                 href="/book"
                 data-magnetic="0.35"
-                className="inline-flex items-center gap-2 rounded-full bg-[#E63946] px-6 py-3.5 font-display text-[13.5px] font-semibold text-white transition-colors duration-[--d-hover] ease-hover hover:bg-red-deep"
+                className="liquid-glass-red inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-display text-[13.5px] font-semibold text-white transition-transform duration-[--d-hover] ease-hover hover:scale-[1.03]"
               >
                 Request a Kiosk
                 <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.3" viewBox="0 0 24 24">
                   <path d="M7 17L17 7M7 7h10v10" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             {/* Mascot, standing in for the reference's photo */}

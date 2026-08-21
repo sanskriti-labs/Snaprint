@@ -185,7 +185,7 @@ export default function MachineSpecs() {
           <a
             href="#contact"
             data-magnetic="0.4"
-            className="flex-shrink-0 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-display text-[13.5px] font-semibold text-charcoal transition-colors duration-[--d-hover] ease-hover hover:bg-red hover:text-white"
+            className="liquid-glass flex-shrink-0 inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-display text-[13.5px] font-semibold text-charcoal transition-transform duration-[--d-hover] ease-hover hover:scale-[1.03]"
           >
             Request a Demo
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">

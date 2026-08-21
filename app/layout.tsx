@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Baloo_2 } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import CookieConsent from "@/components/CookieConsent";
+import SnappyLoader from "@/components/mascot/SnappyLoader";
 import SnappyScrollTop from "@/components/mascot/SnappyScrollTop";
+import LenisProvider from "@/components/motion/LenisProvider";
+import CustomCursor from "@/components/motion/CustomCursor";
+import RouteTransition from "@/components/motion/RouteTransition";
 
 // Snappy mascot's "Zzz" glyph only
 const baloo2 = Baloo_2({
@@ -167,10 +170,24 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className="font-body antialiased">
-        {children}
+        {/* Runs before hydration to hide the SnappyLoader overlay via pure
+            CSS when it's already been seen this session (or reduced motion
+            is on) — otherwise the server always renders it frozen at 0%
+            (SSR can't read sessionStorage), and it sits on screen, visible,
+            until React hydrates and catches up. See snappy-loader-root rule
+            in globals.css. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(sessionStorage.getItem('snappy-loader-seen')||matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js-skip-loader')}}catch(e){}",
+          }}
+        />
+        <SnappyLoader />
+        <RouteTransition />
+        <CustomCursor />
+        <LenisProvider>{children}</LenisProvider>
         <SnappyScrollTop />
-        <GoogleAnalytics gaId="G-76GFPGCHWQ" />
-        <Analytics />
+        <CookieConsent />
         <SpeedInsights />
       </body>
     </html>

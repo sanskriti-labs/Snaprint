@@ -15,6 +15,11 @@ const nextConfig = {
         destination: "/blog/print-kiosk-pricing-models-compared",
         permanent: true,
       },
+      {
+        source: "/pricing",
+        destination: "/#pricing",
+        permanent: true,
+      },
     ];
   },
 };

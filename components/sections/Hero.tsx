@@ -2,7 +2,11 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
+// Static import, not next/dynamic: this component needs a ref for the GSAP
+// scroll-pin rotation sync (machineRef.current?.setExternalRotation below) —
+// next/dynamic's wrapper doesn't forward refs, which silently broke that.
 import Machine3D, { type Machine3DHandle } from "@/components/Machine3D";
 import Snappy from "@/components/mascot/Snappy";
 import RevealText from "@/components/motion/RevealText";
@@ -64,9 +68,11 @@ export default function Hero() {
     const kiosk = kioskWrapRef.current;
     if (!wrapper || !pin || !kiosk) return;
 
-    if (prefersReducedMotion()) {
-      // Stable, minimal-movement presentation: skip the pin distance and just
-      // show the kiosk fully, at rest.
+    // Below md, skip the 220vh scroll-pin entirely — the zoom/rise choreography
+    // was tuned for desktop aspect ratios, and on a short mobile viewport it
+    // just reserves a long stretch of near-empty scroll space before the next
+    // section. Same at-rest fallback as reduced-motion.
+    if (prefersReducedMotion() || window.innerWidth < 768) {
       wrapper.style.height = "auto";
       gsap.set(kiosk, { opacity: 1, scale: 1, yPercent: 0 });
       return;
@@ -117,7 +123,7 @@ export default function Hero() {
 
   return (
     <div ref={wrapperRef} className="relative" style={{ height: "220vh" }}>
-      <div ref={pinRef} className="relative h-screen w-full overflow-hidden bg-paper">
+      <div ref={pinRef} className="relative h-[820px] w-full overflow-hidden bg-paper md:h-screen">
         {/* Hero backdrop — the illustrated pastel scene, with a soft white wash
             over the top where the badge/headline/CTAs sit so they stay legible
             without flattening the artwork lower down. */}
@@ -163,7 +169,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
             className="mb-10 flex flex-wrap items-center justify-center gap-3"
           >
-            <a
+            <Link
               href="/find-snaprint"
               data-magnetic="0.35"
               className="liquid-glass-red group inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-display text-[14px] font-semibold text-white transition-transform duration-[--d-hover] ease-hover hover:scale-[1.03]"
@@ -172,7 +178,7 @@ export default function Hero() {
               <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" className="transition-transform duration-[--d-hover] ease-hover group-hover:translate-x-1">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
             <a
               href="#how"
               className="liquid-glass inline-flex items-center gap-2 rounded-full px-6 py-3.5 font-body text-[14px] font-medium text-charcoal transition-transform duration-[--d-hover] ease-hover hover:scale-[1.03]"
@@ -195,7 +201,7 @@ export default function Hero() {
             </div>
             <div className="absolute -right-8 bottom-8 hidden sm:block">
               <a
-                href="/franchise/brochure"
+                href="/franchisebrochure"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="See Snaprint franchise model"

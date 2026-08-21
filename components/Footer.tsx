@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import Snappy, { type SnappyState } from "@/components/mascot/Snappy";
 
@@ -65,36 +66,64 @@ function SnappySignature() {
   );
 }
 
+const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/snaprints.labs/",
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </svg>
+    ),
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/snaprintss/",
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
+  {
+    label: "r/Snaprint on Reddit",
+    href: "https://www.reddit.com/r/Snaprint/",
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="14" r="7" />
+        <circle cx="9" cy="14" r="1" fill="currentColor" stroke="none" />
+        <circle cx="15" cy="14" r="1" fill="currentColor" stroke="none" />
+        <path d="M8.5 17c1 1 2.2 1.4 3.5 1.4s2.5-.4 3.5-1.4" />
+        <path d="M12 7V4" />
+        <circle cx="12" cy="3.5" r="1" fill="currentColor" stroke="none" />
+        <path d="M17 9.5a1.5 1.5 0 112.6 1" />
+      </svg>
+    ),
+  },
+];
+
 export default function Footer() {
   const cols = [
     {
       title: "Product",
       links: [
-        { label: "How it works", href: "#how" },
-        { label: "Why Snaprint", href: "#why" },
-        { label: "The S1 kiosk", href: "#machine" },
-        { label: "Pricing", href: "/pricing" },
-        { label: "Kiosk for business", href: "/kiosk" },
-        { label: "Franchise", href: "/franchise" },
+        { label: "Workflow", href: "/#how" },
+        { label: "The Tech", href: "/#why" },
+        { label: "Pricing", href: "/#pricing" },
+        { label: "Impact", href: "/impact" },
       ],
     },
     {
-      title: "Locations",
-      links: [
-        { label: "Print shops by city", href: "/instant-print" },
-        { label: "Print shops near you", href: "/print-near" },
-        { label: "Blog", href: "/blog" },
-      ],
-    },
-    {
-      title: "Company",
+      title: "Contact",
       links: [
         { label: "About", href: "/about" },
         { label: "Book a Demo", href: "/book" },
         { label: "Request a Quote", href: "mailto:snaprints@sanskritilabs.in?subject=Quote Request" },
         { label: "snaprints@sanskritilabs.in", href: "mailto:snaprints@sanskritilabs.in" },
-        { label: "Instagram", href: "https://www.instagram.com/snaprints.labs/" },
-        { label: "r/Snaprint", href: "https://www.reddit.com/r/Snaprint/" },
       ],
     },
   ];
@@ -106,7 +135,7 @@ export default function Footer() {
       <div className="neu-raised-lg mx-auto max-w-[1280px] rounded-[32px] px-6 pb-8 pt-12 sm:px-10 md:px-14">
 
         {/* Top section */}
-        <div className="mb-12 grid grid-cols-1 gap-12 border-b border-[rgba(0,0,0,0.06)] pb-12 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+        <div className="mb-12 grid grid-cols-1 gap-12 border-b border-[rgba(0,0,0,0.06)] pb-12 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr]">
 
           {/* Brand block */}
           <div>
@@ -125,6 +154,24 @@ export default function Footer() {
               </svg>
               snaprints@sanskritilabs.in
             </a>
+            <div className="mt-3 flex items-center gap-2">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  data-magnetic="0.3"
+                  className="neu-raised flex h-9 w-9 items-center justify-center rounded-full text-charcoal transition-colors hover:text-red"
+                >
+                  {s.icon}
+                </a>
+              ))}
+            </div>
+            <p className="mt-3 font-body text-[10px] font-medium uppercase tracking-[0.12em] text-[#AAAAAA]">
+              Made in India
+            </p>
           </div>
 
           {/* Link columns */}
@@ -136,12 +183,18 @@ export default function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="font-body text-[13.5px] text-[#555550] transition-colors duration-150 hover:text-[#E63946]"
-                    >
-                      {l.label}
-                    </a>
+                    {l.href.startsWith("mailto:") ? (
+                      <a href={l.href} className="font-body text-[13.5px] text-[#555550] transition-colors duration-150 hover:text-[#E63946]">
+                        {l.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={l.href}
+                        className="font-body text-[13.5px] text-[#555550] transition-colors duration-150 hover:text-[#E63946]"
+                      >
+                        {l.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -167,7 +220,7 @@ export default function Footer() {
             {legalLinks.map((l, i) => (
               <span key={l.label} className="flex items-center gap-1">
                 {i > 0 && <span className="text-[#DDDDDD]">·</span>}
-                <a href={l.href} className="font-body text-[12.5px] text-[#AAAAAA] transition-colors hover:text-[#555550]">{l.label}</a>
+                <Link href={l.href} className="font-body text-[12.5px] text-[#AAAAAA] transition-colors hover:text-[#555550]">{l.label}</Link>
               </span>
             ))}
           </div>

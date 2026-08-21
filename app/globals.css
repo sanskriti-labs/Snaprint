@@ -60,6 +60,13 @@ body {
   overflow-x: hidden;
 }
 
+/* See blocking script in app/layout.tsx: hides the mascot loader overlay
+   instantly, before hydration, instead of leaving it frozen at 0% on screen
+   until React catches up. */
+.js-skip-loader #snappy-loader-root {
+  display: none;
+}
+
 /* Kill the native mobile tap-highlight rectangle — on rounded-full/circular
    links (nav pills, hero CTA, mascot) it renders as a stray oval/ring over
    the element's bounding box on touch, which reads as a UI bug. */
@@ -204,22 +211,6 @@ a, button, [role="button"], input, textarea, select, summary {
   border-color: rgba(230,57,70,0.25);
   box-shadow: 0 4px 20px rgba(230,57,70,0.08), 0 1px 4px rgba(0,0,0,0.05);
   transform: translateY(-2px);
-}
-
-/* ─── GLASS CARD (dark sections — kept for dark usage) */
-.glass-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-.glass-card-hover {
-  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
-}
-.glass-card-hover:hover {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(230,57,70,0.35);
-  box-shadow: 0 0 30px rgba(230,57,70,0.09), 0 8px 40px rgba(0,0,0,0.3);
 }
 
 /* ─── LIQUID GLASS (Apple-style, light sections) ─────

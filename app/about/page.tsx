@@ -101,7 +101,7 @@ export default function AboutPage() {
             The business
           </h2>
           <p className="mb-4 font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-            The S1 is sold to shop owners for a one-time ₹3,00,000 to ₹3,50,000.
+            The S1 is sold to shop owners for a one-time ₹84,999 to ₹2,99,999, depending on the model.
             There is no per-print commission, no monthly fee, and no franchise
             royalty. Shop owners set their own print prices and keep 100% of
             revenue after the hardware cost is recovered.

@@ -1,20 +1,28 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { gsap, ScrollTrigger, registerGsap, prefersReducedMotion } from "@/lib/motion";
+import { isMarketingRoute } from "@/lib/marketing-routes";
 
 /**
  * Smooth-scroll foundation (DESIGN_SYSTEM.md §5/§8). Lenis drives scroll and is
  * synced to GSAP's ticker so ScrollTrigger stays in lockstep. Tuned mid-weight —
  * not floaty, not stiff. Disabled entirely under reduced-motion (native scroll).
  *
- * Mounted from app/(marketing)/layout.tsx — scoped to marketing routes only,
- * not the root layout, so PSEO/blog/legal pages stay on native scroll.
+ * Mounted once at the true root (app/layout.tsx) — not per route group — so
+ * crossing into/out of marketing routes toggles Lenis on/off via this effect
+ * re-running on pathname change, instead of fully unmounting/remounting this
+ * provider (and everything below it) on every such navigation. That teardown
+ * was costing ~1.9s per crossing; this effect's own create/destroy is cheap.
  */
 export default function LenisProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const active = isMarketingRoute(pathname);
+
   useEffect(() => {
-    if (prefersReducedMotion()) return;
+    if (!active || prefersReducedMotion()) return;
     registerGsap();
 
     const lenis = new Lenis({
@@ -40,7 +48,7 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
       gsap.ticker.remove(onTick);
       lenis.destroy();
     };
-  }, []);
+  }, [active]);
 
   return <>{children}</>;
 }
