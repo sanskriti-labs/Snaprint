@@ -8,22 +8,22 @@ const problems = [
   {
     num: "01",
     title: "A five-minute errand takes twenty",
-    desc: "People already expect to scan, pay and walk away — for food, for transit, for almost everything. Printing is still stuck behind a counter and a queue.",
+    desc: "People already expect to scan, pay and walk away, for food, for transit, for almost everything. Printing is still stuck behind a counter and a queue.",
   },
   {
     num: "02",
     title: "It only works when someone's behind the counter",
-    desc: "A shut shop, a break between classes, an after-hours request — printing that depends on staff being present is printing that's unavailable half the time.",
+    desc: "A shut shop, a break between classes, an after-hours request: printing that depends on staff being present is printing that's unavailable half the time.",
   },
   {
     num: "03",
     title: "Peak demand always outruns a counter",
-    desc: "Exam season, deadline week, a busy lobby — request volume spikes far past what one person handling one job at a time can keep up with.",
+    desc: "Exam season, deadline week, a busy lobby: request volume spikes far past what one person handling one job at a time can keep up with.",
   },
   {
     num: "04",
     title: "Snaprint fixes all three.",
-    desc: "A self-service kiosk wherever people already are — a hallway, a co-working floor, a business centre lobby. Scan, upload, pay, collect. Runs unattended, all day.",
+    desc: "A self-service kiosk wherever people already are, a hallway, a co-working floor, a business centre lobby. Scan, upload, pay, collect. Runs unattended, all day.",
     highlight: true,
   },
 ];
@@ -106,7 +106,7 @@ export default function Problem() {
           transition={{ delay: 0.14 }}
           className="mb-16 max-w-[460px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]"
         >
-          For the person who owns the machine, that shift is the opportunity — a printing business that doesn&apos;t need a till, a rota, or someone standing next to it all day.
+          For the person who owns the machine, that shift is the opportunity: a printing business that doesn&apos;t need a till, a rota, or someone standing next to it all day.
         </motion.p>
 
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2">

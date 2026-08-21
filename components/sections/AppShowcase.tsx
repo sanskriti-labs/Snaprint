@@ -212,7 +212,7 @@ export default function AppShowcase() {
           <RevealText split="word">The whole print, from their phone.</RevealText>
         </h2>
         <p className="mb-14 max-w-measure-lg font-body text-body-lg font-light text-slate">
-          No app to install — the kiosk opens it in the browser. Connect, drop files, pay by UPI, walk away with paper.
+          No app to install. The kiosk opens it in the browser. Connect, drop files, pay by UPI, walk away with paper.
         </p>
 
         {/* horizontal rail of the six screens */}
@@ -233,7 +233,7 @@ export default function AppShowcase() {
         </motion.div>
 
         <p className="mt-8 font-body text-[12px] text-slate">
-          Example pricing shown. Each operator sets their own per-page price — and keeps 100% of it.
+          Example pricing shown. Each operator sets their own per-page price and keeps 100% of it.
         </p>
       </div>
     </section>

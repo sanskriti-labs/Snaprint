@@ -14,7 +14,7 @@ const steps = [
   },
   {
     tag: "02", type: "upload" as StepType, title: "Upload your file",
-    desc: "Send documents straight from your phone, or from a cloud drive — any format.",
+    desc: "Send documents straight from your phone, or from a cloud drive, any format.",
     detail: "PDF · DOCX · JPG",
   },
   {
@@ -24,7 +24,7 @@ const steps = [
   },
   {
     tag: "04", type: "pay" as StepType, title: "Pay and confirm",
-    desc: "Pay on the kiosk — UPI, card, or cash — then confirm to start printing instantly.",
+    desc: "Pay on the kiosk (UPI, card, or cash), then confirm to start printing instantly.",
     detail: "E2E encrypted",
   },
   {
@@ -174,7 +174,7 @@ export default function HowItWorks() {
             transition={{ delay: 0.14 }}
             className="max-w-[440px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]"
           >
-            No app download. No USB drive. No queue. Just a phone and a QR code — designed for India.
+            No app download. No USB drive. No queue. Just a phone and a QR code, designed for India.
           </motion.p>
         </div>
 

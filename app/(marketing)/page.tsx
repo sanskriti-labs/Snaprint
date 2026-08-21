@@ -28,7 +28,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#product-s1`,
       name: "Snaprint S1",
       description:
-        "Self-service print kiosk you buy once and own outright — connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present. Available in three models: S1, S1 Pro, S1 Pro Max.",
+        "Self-service print kiosk you buy once and own outright. Connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present. Available in three models: S1, S1 Pro, S1 Pro Max.",
       brand: { "@id": `${SITE_URL}/#organization` },
       image: `${SITE_URL}/og.png`,
       offers: {
@@ -46,7 +46,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#kiosk-app`,
       name: "Snaprint Kiosk Customer App",
       url: SITE_URL,
-      description: "QR-code-driven print upload and payment flow that runs in any mobile browser — no app install required.",
+      description: "QR-code-driven print upload and payment flow that runs in any mobile browser, no app install required.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Any (browser-based)",
       browserRequirements: "Requires JavaScript. Mobile-first; works on iOS Safari 14+ and Android Chrome 90+.",
@@ -67,7 +67,7 @@ const jsonLd = {
           name: "Does the Snaprint S1 work with my existing printer?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. The Snaprint S1 works with any printer brand — Canon, HP, Epson, Brother — so you don't need to replace your existing equipment.",
+            text: "Yes. The Snaprint S1 works with any printer brand: Canon, HP, Epson, Brother. So you don't need to replace your existing equipment.",
           },
         },
         {
@@ -83,7 +83,7 @@ const jsonLd = {
           name: "What happens to a customer's uploaded documents?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Files are end-to-end encrypted and automatically deleted after each print job completes — no document is stored on the kiosk.",
+            text: "Files are end-to-end encrypted and automatically deleted after each print job completes. No document is stored on the kiosk.",
           },
         },
         {

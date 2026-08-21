@@ -11,7 +11,7 @@ const bentoCards = [
     size: "wide",
     label: "Universal",
     heading: "Works with your existing printer.",
-    body: "Canon, HP, Epson, Brother — any brand. No forced hardware change. Your shop, your equipment.",
+    body: "Canon, HP, Epson, Brother, any brand. No forced hardware change. Your shop, your equipment.",
     accent: false,
   },
   {
@@ -23,21 +23,21 @@ const bentoCards = [
     points: [
       "AES-256 encryption, in transit and at rest",
       "Auto-purged within seconds of every print",
-      "No cloud copy, no shop-side archive — ever",
+      "No cloud copy, no shop-side archive, ever",
     ],
   },
   {
     size: "normal",
     label: "Uptime",
     heading: "Earns while you sleep.",
-    body: "Orders queue automatically. Your kiosk keeps printing — with or without you present.",
+    body: "Orders queue automatically. Your kiosk keeps printing, with or without you present.",
     accent: true,
   },
   {
     size: "normal",
     label: "Visibility",
     heading: "Every order on your phone.",
-    body: "Live dashboard. Revenue, print counts, ink and paper status — always in your pocket.",
+    body: "Live dashboard. Revenue, print counts, ink and paper status, always in your pocket.",
     accent: false,
   },
   {

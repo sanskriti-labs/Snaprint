@@ -28,7 +28,7 @@ const tiers: Tier[] = [
       "Colour & black-and-white printing",
       "Up to 250 A4 sheets capacity",
       "Reliable, everyday print quality",
-      "Zero setup cost — full ownership",
+      "Zero setup cost, full ownership",
     ],
     bestFor: ["Shopkeepers & stationery stores", "Coaching centres & tuition classes", "Low–medium footfall locations", "Budget-first buyers"],
   },
@@ -41,7 +41,7 @@ const tiers: Tier[] = [
       "Higher-speed colour & B/W printing",
       "Up to 550 A4 sheets capacity",
       "Sharper, more consistent print quality",
-      "Zero setup cost — full ownership",
+      "Zero setup cost, full ownership",
     ],
     bestFor: ["College & university campuses", "Co-working & business centres", "Medium–high footfall locations", "Faster, higher-volume printing needs"],
   },
@@ -55,7 +55,7 @@ const tiers: Tier[] = [
       "Enterprise-grade print engine",
       "Up to 1,830 A4 sheets* capacity",
       "High-quality, professional-grade prints",
-      "Zero setup cost — full ownership",
+      "Zero setup cost, full ownership",
     ],
     bestFor: ["High-footfall malls & commercial hubs", "Multi-kiosk operators", "Continuous, high-volume printing", "Maximum uptime requirements"],
   },
@@ -98,7 +98,7 @@ export default function Pricing() {
           Pick by footfall, volume and budget.
         </RevealText>
         <motion.p {...fadeUp(0.1)} className="mb-16 max-w-[480px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-          Same self-service kiosk, same software, same ownership terms — sized to how busy your location gets. You own it outright, from day one.
+          Same self-service kiosk, same software, same ownership terms, sized to how busy your location gets. You own it outright, from day one.
         </motion.p>
 
         {/* Tier cards */}

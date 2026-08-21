@@ -35,7 +35,7 @@ function SnappySignature() {
       <button
         type="button"
         onClick={handleClick}
-        aria-label="Snappy — click for a surprise"
+        aria-label="Snappy, click for a surprise"
         className="cursor-pointer transition-transform hover:-translate-y-0.5"
       >
         {/* scale is a prop on Snappy (real resizing), not a CSS transform — a CSS

@@ -134,7 +134,7 @@ export default function Why() {
                   Any printer.<br />Zero lock-in.
                 </h3>
                 <p className="max-w-[380px] font-body text-[14px] font-light leading-[1.75] text-[rgba(255,255,255,0.45)]">
-                  Snaprint OS connects to Canon, HP, Epson, Brother — without replacing a single cable. Your existing hardware earns more, today.
+                  Snaprint OS connects to Canon, HP, Epson, Brother, without replacing a single cable. Your existing hardware earns more, today.
                 </p>
               </div>
               {/* Printer brand strip — alphabetical, all boxes the same width */}
@@ -172,7 +172,7 @@ export default function Why() {
                   <span className="text-[48px]">%</span>
                 </div>
                 <p className="mb-8 font-body text-[13px] font-light leading-[1.6] text-white/70">
-                  of every rupee printed stays with you. No revenue share, no per-print cut, no monthly fees — ever. Buy it once, it&apos;s yours.
+                  of every rupee printed stays with you. No revenue share, no per-print cut, no monthly fees, ever. Buy it once, it&apos;s yours.
                 </p>
 
                 {/* Fills the gap between the headline number and the checklist below with
@@ -257,7 +257,7 @@ export default function Why() {
               {[
                 "AES-256 encryption, in transit and at rest",
                 "TLS-secured uploads on every session",
-                "No third-party data sharing — ever",
+                "No third-party data sharing, ever",
                 "Lockable rear access, owner-serviced only",
               ].map((point) => (
                 <div key={point} className="flex items-start gap-2.5 rounded-lg border border-[rgba(0,0,0,0.06)] bg-[#F8F7F4] px-3.5 py-2.5">
@@ -285,7 +285,7 @@ export default function Why() {
               Your shop.<br />One screen.
             </h3>
             <p className="font-body text-[13px] font-light leading-[1.7] text-[#6B6B66]">
-              Revenue, print counts, ink and paper levels — live on your phone. No step-out required.
+              Revenue, print counts, ink and paper levels, live on your phone. No step-out required.
             </p>
             {/* Mini dashboard mock — a live terminal readout, not a static table.
                 Prints ticks up on its own cadence; revenue is derived from it
@@ -336,10 +336,10 @@ export default function Why() {
             </div>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { label: "Works with your printer", them: "Forces own hardware", us: "Any brand — zero change" },
+                { label: "Works with your printer", them: "Forces own hardware", us: "Any brand, zero change" },
                 { label: "Investment model",         them: "High cost + hidden fees", us: "Transparent, one-time" },
                 { label: "Revenue share",            them: "Per-print commission",  us: "You keep 100%" },
-                { label: "Maintenance",              them: "Mandatory AMC contracts", us: "No mandatory AMC — ever" },
+                { label: "Maintenance",              them: "Mandatory AMC contracts", us: "No mandatory AMC, ever" },
               ].map((row) => (
                 <div key={row.label} className="rounded-xl border border-[rgba(0,0,0,0.06)] overflow-hidden">
                   <div className="border-b border-[rgba(0,0,0,0.06)] bg-[#F8F7F4] px-4 py-2.5">

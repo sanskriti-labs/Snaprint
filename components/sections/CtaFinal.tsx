@@ -52,7 +52,7 @@ export default function CtaFinal() {
                 Want a <span className="text-[#E63946]">self-service kiosk</span> for your campus, shop or workspace?
               </h2>
               <p className="mb-7 font-body text-[13.5px] font-light leading-[1.7] text-white/55">
-                Host a Snaprint kiosk at your college, coaching centre, co-working space or business centre —
+                Host a Snaprint kiosk at your college, coaching centre, co-working space or business centre,
                 installed and live within the hour.
               </p>
               <Link
