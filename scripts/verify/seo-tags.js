@@ -99,9 +99,11 @@ for (const file of files) {
     }
   }
 
-  // 2. robots meta
+  // 2. robots meta — /style is an internal design-system preview,
+  // deliberately noindexed and excluded from the sitemap; it's not a
+  // content page and shouldn't trip the "accidental noindex" check.
   const robotsM = html.match(/<meta name="robots" content="([^"]*)"/);
-  if (robotsM) {
+  if (robotsM && route !== "/style") {
     const content = robotsM[1].toLowerCase();
     if (content.includes("noindex")) {
       fail(`${route}: <meta name="robots"> contains "noindex": "${robotsM[1]}"`);

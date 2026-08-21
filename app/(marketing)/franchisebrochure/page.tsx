@@ -35,6 +35,12 @@ export const metadata: Metadata = {
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Snaprint — Kiosk Ownership Brochure",
+    description: "Own a self-service print kiosk. Three models, transparent pricing, zero platform fee.",
+    images: [`${SITE_URL}/og.png`],
+  },
 };
 
 const jsonLd = {

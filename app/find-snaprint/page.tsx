@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Find a Snaprint Kiosk",
+    description: "Live and upcoming Snaprint kiosk locations across Bengaluru and Hyderabad.",
+    images: [`${SITE_URL}/og.png`],
+  },
 };
 
 const jsonLd = {
