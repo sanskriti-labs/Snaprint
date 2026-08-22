@@ -70,7 +70,7 @@ export default function Why() {
   });
 
   return (
-    <section id="why" className="relative overflow-hidden bg-[#F8F7F4] px-6 py-28 md:px-10">
+    <section id="why" className="relative overflow-hidden bg-[#F8F7F4] px-6 py-16 md:px-10 md:py-28">
 
       {/* ── SECTION HEADER ── */}
       <div className="relative mx-auto max-w-[1280px]">
@@ -107,7 +107,7 @@ export default function Why() {
           {/* ① FLAGSHIP — Universal Compatibility (spans 2 cols) */}
           <motion.div
             {...fadeUp(0.1)}
-            className="group relative overflow-hidden rounded-2xl bg-[#111110] p-10 lg:col-span-2"
+            className="group relative overflow-hidden rounded-2xl bg-[#111110] p-6 sm:p-8 md:p-10 lg:col-span-2"
           >
             {/* Precision grid texture */}
             <div
@@ -158,7 +158,7 @@ export default function Why() {
           {/* ② REVENUE — Tall card, right column rows 1+2 */}
           <motion.div
             {...fadeUp(0.16)}
-            className="group relative overflow-hidden rounded-2xl bg-[#E63946] p-10 lg:row-span-2"
+            className="group relative overflow-hidden rounded-2xl bg-[#E63946] p-6 sm:p-8 md:p-10 lg:row-span-2"
           >
             <div className="pointer-events-none absolute -bottom-12 -right-12 h-48 w-48 rounded-full bg-white/10 blur-2xl" aria-hidden />
             <div className="relative flex h-full flex-col justify-between">
@@ -167,9 +167,9 @@ export default function Why() {
                   <span className="font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">Revenue</span>
                 </div>
                 {/* Large editorial number */}
-                <div className="mb-2 font-mono tabular-nums text-[88px] font-extrabold leading-none tracking-[-5px] text-white">
+                <div className="mb-2 font-mono tabular-nums text-[56px] font-extrabold leading-none tracking-[-3px] text-white sm:text-[72px] sm:tracking-[-4px] md:text-[88px] md:tracking-[-5px]">
                   100
-                  <span className="text-[48px]">%</span>
+                  <span className="text-[32px] sm:text-[40px] md:text-[48px]">%</span>
                 </div>
                 <p className="mb-8 font-body text-[13px] font-light leading-[1.6] text-white/70">
                   of every rupee printed stays with you. No revenue share, no per-print cut, no monthly fees, ever. Buy it once, it&apos;s yours.
@@ -238,7 +238,7 @@ export default function Why() {
           {/* ③ SECURITY */}
           <motion.div
             {...fadeUp(0.2)}
-            className="group relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)] transition-all duration-300 hover:border-[rgba(0,0,0,0.12)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white p-5 sm:p-6 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)] transition-all duration-300 hover:border-[rgba(0,0,0,0.12)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1"
           >
             {/* Animated lock icon */}
             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-[rgba(0,0,0,0.07)] bg-[#F8F7F4] transition-colors duration-300 group-hover:border-[rgba(230,57,70,0.2)] group-hover:bg-[rgba(230,57,70,0.05)]">
@@ -273,7 +273,7 @@ export default function Why() {
           {/* ④ DASHBOARD */}
           <motion.div
             {...fadeUp(0.26)}
-            className="group relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)] transition-all duration-300 hover:border-[rgba(0,0,0,0.12)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white p-5 sm:p-6 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)] transition-all duration-300 hover:border-[rgba(0,0,0,0.12)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-1"
           >
             <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-[rgba(0,0,0,0.07)] bg-[#F8F7F4] transition-colors duration-300 group-hover:border-[rgba(230,57,70,0.2)] group-hover:bg-[rgba(230,57,70,0.05)]">
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-[#E63946] transition-transform duration-300 group-hover:scale-110" strokeWidth="1.8">
@@ -324,7 +324,7 @@ export default function Why() {
           {/* ⑤ VS CARD — replaces disconnected comparison table */}
           <motion.div
             {...fadeUp(0.32)}
-            className="relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] md:col-span-2 lg:col-span-3"
+            className="relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white p-5 sm:p-6 md:col-span-2 md:p-8 lg:col-span-3"
           >
             <div className="mb-6 flex items-center justify-between">
               <h3 className="font-display text-[18px] font-bold tracking-[-0.5px] text-[#111110]">
@@ -363,7 +363,7 @@ export default function Why() {
           {/* ⑥ SPEED + LOCAL SUPPORT — two small cards */}
           <motion.div
             {...fadeUp(0.37)}
-            className="group relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-[#111110] p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-[#111110] p-5 sm:p-6 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1"
           >
             <div className="mb-4 font-mono tabular-nums text-[64px] font-extrabold leading-none tracking-[-4px] text-white">
               60<span className="text-[#E63946] text-[40px]">s</span>

@@ -500,10 +500,16 @@ const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D
             width: 760 * scale, maxWidth: "100%", height: 680 * scale, perspective: 1900,
             cursor: interactive ? "grab" : "default",
             display: "flex", alignItems: "center", justifyContent: "center",
-            // Scoped to just this hit area — page scroll elsewhere is untouched.
-            // Needed so a vertical drag rotates the model instead of the browser
-            // hijacking it as a page-scroll gesture.
-            touchAction: interactive ? "none" : "pan-y",
+            // `pan-y` (not `none`) even while interactive: this hit area is large
+            // enough to cover most of the mobile hero viewport, and `none` used to
+            // give it total ownership of every touch gesture inside it — including
+            // a vertical swipe meant to scroll the page, which just spun the kiosk
+            // instead and left mobile visitors stuck unable to scroll past the
+            // hero. `pan-y` lets the browser take over a vertical swipe as a
+            // normal scroll; horizontal drag is still free for touch-rotate since
+            // only vertical panning is reserved for the browser. Mouse drag on
+            // desktop is unaffected either way — touch-action only governs touch.
+            touchAction: "pan-y",
             position: "relative",
           }}
         >

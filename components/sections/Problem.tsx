@@ -40,7 +40,7 @@ function Card({ num, title, desc, highlight, index }: {
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.65, delay: index * 0.09, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative overflow-hidden rounded-2xl p-10 transition-all duration-300 ${
+      className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 sm:p-8 md:p-10 ${
         highlight
           ? "bg-[#E63946]"
           : "light-card cursor-default"
@@ -83,7 +83,7 @@ export default function Problem() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="problem" className="relative overflow-hidden bg-paper px-6 py-24 md:px-10 bg-dot-grid">
+    <section id="problem" className="relative overflow-hidden bg-paper px-6 py-16 md:px-10 md:py-24 bg-dot-grid">
       <div className="relative mx-auto max-w-[1280px]">
         <motion.p
           ref={ref}

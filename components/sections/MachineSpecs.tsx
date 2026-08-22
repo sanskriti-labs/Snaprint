@@ -1,9 +1,27 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Machine3D from "@/components/Machine3D";
 import RevealText from "@/components/motion/RevealText";
+
+// Machine3D's hit-box clamps its WIDTH to the column (`maxWidth: "100%"`) but
+// its height is a fixed `680 * scale` px, independent of that clamp — so on a
+// narrow mobile column the box stayed just as tall as on desktop while going
+// much narrower, turning into a tall, mostly-empty rectangle instead of the
+// roughly-square desktop box. Shrinking `scale` itself on mobile brings both
+// dimensions down together, since both derive from the same `scale` value.
+function useMachineScale(desktop: number, mobile: number) {
+  const [scale, setScale] = useState(desktop);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const update = () => setScale(mq.matches ? mobile : desktop);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, [desktop, mobile]);
+  return scale;
+}
 
 // Bento cards — benefit-driven, not spec sheets
 const bentoCards = [
@@ -55,7 +73,7 @@ function BentoCard({ card, index, inView }: { card: typeof bentoCards[0]; index:
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay: 0.1 + index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      className={`group relative overflow-hidden rounded-2xl p-8 transition-all duration-300 ${
+      className={`group relative overflow-hidden rounded-2xl p-5 transition-all duration-300 sm:p-6 md:p-8 ${
         card.accent
           ? "bg-[#E63946]"
           : "bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] hover:bg-[rgba(255,255,255,0.07)] hover:border-[rgba(255,255,255,0.12)]"
@@ -103,9 +121,10 @@ function BentoCard({ card, index, inView }: { card: typeof bentoCards[0]; index:
 export default function MachineSpecs() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const machineScale = useMachineScale(1.15, 0.62);
 
   return (
-    <section id="machine" className="relative overflow-hidden bg-[#0D0D0C] px-6 py-28 md:px-10 bg-dot-grid-dark">
+    <section id="machine" className="relative overflow-hidden bg-[#0D0D0C] px-6 py-16 md:px-10 md:py-28 bg-dot-grid-dark">
       {/* Ambient red glow behind machine */}
       <div
         className="pointer-events-none absolute left-[22%] top-1/2 -translate-y-1/2 h-[600px] w-[500px]"
@@ -153,7 +172,7 @@ export default function MachineSpecs() {
             {/* Second placement reuses the same asset in a non-interactive, non-draggable
                 presentation — the hero holds the one live/interactive 3D instance on
                 the page (design-system §7 / craft-review item 8). */}
-            <Machine3D vignette interactive={false} scale={1.15} />
+            <Machine3D vignette interactive={false} scale={machineScale} />
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
               {[["15.6″ Display", "touch panel"], ["176.8 cm", "kiosk height"], ["55 × 70 cm", "footprint"]].map(([v, l]) => (
                 <div key={l} className="text-center">
@@ -177,7 +196,7 @@ export default function MachineSpecs() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6 }}
-          className="mt-16 flex flex-col items-center justify-between gap-6 rounded-2xl border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.03)] px-8 py-7 sm:flex-row"
+          className="mt-16 flex flex-col items-center justify-between gap-6 rounded-2xl border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.03)] px-5 py-6 sm:flex-row sm:px-8 sm:py-7"
         >
           <p className="font-body text-[15px] font-light text-[rgba(255,255,255,0.5)] max-w-[420px]">
             Want to see the S1 in action? Request a demo and we&apos;ll bring it to your shop.
