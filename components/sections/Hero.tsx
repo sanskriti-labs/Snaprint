@@ -199,7 +199,17 @@ export default function Hero() {
             <div onPointerUp={() => setHasInteracted(true)}>
               <Machine3D ref={machineRef} interactive scale={0.78} />
             </div>
-            <div className="absolute -right-8 bottom-8 hidden sm:block">
+            {/* On mobile, the interactive Machine3D hit-box (760*scale px wide, a
+                fixed size unrelated to viewport) is much wider than the screen and
+                overflows both edges equally while staying centered — so anchoring
+                to its real "-right-8" edge landed off-screen, clipped invisible by
+                the hero's overflow-hidden. `left-1/2` anchors to that box's own
+                center instead, which (because the overflow is symmetric) always
+                coincides with the actual viewport center, then a fixed px offset
+                nudges it into the visible right side. Desktop is unaffected —
+                `sm:` restores the original edge-anchored position, since the box
+                doesn't overflow there. */}
+            <div className="absolute bottom-8 left-1/2 translate-x-[calc(-50%+130px)] sm:left-auto sm:right-[-2rem] sm:translate-x-0">
               <a
                 href="/franchisebrochure"
                 target="_blank"

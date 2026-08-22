@@ -15,14 +15,14 @@ export default function CtaFinal() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-paper px-6 py-20 md:px-10">
+    <section id="contact" className="relative overflow-hidden bg-paper px-6 py-14 md:px-10 md:py-20">
       <div className="mx-auto max-w-[1280px]">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="relative overflow-hidden rounded-2xl px-8 py-10 sm:px-12 sm:py-12"
+          className="relative overflow-hidden rounded-2xl px-6 py-8 sm:px-12 sm:py-12"
           style={{ background: "linear-gradient(160deg, #0f0f0e 0%, #111110 55%, #1a0405 100%)" }}
         >
           {/* Precision grid, kept subtle */}

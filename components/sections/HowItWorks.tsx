@@ -140,7 +140,7 @@ export default function HowItWorks() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="how" className="relative overflow-hidden bg-paper px-6 py-24 md:px-10">
+    <section id="how" className="relative overflow-hidden bg-paper px-6 py-16 md:px-10 md:py-24">
       {/* Subtle left-side warm tint */}
       <div
         className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 h-[500px] w-[300px]"

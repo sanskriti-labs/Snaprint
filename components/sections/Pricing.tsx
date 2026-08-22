@@ -81,7 +81,7 @@ export default function Pricing() {
   });
 
   return (
-    <section id="pricing" className="relative overflow-hidden bg-white px-6 py-28 md:px-10">
+    <section id="pricing" className="relative overflow-hidden bg-white px-6 py-16 md:px-10 md:py-28">
       <div className="relative mx-auto max-w-[1280px]">
         <motion.p
           ref={ref}
@@ -108,7 +108,7 @@ export default function Pricing() {
               key={t.key}
               {...fadeUp(0.14 + i * 0.08)}
               whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 22 } }}
-              className={`group relative flex flex-col overflow-hidden rounded-2xl p-8 transition-shadow duration-300 ${
+              className={`group relative flex flex-col overflow-hidden rounded-2xl p-5 transition-shadow duration-300 sm:p-6 md:p-8 ${
                 t.popular
                   ? "border border-[rgba(230,57,70,0.3)] hover:shadow-[0_16px_50px_rgba(230,57,70,0.22)]"
                   : "border border-[rgba(0,0,0,0.07)] bg-white shadow-[0_1px_4px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)] hover:border-[rgba(230,57,70,0.2)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.1)]"
