@@ -1,4 +1,4 @@
-const MARKETING_PATHS = ["/", "/book", "/franchisebrochure", "/style"];
+const MARKETING_PATHS = ["/", "/book", "/franchisebrochure", "/style", "/impact", "/find-snaprint"];
 
 /** The pages that get the full cinematic stack (Lenis, GSAP-driven cursor,
  * route curtain). Everything else (PSEO/blog/legal/Impact/etc.) stays on
