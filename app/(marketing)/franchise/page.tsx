@@ -33,7 +33,7 @@ const included = [
   },
   {
     title: "Ongoing support",
-    body: "In-person Bengaluru installation, training, and a support team that knows the hardware. Six months of software support included, then continued support available under the yearly platform fee.",
+    body: "In-person Bengaluru installation, training, and a support team that knows the hardware. Six months of software support included, with continued support available afterward — no annual or recurring software fee.",
   },
   {
     title: "Brand association",
@@ -61,7 +61,7 @@ const roiAssumptions = [
 const faqs = [
   {
     q: "How much does the Snaprint franchise cost?",
-    a: "The Snaprint S1 kiosk is priced at ₹2,50,000–₹3,00,000 one-time, plus 18% GST. This includes the dedicated hardware, software, installation, training, and the first six months of software support. A separate yearly platform fee applies after the first six months — the exact amount is shared during your site visit. There is no per-print commission.",
+    a: "Snaprint has 3 kiosk models, priced one-time at ₹84,999, ₹1,39,999, and ₹2,99,999, plus 18% GST, depending on the model. This includes the dedicated hardware, software, installation, training, and six months of software support. There is no annual fee, no software subscription, and no per-print commission — the kiosk is a one-time purchase you own outright.",
   },
   {
     q: "Is there a contract or lock-in period?",
@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     q: "What is the realistic ROI timeline?",
-    a: "At a typical mid-traffic Bengaluru shop (50 prints/day, ₹15 average), the ₹3.25L investment recoups in roughly 21 months. At a busy college gate (500 prints/day, the rate cited on the franchise home page), the same investment recoups in roughly 26 months of operating cash flow. Volume is the lever, not the equipment cost.",
+    a: "At a typical mid-traffic Bengaluru shop (50 prints/day, ₹15 average), the S1's ₹84,999 investment recoups in roughly 5–6 months of operating cash flow. At a busy college gate (500 prints/day, the rate cited on the franchise home page), the same model recoups in under 2 months. Volume is the lever, not the equipment cost.",
   },
   {
     q: "Can I add a Snaprint kiosk to my existing xerox shop?",
@@ -96,8 +96,8 @@ const jsonLd = {
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "INR",
-        lowPrice: "300000",
-        highPrice: "350000",
+        lowPrice: "84999",
+        highPrice: "299999",
         offerCount: "1",
         availability: "https://schema.org/InStock",
         url: `${siteUrl}/franchise`,
@@ -149,7 +149,7 @@ export default function FranchisePage() {
               <span className="text-[#E63946]">operator.</span>
             </h1>
             <p className="mb-10 max-w-[560px] font-body text-[17px] font-light leading-[1.78] text-[#6B6B66]">
-              Install the Snaprint S1 in your shop and turn the WhatsApp-a-PDF-and-collect-later pattern into a paid, self-service order — running 24/7, even when you&apos;re not at the counter. ₹3&ndash;3.5L one-time investment. No per-print commission.
+              Install the Snaprint S1 in your shop and turn the WhatsApp-a-PDF-and-collect-later pattern into a paid, self-service order — running 24/7, even when you&apos;re not at the counter. ₹84,999&ndash;₹2,99,999 one-time investment, across 3 models. No per-print commission.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
@@ -172,7 +172,7 @@ export default function FranchisePage() {
 
             <div className="mt-14 flex flex-wrap items-end gap-10 border-t border-[rgba(0,0,0,0.07)] pt-10">
               {[
-                { v: "₹3–3.5L", l: "one-time investment" },
+                { v: "₹84,999", l: "starting price, one-time" },
                 { v: "0%", l: "per-print commission" },
                 { v: "24/7", l: "unmanned operation" },
                 { v: "7 days", l: "from payment to live" },

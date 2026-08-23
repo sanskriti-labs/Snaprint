@@ -8,7 +8,7 @@
     "type": "Self-service print kiosk hardware",
     "category": ["Self-service printing kiosk", "Automated print station", "Document printing kiosk"],
     "description": "Connects to any existing printer (Canon, HP, Epson, Brother). Customers scan a QR code, upload a document, pay, and collect the print without staff present.",
-    "priceRangeINR": [300000, 350000],
+    "priceRangeINR": [84999, 299999],
     "deploymentVerticals": ["Colleges", "Universities", "Offices", "Hospitals", "Libraries", "Railway stations", "Malls", "Retail stores"]
   },
   "areaServed": "Bengaluru, India",
