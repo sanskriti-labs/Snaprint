@@ -68,15 +68,14 @@ export default function Hero() {
     const kiosk = kioskWrapRef.current;
     if (!wrapper || !pin || !kiosk) return;
 
-    // Below md, skip the 220vh scroll-pin entirely — the zoom/rise choreography
-    // was tuned for desktop aspect ratios, and on a short mobile viewport it
-    // just reserves a long stretch of near-empty scroll space before the next
-    // section. Same at-rest fallback as reduced-motion.
-    if (prefersReducedMotion() || window.innerWidth < 768) {
+    // Reduced motion: skip the scroll-pin entirely and settle at rest.
+    if (prefersReducedMotion()) {
       wrapper.style.height = "auto";
       gsap.set(kiosk, { opacity: 1, scale: 1, yPercent: 0 });
       return;
     }
+
+    const isMobile = window.innerWidth < 768;
 
     registerGsap();
     // Straight-on, not angled — the hero reveal shows the kiosk facing the
@@ -104,9 +103,10 @@ export default function Hero() {
       // small → close-up → normal: rise into view steadily over the whole
       // scroll range, but the zoom punches in past the resting scale at the
       // midpoint, then eases back out to settle — a camera move, not just a
-      // linear grow.
+      // linear grow. Mobile gets a gentler punch (1.18 vs 1.4) since the
+      // narrower viewport makes the desktop overshoot feel like clipping.
       tl.to(kiosk, { yPercent: 0, duration: 1 }, 0);
-      tl.to(kiosk, { scale: 1.4, duration: 0.5, ease: "power2.out" }, 0);
+      tl.to(kiosk, { scale: isMobile ? 1.18 : 1.4, duration: 0.5, ease: "power2.out" }, 0);
       tl.to(kiosk, { scale: 1.08, duration: 0.5, ease: "power2.inOut" }, 0.5);
 
       // The copy above gets out of the way early — fully hidden by a third of
@@ -122,7 +122,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div ref={wrapperRef} className="relative" style={{ height: "220vh" }}>
+    <div ref={wrapperRef} className="relative h-[160vh] md:h-[220vh]">
       <div ref={pinRef} className="relative h-[820px] w-full overflow-hidden bg-paper md:h-screen">
         {/* Hero backdrop — the illustrated pastel scene, with a soft white wash
             over the top where the badge/headline/CTAs sit so they stay legible
