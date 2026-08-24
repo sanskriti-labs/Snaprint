@@ -134,12 +134,12 @@ export default function Why() {
                   Any printer.<br />Zero lock-in.
                 </h3>
                 <p className="max-w-[380px] font-body text-[14px] font-light leading-[1.75] text-[rgba(255,255,255,0.45)]">
-                  Snaprint OS connects to Canon, HP, Epson, Brother, without replacing a single cable. Your existing hardware earns more, today.
+                  Snaprint OS connects to your entire fleet—regardless of manufacturer—without replacing a single cable. Your existing hardware earns more, today.
                 </p>
               </div>
-              {/* Printer brand strip — alphabetical, all boxes the same width */}
+              {/* Compatibility strip — alphabetical, all boxes the same width */}
               <div className="flex flex-col gap-2 lg:items-end">
-                {["Brother", "Canon", "Epson", "HP"].map((brand) => (
+                {["Legacy Fleets", "Enterprise Models", "All Major Standards", "Custom Hardware"].map((brand) => (
                   <div
                     key={brand}
                     className="flex w-[200px] items-center justify-between gap-3 rounded-lg border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.04)] px-4 py-2.5 transition-colors duration-200 group-hover:border-[rgba(255,255,255,0.12)]"

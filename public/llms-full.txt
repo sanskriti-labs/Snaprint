@@ -157,11 +157,13 @@ detailed at https://snaprints.com/features.
 
 ## Pricing
 
-The Snaprint S1 hardware is sold to shop owners for an all-inclusive
-price of ₹3,00,000 to ₹3,50,000 (Indian Rupees). This is a one-time,
-single-payment purchase. There is no per-print commission, no monthly
-software fee, and no hidden charges. Print consumables (paper, toner)
-are the shop owner's responsibility, as is the case for any xerox shop.
+Snaprint has 3 kiosk models. The S1 hardware is sold to shop owners
+starting from ₹84,999, with the premium S1 Pro Max starting from
+₹2,99,999 (Indian Rupees), plus GST. This is a one-time, single-payment
+purchase — there is no annual fee, no monthly software subscription,
+no per-print commission, and no hidden recurring charges. Print
+consumables (paper, toner) are the shop owner's responsibility, as is
+the case for any xerox shop.
 
 Print pricing to end customers is set by the individual shop owner. The
 S1 supports per-page pricing tiers (B&W single-sided, B&W double-sided,

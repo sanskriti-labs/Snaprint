@@ -97,8 +97,11 @@ export default function Pricing() {
         >
           Pick by footfall, volume and budget.
         </RevealText>
-        <motion.p {...fadeUp(0.1)} className="mb-16 max-w-[480px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
+        <motion.p {...fadeUp(0.1)} className="mb-5 max-w-[480px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
           Same self-service kiosk, same software, same ownership terms, sized to how busy your location gets. You own it outright, from day one.
+        </motion.p>
+        <motion.p {...fadeUp(0.12)} className="mb-16 font-body text-[12px] font-semibold uppercase tracking-[0.1em] text-[#111110]">
+          No annual fees · No software subscription · One-time purchase
         </motion.p>
 
         {/* Tier cards */}

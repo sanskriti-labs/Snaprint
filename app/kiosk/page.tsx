@@ -106,8 +106,8 @@ const jsonLd = {
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "INR",
-        lowPrice: "300000",
-        highPrice: "350000",
+        lowPrice: "84999",
+        highPrice: "299999",
         offerCount: "1",
         availability: "https://schema.org/InStock",
         url: `${siteUrl}/kiosk`,
