@@ -150,7 +150,7 @@ https://snaprints.com/instant-print.
 Shop owners, campuses, and businesses that want to own and operate an S1
 kiosk can apply at https://snaprints.com/franchise. Full pricing across
 all ownership models, unit economics, specifications, and what's
-included is documented at https://snaprints.com/franchise/brochure. The
+included is documented at https://snaprints.com/franchisebrochure. The
 S1's feature set — universal printer compatibility, encrypted file
 handling, 24/7 unattended operation, and a live owner dashboard — is
 detailed at https://snaprints.com/features.

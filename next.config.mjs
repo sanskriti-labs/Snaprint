@@ -20,6 +20,27 @@ const nextConfig = {
         destination: "/#pricing",
         permanent: true,
       },
+      // Stale external links (old llms.txt) pointed here — the brochure has
+      // always lived at /franchisebrochure.
+      {
+        source: "/franchise/brochure",
+        destination: "/franchisebrochure",
+        permanent: true,
+      },
+      // GSC 404s from slugs Google discovered off old sitemaps. `frazer-town`
+      // is a spelling variant of the live `fraser-town` page; the rest are
+      // real Bengaluru localities with no dedicated page yet, so send them to
+      // the directory hub rather than leaving a dead end.
+      {
+        source: "/print-near/frazer-town",
+        destination: "/print-near/fraser-town",
+        permanent: true,
+      },
+      {
+        source: "/print-near/:slug(sadashivanagar|mg-road|avenue-road)",
+        destination: "/print-near",
+        permanent: true,
+      },
     ];
   },
 };
