@@ -624,6 +624,32 @@ if (missingTails === 0) {
   ok(`all ${totalLive} live entities have a local FAQ tail file`);
 }
 
+// ---------------------------------------------------------------------------
+// No non-canonical-domain links in hand-written body content. www.snaprints
+// .com has no redirect configured to the apex (next.config.mjs only redirects
+// specific stale paths, not the whole www subdomain) — a link like that
+// either dead-ends or, worse, forces an extra hop search engines read as a
+// redirect chain masking the apex domain, which depresses brand-name search
+// results (this shipped once in area-marathahalli.md, caught by hand while
+// investigating the "brand name discoverability" Ora finding).
+// ---------------------------------------------------------------------------
+const bodiesDir = resolve(repoRoot, "content/pseo/bodies");
+let badDomainLinks = 0;
+if (existsSync(bodiesDir)) {
+  for (const file of readdirSync(bodiesDir)) {
+    if (!file.endsWith(".md")) continue;
+    const text = readFileSync(join(bodiesDir, file), "utf8");
+    const matches = text.match(/https?:\/\/www\.snaprints\.com/g);
+    if (matches) {
+      fail(`content/pseo/bodies/${file} links to www.snaprints.com (${matches.length}x) instead of the canonical apex snaprints.com`);
+      badDomainLinks++;
+    }
+  }
+}
+if (badDomainLinks === 0) {
+  ok("no www.snaprints.com links in pSEO body content — all link to the canonical apex domain");
+}
+
 console.log("");
 console.log(failures === 0 ? "✓ all PSEO checks passed" : `✗ ${failures} PSEO check(s) failed`);
 process.exit(failures === 0 ? 0 : 1);

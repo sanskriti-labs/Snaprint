@@ -3301,7 +3301,7 @@ With thousands of tech workers re-locating into the surrounding apartment blocks
 B&W document scans for visa applications and bank KYC dominate weekdays. Colour prints mostly come from marketing freelancers and small institutes making brochures or course material. Spiral binding shows up in clusters ahead of certification exam season. Lamination jobs tend to be quick — photo IDs, insurance cards, kids' school records.
 
 ### How Snaprint fits in
-Snaprint's listing of these twenty shops helps residents find the nearest counter without opening three map apps. Shop owners can [list once](https://www.snaprints.com/book) and reach the Marathahalli crowd directly. Students hunting for a reliable print shop around the bridge can browse the [local options here](https://www.snaprints.com/print-near/marathahalli). No app, no fuss — just the closest open counter.
+Snaprint's listing of these twenty shops helps residents find the nearest counter without opening three map apps. Shop owners can [list once](https://snaprints.com/book) and reach the Marathahalli crowd directly. Students hunting for a reliable print shop around the bridge can browse the [local options here](https://snaprints.com/print-near/marathahalli). No app, no fuss — just the closest open counter.
 `,
   },
   "area-mathikere": {
