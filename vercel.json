@@ -6,7 +6,10 @@
   "headers": [
     {
       "source": "/",
-      "headers": [{ "key": "Vary", "value": "Accept, Accept-Encoding" }]
+      "headers": [
+        { "key": "Vary", "value": "Accept, Accept-Encoding" },
+        { "key": "X-Vercel-Json-Headers-Test", "value": "1" }
+      ]
     },
     {
       "source": "/blog/:path*",
