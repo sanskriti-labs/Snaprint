@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AgentRecoveryLinks from "@/components/AgentRecoveryLinks";
 
 export default function PrintNearNotFound() {
   return (
@@ -31,6 +32,7 @@ export default function PrintNearNotFound() {
             Contact us
           </a>
         </div>
+        <AgentRecoveryLinks extraLink={{ href: "/print-near", label: "/print-near — directory of all listed areas" }} />
       </main>
       <Footer />
     </>

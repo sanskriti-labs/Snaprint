@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Snappy from "@/components/mascot/Snappy";
+import AgentRecoveryLinks from "@/components/AgentRecoveryLinks";
 
 export default function NotFound() {
   return (
@@ -33,6 +34,7 @@ export default function NotFound() {
             Book a Demo
           </Link>
         </div>
+        <AgentRecoveryLinks extraLink={{ href: "/print-near", label: "/print-near — directory of listed print/xerox shops by area" }} />
       </main>
       <Footer />
     </>

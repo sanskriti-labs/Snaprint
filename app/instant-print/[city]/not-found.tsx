@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AgentRecoveryLinks from "@/components/AgentRecoveryLinks";
 
 export default function InstantPrintNotFound() {
   return (
@@ -31,6 +32,7 @@ export default function InstantPrintNotFound() {
             Contact us
           </a>
         </div>
+        <AgentRecoveryLinks extraLink={{ href: "/instant-print", label: "/instant-print — directory of all listed cities" }} />
       </main>
       <Footer />
     </>
