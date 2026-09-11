@@ -2,5 +2,23 @@
   "crons": [
     { "path": "/api/cron/gsc-export", "schedule": "0 3 * * *" },
     { "path": "/api/cron/indexnow", "schedule": "0 4 * * *" }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "headers": [{ "key": "Vary", "value": "Accept, Accept-Encoding" }]
+    },
+    {
+      "source": "/blog/:path*",
+      "headers": [{ "key": "Vary", "value": "Accept, Accept-Encoding" }]
+    },
+    {
+      "source": "/print-near/:path*",
+      "headers": [{ "key": "Vary", "value": "Accept, Accept-Encoding" }]
+    },
+    {
+      "source": "/instant-print/:path*",
+      "headers": [{ "key": "Vary", "value": "Accept, Accept-Encoding" }]
+    }
   ]
 }

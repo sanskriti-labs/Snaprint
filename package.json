@@ -16,6 +16,7 @@
     "verify:meta": "node scripts/verify/meta.js",
     "verify:schema": "node scripts/verify/schema.js",
     "verify:seo-tags": "node scripts/verify/seo-tags.js",
+    "verify:markdown": "node scripts/verify/markdown-negotiation.mjs http://localhost:3000",
     "generate:bodies": "node scripts/generate-bodies.mjs",
     "generate:priority": "node scripts/seo/run-priority-api.mjs",
     "generate:faq-tails": "node scripts/seo/generate-faq-tails.mjs",

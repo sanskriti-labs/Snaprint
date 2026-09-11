@@ -8,6 +8,16 @@ import createBundleAnalyzer from "@next/bundle-analyzer";
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  // The Vary: Accept header for acceptmarkdown.com content negotiation
+  // (finding: markdown content negotiation) is set in vercel.json, not here.
+  // Next's App Router calls res.setHeader("vary", ...) unconditionally deep
+  // in base-server.js (setVaryHeader) on every page response, which
+  // *overwrites* anything a next.config.mjs headers() rule or middleware.ts
+  // already put there — there is no supported way to append to it from
+  // application code. vercel.json's headers run at Vercel's edge layer, on
+  // the response Next.js already finished building, so it lands after that
+  // overwrite instead of before it. See middleware.ts +
+  // lib/markdown-negotiation.ts for the negotiation logic itself.
   async redirects() {
     return [
       {
