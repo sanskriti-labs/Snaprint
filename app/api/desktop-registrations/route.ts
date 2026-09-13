@@ -1,11 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getDesktopLeadsPool } from "@/lib/desktopLeadsDb";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const NAME_RE = /^[^\d[\]{}<>]{1,120}$/;
-const PHONE_RE = /^[+0-9 ()\-]{6,32}$/;
 const CITY_RE = /^[a-zA-Z\s.'-]{0,80}$/;
 const MAX_BODY_BYTES = 4 * 1024;
+const WORKER_URL = process.env.SNAPRINT_WORKER_URL || "https://kiosk.snaprints.com";
+
+// Indian mobile numbers only, same as the Worker's own PHONE_RE — accepts common human input
+// shapes (spaces, hyphens, optional +91/91/0 prefix) and normalizes to +91XXXXXXXXXX before
+// forwarding, since a free-text "+91 98765 43210"-style input never comes in pre-normalized.
+function normalizeIndianPhone(raw: string): string | null {
+  const digits = raw.replace(/[^\d]/g, "");
+  const last10 = digits.length > 10 ? digits.slice(-10) : digits;
+  if (!/^[6-9]\d{9}$/.test(last10)) return null;
+  return `+91${last10}`;
+}
 
 export async function POST(req: NextRequest) {
   const contentLength = Number(req.headers.get("content-length") ?? "0");
@@ -46,8 +55,12 @@ export async function POST(req: NextRequest) {
   if (typeof ownerName !== "string" || !NAME_RE.test(ownerName.trim())) {
     return NextResponse.json({ error: "A valid 'ownerName' is required" }, { status: 400 });
   }
-  if (typeof phone !== "string" || !PHONE_RE.test(phone.trim())) {
+  if (typeof phone !== "string") {
     return NextResponse.json({ error: "A valid 'phone' is required" }, { status: 400 });
+  }
+  const ownerPhone = normalizeIndianPhone(phone);
+  if (!ownerPhone) {
+    return NextResponse.json({ error: "A valid 10-digit Indian mobile number is required" }, { status: 400 });
   }
   if (typeof email !== "string" || !EMAIL_RE.test(email)) {
     return NextResponse.json({ error: "A valid 'email' is required" }, { status: 400 });
@@ -56,16 +69,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "'city' must be a plain place name" }, { status: 400 });
   }
 
+  // Registers the real shop record (Cloudflare KV + D1) — the Worker is the sole source of
+  // truth now; there is no separate lead database. Credentials (deviceSecret, defaultPassword)
+  // are deliberately NOT relayed back to the browser: they're persisted in the Worker's D1
+  // shop_registrations table (GET /api/v1/admin/shop-registrations) for the team to retrieve
+  // and hand to the owner directly, rather than exposing a device secret on a public page.
   try {
-    const pool = getDesktopLeadsPool();
-    await pool.query(
-      `INSERT INTO desktop_registrations (shop_name, owner_name, phone, email, city)
-       VALUES ($1, $2, $3, $4, $5)`,
-      [shopName.trim(), ownerName.trim(), phone.trim(), email.trim(), city?.trim() || null]
-    );
+    const res = await fetch(`${WORKER_URL}/api/v1/shops/register`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ shopName: shopName.trim(), ownerPhone }),
+    });
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({}));
+      const message = typeof errBody?.error === "string" ? errBody.error : "Registration failed";
+      const status = res.status === 429 ? 429 : 502;
+      return NextResponse.json({ error: message }, { status });
+    }
     return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error("[desktop-registrations] insert failed:", err instanceof Error ? err.message : err);
+    console.error("[desktop-registrations] Worker call failed:", err instanceof Error ? err.message : err);
     return NextResponse.json(
       { error: "We couldn't save your registration — please email us and we'll add you manually." },
       { status: 502 }
