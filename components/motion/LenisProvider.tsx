@@ -29,6 +29,13 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
       duration: 1.05,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // expo-out
       smoothWheel: true,
+      // Touch was left as native passthrough, which fires scroll updates too
+      // sparsely/inconsistently during an active finger-drag for ScrollTrigger's
+      // pinned hero animation to track — it visibly stalls mid-scroll on real
+      // phones despite the same math working fine on desktop. Routing touch
+      // through Lenis's own RAF-driven loop (already wired to ScrollTrigger.update
+      // below) gives it the same steady update cadence wheel scroll already has.
+      syncTouch: true,
     });
 
     lenis.on("scroll", ScrollTrigger.update);
