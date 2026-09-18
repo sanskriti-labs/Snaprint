@@ -214,7 +214,24 @@ export default function Footer() {
             >
               Sanskriti Labs
             </a>{" "}
-            product · Bengaluru, India
+            product · Bengaluru, India · Built by{" "}
+            <a
+              href="https://www.linkedin.com/in/goutham-singh-/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#AAAAAA] underline decoration-[rgba(0,0,0,0.15)] underline-offset-2 transition-colors hover:text-[#555550]"
+            >
+              Goutham Singh
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://abhishekrajpurohit.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#AAAAAA] underline decoration-[rgba(0,0,0,0.15)] underline-offset-2 transition-colors hover:text-[#555550]"
+            >
+              Abhishek Rajpurohit
+            </a>
           </span>
           <div className="flex items-center gap-1">
             {legalLinks.map((l, i) => (
