@@ -1,0 +1,63 @@
+Directory,Tier,URL,Category,DR,Dofollow,Submission Date,Status,Live URL,Backlink Verified,Positioning Variant Used,Tags Used,Account Email,Notes
+Product Hunt,1,https://producthunt.com/posts/new,Launch,91,Yes,,Blocked,,,Launch,,,"Blocked on visual assets (5-8 screenshots + demo video) per product-hunt-launch-plan.md. Do this one last, once assets exist."
+Hacker News (Show HN),1,https://news.ycombinator.com/submit,Launch,91,No,,Draft,,,Launch,,,"Only with the india-informal-retail-nobody-builds-for.mdx angle (Show HN wants a technical/founder story, not a sales pitch). Nofollow but very high GEO/citation value."
+BetaList,1,https://betalist.com/submit,Launch,64,Yes,,Draft,,,Launch,,,2-4 week queue unless paid expedite
+Fazier,1,https://fazier.com/submit,Launch,30,Yes,,Draft,,,Launch,,,Low competition, achievable top placement
+Uneed,1,https://uneed.best/submit-a-tool,Launch,40,Yes,,Draft,,,Launch,,,
+Microlaunch,1,https://microlaunch.net/submit,Launch,30,Yes,,Draft,,,Launch,,,Month-long visibility vs one-day spike
+OpenHunts,1,https://openhunts.com/submit,Launch,25,Yes,,Draft,,,Launch,,,
+LaunchVault,1,https://launchvault.com/submit,Launch,20,Yes,,Draft,,,Launch,,,Anti-VC/bootstrapped framing fits Snaprint's story
+What Launched Today,1,https://whatlaunchedtoday.com,Launch,20,Yes,,Draft,,,Launch,,,Guaranteed visibility regardless of votes
+Launching Next,1,https://launchingnext.com/submit,Launch,30,Yes,,Draft,,,Launch,,,Needs a compelling story - use the founder narrative
+PeerPush,1,https://peerpush.net/submit,Launch,25,Yes,,Draft,,,Launch,,,
+Firsto,1,https://firsto.co/submit,Launch,25,Yes,,Draft,,,Launch,,,
+GetByte,1,https://getbyte.co/submit,Launch,20,Yes,,Draft,,,Launch,,,
+Best of Web,1,https://bestofweb.io/submit,Launch,30,Yes,,Draft,,,Launch,,,
+Tiny Launch,1,https://tinylaunch.com/submit,Launch,20,Yes,,Draft,,,Launch,,,
+PitchWall,1,https://pitchwall.co/submit,Launch,25,Yes,,Draft,,,Launch,,,
+Startup Stash,2,https://startupstash.com/submit,Startup,50,Yes,,Draft,,,Startup,,,Curated by need, not SaaS-only
+SideProjectors,2,https://www.sideprojectors.com/project/new,Startup,35,Yes,,Draft,,,Startup,,,
+Indie Hackers,2,https://www.indiehackers.com,Startup,76,Yes,,Draft,,,Startup,,,Also the right place for the build-in-public post-launch recap
+Gust,2,https://gust.com,Startup,75,Yes,,Draft,,,Startup,,,
+Startups.com,2,https://www.startups.com,Startup,68,Yes,,Draft,,,Startup,,,
+StartUs,2,https://startus.cc,Startup,62,Yes,,Draft,,,Startup,,,
+Today Launches,2,https://todaylaunches.com,Startup,60,Yes,,Draft,,,Startup,,,
+StartupBuffer,2,https://startupbuffer.com,Startup,57,Yes,,Draft,,,Startup,,,
+Feedough,2,https://www.feedough.com,Startup,55,Yes,,Draft,,,Startup,,,
+Indie Hacker Tools,2,https://www.indiehacker.tools,Startup,55,Yes,,Draft,,,Startup,,,
+Open Launch,2,https://open-launch.com,Startup,55,Yes,,Draft,,,Startup,,,
+Promote Project,2,https://www.promoteproject.com,Startup,47,Yes,,Draft,,,Startup,,,
+BetaBound,2,https://betabound.com,Startup,45,Yes,,Draft,,,Startup,,,
+Makerthrive,2,https://makerthrive.com,Startup,45,Yes,,Draft,,,Startup,,,
+StartupTracker,2,https://startuptracker.io,Startup,44,Yes,,Draft,,,Startup,,,
+Launched.io,2,https://launched.io,Startup,40,Yes,,Draft,,,Startup,,,
+ProfitHunt,2,https://profithunt.co,Startup,40,Yes,,Draft,,,Startup,,,
+TrustMRR,2,https://trustmrr.com,Startup,40,Yes,,Draft,,,Startup,,,
+Build Voyage,2,https://buildvoyage.com,Startup,33,Yes,,Draft,,,Startup,,,
+Bizcommunity,2,https://www.bizcommunity.com,B2B,65,Yes,,Draft,,,Startup,,,
+Taalk,2,https://taalk.com,Startup,80,Yes,,Draft,,,Startup,,,
+Startup Fame,2,https://startupfa.me,Startup,77,Yes,,Draft,,,Startup,,,
+Dun & Bradstreet,8,https://www.dnb.com,B2B,93,Yes,,Draft,,,Startup,,,"Business-data directory, same category as Crunchbase - genuine entity-authority signal, not a content-hosting platform"
+Manta,9,https://www.manta.com,Local business,76,Yes,,Draft,,,Local,,,Use canonical NAP from directories.md verbatim
+ActiveSearchResults,9,https://www.activesearchresults.com,Local business,74,Yes,,Draft,,,Local,,,
+Hotfrog,9,https://www.hotfrog.com,Local business,72,Yes,,Draft,,,Local,,,Has India listings coverage
+Locanto,9,https://www.locanto.com,General,70,Yes,,Draft,,,Local,,,Has an India site (locanto.in) - use that if available
+MerchantCircle,9,https://www.merchantcircle.com,Local business,68,Yes,,Draft,,,Local,,,
+Showmelocal,9,https://www.showmelocal.com,Local business,64,Yes,,Draft,,,Local,,,
+Cylex,9,https://www.cylex.us.com,Local business,64,Yes,,Draft,,,Local,,,International aggregator, check cylex.in
+Brownbook,9,https://www.brownbook.net,Local business,63,Yes,,Draft,,,Local,,,International, has India listings
+Tupalo,9,https://tupalo.com,Local business,62,Yes,,Draft,,,Local,,,
+WebWiki,9,https://www.webwiki.com,Local business,60,Yes,,Draft,,,Local,,,
+iBegin,9,https://www.ibegin.com,Local business,60,Yes,,Draft,,,Local,,,US-focused - verify India coverage before submitting
+CitySquares,9,https://citysquares.com,Local business,55,Yes,,Draft,,,Local,,,US-focused - low priority for a Bengaluru-only business
+eLocal,9,https://elocal.com,Local business,55,Yes,,Draft,,,Local,,,US-focused - low priority
+2FindLocal,9,https://www.2findlocal.com,Local business,53,Yes,,Draft,,,Local,,,
+FindUsLocal,9,https://www.finduslocal.com,Local business,50,Yes,,Draft,,,Local,,,
+ezlocal,9,https://www.ezlocal.com,Local business,50,Yes,,Draft,,,Local,,,US-focused - low priority
+PRLog,11,https://www.prlog.org,Press release,80,Yes,,Draft,,,PR,,,Free press-release distribution - use for the launch announcement, not routine updates
+PR.com,11,https://www.pr.com,Press release,77,Yes,,Draft,,,PR,,,
+OpenPR,11,https://www.openpr.com,Press release,72,Yes,,Draft,,,PR,,,
+Online PR News,11,https://www.onlineprnews.com,Press release,62,Yes,,Draft,,,PR,,,
+PR Free,11,https://www.pr-free.com,Press release,62,Yes,,Draft,,,PR,,,
+NewswireToday,11,https://www.newswiretoday.com,Press release,65,Yes,,Draft,,,PR,,,
+1888 Press Release,11,https://www.1888pressrelease.com,Press release,69,Yes,,Draft,,,PR,,,

@@ -2,6 +2,8 @@
 
 A consolidated, prioritised list of places to manually submit the Snaprint business so that we build external backlinks, NAP consistency, and entity authority. Each row carries a `Submitted?` checkbox — tick it off as you complete the entry.
 
+For the actual copy to paste (taglines, descriptions at every length, category mapping per directory type) see `submission-kit.md` — this file is the tracker, that one is the copy source.
+
 ---
 
 ## How to submit — the canonical NAP
@@ -13,7 +15,7 @@ Use **identical** details everywhere. Inconsistency dilutes local SEO ranking si
 | Business name | Snaprint — Instant Print Kiosks |
 | Legal entity | Sanskriti Labs |
 | Email | snaprints@sanskritilabs.in |
-| Phone | (use the WhatsApp number from the site — see `components/Footer.tsx`) |
+| Phone | None published — the site dropped its WhatsApp number; contact is email + the [Book a Demo](https://snaprints.com/book) form. Leave phone fields blank rather than inventing one. |
 | Address | Bengaluru, Karnataka, India |
 | Description | Self-service print kiosks that turn xerox shops into 24/7 remote printing hubs. Built for Bengaluru shop owners by Sanskriti Labs. |
 | Logo URL | https://snaprints.com/icon-512.png |
