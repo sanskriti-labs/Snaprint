@@ -14,11 +14,16 @@
  *   2. That key is hardcoded below (KEY) — matches the deployed file.
  *
  * Delta tracking: sitemap.xml carries a <lastmod> per URL (set in
- * app/sitemap.ts). This script caches the {url: lastmod} map from the last
- * successful run in .indexnow-state.json and only resubmits URLs that are
- * new or whose lastmod advanced — so re-running after a small edit doesn't
- * resend all 249 URLs. --all bypasses the diff for the first run or a full
- * resync.
+ * app/sitemap.ts, sourced from lib/site-urls.ts's real per-page dates).
+ * State is a Redis hash of url -> lastmod from the last successful run —
+ * NOT a local file. This runs as a Vercel Function (see
+ * app/api/cron/indexnow/route.ts) and Vercel Functions have no persistent
+ * disk across invocations: a fresh container spins up for each cron fire,
+ * so a local .indexnow-state.json always reads back empty and every URL
+ * looks "changed," which is exactly why this was resubmitting all ~250
+ * URLs every day regardless of whether anything actually changed. Redis
+ * is the one thing both this run and tomorrow's run can actually share.
+ * --all bypasses the diff for the first run or a full resync.
  *
  * Usage:
  *   node scripts/seo/indexnow-submit.mjs              # submit new/changed only
@@ -26,17 +31,24 @@
  *   node scripts/seo/indexnow-submit.mjs /print-near/x # submit specific path(s)
  */
 
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { resolve, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-
-const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
-const STATE_PATH = resolve(REPO_ROOT, ".indexnow-state.json");
+import { Redis } from "@upstash/redis";
 
 const SITE = "https://snaprints.com";
 const KEY = "ee2134cbc6429c4e16fb63572c32e915";
 const KEY_LOCATION = `${SITE}/${KEY}.txt`;
 const ENDPOINT = "https://api.indexnow.org/indexnow";
+const REDIS_KEY = "indexnow:submitted";
+
+function redis() {
+  const url = process.env.KV_REST_API_URL;
+  const token = process.env.KV_REST_API_TOKEN;
+  if (!url || !token) {
+    throw new Error(
+      "indexnow-submit: missing KV_REST_API_URL / KV_REST_API_TOKEN — connect the Redis integration to this project."
+    );
+  }
+  return new Redis({ url, token });
+}
 
 async function getSitemapEntries() {
   const res = await fetch(`${SITE}/sitemap.xml`);
@@ -45,19 +57,6 @@ async function getSitemapEntries() {
   return [...xml.matchAll(/<url>\s*<loc>(.*?)<\/loc>\s*<lastmod>(.*?)<\/lastmod>/g)].map(
     ([, url, lastmod]) => ({ url, lastmod })
   );
-}
-
-function loadState() {
-  if (!existsSync(STATE_PATH)) return {};
-  try {
-    return JSON.parse(readFileSync(STATE_PATH, "utf8"));
-  } catch {
-    return {};
-  }
-}
-
-function saveState(state) {
-  writeFileSync(STATE_PATH, JSON.stringify(state, null, 2) + "\n");
 }
 
 async function submit(urlList) {
@@ -85,20 +84,23 @@ const submitAll = args.includes("--all");
 const argUrls = args.filter((a) => a !== "--all");
 
 let urls;
+let db;
 let newState;
 
 if (argUrls.length > 0) {
   urls = argUrls.map((p) => new URL(p, SITE).toString());
   newState = null; // explicit paths don't represent full sitemap state
 } else {
+  db = redis();
   const entries = await getSitemapEntries();
-  const prevState = submitAll ? {} : loadState();
+  const prevState = submitAll ? {} : ((await db.hgetall(REDIS_KEY)) ?? {});
   const changed = entries.filter((e) => prevState[e.url] !== e.lastmod);
   urls = changed.map((e) => e.url);
   newState = Object.fromEntries(entries.map((e) => [e.url, e.lastmod]));
 
   if (urls.length === 0) {
     console.log("[ OK ] No new or changed URLs since last submission — nothing to do.");
+    console.log(`INDEXNOW_REPORT_JSON=${JSON.stringify({ urlCount: 0 })}`);
     process.exit(0);
   }
 }
@@ -106,4 +108,5 @@ if (argUrls.length > 0) {
 console.log(`Submitting ${urls.length} URL(s) to IndexNow...`);
 const status = await submit(urls);
 console.log(`[ OK ] IndexNow accepted (${status})`);
-if (newState) saveState(newState);
+if (newState && db) await db.hset(REDIS_KEY, newState);
+console.log(`INDEXNOW_REPORT_JSON=${JSON.stringify({ urlCount: urls.length })}`);

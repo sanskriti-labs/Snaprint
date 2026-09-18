@@ -64,6 +64,3 @@ scripts/clean/data/llm-audit-cache.json
 
 # third-party tooling cache, not app code
 /vendor/
-
-# local run-state for scripts/seo/indexnow-submit.mjs (last-submitted lastmod per URL)
-/.indexnow-state.json
