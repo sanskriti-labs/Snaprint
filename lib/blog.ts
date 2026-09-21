@@ -12,6 +12,7 @@ export type BlogFrontmatter = {
   date: string;
   audience: "B2C" | "B2B";
   keywords: string[];
+  lang?: string;
 };
 
 export type BlogPostMeta = BlogFrontmatter & {
