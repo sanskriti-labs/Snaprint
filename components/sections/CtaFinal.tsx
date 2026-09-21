@@ -6,7 +6,7 @@ import Link from "next/link";
 import Snappy from "@/components/mascot/Snappy";
 
 /**
- * A compact closing banner, not a full-viewport hero — the trust-building
+ * A compact closing banner, not a full-viewport hero  --  the trust-building
  * work is already done by the sections above (Pricing); this is a single,
  * low-friction nudge before the Footer, not a second climax.
  */

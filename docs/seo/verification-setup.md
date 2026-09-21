@@ -2,7 +2,7 @@
 
 Both Google Search Console and Bing Webmaster Tools verify ownership of `snaprints.com` via a `<meta>` tag whose `content="..."` value Next.js picks up at build time from an env var. This file walks through obtaining both codes.
 
-The code itself (`app/layout.tsx`) already supports both — see the `verification` block:
+The code itself (`app/layout.tsx`) already supports both  --  see the `verification` block:
 
 ```ts
 verification: {
@@ -22,7 +22,7 @@ You only need to do the steps below; no further code change is required.
 3. Choose **"URL prefix"** tab.
 4. Enter `https://snaprints.com` (exact, no trailing slash).
 5. Click **"Continue"**.
-6. The verification methods panel appears — choose **"HTML tag"**.
+6. The verification methods panel appears  --  choose **"HTML tag"**.
 7. Google shows a snippet like:
    ```html
    <meta name="google-site-verification" content="abc123XYZ_LONG_STRING" />
@@ -47,10 +47,10 @@ If you skip the redeploy, the meta tag is not present in the rendered HTML and v
 ## Bing Webmaster Tools
 
 1. Visit **https://www.bing.com/webmasters**
-2. Sign in with a Microsoft account (the Sanskriti Labs Microsoft 365 account, or a personal one — Bing does not require a specific email domain).
+2. Sign in with a Microsoft account (the Sanskriti Labs Microsoft 365 account, or a personal one  --  Bing does not require a specific email domain).
 3. Click **"Add a site"**.
-4. Enter `https://snaprints.com` (or the bare domain — Bing accepts both `domain:` and `https://`).
-5. Bing offers three verification methods — choose **"Meta tag"**.
+4. Enter `https://snaprints.com` (or the bare domain  --  Bing accepts both `domain:` and `https://`).
+5. Bing offers three verification methods  --  choose **"Meta tag"**.
 6. Bing shows a snippet like:
    ```html
    <meta name="msvalidate.01" content="ABC123XYZ_LONG_STRING" />
@@ -81,12 +81,12 @@ Once both are verified:
 ### "Verification token not found" (Google)
 
 - The meta tag was added to the env var but Next.js was **not redeployed** after the env var change. Redeploy.
-- The env var name has a typo — must be exactly `GOOGLE_SITE_VERIFICATION` (uppercase).
-- The `<head>` is being overridden by another layout. Check `view-source:https://snaprints.com` — the tag must be in the rendered HTML, not just the source.
+- The env var name has a typo  --  must be exactly `GOOGLE_SITE_VERIFICATION` (uppercase).
+- The `<head>` is being overridden by another layout. Check `view-source:https://snaprints.com`  --  the tag must be in the rendered HTML, not just the source.
 
 ### "Verification failed" (Bing)
 
-- Same as above — most Bing failures are missing-redeploy issues.
+- Same as above  --  most Bing failures are missing-redeploy issues.
 - The domain is registered in Bing Webmaster with a trailing slash (`https://snaprints.com/`) but the rendered HTML uses the no-slash version. Pick one and stick with it; we use no-slash.
 
 ### "Property already exists"
@@ -106,4 +106,4 @@ DNS verification is more durable (env-var changes do not break it) but takes lon
 
 ## Once verified
 
-Move on to Phase 6.2 — `scripts/seo/gsc-export.mjs` pulls data from the Search Console API and writes daily JSON exports. That setup is documented in `docs/seo/gsc-api-setup.md`.
+Move on to Phase 6.2  --  `scripts/seo/gsc-export.mjs` pulls data from the Search Console API and writes daily JSON exports. That setup is documented in `docs/seo/gsc-api-setup.md`.

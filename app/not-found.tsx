@@ -34,7 +34,7 @@ export default function NotFound() {
             Book a Demo
           </Link>
         </div>
-        <AgentRecoveryLinks extraLink={{ href: "/print-near", label: "/print-near — directory of listed print/xerox shops by area" }} />
+        <AgentRecoveryLinks extraLink={{ href: "/print-near", label: "/print-near  --  directory of listed print/xerox shops by area" }} />
       </main>
       <Footer />
     </>

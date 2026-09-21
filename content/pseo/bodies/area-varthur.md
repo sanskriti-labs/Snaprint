@@ -9,7 +9,7 @@ wordCount: 497
 ---
 ## About this place
 
-Varthur sits on Bengaluru's eastern belt, a neighbourhood that has sprawled outward from a once-quiet lakeside settlement into a dense residential and IT-adjacent zone. The Varthur Lake still anchors the identity of the locality, but the surrounding grid of apartments, tech parks and small businesses tells the modern story. The pin codes covering this stretch — 560087 and 560035 — reach from the main Varthur Main Road through Gunjur and into the Whitefield corridor beyond. Seventeen listed xerox and print shops operate across these two pin codes, making it one of the better-serviced printing pockets in east Bengaluru. The mix here is strikingly even: gated communities with young families, software professionals heading toward nearby Whitefield offices, and a steady base of small retailers and coaching centres.
+Varthur sits on Bengaluru's eastern belt, a neighbourhood that has sprawled outward from a once-quiet lakeside settlement into a dense residential and IT-adjacent zone. The Varthur Lake still anchors the identity of the locality, but the surrounding grid of apartments, tech parks and small businesses tells the modern story. The pin codes covering this stretch  --  560087 and 560035  --  reach from the main Varthur Main Road through Gunjur and into the Whitefield corridor beyond. Seventeen listed xerox and print shops operate across these two pin codes, making it one of the better-serviced printing pockets in east Bengaluru. The mix here is strikingly even: gated communities with young families, software professionals heading toward nearby Whitefield offices, and a steady base of small retailers and coaching centres.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ Varthur is largely a road network, with the Varthur Main Road and Whitefield Mai
 
 ## Why printing demand is high here
 
-The cluster of coaching institutes and tuition centres around Gunjur and Varthur Main Road drives a steady academic printing cycle — assignments, project files and competitive exam materials keep shops busy across the year. Add the IT workforce spilling over from Whitefield's tech parks, and the volume of document printing, ID copies and lamination requests rises sharply on weekday mornings. Property paperwork also moves through the area frequently, given the active residential real estate market. With seventeen listed printing outlets already operating here, the demand clearly sustains a competitive local market rather than a single dominant provider. Vinayaka Xerox and Stationary Centre, the area's top-rated shop at five stars, sits among this network and handles a notable share of the daily rush.
+The cluster of coaching institutes and tuition centres around Gunjur and Varthur Main Road drives a steady academic printing cycle  --  assignments, project files and competitive exam materials keep shops busy across the year. Add the IT workforce spilling over from Whitefield's tech parks, and the volume of document printing, ID copies and lamination requests rises sharply on weekday mornings. Property paperwork also moves through the area frequently, given the active residential real estate market. With seventeen listed printing outlets already operating here, the demand clearly sustains a competitive local market rather than a single dominant provider. Vinayaka Xerox and Stationary Centre, the area's top-rated shop at five stars, sits among this network and handles a notable share of the daily rush.
 
 ## What people typically print here
 

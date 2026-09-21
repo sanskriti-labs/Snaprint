@@ -34,7 +34,7 @@ const steps = [
   },
 ];
 
-/** Small looping illustration per step — replaces a static icon with motion that hints at the action. */
+/** Small looping illustration per step  --  replaces a static icon with motion that hints at the action. */
 function StepIllustration({ type }: { type: StepType }) {
   if (type === "scan") {
     return (
@@ -115,7 +115,7 @@ function Step({ step, index }: { step: typeof steps[0]; index: number }) {
       transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className="relative flex flex-col"
     >
-      {/* Number, sits on the shared connector line — solid backing so the line reads as
+      {/* Number, sits on the shared connector line  --  solid backing so the line reads as
           passing behind it rather than through a translucent tint. */}
       <div className="relative z-10 mb-5 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-[rgba(230,57,70,0.25)] bg-[#FBEAEA]">
         <span className="font-display text-[13px] font-bold text-[#E63946]">{step.tag}</span>
@@ -149,7 +149,7 @@ export default function HowItWorks() {
       />
 
       <div className="relative mx-auto max-w-[1280px]">
-        {/* Header — left-aligned, full width, so the row of steps below can still run edge
+        {/* Header  --  left-aligned, full width, so the row of steps below can still run edge
             to edge instead of sharing a two-column split that left a sticky sidebar idle
             once the step list ran shorter or taller than it. */}
         <div className="mb-16 max-w-[640px]">
@@ -178,7 +178,7 @@ export default function HowItWorks() {
           </motion.p>
         </div>
 
-        {/* Horizontal stepper — one row on desktop, wraps to 2 then 1 column as it narrows */}
+        {/* Horizontal stepper  --  one row on desktop, wraps to 2 then 1 column as it narrows */}
         <div className="relative">
           <div
             className="pointer-events-none absolute left-6 right-6 top-6 hidden h-px bg-[rgba(0,0,0,0.08)] lg:block"

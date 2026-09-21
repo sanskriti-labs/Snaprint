@@ -39,7 +39,7 @@ export default function TrustSection() {
             Honest criticism stays. Abuse doesn't.
           </p>
           <p className="mt-2.5 font-body text-[13.5px] font-light leading-[1.7] text-[#6B6B66]">
-            We remove harassment, hate speech, spam and abuse so that useful conversations don't get buried —
+            We remove harassment, hate speech, spam and abuse so that useful conversations don't get buried  -- 
             not because a comment was negative. Positive, negative, or somewhere in between, real feedback stays up.
           </p>
         </div>

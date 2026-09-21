@@ -1,4 +1,4 @@
-// Shared motion config — the single source of truth for GSAP-side easing and
+// Shared motion config  --  the single source of truth for GSAP-side easing and
 // timing, mirroring the CSS tokens in globals.css / DESIGN_SYSTEM.md §4.
 // Never hard-code an ease string or duration in a component; import from here.
 import { gsap } from "gsap";
@@ -13,7 +13,7 @@ export function registerGsap() {
   // Mobile browsers resize the viewport as the address bar shows/hides
   // *during* a scroll gesture. Without this, ScrollTrigger treats that as a
   // layout change and refreshes every pinned trigger mid-scroll, resetting
-  // its start/end math — the scroll-driven hero animation ends up looking
+  // its start/end math  --  the scroll-driven hero animation ends up looking
   // like it never plays, even though the same code runs fine on desktop
   // (no address-bar resize there to trigger the reset).
   ScrollTrigger.config({ ignoreMobileResize: true });

@@ -23,15 +23,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   // Consumer-first title/description. The homepage previously described only
   // the kiosk business ("Serving shop owners across India") while ~95% of the
-  // site's search impressions are near-me print queries — see the Hero
+  // site's search impressions are near-me print queries  --  see the Hero
   // comment. Franchise intent is served by /franchise, which owns those terms.
   title: {
-    default: "Find Xerox & Print Shops Near You — Snaprint",
+    default: "Find Xerox & Print Shops Near You  --  Snaprint",
     template: "%s · Snaprint",
   },
   description:
-    "Find listed xerox and print shops near you across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding, scanning — open now.",
-  keywords: ["xerox shop near me", "print shop near me", "printout near me", "photocopy near me", "print kiosk", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "self-service printing", "self service printing kiosk", "automated printing kiosk India", "printing kiosk for colleges", "document printing kiosk"],
+    "Find xerox and print shops near you across 6 Indian cities  --  B&W, colour, binding, scanning. Snaprint builds self-service print kiosks for shops and colleges.",
+  keywords: ["xerox shop near me", "print shop near me", "printout near me", "photocopy near me", "print kiosk", "self printing kiosk", "self service printing kiosk", "self-service printing kiosk", "print kiosk cost", "print kiosk price India", "print kiosk franchise India", "xerox shop software", "print shop software Windows", "automated printing kiosk India", "document printing kiosk", " unattended print kiosk", "Bengaluru", "Hyderabad", "Chennai", "Mumbai", "Pune", "Delhi NCR", "Snaprint", "instant print", "printing kiosk for colleges"],
   authors: [{ name: "Sanskriti Labs", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
@@ -44,17 +44,17 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Find Xerox & Print Shops Near You — Snaprint",
+    title: "Find Xerox & Print Shops Near You  --  Snaprint",
     description: "Listed xerox and print shops across Bengaluru, Hyderabad, Chennai, Mumbai, Pune and Delhi NCR. B&W, colour, binding and scanning near you.",
     url: siteUrl,
     siteName: "Snaprint",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Snaprint — snap. scan. print." }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Snaprint  --  snap. scan. print." }],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Find Xerox & Print Shops Near You — Snaprint",
+    title: "Find Xerox & Print Shops Near You  --  Snaprint",
     description: "Listed xerox and print shops across six Indian cities. B&W, colour, binding and scanning near you.",
     images: ["/og.png"],
   },
@@ -86,7 +86,7 @@ const jsonLd = {
       name: "Snaprint",
       url: siteUrl,
       logo: `${siteUrl}/icon-512.png`,
-      description: "Snaprint builds self-service printing kiosks — automated print stations that turn xerox shops into 24/7 remote printing hubs, and deploy as document printing kiosks for colleges, offices, hospitals, libraries, and retail across India.",
+      description: "Snaprint builds self-service printing kiosks  --  automated print stations that turn xerox shops into 24/7 remote printing hubs, and deploy as document printing kiosks for colleges, offices, hospitals, libraries, and retail across India.",
       email: "snaprints@sanskritilabs.in",
       contactPoint: {
         "@type": "ContactPoint",
@@ -172,7 +172,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="font-body antialiased">
         {/* Runs before hydration to hide the SnappyLoader overlay via pure
             CSS when it's already been seen this session (or reduced motion
-            is on) — otherwise the server always renders it frozen at 0%
+            is on)  --  otherwise the server always renders it frozen at 0%
             (SSR can't read sessionStorage), and it sits on screen, visible,
             until React hydrates and catches up. See snappy-loader-root rule
             in globals.css. */}

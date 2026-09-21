@@ -6,7 +6,7 @@ const CITY_RE = /^[a-zA-Z\s.'-]{0,80}$/;
 const MAX_BODY_BYTES = 4 * 1024;
 const WORKER_URL = process.env.SNAPRINT_WORKER_URL || "https://kiosk.snaprints.com";
 
-// Indian mobile numbers only, same as the Worker's own PHONE_RE — accepts common human input
+// Indian mobile numbers only, same as the Worker's own PHONE_RE  --  accepts common human input
 // shapes (spaces, hyphens, optional +91/91/0 prefix) and normalizes to +91XXXXXXXXXX before
 // forwarding, since a free-text "+91 98765 43210"-style input never comes in pre-normalized.
 function normalizeIndianPhone(raw: string): string | null {
@@ -69,7 +69,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "'city' must be a plain place name" }, { status: 400 });
   }
 
-  // Registers the real shop record (Cloudflare KV + D1) — the Worker is the sole source of
+  // Registers the real shop record (Cloudflare KV + D1)  --  the Worker is the sole source of
   // truth now; there is no separate lead database. Credentials (deviceSecret, defaultPassword)
   // are deliberately NOT relayed back to the browser: they're persisted in the Worker's D1
   // shop_registrations table (GET /api/v1/admin/shop-registrations) for the team to retrieve
@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     console.error("[desktop-registrations] Worker call failed:", err instanceof Error ? err.message : err);
     return NextResponse.json(
-      { error: "We couldn't save your registration — please email us and we'll add you manually." },
+      { error: "We couldn't save your registration  --  please email us and we'll add you manually." },
       { status: 502 }
     );
   }

@@ -17,7 +17,7 @@ The Green Line metro stops at Yelachenahalli and Puttenahalli, both a short auto
 
 ## Why printing demand is high here
 
-A thick layer of coaching centres, tuition classes and small schools sits on top of the housing, which means project reports, worksheets and admit-card printouts never really stop. Layer in the corporates spilling out of Bannerghatta Road tech parks and the steady stream of real-estate, bank and government paperwork from residents — Aadhaar copies, lease agreements, passport photos — and the queue outside a xerox shop rarely thins. With twenty listed xerox and print shops already serving the area, competition stays sharp and turnaround stays quick, especially during the March and October exam windows when spiral binding jobs stack up on the counters.
+A thick layer of coaching centres, tuition classes and small schools sits on top of the housing, which means project reports, worksheets and admit-card printouts never really stop. Layer in the corporates spilling out of Bannerghatta Road tech parks and the steady stream of real-estate, bank and government paperwork from residents  --  Aadhaar copies, lease agreements, passport photos  --  and the queue outside a xerox shop rarely thins. With twenty listed xerox and print shops already serving the area, competition stays sharp and turnaround stays quick, especially during the March and October exam windows when spiral binding jobs stack up on the counters.
 
 ## What people typically print here
 
@@ -25,4 +25,4 @@ College submissions and competitive-exam notes in colour, bank and PAN-card appl
 
 ## How Snaprint fits in
 
-For shop owners handling this rush, Snaprint's kiosk software helps them accept uploads, take payment and hand out printed copies without long counterside waits — more details on the /book page. For residents and students who'd rather upload from home and walk in to collect, the /print-near/jp-nagar page lists nearby kiosks with live queue times and pricing.
+For shop owners handling this rush, Snaprint's kiosk software helps them accept uploads, take payment and hand out printed copies without long counterside waits  --  more details on the /book page. For residents and students who'd rather upload from home and walk in to collect, the /print-near/jp-nagar page lists nearby kiosks with live queue times and pricing.

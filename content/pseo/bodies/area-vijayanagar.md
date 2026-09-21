@@ -9,7 +9,7 @@ wordCount: 400
 ---
 ## About this place
 
-Vijayanagar spans pin codes 560040 and 560023 in west Bengaluru, one of the city's older planned residential layouts built around a grid of numbered blocks and cross roads. It's a dense, mixed neighbourhood — long-time residential families alongside a steady stream of students from the many schools and colleges scattered through the area. Across its commercial stretches, 23 listed xerox and print shops serve the neighbourhood, led by Sri Durga Xerox & Stationary at a 5-star rating.
+Vijayanagar spans pin codes 560040 and 560023 in west Bengaluru, one of the city's older planned residential layouts built around a grid of numbered blocks and cross roads. It's a dense, mixed neighbourhood  --  long-time residential families alongside a steady stream of students from the many schools and colleges scattered through the area. Across its commercial stretches, 23 listed xerox and print shops serve the neighbourhood, led by Sri Durga Xerox & Stationary at a 5-star rating.
 
 ## Getting here and around
 
@@ -17,7 +17,7 @@ Vijayanagar has direct metro access via Vijayanagar station on the Purple Line, 
 
 ## Why printing demand is high here
 
-Vijayanagar's mix of schools, colleges, and dense residential blocks keeps print demand steady through the year. Academic institutions in and around the neighbourhood drive assignment and project printing during term time, with sharp spikes during exam season. The area's long-settled resident base also generates a consistent stream of everyday documentation — ID copies, form printing, certificate reproduction — independent of the academic calendar.
+Vijayanagar's mix of schools, colleges, and dense residential blocks keeps print demand steady through the year. Academic institutions in and around the neighbourhood drive assignment and project printing during term time, with sharp spikes during exam season. The area's long-settled resident base also generates a consistent stream of everyday documentation  --  ID copies, form printing, certificate reproduction  --  independent of the academic calendar.
 
 ## What people typically print here
 

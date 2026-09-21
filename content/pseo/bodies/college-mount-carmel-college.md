@@ -9,7 +9,7 @@ wordCount: 499
 ---
 ## About this place
 
-Mount Carmel College has occupied a leafy stretch of Palace Road since the late 1940s, and the campus still carries the calm, old-Bengaluru feel of the era when Vasanthnagar was lined with bungalows rather than apartment blocks. Run by the Congregation of Carmelite Sisters of St. Teresa, the college is best known for its undergraduate programmes in English literature, psychology, economics, journalism, and commerce, alongside a postgraduate school of social work. About 5,000 students rotate through the grounds each year, and the surrounding streets on Palace Road and behind Cunningham Road have quietly grown to absorb their daily needs. Three pin codes — 560001, 560052, and 560051 — anchor the neighbourhood, and 25 listed xerox and print shops operate within easy walking distance of the main gate.
+Mount Carmel College has occupied a leafy stretch of Palace Road since the late 1940s, and the campus still carries the calm, old-Bengaluru feel of the era when Vasanthnagar was lined with bungalows rather than apartment blocks. Run by the Congregation of Carmelite Sisters of St. Teresa, the college is best known for its undergraduate programmes in English literature, psychology, economics, journalism, and commerce, alongside a postgraduate school of social work. About 5,000 students rotate through the grounds each year, and the surrounding streets on Palace Road and behind Cunningham Road have quietly grown to absorb their daily needs. Three pin codes  --  560001, 560052, and 560051  --  anchor the neighbourhood, and 25 listed xerox and print shops operate within easy walking distance of the main gate.
 
 ## Getting here and around
 
@@ -25,4 +25,4 @@ Assignments and lab reports in Times New Roman 12 are the daily staple, followed
 
 ## How Snaprint fits in
 
-Snaprint lets students pre-upload files from their phones and pick a nearby shop — including Marali Enterprises — so the document is ready before they leave class. Shop owners interested in joining the network can apply at /book. Students looking for the closest option can browse the full list at /print-near/mount-carmel-college.
+Snaprint lets students pre-upload files from their phones and pick a nearby shop  --  including Marali Enterprises  --  so the document is ready before they leave class. Shop owners interested in joining the network can apply at /book. Students looking for the closest option can browse the full list at /print-near/mount-carmel-college.

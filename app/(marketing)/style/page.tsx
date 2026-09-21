@@ -14,7 +14,7 @@ const palette = [
   { name: "mist", hex: "#c9c9c4", role: "dividers / disabled", dark: false },
   { name: "cloud", hex: "#e8e8e4", role: "light borders / hover", dark: false },
   { name: "paper", hex: "#f5f5f3", role: "primary light bg", dark: false },
-  { name: "red", hex: "#e63946", role: "THE accent — sparingly", dark: true },
+  { name: "red", hex: "#e63946", role: "THE accent  --  sparingly", dark: true },
   { name: "red-deep", hex: "#c1121f", role: "red hover / pressed", dark: true },
 ];
 
@@ -66,7 +66,7 @@ export default function StyleGuide() {
 
   return (
       <main className="bg-paper text-charcoal">
-        {/* ══ SAMPLE SECTION — the crafted taste of the language ══ */}
+        {/* ══ SAMPLE SECTION  --  the crafted taste of the language ══ */}
         <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-charcoal px-gutter py-section">
           {/* dark dot grid */}
           <div
@@ -144,7 +144,7 @@ export default function StyleGuide() {
 
           {/* 2 · TYPE */}
           <section className="mb-28">
-            <SectionLabel n="02">Type scale — Space Grotesk, pushed</SectionLabel>
+            <SectionLabel n="02">Type scale  --  Space Grotesk, pushed</SectionLabel>
             <div className="flex flex-col divide-y divide-cloud border-y border-cloud">
               {typeSpecimens.map((t) => (
                 <div key={t.token} className="flex flex-col gap-2 py-7 lg:flex-row lg:items-baseline lg:gap-10">
@@ -188,7 +188,7 @@ export default function StyleGuide() {
               {/* Live reveal demo */}
               <div className="rounded-2xl border border-cloud bg-charcoal p-8">
                 <div className="mb-5 flex items-center justify-between">
-                  <span className="font-body text-caption font-semibold uppercase text-slate">Masked reveal — live</span>
+                  <span className="font-body text-caption font-semibold uppercase text-slate">Masked reveal  --  live</span>
                   <button
                     onClick={() => setReplayKey((k) => k + 1)}
                     className="rounded-full bg-red px-4 py-1.5 font-body text-[12px] font-semibold text-white transition-transform duration-[--d-hover] ease-hover hover:-translate-y-0.5"
@@ -198,7 +198,7 @@ export default function StyleGuide() {
                 </div>
                 <div key={replayKey}>
                   <RevealText as="p" split="word" trigger="load" className="font-display text-[28px] font-bold leading-tight text-paper">
-                    Lines and words rise from a mask — never a plain fade.
+                    Lines and words rise from a mask  --  never a plain fade.
                   </RevealText>
                 </div>
                 <p className="mt-6 font-body text-[12px] leading-relaxed text-slate">
@@ -208,9 +208,9 @@ export default function StyleGuide() {
             </div>
           </section>
 
-          {/* 4 · MASCOT TIERS — baseline ruler; mascot row + matching label row so nothing overlaps */}
+          {/* 4 · MASCOT TIERS  --  baseline ruler; mascot row + matching label row so nothing overlaps */}
           <section className="mb-28">
-            <SectionLabel n="04">Snappy — fixed size tiers</SectionLabel>
+            <SectionLabel n="04">Snappy  --  fixed size tiers</SectionLabel>
             <div className="overflow-x-auto rounded-2xl border border-cloud bg-white">
               <div className="flex min-w-max items-end gap-10 px-10 pt-12" style={{ height: 340 }}>
                 {mascotTiers.map((m) => (
@@ -237,7 +237,7 @@ export default function StyleGuide() {
 
           {/* 5 · SPACING */}
           <section>
-            <SectionLabel n="05">Spacing — 4px base</SectionLabel>
+            <SectionLabel n="05">Spacing  --  4px base</SectionLabel>
             <div className="flex flex-wrap items-end gap-4">
               {spacingScale.map((s) => (
                 <div key={s} className="flex flex-col items-center gap-2">

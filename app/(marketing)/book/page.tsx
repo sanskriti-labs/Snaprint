@@ -105,8 +105,8 @@ export default function BookPage() {
     };
   }, [selectedDate]);
 
-  // Filter the slot list to the selected founder. We always filter — even with
-  // one founder selected — so the contract stays simple if more providers are
+  // Filter the slot list to the selected founder. We always filter  --  even with
+  // one founder selected  --  so the contract stays simple if more providers are
   // added later.
   const filteredSlots = useMemo(() => {
     if (selectedProviderId === null) return [];
@@ -171,7 +171,7 @@ export default function BookPage() {
             <p className="font-body text-[15px] text-snap-gray">
               {formatDateLabel(selectedDate)} at {formatTimeLabel(selectedTime)} with{" "}
               {selectedProvider.firstName}. A Google Meet invite will land on{" "}
-              {selectedProvider.firstName}&apos;s calendar — they&apos;ll send the link
+              {selectedProvider.firstName}&apos;s calendar  --  they&apos;ll send the link
               before the call.
             </p>
           </motion.div>
@@ -207,7 +207,7 @@ export default function BookPage() {
         </motion.div>
 
         <div className="grid gap-6 rounded-[12px] border border-white/10 bg-white p-6 md:grid-cols-[260px_1fr] md:gap-0 md:p-0 md:overflow-hidden">
-          {/* Left column — founders */}
+          {/* Left column  --  founders */}
           <aside className="md:border-r md:border-snap-border md:bg-snap-surface/30 md:p-6">
             <h2 className="mb-4 font-display text-[13px] font-bold uppercase tracking-wide text-snap-charcoal">
               With
@@ -249,7 +249,7 @@ export default function BookPage() {
             </div>
           </aside>
 
-          {/* Right column — date, time, details */}
+          {/* Right column  --  date, time, details */}
           <div className="space-y-6 md:p-6">
             <section>
               <h2 className="mb-3 font-display text-[13px] font-bold uppercase tracking-wide text-snap-charcoal">
@@ -330,7 +330,7 @@ export default function BookPage() {
                     )}
                     {submitting
                       ? "Booking…"
-                      : `Confirm — ${formatDateLabel(selectedDate!)} at ${formatTimeLabel(selectedTime!)}`}
+                      : `Confirm  --  ${formatDateLabel(selectedDate!)} at ${formatTimeLabel(selectedTime!)}`}
                   </Button>
                 </form>
               </section>

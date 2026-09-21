@@ -10,11 +10,11 @@ import { prefersReducedMotion } from "@/lib/motion";
 // noise not signal, "glass cards" on light bg look like Bootstrap defaults.
 // Fix: asymmetric bento where CARD SIZE = FEATURE IMPORTANCE.
 // Flagship feature gets 2× space. Every card has one bold claim, not a list.
-// Comparison table is folded into the grid as a "vs" card — not a separate
+// Comparison table is folded into the grid as a "vs" card  --  not a separate
 // afterthought. Result: editorial rhythm, not SaaS template.
 // ──────────────────────────────────────────────────────────────────
 
-// ₹2/page B&W — the same rate already published in AppShowcase.tsx — so the
+// ₹2/page B&W  --  the same rate already published in AppShowcase.tsx  --  so the
 // live-ticking revenue figure below stays consistent with real site pricing.
 const PER_PAGE_RUPEES = 2;
 
@@ -38,7 +38,7 @@ function RollingNumber({ value, className }: { value: string; className?: string
   );
 }
 
-/** Simulates a live dashboard — print count ticks up on a random cadence, revenue
+/** Simulates a live dashboard  --  print count ticks up on a random cadence, revenue
  * is derived from it rather than being a separate fake number. Skipped under
  * reduced motion, where the mock just shows a fixed snapshot. */
 function useLiveDashboard() {
@@ -104,7 +104,7 @@ export default function Why() {
         {/* ── BENTO GRID ── */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-[auto_auto]">
 
-          {/* ① FLAGSHIP — Universal Compatibility (spans 2 cols) */}
+          {/* ① FLAGSHIP  --  Universal Compatibility (spans 2 cols) */}
           <motion.div
             {...fadeUp(0.1)}
             className="group relative overflow-hidden rounded-2xl bg-[#111110] p-6 sm:p-8 md:p-10 lg:col-span-2"
@@ -118,7 +118,7 @@ export default function Why() {
               }}
               aria-hidden
             />
-            {/* Red glow — appears on hover */}
+            {/* Red glow  --  appears on hover */}
             <div
               className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#E63946] opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-10"
               aria-hidden
@@ -134,10 +134,10 @@ export default function Why() {
                   Any printer.<br />Zero lock-in.
                 </h3>
                 <p className="max-w-[380px] font-body text-[14px] font-light leading-[1.75] text-[rgba(255,255,255,0.45)]">
-                  Snaprint OS connects to your entire fleet—regardless of manufacturer—without replacing a single cable. Your existing hardware earns more, today.
+                  Snaprint OS connects to your entire fleet -- regardless of manufacturer -- without replacing a single cable. Your existing hardware earns more, today.
                 </p>
               </div>
-              {/* Compatibility strip — alphabetical, all boxes the same width */}
+              {/* Compatibility strip  --  alphabetical, all boxes the same width */}
               <div className="flex flex-col gap-2 lg:items-end">
                 {["Legacy Fleets", "Enterprise Models", "All Major Standards", "Custom Hardware"].map((brand) => (
                   <div
@@ -155,7 +155,7 @@ export default function Why() {
             </div>
           </motion.div>
 
-          {/* ② REVENUE — Tall card, right column rows 1+2 */}
+          {/* ② REVENUE  --  Tall card, right column rows 1+2 */}
           <motion.div
             {...fadeUp(0.16)}
             className="group relative overflow-hidden rounded-2xl bg-[#E63946] p-6 sm:p-8 md:p-10 lg:row-span-2"
@@ -191,7 +191,7 @@ export default function Why() {
                   ))}
                 </div>
 
-                {/* Return on investment — same illustrative payback figures published on the
+                {/* Return on investment  --  same illustrative payback figures published on the
                     franchise brochure page, kept consistent rather than restated differently. */}
                 <div className="mb-8 overflow-hidden rounded-xl bg-white/10">
                   <div className="border-b border-white/10 px-4 py-2.5">
@@ -287,7 +287,7 @@ export default function Why() {
             <p className="font-body text-[13px] font-light leading-[1.7] text-[#6B6B66]">
               Revenue, print counts, ink and paper levels, live on your phone. No step-out required.
             </p>
-            {/* Mini dashboard mock — a live terminal readout, not a static table.
+            {/* Mini dashboard mock  --  a live terminal readout, not a static table.
                 Prints ticks up on its own cadence; revenue is derived from it
                 (prints × ₹2/page) rather than being a separate fake number. */}
             <div className="mt-6 overflow-hidden rounded-xl border border-[rgba(0,0,0,0.07)] bg-[#111110]">
@@ -295,7 +295,7 @@ export default function Why() {
                 <span className="h-2 w-2 rounded-full bg-[#FF5F57]" />
                 <span className="h-2 w-2 rounded-full bg-[#FEBC2E]" />
                 <span className="h-2 w-2 rounded-full bg-[#28C840]" />
-                <span className="ml-2 font-mono text-[9px] tracking-wide text-white">dashboard — live</span>
+                <span className="ml-2 font-mono text-[9px] tracking-wide text-white">dashboard  --  live</span>
               </div>
               <div className="p-4">
                 <div className="flex items-center justify-between py-0.5 font-mono">
@@ -321,7 +321,7 @@ export default function Why() {
             </div>
           </motion.div>
 
-          {/* ⑤ VS CARD — replaces disconnected comparison table */}
+          {/* ⑤ VS CARD  --  replaces disconnected comparison table */}
           <motion.div
             {...fadeUp(0.32)}
             className="relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-white p-5 sm:p-6 md:col-span-2 md:p-8 lg:col-span-3"
@@ -360,7 +360,7 @@ export default function Why() {
             </div>
           </motion.div>
 
-          {/* ⑥ SPEED + LOCAL SUPPORT — two small cards */}
+          {/* ⑥ SPEED + LOCAL SUPPORT  --  two small cards */}
           <motion.div
             {...fadeUp(0.37)}
             className="group relative overflow-hidden rounded-2xl border border-[rgba(0,0,0,0.07)] bg-[#111110] p-5 sm:p-6 md:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1"

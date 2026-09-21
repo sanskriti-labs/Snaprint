@@ -31,7 +31,7 @@ export const FEEDBACK_CATEGORIES = [
     id: "feedback",
     label: "Share feedback",
     prefix: "[Feedback]",
-    helper: "Good, bad, or somewhere in between — tell us what you actually think.",
+    helper: "Good, bad, or somewhere in between  --  tell us what you actually think.",
   },
   {
     id: "bug",
@@ -49,13 +49,13 @@ export const FEEDBACK_CATEGORIES = [
     id: "experience",
     label: "Talk about your experience",
     prefix: "[Experience]",
-    helper: "Used a Snaprint kiosk? Share how it went — the good and the rough edges.",
+    helper: "Used a Snaprint kiosk? Share how it went  --  the good and the rough edges.",
   },
 ] as const;
 
 export type FeedbackCategoryId = (typeof FEEDBACK_CATEGORIES)[number]["id"];
 
-/** Best-effort pre-fill — Reddit's submit page honors `title`; body pre-fill support
+/** Best-effort pre-fill  --  Reddit's submit page honors `title`; body pre-fill support
  * varies by client, so we only rely on the title carrying the intent. */
 export function buildRedditSubmitUrl(prefix: string, title: string): string {
   const fullTitle = title.trim() ? `${prefix} ${title.trim()}` : prefix;

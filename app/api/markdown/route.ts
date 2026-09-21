@@ -5,11 +5,11 @@ import { resolveMarkdownForPath, notFoundMarkdown } from "@/lib/markdown-negotia
  * Serves the markdown representation of a page for Accept: text/markdown
  * content negotiation (acceptmarkdown.com). middleware.ts rewrites eligible
  * GET requests here, passing the original page path as ?path=. Never
- * requested directly by a browser — see the rewrite condition in
+ * requested directly by a browser  --  see the rewrite condition in
  * middleware.ts for which requests land here.
  */
 export function GET(request: NextRequest) {
-  // Set by middleware.ts as a request header, not a rewritten query param —
+  // Set by middleware.ts as a request header, not a rewritten query param  -- 
   // route handlers reached via a middleware rewrite see request.nextUrl as
   // the original incoming URL, so a header is what actually survives.
   const path = request.headers.get("x-markdown-path") ?? request.nextUrl.searchParams.get("path") ?? "/";

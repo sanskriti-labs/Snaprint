@@ -1,4 +1,4 @@
-// Public barrel — re-export everything SEO pages and sitemap need
+// Public barrel  --  re-export everything SEO pages and sitemap need
 export { getAllCitySlugs, getCity, getCityName, getAllCollegeSlugs, getCollege,
   getAllAreaSlugs, getArea, getCollegesInCity, getAreasInCity,
   getCollegesNearArea, getNeighborCities, getAllLiveCities,

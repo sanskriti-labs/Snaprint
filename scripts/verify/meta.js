@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Meta title/description length + sanity checker — runs against the
+ * Meta title/description length + sanity checker  --  runs against the
  * built HTML output, not source strings, so it catches the real
  * rendered value for every page including computed PSEO descriptions
  * (count + name + city interpolated per entity) and title-template
@@ -15,7 +15,7 @@
  *   description: 50-165 chars  (Google truncates ~155-160 chars typically,
  *                               occasionally holds to ~165 on desktop)
  *
- * Also flags a duplicated "· Snaprint" suffix — the root layout's
+ * Also flags a duplicated "· Snaprint" suffix  --  the root layout's
  * title template already appends it, so any generateMetadata that
  * includes the literal suffix itself ships a doubled brand tag
  * ("... · Snaprint · Snaprint").
@@ -45,7 +45,7 @@ function walkHtmlFiles(dir) {
 }
 
 if (!statSync(APP_DIR, { throwIfNoEntry: false })) {
-  fail(`${APP_DIR} not found — run "next build" before "verify:meta"`);
+  fail(`${APP_DIR} not found  --  run "next build" before "verify:meta"`);
   process.exit(1);
 }
 

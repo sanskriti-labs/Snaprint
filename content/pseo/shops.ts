@@ -3,7 +3,7 @@
 // Adds a haversine-based "shops near college" selector that complements
 // the area-keyword match used by Area.liveLocations.
 //
-// Field normalisation mirrors process_77areas.py:to_live_location —
+// Field normalisation mirrors process_77areas.py:to_live_location  -- 
 // latitude/longitude → lat/lng, title → name, place_id → placeId.
 //
 // IMPORTANT: this module is server-only. The build / SSR path resolves
@@ -15,11 +15,11 @@ import { haversineKm } from "./_geo";
 import type { LiveLocation, Slug } from "./types";
 
 // ---------------------------------------------------------------------------
-// Shop index — lazily loaded and cached on first access. The JSONL files
+// Shop index  --  lazily loaded and cached on first access. The JSONL files
 // live outside the Next.js app tree, so we resolve relative to repo root.
 //
 // Loads every scripts/scraper/data/shops-clean*.jsonl file (one per city:
-// shops-clean.jsonl for Bengaluru, shops-clean-hyderabad.jsonl, etc.) —
+// shops-clean.jsonl for Bengaluru, shops-clean-hyderabad.jsonl, etc.)  -- 
 // college radius matching is city-agnostic by campus coordinates, so it
 // must see every city's shops, not just one. Falls back to the raw
 // Bengaluru scrape for builds run before the cleaner has been executed.
@@ -42,7 +42,7 @@ function parseShopLine(trimmed: string): LiveLocation | null {
     // Detect the shape from the record itself rather than the filename.
     // Cleaned records use lat/lng; the raw scrape uses latitude/longitude.
     // `longtitude` is a misspelled duplicate of `longitude` in the raw
-    // scrape — a longitude fallback only, never a latitude one.
+    // scrape  --  a longitude fallback only, never a latitude one.
     const lat = Number(rec.lat ?? rec.latitude ?? 0);
     const lng = Number(rec.lng ?? rec.longitude ?? rec.longtitude ?? 0);
     if (!lat || !lng) return null;
@@ -77,7 +77,7 @@ function loadShops(): LiveLocation[] {
 
   const paths = cleanFiles.length > 0
     ? cleanFiles.map((f) => resolve(dataDir!, f))
-    : // Raw scrape (fallback) — builds run before the cleaner has been executed.
+    : // Raw scrape (fallback)  --  builds run before the cleaner has been executed.
       [
         resolve(process.cwd(), "scripts/scraper/data/results-77areas.json"),
         resolve(__dirname, "../../../scripts/scraper/data/results-77areas.json"),
@@ -85,7 +85,7 @@ function loadShops(): LiveLocation[] {
       ].filter((p) => existsSync(p)).slice(0, 1);
 
   if (paths.length === 0) {
-    // Build/test runs without the scraper data should not crash —
+    // Build/test runs without the scraper data should not crash  -- 
     // selectors simply return []. Log a single warning.
     if (process.env.NODE_ENV !== "test") {
       console.warn(
@@ -138,13 +138,13 @@ export function getShopsNearCollege(
     if (d <= radiusKm) out.push(Object.assign({}, s, { __d: d }));
   }
   out.sort((a, b) => a.__d - b.__d);
-  // Surface __d as distanceKm — college pages have a campus origin to
+  // Surface __d as distanceKm  --  college pages have a campus origin to
   // measure from, unlike area pages, so this is only populated here.
   return out.map(({ __d, ...rest }) => ({ ...rest, distanceKm: Math.round(__d * 100) / 100 }));
 }
 
 /**
- * Rolls up shops for a city page from its published areas' liveLocations —
+ * Rolls up shops for a city page from its published areas' liveLocations  -- 
  * the same per-area data the scraper pipeline (process_areas.py) already
  * populates, so a new city gets Maps links for free as soon as its areas
  * do, no separate city-level scrape needed. Deduped by placeId (falls back

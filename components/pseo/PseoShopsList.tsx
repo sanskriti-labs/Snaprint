@@ -9,7 +9,7 @@ type Props = {
   preposition?: "in" | "near";
 };
 
-// Directions, not the shop's own Maps place page — a place-page link sends
+// Directions, not the shop's own Maps place page  --  a place-page link sends
 // the click to the competitor's listing (reviews, photos, "Claim this
 // business"); a directions link is pure navigation utility.
 function directionsUrl(loc: LiveLocation): string {
@@ -52,7 +52,7 @@ export default function PseoShopsList({ locations, displayName, cityName, prepos
             {locations.length} xerox shops {preposition} {displayName}
           </h2>
           <p className="mt-1 font-body text-[13px] text-[#888780]">
-            Verified print &amp; copy shops near you — updated August 2026
+            Verified print &amp; copy shops near you  --  updated August 2026
           </p>
         </div>
         <a

@@ -6,20 +6,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 
-const STORAGE_KEY = "snaprint-cookie-consent"; // localStorage — the permanent choice, once made
-const SHOWN_KEY = "snaprint-cookie-banner-shown"; // sessionStorage — have we already offered it this session
+const STORAGE_KEY = "snaprint-cookie-consent"; // localStorage  --  the permanent choice, once made
+const SHOWN_KEY = "snaprint-cookie-banner-shown"; // sessionStorage  --  have we already offered it this session
 const DELAY_MS = 11000; // ~1.3s max loader time + 10s on the hero, per spec
 
 type Consent = "accepted" | "declined";
 
 /**
- * Gates Google Analytics + Vercel Analytics behind an actual choice — not a
+ * Gates Google Analytics + Vercel Analytics behind an actual choice  --  not a
  * decorative banner. Nothing tracking-related loads until the visitor picks
  * Accept or Decline; the choice persists in localStorage so it's remembered
  * across visits, not just the current tab session. Vercel Speed Insights is
- * left ungated — it reports anonymous performance timing, not analytics.
+ * left ungated  --  it reports anonymous performance timing, not analytics.
  *
- * Home page only — not every page. Shows once per session, 10s after the
+ * Home page only  --  not every page. Shows once per session, 10s after the
  * hero settles (not on page load): SHOWN_KEY (session-scoped) prevents it
  * re-triggering if you navigate around before deciding; STORAGE_KEY
  * (persistent) prevents it ever asking again once you've actually chosen.

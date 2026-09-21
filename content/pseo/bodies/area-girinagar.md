@@ -13,7 +13,7 @@ Girinagar sits in south Bengaluru, spanning pin codes 560085 and 560019, tucked 
 
 ## Getting here and around
 
-Girinagar connects to the rest of the city mainly via the Kanakapura Road corridor and 80 Feet Road, both served by regular BMTC bus routes. The nearest metro access is via Banashankari station on the Green Line, a short auto ride from most parts of the neighbourhood. Being primarily residential, most errands here — including print pickups — happen on foot or by two-wheeler within the immediate blocks rather than requiring a longer trip.
+Girinagar connects to the rest of the city mainly via the Kanakapura Road corridor and 80 Feet Road, both served by regular BMTC bus routes. The nearest metro access is via Banashankari station on the Green Line, a short auto ride from most parts of the neighbourhood. Being primarily residential, most errands here  --  including print pickups  --  happen on foot or by two-wheeler within the immediate blocks rather than requiring a longer trip.
 
 ## Why printing demand is high here
 

@@ -13,7 +13,7 @@ interface SnappyProps {
   decorative?: boolean;
   /** Override the default "Snaprint mascot, {state}" aria-label. */
   label?: string;
-  /** Cursor-proximity eye tracking — hero only, auto-disabled on touch + reduced motion. */
+  /** Cursor-proximity eye tracking  --  hero only, auto-disabled on touch + reduced motion. */
   eyeTrack?: boolean;
   /** Occasional idle "alive" beat (blink/tilt) on top of the base loop. Default true for idle & print-cycle. */
   idleBeat?: boolean;
@@ -48,7 +48,7 @@ export default function Snappy({
   const hasRoundEyes = state === "idle" || state === "printing" || state === "print-cycle";
   const beatEnabled = idleBeat ?? (state === "idle" || state === "print-cycle");
 
-  // Cursor-proximity eye tracking — direct DOM mutation, no re-renders.
+  // Cursor-proximity eye tracking  --  direct DOM mutation, no re-renders.
   useEffect(() => {
     if (!eyeTrack || !hasRoundEyes) return;
     if (typeof window === "undefined") return;
@@ -83,7 +83,7 @@ export default function Snappy({
     };
   }, [eyeTrack, hasRoundEyes]);
 
-  // Idle personality — an occasional small head-tilt beat every 8-12s.
+  // Idle personality  --  an occasional small head-tilt beat every 8-12s.
   useEffect(() => {
     if (!beatEnabled) return;
     if (typeof window === "undefined") return;
@@ -119,8 +119,8 @@ export default function Snappy({
       aria-hidden={decorative || undefined}
       aria-label={decorative ? undefined : label ?? `Snaprint mascot, ${state.replace("-", " ")}`}
     >
-      {/* Scale lives on its own wrapper so it composes with — instead of being
-          overridden by — the breathe/snooze animation's transform on .snappy. */}
+      {/* Scale lives on its own wrapper so it composes with  --  instead of being
+          overridden by  --  the breathe/snooze animation's transform on .snappy. */}
       <div
         style={{
           position: "absolute",
@@ -255,7 +255,7 @@ export default function Snappy({
           </>
         )}
 
-        {/* ── Arms, legs, feet — identical across every state ── */}
+        {/* ── Arms, legs, feet  --  identical across every state ── */}
         <div style={{ position: "absolute", left: 0, top: 62, width: 22, height: 9, background: C.limb, borderRadius: 6, transformOrigin: "100% 50%", transform: "rotate(-14deg)" }} />
         <div style={{ position: "absolute", right: 0, top: 62, width: 22, height: 9, background: C.limb, borderRadius: 6, transformOrigin: "0 50%", transform: "rotate(14deg)" }} />
         <div style={{ position: "absolute", left: 44, top: 148, width: 14, height: 24, background: C.limb, borderRadius: "0 0 7px 7px" }} />

@@ -1,7 +1,7 @@
 ---
 kind: college
 slug: jain-university-jayanagar
-name: Jain (Deemed-to-be University) — Jayanagar Campus
+name: Jain (Deemed-to-be University)  --  Jayanagar Campus
 city: bengaluru
 priority: true
 lastReviewed: '2026-08-12'
@@ -9,7 +9,7 @@ wordCount: 427
 ---
 ## About this place
 
-Jain (Deemed-to-be University) — Jayanagar Campus sits tucked into one of Bengaluru's older, leafy residential layouts, where classroom blocks share the skyline with apartment towers and banyan-shaded pavements. The campus draws students from the School of Commerce, the School of Management, and several postgraduate programmes, and the rhythm of the day is set by lecture bells rather than office shifts. Campus canteens, library floors, and a busy placement cell keep the neighbourhood buzzing through most hours. Among the 22 listed xerox and print shops scattered around the immediate catchment, Mahakali Stationery and Xerox — the highest-rated at five stars — has become a quiet landmark for anyone walking in from 9th Block.
+Jain (Deemed-to-be University)  --  Jayanagar Campus sits tucked into one of Bengaluru's older, leafy residential layouts, where classroom blocks share the skyline with apartment towers and banyan-shaded pavements. The campus draws students from the School of Commerce, the School of Management, and several postgraduate programmes, and the rhythm of the day is set by lecture bells rather than office shifts. Campus canteens, library floors, and a busy placement cell keep the neighbourhood buzzing through most hours. Among the 22 listed xerox and print shops scattered around the immediate catchment, Mahakali Stationery and Xerox  --  the highest-rated at five stars  --  has become a quiet landmark for anyone walking in from 9th Block.
 
 ## Getting here and around
 

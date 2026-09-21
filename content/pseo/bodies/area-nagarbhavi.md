@@ -17,7 +17,7 @@ The Vijayanagar metro station on the Purple Line is the closest rapid-transit st
 
 ## Why printing demand is high here
 
-Exam season turns Nagarbhavi into a 24-hour document hub between January and July, when coaching institutes flood the lanes with applicants needing attested mark sheets and admission forms. The VTU connection alone pushes a steady stream of students requesting project reports, transcripts, and bonafide certificates. Government service counters, sub-registrar offices, and several banks along Main Road keep Aadhaar, PAN, and property document work in constant circulation. A residential density of roughly 8,000 households per square kilometre ensures daily demand for rent agreements and school admissions. With 20 listed xerox and print shops on the network — including H.D.DIGITAL XEROX SHOP, which carries a 5-star rating — walk-ins rarely face a queue longer than a few minutes.
+Exam season turns Nagarbhavi into a 24-hour document hub between January and July, when coaching institutes flood the lanes with applicants needing attested mark sheets and admission forms. The VTU connection alone pushes a steady stream of students requesting project reports, transcripts, and bonafide certificates. Government service counters, sub-registrar offices, and several banks along Main Road keep Aadhaar, PAN, and property document work in constant circulation. A residential density of roughly 8,000 households per square kilometre ensures daily demand for rent agreements and school admissions. With 20 listed xerox and print shops on the network  --  including H.D.DIGITAL XEROX SHOP, which carries a 5-star rating  --  walk-ins rarely face a queue longer than a few minutes.
 
 ## What people typically print here
 

@@ -12,7 +12,7 @@ export default function CommunityPhilosophy() {
         </p>
         <p className="mb-10 font-body text-[15.5px] font-light leading-[1.78] text-white/70">
           Tell us what feels great. Tell us what feels broken. Tell us what you wish Snaprint could do next.
-          The goal isn't to collect compliments — it's to build something better.
+          The goal isn't to collect compliments  --  it's to build something better.
         </p>
         <FeedbackModal
           trigger={

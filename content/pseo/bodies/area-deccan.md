@@ -9,7 +9,7 @@ wordCount: 425
 ---
 ## About this place
 
-Deccan sits on the older western spine of Pune, where nineteenth-century Peshwa-era remnants give way to the modern hum of Garware Bridge and the fast pulse of FC Road's continuation. The neighborhood straddles two pin codes — 411004 to the north and 411001 along the older Deccan Gymkhana side — and reads like a working collage of middle-class housing colonies, coaching institutes, restaurants, and a thick belt of small commercial offices. Fifteen listed xerox and print shops anchor the daily paperwork grind of this part of town, which is why finding a working printer rarely means walking more than a few lanes.
+Deccan sits on the older western spine of Pune, where nineteenth-century Peshwa-era remnants give way to the modern hum of Garware Bridge and the fast pulse of FC Road's continuation. The neighborhood straddles two pin codes  --  411004 to the north and 411001 along the older Deccan Gymkhana side  --  and reads like a working collage of middle-class housing colonies, coaching institutes, restaurants, and a thick belt of small commercial offices. Fifteen listed xerox and print shops anchor the daily paperwork grind of this part of town, which is why finding a working printer rarely means walking more than a few lanes.
 
 ## Getting here and around
 
@@ -21,7 +21,7 @@ Coaching classes along Law College Road, the steady stream of applicants at Ferg
 
 ## What people typically print here
 
-Project reports and spiral-bound submissions for Fergusson and BMCC students land on counters daily, alongside B&W question papers for tuition batches. Parents bring Aadhaar, PAN, and seven-twelve extracts for binding, while small businesses drop off visiting-card reorders and menu leaflets. Around exam weeks — semester ends and board cycles — the spiral binding machine runs almost non-stop, and glossy colour prints for college fests spike through January and August.
+Project reports and spiral-bound submissions for Fergusson and BMCC students land on counters daily, alongside B&W question papers for tuition batches. Parents bring Aadhaar, PAN, and seven-twelve extracts for binding, while small businesses drop off visiting-card reorders and menu leaflets. Around exam weeks  --  semester ends and board cycles  --  the spiral binding machine runs almost non-stop, and glossy colour prints for college fests spike through January and August.
 
 ## How Snaprint fits in
 

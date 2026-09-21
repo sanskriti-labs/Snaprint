@@ -9,7 +9,7 @@ wordCount: 478
 ---
 ## About this place
 
-Nagavara sits on the northern fringe of Bengaluru, tucked between the bustling Outer Ring Road and the quieter lanes that lead toward Hennur and Thanisandra. Once a sleepy village absorbed by the city's eastwards sprawl, it has grown into a densely built residential pocket threaded with small commercial strips. The neighbourhood feeds two pin codes — 560045 and 560077 — and supports a working population that mixes long-time Kannada-speaking families with newer apartment complexes housing tech professionals. With nine listed xerox and print shops on the Snaprint network alone, Nagavara punches well above its weight for a locality of its size, suggesting steady footfall rather than just residential quiet.
+Nagavara sits on the northern fringe of Bengaluru, tucked between the bustling Outer Ring Road and the quieter lanes that lead toward Hennur and Thanisandra. Once a sleepy village absorbed by the city's eastwards sprawl, it has grown into a densely built residential pocket threaded with small commercial strips. The neighbourhood feeds two pin codes  --  560045 and 560077  --  and supports a working population that mixes long-time Kannada-speaking families with newer apartment complexes housing tech professionals. With nine listed xerox and print shops on the Snaprint network alone, Nagavara punches well above its weight for a locality of its size, suggesting steady footfall rather than just residential quiet.
 
 ## Getting here and around
 
@@ -17,11 +17,11 @@ The area is anchored by Nagavara Junction, where Outer Ring Road meets the Hennu
 
 ## Why printing demand is high here
 
-Nagavara draws print traffic from three overlapping crowds. First, the residential density — dozens of high-rises within a one-kilometre radius mean steady demand for Aadhaar, PAN and rental agreement copies. Second, the cluster of small offices, clinics and coaching centres along the Hennur stretch produces daily runs of bills, prescriptions and study material. Third, exam season from February to April spikes the queue at every shop, especially for spiral-bound notes and project reports. With nine shops competing in such a compact geography, pricing stays honest and turnaround stays quick — a Maha Ganapathi enterprises Xerox shop regularly logs five-star feedback for colour jobs done under an hour.
+Nagavara draws print traffic from three overlapping crowds. First, the residential density  --  dozens of high-rises within a one-kilometre radius mean steady demand for Aadhaar, PAN and rental agreement copies. Second, the cluster of small offices, clinics and coaching centres along the Hennur stretch produces daily runs of bills, prescriptions and study material. Third, exam season from February to April spikes the queue at every shop, especially for spiral-bound notes and project reports. With nine shops competing in such a compact geography, pricing stays honest and turnaround stays quick  --  a Maha Ganapathi enterprises Xerox shop regularly logs five-star feedback for colour jobs done under an hour.
 
 ## What people typically print here
 
-B&W A4 prints dominate weekday mornings — mostly government forms, ID photocopies and school homework. Colour printing kicks in by afternoon, used for property brochures, wedding invitations and coaching centre flyers. Spiral binding and lamination are the two value-adds most asked for, since students from nearby tuition hubs want bound project files. Scanning and email forwarding is a quieter but constant request, especially from senior citizens who need digitised documents for online applications.
+B&W A4 prints dominate weekday mornings  --  mostly government forms, ID photocopies and school homework. Colour printing kicks in by afternoon, used for property brochures, wedding invitations and coaching centre flyers. Spiral binding and lamination are the two value-adds most asked for, since students from nearby tuition hubs want bound project files. Scanning and email forwarding is a quieter but constant request, especially from senior citizens who need digitised documents for online applications.
 
 ## How Snaprint fits in
 

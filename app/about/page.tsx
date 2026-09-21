@@ -6,19 +6,19 @@ import Footer from "@/components/Footer";
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "About Snaprint — Sanskriti Labs, Bengaluru",
+  title: "About Snaprint  --  Sanskriti Labs, Bengaluru",
   description:
     "Snaprint is a self-service print kiosk built by Sanskriti Labs in Bengaluru. We turn xerox shops into 24/7 print points for students and small businesses.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Snaprint — Sanskriti Labs",
+    title: "About Snaprint  --  Sanskriti Labs",
     description: "A self-service print kiosk for Indian xerox shops, built in Bengaluru by Sanskriti Labs.",
     url: `${SITE_URL}/about`,
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
   twitter: {
-    title: "About Snaprint — Sanskriti Labs",
+    title: "About Snaprint  --  Sanskriti Labs",
     description: "A self-service print kiosk for Indian xerox shops, built in Bengaluru by Sanskriti Labs.",
   },
 };
@@ -66,7 +66,7 @@ export default function AboutPage() {
         <p className="mb-12 max-w-[640px] font-body text-[17px] font-light leading-[1.78] text-[#6B6B66]">
           Snaprint is built by <strong>Sanskriti Labs</strong>, a product company in
           Bengaluru, India. The S1 kiosk connects to any existing printer and lets
-          customers print from their phone — no app, no staff, no queue.
+          customers print from their phone  --  no app, no staff, no queue.
         </p>
 
         <section className="mb-12">
@@ -75,7 +75,7 @@ export default function AboutPage() {
           </h2>
           <p className="mb-4 font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
             Independent xerox shops in India lose revenue every night and on
-            weekends — the doors close at 21:00, but students and job applicants
+            weekends  --  the doors close at 21:00, but students and job applicants
             need to print at 23:00. Daytime queues stretch 10–40 minutes during
             exam and placement season. The shop owner cannot bill for the time
             spent managing the queue, and the customer walks away frustrated.

@@ -13,23 +13,23 @@ import {
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  // Layout template appends "· Snaprint" — no explicit suffix here.
+  // Layout template appends "· Snaprint"  --  no explicit suffix here.
   title: "Print and xerox shops across India",
   description:
-    "Browse print and xerox shop directories city by city — instant print, photocopy, scan, and ID services near you across India.",
+    "Browse print and xerox shop directories city by city  --  instant print, photocopy, scan, and ID services near you across India.",
   alternates: { canonical: "/instant-print" },
   openGraph: {
-    title: "Print and xerox shops across India — Snaprint",
+    title: "Print and xerox shops across India  --  Snaprint",
     description:
-      "Browse print and xerox shop directories city by city — find instant print, photocopy, scan, and ID services near you.",
+      "Browse print and xerox shop directories city by city  --  find instant print, photocopy, scan, and ID services near you.",
     url: `${SITE_URL}/instant-print`,
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
   twitter: {
-    title: "Print and xerox shops across India — Snaprint",
+    title: "Print and xerox shops across India  --  Snaprint",
     description:
-      "Browse print and xerox shop directories city by city — find instant print, photocopy, scan, and ID services near you.",
+      "Browse print and xerox shop directories city by city  --  find instant print, photocopy, scan, and ID services near you.",
   },
 };
 
@@ -44,7 +44,7 @@ export default function InstantPrintIndex() {
     0,
   );
 
-  // CollectionPage + BreadcrumbList + FAQPage — no Product/kiosk-usage FAQ
+  // CollectionPage + BreadcrumbList + FAQPage  --  no Product/kiosk-usage FAQ
   // here. Those schemas are scoped to app/page.tsx on purpose (see comment
   // there): adding kiosk pricing/FAQ to directory hub pages leaked into
   // search snippets for pages about unrelated third-party shops. These FAQs
@@ -57,7 +57,7 @@ export default function InstantPrintIndex() {
         "@id": `${SITE_URL}/instant-print#collection`,
         url: `${SITE_URL}/instant-print`,
         name: "Print and xerox shops across India",
-        // Statically generated at build time from the live entity list —
+        // Statically generated at build time from the live entity list  -- 
         // this is the real build date, refreshed on every rebuild.
         dateModified: new Date().toISOString().slice(0, 10),
         isPartOf: { "@id": `${SITE_URL}/#website` },
@@ -125,12 +125,12 @@ export default function InstantPrintIndex() {
           Print and xerox shops, city by city.
         </h1>
         <p className="mb-6 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-          Pick a city to find the nearest listed xerox and print shop —
+          Pick a city to find the nearest listed xerox and print shop  -- 
           B&amp;W and colour prints, binding, and scanning, many open 24/7
           for document printing.
         </p>
 
-        {/* Quick stats — concrete numbers help AI citability + skimming */}
+        {/* Quick stats  --  concrete numbers help AI citability + skimming */}
         <dl className="mb-16 flex flex-wrap gap-x-10 gap-y-4 border-y border-[#E8E6E0] py-6">
           <div>
             <dt className="font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-[#888780]">
@@ -204,7 +204,7 @@ export default function InstantPrintIndex() {
             </ul>
           ) : (
             <p className="font-body text-[15px] text-[#6B6B66]">
-              We&apos;re onboarding new neighbourhoods every week — Bengaluru
+              We&apos;re onboarding new neighbourhoods every week  --  Bengaluru
               first, then other Indian cities.
             </p>
           )}

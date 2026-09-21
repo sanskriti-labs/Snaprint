@@ -21,7 +21,7 @@ Engineering coursework at HCUH drives regular demand for lab manuals, project re
 
 ## What people typically print here
 
-Spiral-bound project reports with circuit and CAD diagrams, B&W lab manuals, and internal assessment answer sheets are the routine student orders. Placement season adds resume printing and portfolio binding. General documentation needs — ID copies, admission and scholarship form printing, certificate attestations — round out demand from both students and the wider Kukatpally-Financial District commuter base.
+Spiral-bound project reports with circuit and CAD diagrams, B&W lab manuals, and internal assessment answer sheets are the routine student orders. Placement season adds resume printing and portfolio binding. General documentation needs  --  ID copies, admission and scholarship form printing, certificate attestations  --  round out demand from both students and the wider Kukatpally-Financial District commuter base.
 
 ## How Snaprint fits in
 

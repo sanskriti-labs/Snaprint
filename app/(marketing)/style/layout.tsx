@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-// Internal design-system preview — never indexed, never in the sitemap.
+// Internal design-system preview  --  never indexed, never in the sitemap.
 export const metadata: Metadata = {
   title: "Design System",
   alternates: { canonical: "/style" },

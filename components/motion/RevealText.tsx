@@ -22,7 +22,7 @@ interface RevealTextProps {
 }
 
 /**
- * Masked reveal — the design system's default text entrance (DESIGN_SYSTEM.md §5).
+ * Masked reveal  --  the design system's default text entrance (DESIGN_SYSTEM.md §5).
  * Each unit sits in an overflow-hidden mask and rises from 110% with a staggered
  * expo.out, synced to scroll via ScrollTrigger. Never a plain opacity fade.
  * Reduced motion → renders the final state, no animation.
@@ -56,7 +56,7 @@ export default function RevealText({
     // Masked start set by GSAP itself (no CSS transform base to fight). Under
     // React Strict Mode the effect runs mount→cleanup→mount; kill() on cleanup
     // stops the tween without restoring hidden, and the second run re-sets the
-    // 110% start then animates to 0 — always settling visible.
+    // 110% start then animates to 0  --  always settling visible.
     gsap.set(inners, { yPercent: 110, opacity: 1 });
     const tween = gsap.to(inners, {
       yPercent: 0,
@@ -84,7 +84,7 @@ export default function RevealText({
       {units.map((unit, i) => (
         <span key={i} className={maskClass}>
           {/* Hidden start comes from the CSS class (.reveal-line/.reveal-word > span),
-              NOT an inline style — an inline transform here would be re-applied by
+              NOT an inline style  --  an inline transform here would be re-applied by
               React on re-render and clobber GSAP's final revealed state. */}
           <span data-reveal-inner>
             {unit}

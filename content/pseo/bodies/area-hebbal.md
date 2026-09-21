@@ -9,7 +9,7 @@ wordCount: 490
 ---
 ## About this place
 
-Hebbal sits at the northern gateway of Bengaluru where the Outer Ring Road crosses Bellary Road, and the neighbourhood has spent the last decade trading its sleepy lakeside character for a denser, more mixed urban profile. The old Hebbal Lake and the flyover that arches over it are still local landmarks, but apartment towers and office blocks have filled the surrounding lanes, especially within the 560024 and 560004 pin codes that cover the area. It is now part residential pocket, part commercial corridor — families in mid-rise buildings share the streets with software employees heading toward the Manyata Tech Park side and students commuting to nearby institutions. Snaprint lists 9 listed xerox and print shops across this stretch, which speaks to how much paperwork and documentation the locality handles daily.
+Hebbal sits at the northern gateway of Bengaluru where the Outer Ring Road crosses Bellary Road, and the neighbourhood has spent the last decade trading its sleepy lakeside character for a denser, more mixed urban profile. The old Hebbal Lake and the flyover that arches over it are still local landmarks, but apartment towers and office blocks have filled the surrounding lanes, especially within the 560024 and 560004 pin codes that cover the area. It is now part residential pocket, part commercial corridor  --  families in mid-rise buildings share the streets with software employees heading toward the Manyata Tech Park side and students commuting to nearby institutions. Snaprint lists 9 listed xerox and print shops across this stretch, which speaks to how much paperwork and documentation the locality handles daily.
 
 ## Getting here and around
 
@@ -21,7 +21,7 @@ Hebbal pulls printing work from three overlapping crowds. Working professionals 
 
 ## What people typically print here
 
-Most counters in the 560024 stretch see the same handful of jobs in rotation — black-and-white A4 prints of government forms, colour photocopies of ID proofs, and spiral-bound project files for school and college submissions. Lamination requests spike around admissions season for mark sheets and certificates, while passport-size photo printing runs heavy all year. A few shops near the main junction also handle larger jobs like pamphlet design and poster prints for local events and small businesses.
+Most counters in the 560024 stretch see the same handful of jobs in rotation  --  black-and-white A4 prints of government forms, colour photocopies of ID proofs, and spiral-bound project files for school and college submissions. Lamination requests spike around admissions season for mark sheets and certificates, while passport-size photo printing runs heavy all year. A few shops near the main junction also handle larger jobs like pamphlet design and poster prints for local events and small businesses.
 
 ## How Snaprint fits in
 

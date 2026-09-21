@@ -4,18 +4,18 @@
 
 **Goal:** Replace the outbound "Book a Demo" link to `book.sanskritilabs.in` (stock, unbranded, non-mobile-optimized Easy!Appointments UI) with a native `/book` page on `snaprints.com` that talks to Easy!Appointments only via its REST API.
 
-**Architecture:** A Next.js App Router page (`app/book/page.tsx`, client component) drives a 3-step flow — pick date, pick time slot, enter contact details — backed by two server-side API routes (`app/api/book/availability/route.ts`, `app/api/book/submit/route.ts`) that proxy to the Easy!Appointments v1 REST API using a server-only `EA_API_KEY`. The EA service/provider IDs are hardcoded server-side.
+**Architecture:** A Next.js App Router page (`app/book/page.tsx`, client component) drives a 3-step flow  --  pick date, pick time slot, enter contact details  --  backed by two server-side API routes (`app/api/book/availability/route.ts`, `app/api/book/submit/route.ts`) that proxy to the Easy!Appointments v1 REST API using a server-only `EA_API_KEY`. The EA service/provider IDs are hardcoded server-side.
 
 **Tech Stack:** Next.js 14 (App Router, Route Handlers), React 18, TypeScript, Tailwind CSS (existing `snap-*` design tokens), framer-motion (already installed, matches existing section animations), no new dependencies.
 
 ## Global Constraints
 
-- EA API key (`EA_API_KEY`) is a server-only environment variable — never referenced in any Client Component or exposed in a response body.
-- No new npm dependencies — calendar/date-picker is hand-built (small, fixed ~30-day range, no month navigation needed beyond next/prev).
+- EA API key (`EA_API_KEY`) is a server-only environment variable  --  never referenced in any Client Component or exposed in a response body.
+- No new npm dependencies  --  calendar/date-picker is hand-built (small, fixed ~30-day range, no month navigation needed beyond next/prev).
 - Match existing design tokens exactly: colors `snap-red` (`#E63946`), `snap-red-dark`, `snap-charcoal`, `snap-surface`, `snap-border`, `snap-gray`; fonts `font-display` (Space Grotesk) for headings/buttons, `font-body` (Inter) for body text; reuse `components/ui/Button.tsx` and `lib/utils.ts`'s `cn()`.
 - The `snaprints@sanskritilabs.in` email fallback must remain visible at all times on `/book`, including during error states.
-- No test framework exists in this repo (no Jest/Vitest/Playwright) — do not add one. Pure-logic modules (EA response mapping) get a plain `node`-runnable assert-based self-check (`pnpm exec tsx` or compiled check), not a test framework. UI correctness is verified manually via `pnpm dev` + browser, per step instructions below.
-- This plan does not modify the Easy!Appointments admin configuration (services, working hours, provider setup) — that's managed in the EA admin panel, unchanged.
+- No test framework exists in this repo (no Jest/Vitest/Playwright)  --  do not add one. Pure-logic modules (EA response mapping) get a plain `node`-runnable assert-based self-check (`pnpm exec tsx` or compiled check), not a test framework. UI correctness is verified manually via `pnpm dev` + browser, per step instructions below.
+- This plan does not modify the Easy!Appointments admin configuration (services, working hours, provider setup)  --  that's managed in the EA admin panel, unchanged.
 
 ---
 
@@ -28,11 +28,11 @@
 **Interfaces:**
 - Consumes: `process.env.EA_API_KEY`, `process.env.EA_BASE_URL` (defaults to `https://book.sanskritilabs.in` if unset)
 - Produces:
-  - `type Slot = { time: string }` — `time` is `"HH:mm"` 24-hour format
-  - `getAvailableSlots(date: string): Promise<Slot[]>` — `date` is `"YYYY-MM-DD"`. Throws `EAApiError` on non-2xx or network failure.
-  - `createAppointment(input: { name: string; email: string; phone: string; date: string; time: string }): Promise<{ id: number }>` — Throws `EAApiError` on non-2xx or network failure.
+  - `type Slot = { time: string }`  --  `time` is `"HH:mm"` 24-hour format
+  - `getAvailableSlots(date: string): Promise<Slot[]>`  --  `date` is `"YYYY-MM-DD"`. Throws `EAApiError` on non-2xx or network failure.
+  - `createAppointment(input: { name: string; email: string; phone: string; date: string; time: string }): Promise<{ id: number }>`  --  Throws `EAApiError` on non-2xx or network failure.
   - `class EAApiError extends Error { status?: number }`
-  - `EA_SERVICE_NAME = "Introduction Call with Snaprint Founder"` (exported const, used only for display copy — the actual service ID lookup happens inside this module, resolved once via EA's `/api/v1/services` on first call and cached in module scope for the life of the server process)
+  - `EA_SERVICE_NAME = "Introduction Call with Snaprint Founder"` (exported const, used only for display copy  --  the actual service ID lookup happens inside this module, resolved once via EA's `/api/v1/services` on first call and cached in module scope for the life of the server process)
 
 This module is the single place that knows EA's API shape. If EA's actual response format differs from the assumed shape below once tested against the live instance (per the spec's open verification item), fix it here only.
 
@@ -186,7 +186,7 @@ main().catch((err) => {
 Run: `npx tsx lib/easyAppointments.selfcheck.ts`
 Expected: `easyAppointments.selfcheck: OK`
 
-(If `tsx` isn't available, run `npx --yes tsx lib/easyAppointments.selfcheck.ts` — npx will fetch it transiently; it is not added to `package.json`.)
+(If `tsx` isn't available, run `npx --yes tsx lib/easyAppointments.selfcheck.ts`  --  npx will fetch it transiently; it is not added to `package.json`.)
 
 - [ ] **Step 4: Typecheck**
 
@@ -240,13 +240,13 @@ export async function GET(req: NextRequest) {
 }
 ```
 
-- [ ] **Step 2: Manual verification — missing param**
+- [ ] **Step 2: Manual verification  --  missing param**
 
 Run: `pnpm dev` (leave running), then in another terminal:
 `curl -s -o /dev/null -w "%{http_code}\n" http://localhost:3000/api/book/availability`
 Expected: `400`
 
-- [ ] **Step 3: Manual verification — valid param, no EA key configured**
+- [ ] **Step 3: Manual verification  --  valid param, no EA key configured**
 
 `curl -s http://localhost:3000/api/book/availability?date=2026-08-10`
 Expected: `{"error":"EA_API_KEY is not configured on the server"}` with HTTP 502 (check via `-w "\n%{http_code}\n"`)
@@ -321,13 +321,13 @@ export async function POST(req: NextRequest) {
 }
 ```
 
-- [ ] **Step 2: Manual verification — invalid body**
+- [ ] **Step 2: Manual verification  --  invalid body**
 
 With `pnpm dev` running:
 `curl -s -X POST http://localhost:3000/api/book/submit -H "Content-Type: application/json" -d '{}' -w "\n%{http_code}\n"`
 Expected: `{"error":"'name' is required"}` and `400`
 
-- [ ] **Step 3: Manual verification — valid body, no EA key configured**
+- [ ] **Step 3: Manual verification  --  valid body, no EA key configured**
 
 ```bash
 curl -s -X POST http://localhost:3000/api/book/submit \
@@ -360,7 +360,7 @@ git commit -m "Add /api/book/submit route"
 **Interfaces:**
 - Consumes: nothing external beyond React and existing `cn()` from `lib/utils.ts`
 - Produces:
-  - `DatePicker`: `{ selectedDate: string | null; onSelect: (date: string) => void }` props. Renders a 30-day grid starting today (`YYYY-MM-DD` strings), calling `onSelect` when a day is clicked. Purely presentational — does not know which days are booked/closed (that's Task 5's job, passed in as a prop here).
+  - `DatePicker`: `{ selectedDate: string | null; onSelect: (date: string) => void }` props. Renders a 30-day grid starting today (`YYYY-MM-DD` strings), calling `onSelect` when a day is clicked. Purely presentational  --  does not know which days are booked/closed (that's Task 5's job, passed in as a prop here).
   - Actually produces: `DatePicker` also accepts `disabledDates?: string[]` (dates rendered non-interactive).
   - `TimeSlots`: `{ slots: { time: string }[]; selectedTime: string | null; onSelect: (time: string) => void; loading: boolean }` props. Renders slot buttons, a loading skeleton when `loading`, and "No times available that day" when `slots` is empty and not loading.
 
@@ -473,7 +473,7 @@ export function TimeSlots({ slots, selectedTime, onSelect, loading }: TimeSlotsP
   if (slots.length === 0) {
     return (
       <p className="font-body text-[14px] text-snap-gray">
-        No times available that day — try another date.
+        No times available that day  --  try another date.
       </p>
     );
   }
@@ -519,7 +519,7 @@ git commit -m "Add DatePicker and TimeSlots components"
 
 ---
 
-### Task 5: `/book` page — assembling the flow
+### Task 5: `/book` page  --  assembling the flow
 
 **Files:**
 - Create: `app/book/page.tsx`
@@ -530,7 +530,7 @@ git commit -m "Add DatePicker and TimeSlots components"
   - `TimeSlots` from `components/book/TimeSlots.tsx` (Task 4)
   - `Button` from `components/ui/Button.tsx`
   - `GET /api/book/availability?date=` and `POST /api/book/submit` (Tasks 2–3)
-- Produces: the page itself — no other task depends on this file.
+- Produces: the page itself  --  no other task depends on this file.
 
 - [ ] **Step 1: Write the page**
 
@@ -757,12 +757,12 @@ export default function BookPage() {
 }
 ```
 
-- [ ] **Step 2: Manual verification — layout renders**
+- [ ] **Step 2: Manual verification  --  layout renders**
 
 Run: `pnpm dev`, open `http://localhost:3000/book` in a browser.
-Expected: page renders with dark gradient background, "Talk to the Snaprint founder" heading, 30-day date grid, `snaprints@sanskritilabs.in` fallback link visible at the bottom. Since `EA_API_KEY` isn't set yet, selecting a date will show the inline error from the availability route (expected at this stage — confirms error state renders correctly, matches the spec's fallback-always-visible requirement).
+Expected: page renders with dark gradient background, "Talk to the Snaprint founder" heading, 30-day date grid, `snaprints@sanskritilabs.in` fallback link visible at the bottom. Since `EA_API_KEY` isn't set yet, selecting a date will show the inline error from the availability route (expected at this stage  --  confirms error state renders correctly, matches the spec's fallback-always-visible requirement).
 
-- [ ] **Step 3: Manual verification — mobile viewport**
+- [ ] **Step 3: Manual verification  --  mobile viewport**
 
 In the browser devtools, switch to a mobile viewport (e.g. 375px wide, iPhone SE).
 Expected: date grid wraps to 5 columns, no horizontal scroll, form fields and button are full-width and tappable, heading text scales down via the `clamp()`.
@@ -795,7 +795,7 @@ git commit -m "Add /book page"
 
 **Interfaces:**
 - Consumes: `/book` route from Task 5
-- Produces: nothing consumed by later tasks — this is the final integration task.
+- Produces: nothing consumed by later tasks  --  this is the final integration task.
 
 - [ ] **Step 1: Update `CtaFinal.tsx`**
 
@@ -827,7 +827,7 @@ Find the `Request a Demo` link (identified during brainstorming at `components/s
 - [ ] **Step 3: Create `.env.example`**
 
 ```
-# Easy!Appointments API key — generate in the EA admin panel under
+# Easy!Appointments API key  --  generate in the EA admin panel under
 # Settings > API > Generate. Required for /api/book/* routes.
 EA_API_KEY=
 
@@ -856,9 +856,9 @@ git commit -m "Point Book a Demo CTAs at native /book page"
 
 ### Task 7: Production deploy prerequisite (manual, non-code)
 
-This task has no file changes — it's the operational step needed before `/book` works in production. Include it in execution tracking since the feature isn't actually functional without it.
+This task has no file changes  --  it's the operational step needed before `/book` works in production. Include it in execution tracking since the feature isn't actually functional without it.
 
-- [ ] **Step 1:** In the Easy!Appointments admin panel (`https://book.sanskritilabs.in`, admin login), go to **Settings → API**, generate a fresh API key (regenerate if the previously-shared key — redacted here, treat as compromised — hasn't already been rotated; treat that value as compromised regardless).
+- [ ] **Step 1:** In the Easy!Appointments admin panel (`https://book.sanskritilabs.in`, admin login), go to **Settings → API**, generate a fresh API key (regenerate if the previously-shared key  --  redacted here, treat as compromised  --  hasn't already been rotated; treat that value as compromised regardless).
 - [ ] **Step 2:** Add it to Vercel: `vercel env add EA_API_KEY production` (paste the key when prompted), then repeat for `preview` and `development` environments if EA should be reachable from preview deploys too.
 - [ ] **Step 3:** Redeploy (`vercel deploy --prod`) so the new env var is picked up.
 - [ ] **Step 4:** Manually verify on the live site: visit `https://snaprints.com/book`, complete a real test booking, confirm it appears in the EA admin calendar and the EA confirmation email arrives.
@@ -868,5 +868,5 @@ This task has no file changes — it's the operational step needed before `/book
 ## Self-Review Notes
 
 - **Spec coverage:** page + routes (spec's Architecture section) → Tasks 1–5; error handling + email fallback (spec's Flow section) → Task 5; env var / key handling (spec's Data & secrets section) → Tasks 1, 6, 7; CTA link updates (spec's Site changes section) → Task 6. All spec sections have a corresponding task.
-- **Open verification item from the spec** (EA's exact API response shape unconfirmed) is carried into Task 1's docstring-equivalent note and Task 7's live verification step — implementer must adjust `lib/easyAppointments.ts` if the real EA instance's JSON shape differs from what's assumed.
+- **Open verification item from the spec** (EA's exact API response shape unconfirmed) is carried into Task 1's docstring-equivalent note and Task 7's live verification step  --  implementer must adjust `lib/easyAppointments.ts` if the real EA instance's JSON shape differs from what's assumed.
 - **Type consistency checked:** `Slot = { time: string }` used identically in Task 1 (`lib/easyAppointments.ts`), Task 2 (route response), Task 4 (`TimeSlots` props), Task 5 (page state). `createAppointment`'s input fields (`name, email, phone, date, time`) match the submit route's body parsing (Task 3) and the page's fetch body (Task 5).

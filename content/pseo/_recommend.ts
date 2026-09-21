@@ -3,7 +3,7 @@ import type { LiveLocation } from "./types";
 /**
  * Score a shop for the "recommended" callout: rating carries most of the
  * weight, review count acts as a confidence multiplier (a 5.0★ shop with 2
- * reviews shouldn't beat a 4.6★ shop with 200), and proximity — when known —
+ * reviews shouldn't beat a 4.6★ shop with 200), and proximity  --  when known  -- 
  * is a smaller bonus so a slightly-further, clearly-better shop still wins.
  * Returns null when there's nothing worth recommending (no rated shops).
  */

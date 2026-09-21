@@ -17,7 +17,7 @@ The Yeshwantpur metro station on the Green Line is the closest rapid-transit anc
 
 ## Why printing demand is high here
 
-Three factors keep the printers busy. First, the engineering and degree colleges clustered around MS Ramaiah and the Sanjaynagar belt drive seasonal spikes in November and April when project reports and exam booklets pile up. Second, Mathikere's residential density means a steady drip of Aadhaar, PAN, and rental-agreement copies from families who prefer not to travel into the city. Third, small businesses and coaching centres nearby order bulk B&W reams almost weekly. With 17 listed shops absorbing this load — and the area averaging 4.5 stars across 15 rated outlets — the supply has clearly kept pace. Rashmi Xerox MRSREEPRASAD A, the top-rated shop at a perfect 5 stars, is one of the names that locals mention first when asked where to get a clean colour print on short notice.
+Three factors keep the printers busy. First, the engineering and degree colleges clustered around MS Ramaiah and the Sanjaynagar belt drive seasonal spikes in November and April when project reports and exam booklets pile up. Second, Mathikere's residential density means a steady drip of Aadhaar, PAN, and rental-agreement copies from families who prefer not to travel into the city. Third, small businesses and coaching centres nearby order bulk B&W reams almost weekly. With 17 listed shops absorbing this load  --  and the area averaging 4.5 stars across 15 rated outlets  --  the supply has clearly kept pace. Rashmi Xerox MRSREEPRASAD A, the top-rated shop at a perfect 5 stars, is one of the names that locals mention first when asked where to get a clean colour print on short notice.
 
 ## What people typically print here
 

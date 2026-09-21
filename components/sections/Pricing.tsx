@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import RevealText from "@/components/motion/RevealText";
 
-// ─── Sourced from the 2026 Kiosk Ownership brochure — figures below are
+// ─── Sourced from the 2026 Kiosk Ownership brochure  --  figures below are
 // illustrative estimates from that document, not guarantees. Do not invent
 // numbers here; if a figure isn't in the brochure, it doesn't belong here.
 
@@ -122,7 +122,7 @@ export default function Pricing() {
                   : {}
               }
             >
-              {/* Red glow — appears on hover, popular card only */}
+              {/* Red glow  --  appears on hover, popular card only */}
               {t.popular && (
                 <div
                   className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#E63946] opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-20"

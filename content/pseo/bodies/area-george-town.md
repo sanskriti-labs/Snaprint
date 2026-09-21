@@ -17,7 +17,7 @@ The neighbourhood is best navigated on foot or by auto-rickshaw, since its lanes
 
 ## Why printing demand is high here
 
-Print demand in George Town is unusually heavy because the area doubles as a commercial hub and a legal-administrative belt. The Madras High Court, several government offices, and a thick concentration of chartered accountants and lawyers generate constant flow of petitions, affidavits, and certified copies that need quick duplication. Add to that the wholesale trading community, which runs on handwritten ledgers, GST invoices, transport challans, and packing slips, and you get a workday rhythm that keeps the 20 listed shops — including the well-reviewed Grace Xerox — busy from opening to close. Exam season pulls in students from nearby colleges, and weekend wedding cards and id-card reprints keep lamination counters occupied.
+Print demand in George Town is unusually heavy because the area doubles as a commercial hub and a legal-administrative belt. The Madras High Court, several government offices, and a thick concentration of chartered accountants and lawyers generate constant flow of petitions, affidavits, and certified copies that need quick duplication. Add to that the wholesale trading community, which runs on handwritten ledgers, GST invoices, transport challans, and packing slips, and you get a workday rhythm that keeps the 20 listed shops  --  including the well-reviewed Grace Xerox  --  busy from opening to close. Exam season pulls in students from nearby colleges, and weekend wedding cards and id-card reprints keep lamination counters occupied.
 
 ## What people typically print here
 

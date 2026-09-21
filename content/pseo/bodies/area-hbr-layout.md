@@ -17,7 +17,7 @@ The locality is car-dependent but reasonably well connected. Kalyan Nagar bus st
 
 ## Why printing demand is high here
 
-A dense residential base keeps the print shops humming, but the real driver is the cluster of small offices, coaching centres, and tuition halls scattered between the apartment blocks. Parents regularly print worksheets, teachers duplicate question papers, and small businesses need letterheads, invoices, and GST paperwork run off quickly. Exam seasons spike demand noticeably — February through April, and again in September — when students line up for spiral-bound notes and project reports. The 560043 stretch sees particularly heavy traffic because of its proximity to several engineering coaching institutes. With eight listed outlets averaging 4.7 stars, the area has enough capacity to absorb these surges without long waits.
+A dense residential base keeps the print shops humming, but the real driver is the cluster of small offices, coaching centres, and tuition halls scattered between the apartment blocks. Parents regularly print worksheets, teachers duplicate question papers, and small businesses need letterheads, invoices, and GST paperwork run off quickly. Exam seasons spike demand noticeably  --  February through April, and again in September  --  when students line up for spiral-bound notes and project reports. The 560043 stretch sees particularly heavy traffic because of its proximity to several engineering coaching institutes. With eight listed outlets averaging 4.7 stars, the area has enough capacity to absorb these surges without long waits.
 
 ## What people typically print here
 

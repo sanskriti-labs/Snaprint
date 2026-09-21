@@ -60,7 +60,7 @@ export default function Machine() {
           INSTANT PRINT NETWORK
         </text>
 
-        {/* RED LEFT LED STRIPE — signature design element from prototype */}
+        {/* RED LEFT LED STRIPE  --  signature design element from prototype */}
         <rect
           x="8"
           y="8"

@@ -14,7 +14,7 @@ const verticals = [
   },
   {
     title: "Hospitals & clinics",
-    body: "Attendants and visitors printing prescriptions, ID copies, and insurance paperwork — a self-service point near reception keeps the front desk free for patients.",
+    body: "Attendants and visitors printing prescriptions, ID copies, and insurance paperwork  --  a self-service point near reception keeps the front desk free for patients.",
   },
   {
     title: "Libraries",
@@ -22,7 +22,7 @@ const verticals = [
   },
   {
     title: "Railway stations & transit hubs",
-    body: "Travellers printing tickets, ID proofs, or reservation slips at odd hours — unattended operation means the kiosk works long after any staffed counter closes.",
+    body: "Travellers printing tickets, ID proofs, or reservation slips at odd hours  --  unattended operation means the kiosk works long after any staffed counter closes.",
   },
   {
     title: "Malls & retail stores",
@@ -34,31 +34,31 @@ const capabilities = [
   {
     label: "Unattended",
     heading: "Runs 24/7 without staff present.",
-    body: "Orders queue automatically and print in the background — the kiosk keeps working through closed hours, shift changes, and lunch breaks.",
+    body: "Orders queue automatically and print in the background  --  the kiosk keeps working through closed hours, shift changes, and lunch breaks.",
     accent: true,
   },
   {
     label: "QR + UPI",
     heading: "Scan, upload, pay via UPI. No app.",
-    body: "The customer's phone camera reads the QR code and opens the upload flow directly in the browser — no install, no account creation.",
+    body: "The customer's phone camera reads the QR code and opens the upload flow directly in the browser  --  no install, no account creation.",
     accent: false,
   },
   {
     label: "Any printer",
     heading: "Works with your existing printer.",
-    body: "Canon, HP, Epson, Brother — the kiosk connects to whatever's already installed. No forced hardware change for the deployment site.",
+    body: "Canon, HP, Epson, Brother  --  the kiosk connects to whatever's already installed. No forced hardware change for the deployment site.",
     accent: false,
   },
   {
     label: "Remote management",
     heading: "Monitor every kiosk from one dashboard.",
-    body: "Live order volume, revenue, and consumables status per unit — check on a single kiosk or a fleet across multiple sites from your phone.",
+    body: "Live order volume, revenue, and consumables status per unit  --  check on a single kiosk or a fleet across multiple sites from your phone.",
     accent: false,
   },
   {
     label: "Security",
     heading: "Documents deleted after every print.",
-    body: "Files are encrypted end-to-end and auto-deleted on completion. Nothing sits on the kiosk after the job finishes — a real requirement for hospital and office deployments.",
+    body: "Files are encrypted end-to-end and auto-deleted on completion. Nothing sits on the kiosk after the job finishes  --  a real requirement for hospital and office deployments.",
     accent: false,
   },
 ];
@@ -66,7 +66,7 @@ const capabilities = [
 const faqs = [
   {
     q: "What is a self-service printing kiosk?",
-    a: "A self-service printing kiosk is a self-contained unit that lets someone print a document without staff operating the machine for them. With Snaprint, the customer scans a QR code on the kiosk with their phone, uploads a file, pays via UPI or card, and collects the printout — the kiosk connects to a regular printer behind the scenes, so no specialised print hardware is required.",
+    a: "A self-service printing kiosk is a self-contained unit that lets someone print a document without staff operating the machine for them. With Snaprint, the customer scans a QR code on the kiosk with their phone, uploads a file, pays via UPI or card, and collects the printout  --  the kiosk connects to a regular printer behind the scenes, so no specialised print hardware is required.",
   },
   {
     q: "Can I print documents from my phone without an app?",
@@ -78,11 +78,11 @@ const faqs = [
   },
   {
     q: "Is this different from a self-service xerox or photocopy machine?",
-    a: "The end result is similar — an unattended way to get a document printed — but a Snaprint kiosk is the front-end plus payment and job-queueing layer sitting in front of your existing printer, not a standalone photocopier. It also runs completely unattended, including outside staffed hours, which a walk-up photocopier doesn't handle on its own.",
+    a: "The end result is similar  --  an unattended way to get a document printed  --  but a Snaprint kiosk is the front-end plus payment and job-queueing layer sitting in front of your existing printer, not a standalone photocopier. It also runs completely unattended, including outside staffed hours, which a walk-up photocopier doesn't handle on its own.",
   },
   {
     q: "Can multiple kiosks across different sites be managed centrally?",
-    a: "Yes. Every kiosk reports into the same owner dashboard — order volume, revenue, and consumables status — so a business running kiosks at several locations can check all of them from one place rather than visiting each site.",
+    a: "Yes. Every kiosk reports into the same owner dashboard  --  order volume, revenue, and consumables status  --  so a business running kiosks at several locations can check all of them from one place rather than visiting each site.",
   },
 ];
 
@@ -155,11 +155,10 @@ export default function KioskPage() {
               className="mb-6 font-display font-extrabold leading-[1.0] tracking-[-3px] text-[#111110]"
               style={{ fontSize: "clamp(40px, 5.6vw, 68px)" }}
             >
-              A self-service printing<br />
-              kiosk for <span className="text-[#E63946]">any location.</span>
+              A self-service print kiosk for <span className="text-[#E63946]">any location.</span>
             </h1>
             <p className="mb-10 max-w-[600px] font-body text-[17px] font-light leading-[1.78] text-[#6B6B66]">
-              Snaprint is a self-service printing kiosk / automated print station that plugs into any existing printer. QR-code upload, UPI payment, and unattended 24/7 operation — built for colleges, offices, hospitals, libraries, and retail across India.
+              Snaprint is a self-service print kiosk  --  also called a self printing kiosk or automated print station  --  that plugs into any existing printer. QR-code upload, UPI payment, and unattended 24/7 operation  --  built for colleges, offices, hospitals, libraries, and retail across India. A print kiosk from Snaprint turns any location with a printer into a self-service printing point without needing specialised photocopy hardware.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
@@ -211,7 +210,7 @@ export default function KioskPage() {
               An automated print station, not just a photocopier.
             </h2>
             <p className="mb-14 max-w-[560px] font-body text-[16px] font-light leading-[1.78] text-[rgba(255,255,255,0.42)]">
-              Every deployment gets the same core: document upload, payment, print job queueing, and remote visibility — regardless of where the kiosk sits.
+              Every deployment gets the same core: document upload, payment, print job queueing, and remote visibility  --  regardless of where the kiosk sits.
             </p>
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">

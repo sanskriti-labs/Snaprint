@@ -116,7 +116,7 @@ function SideFace({ flip = false }: { flip?: boolean }) {
       <rect x="0" y="0" width="9" height="700" fill="#E63946" />
       {/* Depth dimension label */}
       <text x="140" y="55" textAnchor="middle" fontFamily="monospace" fontSize="7" fill="rgba(255,255,255,0.5)" letterSpacing="1.5">70 cm DEEP</text>
-      {/* Screen housing — thick black slab from side */}
+      {/* Screen housing  --  thick black slab from side */}
       <rect x="14" y="80" width="252" height="248" rx="5" fill="#0A0A09" />
       <rect x="14" y="80" width="252" height="248" rx="5" fill="none" stroke="#E63946" strokeWidth="0.8" />
       {/* Screen glass shine from side */}
@@ -133,7 +133,7 @@ function SideFace({ flip = false }: { flip?: boolean }) {
       <rect x="22" y="340" width="236" height="16" rx="2" fill="#D0CEC8" />
       {/* Red separator */}
       <rect x="0" y="367" width="280" height="5" fill="#E63946" />
-      {/* Printer housing — side */}
+      {/* Printer housing  --  side */}
       <rect x="0" y="374" width="280" height="226" fill="#ECEAE5" />
       <rect x="0" y="374" width="280" height="226" fill="none" stroke="#DCDAD4" strokeWidth="0.5" />
       <text x="140" y="400" textAnchor="middle" fontFamily="monospace" fontSize="6.5" fill="#C0BEB8">PRINTER HOUSING</text>
@@ -173,7 +173,7 @@ function BackFace() {
       <rect x="8" y="8" width="264" height="684" rx="13" fill="none" stroke="#E0DED8" strokeWidth="0.8" />
       {/* LED stripe on RIGHT edge when viewed from back (same physical stripe as front left) */}
       <rect x="263" y="8" width="9" height="684" rx="4.5" fill="#E63946" />
-      {/* Top header — dark, showing back of screen housing */}
+      {/* Top header  --  dark, showing back of screen housing */}
       <rect x="8" y="8" width="264" height="74" rx="13" fill="#1A1A18" />
       <rect x="8" y="44" width="264" height="38" fill="#1A1A18" />
       {/* SNAPRINT brand on back */}
@@ -350,7 +350,7 @@ export default function Machine360() {
               "drop-shadow(0 40px 80px rgba(230,57,70,0.18)) drop-shadow(0 8px 32px rgba(0,0,0,0.10))",
           }}
         >
-          {/* FRONT — translateZ(140) */}
+          {/* FRONT  --  translateZ(140) */}
           <div
             style={{
               position: "absolute",
@@ -364,7 +364,7 @@ export default function Machine360() {
             <FrontFace />
           </div>
 
-          {/* RIGHT SIDE — rotateY(-90deg) translateZ(140) */}
+          {/* RIGHT SIDE  --  rotateY(-90deg) translateZ(140) */}
           <div
             style={{
               position: "absolute",
@@ -378,7 +378,7 @@ export default function Machine360() {
             <SideFace />
           </div>
 
-          {/* BACK — rotateY(180deg) translateZ(140) */}
+          {/* BACK  --  rotateY(180deg) translateZ(140) */}
           <div
             style={{
               position: "absolute",
@@ -392,7 +392,7 @@ export default function Machine360() {
             <BackFace />
           </div>
 
-          {/* LEFT SIDE — rotateY(90deg) translateZ(140) */}
+          {/* LEFT SIDE  --  rotateY(90deg) translateZ(140) */}
           <div
             style={{
               position: "absolute",

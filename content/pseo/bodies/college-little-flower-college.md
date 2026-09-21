@@ -13,11 +13,11 @@ Little Flower College of Arts and Science sits on Tilak Road in Uppal, one of Hy
 
 ## Getting here and around
 
-Uppal is on the Hyderabad Metro's Blue Line, and Uppal metro station is a short walk from campus — most students arrive by metro or the MMTS suburban rail, which also stops at Uppal. Local buses run frequently along Tilak Road and the Warangal Highway that borders the area. Autos are the default for the last stretch between the station and campus gates. Tilak Road itself is a dense commercial strip, so most print pickups happen on foot between classes rather than requiring a dedicated trip.
+Uppal is on the Hyderabad Metro's Blue Line, and Uppal metro station is a short walk from campus  --  most students arrive by metro or the MMTS suburban rail, which also stops at Uppal. Local buses run frequently along Tilak Road and the Warangal Highway that borders the area. Autos are the default for the last stretch between the station and campus gates. Tilak Road itself is a dense commercial strip, so most print pickups happen on foot between classes rather than requiring a dedicated trip.
 
 ## Why printing demand is high here
 
-As an arts and science college, Little Flower generates a steady stream of internal assessment printouts, project submissions, and lab report binding throughout the semester, peaking hard during exam weeks. Uppal's dual identity as both an education hub and a residential-commercial junction means the surrounding shops also serve office workers and residents needing ID copies, form printing, and everyday documentation — so the print counters near campus stay busy well beyond exam season.
+As an arts and science college, Little Flower generates a steady stream of internal assessment printouts, project submissions, and lab report binding throughout the semester, peaking hard during exam weeks. Uppal's dual identity as both an education hub and a residential-commercial junction means the surrounding shops also serve office workers and residents needing ID copies, form printing, and everyday documentation  --  so the print counters near campus stay busy well beyond exam season.
 
 ## What people typically print here
 

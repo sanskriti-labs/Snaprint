@@ -29,7 +29,7 @@ export function generateMetadata({
   if (!city) return {};
   const areaCount = getAreasInCity(city.slug).length;
   // Power-word pattern mirrors the /print-near pages so the SERP looks
-  // consistent across the pSEO cluster. No "· Snaprint" suffix — the
+  // consistent across the pSEO cluster. No "· Snaprint" suffix  --  the
   // root layout's title template already appends it.
   const title =
     areaCount > 0
@@ -38,22 +38,22 @@ export function generateMetadata({
   const description =
     areaCount > 0
       ? `${areaCount} neighbourhoods across ${city.name} with listed xerox and print shops. B&W and colour prints, binding, scanning. Browse areas near you.`
-      : `Listed print and xerox shops in ${city.name}. B&W and colour prints, binding, lamination, scanning. Open hours vary — call ahead.`;
+      : `Listed print and xerox shops in ${city.name}. B&W and colour prints, binding, lamination, scanning. Open hours vary  --  call ahead.`;
   return {
-    // Layout template appends "· Snaprint" — no explicit suffix here.
+    // Layout template appends "· Snaprint"  --  no explicit suffix here.
     title,
     description,
     keywords: withSharedKeywords(city.keywords),
     alternates: { canonical: `/instant-print/${city.slug}` },
     openGraph: {
-      title: `${areaCount > 0 ? areaCount + " areas with " : ""}Print & xerox shops in ${city.name} — Snaprint`,
+      title: `${areaCount > 0 ? areaCount + " areas with " : ""}Print & xerox shops in ${city.name}  --  Snaprint`,
       description,
       url: `${SITE_URL}/instant-print/${city.slug}`,
       type: "website",
       images: [`${SITE_URL}/og.png`],
     },
     twitter: {
-      title: `${areaCount > 0 ? areaCount + " areas with " : ""}Print & xerox shops in ${city.name} — Snaprint`,
+      title: `${areaCount > 0 ? areaCount + " areas with " : ""}Print & xerox shops in ${city.name}  --  Snaprint`,
       description,
     },
   };
@@ -78,7 +78,7 @@ export default async function CityPage({
     "@graph": [
       {
         // A directory of listed shops is a collection, not itself a
-        // business — CollectionPage, not LocalBusiness. Mirrors the fix in
+        // business  --  CollectionPage, not LocalBusiness. Mirrors the fix in
         // print-near/[entity]/page.tsx's area case. Real shops on this page
         // get their own LocalBusiness nodes on their /print-near/[area]
         // pages; this node only describes the city rollup page itself.
@@ -110,7 +110,7 @@ export default async function CityPage({
         },
         ...(city.liveLocations && city.liveLocations.length > 0
           ? {
-              // Snaprint's own kiosk service catalog for this city — an
+              // Snaprint's own kiosk service catalog for this city  --  an
               // offering made BY Snaprint, so it belongs on the Organization
               // node, not on this page-collection node.
               mainEntity: {
@@ -136,7 +136,7 @@ export default async function CityPage({
         { name: "Instant Print", path: "/instant-print" },
         { name: city.name, path: `/instant-print/${city.slug}` }
       ),
-      // FAQPage — only when this entity has a local FAQ tail beyond the
+      // FAQPage  --  only when this entity has a local FAQ tail beyond the
       // shared boilerplate; see the college/area branches in
       // print-near/[entity]/page.tsx for why.
       ...(faqs.length > baseFaqCount(city.presence)

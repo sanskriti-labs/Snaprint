@@ -13,11 +13,11 @@ Ghatkopar sits on the eastern flank of Mumbai, stitched together by the old LBS 
 
 ## Getting here and around
 
-Ghatkopar West's metro station — the terminal of the Blue Line 1 — is the area's biggest draw for non-resident visitors, and it dumps thousands of commuters right next to the station road. From there, auto-rickshaws cluster aggressively outside the exit, BEST buses loop through the eastern side via Pant Nagar, and the Ghatkopar railway station on the Central Line handles the heavy suburban load. Parking is tight everywhere except the newer commercial plazas, so most people walk between shops or hop a shared auto. Locals tend to orient by landmarks — the flyover, the old cinema, the big hospital — rather than by street name.
+Ghatkopar West's metro station  --  the terminal of the Blue Line 1  --  is the area's biggest draw for non-resident visitors, and it dumps thousands of commuters right next to the station road. From there, auto-rickshaws cluster aggressively outside the exit, BEST buses loop through the eastern side via Pant Nagar, and the Ghatkopar railway station on the Central Line handles the heavy suburban load. Parking is tight everywhere except the newer commercial plazas, so most people walk between shops or hop a shared auto. Locals tend to orient by landmarks  --  the flyover, the old cinema, the big hospital  --  rather than by street name.
 
 ## Why printing demand is high here
 
-The density of demand comes from three overlapping crowds. Coaching institutes and tuition classes around the 400075 stretch churn out notes, test papers, and project reports almost daily. A long row of small businesses, CA offices, and medical practices along the LBS Marg need constant invoicing, ID-size photos, and form filling. Then there are the residential applicants — passport renewals, school admissions, property registrations — all of which require documents on paper, fast. With 17 listed xerox and print shops in Ghatkopar, including the consistently well-reviewed Hari Om Xerox & Print, the area rarely has a backlog problem.
+The density of demand comes from three overlapping crowds. Coaching institutes and tuition classes around the 400075 stretch churn out notes, test papers, and project reports almost daily. A long row of small businesses, CA offices, and medical practices along the LBS Marg need constant invoicing, ID-size photos, and form filling. Then there are the residential applicants  --  passport renewals, school admissions, property registrations  --  all of which require documents on paper, fast. With 17 listed xerox and print shops in Ghatkopar, including the consistently well-reviewed Hari Om Xerox & Print, the area rarely has a backlog problem.
 
 ## What people typically print here
 
@@ -25,4 +25,4 @@ Stationery-heavy jobs dominate: spiral-bound class notes, hardbound project repo
 
 ## How Snaprint fits in
 
-The kiosk network complements what these shops already do well — it gives shop owners a way to handle overflow during exam season without turning customers away, and gives anyone in 400077 or 400075 an easier path to find the nearest open counter. Shop operators can [list on Snaprint](/book) to be discoverable, and locals looking for a quick job can browse options at [print near Ghatkopar](/print-near/ghatkopar).
+The kiosk network complements what these shops already do well  --  it gives shop owners a way to handle overflow during exam season without turning customers away, and gives anyone in 400077 or 400075 an easier path to find the nearest open counter. Shop operators can [list on Snaprint](/book) to be discoverable, and locals looking for a quick job can browse options at [print near Ghatkopar](/print-near/ghatkopar).

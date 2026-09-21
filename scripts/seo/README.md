@@ -1,14 +1,14 @@
-# scripts/seo — pseo body generator
+# scripts/seo  --  pseo body generator
 
 This directory holds the one-shot pipeline that produces the prose bodies
 under `content/pseo/bodies/`. The bodies are the long-form copy on each
-city / area / college landing page — the part that gives Google enough
+city / area / college landing page  --  the part that gives Google enough
 text to rank, and the part that gives a visitor enough to decide.
 
 The pipeline is intentionally **two-step**: deterministic first, LLM only
 for thin pages. Stub bodies (areas / colleges / cities with healthy
 verified shop counts) are pure intro copy and need no model call. Only
-priority bodies (shopCount <= 3 — usually 0 or 1 verified shops) go
+priority bodies (shopCount <= 3  --  usually 0 or 1 verified shops) go
 through Claude.
 
 ---
@@ -28,7 +28,7 @@ pnpm run generate:priority
 
 ## Two-step workflow
 
-### Step 1 — `pnpm run generate:bodies`
+### Step 1  --  `pnpm run generate:bodies`
 
 `scripts/generate-bodies.mjs`
 
@@ -49,7 +49,7 @@ pnpm run generate:priority
 - Summary printed to stdout (written / skipped / priority / stub counts
   per kind).
 
-### Step 2 — `pnpm run generate:priority`
+### Step 2  --  `pnpm run generate:priority`
 
 `scripts/seo/run-priority-api.mjs`
 
@@ -92,21 +92,21 @@ delete the file first.
 
 Example: rolling out **Mumbai**.
 
-1. **`content/pseo/cities.ts`** — add a `Mumbai` entry to the
+1. **`content/pseo/cities.ts`**  --  add a `Mumbai` entry to the
    `cities: City[]` array. Set `presence: "served"` (publish the
    directory page, no kiosk yet). Populate `pinCodes`, `intro`,
    `keywords`, `state: "Maharashtra"`, `lat` / `lng`.
 
-2. **`content/pseo/areas.ts`** — add a Mumbai areas section. For each
+2. **`content/pseo/areas.ts`**  --  add a Mumbai areas section. For each
    Mumbai neighborhood, copy the format used for Bengaluru / Hyderabad
    entries. Use `presence: "live"` if the area has verified shop data,
    `presence: "served"` if it has aggregator data only, `presence:
    "planned"` if you want the page to 404 for now.
 
-3. **`content/pseo/colleges.ts`** — add Mumbai colleges that pass
+3. **`content/pseo/colleges.ts`**  --  add Mumbai colleges that pass
    `scripts/match/colleges_radius.py` (≥ 1 shop within 1.5 km).
 
-4. **`scripts/scraper/data/shops-clean.jsonl`** — add the Mumbai shops
+4. **`scripts/scraper/data/shops-clean.jsonl`**  --  add the Mumbai shops
    (re-run `scripts/clean/clean_shops.py` if the raw scrape covers
    Mumbai; otherwise add records by hand for now).
 
@@ -146,7 +146,7 @@ Bengaluru has 10 priority areas / 4 priority colleges / 1 priority city =
 15 priority pages → ~**$0.90 per city** on first roll-out.
 
 Subsequent regenerations of the same pages (e.g. after shop data
-refreshes) are usually not needed — only the 13 hand-written pages
+refreshes) are usually not needed  --  only the 13 hand-written pages
 need refreshing, and only after manual review.
 
 ---
@@ -161,5 +161,5 @@ need refreshing, and only after manual review.
 | `Claude API 5xx: ...`                                                  | Transient. Re-run; the script will pick up where it left off because priority files still carry `needsLLM: true` until successfully written. |
 | `No needsLLM placeholders found.`                                      | Nothing to do. Either `generate:bodies` hasn't been run, or every priority page is already written. |
 | New entity from the .ts files didn't get a body                        | Check that `presence` is `live` or `served` (not `planned`). |
-| Stub file was rewritten after a hand edit                              | This is by design — the script only checks file existence. To preserve hand edits, just don't re-run; to force a regeneration, delete the file first. |
-| `college-bmsit-bangalore` already has `## About this place` — won't regenerate | The prose heuristic is intentionally conservative. To regenerate, delete the file or remove the heading, then re-run. |
+| Stub file was rewritten after a hand edit                              | This is by design  --  the script only checks file existence. To preserve hand edits, just don't re-run; to force a regeneration, delete the file first. |
+| `college-bmsit-bangalore` already has `## About this place`  --  won't regenerate | The prose heuristic is intentionally conservative. To regenerate, delete the file or remove the heading, then re-run. |

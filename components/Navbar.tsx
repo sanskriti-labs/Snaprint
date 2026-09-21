@@ -6,12 +6,12 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import Snappy from "@/components/mascot/Snappy";
 
-// Client-side nav (no full page reload) — needed so root-layout-level
+// Client-side nav (no full page reload)  --  needed so root-layout-level
 // singletons like SnappyLoader/CookieConsent don't remount and replay on
 // every internal navigation the way they did with plain <a> tags.
 const MotionLink = motion(Link);
 
-// hash-only anchors (e.g. "#how") only work while already on "/" — on any
+// hash-only anchors (e.g. "#how") only work while already on "/"  --  on any
 // other route (like /franchisebrochure) clicking them just rewrites the
 // current URL's hash and goes nowhere. href is always home-page-relative so
 // the links work from anywhere; hash is kept separately for the in-page
@@ -26,7 +26,7 @@ const links = [
 /**
  * Liquid-glass floating pill nav. The glass surface stays a fixed light,
  * neutral tint (rgba white + blur/saturate) regardless of what's scrolling
- * behind it — that's what makes it read as "glass" rather than a themed bar
+ * behind it  --  that's what makes it read as "glass" rather than a themed bar
  * that swaps color schemes, and it's why nav text can stay one fixed dark
  * ink color instead of the old light/dark-on-scroll toggle.
  */
@@ -48,7 +48,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Active-section tracking — a soft red pill follows whichever section is
+  // Active-section tracking  --  a soft red pill follows whichever section is
   // currently in the "focus band" of the viewport.
   useEffect(() => {
     const sections = links
@@ -92,7 +92,7 @@ export default function Navbar() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-3 sm:pt-3.5"
       >
-        {/* Sized down ~30% from the original pill across the board — padding,
+        {/* Sized down ~30% from the original pill across the board  --  padding,
             logo, link and CTA type, all scaled together so it still reads as
             one coherent (just smaller) object rather than mismatched parts. */}
         <nav
@@ -112,7 +112,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Center links — active section is marked by text color only, no
+          {/* Center links  --  active section is marked by text color only, no
               background pill (a filled shape behind the link read as a UI
               glitch rather than an intentional state). */}
           <ul className="hidden items-center gap-0.5 md:flex">
@@ -134,10 +134,10 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* CTA — no data-magnetic here: the magnetic cursor system sets its
+          {/* CTA  --  no data-magnetic here: the magnetic cursor system sets its
               own inline transform on mousemove, which would silently fight a
               Tailwind hover:-translate-y transform on the same element (inline
-              style always wins over a class — see Hero.tsx kiosk placement for
+              style always wins over a class  --  see Hero.tsx kiosk placement for
               the same failure mode). Plain hover lift + shadow instead. */}
           <Link
             href="/book"
@@ -149,7 +149,7 @@ export default function Navbar() {
             </svg>
           </Link>
 
-          {/* Mobile hamburger — kept at a real tap-target size even though the
+          {/* Mobile hamburger  --  kept at a real tap-target size even though the
               pill around it shrank, so it stays comfortably touchable */}
           <button
             className="flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-black/[0.05] md:hidden"
@@ -166,7 +166,7 @@ export default function Navbar() {
         </nav>
       </motion.div>
 
-      {/* Mobile — full glass overlay, not a shrunk desktop nav */}
+      {/* Mobile  --  full glass overlay, not a shrunk desktop nav */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

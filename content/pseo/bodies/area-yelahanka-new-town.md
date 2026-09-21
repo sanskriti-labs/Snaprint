@@ -17,7 +17,7 @@ Yelahanka New Town sits along the Bellary Road (NH44) corridor, with the Yelahan
 
 ## Why printing demand is high here
 
-Yelahanka New Town's mix of residential sectors and nearby educational institutions generates a steady baseline of print demand — assignment and project printing from local students, alongside the everyday documentation needs of a growing residential population. The area's proximity to the airport and associated logistics and hospitality businesses adds a layer of office-related printing not typical of a purely residential neighbourhood.
+Yelahanka New Town's mix of residential sectors and nearby educational institutions generates a steady baseline of print demand  --  assignment and project printing from local students, alongside the everyday documentation needs of a growing residential population. The area's proximity to the airport and associated logistics and hospitality businesses adds a layer of office-related printing not typical of a purely residential neighbourhood.
 
 ## What people typically print here
 

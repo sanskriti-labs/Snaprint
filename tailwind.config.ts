@@ -35,14 +35,14 @@ const config: Config = {
       fontFamily: {
         // Type system: serif headings/section titles, sans body/labels/nav,
         // mono for numbers/dates/money (tabular-nums keeps digits aligned).
-        // Native OS stacks only — no webfont loading.
+        // Native OS stacks only  --  no webfont loading.
         display: ["var(--font-serif)"],
         serif: ["var(--font-serif)"],
         body: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
       fontSize: {
-        // Fluid display scale — DESIGN_SYSTEM.md §2
+        // Fluid display scale  --  DESIGN_SYSTEM.md §2
         "display-2xl": ["clamp(3.25rem, 8.5vw, 8.5rem)", { lineHeight: "0.95", letterSpacing: "-0.045em" }],
         "display-xl": ["clamp(2.5rem, 5.5vw, 5.5rem)", { lineHeight: "0.98", letterSpacing: "-0.035em" }],
         "display-lg": ["clamp(2rem, 3.8vw, 3.5rem)", { lineHeight: "1.02", letterSpacing: "-0.03em" }],
@@ -56,7 +56,7 @@ const config: Config = {
         tight: "-0.02em",
       },
       spacing: {
-        // 4px base scale — DESIGN_SYSTEM.md §3
+        // 4px base scale  --  DESIGN_SYSTEM.md §3
         section: "clamp(6rem, 12vw, 12rem)",
         gutter: "clamp(1.25rem, 4vw, 2.5rem)",
       },

@@ -1,6 +1,6 @@
 // The full cinematic experience (custom cursor, GSAP+Lenis smooth scroll,
 // route-curtain transitions) is visually scoped to marketing routes (/,
-// /book, /franchisebrochure, /style) — but the providers themselves now
+// /book, /franchisebrochure, /style)  --  but the providers themselves now
 // live in the root layout (app/layout.tsx), mounted once, and internally
 // check the current route (lib/marketing-routes.ts) to decide whether to
 // actually run. Moving here-vs-root doesn't change what a visitor sees; it's

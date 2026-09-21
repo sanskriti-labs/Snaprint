@@ -4,9 +4,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// 562 lines of CSS-3D markup, interactive-only — split into its own chunk so
+// 562 lines of CSS-3D markup, interactive-only  --  split into its own chunk so
 // it doesn't add to this page's main bundle. (This file is a server
-// component, so `ssr: false` isn't available here — but the code-splitting
+// component, so `ssr: false` isn't available here  --  but the code-splitting
 // itself is the win: Machine3D loads as a separate, parallel chunk instead
 // of being bundled into the page's own JS.)
 const Machine3D = dynamic(() => import("@/components/Machine3D"), {
@@ -14,7 +14,7 @@ const Machine3D = dynamic(() => import("@/components/Machine3D"), {
 });
 
 // ─── Every fact on this page is sourced from the real 2026 Kiosk Ownership
-// PDF brochure (public/snaprint-kiosk-brochure.pdf) — this is that same
+// PDF brochure (public/snaprint-kiosk-brochure.pdf)  --  this is that same
 // document rebuilt as a native, numbered web page instead of an embedded
 // PDF viewer, so it reads properly on mobile and loads instantly. Nothing
 // here should say anything the PDF doesn't already say.
@@ -24,12 +24,12 @@ const PDF_PATH = "/snaprint-kiosk-brochure.pdf";
 const TOTAL_PAGES = 7;
 
 export const metadata: Metadata = {
-  title: "Kiosk Ownership Brochure — Snaprint",
+  title: "Kiosk Ownership Brochure  --  Snaprint",
   description:
-    "Own a Snaprint self-service print kiosk. Full pricing across all three models, unit economics, specifications and what's included — read the full brochure online.",
+    "Own a Snaprint self-service print kiosk. Full pricing across all three models, unit economics, specifications and what's included  --  read the full brochure online.",
   alternates: { canonical: "/franchisebrochure" },
   openGraph: {
-    title: "Snaprint — Kiosk Ownership Brochure",
+    title: "Snaprint  --  Kiosk Ownership Brochure",
     description: "Own a self-service print kiosk. Three models, transparent pricing, zero platform fee.",
     url: `${SITE_URL}/franchisebrochure`,
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snaprint — Kiosk Ownership Brochure",
+    title: "Snaprint  --  Kiosk Ownership Brochure",
     description: "Own a self-service print kiosk. Three models, transparent pricing, zero platform fee.",
     images: [`${SITE_URL}/og.png`],
   },
@@ -122,21 +122,21 @@ const TIERS = [
     name: "S1",
     tagline: "The smart way in.",
     price: "84,999",
-    bullets: ["Colour & black-and-white printing", "Up to 250 A4 sheets capacity", "Zero setup cost — full ownership"],
+    bullets: ["Colour & black-and-white printing", "Up to 250 A4 sheets capacity", "Zero setup cost  --  full ownership"],
     bestFor: "Shopkeepers, stationery stores, coaching centres · low–medium footfall",
   },
   {
     name: "S1 Pro",
     tagline: "Built for the daily rush.",
     price: "1,39,999",
-    bullets: ["Higher-speed colour & B/W printing", "Up to 550 A4 sheets capacity", "Zero setup cost — full ownership"],
+    bullets: ["Higher-speed colour & B/W printing", "Up to 550 A4 sheets capacity", "Zero setup cost  --  full ownership"],
     bestFor: "College & university campuses, co-working spaces · medium–high footfall",
   },
   {
     name: "S1 Pro Max",
     tagline: "Engineered for volume that never stops.",
     price: "2,99,999",
-    bullets: ["Enterprise-grade print engine", "Up to 1,830 A4 sheets* capacity", "Zero setup cost — full ownership"],
+    bullets: ["Enterprise-grade print engine", "Up to 1,830 A4 sheets* capacity", "Zero setup cost  --  full ownership"],
     bestFor: "Malls, commercial hubs, multi-kiosk operators · highest footfall",
     popular: true,
   },
@@ -204,7 +204,7 @@ export default function FranchiseBrochurePage() {
                 <span className="text-[#E63946]">Own the kiosk.</span> Set your price. Build your print business.
               </h1>
               <p className="mb-10 max-w-[440px] font-body text-[15px] font-light leading-[1.75] text-white/55">
-                A self-service printing machine you buy once, run on your own terms, and keep — full ownership, no
+                A self-service printing machine you buy once, run on your own terms, and keep  --  full ownership, no
                 rent, no revenue share.
               </p>
               <div className="flex flex-wrap items-center gap-3">
@@ -255,13 +255,13 @@ export default function FranchiseBrochurePage() {
             The queue is the problem.<br /><span className="text-[#E63946]">Not the printing.</span>
           </h2>
           <p className="mb-4 font-body text-[15px] font-light leading-[1.8] text-[#555550]">
-            People already expect to scan, pay and walk away — for food, for transit, for almost everything.
+            People already expect to scan, pay and walk away  --  for food, for transit, for almost everything.
             Printing is one of the last everyday errands still stuck behind a counter, a shop that&apos;s shut, or a
             queue that eats into a five-minute break between classes.
           </p>
           <p className="mb-8 font-body text-[15px] font-light leading-[1.8] text-[#555550]">
-            Snaprint moves printing to wherever people already are — a corridor outside a lecture hall, a
-            co-working floor, a business centre lobby — and makes it self-service, available the moment someone
+            Snaprint moves printing to wherever people already are  --  a corridor outside a lecture hall, a
+            co-working floor, a business centre lobby  --  and makes it self-service, available the moment someone
             needs it.
           </p>
           <div className="mb-10 rounded-xl border-l-[3px] border-[#E63946] bg-[#F8F7F4] px-6 py-5">
@@ -271,8 +271,8 @@ export default function FranchiseBrochurePage() {
             </p>
           </div>
           <div className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <StatCard label="Starting price" value="₹84,999" caption="Zero setup cost — full ownership" />
-            <StatCard label="Models available" value="3" caption="S1, S1 Pro, S1 Pro Max — pick by location and volume" />
+            <StatCard label="Starting price" value="₹84,999" caption="Zero setup cost  --  full ownership" />
+            <StatCard label="Models available" value="3" caption="S1, S1 Pro, S1 Pro Max  --  pick by location and volume" />
           </div>
           <FeatureRow
             items={[
@@ -293,14 +293,14 @@ export default function FranchiseBrochurePage() {
           </h2>
           <p className="mb-10 max-w-[560px] font-body text-[15px] font-light leading-[1.8] text-[#555550]">
             Every Snaprint kiosk pairs a 15.6″ touchscreen with a self-contained print engine, built to run
-            unattended, all day — the same self-service flow on every model.
+            unattended, all day  --  the same self-service flow on every model.
           </p>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               ["01", "Scan", "Scan the QR code shown on the kiosk screen with any phone camera."],
               ["02", "Upload", "Send documents straight from the phone, or from a cloud drive."],
               ["03", "Choose", "Pick paper size, number of copies, and colour or black-and-white."],
-              ["04", "Pay", "Complete payment on the kiosk — UPI, card, or cash where supported."],
+              ["04", "Pay", "Complete payment on the kiosk  --  UPI, card, or cash where supported."],
               ["05", "Release", "Confirm the job and the kiosk starts printing immediately."],
               ["06", "Collect", "Pick up the finished pages from the collection tray. Done."],
             ].map(([n, t, b]) => (
@@ -353,7 +353,7 @@ export default function FranchiseBrochurePage() {
             Pick by footfall, volume and budget.
           </h2>
           <p className="mb-10 max-w-[560px] font-body text-[15px] font-light leading-[1.8] text-[#555550]">
-            Same self-service kiosk, same software, same ownership terms — sized to how busy your location gets.
+            Same self-service kiosk, same software, same ownership terms  --  sized to how busy your location gets.
           </p>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
             {TIERS.map((t) => (
@@ -421,7 +421,7 @@ export default function FranchiseBrochurePage() {
             </table>
           </div>
           <p className="mt-4 max-w-[700px] font-body text-[11px] leading-[1.6] text-[#AAAAAA]">
-            Illustrative estimate — cost per page assumes ink and paper only; margin assumes a ₹2 black-and-white
+            Illustrative estimate  --  cost per page assumes ink and paper only; margin assumes a ₹2 black-and-white
             selling price. You set your own price. Specifications describe each print engine&apos;s published
             capability; actual performance varies with paper, content and network conditions.
           </p>
@@ -472,7 +472,7 @@ export default function FranchiseBrochurePage() {
           </div>
           <div className="rounded-xl border-l-[3px] border-[#E63946] bg-[#F8F7F4] px-6 py-6">
             <div className="mb-2 font-display text-[17px] font-bold text-[#111110]">
-              Your customers&apos; documents are theirs — not ours.
+              Your customers&apos; documents are theirs  --  not ours.
             </div>
             <p className="font-body text-[13.5px] font-light leading-[1.7] text-[#6B6B66]">
               A file exists on the kiosk only for as long as it takes to complete that print job. Once the job is
@@ -497,9 +497,9 @@ export default function FranchiseBrochurePage() {
           <div className="relative mx-auto max-w-[900px]">
             <div className="mb-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                ["01", "Browse the models", "See S1, S1 Pro and S1 Pro Max — pick by your footfall and budget."],
+                ["01", "Browse the models", "See S1, S1 Pro and S1 Pro Max  --  pick by your footfall and budget."],
                 ["02", "Book a demo", "Tell us your location; our Bengaluru team gets in touch."],
-                ["03", "We install", "Setup and training included — live within the hour."],
+                ["03", "We install", "Setup and training included  --  live within the hour."],
                 ["04", "Start earning", "Set your own price. Keep every rupee."],
               ].map(([n, t, b]) => (
                 <div key={n}>

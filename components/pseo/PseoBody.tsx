@@ -11,7 +11,7 @@ type Props = {
 //
 // Handles exactly the subset our hand-written bodies use: ## headings,
 // paragraphs (split on blank lines), inline [text](url) links, **bold**.
-// No lists, no code, no images — the body files don't use them and adding
+// No lists, no code, no images  --  the body files don't use them and adding
 // support here would just be dead code. ~40 lines, no new deps.
 // ---------------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ function parseBlocks(md: string): Block[] {
 }
 
 // Render a single inline string with **bold** + [text](url) support.
-// Returns an array of React nodes. We deliberately keep this naive —
+// Returns an array of React nodes. We deliberately keep this naive  -- 
 // nested formatting, escaped brackets, etc. don't occur in our bodies.
 function renderInline(text: string, keyPrefix: string): React.ReactNode[] {
   const nodes: React.ReactNode[] = [];

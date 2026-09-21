@@ -2,7 +2,7 @@
   "faq": [
     {
       "question": "Does the Snaprint S1 work with my existing printer?",
-      "answer": "Yes. The Snaprint S1 works with any printer brand — Canon, HP, Epson, Brother — so you don't need to replace your existing equipment."
+      "answer": "Yes. The Snaprint S1 works with any printer brand  --  Canon, HP, Epson, Brother  --  so you don't need to replace your existing equipment."
     },
     {
       "question": "Can the kiosk take orders when my shop is closed?",
@@ -10,7 +10,7 @@
     },
     {
       "question": "What happens to a customer's uploaded documents?",
-      "answer": "Files are end-to-end encrypted and automatically deleted after each print job completes — no document is stored on the kiosk."
+      "answer": "Files are end-to-end encrypted and automatically deleted after each print job completes  --  no document is stored on the kiosk."
     },
     {
       "question": "How do shop owners track orders and revenue?",

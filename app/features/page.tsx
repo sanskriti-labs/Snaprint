@@ -9,19 +9,19 @@ const MachineSpecs = dynamic(() => import("@/components/sections/MachineSpecs"))
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "Features — Snaprint S1 Print Kiosk",
+  title: "Features  --  Snaprint S1 Print Kiosk",
   description:
-    "Universal printer compatibility, encrypted file handling, 24/7 unattended operation, and a live owner dashboard — everything the Snaprint S1 does for your shop.",
+    "Universal printer compatibility, encrypted file handling, 24/7 unattended operation, and a live owner dashboard  --  everything the Snaprint S1 does for your shop.",
   alternates: { canonical: "/features" },
   openGraph: {
-    title: "Features — Snaprint S1 Print Kiosk",
+    title: "Features  --  Snaprint S1 Print Kiosk",
     description: "Universal printer compatibility, encrypted files, 24/7 operation, and a live owner dashboard.",
     url: `${SITE_URL}/features`,
     type: "website",
     images: [`${SITE_URL}/og.png`],
   },
   twitter: {
-    title: "Features — Snaprint S1 Print Kiosk",
+    title: "Features  --  Snaprint S1 Print Kiosk",
     description: "Universal printer compatibility, encrypted files, 24/7 operation, and a live owner dashboard.",
   },
 };
@@ -33,7 +33,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${SITE_URL}/features#page`,
       url: `${SITE_URL}/features`,
-      name: "Features — Snaprint S1",
+      name: "Features  --  Snaprint S1",
       description:
         "Universal printer compatibility, encrypted file handling, 24/7 unattended operation, and a live owner dashboard.",
       isPartOf: { "@id": `${SITE_URL}/#website` },

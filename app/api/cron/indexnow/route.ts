@@ -4,7 +4,7 @@ import { runIndexNowSync } from "@/lib/indexnow";
 /**
  * Vercel Cron entry point. Vercel automatically signs the request with
  * `Authorization: Bearer ${CRON_SECRET}` once that env var is set on the
- * project — see docs/seo/indexnow-setup.md.
+ * project  --  see docs/seo/indexnow-setup.md.
  *
  * Runs the sync in-process (see lib/indexnow.ts for why this replaced
  * spawning scripts/seo/indexnow-submit.mjs as a child process).

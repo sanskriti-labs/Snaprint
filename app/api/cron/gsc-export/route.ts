@@ -8,7 +8,7 @@ export const runtime = "nodejs";
 /**
  * Vercel Cron entry point. Vercel automatically signs the request with
  * `Authorization: Bearer ${CRON_SECRET}` once that env var is set on the
- * project — see docs/seo/gsc-api-setup.md.
+ * project  --  see docs/seo/gsc-api-setup.md.
  *
  * We verify the bearer token before doing anything else, then spawn the
  * `scripts/seo/gsc-export.mjs` script as a child process and stream the
@@ -44,12 +44,12 @@ export async function GET(req: Request) {
     });
     child.on("close", (code: number | null) => {
       // /tmp on Vercel doesn't survive past this invocation, so the report
-      // the script wrote to disk isn't retrievable afterwards — the script
+      // the script wrote to disk isn't retrievable afterwards  --  the script
       // also prints it as a marked stdout line, which we surface here.
       const marker = "GSC_REPORT_JSON=";
       const line = stdout.split("\n").find((l) => l.startsWith(marker));
       const report = line ? JSON.parse(line.slice(marker.length)) : null;
-      // Surface a summary in Vercel's function logs — the child process's
+      // Surface a summary in Vercel's function logs  --  the child process's
       // own stdout (including the GSC_REPORT_JSON line) is captured into
       // the `stdout` var above and never reaches the parent's console, so
       // without this the route's actual output is only visible in the HTTP

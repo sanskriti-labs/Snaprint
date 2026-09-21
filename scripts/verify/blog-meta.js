@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 /**
- * Fast blog frontmatter checker — reads content/blog/*.mdx directly via
+ * Fast blog frontmatter checker  --  reads content/blog/*.mdx directly via
  * gray-matter, no `next build` required. Runs in well under a second, so
  * it's cheap enough to run on every `pnpm dev` / `pnpm build` invocation
  * (wired into build:bodies) rather than only being caught by the full
  * verify:meta pass against built HTML.
  *
- * Checks the same bounds as scripts/verify/meta.js — kept in sync
+ * Checks the same bounds as scripts/verify/meta.js  --  kept in sync
  * manually since one runs pre-build (source frontmatter) and the other
  * post-build (rendered HTML); update both if the bounds ever change.
  *
  * Mirrors the root layout's title template ("%s · Snaprint",
  * app/layout.tsx) to check the *rendered* title length, not just the
- * raw frontmatter string — a title can pass at the source and still
+ * raw frontmatter string  --  a title can pass at the source and still
  * blow the SERP limit once the suffix is appended.
  *
  * Run via `pnpm verify:blog-meta`.
@@ -48,7 +48,7 @@ for (const file of files) {
   if (!data.title) continue; // remaining checks need a title to be meaningful
 
   if (data.title.includes(TITLE_SUFFIX.trim())) {
-    fail(file, `title already contains "${TITLE_SUFFIX.trim()}" — the root layout's title template appends "${TITLE_SUFFIX}" automatically, this will double up. (A title that simply starts with the brand name, e.g. "Snaprint Franchise: ...", is fine — this only flags the literal separator+suffix pattern.)`);
+    fail(file, `title already contains "${TITLE_SUFFIX.trim()}"  --  the root layout's title template appends "${TITLE_SUFFIX}" automatically, this will double up. (A title that simply starts with the brand name, e.g. "Snaprint Franchise: ...", is fine  --  this only flags the literal separator+suffix pattern.)`);
   }
 
   const renderedTitle = `${data.title}${TITLE_SUFFIX}`;

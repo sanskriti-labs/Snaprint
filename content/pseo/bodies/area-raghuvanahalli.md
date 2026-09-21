@@ -9,11 +9,11 @@ wordCount: 447
 ---
 ## About this place
 
-Raghuvanahalli sits on the southern edge of Bengaluru along the Kanakapura stretch, where the old village-layout roads still meet the apartment blocks that have mushroomed over the last decade. The neighbourhood wears two faces — older independent houses and small temples mark the original settlement, while gated communities and coaching institutes have filled the gaps toward Vasanthapura and Konanakunte. Residents describe it as a quiet, family-oriented pocket that picks up pace around school hours and weekday mornings. Within the 560109 pin code, five listed xerox and print shops keep the daily paperwork moving, and Paper Mate Stationery & Xerox has earned the strongest local reputation with a clean 5-star rating.
+Raghuvanahalli sits on the southern edge of Bengaluru along the Kanakapura stretch, where the old village-layout roads still meet the apartment blocks that have mushroomed over the last decade. The neighbourhood wears two faces  --  older independent houses and small temples mark the original settlement, while gated communities and coaching institutes have filled the gaps toward Vasanthapura and Konanakunte. Residents describe it as a quiet, family-oriented pocket that picks up pace around school hours and weekday mornings. Within the 560109 pin code, five listed xerox and print shops keep the daily paperwork moving, and Paper Mate Stationery & Xerox has earned the strongest local reputation with a clean 5-star rating.
 
 ## Getting here and around
 
-The arterial Sankey Tank–Kanakapura Road (NH 948) is the main approach, and most commuters either drive down NICE Road from Mysore or hop off BMTC buses that run along the Vasanthapura corridor. The closest metro access is the Yelachenahalli station on the Green Line, about four kilometres north, with auto-rickshaws handling the last stretch. Within Raghuvanahalli itself, walkability is good — lanes are narrow but flat, and most shops sit along the main bylanes branching off the main road. Two-wheeler parking is easy at most print shops; cars often have to double-park briefly outside.
+The arterial Sankey Tank–Kanakapura Road (NH 948) is the main approach, and most commuters either drive down NICE Road from Mysore or hop off BMTC buses that run along the Vasanthapura corridor. The closest metro access is the Yelachenahalli station on the Green Line, about four kilometres north, with auto-rickshaws handling the last stretch. Within Raghuvanahalli itself, walkability is good  --  lanes are narrow but flat, and most shops sit along the main bylanes branching off the main road. Two-wheeler parking is easy at most print shops; cars often have to double-park briefly outside.
 
 ## Why printing demand is high here
 

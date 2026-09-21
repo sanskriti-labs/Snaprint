@@ -36,18 +36,18 @@ function drawParticle(ctx: CanvasRenderingContext2D, p: Particle, now: number): 
 /**
  * Custom cursor (DESIGN_SYSTEM.md §5): a solid glowing dot (DOM + CSS glow)
  * that tracks the pointer, trailing a short spark of tiny particles drawn on
- * a single canvas layer — no ring, no hover morph, no expanding click ring.
+ * a single canvas layer  --  no ring, no hover morph, no expanding click ring.
  * Particle state lives in plain refs (never React state) so pointer moves
  * never trigger a re-render; the canvas is fully pointer-events:none, so it
  * can never intercept clicks/drags (including the 3D kiosk). Disabled on
  * touch (pointer: coarse) and reduced-motion, where the native cursor is
  * left untouched.
  *
- * Mounted once at the true root (not per route group) — effect re-runs on
+ * Mounted once at the true root (not per route group)  --  effect re-runs on
  * pathname change instead of the whole component unmounting/remounting on
  * every marketing<->lightweight crossing. Bonus fix: since this now re-runs
  * per navigation, [data-magnetic] elements on a *newly* SPA-navigated-to
- * marketing page correctly get listeners too — previously, navigating
+ * marketing page correctly get listeners too  --  previously, navigating
  * between two marketing pages without a remount left the second page's
  * magnetic buttons dead, since the effect only ever ran once on mount.
  */
@@ -148,7 +148,7 @@ export default function CustomCursor() {
     };
     rafId = requestAnimationFrame(loop);
 
-    // Magnetic pull for [data-magnetic] elements — a button hover animation,
+    // Magnetic pull for [data-magnetic] elements  --  a button hover animation,
     // unrelated to the cursor itself. Left untouched.
     const magnets = Array.from(document.querySelectorAll<HTMLElement>("[data-magnetic]"));
     const magnetCleanups = magnets.map((el) => {

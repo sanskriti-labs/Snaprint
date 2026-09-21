@@ -4,14 +4,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
 
-// ─── Every kiosk listed here is real, current rollout status as of Aug 2026 —
+// ─── Every kiosk listed here is real, current rollout status as of Aug 2026  -- 
 // 2 live (private use, not public walk-in yet) + 5 coming soon in Bengaluru,
 // going live by 5 September 2026. Do not add locations that aren't confirmed.
 
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "Find a Snaprint Kiosk — Live & Coming Soon",
+  title: "Find a Snaprint Kiosk  --  Live & Coming Soon",
   description:
     "See exactly where Snaprint kiosks are live today and where they're opening next across Bengaluru and Hyderabad.",
   alternates: { canonical: "/find-snaprint" },
@@ -64,14 +64,14 @@ const LIVE: Kiosk[] = [
     name: "GTC",
     city: "Bengaluru",
     status: "live",
-    note: "Private use — not yet open to walk-in customers",
+    note: "Private use  --  not yet open to walk-in customers",
     image: "/kiosks/gtc-bangalore.png",
   },
   {
     name: "Lakshmi Print",
     city: "Hyderabad",
     status: "live",
-    note: "Private use — not yet open to walk-in customers",
+    note: "Private use  --  not yet open to walk-in customers",
     image: "/kiosks/lakshmi-print-hyderabad.png",
   },
 ];
@@ -151,7 +151,7 @@ export default function FindSnaprintPage() {
       <Navbar />
       <main className="bg-paper px-6 py-24 md:px-10">
         <div className="mx-auto max-w-[1280px]">
-          {/* Header — centered, matching the Impact page's hero */}
+          {/* Header  --  centered, matching the Impact page's hero */}
           <div className="mx-auto mb-16 max-w-[640px] text-center">
             <p className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E63946]">
               Find Snaprint
@@ -164,7 +164,7 @@ export default function FindSnaprintPage() {
             </h1>
             <p className="mx-auto max-w-[560px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
               Snaprint is rolling out across Bengaluru and Hyderabad. Here&apos;s exactly what&apos;s live today
-              and what&apos;s opening next — no exaggeration, just the real rollout.
+              and what&apos;s opening next  --  no exaggeration, just the real rollout.
             </p>
           </div>
 
@@ -188,7 +188,7 @@ export default function FindSnaprintPage() {
           <section className="mb-16">
             <h2 className="mb-2 font-display text-[22px] font-bold text-[#111110]">Live today</h2>
             <p className="mb-6 max-w-[560px] font-body text-[13.5px] font-light leading-[1.7] text-[#6B6B66]">
-              These kiosks are already printing — currently for private, internal use at the host
+              These kiosks are already printing  --  currently for private, internal use at the host
               location, not open to walk-in public yet.
             </p>
             <div className="grid max-w-[560px] grid-cols-1 gap-4 sm:grid-cols-2">
@@ -200,7 +200,7 @@ export default function FindSnaprintPage() {
 
           {/* Coming soon section */}
           <section>
-            <h2 className="mb-2 font-display text-[22px] font-bold text-[#111110]">Coming soon — Bengaluru</h2>
+            <h2 className="mb-2 font-display text-[22px] font-bold text-[#111110]">Coming soon  --  Bengaluru</h2>
             <p className="mb-6 max-w-[560px] font-body text-[13.5px] font-light leading-[1.7] text-[#6B6B66]">
               Five more kiosks are being installed across Bengaluru, going live by 5 September 2026.
             </p>

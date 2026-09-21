@@ -17,7 +17,7 @@ The two arterial lifelines here are Sarjapur Road itself and the connected stret
 
 ## Why printing demand is high here
 
-The print economy in Sarjapur rides on three distinct demand streams. First, the residential density — families constantly need mark sheet copies, Aadhaar printouts, and school project reprints for children studying in the many international and ICSE schools nearby. Second, the offices: tech parks and coworking hubs scattered along the Sarjapur–Bellandur belt drive bulk B&W and colour printing, lamination, and spiral binding jobs through the week. Third, real estate and rental paperwork — this being a high-transaction residential zone, tenant agreements, ID copies, and registration documents are printed almost daily. With 12 listed xerox shops across these pin codes, the area absorbs that demand without long queues.
+The print economy in Sarjapur rides on three distinct demand streams. First, the residential density  --  families constantly need mark sheet copies, Aadhaar printouts, and school project reprints for children studying in the many international and ICSE schools nearby. Second, the offices: tech parks and coworking hubs scattered along the Sarjapur–Bellandur belt drive bulk B&W and colour printing, lamination, and spiral binding jobs through the week. Third, real estate and rental paperwork  --  this being a high-transaction residential zone, tenant agreements, ID copies, and registration documents are printed almost daily. With 12 listed xerox shops across these pin codes, the area absorbs that demand without long queues.
 
 ## What people typically print here
 

@@ -7,12 +7,12 @@ import { isMarketingRoute } from "@/lib/marketing-routes";
 
 /**
  * No hard cuts between routes (DESIGN_SYSTEM.md §5). On each navigation a
- * charcoal panel drops to cover, then lifts away to reveal the new page — a
+ * charcoal panel drops to cover, then lifts away to reveal the new page  --  a
  * curtain wipe. Mounted once at the true root (not per route group), as a
  * sibling of the page (never an ancestor), so it can't create a containing
  * block that would break the fixed navbar / sticky elements. Skips the very
  * first load (the preloader owns that), no-ops under reduced motion, and
- * only actually plays when the navigation touches a marketing route — a
+ * only actually plays when the navigation touches a marketing route  --  a
  * PSEO-to-PSEO navigation shouldn't get the cinematic curtain treatment.
  */
 export default function RouteTransition() {

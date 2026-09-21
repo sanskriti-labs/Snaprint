@@ -17,7 +17,7 @@ The closest Metro access is Baiyappanahalli on the Purple Line, about a 10-minut
 
 ## Why printing demand is high here
 
-This side of Bengaluru prints a lot of paper for three overlapping reasons. First, residential density: Banaswadi and its neighbouring layouts hold tens of thousands of households, many of them with school-going children who need worksheets, projects, and ID photocopies on demand. Second, the area has quietly become a small-office hub, with CA firms, clinics, and coaching centres tucked into residential basements, all of which produce reams of documentation weekly. Third, students preparing for competitive exams and college admissions cycle through stationery shops during the April-July rush. The 10 shops already operating here aren't redundant — they're load-bearing, and the average rating of 4.3★ across them suggests they're holding up reasonably well under that pressure.
+This side of Bengaluru prints a lot of paper for three overlapping reasons. First, residential density: Banaswadi and its neighbouring layouts hold tens of thousands of households, many of them with school-going children who need worksheets, projects, and ID photocopies on demand. Second, the area has quietly become a small-office hub, with CA firms, clinics, and coaching centres tucked into residential basements, all of which produce reams of documentation weekly. Third, students preparing for competitive exams and college admissions cycle through stationery shops during the April-July rush. The 10 shops already operating here aren't redundant  --  they're load-bearing, and the average rating of 4.3★ across them suggests they're holding up reasonably well under that pressure.
 
 ## What people typically print here
 
@@ -25,4 +25,4 @@ Colour prints dominate the family workload: school projects, chart papers, and t
 
 ## How Snaprint fits in
 
-Snaprint simply maps what's already working on the ground. Shop owners in Banaswadi can list their services at /book and start receiving pre-uploaded print orders instead of queuing walk-ins. Anyone looking for a quick job can browse the listed catalogue at /print-near/banaswadi and skip the trial-and-error of wandering the lanes — a small but real time-saver in a neighbourhood where every minute of two-wheeler time costs fuel.
+Snaprint simply maps what's already working on the ground. Shop owners in Banaswadi can list their services at /book and start receiving pre-uploaded print orders instead of queuing walk-ins. Anyone looking for a quick job can browse the listed catalogue at /print-near/banaswadi and skip the trial-and-error of wandering the lanes  --  a small but real time-saver in a neighbourhood where every minute of two-wheeler time costs fuel.

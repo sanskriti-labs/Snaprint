@@ -13,11 +13,11 @@ Connaught Place sits at the geographic heart of Delhi, the colonial-era business
 
 ## Getting here and around
 
-The Rajiv Chowk metro station is the gateway for most visitors — an interchange between the Yellow Line and Blue Line that empties directly into Connaught Place's middle circle. From there everything is walkable, which is part of the area's appeal. Barakhamba Road station on the Blue Line handles the eastern blocks, while Patel Chowk and Janpath cover the southern edges. DTC buses crawl along Connaught Circus's outer ring, and auto-rickshaws are cheap and easy to flag down outside any block. Parking is the perpetual headache — the underground lots beneath Blocks A, B, and C fill before noon on weekdays, so most regulars prefer metro or two-wheeler.
+The Rajiv Chowk metro station is the gateway for most visitors  --  an interchange between the Yellow Line and Blue Line that empties directly into Connaught Place's middle circle. From there everything is walkable, which is part of the area's appeal. Barakhamba Road station on the Blue Line handles the eastern blocks, while Patel Chowk and Janpath cover the southern edges. DTC buses crawl along Connaught Circus's outer ring, and auto-rickshaws are cheap and easy to flag down outside any block. Parking is the perpetual headache  --  the underground lots beneath Blocks A, B, and C fill before noon on weekdays, so most regulars prefer metro or two-wheeler.
 
 ## Why printing demand is high here
 
-This is office country, and offices generate paper. Surrounding CP you'll find the headquarters of several public-sector banks, insurance companies, and ministries that send junior staff running for last-minute photocopies of tender documents, ID proofs, and application forms. The district courts complex on Mathura Road feeds a steady stream of lawyers needing judgments, affidavits, and case files duplicated on the spot. North Campus colleges — Ramjas, Hindu, SRCC — sit a short ride away, and exam season in March and October sends students flooding into the 20 shops mapped here for spiral-bound notes and project reports. The top-rated option is Nepal kinetic photocopy at 5 stars, with the broader area averaging 4.1 stars across 19 reviewed outlets.
+This is office country, and offices generate paper. Surrounding CP you'll find the headquarters of several public-sector banks, insurance companies, and ministries that send junior staff running for last-minute photocopies of tender documents, ID proofs, and application forms. The district courts complex on Mathura Road feeds a steady stream of lawyers needing judgments, affidavits, and case files duplicated on the spot. North Campus colleges  --  Ramjas, Hindu, SRCC  --  sit a short ride away, and exam season in March and October sends students flooding into the 20 shops mapped here for spiral-bound notes and project reports. The top-rated option is Nepal kinetic photocopy at 5 stars, with the broader area averaging 4.1 stars across 19 reviewed outlets.
 
 ## What people typically print here
 
@@ -25,4 +25,4 @@ Standard fare covers A4 B&W runs for court bundles and government submissions, c
 
 ## How Snaprint fits in
 
-Snaprint's listing simply organises what's already on the ground — shop names, ratings, and the services each one offers — so a hurried lawyer or deadline-pressed student can pick the nearest counter without walking the full circle. Operators wanting to be listed can onboard at /book, while students looking for quick print near campus should head to /print-near/connaught-place.
+Snaprint's listing simply organises what's already on the ground  --  shop names, ratings, and the services each one offers  --  so a hurried lawyer or deadline-pressed student can pick the nearest counter without walking the full circle. Operators wanting to be listed can onboard at /book, while students looking for quick print near campus should head to /print-near/connaught-place.

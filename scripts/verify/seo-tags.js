@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Canonical / robots / social-tag checker — runs against built HTML
+ * Canonical / robots / social-tag checker  --  runs against built HTML
  * output (.next/server/app/**\/*.html), same convention as verify:meta
  * and verify:schema. Requires a prior `next build`.
  *
@@ -12,16 +12,16 @@
  *      wrong-host canonical is either ignored or points at the wrong
  *      site entirely.
  *   2. <meta name="robots"> either absent (defaults to index,follow) or
- *      explicitly "index, follow" — catches an accidental noindex
+ *      explicitly "index, follow"  --  catches an accidental noindex
  *      shipping on a page that should rank (this is how a whole
  *      directory can vanish from search with no build error).
  *   3. og:title/description are present, and twitter:title/description
- *      are present AND non-empty — this repo shipped 194 PSEO pages
+ *      are present AND non-empty  --  this repo shipped 194 PSEO pages
  *      with a real per-page og:title but the generic sitewide
  *      twitter:title (Next.js doesn't cascade openGraph -> twitter),
  *      so every one of those pages showed the wrong preview on X/Twitter
  *      shares. This check catches the same class of drift again.
- *   4. Exactly one <h1> per page — zero confuses SEO tools about the
+ *   4. Exactly one <h1> per page  --  zero confuses SEO tools about the
  *      page's topic, more than one dilutes it and is usually a markup
  *      bug (duplicate hero on error boundary, etc).
  *   5. Every <img> has a non-empty alt attribute (empty alt="" is valid
@@ -51,7 +51,7 @@ function walkHtmlFiles(dir) {
 }
 
 if (!statSync(APP_DIR, { throwIfNoEntry: false })) {
-  fail(`${APP_DIR} not found — run "next build" before "verify:seo-tags"`);
+  fail(`${APP_DIR} not found  --  run "next build" before "verify:seo-tags"`);
   process.exit(1);
 }
 
@@ -67,7 +67,7 @@ for (const file of files) {
   const html = readFileSync(file, "utf8");
 
   // Next's built-in 404 page is intentionally noindex and has no real
-  // route of its own (it renders for any unmatched path) — canonical/
+  // route of its own (it renders for any unmatched path)  --  canonical/
   // robots rules for real content pages don't apply to it.
   if (route === "/_not-found") continue;
   checked++;
@@ -99,7 +99,7 @@ for (const file of files) {
     }
   }
 
-  // 2. robots meta — /style is an internal design-system preview,
+  // 2. robots meta  --  /style is an internal design-system preview,
   // deliberately noindexed and excluded from the sitemap; it's not a
   // content page and shouldn't trip the "accidental noindex" check.
   const robotsM = html.match(/<meta name="robots" content="([^"]*)"/);
@@ -122,7 +122,7 @@ for (const file of files) {
   if (!twDescM || !twDescM[1]) fail(`${route}: missing or empty twitter:description`);
 
   if (ogTitleM && twTitleM && decodeEntities(ogTitleM[1]) !== decodeEntities(twTitleM[1])) {
-    fail(`${route}: og:title and twitter:title diverge — og:"${ogTitleM[1]}" twitter:"${twTitleM[1]}" (twitter is likely stuck on the sitewide default)`);
+    fail(`${route}: og:title and twitter:title diverge  --  og:"${ogTitleM[1]}" twitter:"${twTitleM[1]}" (twitter is likely stuck on the sitewide default)`);
   }
 
   // 4. exactly one h1
@@ -143,7 +143,7 @@ for (const file of files) {
 
 ok(`checked canonical/robots/social-tags/h1/alt on ${checked} built pages`);
 
-// 6. sitemap.xml: every <loc> is https://snaprints.com/* — no bare "www."
+// 6. sitemap.xml: every <loc> is https://snaprints.com/*  --  no bare "www."
 // host. A stray www. entry would either 404 (if www isn't set up) or
 // split link equity across two hosts if it does resolve.
 const sitemapPath = join(APP_DIR, "sitemap.xml.body");
@@ -166,7 +166,7 @@ if (statSync(sitemapPath, { throwIfNoEntry: false })) {
     ok(`sitemap.xml: all ${locs.length} URLs are https://${SITE_HOST}/*`);
   }
 } else {
-  fail(`${sitemapPath} not found — sitemap host check skipped`);
+  fail(`${sitemapPath} not found  --  sitemap host check skipped`);
 }
 
 console.log("");

@@ -5,7 +5,7 @@
  */
 export type Presence = "live" | "planned" | "served";
 
-/** kebab-case ASCII, hand-curated — one per entity, never reused */
+/** kebab-case ASCII, hand-curated  --  one per entity, never reused */
 export type Slug = string;
 
 // ---------------------------------------------------------------------------
@@ -37,7 +37,7 @@ export type City = {
   intro: string;
   /** 4–6 hand-picked keywords. No stuffing. */
   keywords: string[];
-  /** Slugs of nearby cities to cross-link. Hand-curated — not auto-derived. */
+  /** Slugs of nearby cities to cross-link. Hand-curated  --  not auto-derived. */
   neighbors?: Slug[];
   /** Only filled with real, verified kiosk addresses. Never fabricated. */
   liveLocations?: LiveLocation[];
@@ -59,9 +59,9 @@ export type College = {
   address: string;
   lat?: number;
   lng?: number;
-  /** Official institution homepage — verified to resolve, not fabricated. */
+  /** Official institution homepage  --  verified to resolve, not fabricated. */
   website?: string;
-  /** Hand-written intro. Must be unique per college — no template fill. */
+  /** Hand-written intro. Must be unique per college  --  no template fill. */
   intro: string;
   keywords: string[];
   presence: Presence;
@@ -79,7 +79,7 @@ export type Area = {
   name: string; // display name, e.g. "Koramangala"
   city: Slug;
   pinCodes: string[];
-  /** Hand-written intro. Must be unique per area — no template fill. */
+  /** Hand-written intro. Must be unique per area  --  no template fill. */
   intro: string;
   keywords: string[];
   liveLocations?: LiveLocation[];

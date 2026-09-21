@@ -8,10 +8,10 @@ import { isMarketingRoute } from "@/lib/marketing-routes";
 
 /**
  * Smooth-scroll foundation (DESIGN_SYSTEM.md §5/§8). Lenis drives scroll and is
- * synced to GSAP's ticker so ScrollTrigger stays in lockstep. Tuned mid-weight —
+ * synced to GSAP's ticker so ScrollTrigger stays in lockstep. Tuned mid-weight  -- 
  * not floaty, not stiff. Disabled entirely under reduced-motion (native scroll).
  *
- * Mounted once at the true root (app/layout.tsx) — not per route group — so
+ * Mounted once at the true root (app/layout.tsx)  --  not per route group  --  so
  * crossing into/out of marketing routes toggles Lenis on/off via this effect
  * re-running on pathname change, instead of fully unmounting/remounting this
  * provider (and everything below it) on every such navigation. That teardown
@@ -31,7 +31,7 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
       smoothWheel: true,
       // Touch was left as native passthrough, which fires scroll updates too
       // sparsely/inconsistently during an active finger-drag for ScrollTrigger's
-      // pinned hero animation to track — it visibly stalls mid-scroll on real
+      // pinned hero animation to track  --  it visibly stalls mid-scroll on real
       // phones despite the same math working fine on desktop. Routing touch
       // through Lenis's own RAF-driven loop (already wired to ScrollTrigger.update
       // below) gives it the same steady update cadence wheel scroll already has.

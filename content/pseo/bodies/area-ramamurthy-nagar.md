@@ -13,7 +13,7 @@ Ramamurthy Nagar sits in the northeastern belt of Bengaluru, bridging the older 
 
 ## Getting here and around
 
-The nearest metro stop on the Purple Line is Baiyappanahalli, roughly 3 km south; from there, autos and BMTC feeder buses connect to Ramamurthy Nagar Bridge and the Main Road. Local buses route 300, 302, and the K-4 series run through the junction at regular intervals. Two-wheelers dominate, and parking along the main road is tight during mornings. Most daily errands are walked — the area is compact enough that a kirana, a temple, a clinic, and a print shop are usually within a 10-minute stretch.
+The nearest metro stop on the Purple Line is Baiyappanahalli, roughly 3 km south; from there, autos and BMTC feeder buses connect to Ramamurthy Nagar Bridge and the Main Road. Local buses route 300, 302, and the K-4 series run through the junction at regular intervals. Two-wheelers dominate, and parking along the main road is tight during mornings. Most daily errands are walked  --  the area is compact enough that a kirana, a temple, a clinic, and a print shop are usually within a 10-minute stretch.
 
 ## Why printing demand is high here
 

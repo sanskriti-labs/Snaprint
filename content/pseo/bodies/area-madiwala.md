@@ -14,7 +14,7 @@ Madiwala is the busy, mixed-use junction that sits south of the Hosur Road–Inn
 
 ## Getting here and around
 
-Madiwala is best reached by the Hosur Road or the Inner Ring Road — both routes converge at the central junction. The BMTC bus stop at the market is a 5-minute walk from the residential lanes, and the upcoming RV Road–Bommasandra metro line will eventually add a station within walking distance. Parking is tight at the market side during the day, easier after 9pm.
+Madiwala is best reached by the Hosur Road or the Inner Ring Road  --  both routes converge at the central junction. The BMTC bus stop at the market is a 5-minute walk from the residential lanes, and the upcoming RV Road–Bommasandra metro line will eventually add a station within walking distance. Parking is tight at the market side during the day, easier after 9pm.
 
 ## Why printing demand is high here
 
@@ -26,4 +26,4 @@ Bill books, multi-copy invoices, letterheads, Aadhaar and PAN copies, ID and pas
 
 ## How Snaprint fits in
 
-Snaprint's rollout is growing in Madiwala — the kiosk network is designed to add 24/7 self-serve capacity alongside the listed shop. If you operate a xerox shop here and want to host an S1 kiosk, the [setup page](/book) covers cost, expected footfall, and revenue share. For residents and office workers, the nearest kiosk is one tap away — visit [print-near madiwala](/print-near/madiwala) for directions and the shop list.
+Snaprint's rollout is growing in Madiwala  --  the kiosk network is designed to add 24/7 self-serve capacity alongside the listed shop. If you operate a xerox shop here and want to host an S1 kiosk, the [setup page](/book) covers cost, expected footfall, and revenue share. For residents and office workers, the nearest kiosk is one tap away  --  visit [print-near madiwala](/print-near/madiwala) for directions and the shop list.

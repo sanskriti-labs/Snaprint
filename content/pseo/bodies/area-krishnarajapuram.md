@@ -9,7 +9,7 @@ wordCount: 485
 ---
 ## About this place
 
-Krishnarajapuram — KR Puram to most Bengaluru residents — sits on the eastern edge of the city where the Old Madras Road corridor meets the railway line that once pulled this settlement into existence. The neighbourhood grew around the 1860s railway station and never stopped expanding, layering middle-class residential blocks, small industrial units, and a dense commercial spine along the main road. Pin codes 560036 and 560049 cover a stretch that feels less like a suburb and more like a self-contained town bolted onto the metro. Twenty listed xerox and print shops operate across the area, a number that reflects how much paper-work happens within walking distance of someone's home.
+Krishnarajapuram  --  KR Puram to most Bengaluru residents  --  sits on the eastern edge of the city where the Old Madras Road corridor meets the railway line that once pulled this settlement into existence. The neighbourhood grew around the 1860s railway station and never stopped expanding, layering middle-class residential blocks, small industrial units, and a dense commercial spine along the main road. Pin codes 560036 and 560049 cover a stretch that feels less like a suburb and more like a self-contained town bolted onto the metro. Twenty listed xerox and print shops operate across the area, a number that reflects how much paper-work happens within walking distance of someone's home.
 
 ## Getting here and around
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-// The date grid must always reflect the visitor's actual "today" — force this
+// The date grid must always reflect the visitor's actual "today"  --  force this
 // route to render dynamically (per-request) rather than being statically
 // prerendered at build time. Declared here (a server component) since Next's
 // static-optimization analysis does not reliably honor `dynamic` exported from

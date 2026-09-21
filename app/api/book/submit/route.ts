@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "'providerId' must be an integer" }, { status: 400 });
   }
 
-  // Reject past dates server-side regardless of what the UI sends — the client's
+  // Reject past dates server-side regardless of what the UI sends  --  the client's
   // notion of "today" can be stale (cached page, tampered request, clock skew).
   const now = new Date();
   const todayISO = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
     const slots = await getAvailableSlots(date);
     if (!slots.some((s) => s.time === time && s.providerId === providerId)) {
       return NextResponse.json(
-        { error: "That time is no longer available — please pick another." },
+        { error: "That time is no longer available  --  please pick another." },
         { status: 409 }
       );
     }
@@ -92,7 +92,7 @@ export async function POST(req: NextRequest) {
     const message = err instanceof EAApiError ? err.message : "Unexpected error";
     console.error("[book/submit] failed to create appointment:", message);
     return NextResponse.json(
-      { error: "We couldn't complete your booking — please email us and we'll sort it out." },
+      { error: "We couldn't complete your booking  --  please email us and we'll sort it out." },
       { status: 502 }
     );
   }

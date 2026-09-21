@@ -21,7 +21,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${SITE_URL}/impact#page`,
       url: `${SITE_URL}/impact`,
-      name: "Impact — Snaprint Community",
+      name: "Impact  --  Snaprint Community",
       isPartOf: { "@id": `${SITE_URL}/#website` },
     },
     {

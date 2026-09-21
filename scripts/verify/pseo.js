@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
- * PSEO verifier — sanity gate before merge.
+ * PSEO verifier  --  sanity gate before merge.
  *
  * Run via `pnpm verify:pseo`. Exits non-zero on any failure.
  *
  * Implementation note: this script is plain JS so it can run without
  * a TS runner. It re-implements the haversine + JSONL parse so it
  * doesn't import the typed modules. The trade-off is duplicate logic
- * with content/pseo/shops.ts — both must agree on field normalisation.
+ * with content/pseo/shops.ts  --  both must agree on field normalisation.
  *
- * "Live" throughout this file means published — presence "live" (real
+ * "Live" throughout this file means published  --  presence "live" (real
  * kiosk) or "served" (pSEO directory only, no kiosk yet). Both generate
  * real pages; only "planned" 404s. See content/pseo/types.ts.
  *
@@ -27,16 +27,16 @@
  *       liveLocations length (guards against the count/render mismatch
  *       that shipped "30 xerox shops" pages showing 20 listings).
  *   13. No live/served college or area names a city that is itself not
- *       published — that city's cross-links would point back at a hub
+ *       published  --  that city's cross-links would point back at a hub
  *       that 404s (this is how instant-print/bengaluru linking to
  *       planned areas shipped: the source list wasn't presence-filtered).
  *   17. No live/served college or area names a city slug that has no
  *       matching entry in cities.ts at all (distinct from #13, which only
  *       catches a city that exists but is unpublished).
  *   18. No two live/served areas/colleges share a slug across different
- *       cities — /print-near/[entity] resolves by bare slug (first match
+ *       cities  --  /print-near/[entity] resolves by bare slug (first match
  *       wins), so a collision silently shadows one city's page entirely.
- *   14. layout.tsx's sitewide JSON-LD carries no price/offers field —
+ *   14. layout.tsx's sitewide JSON-LD carries no price/offers field  -- 
  *       that schema renders on every page including PSEO pages, and a
  *       price there leaks into search snippets for unrelated pages
  *       (shipped once: the S1 kiosk price showed up in a snippet for a
@@ -95,11 +95,11 @@ const shopsLlmPath = resolve(repoRoot, "scripts/clean/data/shops-llm-verified.js
 const shopsDataDir = resolve(repoRoot, "scripts/scraper/data");
 const shopsRawPath = resolve(repoRoot, "scripts/scraper/data/results-77areas.json");
 
-// "live" or "served" — both are published; only "planned" 404s.
+// "live" or "served"  --  both are published; only "planned" 404s.
 const isLive = (presence) => presence === "live" || presence === "served";
 
 const colleges = extractDataBlocks(collegesPath).filter((c) => isLive(c.presence));
-const cities = extractDataBlocks(citiesPath);  // all cities, not just live — a college can point to a planned city
+const cities = extractDataBlocks(citiesPath);  // all cities, not just live  --  a college can point to a planned city
 const liveCities = cities.filter((c) => isLive(c.presence));
 const areas = extractDataBlocks(areasPath).filter((a) => isLive(a.presence));
 
@@ -117,7 +117,7 @@ function haversineKm(a, b) {
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-// Load shop index from JSONL — same source(s) as content/pseo/shops.ts.
+// Load shop index from JSONL  --  same source(s) as content/pseo/shops.ts.
 function loadShopsFromFile(path, isCleaned) {
   const text = readFileSync(path, "utf8");
   const out = [];
@@ -137,7 +137,7 @@ function loadShopsFromFile(path, isCleaned) {
 
 function loadShops() {
   // shops-llm-verified.jsonl only ever covered Bengaluru (1134 records,
-  // lat 12.7-13.1) — using it exclusively silently dropped every other
+  // lat 12.7-13.1)  --  using it exclusively silently dropped every other
   // city's shops from radius checks the moment a second city's colleges
   // went live. Prefer it for Bengaluru specifically, since it's a
   // stricter audit than the heuristic cleaner, but still load every
@@ -170,7 +170,7 @@ ok(`loaded ${shops.length} shops with coords from JSONL`);
 // 1-2: live colleges have coords + shops in radius
 // ---------------------------------------------------------------------------
 if (colleges.length === 0) {
-  ok("no live colleges yet — promoting any college requires manual review");
+  ok("no live colleges yet  --  promoting any college requires manual review");
 } else {
   for (const c of colleges) {
     const lat = Number(c.lat);
@@ -197,7 +197,7 @@ for (const c of colleges) {
   if (intro.length < INTRO_MIN) {
     fail(`live college "${c.slug}" intro < ${INTRO_MIN} chars (${intro.length})`);
   }
-  // keywords is an array literal — fall back to length extraction.
+  // keywords is an array literal  --  fall back to length extraction.
   const blockMatch = readFileSync(collegesPath, "utf8").match(new RegExp(`slug:\\s*"${c.slug}"[\\s\\S]*?keywords:\\s*\\[([^\\]]+)\\]`));
   const kwCount = blockMatch ? blockMatch[1].split(",").length : 0;
   if (kwCount < KEYWORDS_MIN) {
@@ -229,7 +229,7 @@ ok("cross-slug validation complete");
 //
 // Regression this guards: instant-print/[city] once called
 // getAllAreasInCity(), which returned areas "regardless of presence" (its
-// own doc comment said so) — so the city hub linked to planned, zero-shop
+// own doc comment said so)  --  so the city hub linked to planned, zero-shop
 // areas that 404 (e.g. /print-near/avenue-road). The fix was routing it
 // through the already-filtered getAreasInCity(). This check greps seo.ts's
 // cross-link helpers (used by PseoCrossLinks / hub pages) and fails if any
@@ -244,12 +244,12 @@ if (existsSync(seoTsPath)) {
   for (const name of CROSS_LINK_GETTERS) {
     const m = seoTs.match(new RegExp(`export function ${name}\\([^)]*\\)[^{]*\\{([\\s\\S]*?)\\n\\}`));
     if (!m) {
-      fail(`cross-link getter "${name}" not found in seo.ts — was it renamed? Update this check too.`);
+      fail(`cross-link getter "${name}" not found in seo.ts  --  was it renamed? Update this check too.`);
       unfiltered++;
       continue;
     }
     if (!/isPublished\(/.test(m[1])) {
-      fail(`cross-link getter "${name}" in seo.ts doesn't call isPublished() — it may leak links to planned (404) pages`);
+      fail(`cross-link getter "${name}" in seo.ts doesn't call isPublished()  --  it may leak links to planned (404) pages`);
       unfiltered++;
     }
   }
@@ -257,7 +257,7 @@ if (existsSync(seoTsPath)) {
   // presence filter is a landmine for the next hub page that calls it.
   const suspicious = Array.from(seoTs.matchAll(/export function (getAll\w*In\w+)\(/g)).map((m) => m[1]);
   for (const name of suspicious) {
-    fail(`seo.ts exports "${name}" — an unfiltered "all entities in X" getter is how the dead-link bug shipped before (getAllAreasInCity). Route callers through the presence-filtered getter instead, and delete this one.`);
+    fail(`seo.ts exports "${name}"  --  an unfiltered "all entities in X" getter is how the dead-link bug shipped before (getAllAreasInCity). Route callers through the presence-filtered getter instead, and delete this one.`);
     unfiltered++;
   }
   if (unfiltered === 0) {
@@ -269,16 +269,16 @@ if (existsSync(seoTsPath)) {
 
 // ---------------------------------------------------------------------------
 // 17: every live/served area/college's `city` slug must have a matching
-// entry in cities.ts — not just a *published* one (that's #13's job), but
+// entry in cities.ts  --  not just a *published* one (that's #13's job), but
 // *any* entry at all.
 //
 // Regression this guards: the scraper (scripts/scraper/process_areas.py)
 // writes `city: "${cfg.CITY_SLUG}"` into every area it generates, driven by
-// CITY_SLUG in scripts/scraper/cities/<city>.py — it never touches
+// CITY_SLUG in scripts/scraper/cities/<city>.py  --  it never touches
 // cities.ts. On 2026-08-14 this shipped 48 live/served areas across 4 new
 // cities (Chennai, Mumbai, Pune, Delhi NCR) whose city slug had no matching
 // cities.ts entry at all. Every existing check passed: #6/#13 only check
-// colleges and only catch a city that's *present but unpublished* —
+// colleges and only catch a city that's *present but unpublished*  -- 
 // getCity(slug) returning undefined is a different failure and fails
 // silently, not loudly. Practical effect: buildBreadcrumbList() in
 // content/pseo/seo.ts drops the city crumb (getCity() lookup just misses),
@@ -288,13 +288,13 @@ if (existsSync(seoTsPath)) {
 let missingCityRefs = 0;
 for (const a of areas) {
   if (a.city && !citySlugs.has(a.city)) {
-    fail(`live area "${a.slug}" references city "${a.city}" which has no entry in cities.ts at all (not just unpublished — entirely absent)`);
+    fail(`live area "${a.slug}" references city "${a.city}" which has no entry in cities.ts at all (not just unpublished  --  entirely absent)`);
     missingCityRefs++;
   }
 }
 for (const c of colleges) {
   if (c.city && !citySlugs.has(c.city)) {
-    fail(`live college "${c.slug}" references city "${c.city}" which has no entry in cities.ts at all (not just unpublished — entirely absent)`);
+    fail(`live college "${c.slug}" references city "${c.city}" which has no entry in cities.ts at all (not just unpublished  --  entirely absent)`);
     missingCityRefs++;
   }
 }
@@ -305,17 +305,17 @@ if (missingCityRefs === 0) {
 // ---------------------------------------------------------------------------
 // 18: no two live/served entities share a slug across different cities.
 // /print-near/[entity] resolves via getArea()/getCollege(), both a plain
-// Array.find() over the full areas.ts/colleges.ts list — first match wins,
+// Array.find() over the full areas.ts/colleges.ts list  --  first match wins,
 // full stop. There is nothing city-scoped about the URL or the lookup.
 //
 // Regression this guards: areas.ts independently generated "ashok-nagar"
 // for both Bengaluru and Hyderabad, and "shivajinagar" for both Bengaluru
-// and Pune — each city's scraper run is correctly isolated (a run only
+// and Pune  --  each city's scraper run is correctly isolated (a run only
 // ever loads its own AREA_KW dict and its own shop file, so no shop data
 // crosses city lines), but nothing stopped two different cities from
 // independently picking the same area slug. Found by hand on 2026-08-14:
 // Hyderabad's Ashok Nagar and Pune's Shivajinagar were both completely
-// unreachable — Bengaluru's entry won every lookup, so a whole city's
+// unreachable  --  Bengaluru's entry won every lookup, so a whole city's
 // area page silently vanished from the live site despite existing in the
 // data, passing every other check, and even being listed (wrongly) in
 // llms.txt pointing at the winning city's URL. Fixed by suffixing the
@@ -337,12 +337,12 @@ if (missingCityRefs === 0) {
   let slugCollisions = 0;
   for (const [slug, owners] of bySlug) {
     if (owners.length > 1) {
-      fail(`slug "${slug}" is used by ${owners.length} live/served entities across different cities — only the first is reachable at /print-near/${slug}, the rest 404 or are silently shadowed: ${owners.join("; ")}`);
+      fail(`slug "${slug}" is used by ${owners.length} live/served entities across different cities  --  only the first is reachable at /print-near/${slug}, the rest 404 or are silently shadowed: ${owners.join("; ")}`);
       slugCollisions++;
     }
   }
   if (slugCollisions === 0) {
-    ok(`no slug collisions across ${bySlug.size} live areas/colleges — every /print-near/[entity] URL resolves to exactly one entity`);
+    ok(`no slug collisions across ${bySlug.size} live areas/colleges  --  every /print-near/[entity] URL resolves to exactly one entity`);
   }
 }
 
@@ -352,7 +352,7 @@ if (missingCityRefs === 0) {
 // Regression this guards: the root layout injected Product/AggregateOffer
 // (the S1 kiosk price) into every page's <head>, including every
 // print-near/* and instant-print/* PSEO page. Google surfaced the kiosk
-// price in a search snippet for "Print and xerox shops near Atria IT" — a
+// price in a search snippet for "Print and xerox shops near Atria IT"  --  a
 // page with nothing to do with kiosk pricing. Price/offer schema now lives
 // in app/page.tsx (the only page actually about the S1). If it creeps back
 // into the root layout, this fails.
@@ -364,7 +364,7 @@ if (existsSync(layoutPath)) {
   if (jsonLdM) {
     const priceHit = /\b(?:lowPrice|highPrice|"price"|offers\s*:)/.test(jsonLdM[1]);
     if (priceHit) {
-      fail(`app/layout.tsx's sitewide JSON-LD contains a price/offers field — this renders on every PSEO page. Move it to app/page.tsx instead.`);
+      fail(`app/layout.tsx's sitewide JSON-LD contains a price/offers field  --  this renders on every PSEO page. Move it to app/page.tsx instead.`);
     } else {
       ok("app/layout.tsx's sitewide JSON-LD carries no price/offers field");
     }
@@ -425,7 +425,7 @@ if (dupIntros.length > 0) {
 // ---------------------------------------------------------------------------
 const totalLive = liveCities.length + colleges.length + areas.length;
 if (totalLive === 0) {
-  fail("no live entities anywhere — sitemap will be empty");
+  fail("no live entities anywhere  --  sitemap will be empty");
 } else {
   ok(`total live entities: ${totalLive} (${liveCities.length} cities, ${colleges.length} colleges, ${areas.length} areas)`);
 }
@@ -433,14 +433,14 @@ if (totalLive === 0) {
 // ---------------------------------------------------------------------------
 // 15: every live/served city has >= 1 shop rolled up from its areas
 // (content/pseo/shops.ts:getShopsInCity). A city with none renders its
-// pSEO page with no shop cards and no Google Maps links — this is how
+// pSEO page with no shop cards and no Google Maps links  --  this is how
 // instant-print/[city] shipped with zero Maps links even after hundreds
 // were added at the area level: the city page never read area data at all.
 // ---------------------------------------------------------------------------
 for (const c of liveCities) {
   const cityAreas = areas.filter((a) => a.city === c.slug);
   if (cityAreas.length === 0) {
-    fail(`live city "${c.slug}" has 0 published areas — its page will show 0 shops and no Maps links`);
+    fail(`live city "${c.slug}" has 0 published areas  --  its page will show 0 shops and no Maps links`);
   } else {
     ok(`live city "${c.slug}" has ${cityAreas.length} published areas feeding its shops list`);
   }
@@ -474,7 +474,7 @@ if (!existsSync(llmsPath)) {
   }
   for (const slug of llmsUrls) {
     if (!liveSlugs.has(slug) && !hubSlugs.has(slug)) {
-      fail(`llms.txt advertises "/print-near/${slug}" which is not live — this URL 404s`);
+      fail(`llms.txt advertises "/print-near/${slug}" which is not live  --  this URL 404s`);
     }
   }
   ok(`llms.txt parity checked in both directions (${llmsUrls.size} URLs vs ${liveSlugs.size} live entities)`);
@@ -483,7 +483,7 @@ if (!existsSync(llmsPath)) {
 // ---------------------------------------------------------------------------
 // 10: shop-data authenticity. Every published shop must carry a Google
 // placeId, real coords inside a known city's bbox (catches mis-scraped
-// results from a different city bleeding into a city's clean file — see
+// results from a different city bleeding into a city's clean file  --  see
 // the 18 Bengaluru-coordinate records found in shops-clean-hyderabad.jsonl
 // on 2026-08-12), and must not be one of the structurally-non-print
 // categories (mall / hotel / bank / bus stop) that the keyword scrape
@@ -516,7 +516,7 @@ const JUNK = /\b(shopping mall|hotel|bank|jail|bus stop|bus depot|hostel|movie t
       (b) => lat >= b.latMin && lat <= b.latMax && lng >= b.lngMin && lng <= b.lngMax
     );
     if (!lat || !lng || !inAnyBbox) outOfBox++;
-    // "xerox" in the name overrides a junk category — see clean_shops.py's
+    // "xerox" in the name overrides a junk category  --  see clean_shops.py's
     // matching hard-neg override: Google routinely mis-tags a small combo
     // shop (xerox counter run out of a pharmacy/general store) with the
     // building/anchor-tenant category instead of the shop's own service.
@@ -536,7 +536,7 @@ const JUNK = /\b(shopping mall|hotel|bank|jail|bus stop|bus depot|hostel|movie t
 // addresses silently mis-assigns shops (a "kalyana mantapa" wedding hall
 // matched kalyan-nagar; Kothnur 560078 and Kothanur 560077 are 21 km
 // apart but share a name). Every shop must sit near its area's MEDIAN
-// centre — median so a cluster of outliers cannot drag the centre.
+// centre  --  median so a cluster of outliers cannot drag the centre.
 // ---------------------------------------------------------------------------
 const MAX_SPREAD_KM = 7;
 const areaBlocks = areasText.split("\n  {").slice(1);
@@ -552,7 +552,7 @@ for (const block of areaBlocks) {
   const far = lats.filter((la, i) =>
     Math.hypot((la - cLat) * 111, (lngs[i] - cLng) * 108) > MAX_SPREAD_KM);
   if (far.length > 0) {
-    fail(`area "${slugM[1]}" has ${far.length}/${lats.length} shops >${MAX_SPREAD_KM}km from its centre — likely mis-assigned`);
+    fail(`area "${slugM[1]}" has ${far.length}/${lats.length} shops >${MAX_SPREAD_KM}km from its centre  --  likely mis-assigned`);
     spreadFails++;
   }
 }
@@ -564,7 +564,7 @@ if (spreadFails === 0) {
 // 12: intro-stated shop count must match rendered liveLocations count.
 // The generator once computed the intro from the uncapped shop list while
 // rendering a 20-per-area cap, so a page could say "30 xerox and print
-// shops" while only listing 20 — caught only by a human noticing the page.
+// shops" while only listing 20  --  caught only by a human noticing the page.
 // ---------------------------------------------------------------------------
 let countMismatches = 0;
 for (const block of areaBlocks) {
@@ -573,7 +573,7 @@ for (const block of areaBlocks) {
   const introM = block.match(/intro:\s*"((?:[^"\\]|\\.)*)"/);
   if (!introM) continue;
   const countM = introM[1].match(/^(\d+) listed xerox and print shops?\b/);
-  if (!countM) continue; // intro doesn't lead with a count (e.g. the n===0 template) — nothing to check
+  if (!countM) continue; // intro doesn't lead with a count (e.g. the n===0 template)  --  nothing to check
   const statedCount = Number(countM[1]);
   const renderedCount = (block.match(/\n {6}\{\n {8}name:/g) || []).length;
   if (statedCount !== renderedCount) {
@@ -594,8 +594,8 @@ if (colleges.length > 0) {
 
 // ---------------------------------------------------------------------------
 // 16: every live/served entity has a local FAQ tail file. A missing tail
-// isn't a page break — getLocationFaqs/getCityFaqs fall back to sharedFaqs
-// only — but it means that page never clears the faqs.length >
+// isn't a page break  --  getLocationFaqs/getCityFaqs fall back to sharedFaqs
+// only  --  but it means that page never clears the faqs.length >
 // sharedFaqs.length gate, so it never emits FAQPage structured data. This
 // is how one commit shipped tails for only 10 of 145 entities and nothing
 // caught the other 135 silently rendering boilerplate-only pages.
@@ -604,7 +604,7 @@ const faqTailsDir = resolve(repoRoot, "content/pseo/faq-tails");
 let missingTails = 0;
 for (const c of liveCities) {
   if (!existsSync(join(faqTailsDir, `city-${c.slug}.json`))) {
-    fail(`live city "${c.slug}" has no faq-tails/city-${c.slug}.json — page will only show shared boilerplate FAQs`);
+    fail(`live city "${c.slug}" has no faq-tails/city-${c.slug}.json  --  page will only show shared boilerplate FAQs`);
     missingTails++;
   }
 }
@@ -627,7 +627,7 @@ if (missingTails === 0) {
 // ---------------------------------------------------------------------------
 // No non-canonical-domain links in hand-written body content. www.snaprints
 // .com has no redirect configured to the apex (next.config.mjs only redirects
-// specific stale paths, not the whole www subdomain) — a link like that
+// specific stale paths, not the whole www subdomain)  --  a link like that
 // either dead-ends or, worse, forces an extra hop search engines read as a
 // redirect chain masking the apex domain, which depresses brand-name search
 // results (this shipped once in area-marathahalli.md, caught by hand while
@@ -647,7 +647,7 @@ if (existsSync(bodiesDir)) {
   }
 }
 if (badDomainLinks === 0) {
-  ok("no www.snaprints.com links in pSEO body content — all link to the canonical apex domain");
+  ok("no www.snaprints.com links in pSEO body content  --  all link to the canonical apex domain");
 }
 
 console.log("");

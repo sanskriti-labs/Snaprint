@@ -17,9 +17,9 @@ const BLOG_DIR = path.join(process.cwd(), "content/blog");
 /**
  * acceptmarkdown.com content negotiation: given a request path, resolve the
  * markdown representation for it, or null if this path has no markdown
- * variant (caller falls back to a 404 markdown body — see
+ * variant (caller falls back to a 404 markdown body  --  see
  * app/api/markdown/route.ts). Kept separate from the route handler mainly
- * for readability — scripts/verify/markdown-negotiation.mjs tests this
+ * for readability  --  scripts/verify/markdown-negotiation.mjs tests this
  * behavior live over HTTP, not by importing this module directly, since the
  * bug that motivated that script (a middleware rewrite losing the request
  * path) only reproduces through a real request.
@@ -42,7 +42,7 @@ export function resolveMarkdownForPath(pathname: string): string | null {
 }
 
 // public/llms.txt is the canonical short-form site description (kept in
-// sync with content/pseo/areas.ts by scripts/seo/sync-llms-txt.mjs) — the
+// sync with content/pseo/areas.ts by scripts/seo/sync-llms-txt.mjs)  --  the
 // homepage's markdown variant reuses it directly instead of maintaining a
 // second, driftable copy of the same "when to use" guidance and page index.
 const LLMS_TXT_PATH = path.join(process.cwd(), "public/llms.txt");
@@ -96,14 +96,14 @@ Full listing: ${SITE_URL}/instant-print/${slug}
 
 /** Short markdown body for a path with no HTML page and no markdown variant. Doubles as the 404 markdown body (acceptmarkdown.com + agent-friendly-404 fixes share this). */
 export function notFoundMarkdown(pathname: string): string {
-  return `# 404 — page not found
+  return `# 404  --  page not found
 
 \`${pathname}\` does not exist on snaprints.com.
 
 ## Where to look next
 
-- [Sitemap](${SITE_URL}/sitemap.xml) — full list of live pages
-- [llms.txt](${SITE_URL}/llms.txt) — site description and page index for AI agents
+- [Sitemap](${SITE_URL}/sitemap.xml)  --  full list of live pages
+- [llms.txt](${SITE_URL}/llms.txt)  --  site description and page index for AI agents
 - [Homepage](${SITE_URL}/)
 - [Find a Snaprint kiosk](${SITE_URL}/find-snaprint)
 - [Print shop directory](${SITE_URL}/print-near)

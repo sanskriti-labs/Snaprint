@@ -5,20 +5,20 @@ import Footer from "@/components/Footer";
 const siteUrl = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "Franchise — Own a Snaprint Kiosk",
+  title: "Self-Service Print Kiosk  --  Snaprint Kiosk",
   description:
-    "Host a Snaprint self-service print kiosk in your college, hostel, co-working space, or shop. Hardware, app, training, and support included. See how it works.",
+    "Self-service print kiosk for colleges, offices, hospitals, libraries, and retail across India. QR upload, UPI payment, 24/7 operation. See print kiosk cost.",
   alternates: { canonical: "/franchise" },
   openGraph: {
-    title: "Franchise — Own a Snaprint Kiosk",
-    description: "Host a Snaprint self-service print kiosk. Hardware, app, training, and support included.",
+    title: "Self-Service Print Kiosk  --  Snaprint Kiosk",
+    description: "Self-service print kiosk for colleges, offices, hospitals, libraries, and retail. QR upload, UPI payment, 24/7 operation. See print kiosk cost.",
     url: `${siteUrl}/franchise`,
     type: "website",
     images: [`${siteUrl}/og.png`],
   },
   twitter: {
-    title: "Franchise — Own a Snaprint Kiosk",
-    description: "Host a Snaprint self-service print kiosk. Hardware, app, training, and support included.",
+    title: "Self-Service Print Kiosk  --  Snaprint Kiosk",
+    description: "Self-service print kiosk for colleges, offices, hospitals, libraries, and retail. See print kiosk cost.",
   },
 };
 
@@ -29,11 +29,11 @@ const included = [
   },
   {
     title: "Mobile app + dashboard",
-    body: "Live revenue, print counts, ink and paper status — everything you need to run the kiosk from your phone, not from the counter.",
+    body: "Live revenue, print counts, ink and paper status  --  everything you need to run the kiosk from your phone, not from the counter.",
   },
   {
     title: "Ongoing support",
-    body: "In-person Bengaluru installation, training, and a support team that knows the hardware. Six months of software support included, with continued support available afterward — no annual or recurring software fee.",
+    body: "In-person Bengaluru installation, training, and a support team that knows the hardware. Six months of software support included, with continued support available afterward  --  no annual or recurring software fee.",
   },
   {
     title: "Brand association",
@@ -60,16 +60,16 @@ const roiAssumptions = [
 
 const faqs = [
   {
-    q: "How much does the Snaprint franchise cost?",
-    a: "Snaprint has 3 kiosk models, priced one-time at ₹84,999, ₹1,39,999, and ₹2,99,999, plus 18% GST, depending on the model. This includes the dedicated hardware, software, installation, training, and six months of software support. There is no annual fee, no software subscription, and no per-print commission — the kiosk is a one-time purchase you own outright.",
+    q: "What's the print kiosk cost  --  how much does the Snaprint franchise cost?",
+    a: "The print kiosk cost depends on the model. Snaprint has 3 kiosk models, priced one-time at ₹84,999, ₹1,39,999, and ₹2,99,999, plus 18% GST, depending on the model. This includes the dedicated hardware, software, installation, training, and six months of software support. There is no annual fee, no software subscription, and no per-print commission  --  the kiosk is a one-time purchase you own outright.",
   },
   {
     q: "Is there a contract or lock-in period?",
-    a: "You own the hardware. There is a one-page agreement covering software and brand usage, with standard exit terms. We don't have multi-year lock-ins with early-exit penalties — the model is built for operators who want to own the kiosk, not lease it back.",
+    a: "You own the hardware. There is a one-page agreement covering software and brand usage, with standard exit terms. We don't have multi-year lock-ins with early-exit penalties  --  the model is built for operators who want to own the kiosk, not lease it back.",
   },
   {
     q: "Which areas do you currently support?",
-    a: "Snaprint is currently in Bengaluru — installation, on-site training, and support are all Bengaluru-based. If you're outside Bengaluru and interested, get in touch and we'll discuss expanding into your area based on operator density.",
+    a: "Snaprint is currently in Bengaluru  --  installation, on-site training, and support are all Bengaluru-based. If you're outside Bengaluru and interested, get in touch and we'll discuss expanding into your area based on operator density.",
   },
   {
     q: "What is the realistic ROI timeline?",
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "Can I add a Snaprint kiosk to my existing xerox shop?",
-    a: "Yes — that's the intended setup. The S1 is designed to fit inside an existing xerox or stationery shop and capture the remote and after-hours orders your counter is currently missing. Most operators are existing shop owners adding a self-service layer, not starting a new shop from scratch.",
+    a: "Yes  --  that's the intended setup. The S1 is designed to fit inside an existing xerox or stationery shop and capture the remote and after-hours orders your counter is currently missing. Most operators are existing shop owners adding a self-service layer, not starting a new shop from scratch.",
   },
 ];
 
@@ -149,7 +149,7 @@ export default function FranchisePage() {
               <span className="text-[#E63946]">operator.</span>
             </h1>
             <p className="mb-10 max-w-[560px] font-body text-[17px] font-light leading-[1.78] text-[#6B6B66]">
-              Install the Snaprint S1 in your shop and turn the WhatsApp-a-PDF-and-collect-later pattern into a paid, self-service order — running 24/7, even when you&apos;re not at the counter. ₹84,999&ndash;₹2,99,999 one-time investment, across 3 models. No per-print commission.
+              Install the Snaprint S1 in your shop and turn the WhatsApp-a-PDF-and-collect-later pattern into a paid, self-service order  --  running 24/7, even when you&apos;re not at the counter. ₹84,999&ndash;₹2,99,999 one-time investment, across 3 models. No per-print commission.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
@@ -201,7 +201,7 @@ export default function FranchisePage() {
               The S1 hardware, the software, the support. One bundle.
             </h2>
             <p className="mb-14 max-w-[560px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
-              Built for shop owners who want to capture the remote and after-hours orders they&apos;re currently missing — without adding a counter shift.
+              Built for shop owners who want to capture the remote and after-hours orders they&apos;re currently missing  --  without adding a counter shift.
             </p>
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">

@@ -24,7 +24,7 @@ export interface SitePage {
   priority: number;
 }
 
-// Single source of truth for every indexable URL on the site — sitemap.ts
+// Single source of truth for every indexable URL on the site  --  sitemap.ts
 // and the IndexNow submission script both read from here so neither can
 // drift out of sync with the other.
 export function getAllSitePages(): SitePage[] {

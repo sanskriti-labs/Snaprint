@@ -17,7 +17,7 @@ The closest Pune Metro stop on the operational Purple Line is Pune Station, roug
 
 ## Why printing demand is high here
 
-Camp generates steady print volume from three overlapping streams. Court and government offices around Camp PMC Stand require attested copies of FIRs, affidavits, and property papers throughout the week. Back-office staff in the older commercial buildings need last-minute contract reprints, ID card reissues, and board-meeting binders. The resident population adds household demand — school project colour pages, ration card xeroxes, and Aadhaar updates — particularly around 411001 during evenings and weekends. The 5 listed print shops across these pin codes handle that combined load daily, which is why even a basic neighbourhood like this sustains multiple competing counters instead of one dominant outlet.
+Camp generates steady print volume from three overlapping streams. Court and government offices around Camp PMC Stand require attested copies of FIRs, affidavits, and property papers throughout the week. Back-office staff in the older commercial buildings need last-minute contract reprints, ID card reissues, and board-meeting binders. The resident population adds household demand  --  school project colour pages, ration card xeroxes, and Aadhaar updates  --  particularly around 411001 during evenings and weekends. The 5 listed print shops across these pin codes handle that combined load daily, which is why even a basic neighbourhood like this sustains multiple competing counters instead of one dominant outlet.
 
 ## What people typically print here
 

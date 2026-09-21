@@ -48,7 +48,7 @@ export default function PseoPage({
 
   // City name for the "View on Maps" search query. City pages are their own
   // city; area/college pages pass it explicitly (resolved via getCityName,
-  // which — unlike the presence-gated parentCity cross-link — always
+  // which  --  unlike the presence-gated parentCity cross-link  --  always
   // returns a name even for a college/area whose parent city isn't
   // published yet as its own pSEO page).
   const cityName = props.kind === "city" ? props.city.name : props.cityName;

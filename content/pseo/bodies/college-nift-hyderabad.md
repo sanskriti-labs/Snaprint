@@ -17,11 +17,11 @@ Raidurgam is close to the Hyderabad Metro's Gachibowli-area stations, with the w
 
 ## Why printing demand is high here
 
-Design coursework at NIFT generates print needs unlike most colleges — portfolio prints, design boards, technical flats, and mood boards, often in colour and sometimes at sizes beyond standard A4. This demand concentrates hard around review and jury weeks, when students need multiple polished copies of project work ready for presentation. Outside jury season, routine assignment and documentation printing adds a steadier baseline of demand.
+Design coursework at NIFT generates print needs unlike most colleges  --  portfolio prints, design boards, technical flats, and mood boards, often in colour and sometimes at sizes beyond standard A4. This demand concentrates hard around review and jury weeks, when students need multiple polished copies of project work ready for presentation. Outside jury season, routine assignment and documentation printing adds a steadier baseline of demand.
 
 ## What people typically print here
 
-Colour portfolio prints, design boards, and technical garment-flat sheets are the signature orders here, often requiring higher-quality colour output than a standard B&W photocopy shop provides. Around jury and review weeks, demand spikes for mounting, lamination, and multiple presentation-ready copies. Routine coursework — assignment printouts, project documentation, and general paperwork — fills in the rest of the semester.
+Colour portfolio prints, design boards, and technical garment-flat sheets are the signature orders here, often requiring higher-quality colour output than a standard B&W photocopy shop provides. Around jury and review weeks, demand spikes for mounting, lamination, and multiple presentation-ready copies. Routine coursework  --  assignment printouts, project documentation, and general paperwork  --  fills in the rest of the semester.
 
 ## How Snaprint fits in
 

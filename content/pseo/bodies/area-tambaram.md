@@ -21,7 +21,7 @@ The combination of a large daily floating population and steady residential dens
 
 ## What people typically print here
 
-Exam-oriented work dominates student orders — spiral-bound notes, project reports with colour graphs, and last-minute question paper sets that need to be punched and ready for submission. At the government-office end, Aadhaar and PAN applications, affidavits, and rental agreements are the daily bread, often on stamp paper that customers bring themselves. Shopkeepers say wedding invitations and short-run visiting cards spike around the November wedding season, while lamination jobs for old family photos pick up around school annual day events.
+Exam-oriented work dominates student orders  --  spiral-bound notes, project reports with colour graphs, and last-minute question paper sets that need to be punched and ready for submission. At the government-office end, Aadhaar and PAN applications, affidavits, and rental agreements are the daily bread, often on stamp paper that customers bring themselves. Shopkeepers say wedding invitations and short-run visiting cards spike around the November wedding season, while lamination jobs for old family photos pick up around school annual day events.
 
 ## How Snaprint fits in
 

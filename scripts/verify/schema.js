@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * JSON-LD structured-data checker — runs against built HTML output
+ * JSON-LD structured-data checker  --  runs against built HTML output
  * (.next/server/app/**\/*.html), not source, so it catches what actually
  * ships: malformed JSON, wrong/missing @type fields, and the specific
  * regression this repo has already shipped once (a directory hub page
- * with zero JSON-LD at all — see commit 9546955).
+ * with zero JSON-LD at all  --  see commit 9546955).
  *
  * Run via `pnpm verify:schema`. Requires a prior `next build`.
  *
@@ -15,7 +15,7 @@
  *      1..N with no gaps/dupes, and every item has name + item (URL).
  *   4. Every /print-near/<slug> and /instant-print/<slug> detail page
  *      (i.e. not the /print-near or /instant-print hub itself) carries a
- *      BreadcrumbList node — these are the pages one level deep in the
+ *      BreadcrumbList node  --  these are the pages one level deep in the
  *      hierarchy, so a missing breadcrumb here is a real regression, not
  *      a design choice (home/pricing/franchise are intentionally flat).
  *   5. FAQPage nodes: mainEntity is non-empty, and every entry has a
@@ -43,7 +43,7 @@ function walkHtmlFiles(dir) {
 }
 
 if (!statSync(APP_DIR, { throwIfNoEntry: false })) {
-  fail(`${APP_DIR} not found — run "next build" before "verify:schema"`);
+  fail(`${APP_DIR} not found  --  run "next build" before "verify:schema"`);
   process.exit(1);
 }
 

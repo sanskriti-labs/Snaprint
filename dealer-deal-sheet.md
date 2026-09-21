@@ -1,4 +1,4 @@
-# Snaprint × Epson Dealer — Deal Sheet
+# Snaprint × Epson Dealer  --  Deal Sheet
 ### Internal Working Document | Version 1 | Aug 2026
 
 ---
@@ -10,17 +10,17 @@ Students scan a QR on the screen with their phone → upload a file (PDF, Word, 
 pay via any UPI app → collect prints in under 60 seconds. No app download needed.
 
 **Key product facts:**
-- Works with any printer brand (Canon, HP, Epson, Brother — no lock-in)
+- Works with any printer brand (Canon, HP, Epson, Brother  --  no lock-in)
 - Files are end-to-end encrypted and auto-deleted after printing
 - Shop owner keeps 90% of every rupee printed; Snaprint takes a small platform fee
 - Managed from the shop owner's phone (live dashboard: revenue, print counts, ink/paper status)
-- Orders queue automatically — shop runs itself, with or without the owner present
+- Orders queue automatically  --  shop runs itself, with or without the owner present
 - 15.6″ touch display, 2000-sheet capacity
 - Installation handled by Epson engineers (they earn 5% commission per kiosk from Snaprint)
 
 **What the xerox shop owner is buying:**
 Not a machine. They're buying a system that turns their existing shop into a 24/7
-digital print hub — without replacing their printer, without hiring extra staff,
+digital print hub  --  without replacing their printer, without hiring extra staff,
 and without taking any per-print commission cut beyond the platform fee.
 
 ---
@@ -38,7 +38,7 @@ and without taking any per-print commission cut beyond the platform fee.
 Payment terms: **75% upfront (₹1,12,500) → 25% on delivery (₹37,500)**
 
 The xerox shop owner pays the dealer separately for the Epson printer
-(approximately ₹90,000 — dealer's discretion on final price).
+(approximately ₹90,000  --  dealer's discretion on final price).
 
 **Estimated total the xerox shop owner pays: ~₹2,30,000**
 
@@ -66,12 +66,12 @@ The xerox shop owner pays the dealer separately for the Epson printer
 - 6-month warranty from Snaprint side (faults caused by Snaprint's side)
 
 ### Bonuses (add-value, not discounts)
-1. **Ready-to-use pitch kit** — printed cards + WhatsApp PDF the dealer can send to shop owners. Addresses: "what do I say when the shop owner asks what this is?"
-2. **College footfall survey data pack** — evidence that students near xerox shops already want this
-3. **Co-branded Snaprint + dealer signage** for installed shops — dealer builds local authority
+1. **Ready-to-use pitch kit**  --  printed cards + WhatsApp PDF the dealer can send to shop owners. Addresses: "what do I say when the shop owner asks what this is?"
+2. **College footfall survey data pack**  --  evidence that students near xerox shops already want this
+3. **Co-branded Snaprint + dealer signage** for installed shops  --  dealer builds local authority
 4. **First 3 units: free on-site installation training** for dealer's own staff
-5. **Territory lock** — no other authorised Snaprint dealer in their pincode/city
-6. **Priority WhatsApp support line** — direct to Snaprint team, not a call centre
+5. **Territory lock**  --  no other authorised Snaprint dealer in their pincode/city
+6. **Priority WhatsApp support line**  --  direct to Snaprint team, not a call centre
 
 ---
 
@@ -90,7 +90,7 @@ Present it as a simple calculator:
 
 ---
 
-## LOGISTICS FLOW (as understood — needs confirmation)
+## LOGISTICS FLOW (as understood  --  needs confirmation)
 
 ```
 1. Xerox shop owner agrees to buy (sold by dealer)
@@ -104,7 +104,7 @@ Present it as a simple calculator:
 ```
 
 > ⚠️ **OPEN QUESTION (critical):** Who handles last-mile delivery of the kiosk?
-> "Dealer collects from Snaprint" — confirm: does the dealer pick up from Snaprint's location,
+> "Dealer collects from Snaprint"  --  confirm: does the dealer pick up from Snaprint's location,
 > or does Snaprint ship to the dealer? Who bears that cost?
 
 ---
@@ -113,7 +113,7 @@ Present it as a simple calculator:
 
 ### Money & margins
 - [ ] Does the 5% Epson commission come out of dealer's margin or is it Snaprint's cost?
-- [ ] Volume pricing — should ₹1,50,000 drop at 5+ units? By how much?
+- [ ] Volume pricing  --  should ₹1,50,000 drop at 5+ units? By how much?
 - [ ] What happens if a dealer wants to deploy 10 units across their network?
       Do they pay 75% on all 10 upfront, or can this be staggered?
 
@@ -125,19 +125,19 @@ Present it as a simple calculator:
 - [ ] Who does the dealer call?
 
 ### Logistics
-- [ ] Who physically delivers the kiosk — dealer picks up or Snaprint ships?
+- [ ] Who physically delivers the kiosk  --  dealer picks up or Snaprint ships?
 - [ ] Who coordinates with Epson for installation timing?
 - [ ] Is there a lead time between dealer order and kiosk delivery?
 
 ### Product scope
 - [ ] Software updates after 2 years: what exactly is chargeable?
-      "New features" — can you define what this means so dealers can explain it?
+      "New features"  --  can you define what this means so dealers can explain it?
 - [ ] Is there a minimum software support commitment from Snaprint side,
       or can support be withdrawn at any time?
 
 ### Territory & exclusivity
 - [ ] What exactly does "exclusive city or pincode" mean contractually?
-- [ ] What happens if a dealer goes inactive — does Snaprint reclaim the territory?
+- [ ] What happens if a dealer goes inactive  --  does Snaprint reclaim the territory?
 - [ ] Can a dealer sell Snaprint outside their territory?
 
 ### The xerox shop owner
@@ -155,13 +155,13 @@ Territory: Exclusive. Support: Direct. Growth: Recurring.
 
 ---
 
-## WHAT DEALERS WILL ASK (predicted — answer these before the meeting)
+## WHAT DEALERS WILL ASK (predicted  --  answer these before the meeting)
 
 **1. "Will my xerox shop customers actually use this?"**
 → Have the college footfall survey data ready. Also: every xerox shop owner already has students WhatsApp-ing files. Snaprint just captures that untracked revenue.
 
 **2. "What if the machine breaks and nobody fixes it?"**
-→ You need a clear answer here. "Snaprint handles all hardware queries via priority WhatsApp. On-site visits priced at cost + ₹X" — whatever that number is.
+→ You need a clear answer here. "Snaprint handles all hardware queries via priority WhatsApp. On-site visits priced at cost + ₹X"  --  whatever that number is.
 
 **3. "What margin do I actually make per unit?"**
 → You need to show this with real numbers. At ₹2,30,000 to the shop owner (₹90K printer + ₹1,40K kiosk), dealer's margin on the kiosk alone is the difference. Show the math clearly.
@@ -174,5 +174,5 @@ Territory: Exclusive. Support: Direct. Growth: Recurring.
 
 ---
 
-*Document status: Draft — confirm all open questions before using in dealer conversations.*
+*Document status: Draft  --  confirm all open questions before using in dealer conversations.*
 *Next step: Resolve all [ ] items above, then convert to one-page dealer pitch.*

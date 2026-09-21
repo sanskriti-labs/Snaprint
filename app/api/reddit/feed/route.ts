@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { RedditPost, RedditFeedResult } from "@/lib/reddit";
 
-export const revalidate = 300; // 5 min — community feed doesn't need to be real-time
+export const revalidate = 300; // 5 min  --  community feed doesn't need to be real-time
 
 // Reddit throttles/blocks requests without a descriptive User-Agent. Format
 // follows Reddit's own recommendation: "platform:app-id:version (by /u/user)".

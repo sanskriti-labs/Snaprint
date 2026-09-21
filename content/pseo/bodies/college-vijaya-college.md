@@ -13,7 +13,7 @@ Vijaya College sits inside the older, education-saturated pocket of Basavanagudi
 
 ## Getting here and around
 
-The closest metro station is National College on the Green Line, roughly a ten-minute walk downhill, and most students prefer the bus — the 201, 210, and K2 series route along Bull Temple Road and Kempegowda Bus Stand, stopping within a hundred metres of the main gate. Cycle is common, and parking is limited; the narrow one-ways around the college discourage two-wheelers from lingering. Most students walk between the reading rooms, canteens, and the print shops clustered along the parallel lanes.
+The closest metro station is National College on the Green Line, roughly a ten-minute walk downhill, and most students prefer the bus  --  the 201, 210, and K2 series route along Bull Temple Road and Kempegowda Bus Stand, stopping within a hundred metres of the main gate. Cycle is common, and parking is limited; the narrow one-ways around the college discourage two-wheelers from lingering. Most students walk between the reading rooms, canteens, and the print shops clustered along the parallel lanes.
 
 ## Why printing demand is high here
 

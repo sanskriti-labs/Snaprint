@@ -6,12 +6,12 @@ import DesktopRegisterForm from "@/components/DesktopRegisterForm";
 const siteUrl = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  title: "Snaprint Desktop — Free Software for Xerox Shop Owners",
+  title: "Snaprint Desktop  --  Free Software for Xerox Shop Owners",
   description:
     "Snaprint Desktop is a free Windows app that helps existing print shop owners capture more revenue from remote and after-hours orders. Register free.",
   alternates: { canonical: "/register" },
   openGraph: {
-    title: "Snaprint Desktop — Free for Xerox Shop Owners",
+    title: "Snaprint Desktop  --  Free for Xerox Shop Owners",
     description:
       "A free Windows app that helps existing print shop owners capture more revenue from orders they're currently missing.",
     url: `${siteUrl}/register`,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snaprint Desktop — Free for Xerox Shop Owners",
+    title: "Snaprint Desktop  --  Free for Xerox Shop Owners",
     description:
       "A free Windows app that helps existing print shop owners capture more revenue from orders they're currently missing.",
     images: [`${siteUrl}/og.png`],
@@ -34,7 +34,7 @@ const benefits = [
   },
   {
     title: "Capture remote orders",
-    body: "Turn the WhatsApp-a-PDF-and-collect-later pattern into a tracked, paid order — instead of something you remember to do during a rush.",
+    body: "Turn the WhatsApp-a-PDF-and-collect-later pattern into a tracked, paid order  --  instead of something you remember to do during a rush.",
   },
   {
     title: "Free during the pilot",
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "Do I need to buy new hardware?",
-    a: "No. Snaprint Desktop installs on the Windows PC you already use at your shop counter and works with your existing printer — no dedicated kiosk hardware required.",
+    a: "No. Snaprint Desktop installs on the Windows PC you already use at your shop counter and works with your existing printer  --  no dedicated kiosk hardware required.",
   },
   {
     q: "What happens after I register?",
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: "How is this different from a Snaprint kiosk?",
-    a: "A kiosk is dedicated self-service hardware installed in your shop. Snaprint Desktop is software only, running on your existing PC — a lighter-weight way to capture more of your shop's remote and after-hours orders.",
+    a: "A kiosk is dedicated self-service hardware installed in your shop. Snaprint Desktop is software only, running on your existing PC  --  a lighter-weight way to capture more of your shop's remote and after-hours orders.",
   },
 ];
 
@@ -122,12 +122,12 @@ export default function RegisterPage() {
                 className="mb-6 font-display font-extrabold leading-[1.0] tracking-[-3px] text-[#111110]"
                 style={{ fontSize: "clamp(40px, 5.5vw, 68px)" }}
               >
-                Snaprint Desktop —<br />
+                Snaprint Desktop  -- <br />
                 <span className="text-[#E63946]">free software</span> for your shop.
               </h1>
               <p className="mb-8 max-w-[520px] font-body text-[17px] font-light leading-[1.78] text-[#6B6B66]">
-                A Windows app that runs on the PC you already have at your counter — no new hardware,
-                no cost. It helps you capture the remote and after-hours print orders your shop is
+                A Windows app that runs on the PC you already have at your counter  --  no new hardware,
+                no cost. Snaprint Desktop is xerox shop software built for print shop owners who want to capture the remote and after-hours print orders their shop is
                 currently missing. Register below and the team will set you up.
               </p>
 

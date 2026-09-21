@@ -17,11 +17,11 @@ The Dilsukhnagar metro station on the Red Line drops passengers within a five-mi
 
 ### ## Why printing demand is high here
 
-The stretch runs on paperwork. Coaching institutes along Main Road hand out weekly assignments that need spiral binding, while nearby government offices — the RTO, MeeSeva centres, and a passport seva point — push residents into xerox shops for Aadhaar copies, PAN forms, and notarised affidavits. Marriage season doubles the load between November and February, when families arrive with bundle after bundle of invitations, photographs, and wedding CDs to be laminated and bound overnight. Twenty listed counters handle this surge, and 17 of them carry enough goodwill to average 4.3 stars across user reviews.
+The stretch runs on paperwork. Coaching institutes along Main Road hand out weekly assignments that need spiral binding, while nearby government offices  --  the RTO, MeeSeva centres, and a passport seva point  --  push residents into xerox shops for Aadhaar copies, PAN forms, and notarised affidavits. Marriage season doubles the load between November and February, when families arrive with bundle after bundle of invitations, photographs, and wedding CDs to be laminated and bound overnight. Twenty listed counters handle this surge, and 17 of them carry enough goodwill to average 4.3 stars across user reviews.
 
 ### ## What people typically print here
 
-B&W notes and assignment sheets dominate weekday mornings, often in the 30 to 60 page range for BCom and BBA students. Colour prints spike on Saturdays — project cover pages, poster charts, and PowerPoint handouts for Monday seminars. Spiral binding and thermal binding remain the most-requested finishing options, followed by A4 lamination for certificates and ration cards. Scanning jobs, usually for online form uploads, keep shop owners busy through the afternoon lull.
+B&W notes and assignment sheets dominate weekday mornings, often in the 30 to 60 page range for BCom and BBA students. Colour prints spike on Saturdays  --  project cover pages, poster charts, and PowerPoint handouts for Monday seminars. Spiral binding and thermal binding remain the most-requested finishing options, followed by A4 lamination for certificates and ration cards. Scanning jobs, usually for online form uploads, keep shop owners busy through the afternoon lull.
 
 ### ## How Snaprint fits in
 

@@ -18,7 +18,7 @@ export { getShopsNearCollege, getShopsInCity } from "./shops";
 //
 // "live" = kiosk physically present. "served" = no kiosk yet, but we publish
 // the page anyway on the strength of aggregated GMaps shop data (the pSEO
-// directory-first strategy — build topical authority now, the kiosk follows
+// directory-first strategy  --  build topical authority now, the kiosk follows
 // later). Both are published; "planned" is not. Kiosk-specific rendering
 // (JSON-LD hasOfferCatalog/geo/telephone) stays gated on liveLocations
 // directly, not on presence.
@@ -29,10 +29,10 @@ function isPublished(presence: Presence): boolean {
 }
 
 // ---------------------------------------------------------------------------
-// Shared keyword tail — appended to every entity's hand-picked keywords.
+// Shared keyword tail  --  appended to every entity's hand-picked keywords.
 // Covers high-intent directory searches ("open now", "A4 printout") that
 // aren't worth hand-writing per entity. Kiosk/self-service terms stay out
-// until kiosks are actually live in that entity — see the "directory-first"
+// until kiosks are actually live in that entity  --  see the "directory-first"
 // note above.
 // ---------------------------------------------------------------------------
 
@@ -65,7 +65,7 @@ export function getAllAreaSlugs(): Slug[] {
 }
 
 // ---------------------------------------------------------------------------
-// Getters — throws if slug not found; returns null if presence gates apply
+// Getters  --  throws if slug not found; returns null if presence gates apply
 // ---------------------------------------------------------------------------
 
 export function getCity(slug: Slug): City | null {
@@ -88,7 +88,7 @@ export function getCity(slug: Slug): City | null {
  * Display name for a city slug, regardless of presence.
  *
  * getCity() gates on presence: "live", so it returns null for a city that
- * is still planned — which is every city today. Page titles and JSON-LD
+ * is still planned  --  which is every city today. Page titles and JSON-LD
  * still need to render "Bengaluru", not the raw slug "bengaluru", so this
  * resolves the name independently of launch status. Falls back to
  * title-casing the slug for a city not yet in cities.ts.
@@ -113,7 +113,7 @@ export function getCollege(slug: Slug): College | null {
   if (!c) return null;
   if (!isPublished(c.presence)) return null;
   // Guard rail: a live college must have at least one shop in 1.5 km radius
-  // (city-wide shop index — not the area-keyword match). Warn, don't throw:
+  // (city-wide shop index  --  not the area-keyword match). Warn, don't throw:
   // the operator may be flipping presence in advance of a launch announcement.
   if (c.lat != null && c.lng != null) {
     const nearby = getShopsNearCollege(c.slug);
@@ -165,7 +165,7 @@ export function getNeighborCities(citySlug: Slug): City[] {
 }
 
 // ---------------------------------------------------------------------------
-// Structured data — BreadcrumbList
+// Structured data  --  BreadcrumbList
 // ---------------------------------------------------------------------------
 
 type BreadcrumbHub = { name: string; path: string };
@@ -173,7 +173,7 @@ type BreadcrumbHub = { name: string; path: string };
 /**
  * Builds a schema.org BreadcrumbList for an entity page. Inserts the parent
  * city as its own crumb only when that city actually resolves via getCity()
- * (i.e. is itself published) — a college/area under a still-`planned` city
+ * (i.e. is itself published)  --  a college/area under a still-`planned` city
  * (Bengaluru today) keeps the shorter Home > Hub > Entity trail instead of
  * linking to a page that would 404. Once that city ships, every one of its
  * entity pages picks up the extra crumb automatically, no per-page edits.

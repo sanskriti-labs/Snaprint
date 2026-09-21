@@ -5,8 +5,9 @@ import Footer from "@/components/Footer";
 import { getAllPostsMeta } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Guides on instant printing, xerox shop business, and Snaprint kiosk franchises in India.",
+  title: "Snaprint Blog  --  Print Kiosk & Shop Owner Guides",
+  description:
+    "Guides on self-service print kiosks, xerox shop software, running a print shop, and Snaprint kiosk franchises in India. For shop owners and business buyers.",
   alternates: { canonical: "/blog" },
 };
 

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-const title = "Self-Service Printing Kiosk — Colleges, Offices & Hospitals";
+const title = "Self-Service Printing Kiosk  --  Colleges & Hospitals";
 const description =
-  "Snaprint is a self-service printing kiosk / automated print station for India — QR upload, UPI payment, unattended 24/7 printing for colleges, offices, hospitals.";
+  "Snaprint is a self-service printing kiosk / automated print station for India  --  QR upload, UPI payment, unattended 24/7 printing for colleges, offices, hospitals.";
 
 export const metadata: Metadata = {
   title,

@@ -89,7 +89,7 @@ export default function CommunityFeed() {
               Reddit's taking a moment to respond.
             </p>
             <p className="mb-6 max-w-[360px] font-body text-[13.5px] font-light text-[#6B6B66]">
-              The live feed couldn't load just now — the community itself is still very much there.
+              The live feed couldn't load just now  --  the community itself is still very much there.
             </p>
             <a
               href={REDDIT_SUBREDDIT_URL}

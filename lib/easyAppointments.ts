@@ -32,7 +32,7 @@ let cachedServiceId: number | null = null;
 // Providers (with display names) that are linked to the booking service.
 // Cached after the first resolve so we don't re-list providers on every
 // availability check. EA's /availabilities endpoint only accepts a single
-// numeric providerId — `0` is treated as a literal id (causes 500) — so we
+// numeric providerId  --  `0` is treated as a literal id (causes 500)  --  so we
 // fan out per-provider and merge.
 let cachedProviders: AvailableProvider[] | null = null;
 
@@ -146,7 +146,7 @@ async function upsertCustomer(input: {
   email: string;
   phone: string;
 }): Promise<number> {
-  // Try to find an existing customer by email first — EA /customers?search=
+  // Try to find an existing customer by email first  --  EA /customers?search=
   // returns matching records. If none, POST a new one.
   const searchUrl = new URL(`${EA_BASE_URL}/index.php/api/v1/customers`);
   searchUrl.searchParams.set("search", input.email);

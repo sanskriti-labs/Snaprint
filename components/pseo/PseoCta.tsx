@@ -36,7 +36,7 @@ export default function PseoCta() {
         </h2>
 
         <p className="mx-auto mb-10 max-w-[420px] font-body text-[15px] font-light leading-[1.75] text-[rgba(255,255,255,0.38)]">
-          Contact the Snaprint team to explore partnership options — no commitment required.
+          Contact the Snaprint team to explore partnership options  --  no commitment required.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">

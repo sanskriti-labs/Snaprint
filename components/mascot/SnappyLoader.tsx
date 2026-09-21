@@ -10,7 +10,7 @@ const SESSION_KEY = "snappy-loader-seen";
 export default function SnappyLoader() {
   // Homepage-only intro: it's staged around the hero's 3D kiosk model, so it
   // has no business appearing on other routes. The brochure CTA in Hero.tsx
-  // opens in a new tab via target="_blank" rel="noopener" — `noopener` cuts
+  // opens in a new tab via target="_blank" rel="noopener"  --  `noopener` cuts
   // the browsing-context link sessionStorage normally rides on, so that new
   // tab used to see a blank session and treat itself as "first visit,"
   // replaying the loader on the brochure page instead of the homepage.
@@ -19,7 +19,7 @@ export default function SnappyLoader() {
   const isHome = pathname === "/";
 
   // Defaults to visible (on the homepage only) so the very first paint
-  // (server-rendered HTML, before any JS runs) already shows the cover —
+  // (server-rendered HTML, before any JS runs) already shows the cover  -- 
   // sessionStorage can't be read during SSR, so starting at `false` here
   // meant the raw page was genuinely visible for however long hydration
   // took, before this ever flipped true.
@@ -28,14 +28,14 @@ export default function SnappyLoader() {
   const [ready, setReady] = useState(false);
   // True for the "already seen this session" / reduced-motion paths, where
   // hiding should be instant. Without this, AnimatePresence still plays the
-  // full 0.9s exit slide-up even though setVisible(false) fires immediately —
+  // full 0.9s exit slide-up even though setVisible(false) fires immediately  -- 
   // the overlay (frozen at 0%, since the tick loop never ran) would sit on
   // screen for that whole 0.9s before sliding away, reading as "stuck".
   const [instant, setInstant] = useState(false);
   const startedRef = useRef(false);
 
   useLayoutEffect(() => {
-    // Once per browser session — repeat visits and internal navigation don't
+    // Once per browser session  --  repeat visits and internal navigation don't
     // replay the loader, only the first paint of a fresh session.
     // useLayoutEffect (not useEffect) so the hide-immediately path below
     // resolves before the browser's next paint, not after it.
@@ -43,7 +43,7 @@ export default function SnappyLoader() {
     // React Strict Mode (enabled in next.config.mjs) double-invokes this
     // effect in dev. Since sessionStorage is external mutable state, the
     // second invocation used to see SESSION_KEY already set (written by the
-    // first) and immediately call setVisible(false) mid-animation — the
+    // first) and immediately call setVisible(false) mid-animation  --  the
     // progress bar would freeze at whatever % it reached before that second
     // invocation ran, instead of completing. startedRef guards against this:
     // it's local to this component instance, so the second Strict Mode
@@ -72,7 +72,7 @@ export default function SnappyLoader() {
     const start = performance.now();
     // Long enough to cover the homepage's actual first paint (hero + 3D
     // kiosk model) instead of a fixed short timer that lifts before those
-    // are ready — at 900ms the curtain used to open onto an unfinished,
+    // are ready  --  at 900ms the curtain used to open onto an unfinished,
     // still-shifting layout ("chaos") rather than the settled homepage.
     // 2900ms here + the 420ms ready-hold + the 900ms exit slide below adds
     // up to ~4.2s total on-screen time.
@@ -99,7 +99,7 @@ export default function SnappyLoader() {
   // when sessionStorage already has SESSION_KEY. Without that, the server
   // always renders this overlay frozen at 0% (SSR can't read sessionStorage),
   // and on every repeat page load the real page sits behind it, visible at
-  // 0%, until hydration finishes — in dev that can take seconds, reading as
+  // 0%, until hydration finishes  --  in dev that can take seconds, reading as
   // "the progress bar is stuck at 0".
   return (
     <div id="snappy-loader-root">

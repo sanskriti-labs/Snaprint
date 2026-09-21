@@ -13,7 +13,7 @@ LB Nagar sits at the southeastern edge of Hyderabad where the old Karimnagar hig
 
 ## Getting here and around
 
-The LB Nagar Metro station is the single biggest anchor — it's the terminal stop on the Red Line, pulling commuters from across the city and dropping them straight into the commercial cluster below. RTC bus routes fan out from the junction toward Dilsukhnagar, Uppal, and Saroornagar, while auto-rickshaws handle the last-mile trips into the interior colonies. Parking is a familiar headache here, especially around the market lanes, so most regulars walk between errands once they're off the main road.
+The LB Nagar Metro station is the single biggest anchor  --  it's the terminal stop on the Red Line, pulling commuters from across the city and dropping them straight into the commercial cluster below. RTC bus routes fan out from the junction toward Dilsukhnagar, Uppal, and Saroornagar, while auto-rickshaws handle the last-mile trips into the interior colonies. Parking is a familiar headache here, especially around the market lanes, so most regulars walk between errands once they're off the main road.
 
 ## Why printing demand is high here
 

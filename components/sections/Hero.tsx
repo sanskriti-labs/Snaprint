@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 // Static import, not next/dynamic: this component needs a ref for the GSAP
-// scroll-pin rotation sync (machineRef.current?.setExternalRotation below) —
+// scroll-pin rotation sync (machineRef.current?.setExternalRotation below)  -- 
 // next/dynamic's wrapper doesn't forward refs, which silently broke that.
 import Machine3D, { type Machine3DHandle } from "@/components/Machine3D";
 import Snappy from "@/components/mascot/Snappy";
@@ -16,10 +16,10 @@ import { gsap, registerGsap, prefersReducedMotion } from "@/lib/motion";
  * Minimal, light, centered hero. Badge + a small one-line headline + two CTAs
  * sit in normal flow up top; the product is the scroll story. At rest only
  * the top half of the kiosk is visible (cropped by the pinned panel's bottom
- * edge) at a smaller scale — small → medium → full as the pinned section
+ * edge) at a smaller scale  --  small → medium → full as the pinned section
  * scrolls past, then it settles at rest, fully visible, and stays directly
  * draggable (single-dot touch rotation, see Machine3D.tsx). No dark cinematic
- * staging, no huge display type — the reveal is the only spectacle here.
+ * staging, no huge display type  --  the reveal is the only spectacle here.
  */
 export default function Hero() {
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -42,7 +42,7 @@ export default function Hero() {
   }, []);
 
   // The mascot only starts nudging toward the franchise info once the
-  // visitor has actually picked up and dragged the kiosk — it shouldn't
+  // visitor has actually picked up and dragged the kiosk  --  it shouldn't
   // compete with discovering that the product itself is interactive. Once
   // unlocked, it pulses on a fixed cadence: visible 5s, hidden 3s, repeat.
   // Skipped under reduced motion, matching every other flourish in this file.
@@ -78,13 +78,13 @@ export default function Hero() {
     const isMobile = window.innerWidth < 768;
 
     registerGsap();
-    // Straight-on, not angled — the hero reveal shows the kiosk facing the
+    // Straight-on, not angled  --  the hero reveal shows the kiosk facing the
     // viewer dead-on the whole time; any 3D angling only happens once the
     // user takes over via drag.
     const rot = { y: 0, x: 0 };
 
     const ctx = gsap.context(() => {
-      // Rest state: small, cropped by the panel's bottom edge — "half kiosk"
+      // Rest state: small, cropped by the panel's bottom edge  --  "half kiosk"
       gsap.set(kiosk, { opacity: 0, scale: 0.5, yPercent: 12 });
       gsap.to(kiosk, { opacity: 1, duration: 0.8, delay: 0.3, ease: "power2.out" });
 
@@ -102,14 +102,14 @@ export default function Hero() {
 
       // small → close-up → normal: rise into view steadily over the whole
       // scroll range, but the zoom punches in past the resting scale at the
-      // midpoint, then eases back out to settle — a camera move, not just a
+      // midpoint, then eases back out to settle  --  a camera move, not just a
       // linear grow. Mobile gets a gentler punch (1.18 vs 1.4) since the
       // narrower viewport makes the desktop overshoot feel like clipping.
       tl.to(kiosk, { yPercent: 0, duration: 1 }, 0);
       tl.to(kiosk, { scale: isMobile ? 1.18 : 1.4, duration: 0.5, ease: "power2.out" }, 0);
       tl.to(kiosk, { scale: 1.08, duration: 0.5, ease: "power2.inOut" }, 0.5);
 
-      // The copy above gets out of the way early — fully hidden by a third of
+      // The copy above gets out of the way early  --  fully hidden by a third of
       // the way through the scroll, well before the kiosk finishes climbing
       // into view, so it never lingers behind/beside the product.
       if (textColRef.current) {
@@ -124,7 +124,7 @@ export default function Hero() {
   return (
     <div ref={wrapperRef} className="relative h-[160vh] md:h-[220vh]">
       <div ref={pinRef} className="relative h-[820px] w-full overflow-hidden bg-paper md:h-screen">
-        {/* Hero backdrop — the illustrated pastel scene, with a soft white wash
+        {/* Hero backdrop  --  the illustrated pastel scene, with a soft white wash
             over the top where the badge/headline/CTAs sit so they stay legible
             without flattening the artwork lower down. */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -136,7 +136,7 @@ export default function Hero() {
         </div>
 
         <div ref={textColRef} className="relative z-10 mx-auto flex max-w-grid flex-col items-center px-gutter pt-[92px] text-center sm:pt-[100px]">
-          {/* Badge — liquid glass */}
+          {/* Badge  --  liquid glass */}
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -149,8 +149,8 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* Headline — small, one line, no supporting paragraph below it */}
-          <h1 className="mb-8 max-w-[560px] font-display text-heading font-bold leading-[1.15] text-charcoal">
+          {/* Headline  --  small, one line, no supporting paragraph below it */}
+          <h1 className="mb-6 max-w-[560px] font-display text-heading font-bold leading-[1.15] text-charcoal">
             <RevealText split="word" trigger="load" delay={0.1}>
               Your shop.
             </RevealText>{" "}
@@ -161,6 +161,10 @@ export default function Hero() {
               you sleep.
             </RevealText>
           </h1>
+
+          <p className="mb-10 max-w-[480px] font-body text-[15px] font-light leading-[1.7] text-[#6B6B66]">
+            A self-service print kiosk for your shop  --  QR upload, UPI payment, and unattended 24/7 operation. Snaprint turns an existing xerox or stationery counter into a self printing kiosk that takes orders from any phone, any time.
+          </p>
 
           {/* CTAs */}
           <motion.div
@@ -188,7 +192,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Product — starts small and cropped by the panel's bottom edge
+        {/* Product  --  starts small and cropped by the panel's bottom edge
             (half visible), grows and rises into full view as the pinned
             section scrolls past, then stays put and directly draggable.
             Anchored via plain `absolute bottom-0` layout (not flex/margin
@@ -201,12 +205,12 @@ export default function Hero() {
             </div>
             {/* On mobile, the interactive Machine3D hit-box (760*scale px wide, a
                 fixed size unrelated to viewport) is much wider than the screen and
-                overflows both edges equally while staying centered — so anchoring
+                overflows both edges equally while staying centered  --  so anchoring
                 to its real "-right-8" edge landed off-screen, clipped invisible by
                 the hero's overflow-hidden. `left-1/2` anchors to that box's own
                 center instead, which (because the overflow is symmetric) always
                 coincides with the actual viewport center, then a fixed px offset
-                nudges it into the visible right side. Desktop is unaffected —
+                nudges it into the visible right side. Desktop is unaffected  -- 
                 `sm:` restores the original edge-anchored position, since the box
                 doesn't overflow there. */}
             <div className="absolute bottom-8 left-1/2 translate-x-[calc(-50%+130px)] sm:left-auto sm:right-[-2rem] sm:translate-x-0">

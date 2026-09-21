@@ -4,7 +4,7 @@ import Hero from "@/components/sections/Hero";
 import Footer from "@/components/Footer";
 
 // Below-the-fold sections: deferred so their JS (incl. framer-motion) doesn't
-// block initial paint of the hero — this was the render-blocking bundle
+// block initial paint of the hero  --  this was the render-blocking bundle
 // PageSpeed flagged (109 KiB unused JS on first load).
 const Problem = dynamic(() => import("@/components/sections/Problem"));
 const HowItWorks = dynamic(() => import("@/components/sections/HowItWorks"));
@@ -17,7 +17,7 @@ const CtaFinal = dynamic(() => import("@/components/sections/CtaFinal"));
 const SITE_URL = "https://snaprints.com";
 
 // Product/WebApplication/kiosk-FAQ schema lives here (not root layout) so it
-// only describes the Snaprint S1 on the page that's actually about it — PSEO
+// only describes the Snaprint S1 on the page that's actually about it  --  PSEO
 // directory pages (print-near/*, instant-print/*) were surfacing the kiosk
 // price in search snippets for pages about unrelated third-party xerox shops.
 const jsonLd = {

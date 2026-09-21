@@ -6,7 +6,7 @@ import RevealText from "@/components/motion/RevealText";
 
 // ── The customer print-app flow from the design mockup (Snaprint Mockups 1e).
 // Six screens: Connect → Add files → Settings → Pay → Printing → Collect.
-// Static showcase (not a working app). Per-page prices are illustrative — each
+// Static showcase (not a working app). Per-page prices are illustrative  --  each
 // operator sets their own and keeps 100% of it.
 
 function Phone({ step, of, back, children }: { step: number; of: number; back?: string; children: ReactNode }) {

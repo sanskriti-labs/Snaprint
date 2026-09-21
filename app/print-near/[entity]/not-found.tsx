@@ -32,7 +32,7 @@ export default function PrintNearNotFound() {
             Contact us
           </a>
         </div>
-        <AgentRecoveryLinks extraLink={{ href: "/print-near", label: "/print-near — directory of all listed areas" }} />
+        <AgentRecoveryLinks extraLink={{ href: "/print-near", label: "/print-near  --  directory of all listed areas" }} />
       </main>
       <Footer />
     </>

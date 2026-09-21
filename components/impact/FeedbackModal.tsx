@@ -5,7 +5,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { FEEDBACK_CATEGORIES, buildRedditSubmitUrl, type FeedbackCategoryId } from "@/lib/reddit";
 
 /**
- * "Share your thoughts" — category picker, then an optional inline title
+ * "Share your thoughts"  --  category picker, then an optional inline title
  * before handing off to Reddit's real submit page (pre-filled via `title`).
  * We never claim to post on the visitor's behalf: this is the beautiful
  * fallback the spec calls for, not a simulation of in-page posting.
@@ -43,7 +43,7 @@ export default function FeedbackModal({ trigger }: { trigger: ReactNode }) {
                 What do you want to share?
               </Dialog.Title>
               <p className="mb-6 font-body text-[13.5px] text-[#777770]">
-                Pick what fits best — you'll finish on Reddit, in r/Snaprint.
+                Pick what fits best  --  you'll finish on Reddit, in r/Snaprint.
               </p>
               <div className="flex flex-col gap-2">
                 {FEEDBACK_CATEGORIES.map((c) => (
@@ -94,7 +94,7 @@ export default function FeedbackModal({ trigger }: { trigger: ReactNode }) {
                 <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H9M17 7v8" /></svg>
               </a>
               <p className="mt-4 font-body text-[12px] leading-[1.6] text-[#999994]">
-                You'll post as yourself on Reddit — we never submit on your behalf. Want to keep your identity
+                You'll post as yourself on Reddit  --  we never submit on your behalf. Want to keep your identity
                 separate? Reddit accounts can use a username that isn't your real name.
               </p>
             </>

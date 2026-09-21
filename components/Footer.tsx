@@ -11,7 +11,7 @@ const legalLinks = [
   { label: "Refund policy", href: "/refund-policy" },
 ];
 
-/** Click Snappy → it runs a tiny print cycle and slides out a paper slip. A discoverable, one-off easter egg — not repeated elsewhere on the site. */
+/** Click Snappy → it runs a tiny print cycle and slides out a paper slip. A discoverable, one-off easter egg  --  not repeated elsewhere on the site. */
 function SnappySignature() {
   const [state, setState] = useState<SnappyState>("idle");
   const [slip, setSlip] = useState(false);
@@ -38,7 +38,7 @@ function SnappySignature() {
         aria-label="Snappy, click for a surprise"
         className="cursor-pointer transition-transform hover:-translate-y-0.5"
       >
-        {/* scale is a prop on Snappy (real resizing), not a CSS transform — a CSS
+        {/* scale is a prop on Snappy (real resizing), not a CSS transform  --  a CSS
             scale() here would shrink it visually while leaving its full native
             layout box intact, throwing off alignment with the sibling columns. */}
         <Snappy state={state} scale={45 / 150} decorative idleBeat={state === "idle"} />
@@ -130,7 +130,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#F8F7F4] px-6 pb-10 pt-10 md:px-10">
-      {/* Same soft, matte, borderless material as the navbar pill — a floating
+      {/* Same soft, matte, borderless material as the navbar pill  --  a floating
           neumorphic panel rather than a flat bordered block. */}
       <div className="neu-raised-lg mx-auto max-w-[1280px] rounded-[32px] px-6 pb-8 pt-12 sm:px-10 md:px-14">
 

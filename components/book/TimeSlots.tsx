@@ -30,7 +30,7 @@ export function TimeSlots({ slots, selectedTime, onSelect, loading }: TimeSlotsP
   if (slots.length === 0) {
     return (
       <p className="font-body text-[14px] text-snap-gray">
-        No times available that day — try another date.
+        No times available that day  --  try another date.
       </p>
     );
   }

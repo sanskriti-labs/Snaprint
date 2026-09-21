@@ -15,7 +15,7 @@ import { getAllSitePages } from "@/lib/site-urls";
  * by the route, is what actually gets traced and bundled correctly.
  *
  * State: a Redis hash of url -> lastmod from the last successful run
- * (getAllSitePages() gives every page a real, stable lastModified date —
+ * (getAllSitePages() gives every page a real, stable lastModified date  -- 
  * unlike a `new Date()`-at-request-time value, this is safe to diff on).
  */
 

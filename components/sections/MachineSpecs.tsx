@@ -6,7 +6,7 @@ import Machine3D from "@/components/Machine3D";
 import RevealText from "@/components/motion/RevealText";
 
 // Machine3D's hit-box clamps its WIDTH to the column (`maxWidth: "100%"`) but
-// its height is a fixed `680 * scale` px, independent of that clamp — so on a
+// its height is a fixed `680 * scale` px, independent of that clamp  --  so on a
 // narrow mobile column the box stayed just as tall as on desktop while going
 // much narrower, turning into a tall, mostly-empty rectangle instead of the
 // roughly-square desktop box. Shrinking `scale` itself on mobile brings both
@@ -23,7 +23,7 @@ function useMachineScale(desktop: number, mobile: number) {
   return scale;
 }
 
-// Bento cards — benefit-driven, not spec sheets
+// Bento cards  --  benefit-driven, not spec sheets
 const bentoCards = [
   {
     size: "wide",
@@ -162,7 +162,7 @@ export default function MachineSpecs() {
         {/* Machine + Bento layout */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[420px_1fr] lg:gap-16 items-start">
 
-          {/* Machine viewer — left column, sticky */}
+          {/* Machine viewer  --  left column, sticky */}
           <motion.div
             initial={{ opacity: 0, x: -32 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -170,7 +170,7 @@ export default function MachineSpecs() {
             className="lg:sticky lg:top-28 flex flex-col items-center"
           >
             {/* Second placement reuses the same asset in a non-interactive, non-draggable
-                presentation — the hero holds the one live/interactive 3D instance on
+                presentation  --  the hero holds the one live/interactive 3D instance on
                 the page (design-system §7 / craft-review item 8). */}
             <Machine3D vignette interactive={false} scale={machineScale} />
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
@@ -183,7 +183,7 @@ export default function MachineSpecs() {
             </div>
           </motion.div>
 
-          {/* Bento grid — right column */}
+          {/* Bento grid  --  right column */}
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             {bentoCards.map((card, i) => (
               <BentoCard key={card.label} card={card} index={i} inView={inView} />

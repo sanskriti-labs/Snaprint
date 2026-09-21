@@ -17,7 +17,7 @@ The closest metro station is Yelachenahalli on the Green Line, about 4 km away, 
 
 ## Why printing demand is high here
 
-A university the size of Christ generates a near-industrial volume of paper. Assignment submissions, project reports bound in spiral, internship letters, and placement CVs land at print counters the week before every deadline. Add semester exam hall tickets, bonafide certificates, and the constant stream of competitive exam form prints — CAT, MAT, GRE, CMAT — and the 17 shops scattered around the campus fringe stay busy well past ten at night. Pavan Xerox, rated 2.8 stars and a familiar stop for hostel students, is one of the closest listed options near the main gate.
+A university the size of Christ generates a near-industrial volume of paper. Assignment submissions, project reports bound in spiral, internship letters, and placement CVs land at print counters the week before every deadline. Add semester exam hall tickets, bonafide certificates, and the constant stream of competitive exam form prints  --  CAT, MAT, GRE, CMAT  --  and the 17 shops scattered around the campus fringe stay busy well past ten at night. Pavan Xerox, rated 2.8 stars and a familiar stop for hostel students, is one of the closest listed options near the main gate.
 
 ## What people typically print here
 

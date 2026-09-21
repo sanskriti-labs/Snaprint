@@ -14,7 +14,7 @@ Ulsoor is one of the older neighbourhoods in east Bengaluru, sitting just south 
 
 ## Getting here and around
 
-The fastest way in is via the Old Madras Road or the 100 Feet Road, both of which run parallel to the lake. The nearest BMTC bus stops are at Ulsoor Bazaar and the St. Johns Medical College junction — either a 5-minute walk from the inner lanes. The Halasuru metro station on the Purple Line is about a 10-minute walk from the lake side, which is the most useful option for anyone coming from Whitefield or north Bengaluru. Parking is tight inside the bazaar lanes; two-wheelers are a better bet than cars.
+The fastest way in is via the Old Madras Road or the 100 Feet Road, both of which run parallel to the lake. The nearest BMTC bus stops are at Ulsoor Bazaar and the St. Johns Medical College junction  --  either a 5-minute walk from the inner lanes. The Halasuru metro station on the Purple Line is about a 10-minute walk from the lake side, which is the most useful option for anyone coming from Whitefield or north Bengaluru. Parking is tight inside the bazaar lanes; two-wheelers are a better bet than cars.
 
 ## Why printing demand is high here
 
@@ -26,4 +26,4 @@ The day-to-day list at the Ulsoor shop is a B&W-heavy mix: assignment printouts 
 
 ## How Snaprint fits in
 
-Snaprint's kiosk network is designed to add 24/7 self-serve capacity to the listed shops already running in Ulsoor. If you operate a xerox shop here and want to host an S1 kiosk alongside your counter, the [setup page](/book) covers the unit cost, expected footfall, and revenue share. For residents and students, the nearest kiosk is one tap away — visit [print-near ulsoor](/print-near/ulsoor) for directions and the shop list.
+Snaprint's kiosk network is designed to add 24/7 self-serve capacity to the listed shops already running in Ulsoor. If you operate a xerox shop here and want to host an S1 kiosk alongside your counter, the [setup page](/book) covers the unit cost, expected footfall, and revenue share. For residents and students, the nearest kiosk is one tap away  --  visit [print-near ulsoor](/print-near/ulsoor) for directions and the shop list.

@@ -1,4 +1,4 @@
-# Snaprint — snap. scan. print.
+# Snaprint  --  snap. scan. print.
 
 India's instant print network. Built for xerox shop owners.  
 Powered by **Sanskriti Labs**, Bengaluru.
@@ -41,8 +41,8 @@ npm start
 ```
 snaprint/
 ├── app/
-│   ├── layout.tsx          # Root layout — fonts, metadata, globals
-│   ├── page.tsx            # Home page — composes all sections
+│   ├── layout.tsx          # Root layout  --  fonts, metadata, globals
+│   ├── page.tsx            # Home page  --  composes all sections
 │   └── globals.css         # Tailwind base + custom CSS vars
 ├── components/
 │   ├── ui/
@@ -89,14 +89,14 @@ snap-surface     #F5F3EE   → section backgrounds
 ```bash
 # Push to GitHub, then:
 vercel
-# Vercel auto-detects Next.js — zero config needed
+# Vercel auto-detects Next.js  --  zero config needed
 ```
 
 Or connect your GitHub repo in the Vercel dashboard → auto-deploys on every push.
 
 ---
 
-## Before going live — replace these
+## Before going live  --  replace these
 
 | File | Placeholder | Replace with |
 |---|---|---|

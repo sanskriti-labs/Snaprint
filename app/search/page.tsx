@@ -7,16 +7,16 @@ import { getAllCitySlugs, getCity, getAllCollegeSlugs, getCollege, getAllAreaSlu
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "Search Snaprint — pricing, franchise, blog guides, and print shops by city or college across India.",
+  description: "Search Snaprint  --  pricing, franchise, blog guides, and print shops by city or college across India.",
   alternates: { canonical: "/search" },
   robots: { index: false, follow: true },
 };
 
 type Result = { title: string; description: string; href: string };
 
-// Static marketing pages — hand-listed since there's no single index of them.
+// Static marketing pages  --  hand-listed since there's no single index of them.
 const staticPages: Result[] = [
-  { title: "Snaprint — Instant Print Kiosks", description: "Turn your xerox shop into a 24/7 remote printing hub.", href: "/" },
+  { title: "Snaprint  --  Instant Print Kiosks", description: "Turn your xerox shop into a 24/7 remote printing hub.", href: "/" },
   { title: "Pricing", description: "Snaprint S1 kiosk pricing, what's included, and expected ROI for shop owners.", href: "/#pricing" },
   { title: "Franchise", description: "Host a Snaprint self-service print kiosk in your college, hostel, or shop.", href: "/franchise" },
   { title: "About Snaprint", description: "Snaprint is a self-service print kiosk built by Sanskriti Labs in Bengaluru.", href: "/about" },

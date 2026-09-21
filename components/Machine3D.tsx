@@ -3,7 +3,7 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 import Snappy from "@/components/mascot/Snappy";
 
-// ─── INNER CORE — seals the hollow so no gap reveals emptiness ───
+// ─── INNER CORE  --  seals the hollow so no gap reveals emptiness ───
 function Core() {
   const s: React.CSSProperties = { position: "absolute", background: "#1a1a18", borderRadius: 6 };
   return (
@@ -18,7 +18,7 @@ function Core() {
   );
 }
 
-// ─── STEP ICON — mini illustrated device used 3x in the front-panel steps row ───
+// ─── STEP ICON  --  mini illustrated device used 3x in the front-panel steps row ───
 const STEPS: { fillPct: number; label: [string, string] }[] = [
   { fillPct: 0, label: ["scan the", "QR code"] },
   { fillPct: 55, label: ["upload &", "pay via UPI"] },
@@ -64,7 +64,7 @@ function Front() {
       overflow: "hidden",
       boxShadow: "inset 0 0 0 1px rgba(0,0,0,.08),inset 0 1px 0 rgba(255,255,255,.95),inset -1px 0 0 rgba(0,0,0,.05)",
     }}>
-      {/* Header bar — mascot face + wordmark, "PRINT IN 30s" pill */}
+      {/* Header bar  --  mascot face + wordmark, "PRINT IN 30s" pill */}
       <div style={{
         position: "absolute", top: 0, left: 0, width: "100%", height: 32,
         background: "linear-gradient(180deg,#ff6a75 0%,#f0404e 38%,#cd2c39 100%),radial-gradient(130% 70% at 18% -10%,rgba(255,255,255,.5),rgba(255,255,255,0) 62%)",
@@ -109,7 +109,7 @@ function Front() {
       {/* Red separator */}
       <div style={{ position: "absolute", top: 228, left: 0, width: "100%", height: 3, background: "#e63946", zIndex: 2 }} />
 
-      {/* Dark lower chassis — front access door with paper-collect slot */}
+      {/* Dark lower chassis  --  front access door with paper-collect slot */}
       <div style={{
         position: "absolute", top: 231, left: 0, width: "100%", bottom: 0,
         background: "linear-gradient(100deg,#232320 0%,#141412 55%,#080807 100%)",
@@ -158,7 +158,7 @@ function Back() {
   );
 }
 
-// ─── LEFT SIDE — printed mascot decal, "ready to print" ───────────
+// ─── LEFT SIDE  --  printed mascot decal, "ready to print" ───────────
 function LeftSide() {
   return (
     <div style={{
@@ -198,7 +198,7 @@ function LeftSide() {
   );
 }
 
-// ─── RIGHT SIDE — printed mascot decal, "done" state ──────────────
+// ─── RIGHT SIDE  --  printed mascot decal, "done" state ──────────────
 function RightSide() {
   return (
     <div style={{
@@ -217,7 +217,7 @@ function RightSide() {
 
       <div style={{ position: "absolute", left: 46, top: 128, width: 108, height: 150, background: "radial-gradient(ellipse at 50% 42%,rgba(0,0,0,.16),rgba(0,0,0,0) 70%)" }} />
 
-      {/* Printed-vinyl mascot decal — done state */}
+      {/* Printed-vinyl mascot decal  --  done state */}
       <div style={{ position: "absolute", top: 150, left: 56, width: 76, height: 78, filter: "drop-shadow(0 1px 1px rgba(0,0,0,.18))" }}>
         <div style={{ position: "absolute", left: 12, top: 8, width: 52, height: 56, background: "linear-gradient(155deg,#2a2a27,#131311)", borderRadius: 12, boxShadow: "inset 0 0 0 .6px rgba(255,255,255,.14)" }} />
         <div style={{ position: "absolute", left: 12, top: 8, width: 52, height: 22, background: "linear-gradient(180deg,#ff5c68,#e63946 55%,#d0303d)", borderRadius: "12px 12px 0 0" }} />
@@ -281,7 +281,7 @@ function Bottom() {
   );
 }
 
-// ─── STUDIO GLOSS — key light top-left, fill right, rim on the trailing
+// ─── STUDIO GLOSS  --  key light top-left, fill right, rim on the trailing
 //     edge of each face. Purely a lighting overlay: pointer-events none,
 //     sits a fraction of a pixel above each face it lights. ───────────
 function Gloss() {
@@ -318,7 +318,7 @@ function Gloss() {
 
 export interface Machine3DHandle {
   /** Scroll-driven base rotation (degrees). No-ops while the user is actively
-   *  dragging — the touch system owns rotation exclusively while active, and
+   *  dragging  --  the touch system owns rotation exclusively while active, and
    *  this resumes contributing smoothly (no jump) the moment they release,
    *  since it's applied additively on top of whatever the drag left behind. */
   setExternalRotation: (rotY: number, rotX: number) => void;
@@ -332,7 +332,7 @@ interface Machine3DProps {
 
 // ─── MACHINE 3D ──────────────────────────────────────────────────
 // `interactive=false` gives a non-interactive, non-draggable presentation of
-// the same component — used so only ONE live, draggable instance exists on
+// the same component  --  used so only ONE live, draggable instance exists on
 // the page at a time (design-system §7) while still reusing the real asset
 // instead of a flat static image for the second placement.
 const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D(
@@ -348,7 +348,7 @@ const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D
     // placement, which has no external driver).
     baseRotY: -28,
     baseRotX: -8,
-    // Manual drag offset — persists after release ("stays in manual position").
+    // Manual drag offset  --  persists after release ("stays in manual position").
     dragRotY: 0,
     dragRotX: 0,
     velY: 0,
@@ -359,7 +359,7 @@ const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D
     lastX: 0,
     lastY: 0,
     lastT: 0,
-    // Idle ambient auto-rotate state — non-interactive instances only.
+    // Idle ambient auto-rotate state  --  non-interactive instances only.
     idleAt: 0,
     autoRampStart: 0,
     raf: 0,
@@ -392,10 +392,10 @@ const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D
     },
   }));
 
-  // Ambient idle auto-rotate — non-interactive placements only (e.g. the
+  // Ambient idle auto-rotate  --  non-interactive placements only (e.g. the
   // hardware section's static reuse of this asset, which nobody can touch).
   // The interactive hero instance never runs this: its rotation comes from
-  // the scroll camera and, once touched, the user — a continuous auto-spin
+  // the scroll camera and, once touched, the user  --  a continuous auto-spin
   // was explicitly the thing being fixed here.
   useEffect(() => {
     if (interactive) return;
@@ -417,7 +417,7 @@ const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [interactive]);
 
-  // Very light, very short release inertia — a physical "settle," not a spin.
+  // Very light, very short release inertia  --  a physical "settle," not a spin.
   // Capped velocity + steep decay means it's fully stopped within a few
   // frames; if it ever reads like a carousel, this is the block to gut.
   useEffect(() => {
@@ -481,7 +481,7 @@ const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D
     try {
       (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
     } catch {
-      /* pointer capture already released by the browser — safe to ignore */
+      /* pointer capture already released by the browser  --  safe to ignore */
     }
   };
 
@@ -502,13 +502,13 @@ const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D
             display: "flex", alignItems: "center", justifyContent: "center",
             // `pan-y` (not `none`) even while interactive: this hit area is large
             // enough to cover most of the mobile hero viewport, and `none` used to
-            // give it total ownership of every touch gesture inside it — including
+            // give it total ownership of every touch gesture inside it  --  including
             // a vertical swipe meant to scroll the page, which just spun the kiosk
             // instead and left mobile visitors stuck unable to scroll past the
             // hero. `pan-y` lets the browser take over a vertical swipe as a
             // normal scroll; horizontal drag is still free for touch-rotate since
             // only vertical panning is reserved for the browser. Mouse drag on
-            // desktop is unaffected either way — touch-action only governs touch.
+            // desktop is unaffected either way  --  touch-action only governs touch.
             touchAction: "pan-y",
             position: "relative",
           }}
@@ -517,12 +517,12 @@ const Machine3D = forwardRef<Machine3DHandle, Machine3DProps>(function Machine3D
           <div style={{ position: "absolute", bottom: 150, left: "50%", transform: "translateX(-50%)", width: 420, height: 80, background: "radial-gradient(ellipse at 50% 0%,rgba(0,0,0,.14),transparent 70%)", filter: "blur(4px)", pointerEvents: "none" }} />
           <div style={{ position: "absolute", bottom: 152, left: "50%", transform: "translateX(-50%)", width: 200, height: 50, background: "radial-gradient(ellipse at 50% 0%,rgba(230,57,70,.25),transparent 70%)", filter: "blur(9px)", pointerEvents: "none" }} />
 
-          {/* Cinematic vignette — explorer placement only. Uses an INSET box-shadow
+          {/* Cinematic vignette  --  explorer placement only. Uses an INSET box-shadow
               (fixed-pixel blur/spread) rather than a percentage-based radial-gradient:
               the box here is the full 760*scale-wide perspective container, mostly
               empty transparent padding around the much narrower machine graphic, so a
               gradient sized as a % of that box reaches its "dark edge" stop while
-              still inside the box — which, once this box sits close to neighboring
+              still inside the box  --  which, once this box sits close to neighboring
               content, can visibly darken it. inset shadows are physically incapable
               of painting outside their own box, so this can never bleed out. */}
           {vignette && (

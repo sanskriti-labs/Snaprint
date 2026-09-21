@@ -1,9 +1,9 @@
-# Snaprint — Design System & Motion Language
+# Snaprint  --  Design System & Motion Language
 
 > Governing reference for the award-level rebuild of snaprints.com.
 > **Nothing is placed or sized by guesswork.** If a value isn't in this file, it doesn't ship.
 > References for feel: justmarriedbooth.com (cinematic, video-led) · gregkozakiewicz.com/piglet (tactile, crafted).
-> Chosen lean: **balanced** — cinematic-premium foundation, one experimental signature moment.
+> Chosen lean: **balanced**  --  cinematic-premium foundation, one experimental signature moment.
 
 Live preview of everything below: **`/style`** route.
 
@@ -11,7 +11,7 @@ Live preview of everything below: **`/style`** route.
 
 ## 1. Color tokens
 
-The palette is deliberately tied to the **Snappy mascot** so brand + character are one system. Red is the *single* focal accent — used sparingly. One red thing per section, ideally.
+The palette is deliberately tied to the **Snappy mascot** so brand + character are one system. Red is the *single* focal accent  --  used sparingly. One red thing per section, ideally.
 
 | Token | Hex | Role |
 |---|---|---|
@@ -23,7 +23,7 @@ The palette is deliberately tied to the **Snappy mascot** so brand + character a
 | `mist` | `#c9c9c4` | dividers, disabled, mascot ink-lines |
 | `cloud` | `#e8e8e4` | light borders, hover fills |
 | `paper` | `#f5f5f3` | primary light background, mascot screen |
-| `red` | `#e63946` | THE accent — CTAs, focal type, LED, one-per-section |
+| `red` | `#e63946` | THE accent  --  CTAs, focal type, LED, one-per-section |
 | `red-deep` | `#c1121f` | red hover / pressed |
 
 **Rule:** no Tailwind default blues/greys anywhere. Accent is `red` only. Never two competing reds in one viewport.
@@ -32,10 +32,10 @@ The palette is deliberately tied to the **Snappy mascot** so brand + character a
 
 ## 2. Type scale
 
-Display face: **Space Grotesk** (already loaded, geometric-modern) — pushed hard on size, weight 700, tight tracking. Identity comes from *scale + motion*, not a novelty face.
+Display face: **Space Grotesk** (already loaded, geometric-modern)  --  pushed hard on size, weight 700, tight tracking. Identity comes from *scale + motion*, not a novelty face.
 Body: **Inter**. Editorial accent: **Instrument Serif** (italic, sparingly). Mascot glyphs: **Baloo 2**.
 
-Fluid `clamp()` scale — big type does the heavy lifting:
+Fluid `clamp()` scale  --  big type does the heavy lifting:
 
 | Token | clamp() | Use |
 |---|---|---|
@@ -56,15 +56,15 @@ Display tracking: `-0.03em` to `-0.045em` at the largest sizes. Line-height on d
 4px base unit. Scale (px): `4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128 · 160 · 192`.
 
 - **Grid:** 12 columns, `max-width: 1440px`, gutter `clamp(1.25rem, 4vw, 2.5rem)`, column gap `24px`.
-- **Section rhythm:** vertical padding `clamp(6rem, 12vw, 12rem)` — generous, intentional. Whitespace is a design element; nothing cramped.
+- **Section rhythm:** vertical padding `clamp(6rem, 12vw, 12rem)`  --  generous, intentional. Whitespace is a design element; nothing cramped.
 - **Content measure:** body copy caps at `~46ch`; lead paragraphs `~52ch`.
-- No uniform evenly-spaced card grids as a default — vary rhythm and scale (bento, asymmetric splits).
+- No uniform evenly-spaced card grids as a default  --  vary rhythm and scale (bento, asymmetric splits).
 
 ---
 
 ## 4. Motion tokens
 
-One coherent motion language. Expressive easings only — never `linear`, never default `ease`.
+One coherent motion language. Expressive easings only  --  never `linear`, never default `ease`.
 
 ### Easings (CSS var → GSAP equivalent)
 | Token | cubic-bezier | GSAP | Use |
@@ -90,15 +90,15 @@ One coherent motion language. Expressive easings only — never `linear`, never 
 - **Text reveal = masked clip, not opacity.** Words/lines sit in `overflow:hidden` masks and rise from `110%` with `--e-reveal`, staggered. Directional, never a plain fade. (`RevealText` utility.)
 - **Sections enter** with a clip/translate + staggered children as they cross into view (GSAP ScrollTrigger, synced to Lenis).
 - **Custom cursor** (Phase 1): a dot that grows + shows a label on interactive elements; buttons are *magnetic* (pull toward cursor). Auto-disabled on touch + reduced-motion.
-- **Smooth scroll** (Lenis) is the foundation — tuned mid-weight (not floaty, not stiff). All scroll-linked motion hangs off it.
+- **Smooth scroll** (Lenis) is the foundation  --  tuned mid-weight (not floaty, not stiff). All scroll-linked motion hangs off it.
 - **Hover:** `--d-hover` / `--e-hover`; lift + accent, never jumpy.
 - **prefers-reduced-motion:** every animated element resolves to its clean final state instantly. No broken layouts, no reliance on JS having run.
 
 ---
 
-## 6. Mascot (Snappy) — fixed size tiers
+## 6. Mascot (Snappy)  --  fixed size tiers
 
-Use **only** these tokens. Never an in-between size — change the layout, not the token.
+Use **only** these tokens. Never an in-between size  --  change the layout, not the token.
 
 | Tier | px | Form | Roles |
 |---|---|---|---|
@@ -112,15 +112,15 @@ Rules: exactly **one XL per page** (hero *or* signature, never both) · never tw
 
 ---
 
-## 7. S1 3D kiosk — usage system
+## 7. S1 3D kiosk  --  usage system
 
-- **One interactive 3D kiosk per page, max.** Lives in the hero or a dedicated "explore the S1" section — not repeated down the page.
+- **One interactive 3D kiosk per page, max.** Lives in the hero or a dedicated "explore the S1" section  --  not repeated down the page.
 - Everywhere else the kiosk appears: **static render or short loop video**, never a second live WebGL instance.
-- Focal zone: ~40–60% of hero width on desktop, on-grid, real breathing room — never crammed in a corner.
+- Focal zone: ~40–60% of hero width on desktop, on-grid, real breathing room  --  never crammed in a corner.
 - Consistent default camera angle across the site. On scroll-in: subtle fade + gentle rotate to default, then hand control to the user.
 - Mobile: lightweight image/video by default; load the live model on tap / capable devices only. Never blocks first paint. Reserve its layout box (poster) so nothing shifts on load.
 
-### Mascot vs kiosk — who leads per section
+### Mascot vs kiosk  --  who leads per section
 - **Product sections** (hero shot, explorer, comparison) → **kiosk leads**, mascot SM/MD supporting at most.
 - **Experience/emotion sections** (how-it-works, empty states, 404, brand story) → **Snappy leads**, kiosk absent or static backdrop.
 - One protagonist per section. Never XL mascot + interactive kiosk in the same viewport.
@@ -129,4 +129,4 @@ Rules: exactly **one XL per page** (hero *or* signature, never both) · never tw
 
 ## 8. Stack
 
-Lenis (smooth scroll) · GSAP + ScrollTrigger (all scroll choreography, synced to Lenis) · Framer Motion (React state transitions only) · Next 14 App Router + TS strict + Tailwind. Motion values live as CSS vars + a shared GSAP config — never scattered magic numbers.
+Lenis (smooth scroll) · GSAP + ScrollTrigger (all scroll choreography, synced to Lenis) · Framer Motion (React state transitions only) · Next 14 App Router + TS strict + Tailwind. Motion values live as CSS vars + a shared GSAP config  --  never scattered magic numbers.

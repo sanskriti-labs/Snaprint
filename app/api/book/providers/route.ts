@@ -10,7 +10,7 @@ export async function GET() {
     const message = err instanceof EAApiError ? err.message : "Unexpected error";
     console.error("[book/providers] failed to list providers:", message);
     return NextResponse.json(
-      { error: "We couldn't load founders right now — please email us." },
+      { error: "We couldn't load founders right now  --  please email us." },
       { status: 502 }
     );
   }

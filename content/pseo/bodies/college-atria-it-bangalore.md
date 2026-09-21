@@ -17,7 +17,7 @@ Hebbal's flyover and the underpass beneath it are the landmarks every Atria stud
 
 ## Why printing demand is high here
 
-This is a campus economy that runs on paper. Continuous internal assessments, lab manuals with graphs, mini-project reports bound in soft cover and final-year thesis submissions push the local print shops into overdrive during October–November and again in April–May. Recruiters from Bengaluru's tech corridor drive up placement-season demand for CV runs, cover letters and portfolio prints. With 18 listed shops around the institute, including the well-reviewed Suri Xerox Centre at 4.6 stars, the queue discipline is fairly mature — most counters now accept PDF uploads on WhatsApp so students can walk in only to collect.
+This is a campus economy that runs on paper. Continuous internal assessments, lab manuals with graphs, mini-project reports bound in soft cover and final-year thesis submissions push the local print shops into overdrive during October–November and again in April–May. Recruiters from Bengaluru's tech corridor drive up placement-season demand for CV runs, cover letters and portfolio prints. With 18 listed shops around the institute, including the well-reviewed Suri Xerox Centre at 4.6 stars, the queue discipline is fairly mature  --  most counters now accept PDF uploads on WhatsApp so students can walk in only to collect.
 
 ## What people typically print here
 

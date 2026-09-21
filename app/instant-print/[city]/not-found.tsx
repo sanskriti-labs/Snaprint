@@ -32,7 +32,7 @@ export default function InstantPrintNotFound() {
             Contact us
           </a>
         </div>
-        <AgentRecoveryLinks extraLink={{ href: "/instant-print", label: "/instant-print — directory of all listed cities" }} />
+        <AgentRecoveryLinks extraLink={{ href: "/instant-print", label: "/instant-print  --  directory of all listed cities" }} />
       </main>
       <Footer />
     </>

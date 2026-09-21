@@ -17,7 +17,7 @@ The fastest way in is by two-wheeler down 80 Feet Road or the connecting stretch
 
 ## Why printing demand is high here
 
-New Thippasandra is ringed by exactly the kind of demand that keeps a print queue moving. The HAL factory and adjacent aerospace offices generate a steady stream of tender documents, ID cards, and compliance paperwork. Coaching centres and the cluster of schools nearby — including HAL English Medium School and others along the 80 Feet Road stretch — bring in class notes, worksheets, and exam answer sheets during September and March. The residential density adds its own weight: ration-card applications, rental agreements, and Aadhaar printouts are everyday jobs. With seven listed xerox and print shops concentrated in a half-square-kilometre radius, residents never have to walk more than a lane or two for an urgent job.
+New Thippasandra is ringed by exactly the kind of demand that keeps a print queue moving. The HAL factory and adjacent aerospace offices generate a steady stream of tender documents, ID cards, and compliance paperwork. Coaching centres and the cluster of schools nearby  --  including HAL English Medium School and others along the 80 Feet Road stretch  --  bring in class notes, worksheets, and exam answer sheets during September and March. The residential density adds its own weight: ration-card applications, rental agreements, and Aadhaar printouts are everyday jobs. With seven listed xerox and print shops concentrated in a half-square-kilometre radius, residents never have to walk more than a lane or two for an urgent job.
 
 ## What people typically print here
 

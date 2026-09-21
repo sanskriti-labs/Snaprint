@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const title = "Impact — Snaprint Community";
+const title = "Impact  --  Snaprint Community";
 const description = "Share feedback, discover Snaprint updates, ask questions and join the Snaprint community.";
 
 export const metadata: Metadata = {

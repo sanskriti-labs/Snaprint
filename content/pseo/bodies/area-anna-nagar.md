@@ -17,7 +17,7 @@ The Chennai Metro's Green Line stops at Anna Nagar Tower and Shenoy Nagar within
 
 ## Why printing demand is high here
 
-Exam season is the loudest driver — Anna Nagar alone hosts over a dozen schools and several reputed coaching centres for NEET, JEE, and board exams, flooding neighbourhood print shops with question-paper reprints, project files, and bound assignments from June through March. Beyond students, the area borders commercial stretches like Mogappair and Aminjikarai, where small businesses and courier offices like Shreenika digital colour xerox and courier booking handle bulk B&W and colour work for clients. With 18 listed shops and an average rating of 4.3 stars, the network absorbs everything from a single Aadhaar photocopy to fifty-bound MBA reports without long waits.
+Exam season is the loudest driver  --  Anna Nagar alone hosts over a dozen schools and several reputed coaching centres for NEET, JEE, and board exams, flooding neighbourhood print shops with question-paper reprints, project files, and bound assignments from June through March. Beyond students, the area borders commercial stretches like Mogappair and Aminjikarai, where small businesses and courier offices like Shreenika digital colour xerox and courier booking handle bulk B&W and colour work for clients. With 18 listed shops and an average rating of 4.3 stars, the network absorbs everything from a single Aadhaar photocopy to fifty-bound MBA reports without long waits.
 
 ## What people typically print here
 

@@ -13,7 +13,7 @@ Karve Nagar stretches along the old Karve Road corridor in western Pune, a leafy
 
 ## Getting here and around
 
-The neighbourhood hinges on Karve Road, and almost every commute passes through it. Deccan Gymkhana and the Karve Road bus stops pull in PMPML routes from Camp, Kothrud, Warje, and Sinhagad Road. Rickshaws are the default for last-mile hops, especially into the deeper lanes where apartment complexes sit. Parking is tight — most shoppers park along the side lanes and hope for a spot. Two-wheeler riders have it easier; the main road is wide enough for filtered turns, but during office hours it crawls from Karve Putla to the Abhinav Chowk signal.
+The neighbourhood hinges on Karve Road, and almost every commute passes through it. Deccan Gymkhana and the Karve Road bus stops pull in PMPML routes from Camp, Kothrud, Warje, and Sinhagad Road. Rickshaws are the default for last-mile hops, especially into the deeper lanes where apartment complexes sit. Parking is tight  --  most shoppers park along the side lanes and hope for a spot. Two-wheeler riders have it easier; the main road is wide enough for filtered turns, but during office hours it crawls from Karve Putla to the Abhinav Chowk signal.
 
 ## Why printing demand is high here
 
@@ -21,7 +21,7 @@ Karve Nagar sits in a sweet spot between student country and small-business coun
 
 ## What people typically print here
 
-The most common jobs include spiral-bound class notes and project reports, B&W photocopies of government forms, colour prints of passport and PAN photos, and A4 lamination for school ID cards. Spiral binding is the workhorse — students walk in with messy stacks and walk out with neat blue or black spines for submission. Sinhagad xerox and Computer Shop, the top-rated name in the patch at a full 5 stars, is known locally for handling rush hour orders without dropping quality.
+The most common jobs include spiral-bound class notes and project reports, B&W photocopies of government forms, colour prints of passport and PAN photos, and A4 lamination for school ID cards. Spiral binding is the workhorse  --  students walk in with messy stacks and walk out with neat blue or black spines for submission. Sinhagad xerox and Computer Shop, the top-rated name in the patch at a full 5 stars, is known locally for handling rush hour orders without dropping quality.
 
 ## How Snaprint fits in
 

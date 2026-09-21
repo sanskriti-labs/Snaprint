@@ -21,7 +21,7 @@ Kukatpally's concentration of engineering and degree colleges keeps demand eleva
 
 ## What people typically print here
 
-Expect spiral-bound project reports with colour circuit diagrams and CAD plots, B&W lab manuals, and thick photocopied reference chapters. Placement season brings a wave of resume printing and portfolio binding. Coaching-institute students in the area regularly photocopy question banks and previous-year papers. General student needs — ID photocopies, admission form printing, certificate attestation copies — round out a typical shop's daily orders.
+Expect spiral-bound project reports with colour circuit diagrams and CAD plots, B&W lab manuals, and thick photocopied reference chapters. Placement season brings a wave of resume printing and portfolio binding. Coaching-institute students in the area regularly photocopy question banks and previous-year papers. General student needs  --  ID photocopies, admission form printing, certificate attestation copies  --  round out a typical shop's daily orders.
 
 ## How Snaprint fits in
 

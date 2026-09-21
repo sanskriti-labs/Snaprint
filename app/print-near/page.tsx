@@ -12,13 +12,13 @@ import {
 const SITE_URL = "https://snaprints.com";
 
 export const metadata: Metadata = {
-  // Layout template appends "· Snaprint" — no explicit suffix here.
-  title: "Print and xerox shops near you — Colleges & Neighbourhoods",
+  // Layout template appends "· Snaprint"  --  no explicit suffix here.
+  title: "Print & xerox shops near you  --  Colleges & Areas",
   description:
     "Find print and xerox shops near your college, office, or neighbourhood. Print, copy, and scan from your phone in under 60 seconds.",
   alternates: { canonical: "/print-near" },
   openGraph: {
-    title: "Print and xerox shops near you — Snaprint",
+    title: "Print and xerox shops near you  --  Snaprint",
     description:
       "Find print and xerox shops near your college, office, or neighbourhood.",
     url: `${SITE_URL}/print-near`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/og.png`],
   },
   twitter: {
-    title: "Print and xerox shops near you — Snaprint",
+    title: "Print and xerox shops near you  --  Snaprint",
     description:
       "Find print and xerox shops near your college, office, or neighbourhood.",
   },
@@ -45,7 +45,7 @@ export default function PrintNearIndex() {
 
   // Group all live areas by their parent city slug, and collect the
   // live colleges assigned to each city. The hub shows colleges only
-  // when their presence has been flipped to "live" — planned entries
+  // when their presence has been flipped to "live"  --  planned entries
   // are intentionally excluded so the public page never advertises a
   // launch that hasn't happened.
   const groups: AreaGroup[] = [];
@@ -78,7 +78,7 @@ export default function PrintNearIndex() {
 
   const totalLive = allAreas.length + allColleges.length;
 
-  // CollectionPage + BreadcrumbList + FAQPage — no Product/kiosk-usage FAQ
+  // CollectionPage + BreadcrumbList + FAQPage  --  no Product/kiosk-usage FAQ
   // here. See app/instant-print/page.tsx for why: kiosk pricing/FAQ on
   // directory hub pages leaked into snippets for unrelated shop pages.
   const jsonLd = {
@@ -89,7 +89,7 @@ export default function PrintNearIndex() {
         "@id": `${SITE_URL}/print-near#collection`,
         url: `${SITE_URL}/print-near`,
         name: "Print and xerox shops near you",
-        // Statically generated at build time from the live entity list —
+        // Statically generated at build time from the live entity list  -- 
         // this is the real build date, refreshed on every rebuild.
         dateModified: new Date().toISOString().slice(0, 10),
         isPartOf: { "@id": `${SITE_URL}/#website` },
@@ -130,7 +130,7 @@ export default function PrintNearIndex() {
             name: "What if my area isn't listed yet?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Email snaprints@sanskritilabs.in to request coverage in your area — new locations are added as the shop directory expands.",
+              text: "Email snaprints@sanskritilabs.in to request coverage in your area  --  new locations are added as the shop directory expands.",
             },
           },
         ],
@@ -157,7 +157,7 @@ export default function PrintNearIndex() {
         </h1>
         <p className="mb-16 max-w-[600px] font-body text-[16px] font-light leading-[1.78] text-[#6B6B66]">
           Find print and xerox shops near your college or neighbourhood.
-          Compare hours, ratings, and phone numbers — pick the closest.
+          Compare hours, ratings, and phone numbers  --  pick the closest.
         </p>
 
         {totalLive === 0 ? <EmptyState /> : <GroupedList groups={groups} />}
